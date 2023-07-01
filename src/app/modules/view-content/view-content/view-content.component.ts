@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { OnDestroy } from '@angular/core/core';
 import { Title, Meta, DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { AppServiceService } from 'app/mock-api/common/appConfig/app-service.service';
@@ -12,7 +11,7 @@ import Speech from 'speak-tts';
     styleUrls: ['./view-content.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ViewContentComponent implements OnInit, OnDestroy {
+export class ViewContentComponent implements OnInit {
     getConfig: any;
     configUrl: any;
     routerSub: Subscription;
@@ -287,5 +286,4 @@ export class ViewContentComponent implements OnInit, OnDestroy {
         }
     }
 
-    ngOnDestroy(): void {}
 }
