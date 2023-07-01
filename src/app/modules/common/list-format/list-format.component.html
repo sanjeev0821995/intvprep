@@ -1,0 +1,15 @@
+<ng-container class="mx-2 sm:mx-2 mt-6 mb-6">
+    <h1 *ngIf="config.list_heading" class="mb-4 ml-2 font-semibold text-gray-900 dark:text-gray-400">
+        {{config.list_heading}}
+    </h1>
+    <div *ngIf="config?.list_text" class="ml-2 mb-2">
+        <h2 class="text-gray-900 dark:text-gray-400">
+            {{ config.list_text }}
+        </h2>
+    </div>
+    <ul [ngStyle]="{ margin: config?.margin }" class="space-y-1 list-disc list-outside dark:text-gray-400 ml-8 mb-4">
+        <li *ngFor="let item of config?.list | keyvalue: returnZero">
+            <span *ngIf="config?.isListKeyRequired" class="text-gray-900 font-semibold dark:text-gray-400">{{ item.key }} :</span> {{ item.value }}
+        </li>
+    </ul>
+</ng-container>

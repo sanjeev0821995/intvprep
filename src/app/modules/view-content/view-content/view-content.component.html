@@ -1,0 +1,53 @@
+<div class="flex flex-col flex-auto min-w-0">
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-8 sm:px-10 border-b bg-card dark:bg-transparent mt-16">
+        <div class="flex-1 min-w-0">
+            <!-- Breadcrumbs -->
+
+            <!-- Title -->
+            <div class="mt-2">
+                <h2>
+                    <img [src]="'assets/images/home/' +  getName() + '.svg'" style="height: 3rem; width:3rem;" alt="image" />
+                </h2>
+            </div>
+        </div>
+        <div class="-ml-3 sm:ml-0 mb-2 sm:mb-0 order-first sm:order-last">
+            No. of Questions : {{ getConfig.length }}
+        </div>
+    </div>
+
+    <div class="flex-auto p-4 sm:p-4 heading" *ngFor="let config of getConfig">
+        <fuse-card class="flex flex-col w-full filter-post" [id]="config?.id">
+            <div class="lead mx-6 sm:mx-8 mt-2 mb-6 answer">
+                <ng-container *ngFor="let config of config.Que">
+                    <ng-container [ngSwitch]="config.type">
+                        <ng-container *ngSwitchCase="'text'">
+                            <app-text-format [config]="config" (playSpeach)="start($event)" (pauseSpeach)="stop($event)"></app-text-format>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'list'">
+                            <app-list-format [config]="config"></app-list-format>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'note'">
+                            <app-note-format [config]="config"></app-note-format>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'img'">
+                            <app-img-format [config]="config"></app-img-format>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'table'">
+                            <app-table-format [config]="config"></app-table-format>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'code'">
+                            <app-code-format [config]="config"></app-code-format>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'codeQues'">
+                            <app-code-ques-format [config]="config"></app-code-ques-format>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'contact-us'">
+                            <app-form-format [config]="config"></app-form-format>
+                        </ng-container>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </fuse-card>
+    </div>
+</div>

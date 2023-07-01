@@ -1,0 +1,28 @@
+<div class="flex-auto max-w-full pl-4 prose prose-sm">
+    <h2 *ngIf="config.q" class=" mt-8 text-gray-900 dark:text-gray-400 font-semibold">{{config.q}}</h2>
+    <div *ngIf="config?.summary?.length > 0" class="mb-8">
+        <ng-container *ngFor="let summary of config?.summary">
+            <h3 class="text-gray-900 font-normal dark:text-gray-400">{{summary}}</h3>
+        </ng-container>
+    </div>
+    <div *ngIf="config?.queCode">
+        <textarea fuse-highlight [lang]="config.lang">
+            {{config.queCode}}
+        </textarea>
+    </div>
+    <mat-accordion *ngIf="config.accordion">
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <strong>{{config.accordion_header}}</strong>
+                </mat-panel-title>
+                <!-- <mat-panel-description>
+                    {{config.answer}}
+                </mat-panel-description> -->
+            </mat-expansion-panel-header>
+            <textarea fuse-highlight [lang]="config.lang">
+                {{config.code}}
+            </textarea>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

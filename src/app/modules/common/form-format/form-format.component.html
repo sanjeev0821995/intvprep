@@ -1,0 +1,61 @@
+<div class="flex flex-col flex-auto min-w-0">
+
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-8 sm:px-10 border-b bg-card dark:bg-transparent">
+        <div class="flex-1 min-w-0">
+            <!-- Title -->
+            <div class="mt-2">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
+                    Contact Us
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="flex-auto p-6 sm:p-10">
+
+        <div class="max-w-3xl">
+
+            <div class="prose flex prose-sm max-w-3xl">
+                <mat-icon class="icon-size-20 mr-4" matSuffix [svgIcon]="'heroicons_solid:mail'"></mat-icon>
+                <h3 class="text-blue-600">info@interviewant.com</h3>
+            </div>
+
+            <form class="flex flex-col mt-8 p-8 pb-4 bg-card rounded-2xl shadow overflow-hidden">
+                <div class="flex flex-col gt-xs:flex-row">
+                    <mat-form-field class="flex-auto gt-xs:pr-3">
+                        <mat-label>Name</mat-label>
+                        <input matInput>
+                        <mat-icon class="icon-size-5" matSuffix [svgIcon]="'heroicons_solid:user-circle'"></mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="flex-auto gt-xs:pr-3">
+                        <mat-label>Subject</mat-label>
+                        <input matInput>
+                        <mat-icon class="icon-size-5" matSuffix [svgIcon]="'heroicons_solid:dots-circle-horizontal'"></mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="flex-auto gt-xs:pr-3">
+                        <mat-label>Email</mat-label>
+                        <input matInput>
+                        <mat-icon class="icon-size-5" matSuffix [svgIcon]="'heroicons_solid:mail'"></mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="flex">
+                    <mat-form-field class="fuse-mat-textarea flex-auto">
+                        <mat-label>Comment</mat-label>
+                        <textarea matInput [rows]="3" matTextareaAutosize></textarea>
+                        <mat-icon class="icon-size-5" matSuffix [svgIcon]="'heroicons_solid:chat-alt-2'"></mat-icon>
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <button class="bg-blue-600 text-white" mat-button>Submit</button>
+                </div>
+            </form>
+
+
+        </div>
+
+    </div>
+
+</div>

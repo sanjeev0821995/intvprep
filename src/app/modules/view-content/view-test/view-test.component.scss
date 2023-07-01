@@ -1,0 +1,39 @@
+.radio {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+   
+.step-navigation {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 32px;
+    max-width: 944px;
+    padding: 0 24px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .previous {
+        margin-right: auto;
+    }
+
+    .next,
+    .done {
+        margin-left: auto;
+    }
+}
+
+.fw {
+    font-weight: bold;
+}
+
+.bg-color {
+    background-color:rgb(228, 225, 225);;
+    padding: 10px;
+}
+
+

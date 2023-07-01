@@ -1,0 +1,37 @@
+<div class="flex flex-wrap mt-14">
+    <div class="flex-auto p-6 sm:p-8  cursor-pointer" *ngFor="let card of getConfig">
+        <div class="flex flex-wrap items-start w-full max-w-240">
+            <fuse-card class="flex flex-col min-w-52 w-full filter-listing">
+                <div [routerLink]="[card.path]" class="flex justify-center items-center mt-3 bg-gray-300" *ngIf="card.icon">
+                    <mat-icon class="icon-size-24 hover:text-white" [svgIcon]="card.icon"></mat-icon>
+                </div>
+                <div class="m-8 mb-4">
+                    <div class="text-2xl font-semibold leading-tight hover:text-blue-700" [routerLink]="[card.path]">{{card.heading}}</div>
+                    <div class="flex items-center leading-none mt-2 -ml-1">
+                        <div class="flex items-center">
+                            <mat-icon class="text-orange-500 icon-size-5" [svgIcon]="'mat_outline:star'"></mat-icon>
+                            <mat-icon class="text-orange-500 icon-size-5" [svgIcon]="'mat_outline:star'"></mat-icon>
+                            <mat-icon class="text-orange-500 icon-size-5" [svgIcon]="'mat_outline:star'"></mat-icon>
+                            <mat-icon class="text-orange-500 icon-size-5" [svgIcon]="'mat_outline:star'"></mat-icon>
+                            <mat-icon class="text-orange-500 icon-size-5" [svgIcon]="'mat_outline:star_half'"></mat-icon>
+                        </div>
+                        <div class="text-secondary ml-2">4.5</div>
+                        <!-- <div class="text-secondary mx-2">&bull;</div>
+                            <div class="text-secondary">98 reviews</div> -->
+                    </div>
+                    <!-- <div class="mt-6">
+                            Puzzles coffee shop is one of the finest coffee shops in central downtown in New York. It's quiet; far away from busy streets and never ending constructions.
+                        </div> -->
+                    <div class="flex items-center mt-3 -mx-3">
+                        <button class="px-3 mr-1" mat-button [color]="'primary'" (click)="copyTheUrl(card.path)">
+                        Share
+                    </button>
+                        <button class="px-3" mat-button [color]="'primary'" [routerLink]="[card.path]">
+                        View
+                    </button>
+                    </div>
+                </div>
+            </fuse-card>
+        </div>
+    </div>
+</div>

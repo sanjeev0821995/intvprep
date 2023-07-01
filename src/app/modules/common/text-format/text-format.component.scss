@@ -1,0 +1,34 @@
+.fw {
+    font-weight: bold;
+    max-width: 90%;
+    min-width: 90%;
+}
+
+.bg-color {
+    background-color: rgb(228, 225, 225);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.icons {
+    display: flex;
+}
+
+img {
+    height: 4rem !important;
+    width: 4rem !important;
+    cursor: pointer;
+}
+
+.icon-box {
+    max-width: 10%;
+    min-width: 10%;
+}

@@ -1,0 +1,28 @@
+<div class="flex-auto max-w-full pl-4 prose prose-sm" [ngStyle]="{'margin': config?.margin}">
+    <h2 *ngIf="config.heading_text" class="text-gray-900 underline underline-offset-8 dark:text-gray-400 font-semibold">{{config.heading_text}}</h2>
+    <h2 *ngIf="config.heading_HTML" class="" [innerHTML]="config.heading_HTML"></h2>
+    <div *ngIf="config.simple_text">
+        <h3 class="text-gray-900 font-normal dark:text-gray-400">{{config.simple_text}}</h3>
+    </div>
+    <textarea fuse-highlight [lang]="config.lang">
+        {{config.code}}
+    </textarea>
+    <div *ngIf="config.bottom_text">
+        <h3 class="text-gray-900 font-normal dark:text-gray-400">
+            {{config.bottom_text}}
+        </h3>
+    </div>
+    <mat-accordion *ngIf="config.accordion">
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <strong>{{config.accordion_header}}</strong>
+                </mat-panel-title>
+                <!-- <mat-panel-description>
+                    {{config.answer}}
+                </mat-panel-description> -->
+            </mat-expansion-panel-header>
+            <p><strong>Output : </strong> <span [innerHtml]="config.answer"></span></p>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

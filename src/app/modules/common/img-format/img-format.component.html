@@ -1,0 +1,10 @@
+<div *ngIf="config?.img" class="p-4">
+    <p *ngIf="config?.heading_text">{{ config?.heading_text }}</p>
+    <figure [ngStyle]="{ margin: config?.margin }">
+        <figcaption *ngIf="config?.imgCaption" class="caption">
+            {{ config?.imgCaption }}
+        </figcaption>
+        <img [src]="'assets/images/backgrounds/' + config.img" alt="image" [ngStyle]="{ width: config?.width, height: config?.height }" />
+    </figure>
+    <p *ngIf="config?.bottom_text">{{ config?.bottom_text }}</p>
+</div>

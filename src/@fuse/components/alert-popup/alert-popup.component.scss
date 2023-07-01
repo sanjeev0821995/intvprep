@@ -1,0 +1,104 @@
+.share-buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 32px);
+    gap: 16px;
+}
+
+.react-share__ShareButton {
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.outer-div,
+.outer-div-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inner-div {
+    width: 120px;
+    min-width: 100px;
+    min-height: 17px;
+    padding: 10px;
+    margin-right: 8px;
+    background-color: rgb(246, 246, 246);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 12px;
+}
+
+.inner-div svg {
+    display: block;
+    margin-left: 0px;
+    padding: 0px;
+    width: 34px;
+    max-width: 100%;
+    margin-bottom: 6px;
+    max-height: 40px;
+    height: auto;
+}
+
+.Text {
+    margin: 8px 0 8px 0;
+}
+
+.sub-Text {
+    margin: 0px 0 8px 0;
+    font-size: 0.75rem !important;
+    font-weight: bold;
+}
+
+.close-button {
+    float: right;
+    top: -24px;
+    right: -24px;
+}
+
+.close-icon {
+    transition: 1s ease-in-out;
+}
+
+.icon-color {
+    background-color: white;
+    color: black;
+    border-radius: 16px;
+}
+
+.close-icon:hover {
+    transform: rotate(180deg);
+}
+
+::ng-deep .icon-outside .close-button {
+    float: right;
+    top: -52px;
+    right: -52px;
+}
+
+::ng-deep .icon-outside .mat-dialog-container {
+    overflow: unset;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+p .sub-Text {
+    font-size: medium;
+}
+
+@media only screen and (max-width: 600px) {
+    .outer-div {
+        display: flex;
+        flex-direction: column;
+    }
+    .outer-div-2 {
+        display: none;
+    }
+}

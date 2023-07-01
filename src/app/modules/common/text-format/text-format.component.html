@@ -1,0 +1,25 @@
+<div class="flex flex-col mx-2 sm:mx-2 mt-6 mb-4">
+    <div class="flex flex-row justify-between items-center">
+        <div>
+            <h1 class="font-semibold">{{ config?.q }}</h1>
+        </div>
+        <div>
+            <button *ngIf="config?.playButton" @shake class="ml-auto -mr-4" mat-icon-button (click)="play(config)">
+                <mat-icon
+                    class="icon-size-12"
+                    [svgIcon]="'heroicons_outline:play'"
+                ></mat-icon>
+            </button>
+            <button *ngIf="config?.pauseButton" @shake class="ml-auto -mr-4" mat-icon-button (click)="pause(config)">
+                <mat-icon
+                    class="icon-size-12"
+                    [svgIcon]="'heroicons_outline:pause'"
+                ></mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <div>
+        <p [ngStyle]="{ margin: config?.margin }" class="text-gray-900 dark:text-gray-400">{{ config?.a }}</p>
+    </div>
+</div>

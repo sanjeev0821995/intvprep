@@ -1,0 +1,33 @@
+<div class="page-layout simple fullwidth">
+    <div class="header accent p-24" fxLayout="row" fxLayoutAlign="start center">
+        <h2>Angular Interview Questions</h2>
+    </div>
+    <div *ngFor="let config of getConfig let i=index">
+        <div class="border m-24" *ngIf="config.page_number === local_page_number">
+            <div>
+                <div class="h2 fw mb-16 bg-color">{{config.q}}</div>
+                <div class="h4 secondary-text">{{config.subheading}}</div>
+                <div>
+                    <mat-radio-group aria-labelledby="example-radio-group-label" [(ngModel)]="config.prop" class="example-radio-group radio" ngDefaultControl >
+                        <mat-radio-button class="example-radio-button" *ngFor="let season of config.options" [value]="season">
+                            {{season.label}}
+                        </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div class="step-navigation">
+                <button *ngIf="config.page_number !== 1 && local_page_number !== 1" mat-fab class="previous mat-accent fuse-white-fg" (click)="gotoPrevious()">
+                    <mat-icon>chevron_left</mat-icon>
+                </button>
+        
+                <button *ngIf="!config.is_this_last_page" mat-fab class="next mat-accent fuse-white-fg" (click)="gotoNext()">
+                    <mat-icon>chevron_right</mat-icon>
+                </button>
+        
+                <button *ngIf="config.is_this_last_page" mat-fab class="done green-600">
+                    <mat-icon>check</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

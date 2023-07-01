@@ -1,0 +1,110 @@
+.container {
+    display: flex;
+    margin-top: 1rem;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card {
+    margin: 1rem;
+    position: relative;
+    min-width: 30rem;
+    max-width: 30rem;
+    border-radius: 1rem;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-image: linear-gradient(
+        44.8deg,
+        rgba(255, 136, 102, 0.67) -53.1%,
+        rgba(255, 221, 136, 0.28) 49%
+    );
+}
+
+.item {
+    height: fit-content;
+    flex: 1 1;
+}
+
+.bg1 {
+    background: linear-gradient(
+        68.4deg,
+        rgba(99, 251, 215, 1) -0.4%,
+        rgba(5, 222, 250, 1) 100.2%
+    );
+}
+
+.bg2 {
+    background-image: radial-gradient(
+        circle farthest-corner at 50.7% 54%,
+        rgba(204, 254, 152, 1) 0%,
+        rgba(229, 253, 190, 1) 92.4%
+    );
+}
+
+.bg3 {
+    background-image: radial-gradient(
+        circle farthest-corner at 14.2% 27.5%,
+        rgba(104, 199, 255, 1) 0%,
+        rgba(181, 126, 255, 1) 90%
+    );
+}
+.bg4 {
+    background-image: linear-gradient(
+        359.8deg,
+        rgba(252, 255, 222, 1) 2.2%,
+        rgba(182, 241, 171, 1) 99.3%
+    );
+}
+.bg5 {
+    background-image: linear-gradient(
+        102.4deg,
+        rgba(253, 189, 85, 1) 7.8%,
+        rgba(249, 131, 255, 1) 100.3%
+    );
+}
+.bg6 {
+    background-image: linear-gradient(
+        95.2deg,
+        rgba(173, 252, 234, 1) 26.8%,
+        rgba(192, 229, 246, 1) 64%
+    );
+}
+.bg7 {
+    background-image: linear-gradient(
+        44.8deg,
+        rgba(255, 136, 102, 0.67) -53.1%,
+        rgba(255, 221, 136, 0.28) 49%
+    );
+}
+.bg8 {
+    background-image: radial-gradient(
+        circle 344px at 1.4% 0%,
+        rgba(242, 185, 252, 1) 19.3%,
+        rgba(250, 254, 190, 1) 80.7%
+    );
+}
+.bg9 {
+    background-image: linear-gradient(
+        109.6deg,
+        rgba(247, 253, 166, 1) 11.2%,
+        rgba(128, 255, 221, 1) 57.8%,
+        rgba(255, 128, 249, 1) 85.9%
+    );
+}
+
+.bg10 {
+    background-image: linear-gradient(
+        180.5deg,
+        rgba(46, 255, 171, 1) 12.3%,
+        rgba(252, 251, 222, 0.46) 92%
+    );
+}
+
+.bg {
+    background-image: linear-gradient(
+        90.5deg,
+        rgba(255, 207, 139, 0.5) 1.1%,
+        rgba(255, 207, 139, 1) 81.3%
+    );
+}

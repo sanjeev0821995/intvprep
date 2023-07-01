@@ -1,0 +1,684 @@
+{
+    "miscellaneous": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : Repeat until the input is correct.",
+                    "summary": [
+                        "- Write a loop which prompts for a number greater than 100. If the visitor enters another number – ask them to input again.",
+                        "- The loop must ask for a number until either the visitor enters a number greater than 100 or cancels the input/enters an empty line.",
+                        "- Here we can assume that the visitor only inputs numbers. There’s no need to implement a special handling for a non-numeric input in this task."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet num;\ndo {\n\tnum = prompt('Enter a number greater than 100?', 0);\n} while (num <= 100 && num);"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : Write the code which outputs prime numbers in the interval from 2 to n.",
+                    "summary": ["- For n = 10 the result will be 2,3,5,7."],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet n = 10;\n\nnextPrime:\nfor (let i = 2; i <= n; i++) { // for each i...\n\n\tfor (let j = 2; j < i; j++) { // look for a divisor..\n\t\tif (i % j == 0) continue nextPrime; // not a prime, go next i\n\t}\n\nalert( i ); // a prime\n}"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : Write a function min(a,b) which returns the least of two numbers a and b.",
+                    "summary": ["- min(2, 5) == 2", "- min(3, -1) == -1"],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction min(a, b) {\n\treturn a < b ? a : b;\n}"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : Create a calculator.",
+                    "summary": [""],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction Calculator() {\nthis.read = function() {\n\tthis.a = +prompt('a?', 0);\n\tthis.b = +prompt('b?', 0);\n};\n\nthis.sum = function() {\n\treturn this.a + this.b;\n};\n\nthis.mul = function() {\n\treturn this.a * this.b;\n};\n}\n\nlet calculator = new Calculator();\ncalculator.read();\n\nalert( 'Sum=' + calculator.sum() );alert( 'Mul=' + calculator.mul() );"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : Create a ladder object that allows to go up and down:",
+                    "summary": [
+                        "- ladder.up();",
+                        "- ladder.up();",
+                        "- ladder.showStep();"
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet ladder = {\nstep: 0,\nup() {\n\tthis.step++;\n\treturn this;\n},\ndown() {\n\tthis.step--;\n\treturn this;\n},\nshowStep() {\n\talert( this.step );\n\treturn this;\n}\n};\n\nladder.up().up().down().showStep().down().showStep(); // shows 1 then 0"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : Is it possible to create functions A and B so that new A() == new B()?",
+                    "summary": [""],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet obj = {};\nfunction A() { return obj; }\nfunction B() { return obj; }\nalert( new A() == new B() ); // true"
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : A random number from min to max",
+                    "summary": [
+                        "- The built-in function Math.random() creates a random value from 0 to 1 (not including 1)."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction random(min, max) {\n\treturn min + Math.random() * (max - min);\n}\n\nalert( random(1, 5) );\nalert( random(1, 5) );\nalert( random(1, 5) );"
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : Truncate the text",
+                    "summary": [
+                        "- Create a function truncate(str, maxlength) that checks the length of the str and, if it exceeds maxlength – replaces the end of str with the ellipsis character '…', to make its length equal to maxlength."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction truncate(str, maxlength) {\n\treturn (str.length > maxlength) ? str.slice(0, maxlength - 1) + '…' : str;\n}"
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : A maximal subarray",
+                    "summary": [
+                        "- The input is an array of numbers, e.g. arr = [1, -2, 3, 4, -9, 6].",
+                        "- The task is: find the contiguous subarray of arr with the maximal sum of items.",
+                        "- Write the function getMaxSubSum(arr) that will return that sum."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction getMaxSubSum(arr) {\n\tlet maxSum = 0;\n\tlet partialSum = 0;\n\n\tfor (let item of arr) { // for each item of arr\n\t\tpartialSum += item; // add it to partialSum\n\t\tmaxSum = Math.max(maxSum, partialSum); // remember the maximum\n\t\tif (partialSum < 0) partialSum = 0; // zero if negative\n\t}\n\nreturn maxSum;\n}\n\nalert( getMaxSubSum([-1, 2, 3, -9]) ); // 5\nalert( getMaxSubSum([-1, 2, 3, -9, 11]) ); // 11\nalert( getMaxSubSum([-2, -1, 1, 2]) ); // 3\nalert( getMaxSubSum([100, -9, 2, -3, 5]) ); // 100\nalert( getMaxSubSum([1, 2, 3]) ); // 6\nalert( getMaxSubSum([-1, -2, -3]) ); // 0"
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : Translate border-left-width to borderLeftWidth",
+                    "summary": [
+                        "- Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction camelize(str) {\n\treturn str\n\t\t.split('-') // splits 'my-long-word' into array ['my', 'long', 'word']\n\t.map(\n\t\t// capitalizes first letters of all array items except the first one\n\t\t// converts ['my', 'long', 'word'] into ['my', 'Long', 'Word']\n\t\t(word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)\n\t)\n\t.join(''); // joins ['my', 'Long', 'Word'] into 'myLongWord'\n}"
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : Filter range",
+                    "summary": [
+                        "- Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction filterRange(arr, a, b) {\n\t// added brackets around the expression for better readability\n\treturn arr.filter(item => (a <= item && item <= b));\n}\n\nlet arr = [5, 3, 8, 1];\n\nlet filtered = filterRange(arr, 1, 4);\n\nalert( filtered ); // 3,1 (matching values)\n\nalert( arr ); // 5,3,8,1 (not modified)"
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : Sort in decreasing order",
+                    "summary": [],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet arr = [5, 2, 1, -10, 8];\narr.sort((a, b) => b - a);\nalert( arr );"
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : Create an extendable calculator",
+                    "summary": [
+                        "- Create a constructor function Calculator that creates “extendable” calculator objects."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction Calculator() {\n\tthis.methods = {\n\t\t'-': (a, b) => a - b,\n\t\t'+': (a, b) => a + b\n\t};\n\tthis.calculate = function(str) {\n\n\t\tlet split = str.split(' '),\n\t\t\ta = +split[0],\n\t\t\top = split[1],\n\t\t\tb = +split[2];\n\t\tif (!this.methods[op] || isNaN(a) || isNaN(b)) {\n\t\treturn NaN;\n\t}\n\treturn this.methods[op](a, b);\n};\n\nthis.addMethod = function(name, func) {\n\tthis.methods[name] = func;\n};\n}"
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : Filter unique array members",
+                    "summary": [
+                        "- Create a function unique(arr) that should return an array with unique items of arr."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction unique(arr) {\n\tlet result = [];\n\n\tfor (let str of arr) {\n\t\tif (!result.includes(str)) {\n\t\t\tresult.push(str);\n\t\t}\n\t}\n\n\treturn result;\n}\n\nlet strings = ['Hare', 'Krishna', 'Hare', 'Krishna',\n\t'Krishna', 'Krishna', 'Hare', 'Hare', ':-O'\n];\n\nalert( unique(strings) ); // Hare, Krishna, :-O\n\n----------Another Solution----------\n\nfunction unique(arr) {\n\treturn Array.from(new Set(arr));\n}"
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : Create keyed object from array",
+                    "summary": [
+                        "- Let’s say we received an array of users in the form {id:..., name:..., age:... }.",
+                        "- Create a function groupById(arr) that creates an object from it, with id as the key, and array items as values."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction groupById(array) {\n\treturn array.reduce((obj, value) => {\n\t\tobj[value.id] = value;\n\t\treturn obj;\n\t}, {})\n}\n\nlet users = [\n\t{id: 'john', name: 'John Smith', age: 20},\n\t{id: 'ann', name: 'Ann Smith', age: 24},\n\t{id: 'pete', name: 'Pete Peterson', age: 31},\n];\n\nlet usersById = groupById(users);"
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : Filter anagrams",
+                    "summary": [
+                        "- Write a function aclean(arr) that returns an array cleaned from anagrams.",
+                        "- Anagrams are words that have the same number of same letters, but in different order."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction aclean(arr) {\n\tlet map = new Map();\n\tfor (let word of arr) {\n\t\t// split the word by letters, sort them and join back\n\t\tlet sorted = word.toLowerCase().split('').sort().join(''); // (*)\n\t\tmap.set(sorted, word);\n\t}\n\treturn Array.from(map.values());\n}\n\nlet arr = ['nap', 'teachers', 'cheaters', 'PAN', 'ear', 'era', 'hectares'];\n\nalert( aclean(arr) );"
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : Which day of month was many days ago?",
+                    "summary": [
+                        "- Create a function getDateAgo(date, days) to return the day of month days ago from the date."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction getDateAgo(date, days) {\n\tlet dateCopy = new Date(date);\n\tdateCopy.setDate(date.getDate() - days);\n\treturn dateCopy.getDate();\n}\n\nlet date = new Date(2015, 0, 2);\nalert( getDateAgo(date, 1) ); // 1, (1 Jan 2015)\nalert( getDateAgo(date, 2) ); // 31, (31 Dec 2014)\nalert( getDateAgo(date, 365) ); // 2, (2 Jan 2014)"
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : Last day of month?",
+                    "summary": [
+                        "- Write a function getLastDayOfMonth(year, month) that returns the last day of month. Sometimes it is 30th, 31st or even 28/29th for Feb."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction getLastDayOfMonth(year, month) {\n\tlet date = new Date(year, month + 1, 0);\n\treturn date.getDate();\n}\n\nalert( getLastDayOfMonth(2012, 0) ); // 31\nalert( getLastDayOfMonth(2012, 1) ); // 29\nalert( getLastDayOfMonth(2013, 1) ); // 28"
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : Format the relative date",
+                    "summary": [
+                        "- Write a function formatDate(date) that should format date as follows:",
+                        "1. If since date passed less than 1 second, then 'right now'.",
+                        "2. Otherwise, if since date passed less than 1 minute, then 'n sec. ago'.",
+                        "3. Otherwise, if less than an hour, then 'm min. ago'.",
+                        "4. Otherwise, the full date in the format 'DD.MM.YY HH:mm'. That is: 'day.month.year hours:minutes', all in 2-digit format, e.g. 31.12.16 10:00."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction formatDate(date) {\n\tlet dayOfMonth = date.getDate();\n\tlet month = date.getMonth() + 1;\n\tlet year = date.getFullYear();\n\tlet hour = date.getHours();\n\tlet minutes = date.getMinutes();\n\tlet diffMs = new Date() - date;\n\tlet diffSec = Math.round(diffMs / 1000);\n\tlet diffMin = diffSec / 60;\n\tlet diffHour = diffMin / 60;\n\n\t// formatting\n\tyear = year.toString().slice(-2);\n\tmonth = month < 10 ? '0' + month : month;\n\tdayOfMonth = dayOfMonth < 10 ? '0' + dayOfMonth : dayOfMonth;\n\thour = hour < 10 ? '0' + hour : hour;\n\tminutes = minutes < 10 ? '0' + minutes : minutes;\n\tif (diffSec < 1) {\n\t\treturn 'right now';\n\t} else if (diffMin < 1) {\n\t\treturn `${diffSec} sec. ago`\n\t} else if (diffHour < 1) {\n\t\treturn `${diffMin} min. ago`\n\t} else {\n\t\treturn `${dayOfMonth}.${month}.${year} ${hour}:${minutes}`\n\t}\n}"
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : Calculate factorial",
+                    "summary": [
+                        "- The factorial of a natural number is a number multiplied by 'number minus one', then by 'number minus two', and so on till 1. The factorial of n is denoted as n!"
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction factorial(n) {\n\treturn n ? n * factorial(n - 1) : 1;\n}\n\nalert( factorial(5) ); // 120"
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : Fibonacci numbers",
+                    "summary": [
+                        "- The sequence of Fibonacci numbers has the formula Fn = Fn-1 + Fn-2. In other words, the next number is a sum of the two preceding ones."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction fib(n) {\n\treturn n <= 1 ? n : fib(n - 1) + fib(n - 2);\n\t}\n\nalert( fib(3) ); // 2\nalert( fib(7) ); // 13\n// fib(77); // will be extremely slow!"
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : Spy decorator",
+                    "summary": [
+                        "- Create a decorator spy(func) that should return a wrapper that saves all calls to function in its calls property."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction spy(func) {\n\tfunction wrapper(...args) {\n\t\t// using ...args instead of arguments to store 'real' array in wrapper.calls\n\t\twrapper.calls.push(args);\n\t\treturn func.apply(this, args);\n\t}\n\n\twrapper.calls = [];\n\treturn wrapper;\n}"
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : Delaying decorator",
+                    "summary": [
+                        "- Create a decorator delay(f, ms) that delays each call of f by ms milliseconds."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction delay(f, ms) {\n\n\treturn function() {\n\t\tsetTimeout(() => f.apply(this, arguments), ms);\n\t};\n}\n\nlet f1000 = delay(alert, 1000);\nf1000('test'); // shows 'test' after 1000ms"
+                }
+            ]
+        }
+    ],
+    "searching": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : Linear Search.",
+                    "summary": [
+                        "- simply loop over each element in the array.",
+                        "- check to see if the current element is equal to the target.",
+                        "-  if so, we return that elements index. If the target isn’t found, then we simply return -1 at the end of the function."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction linearSearch(arr, target) {\n\tfor (let i in arr) {\n\t\tif (arr[i] === target) return i\n\t}\n\treturn -1\n}\nconsole.log(linearSearch([1, 2, 3, 4], 1)) // 0\nconsole.log(linearSearch([1, 2, 3, 4], 4)) // 3\nconsole.log(linearSearch([1, 2, 3, 4], 6)) // -1\nconsole.log(linearSearch([3, 4, 1, 6, 3], 6)) // 3"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : Binary Search.",
+                    "summary": [
+                        "- Binary seacrh can be Implemented by using Bottom-up and Recursive Approach.",
+                        "- The solution is given in Bottom-up Apporach"
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nfunction binarySearch(arr, val) {\n\tlet start = 0;\n\tlet end = arr.length - 1;\n\n\twhile (start <= end) {\n\t\tlet mid = Math.floor((start + end) / 2);\n\n\tif (arr[mid] === val) {\n\t\treturn mid;\n\t}\n\n\tif (val < arr[mid]) {\n\t\tend = mid - 1;\n\t} else {\n\t\tstart = mid + 1;\n\t}\n}\nreturn -1;\n}"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : Depth-First Search (DFS).",
+                    "summary": [
+                        "- DFS is a traversal algorithm commonly used to search for elements in graphs or trees. It explores a path as far as possible before backtracking and exploring other paths. DFS can be implemented recursively or using a stack."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nclass Node {\n\tconstructor(value) {\n\t\tthis.value = value;\n\t\tthis.children = [];\n\t}\n}\n\nfunction dfs(node, target) {\n\tif (node.value === target) {\n\t\treturn node; // Return the node if found\n\t}\n\n\tfor (let child of node.children) {\n\t\tconst result = dfs(child, target);\n\t\tif (result) {\n\t\t\treturn result; // Return the node if found in child nodes\n\t\t}\n\t}\n\n\treturn null; // Return null if not found\n}\n\n// Usage example:\nconst rootNode = new Node(1);\nconst childNode1 = new Node(2);\nconst childNode2 = new Node(3);\nconst targetNode = new Node(4);\n\nrootNode.children.push(childNode1, childNode2);\nchildNode2.children.push(targetNode);\n\nconsole.log(dfs(rootNode, 4)); // Output: targetNode object"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : Breadth-First Search (BFS):.",
+                    "summary": [
+                        "- BFS is another traversal algorithm used for searching in graphs or trees. It explores all the neighboring elements at the current depth level before moving to the next depth level. BFS can be implemented using a queue."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\n \tclass Node {\n \t\tconstructor(value) {\n \t\t\tthis.value = value;\n \t\t\tthis.children = [];\n \t\t}\n \t}\n \n \tfunction bfs(rootNode, target) {\n \t\tconst queue = [rootNode];\n \n \t\twhile (queue.length > 0) {\n \t\t\tconst node = queue.shift();\n \n \t\t\tif (node.value === target) {\n \t\t\t\treturn node; // Return the node if found\n \t\t\t}\n \n \t\t\tqueue.push(...node.children);\n \t\t}\n \n \t\treturn null; // Return null if not found\n \t}\n \t// Usage example:\n \tconst rootNode = new Node(1);\n \tconst childNode1 = new Node(2);\n \tconst childNode2 = new Node(3);\n \tconst targetNode = new Node(4);\n \n \trootNode.children.push(childNode1, childNode2);\n \tchildNode2.children.push(targetNode);\n \n \tconsole.log(bfs(rootNode, 4)); // Output: targetNode object\n \n"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : Hashing.",
+                    "summary": [
+                        "- Hashing is a technique used to efficiently search for elements in hash tables or associative arrays. It uses a hash function to map keys to specific positions in the data structure, allowing for constant-time retrieval of values.."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nclass HashTable {\n \t\tconstructor() {\n \t\t\tthis.table = {};\n \t\t}\n \n \t\thash(key) {\n \t\t\t// Hash function implementation\n \t\t\t// ... (hashing logic here)\n \t\t}\n \n \t\tsearch(key) {\n \t\t\tconst hash = this.hash(key);\n \t\t\treturn this.table[hash];\n \t\t}\n \t}\n \n \t// Usage example:\n \tconst hashTable = new HashTable();\n \thashTable.insert('name', 'John');\n \thashTable.insert('age', 30);\n \n \tconsole.log(hashTable.search('age')); // Output: 30\n `; // Display the code snippet document.getElementById('codeSnippet').innerHTML = codeSnippet;"
+                }
+            ]
+        }
+    ],
+    "sorting": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : Implement Bubble Sort.",
+                    "summary": [
+                        "- To achieve sorting in Bubble Sort, the adjacent elements in the array are compared and the positions are swapped if the first element is greater than the second. In this fashion, the largest value 'bubbles' to the top.",
+                        "- Usually, after each iteration the elements furthest to the right are in correct order. The process is repeated until all the elements are in their right position."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet bubbleSort = (inputArr) => {\n\tlet len = inputArr.length;\n\tlet checked;\n\tdo {\n\t\tchecked = false;\n\t\tfor (let i = 0; i < len; i++) {\n\t\t\tif (inputArr[i] > inputArr[i + 1]) {\n\t\t\t\tlet tmp = inputArr[i];\n\t\t\tinputArr[i] = inputArr[i + 1];\n\t\t\tinputArr[i + 1] = tmp;\n\t\t\tchecked = true;\n\t\t}\n\t}\n} while (checked);\nreturn inputArr;\n};"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : Implement Selection Sort.",
+                    "summary": [
+                        "- Selection sort divides the input array into a sorted and an unsorted region. It repeatedly selects the smallest element from the unsorted region and swaps it with the leftmost element of the unsorted region. Selection sort has a time complexity of O(n^2) in all cases.."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nconst selectionSort = arr => {\n\tfor(let i=0,n=arr.length;i<n-1;i++){\n\t\tlet minIndex=i;\n\t\tfor(let j=i+1;j<n;j++)\n\t\t\tif(arr[j]<arr[minIndex])\n\t\t\t\tminIndex=j;\n\t\t[arr[i],arr[minIndex]]=[arr[minIndex],arr[i]];\n\t}\n\treturn arr;\n}"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : Implement Insertion Sort.",
+                    "summary": [
+                        "- Insertion sort builds the final sorted array one element at a time. It iterates through the array and inserts each element into its correct position within the sorted portion of the array. Insertion sort has a time complexity of O(n^2) in the average and worst cases but performs well on small or nearly sorted arrays."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nconst insertionSort = arr => {\n\tfor(let i=1,n=arr.length;i<n;i++){\n\t\tlet key=arr[i],j=i-1;\n\t\twhile(j>=0&&arr[j]>key){\n\t\t\tarr[j+1]=arr[j];\n\t\t\tj--;\n\t\t}\n\t\tarr[j+1]=key;\n\t}\n\treturn arr;\n}"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : Implement Merge Sort.",
+                    "summary": [
+                        "- Merge sort follows the divide-and-conquer approach. It divides the input array into two halves, recursively sorts them, and then merges the two sorted halves to produce a sorted output. Merge sort has a time complexity of O(n log n) in all cases and is a stable sorting algorithm."
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nconst mergeSort = arr => {\n\tif(arr.length<=1)\n\t\treturn arr;\n\tconst mid=Math.floor(arr.length/2),\n\t\tleft=mergeSort(arr.slice(0,mid)),\n\t\tright=mergeSort(arr.slice(mid));\n\treturn merge(left,right);\n}\n\nconst merge=(l,r)=>{\n\tconst m=[];\n\tlet i=0,j=0;\n\twhile(i<l.length&&j<r.length){\n\t\tif(l[i]<=r[j])\n\t\t\tm.push(l[i++]);\n\t\telse\n\t\t\tm.push(r[j++]);\n\t}\n\twhile(i<l.length)\n\t\tm.push(l[i++]);\n\twhile(j<r.length)\n\t\tm.push(r[j++]);\n\treturn m;\n}"
+                }
+            ]
+        },
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q5 : Implement Quick Sort.",
+                    "summary": [
+                        "- Quick sort also follows the divide-and-conquer approach. It selects a pivot element, partitions the array around the pivot, and recursively sorts the subarrays created by the partition. Quick sort has an average time complexity of O(n log n), but its worst-case time complexity is O(n^2) (which can be mitigated using various optimizations)"
+                    ],
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet bubbleSort = (inputArr) => {\n\tlet len = inputArr.length;\n\tlet checked;\n\tdo {\n\t\tchecked = false;\n\t\tfor (let i = 0; i < len; i++) {\n\t\t\tif (inputArr[i] > inputArr[i + 1]) {\n\t\t\t\tlet tmp = inputArr[i];\n\t\t\tinputArr[i] = inputArr[i + 1];\n\t\t\tinputArr[i + 1] = tmp;\n\t\t\tchecked = true;\n\t\t}\n\t}\n} while (checked);\nreturn inputArr;\n}const quickSort = (arr,low=0,high=arr.length-1) => {\n\tif(low<high){\n\t\tconst pi=partition(arr,low,high);\n\t\tquickSort(arr,low,pi-1);\n\t\tquickSort(arr,pi+1,high);\n\t}\n\treturn arr;\n}\n\nconst partition=(arr,low,high)=>{\n\tconst pivot=arr[high];\n\tlet i=low-1;\n\tfor(let j=low;j<high;j++)\n\t\tif(arr[j]<pivot)\n\t\t\t[arr[i+1],arr[j]]=[arr[j],arr[i+1]],i++;\n\t[arr[i+1],arr[high]]=[arr[high],arr[i+1]];\n\treturn i+1;\n};"
+                }
+            ]
+        }
+    ],
+    "pattern": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : Generate Triangle Pattern",
+                    "queCode": "\n1\n1 2\n1 2 3\n1 2 3 4\n1 2 3 4 5",
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet rows = 5;\n\n// pattern variable carries the final pattern in string format\nlet pattern = '';\n\n// outer loop runs for `rows` no. of times\nfor (let n = 1; n <= rows; n++) {\n\t// inner loop runs for n\n\tfor (let num = 1; num <= n; num++) {\n\t\tpattern += num;\n\t}\n\n\t// Add a new line character after contents of each line\n\tpattern += '\\n';\n}\nconsole.log(pattern);"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : Generate Triangle Pattern",
+                    "queCode": "\n1\n2 2\n3 3 3\n4 4 4 4\n1 5 5 5 5",
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet rows = 5;\n\n// pattern variable carries the final pattern in string format\nlet pattern = '';\n\n// outer loop runs for `rows` no. of times\nfor (let n = 1; n <= rows; n++) {\n\t// inner loop runs for n\n\tfor (let num = 1; num <= n; num++) {\n\t\tpattern += n;\n\t}\n\n\t// Add a new line character after contents of each line\n\tpattern += '\\n';\n}\nconsole.log(pattern);"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : Generate Reverse Triangle",
+                    "queCode": "\n1 2 3 4 5\n1 2 3 4\n1 2 3\n1 2\n1",
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet rows = 5;\n\n// pattern variable carries the final pattern in string format\nlet pattern = '';\n\n// outer loop runs for `rows` no. of times\nfor (let n = 1; n <= rows; n++) {\n\tfor (let num = 1; num <= 6 - n; num++) {\n\t\tpattern += num;\n\t}\n\tpattern += '\\n';\n}\nconsole.log(pattern);"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : Generate Number Pyramid Pattern",
+                    "queCode": "\n    1\n   123\n  12345\n 1234567\n123456789",
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet rows = 5;\n// pattern variable carries the final pattern in string format\nlet pattern = '';\n\n// outer loop runs for `rows` no. of times\nfor (let n = 1; n <= rows; n++) {\n\t// Inner Loop - I -> for the spaces\n\tfor (let space = 1; space <= rows - n; space++) {\n\t\tpattern += ' ';\n\t}\n\n\t// Inner Loop - II -> for the numbers\n\tfor (let num = 1; num <= 2 * n - 1; num++) {\n\t\tpattern += num;\n\t}\n\n\tpattern += '\\n';\n}\nconsole.log(pattern);"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : Generate Number Pyramid Pattern",
+                    "queCode": "\n   1\n  234\n 56789",
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet rows = 3;\nlet variable = 1;\nlet pattern = '';\n\n// outer loop runs for `rows` no. of times\nfor (let n = 1; n <= rows; n++) {\n\t// Inner Loop - I -> for the spaces\n\tfor (let space = 1; space <= rows - n; space++) {\n\t\tpattern += ' ';\n\t}\n\n\t// Inner Loop - II -> for the series of numbers\n\tfor (let num = 1; num <= 2 * n - 1; num++) {\n\t\tpattern += variable;\n\t\tvariable++;\n\t}\n\n\tpattern += '\\n';\n}\nconsole.log(pattern);"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : Generate Hollow Square Star Pattern",
+                    "queCode": "\n*****\n*   *\n*   *\n*   *\n*****",
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet rows = 5;\n\n// pattern variable carries the final pattern in string format\nlet pattern = '';\n\n// outer loop runs for `rows` no. of times\nfor (let n = 1; n <= rows; n++) {\n\tfor (let num = 1; num <= 5; num++) {\n\t\t// print star only if it is the boundary location\n\t\tif (n == 1 || n == rows) pattern += '*';\n\t\telse {\n\t\t\tif (num == 1 || num == 5) {\n\t\t\t\tpattern += '*';\n\t\t\t} else {\n\t\t\t\tpattern += ' ';\n\t\t\t}\n\t\t\t}\n\t\t}\n\tpattern += '\\n';\n\t}\nconsole.log(pattern);"
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : Generate Right Triangle Pattern",
+                    "queCode": "\n    *\n   **\n  ***\n ****\n*****",
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet rows = 5;\n\n// pattern variable carries the final pattern in string format\nlet pattern = '';\n\n// outer loop runs for `rows` no. of times\nfor (let n = 1; n <= rows; n++) {\n\t// Inner loop - I -> prints spaces\n\tfor (let space = 1; space <= rows - n; space++) {\n\t\tpattern += ' ';\n\t}\n\n\t// Inner Loop - II -> prints stars\n\tfor (let num = 1; num <= n; num++) {\n\t\tpattern += '*';\n\t}\n\tpattern += '\\n';\n}\nconsole.log(pattern);"
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : Generate Hollow Triangle Star Pattern",
+                    "queCode": "\n*\n**\n* *\n*  *\n*   *\n******",
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet rows = 5;\n\n// pattern variable carries the final pattern in string format\nlet pattern = '';\n\n// outer loop runs for `rows` no. of times\nfor (let n = 1; n <= rows; n++) {\n\tfor (let num = 1; num <= n; num++) {\n\t\t// Print only boundary stars\n\t\tif (num === 1 || num === n || n === rows) pattern += ' * ';\n\t\telse {\n\t\t\tpattern += ' ';\n\t\t}\n\t}\n\tpattern += '\\n';\n}\nconsole.log(pattern);"
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : Generate Inverse Triangle Pyramid",
+                    "queCode": "\n$\n$$\n$$$\n$$$$\n%%%%%\n%%%%\n%%%\n%%\n%",
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet rows = 5;\nlet char1 = '$';\nlet char2 = '%';\n\n// pattern variable carries the final pattern in string format\nlet pattern = '';\n\n// outer loop - I -> runs for `rows-1` no. of times\n// forms a character triangle\nfor (let n = 1; n <= rows - 1; n++) {\n\tfor (let num = 1; num <= n; num++) {\n\t\tpattern += char1;\n\t}\n\tpattern += '\\n';\n}\n\n// outer loop - II -> runs for `rows` no. of times\n// forms an inverse character triangle\nfor (let n = 1; n <= rows; n++) {\n\tfor (let num = 1; num <= 6 - n; num++) {\n\t\tpattern += char2;\n\t}\npattern += '\\n';\n}\n\tconsole.log(pattern);"
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : Generate Inverse Triangle Pyramid",
+                    "queCode": "\nAAAAA\nAAAA\nAAA\nAA\nA\nB\nBB\nBBB\nBBBB\nBBBBB",
+                    "type": "codeQues",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "accordion_header": "Check the Solution",
+                    "code": "\nlet rows = 5;\nlet char1 ='A';\nlet char2 = 'B';\n\n// pattern variable carries the final pattern in string format\nlet pattern = '';\n\n// outer loop - I -> runs for `rows` no. of times\n// forms an inverse character triangle with 'A'.\nfor (let n = 1; n <= rows; n++) {\n\tfor (let num = 1; num <= 6 - n; num++) {\n\t\tpattern += char1;\n\t}\n\tpattern += '\\n';\n}\npattern += '\\n';\n\n// outer loop - II -> runs for `rows` no. of times\n// forms a character triangle with 'B'.\nfor (let n = 1; n <= rows; n++) {\n\tfor (let num = 1; num <= n; num++) {\n\t\tpattern += char2;\n\t}\npattern += '\\n';\n}\n\nconsole.log(pattern);"
+                }
+            ]
+        }
+    ]
+}

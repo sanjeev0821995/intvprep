@@ -1,0 +1,27 @@
+<div class="fuse-alert-container" *ngIf="!dismissible || dismissible && !dismissed" [@fadeIn]="!dismissed" [@fadeOut]="!dismissed">
+
+    <!-- Border -->
+    <div class="fuse-alert-border" *ngIf="appearance === 'border'"></div>
+
+    <!-- Icon -->
+
+
+    <!-- Content -->
+    <div class="fuse-alert-content">
+
+        <div class="fuse-alert-title">
+            <ng-content select="[fuseAlertTitle]"></ng-content>
+        </div>
+
+        <div class="fuse-alert-message">
+            <ng-content></ng-content>
+        </div>
+
+    </div>
+
+    <!-- Dismiss button -->
+    <button class="fuse-alert-dismiss-button" mat-icon-button (click)="dismiss()">
+        <mat-icon [svgIcon]="'heroicons_solid:x'"></mat-icon>
+    </button>
+
+</div>

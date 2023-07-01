@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="card" *ngFor="let card of getConfig">
+        <div class="item">
+            <div class="p-16">
+                <div class="h1">{{card.heading}}</div>
+                <div class="h4 secondary-text">{{card.subheading}}</div>
+            </div>
+
+            <div class="p-16 pt-0 line-height-1.75">
+                {{card.content}}
+            </div>
+
+            <div class="p-8 pt-0" fxLayout="row" fxLayoutAlign="start center">
+                <button mat-button>SHARE</button>
+                <button mat-button (click)="redirectTo(card)">EXPLORE</button>
+            </div>
+        </div>
+    </div>
+</div>
