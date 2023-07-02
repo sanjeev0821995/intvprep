@@ -1,9 +1,9 @@
 {
-  "name": "fuse",
-  "short_name": "fuse",
+  "name": "InterviewAnt",
+  "short_name": "InterviewAnt",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
-  "display": "standalone",
+  "display": "fullscreen",
   "scope": "./",
   "start_url": "./",
   "icons": [
