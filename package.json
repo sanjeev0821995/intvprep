@@ -1,7 +1,7 @@
 {
-  "name": "@fuse/starter",
+  "name": "@interviewAnt",
   "version": "14.2.0",
-  "description": "Fuse - Angular Admin Template and Starter Project",
+  "description": "interview Ant",
   "author": "Amit",
   "license": "license",
   "private": true,
@@ -12,10 +12,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "dev:ssr": "ng run fuse:serve-ssr",
-    "serve:ssr": "node dist/fuse/server/main.js",
-    "build:ssr": "ng build && ng run fuse:server",
-    "prerender": "ng run fuse:prerender --routes routes.txt"
+    "dev:ssr": "ng run interviewAnt:serve-ssr",
+    "serve:ssr": "node dist/interviewAnt/server/main.js",
+    "build:ssr": "ng build && ng run interviewAnt:server",
+    "prerender": "ng run interviewAnt:prerender --routes routes.txt"
   },
   "dependencies": {
     "@angular/animations": "^14.3.0",

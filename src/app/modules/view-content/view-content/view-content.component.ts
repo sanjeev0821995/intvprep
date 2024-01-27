@@ -108,7 +108,7 @@ export class ViewContentComponent implements OnInit {
         this.title.setTitle(title);
     }
 
-    setMetaTag(metaDes, imgUrl = 'https://interviewant.com/logo.PNG'): void {
+    setMetaTag(metaDes, imgUrl = 'https://interviewant.tech/logo.PNG'): void {
         this.meta.updateTag({
             name: 'description',
             content: metaDes,
@@ -139,7 +139,7 @@ export class ViewContentComponent implements OnInit {
             this.setMetaTag(
                 // eslint-disable-next-line max-len
                 'Prepare from this comprehensive list of the latest Angular Interview Questions and crack your dream company interview. These angular questions cater to freshers as well as experienced professionals.',
-                'https://interviewant.com/logo.PNG'
+                'https://interviewant.tech/logo.PNG'
             );
             this.trackUsers('Angular-interview-Questions');
 
@@ -151,7 +151,7 @@ export class ViewContentComponent implements OnInit {
             this.setMetaTag(
                 // eslint-disable-next-line max-len
                 'Prepare from this list of VueJS Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
-                'https://interviewant.com/logo.PNG'
+                'https://interviewant.tech/logo.PNG'
             );
             this.trackUsers('React-interview-Questions');
 
@@ -163,7 +163,7 @@ export class ViewContentComponent implements OnInit {
             this.setMetaTag(
                 // eslint-disable-next-line max-len
                 'Prepare from this list of VueJS Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
-                'https://interviewant.com/logo.PNG'
+                'https://interviewant.tech/logo.PNG'
             );
             this.trackUsers('Vue-interview-Questions');
 
@@ -174,7 +174,7 @@ export class ViewContentComponent implements OnInit {
                 this.setMetaTag(
                     // eslint-disable-next-line max-len
                     'Learn and Practice on almost all javascript coding Interview Questions mostly asked in the interview and get the job..',
-                    'https://interviewant.com/logo.PNG'
+                    'https://interviewant.tech/logo.PNG'
                 );
             } else if (this.path.includes('coding')) {
                 this.setTitle(
@@ -189,7 +189,7 @@ export class ViewContentComponent implements OnInit {
                 this.setMetaTag(
                     // eslint-disable-next-line max-len
                     'Learn and Practice on almost all javascript coding Interview Questions mostly asked in the interview and get the job..',
-                    'https://interviewant.com/logo.PNG'
+                    'https://interviewant.tech/logo.PNG'
                 );
             } else if (this.path.includes('weird')) {
                 this.setTitle(
@@ -198,7 +198,7 @@ export class ViewContentComponent implements OnInit {
                 this.setMetaTag(
                     // eslint-disable-next-line max-len
                     'Learn and Practice on almost all javascript coding Interview Questions mostly asked in the interview and get the job..',
-                    'https://interviewant.com/logo.PNG'
+                    'https://interviewant.tech/logo.PNG'
                 );
             } else {
                 this.setTitle(
@@ -207,7 +207,7 @@ export class ViewContentComponent implements OnInit {
                 this.setMetaTag(
                     // eslint-disable-next-line max-len
                     'Learn and Practice on almost all javascript Questions for freshers and experienced candidates and ace your Interview.',
-                    'https://interviewant.com/logo.PNG'
+                    'https://interviewant.tech/logo.PNG'
                 );
             }
             this.trackUsers('JavaScript-interview-Questions');
@@ -219,7 +219,7 @@ export class ViewContentComponent implements OnInit {
             );
             this.setMetaTag(
                 'Prepare from this list of HTML & HTML5 Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
-                'https://interviewant.com/logo.PNG'
+                'https://interviewant.tech/logo.PNG'
             );
             this.trackUsers('Html-interview-Questions');
 
@@ -230,7 +230,7 @@ export class ViewContentComponent implements OnInit {
             );
             this.setMetaTag(
                 'Find top CSS interview questions asked. Explore basic, intermediate, and advanced level questions.',
-                'https://interviewant.com/logo.PNG'
+                'https://interviewant.tech/logo.PNG'
             );
             this.trackUsers('CSS-interview-Questions');
 
@@ -241,7 +241,7 @@ export class ViewContentComponent implements OnInit {
             );
             this.setMetaTag(
                 'Prepare from this list of NodeJs Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
-                'https://interviewant.com/logo.PNG'
+                'https://interviewant.tech/logo.PNG'
             );
             this.trackUsers('nodejs-interview-Questions');
 
@@ -252,7 +252,7 @@ export class ViewContentComponent implements OnInit {
             );
             this.setMetaTag(
                 'Prepare from this list of Git Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
-                'https://interviewant.com/logo.PNG'
+                'https://interviewant.tech/logo.PNG'
             );
             this.trackUsers('git-interview-Questions');
 

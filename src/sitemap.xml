@@ -6,76 +6,76 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://interviewant.com</loc>
+  <loc>https://interviewant.tech</loc>
   <lastmod>2023-06-24T16:48:09+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-    <loc>https://interviewant.com/angular-interview-questions</loc>
+    <loc>https://interviewant.tech/angular-interview-questions</loc>
     <lastmod>2023-06-24T16:48:09+00:00</lastmod>
     <priority>0.80</priority>
 </url>
 
 <url>
-    <loc>https://interviewant.com/react-interview-questions</loc>
+    <loc>https://interviewant.tech/react-interview-questions</loc>
     <lastmod>2023-06-24T16:48:09+00:00</lastmod>
     <priority>0.80</priority>
 </url>
 
 <url>
-    <loc>https://interviewant.com/vuejs-interview-questions</loc>
+    <loc>https://interviewant.tech/vuejs-interview-questions</loc>
     <lastmod>2023-06-24T16:48:09+00:00</lastmod>
     <priority>0.80</priority>
 </url>
 
 <url>
-    <loc>https://interviewant.com/javascript-interview-questions</loc>
+    <loc>https://interviewant.tech/javascript-interview-questions</loc>
     <lastmod>2023-06-24T16:48:09+00:00</lastmod>
     <priority>0.80</priority>
 </url>
 
 <url>
-    <loc>https://interviewant.com/javascript-coding-interview-questions</loc>
+    <loc>https://interviewant.tech/javascript-coding-interview-questions</loc>
     <lastmod>2023-06-24T16:48:09+00:00</lastmod>
     <priority>0.80</priority>
 </url>
 <url>
-    <loc>https://interviewant.com/javascript-quiz</loc>
+    <loc>https://interviewant.tech/javascript-quiz</loc>
     <lastmod>2023-06-24T16:48:09+00:00</lastmod>
     <priority>0.80</priority>
 </url>
 <url>
-    <loc>https://interviewant.com/weird-part-of-javascript</loc>
+    <loc>https://interviewant.tech/weird-part-of-javascript</loc>
     <lastmod>2023-06-24T16:48:09+00:00</lastmod>
     <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://interviewant.com/html-interview-questions</loc>
+  <loc>https://interviewant.tech/html-interview-questions</loc>
   <lastmod>2023-06-24T16:48:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://interviewant.com/css-interview-questions</loc>
+  <loc>https://interviewant.tech/css-interview-questions</loc>
   <lastmod>2023-06-24T16:48:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://interviewant.com/git-interview-questions</loc>
+  <loc>https://interviewant.tech/git-interview-questions</loc>
   <lastmod>2023-06-24T16:48:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://interviewant.com/nodejs-interview-questions</loc>
+  <loc>https://interviewant.tech/nodejs-interview-questions</loc>
   <lastmod>2023-06-24T16:48:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://interviewant.com/contact-us</loc>
+  <loc>https://interviewant.tech/contact-us</loc>
   <lastmod>2023-06-24T16:48:09+00:00</lastmod>
   <priority>0.30</priority>
 </url>
 <url>
-  <loc>https://interviewant.com/privacy-policy</loc>
+  <loc>https://interviewant.tech/privacy-policy</loc>
   <lastmod>2023-06-24T16:48:09+00:00</lastmod>
   <priority>0.30</priority>
 </url>

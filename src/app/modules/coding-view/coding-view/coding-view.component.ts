@@ -54,7 +54,7 @@ export class CodingViewComponent implements OnInit, OnDestroy {
             },
             {
                 property: 'og:image',
-                content: 'https://interviewant.com/logo.PNG',
+                content: 'https://interviewant.tech/logo.PNG',
             },
         ]);
     }

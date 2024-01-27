@@ -8,7 +8,7 @@
     },
     "newProjectRoot": "projects",
     "projects": {
-        "fuse": {
+        "interviewAnt": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -22,7 +22,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/fuse/browser",
+                        "outputPath": "dist/interviewAnt/browser",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -100,10 +100,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "fuse:build:production"
+                            "browserTarget": "interviewAnt:build:production"
                         },
                         "development": {
-                            "browserTarget": "fuse:build:development"
+                            "browserTarget": "interviewAnt:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -111,7 +111,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "fuse:build"
+                        "browserTarget": "interviewAnt:build"
                     }
                 },
                 "test": {
@@ -146,7 +146,7 @@
                 "server": {
                     "builder": "@angular-devkit/build-angular:server",
                     "options": {
-                        "outputPath": "dist/fuse/server",
+                        "outputPath": "dist/interviewAnt/server",
                         "main": "server.ts",
                         "tsConfig": "tsconfig.server.json",
                         "stylePreprocessorOptions": {
@@ -178,12 +178,12 @@
                     "builder": "@nguniversal/builders:ssr-dev-server",
                     "configurations": {
                         "development": {
-                            "browserTarget": "fuse:build:development",
-                            "serverTarget": "fuse:server:development"
+                            "browserTarget": "interviewAnt:build:development",
+                            "serverTarget": "interviewAnt:server:development"
                         },
                         "production": {
-                            "browserTarget": "fuse:build:production",
-                            "serverTarget": "fuse:server:production"
+                            "browserTarget": "interviewAnt:build:production",
+                            "serverTarget": "interviewAnt:server:production"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -197,12 +197,12 @@
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "fuse:build:production",
-                            "serverTarget": "fuse:server:production"
+                            "browserTarget": "interviewAnt:build:production",
+                            "serverTarget": "interviewAnt:server:production"
                         },
                         "development": {
-                            "browserTarget": "fuse:build:development",
-                            "serverTarget": "fuse:server:development"
+                            "browserTarget": "interviewAnt:build:development",
+                            "serverTarget": "interviewAnt:server:development"
                         }
                     },
                     "defaultConfiguration": "production"
