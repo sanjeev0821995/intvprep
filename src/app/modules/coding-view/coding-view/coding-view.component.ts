@@ -32,7 +32,7 @@ export class CodingViewComponent implements OnInit, OnDestroy {
         this.activateRoute.data.subscribe((data) => {
             this.getConfig = data?.initialData[0]?.config;
         });
-        this.title.setTitle('JavaScript Coding Interview Questions (2023) - Interview Ant');
+        this.title.setTitle('JavaScript Coding Interview Questions (2023) - Intvprep.');
         this.meta.addTags([
             {
                 name: 'description',
@@ -41,11 +41,11 @@ export class CodingViewComponent implements OnInit, OnDestroy {
             },
             {
                 property: 'og:site_name',
-                content: 'Interview Ant',
+                content: 'Intvprep.',
             },
             {
                 property: 'og:site',
-                content: 'Interview Ant',
+                content: 'Intvprep.',
             },
             {
                 property: 'og:description',
@@ -54,7 +54,7 @@ export class CodingViewComponent implements OnInit, OnDestroy {
             },
             {
                 property: 'og:image',
-                content: 'https://interviewant.tech/logo.PNG',
+                content: 'https://intvprep.com/logo.PNG',
             },
         ]);
     }

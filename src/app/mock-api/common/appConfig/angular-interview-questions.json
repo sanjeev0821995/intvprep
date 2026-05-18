@@ -1,0 +1,2898 @@
+{
+    "angular-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is Angular Framework?",
+                    "a": "Angular is a platform and framework for building single-page client applications using HTML and TypeScript. Angular is written in TypeScript. Angular is a TypeScript-based open-source front-end platform that makes it easy to build applications with in web/mobile/desktop. The major features of this framework such as declarative templates, dependency injection, end to end tooling, and many more other features are used to ease the development.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : What are Single Page Applications (SPA)?",
+                    "a": "An SPA (Single-page application) is a web app implementation that loads only a single web document, and then updates the body content of that single document via JavaScript APIs such as XMLHttpRequest and Fetch when different content is to be shown.",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : What is the difference between AngularJS and Angular?",
+                    "a": "Angular is a completely revived component-based framework in which an application is a tree of individual components. Some of the major difference in tabular form",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "AngularJS"
+                        },
+                        {
+                            "label": "Angular"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "It is based on MVC architecture."
+                                },
+                                {
+                                    "col": "This is based on Service/Controller"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "It uses JavaScript to build the application."
+                                },
+                                {
+                                    "col": "Introduced the TypeScript to write the application"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Based on controllers concept."
+                                },
+                                {
+                                    "col": "This is a component based UI approach"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Not a mobile friendly framework."
+                                },
+                                {
+                                    "col": "Developed considering mobile platform."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Difficulty in SEO friendly application development."
+                                },
+                                {
+                                    "col": "Ease to create SEO friendly applications."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : Write a pictorial diagram of Angular architecture?",
+                    "a": "The main building blocks of an Angular application is shown in the below diagram.",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "img",
+                    "img": "architecture.png"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : What is the purpose of common module?",
+                    "a": "The commonly-needed services, pipes, and directives provided by @angular/common module. Apart from these HttpClientModule is available under @angular/common/http.",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : What are the advantages of using Angular over AngularJS?",
+                    "a": "Angular is a typescript based free and open-source application design framework and platform for developers which comes with many advantages. ",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Angular is at least five times faster than AngularJS due to a much better algorithm for data binding and a component-based architecture.",
+                        "2": "The components of an Angular application are quite independent and self-sufficient, which makes them reusable and test friendly.",
+                        "3": "The independent components are easier to replace, maintain, and scale-up.",
+                        "4": "Angular applications can be rendered both on browsers and mobile devices.",
+                        "5": "Angular has inbuilt extensions for server-side rendering of applications. This enables developers to sync client and server sides of content, a huge plus for SEO.",
+                        "6": "Angular supports lazy loading, which makes the applications faster as only those components that are needed are loaded.",
+                        "7": "TypeScript's first approach of Angular makes for cleaner code, better navigation, and high-quality product."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : What are the key components of Angular?",
+                    "a": "Angular has the below key components : ",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Component": "These are the basic building blocks of angular application to control HTML views.",
+                        "Modules": "An angular module is set of angular basic building blocks like component, directives, services etc. An application is divided into logical pieces and each piece of code is called as module which perform a single task.",
+                        "Templates": "This represent the views of an Angular application.",
+                        "Services": "It is used to create components which can be shared across the entire application.",
+                        "Metadata": "This can be used to add more data to an Angular class."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : What are directives?",
+                    "a": "Directives are elements which change the appearance or behavior of the DOM element..",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_heading": "There are 3 types of Directives :",
+                    "list": {
+                        "Structural Directives": "Adding or removing element to the DOM using *ngIf, *ngFor, *ngSwitch.",
+                        "Attribute Directives": "Attribute directive is a way to modify the DOM element or component by using ngStyle, ngClass.",
+                        "Custom Directives": "Custom Directives given below"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\nimport { Directive, ElementRef, Input } from '@angular/core'; \n\n@Directive({ selector: '[myHighlight]' }) \nexport class HighlightDirective {\n\tconstructor(el: ElementRef) { \n\t\tel.nativeElement.style.backgroundColor = 'yellow'; \n\t} \n}",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Now this directive extends HTML element behavior with a yellow background as below",
+                    "code": "\n<p myHighlight> Highlight me! </p>",
+                    "lang": "html"
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : What are components?",
+                    "a": "Components are the most basic UI building block of an Angular app which formed a tree of Angular components. These components are subset of directives. Unlike directives, components always have a template and only one component can be instantiated per an element in a template. Let's see a simple example of Angular component.",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\nimport { Component } from '@angular/core'; \n\n@Component ({ \n\tselector: 'my-app', \n\ttemplate: ` <div>\n\t\t<h1>{{title}}</h1> \n\t\t<div>Learn Angular6 with examples</div>\n\t</div> `, \n}) \nexport class AppComponent { \n\ttitle: string = 'Welcome to Angular world'; \n}",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : What are the differences between Component and Directive?",
+                    "a": "In a short note, A component(@component) is a directive-with-a-template.Some of the major differences are mentioned in a tabular form",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Component"
+                        },
+                        {
+                            "label": "Directive"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "To register a component we use @Component meta-data annotation."
+                                },
+                                {
+                                    "col": "To register directives we use @Directive meta-data annotation."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Components are typically used to create UI widgets."
+                                },
+                                {
+                                    "col": "Directive is used to add behavior to an existing DOM element."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Component is used to break up the application into smaller components."
+                                },
+                                {
+                                    "col": "Directive is use to design re-usable components"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Only one component can be present per DOM element."
+                                },
+                                {
+                                    "col": "Many directives can be used per DOM element."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "@View decorator or templateUrl/template are mandatory."
+                                },
+                                {
+                                    "col": "Directive doesn't use View."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : What are the differences between an Annotation and a Decorator in Angular?",
+                    "a": "",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Annotations": "This are hard-coded language feature. Annotations are only metadata set on the class that is used to reflect the metadata library. When user annotates a class, the compiler creates an attribute on that class called annotations, stores an annotation array in it, then tries to instantiate an object with the same name as the annotation, passing the metadata into the constructor. Annotations are not predefined in AngularJs so we can name them on our own."
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\nExample: Here component is annotated as ComponentAnnotation and further used.",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "code",
+                    "code": "\nimport { ComponentAnnotation as Component, } from '@angular/core';\nexport class ComponentAnnotation extends DirectiveMetadata {\n\t constructor() { } \n}",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Decorators": "A decorator is a function that adds metadata to a class, its members, or its method arguments. A decorator is just a function that gives you access to the target that needs to be decorated."
+                    }
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Annotation"
+                        },
+                        {
+                            "label": "Decorator"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Used by Traceur/google compiler."
+                                },
+                                {
+                                    "col": "Used by Typescript compiler"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Annotations are only metadata set on the class using the Reflect Metadata library."
+                                },
+                                {
+                                    "col": "Decorator corresponds to a function that is called on the class."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Annotations are used for creating an attribute annotations that stores array."
+                                },
+                                {
+                                    "col": "Decorator is a function that gets the object that needs to be decorated."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "They are Hard-coded"
+                                },
+                                {
+                                    "col": "They are not Hard-coded."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Exp. Imports for Annotations: import {ComponentAnnotation as Component} from ‘@angular/core’;"
+                                },
+                                {
+                                    "col": "Exp. Imports for Decorators: import {Component} from ‘@angular/core’;"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : What is a template?",
+                    "a": "A template is a HTML view where you can display data by binding controls to properties of an Angular component. You can store your component's template in one of two places. You can define it inline using the template property, or you can define the template in a separate HTML file and link to it in the component metadata using the @Component decorator's templateUrl property.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\nimport { Component } from '@angular/core'; \n@Component ({ \n\tselector: 'my-app', \n\ttemplate: ' <div> \n\t\t<h1>{{title}}</h1> \n\t\t<div>Learn Angular</div> \n\t</div> ' \n}) \nexport class AppComponent { \n\ttitle: string = 'Hello World'; \n}",
+                    "lang": "typescript",
+                    "heading_text": "Using inline template with template syntax,"
+                },
+                {
+                    "type": "code",
+                    "code": "\nimport { Component } from '@angular/core'; \n@Component ({ \n\tselector: 'my-app', \n\ttemplateUrl: 'app/app.component.html' \n}) \nexport class AppComponent { \n\ttitle: string = 'Hello World'; \n}",
+                    "lang": "typescript",
+                    "heading_text": "Using separate template file such as app.component.html"
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : What is a module?",
+                    "a": "Modules are logical boundaries in your application and the application is divided into separate modules to separate the functionality of your application. Lets take an example of app.module.ts root module declared with @NgModule decorator as below.",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\nimport { NgModule } from '@angular/core'; \nimport { BrowserModule } from '@angular/platform-browser'; \nimport { AppComponent }  from './app.component'; \n@NgModule ({ \n\timports: [ BrowserModule ], \n\tdeclarations: [ AppComponent ], \n\tbootstrap:    [ AppComponent ], \n\tproviders: [] \n}) \nexport class AppModule { }",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "The NgModule decorator has five important(among all) options.",
+                    "list": {
+                        "1": "The imports option is used to import other dependent modules. The BrowserModule is required by default for any web based angular application.",
+                        "2": "The declarations option is used to define components in the respective module.",
+                        "3": "The bootstrap option tells Angular which Component to bootstrap in the application.",
+                        "4": "The providers option is used to configure set of injectable objects that are available in the injector of this module.",
+                        "5": "The entryComponents option is a set of components dynamically loaded into the view."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : What are Decorators?",
+                    "a": "Decorator are the feature of typeScript and are implemented as function, starts with @ symbol following by brackets and arguments.Decorators are simply function that return function these function supply the meta data to angular about particular class, property, value or methods.Decorators are invoked at runtime.",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list_text": "Types of decorators ",
+                    "list": {
+                        "Class Decorators": "e.g. @Component @NgModule",
+                        "Property Decorators ": "e.g. @Input and @Output",
+                        "Method Decorators ": "e.g. @HostListener",
+                        "Parameter Decorators": "e.g. @Inject"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : What are lifecycle hooks available?",
+                    "a": "Angular application goes through an entire set of processes or has a lifecycle right from its initiation to the end of the application. The representation of lifecycle in pictorial representation as follows.",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "img",
+                    "img": "lifecycle-hooks.png"
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list": {
+                        "ngOnChanges": "When the value of a data bound property changes, then this method is called.",
+                        "ngOnInit": "This is called whenever the initialization of the directive/component after Angular first displays the data-bound properties happens.",
+                        "ngDoCheck": "This is for the detection and to act on changes that Angular can't or won't detect on its own.",
+                        "ngAfterContentInit": "This is called in response after Angular projects external content into the component's view.",
+                        "ngAfterContentChecked": "This is called in response after Angular checks the content projected into the component.",
+                        "ngAfterViewInit": "This is called in response after Angular initializes the component's views and child views.",
+                        "ngAfterViewChecked": "This is called in response after Angular checks the component's views and child views.",
+                        "ngOnDestroy": "This is the cleanup phase just before Angular destroys the directive/component."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : What is a data binding?",
+                    "a": "Data binding is a core concept in Angular and allows to define communication between a component and the DOM, making it very easy to define interactive applications without worrying about pushing and pulling data. There are four forms of data binding(divided as 3 categories) which differ in the way the data is flowing.",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list": {
+                        "From the Component to the DOM": ""
+                    }
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Interpolation : {{ value }}: Adds the value of a property from the component",
+                    "code": "\n<li>Name: {{ user.name }}</li>\n<li>Address: {{ user.address }}</li>",
+                    "lang": "html"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Property binding: [property]=”value”: The value is passed from the component to the specified property or simple HTML attribute",
+                    "code": "\n<input type='email' [value]='user.email'>",
+                    "lang": "html"
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list": {
+                        "From the DOM to the Component: Event binding: (event)=”function”": "When a specific DOM event happens (eg.: click, change, keyup), call the specified method in the component"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\n<button (click)='logout()''></button>",
+                    "lang": "html"
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list": {
+                        "Two-way binding: Two-way data binding": "[(ngModel)]=”value”: Two-way data binding allows to have the data flow both ways. For example, in the below code snippet, both the email DOM input and component email property are in sync"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\n<input type='email' [(ngModel)]='user.email'>",
+                    "lang": "html"
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : What is the difference between constructor and ngOnInit?",
+                    "a": "TypeScript classes has a default method called constructor which is normally used for the initialization purpose. Whereas ngOnInit method is specific to Angular, especially used to define Angular bindings. Even though constructor getting called first, it is preferred to move all of your Angular bindings to ngOnInit method. In order to use ngOnInit, you need to implement OnInit interface as below,",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\nexport class App implements OnInit{\n\tconstructor(){\n\t\t//called first time before the ngOnInit() \n\t} \n\n\tngOnInit(){ \n\t\t//called after the constructor and called  after the first ngOnChanges() \n\t} \n}",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : Explain some common commands in Angular.",
+                    "a": "Angular provides many commands to perform operations as below.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\nnpm install -g @angular/cli //- to install angular cli. \nng help //- list available commands with descriptions. \nng new my-first-project //- create new angular workspace. \nng generate //- generate new files or modify existing. \nng build //- compile the app into an output directory named 'dist'. \nng serve //- build and serve your application. \nng run //- runs an application with custom build configuration. \nng update //- update dependencies in your application. \nng version //- gives current CLI version.",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : What is the difference between *ngIf and hidden?",
+                    "a": "There is actually a performance difference between them:",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list": {
+                        "*ngIf": "ngIf will comment out the data if the expression is false. This way the data are not even loaded, causing HTML to load faster.",
+                        "[hidden]": "[hidden] will load the data and mark them with the hidden HTML attribute. This way data are loaded even if they are not visible."
+                    }
+                },
+                {
+                    "q": "",
+                    "a": "So [hidden] is better used when we want the show/hide status to change frequently, for example on a button click event, so we do not have to load the data every time the button is clicked, just changing its hidden attribute would be enough.",
+                    "type": "text"
+                },
+                {
+                    "type": "note",
+                    "note": "Note : The performance difference may not be visible with small data, only with larger objects."
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : How do you categorize data binding types?",
+                    "a": "Binding types can be grouped into three categories distinguished by the direction of data flow. They are listed as below",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "simple_text": "#From the source-to-view(One-way)// Types : Interpolation, Property, Attribute, Class, Style",
+                    "code": "\n1. {{expression}} \n2. [target]='expression' \n3. bind-target='expression'",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "#From view-to-source(One-way)//Types : Event",
+                    "code": "\n1. (target)='statement' \n2. on-target='statement'",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "#View-to-source-to-view(Two-way)// Types : Two-way",
+                    "code": "\n1. [(target)]='expression' \n2. binding-target='expression'",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : How many ways to create forms in angular?",
+                    "a": "Angular provides two different approaches to handling user input through forms: reactive and template-driven. Both capture user input events from the view, validate the user input, create a form model and data model to update, and provide a way to track changes.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list_heading": "Template Driven Forms Features",
+                    "list": {
+                        "1": "Easy to use.",
+                        "2": "Suitable for simple scenarios and fails for complex scenarios.",
+                        "3": "Similar to AngularJS",
+                        "4": "Two way data binding(using [(NgModel)] syntax).",
+                        "5": "Minimal component code.",
+                        "6": "Automatic track of the form and its data(handled by Angular)",
+                        "7": "Unit testing is another challenge"
+                    }
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list_heading": "Reactive Forms Features",
+                    "list": {
+                        "1": "More flexible, but needs a lot of practice.",
+                        "2": "Handles any complex scenarios.",
+                        "3": "No data binding is done (immutable data model preferred by most developers)",
+                        "4": "More component code and less HTML markup.",
+                        "5": "Reactive transformations can be made possible such a -Handling a event based on a debounce time, -Handling events when the components are distinct until changed, -Adding elements dynamically",
+                        "6": "Easier unit testing"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : What is a service?",
+                    "a": "Angular services are objects that get instantiated just once during the lifetime of an application. They contain methods that maintain data throughout the life of an application, i.e., data is available all the time.A Service is a class with a specific purpose, and In Angular, we use services mainly for three purposes.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list": {
+                        "To Implement any Business Logic that is independent of any Component": "Assume you want to calculate the age from DOB, Now you provide the year and The logic can give you age you would not need an HTML view to do that ,it is component Independent",
+                        "Access to Shared Data.": "When passing data between components that lack a direct connection, such as siblings, grandchildren, etc, you should use a shared service. You could either use RXJS BehaviorSubject or Subject for cross component communication.",
+                        "External Interactions": "Accessing REST Web Services Using Http"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : What is dependency injection in Angular?",
+                    "a": "Dependency injection (DI), is an important application design pattern in which a class asks for dependencies from external sources rather than creating them itself. Angular comes with its own dependency injection framework for resolving dependencies( services or objects that a class needs to perform its function).So you can have your services depend on other services throughout your application.",
+                    "type": "text",
+                    "id": 23,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "q": "Q24 :What are pipes?",
+                    "a": "A pipe takes in data as input and transforms it to a desired output. For example, let us take a pipe to transform a component's birthday property into a human-friendly date using date pipe.",
+                    "type": "text",
+                    "id": 24,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\nimport { Component } from '@angular/core'; \n@Component({ \n\tselector: 'app-birthday', \n\ttemplate: `<p>Birthday is {{ birthday | date }}</p>` \n}) \nexport class BirthdayComponent { \n\tbirthday = new Date(1987, 6, 18); // June 18, 1987 \n}",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "q": "Q25 : What is a parameterized pipe?",
+                    "a": "A pipe can accept any number of optional parameters to fine-tune its output. The parameterized pipe can be created by declaring the pipe name with a colon ( : ) and then the parameter value. If the pipe accepts multiple parameters, separate the values with colons. Let's take a birthday example with a particular format(dd/MM/yyyy):",
+                    "type": "text",
+                    "id": 25,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\nimport { Component } from '@angular/core'; \n@Component({ \n\tselector: 'app-birthday', \n\ttemplate: `<p>Birthday is {{ birthday | date:'dd/MM/yyyy'}}</p>` // 18/06/1987 \n}) \nexport class BirthdayComponent { \n\tbirthday = new Date(1987, 6, 18); \n}",
+                    "lang": "typescript"
+                },
+                {
+                    "note": "Note: The parameter value can be any valid template expression, such as a string literal or a component property.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "q": "Q26 : How do you chain pipes?",
+                    "a": "You can chain pipes together in potentially useful combinations as per the needs. Let's take a birthday property which uses date pipe(along with parameter) and uppercase pipes as below",
+                    "type": "text",
+                    "id": 26,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\nimport { Component } from '@angular/core'; \n@Component({ \n\tselector: 'app-birthday', \n\ttemplate: `<p>Birthday is {{  birthday | date:'fullDate' | uppercase}} </p>` // THURSDAY, JUNE 18, 1987\n}) \nexport class BirthdayComponent { \n\tbirthday = new Date(1987, 6, 18); \n}",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "q": "Q27 : What is a custom pipe?",
+                    "a": "Apart from built-inn pipes, you can write your own custom pipe with the below key characteristics,",
+                    "type": "text",
+                    "id": 27,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list": {
+                        "1": "A pipe is a class decorated with pipe metadata @Pipe decorator, which you import from the core Angular library For example,"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\n@Pipe({name: 'myCustomPipe'})",
+                    "lang": "typescript"
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list": {
+                        "1": "The pipe class implements the PipeTransform interface's transform method that accepts an input value followed by optional parameters and returns the transformed value. The structure of pipeTransform would be as below,"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\ninterface PipeTransform {\n\ttransform(value: any, ...args: any[]): any\n}",
+                    "lang": "typescript"
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list": {
+                        "1": "The @Pipe decorator allows you to define the pipe name that you'll use within template expressions. It must be a valid JavaScript identifier."
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\ntemplate: `{{someInputValue | myCustomPipe: someOtherValue}}`",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "q": "Q28 : What is the difference between pure and impure pipe?",
+                    "a": "",
+                    "type": "text",
+                    "id": 28,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list": {
+                        "Pure pipe": "A pure pipe is only called when Angular detects a change in the value or the parameters passed to a pipe.",
+                        "An impure pipe": "An impure pipe is called for every change detection cycle no matter whether the value or parameter(s) changes."
+                    }
+                },
+                {
+                    "isListKeyRequired": false,
+                    "list_heading": "This is relevant for changes that are not detected by Angular",
+                    "type": "list",
+                    "list": {
+                        "1": "when you pass an array or object that got the content changed (but is still the same instance)",
+                        "2": "when the pipe injects a service to get access to other values, Angular doesn't recognize if they have changed."
+                    }
+                },
+                {
+                    "q": "",
+                    "a": "In these cases you probably still want the pipe to be executed.",
+                    "type": "text"
+                },
+                {
+                    "note": "Note : You should be aware that impure pipes are prone to be inefficient. For example when an array is passed into the pipe to filter, sort, ... then this work might be done every time change detection runs (which is quite often especially with the default ChangeDetectionStrategy setting) event though the array might not even have changed. Your pipe should try to recognize this and for example return cached results.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "q": "Q29 : What is the purpose of async pipe?",
+                    "a": "The AsyncPipe subscribes to an observable or promise and returns the latest value it has emitted. When a new value is emitted, the pipe marks the component to be checked for changes.Let's take a time observable which continuously updates the view for every 2 seconds with the current time.",
+                    "type": "text",
+                    "id": 29,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\n@Component({\n\tselector: 'async-observable-pipe',\n\ttemplate: `<div><code>observable|async</code>:\n\tTime: {{ time | async }}</div>`\n}) \nexport class AsyncObservablePipeComponent {\n\ttime = new Observable(observer =>\n\t\tsetInterval(() => observer.next(new Date().toString()), 2000)\n\t);\n}",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "q": "Q30 : What is HttpClient and why do we need HttpClient?",
+                    "a": "The front-end of applications communicate with back-end services to get or send the data over HTTP protocol using either XMLHttpRequest interface or fetch API. This communication is done in Angular with the help of HttpClient.",
+                    "type": "text",
+                    "id": 30,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "q": "",
+                    "a": "HttpClient is a built-in service class available in the @angular/common/http package. It has multiple signature and return types for each request. It uses the RxJS observable-based APIs, which means it returns the observable and what we need to subscribe it. This API was developed based on XMLHttpRequest interface exposed by browsers.",
+                    "type": "text"
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list_heading": "Features of HttpClient",
+                    "list": {
+                        "1": "Provides typed request and response objects",
+                        "2": "Contains testability features",
+                        "3": "Intercepts request and response",
+                        "4": "Supports RxJS observable-based APIs",
+                        "5": "Supports streamlined error handling",
+                        "6": "Performs the GET, POST, PUT, DELETE operations"
+                    }
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list_heading": "Below are the steps need to be followed for the usage of HttpClient.",
+                    "list": {
+                        "1": "Import HttpClient into root module"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\nimport { HttpClientModule } from '@angular/common/http';\n@NgModule({\n\timports: [\n\t\tBrowserModule,\n\t\t// import HttpClientModule after BrowserModule.\n\t\tHttpClientModule,\n\t],\n......\n})\nexport class AppModule {}",
+                    "lang": "typescript"
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list": {
+                        "1": "Inject the HttpClient into the application: Let's create a userProfileService(userprofile.service.ts) as an example. It also defines get method of HttpClient"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\nimport { Injectable } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\n\nconst userProfileUrl: string = 'assets/data/profile.json';\n\n@Injectable()\nexport class UserProfileService {\n\tconstructor(private http: HttpClient) { }\n\n\tgetUserProfile() {\n\t\treturn this.http.get(this.userProfileUrl);\n\t}\n}",
+                    "lang": "typescript"
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list": {
+                        "1": "Create a component for subscribing service: Let's create a component called UserProfileComponent (userprofile.component.ts) which inject UserProfileService and invokes the service method,"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\nfetchUserProfile() {\n\tthis.userProfileService.getUserProfile()\n\t.subscribe((data: User) => this.user = {\n\t\tid: data['userId'],\n\t\tname: data['firstName'],\n\t\tcity:  data['city']\n\t});\n}\n//Since the above service method returns an Observable which needs to be subscribed in the component.",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "q": "Q31 : How do you perform Error handling?",
+                    "a": "If the request fails on the server or failed to reach the server due to network issues then HttpClient will return an error object instead of a successful reponse. In this case, you need to handle in the component by passing error object as a second callback to subscribe() method.Let's see how it can be handled in the component with an example,",
+                    "type": "text",
+                    "id": 31,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\nfetchUser() {\n\tthis.userService.getProfile()\n\t\t.subscribe(\n\t\t(data: User) => this.userProfile = { ...data }, // success path\n\t\terror => this.error = error // error path\n\t);\n}",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "q": "Q32 : What is an observable?",
+                    "a": "An Observable is a unique Object similar to a Promise that can help manage async code. Observables are not part of the JavaScript language so we need to rely on a popular Observable library called RxJS. The observables are created using new keyword.",
+                    "type": "text",
+                    "id": 32,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\nimport { Observable } from 'rxjs';\n\nconst observable = new Observable(observer => {\n\tsetTimeout(() => {\n\t\tobserver.next('Hello from a Observable!');\n\t}, 2000);\n});",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "q": "Q33 : What is an observer?",
+                    "a": "Observer is an interface for a consumer of push-based notifications delivered by an Observable. It has below structure,",
+                    "type": "text",
+                    "id": 33,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\ninterface Observer<T> {\n\tclosed?: boolean;\n\tnext: (value: T) => void;\n\terror: (err: any) => void;\n\tcomplete: () => void;\n}",
+                    "lang": "typescript"
+                },
+                {
+                    "a": "A handler that implements the Observer interface for receiving observable notifications will be passed as a parameter for observable as below,",
+                    "type": "text"
+                },
+                {
+                    "type": "code",
+                    "code": "\nmyObservable.subscribe(myObserver);",
+                    "lang": "typescript"
+                },
+                {
+                    "note": "Note: If you don't supply a handler for a notification type, the observer ignores notifications of that type.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "q": "Q34 : What is the difference between promise and observable?",
+                    "a": "Both Promises and Observables will help us work with the asynchronous functionalities in JavaScript. They are very similar in many cases, however, there are still some differences between the two as well, promises are values that will resolve in asynchronous ways like HTTP calls. On the other hand, observables deal with a sequence of asynchronous events. The main differences between them are listed below:",
+                    "type": "text",
+                    "id": 34,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Observable"
+                        },
+                        {
+                            "label": "Promise"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Declarative: Computation does not start until subscription so that they can be run whenever you need the result"
+                                },
+                                {
+                                    "col": "Execute immediately on creation"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Provide multiple values over time."
+                                },
+                                {
+                                    "col": "Provide only one"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Observable are cancellable"
+                                },
+                                {
+                                    "col": "Promise not easy to cancel"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Observable are re-triable by nature such as retry and retryWhen"
+                                },
+                                {
+                                    "col": "Promise are not."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Provides chaining and subscription to handle complex applications"
+                                },
+                                {
+                                    "col": "Uses only .then() clause."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "img",
+                    "img": "promise.png"
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "q": "Q35 : How do you perform error handling in observables?",
+                    "a": "You can handle errors by specifying an error callback on the observer instead of relying on try/catch which are ineffective in asynchronous environment.For example, you can define error callback as below",
+                    "type": "text",
+                    "id": 35,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\nmyObservable.subscribe({\n\tnext(num) { console.log('Next num: ' + num)},\n\terror(err) { console.log('Received an errror: ' + err)}\n});",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "q": "Q36 : What will happen if you do not supply handler for observer?",
+                    "a": "Normally an observer object can define any combination of next, error and complete notification type handlers. If you don't supply a handler for a notification type, the observer just ignores notifications of that type.",
+                    "type": "text",
+                    "id": 36,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "q": "Q37 : What is Angular Router?",
+                    "a": "Angular Router is a powerful JavaScript router built and maintained by the Angular core team that can be installed from the @angular/router package. It provides a complete routing library with the possibility to have multiple router outlets, different path matching strategies, easy access to route parameters and route guards to protect components from unauthorized access. The Angular router is a core part of the Angular platform. It enables developers to build Single Page Applications with multiple views and allow navigation between these views.",
+                    "type": "text",
+                    "id": 37,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "q": "Q38 : What is the purpose of base href tag?",
+                    "a": "Angular makes use of the base href to tell router how to compose navigation URLs. If your application exists at the root, then you can use / as the href value as shown below.The routing application should add element to the index.html as the first child in the tag in order to indicate how to compose navigation URLs. ",
+                    "type": "text",
+                    "id": 38,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\n<base href='/'>",
+                    "lang": "Html"
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "q": "Q39 : What is router outlet?",
+                    "a": "The Router-Outlet is a directive that’s available from the router library where the Router inserts the component that gets matched based on the current browser’s URL. You can add multiple outlets in your Angular application which enables you to implement advanced routing scenarios.Any component that gets matched by the Router will render it as a sibling of the router-outlet.",
+                    "type": "text",
+                    "id": 39,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\n<router-outlet></router-outlet>",
+                    "lang": "Html"
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "q": "Q40 : What are router links?",
+                    "a": "In Angular, RouterLink is a directive for navigating to a different route declaratively. Router.navigate and Router.navigateByURL are two methods available to the Router class to navigate imperatively in your component classes.",
+                    "type": "text",
+                    "id": 40,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "a": "Let’s explore how to use RouterLink, Router.navigate, and Router.navigateByURL.",
+                    "type": "text"
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list": {
+                        "Using RouterLink": "A typical link in HTML looks like this:"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\n<a href='/example'>\n\tExample HTML link.\n</a>",
+                    "lang": "typescript",
+                    "simple_text": "This example link will direct the user to the /example page",
+                    "bottom_text": "However, a single page application (SPA) does not have different pages to link to. Instead,it has different views to display to the user. To allow a user to navigate and change the view, \nyou will want to use the RouterLink directive instead of href:"
+                },
+                {
+                    "type": "code",
+                    "code": "\n<a routerLink='/users/sammy'>\n\tLink that uses a string.\n</a>",
+                    "lang": "typescript",
+                    "simple_text": "This RouterLink example will direct the user to the component at /users/sammy.",
+                    "bottom_text": "The different URL segments can also be passed in an array like this:"
+                },
+                {
+                    "type": "code",
+                    "code": "\n<a [routerLink]='['/', 'users', 'sammy']'>\n\t Link that uses an array.\n</a>",
+                    "lang": "typescript",
+                    "simple_text": "In that example, if the user is at /users/sammy, the navigation will change to /posts/sammy.",
+                    "bottom_text": "It is possible to prepend the first URL segment with a ./, ../, or no leading slash."
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list": {
+                        "Parameters": "You can pass in parameters to the navigation with an object in the list of URL segments:"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\n<a [routerLink]='['/', 'users', {display: 'verbose'}, 'sammy']'>\n\tLink with parameter.\n</a>",
+                    "lang": "typescript",
+                    "simple_text": "In that example, the Router will navigate to /users;display=verbose/sammy."
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list": {
+                        "Named Outlets": "You can tell the Router what to place in a named outlet with something like this:"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\n<a [routerLink]='['/', 'users', { outlets: { side: ['sammy'] } }]'>\n\tLink with a side outlet.\n</a>",
+                    "lang": "typescript",
+                    "bottom_text": "In that example, the sammy segment will be placed in the outlet named side.It is also possible to tell the Router what to place in multiple named outlets with something like this:"
+                },
+                {
+                    "type": "code",
+                    "code": "\n<a [routerLink]='['/', 'users', { outlets: { side: ['sammy'], footer: ['sharks'] } }]'>\n\tLink with a side and footer outlets.\n</a>",
+                    "lang": "typescript",
+                    "bottom_text": "In this example, the sammy segment will be placed in the outlet named side and the sharks segment will be placed in the outlet named footer."
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "q": "Q41 : what is the difference between router.navigateByUrl and router.navigate?",
+                    "a": "Using router.navigateByUrl is similar to changing the location bar directly–we are providing the “whole” new URL. Whereas router.navigate creates a new URL by applying an array of passed-in commands, a patch, to the current URL.router.navigate is just a convenience method that wraps router.navigateByUrl, it boils down to:",
+                    "type": "text",
+                    "id": 41,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\nnavigate(commands: any[], extras) {\n\treturn router.navigateByUrl(router.createUrlTree(commands, extras), extras);\n}",
+                    "lang": "typescript"
+                },
+                {
+                    "a": "As mentioned above router.navigateByUrl will only accept absolute URLs:",
+                    "type": "text"
+                },
+                {
+                    "type": "code",
+                    "code": "\n// This will work\nrouter.navigateByUrl('http://localhost/team/33/user/11')\n// This WON'T work even though relativeTo parameter is in the signature\nrouter.navigateByUrl('../22', {relativeTo: route})",
+                    "lang": "typescript"
+                },
+                {
+                    "a": "All the relative calculations are done by router.createUrlTree and router.navigate. Array syntax is used to treat every array element as a URL modifying 'command'. E.g. '..' - go up, 'path' - go down, {expand: true} - add query param, etc.. You can use it like this:",
+                    "type": "text"
+                },
+                {
+                    "type": "code",
+                    "code": "\n// create /team/33/user/11\nrouter.navigate(['/team', 33, 'user', 11]);\n// assuming the current url is `/team/33/user/11` and the route points to `user/11`\n// navigate to /team/33/user/11/details\nrouter.navigate(['details'], {relativeTo: route});\n// navigate to /team/33/user/22\nrouter.navigate(['../22'], {relativeTo: route});\n// navigate to /team/44/user/22\nrouter.navigate(['../../team/44/user/22'], {relativeTo: route});",
+                    "lang": "typescript"
+                },
+                {
+                    "a": "That {relativeTo: route} parameter is important as that's what router will use as the root for relative operations.",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "q": "Q42 : What are active router links?",
+                    "a": "RouterLinkActive is a directive that toggles css classes for active RouterLink bindings based on the current RouterState. i.e, the Router will add CSS classes when this link is active and and remove when the link is inactive. For example, you can add them to RouterLinks as below",
+                    "type": "text",
+                    "id": 42,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\n<h1>Angular Router</h1>\n<nav>\n\t<a routerLink='/todosList' routerLinkActive='active'>List of todos</a>\n\t<a routerLink='/completed' routerLinkActive='active'>Completed todos</a>\n</nav>\n<router-outlet></router-outlet>",
+                    "lang": "Html"
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "q": "Q43 : What is router state?",
+                    "a": "RouterState is a tree of activated routes. Every node in this tree knows about the 'consumed' URL segments, the extracted parameters, and the resolved data. You can access the current RouterState from anywhere in the application using the Router service and the routerState property. ",
+                    "type": "text",
+                    "id": 43,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\n@Component({templateUrl:'template.html'})\nclass MyComponent {\n\tconstructor(router: Router) {\n\tconst state: RouterState = router.routerState;\n\tconst root: ActivatedRoute = state.root;\n\tconst child = root.firstChild;\n\tconst id: Observable<string> = child.params.map(p => p.id);\n\t//...\n}}",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "q": "Q44 : What are router events?",
+                    "a": "During each navigation, the Router emits navigation events through the Router.events property allowing you to track the lifecycle of the route.The sequence of router events is as below,",
+                    "type": "text",
+                    "id": 44,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list": {
+                        "NavigationStart": "Navigation starts.",
+                        "RouteConfigLoadStart": "Before the router lazy loads a route configuration.",
+                        "RouteConfigLoadEnd": " After a route has been lazy loaded.",
+                        "RoutesRecognized": "When the router parses the URL and the routes are recognized.",
+                        "GuardsCheckStart": "When the router begins the guards phase of routing.",
+                        "ChildActivationStart": "When the router begins activating a route's children.",
+                        "ActivationStart": "When the router begins activating a route.",
+                        "GuardsCheckEnd": "When the router finishes the guards phase of routing successfully.",
+                        "ResolveStart": " When the router begins the resolve phase of routing.",
+                        "ResolveEnd": "When the router finishes the resolve phase of routing successfully.",
+                        "ActivationEnd": "When the router finishes activating a route's children.",
+                        "ChildActivationEnd": " When the router finishes activating a route.",
+                        "NavigationEnd": "When navigation ends successfully.",
+                        "NavigationCancel": "When navigation is canceled.",
+                        "NavigationError": "When navigation fails due to an unexpected error.",
+                        "Scroll": " When the user scrolls."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "q": "Q45 : What is activated route?",
+                    "a": "ActivatedRoute contains the information about a route associated with a component loaded in an outlet. It can also be used to traverse the router state tree. The ActivatedRoute will be injected as a router service to access the information. In the below example, you can access route path and parameters,",
+                    "type": "text",
+                    "id": 45,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\n@Component({...})\nclass MyComponent {\n\tconstructor(route: ActivatedRoute) {\n\t\tconst id: Observable<string> = route.params.pipe(map(p => p.id));\n\t\tconst url: Observable<string> = route.url.pipe(map(segments => segments.join('')));\n\t\t// route.data includes both `data` and `resolve`\n\t\tconst user = route.data.pipe(map(d => d.user));\n\t}\n}",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "q": "Q46 : What is the purpose of Wildcard route?",
+                    "a": "If the URL doesn't match any predefined routes then it causes the router to throw an error and crash the app. In this case, you can use wildcard route. A wildcard route has a path consisting of two asterisks to match every URL.",
+                    "type": "text",
+                    "id": 46,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "simple_text": "For example, you can define PageNotFoundComponent for wildcard route as below",
+                    "code": "\n{ path: '**', component: PageNotFoundComponent }",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : What is the routing Guards?",
+                    "a": "With Router Guards we can prevent users from accessing areas that they’re not allowed to access, or, we can ask them for confirmation when leaving a certain area.",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": true,
+                    "list_text": "There are four different types of Guards:",
+                    "type": "list",
+                    "list": {
+                        "CanActivate": "Checks to see if a user can visit a route.",
+                        "CanActivateChild": "Checks to see if a user can visit a routes children.",
+                        "CanDeactivate": "Checks to see if a user can exit a route.",
+                        "Resolve": "Performs route data retrieval before route activation.",
+                        "CanLoad": "Checks to see if a user can route to a module that lazy loaded."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "q": "Q48 : Do I need a Routing Module always?",
+                    "a": "No, the Routing Module is a design choice. You can skip routing Module (for example, AppRoutingModule) when the configuration is simple and merge the routing configuration directly into the companion module (for example, AppModule). But it is recommended when the configuration is complex and includes specialized guard and resolver services.",
+                    "type": "text",
+                    "id": 48,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "q": "Q49 : What is the difference between Eager Loading, Lazy Loading, and Pre-Loading?",
+                    "a": "",
+                    "type": "text",
+                    "id": 49,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list": {
+                        "Eager Loading": "Feature modules under Eager Loading would be loaded before the application starts. This is the default module-loading strategy./Eager Loading: used to load core modules and feature modules that are required to start the application.",
+                        "Lazy Loading": "Feature modules under Lazy Loading would be loaded on demand after the application starts. It helps to start application faster./all other modules could be lazily loaded on demand after the application started",
+                        "Pre-Loading": "Feature Modules under Pre-Loading would be loaded automatically after the application starts./Pre-Loading: used to load specific feature modules that are very likely to be used soon after the application started."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "q": "Q50 : When to use Eager Loading, Lazy Loading, and Pre-Loading?",
+                    "a": "",
+                    "type": "text",
+                    "id": 50,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list": {
+                        "Eager Loading": "Case 1 : Small size applications. In this case, it’s not expensive to load all modules before the application starts, and the application will be faster and more responsive to process requests. Case 2 : Core modules and feature modules that are required to start the application. These modules could contain components of the initial page, interceptors (for authentication, authorization, and error handling, etc.), error response components, top-level routing, and localization, etc. We just have to eagerly load these modules to make the application function properly despite the application size.",
+                        "Lazy Loading": "The scenario of applying Lazy Loading is relatively simple and straightforward. In a big-size web application, we can lazily load all other modules that are not required when the application starts.",
+                        "Pre-Loading": "Case 1 : Medium size application. In this scenario, we can make the application start faster since it will load all other modules later that are not required to run the application. And the application would be more responsive to process users’ requests than applying Lazy Loading strategy since the application will load all these modules after the application started. Case 2 : Some specific modules that users are very likely to use after the application started. In this scenario, we can pre-load these feature modules and still lazy load other modules."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "q": "Q51 : What are reactive forms?",
+                    "a": "Reactive forms is a model-driven approach for creating forms in a reactive style(form inputs changes over time). These are built around observable streams, where form inputs and values are provided as streams of input values. Let's follow the below steps to create reactive forms",
+                    "type": "text",
+                    "id": 51,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list": {
+                        "1": "Register the reactive forms module which declares reactive-form directives in your app"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\nimport { ReactiveFormsModule } from '@angular/forms';\n\n @NgModule({\n\timports: [\n\t\t// other imports ...\n\t\tReactiveFormsModule\n\t],\n})\nexport class AppModule { }",
+                    "lang": "typescript"
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list": {
+                        "1": "Create a new FormControl instance and save it in the component"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\nimport { Component } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n@Component({\nselector: 'user-profile',\n\tstyleUrls: ['./user-profile.component.css']\n\t})\nexport class UserProfileComponent {\n\tuserName = new FormControl('');\n}",
+                    "lang": "typescript"
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list": {
+                        "1": "Register the FormControl in the template"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\n<label>\n\tUser name: <input type='text' [formControl]='userName'>\n</label>",
+                    "lang": "typescript"
+                },
+                {
+                    "q": "",
+                    "a": "Finally, the component with reactive form control appears as below, ```js import { Component } from '@angular/core'; import { FormControl } from '@angular/forms';",
+                    "type": "text"
+                },
+                {
+                    "type": "code",
+                    "code": "\n@Component({\n\tselector: 'user-profile',\n\tstyleUrls: ['./user-profile.component.css']\n\ttemplate: `\n\t\t<label>\n\t\t\tUser name:<input type='text' [formControl]='userName'>\n\t\t</label>`\n})\nexport class UserProfileComponent {\n\tuserName = new FormControl('');\n}",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "q": "Q52 : What are dynamic forms?",
+                    "a": "Dynamic forms is a pattern in which we build a form dynamically based on metadata that describes a business object model. You can create them based on reactive form API.",
+                    "type": "text",
+                    "id": 52,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "q": "Q53 : What are the differences between reactive forms and template driven forms?",
+                    "a": "Below are the main differences between reactive forms and template driven forms",
+                    "type": "text",
+                    "id": 53,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Feature"
+                        },
+                        {
+                            "label": "Reactive"
+                        },
+                        {
+                            "label": "Template-Driven"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Form model setup"
+                                },
+                                {
+                                    "col": "Created(FormControl instance) in component explicitly"
+                                },
+                                {
+                                    "col": "Created by directives"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Data updates"
+                                },
+                                {
+                                    "col": "Synchronous"
+                                },
+                                {
+                                    "col": "Asynchronous"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Form custom validation"
+                                },
+                                {
+                                    "col": "Defined as Functions"
+                                },
+                                {
+                                    "col": "Defined as Directives"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Testing."
+                                },
+                                {
+                                    "col": "No interaction with change detection cycle."
+                                },
+                                {
+                                    "col": "Need knowledge of the change detection process."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Mutability"
+                                },
+                                {
+                                    "col": "Immutable(by always returning new value for FormControl instance)."
+                                },
+                                {
+                                    "col": "Mutable(Property always modified to new value)."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Scalability"
+                                },
+                                {
+                                    "col": "More scalable using low-level APIs."
+                                },
+                                {
+                                    "col": "Less scalable using due to abstraction on APIs."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "q": "Q54 : What is the difference b/w setValue and patchValue?",
+                    "a": "We use setValue to set the value of every form of control on the form. For example, here we have three form control in our form model. And now because we want to update the value of each one of these, we use setValue.",
+                    "type": "text",
+                    "id": 54,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "code": "\nthis.myForm.setValue({\n\tname: 'Wilson',\n\tcity: 'Oneida',\n\temail: 'wilsondcousta@gmail.com'\n});",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "However, if we only want to set the subset of the values, we then use patchValue. In this example, we set only of the three values.",
+                    "code": "\nthis.myForm.setValue({\n\tcity: 'Noida'\n});",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "Que": [
+                {
+                    "q": "Q55 : What are the types of validator functions?",
+                    "a": "In reactive forms, the validators can be either synchronous or asynchronous functions,",
+                    "type": "text",
+                    "id": 55,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list": {
+                        "Sync validators": "These are the synchronous functions which take a control instance and immediately return either a set of validation errors or null. Also, these functions passed as second argument while instantiating the form control. The main use cases are simple checks like whether a field is empty, whether it exceeds a maximum length etc.",
+                        "Async validators": "These are the asynchronous functions which take a control instance and return a Promise or Observable that later emits a set of validation errors or null. Also, these functions passed as second argument while instantiating the form control. The main use cases are complex validations like hitting a server to check the availability of a username or email.",
+                        "Pre-Loading": "Case 1 : Medium size application. In this scenario, we can make the application start faster since it will load all other modules later that are not required to run the application. And the application would be more responsive to process users’ requests than applying Lazy Loading strategy since the application will load all these modules after the application started. Case 2 : Some specific modules that users are very likely to use after the application started. In this scenario, we can pre-load these feature modules and still lazy load other modules."
+                    }
+                },
+                {
+                    "type": "code",
+                    "simple_text": "The representation of these validators looks like below",
+                    "code": "\nthis.myForm = formBuilder.group({\n\tfirstName: ['value'],\n\tlastName: ['value', *Some Sync validation function*],\n\temail: ['value', *Some validation function*, *Some asynchronous validation function*]\n});",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "56",
+            "Que": [
+                {
+                    "q": "Q56 : What is the use of ng-container directive?",
+                    "a": "In order to avoid having to create that extra div, we can instead use ng-container directive:As we can see, the ng-container directive provides us with an element that we can attach a structural directive to a section of the page, without having to create an extra element just for that.",
+                    "type": "text",
+                    "id": 56,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "simple_text": "There is another major use case for the ng-container directive: it can also provide a placeholder for injecting a template dynamically into the page.",
+                    "code": "\n<ng-container *ngIf='lessons'>\n\t<div class='lesson' *ngFor='let lesson of lessons'>\n\t\t<div class='lesson-detail'>\n\t\t\t{{lesson | json}}\n\t\t</div>\n\t</div>\n</ng-container>",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "57",
+            "Que": [
+                {
+                    "q": "Q57 : What is ng-template in Angular?",
+                    "a": "ng-template is an Angular element that is used for rendering HTML in a template. However, it is not rendered directly on DOM. If you include an ng-template tag to a template, the tag and the content inside it will be replaced by comment upon render.",
+                    "type": "text",
+                    "id": 57,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "simple_text": "For instance, if you create a new Angular application and input the below code:",
+                    "code": "\n<div>How to define a template using ng-Template</div>\n<ng-template>\n\t<p>Ng Template contents</p>\n</ng-template>\n\n// Output : How to define a template using ng-Template",
+                    "lang": "html"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "You'll find that the output doesn't render 'Ng Template contents', but only the text inside the <div> element.This is because ng-template  only defines a template, but doesn't let Angular know the conditions for displaying it.If you take a look at the HTML source code, here's how it will look:",
+                    "code": "\n<app-ngtemplate _ngcontent-c0 _nghost-c1>\n\t<div _ngcontent-c1>How to define a template using ng-Template</div>\n\t<!---->\n<app-ngtemplate>",
+                    "lang": "HTML"
+                },
+                {
+                    "a": "Angular wraps the element inside ng-template, and replaces the ng-template in DOM with diagnostic comments.",
+                    "type": "text"
+                },
+                {
+                    "note": "Note : Now, this might seem pointless to you - why use a tag when its contents don't render? However, note that ng-template is always used along with structural derivatives such as ngIf, nfFor, and ngSwitch. It is used for grouping content that is not rendered, but that can be used in other parts of your code.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "58",
+            "Que": [
+                {
+                    "q": "Q58 : What are Http Interceptors?",
+                    "a": "",
+                    "type": "text",
+                    "id": 58,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list": {
+                        "1": "Interceptors allow us to intercept incoming or outgoing HTTP requests using the HttpClient. They can handle both HttpRequest as well as HttpResponse.",
+                        "2": "By intercepting the Http request, we can modify or change the value of the request, and by intercepting the response, we can do some predefined actions on a particular status code or message.",
+                        "3": "Most interceptors transform the outgoing request before passing it to the next interceptor in the chain(if there are multiple interceptors), by calling the next.handle(transformedReq).",
+                        "4": "We can transform the response stream by applying additional RxJS operators on the stream returned by the next.handle()."
+                    }
+                },
+                {
+                    "type": "code",
+                    "simple_text": "The syntax of HttpInterceptor interface looks like as below,",
+                    "code": "\ninterface HttpInterceptor {\n\tintercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>\n}",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "You can use interceptors by declaring a service class that implements the intercept() method of the HttpInterceptor interface.",
+                    "code": "\n@Injectable()\nexport class MyInterceptor implements HttpInterceptor {\n\tconstructor() {}\n\tintercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {\n\t\t...\n\t}\n}",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "After that you can use it in your module,",
+                    "code": "\n@NgModule({\n...\nproviders: [\n\t{\n\t\tprovide: HTTP_INTERCEPTORS,\n\t\tuseClass: MyInterceptor,\n\t\tmulti: true\n\t}\n]\n\t...\n})\nexport class AppModule {}",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "59",
+            "Que": [
+                {
+                    "q": "Q59 : What are the applications of HTTP interceptors?",
+                    "a": "The HTTP Interceptors can be used for different variety of tasks,",
+                    "type": "text",
+                    "id": 59,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list": {
+                        "1": "Authentication",
+                        "2": "Logging",
+                        "3": "Caching",
+                        "4": "Fake backend",
+                        "5": "URL transformation",
+                        "6": "Modifying headers"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "60",
+            "Que": [
+                {
+                    "q": "Q60 : What is View encapsulation?",
+                    "a": "In Angular, a component's styles can be encapsulated within the component's host element so that they don't affect the rest of the application.",
+                    "type": "text",
+                    "id": 60,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "a": "The Component's decorator provides the encapsulation option which can be used to control how the encapsulation is applied on a per component basis.",
+                    "type": "text"
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list": {
+                        "1": "ViewEncapsulation.ShadowDom, Angular uses the browser's built-in Shadow DOM API to enclose the component's view inside a ShadowRoot (used as the component's host element) and apply the provided styles in an isolated manner.",
+                        "2": "ViewEncapsulation.Emulated, Angular modifies the component's CSS selectors so that they are only applied to the component's view and do not affect other elements in the application (emulating Shadow DOM behavior). For more details, see Inspecting generated CSS.",
+                        "3": "ViewEncapsulation.None, Angular does not apply any sort of view encapsulation meaning that any styles specified for the component are actually globally applied and can affect any HTML element present within the application. This mode is essentially the same as including the styles into the HTML itself."
+                    }
+                },
+                {
+                    "note": "ViewEncapsulation.ShadowDom only works on browsers that have built-in support for the shadow DOM (see Can I use - Shadow DOM v1). Not all browsers support it, which is why the ViewEncapsulation.Emulated is the recommended and default mode.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "61",
+            "Que": [
+                {
+                    "q": "Q61 : What is Change Detection in Angular?",
+                    "a": "Change detection is the process through which Angular checks to see whether your application state has changed, and if any DOM needs to be updated. At a high level, Angular walks your components from top to bottom, looking for changes.",
+                    "type": "text",
+                    "id": 61,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list_text": "Change detection in Angular is executed when:",
+                    "list": {
+                        "1": "There are updates to Angular State variable.",
+                        "2": "Events are invoked inside Angular Component.",
+                        "3": "Events are invoked inside Angular Component."
+                    }
+                },
+                {
+                    "type": "img",
+                    "img": "change-detection.png"
+                }
+            ]
+        },
+        {
+            "id": "62",
+            "Que": [
+                {
+                    "q": "Q62 : What is Change Detection Strategy in Angular?",
+                    "a": "Angular Change Detection Strategy are the methods by which the updates to the component is tracked and component is triggered to Re-render. There are majorly 2 Change Detection Strategy in Angular. We can configure the Change Detection Strategy for the Component inside the Decorator.",
+                    "type": "text",
+                    "id": 62,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": true,
+                    "type": "list",
+                    "list_text": "There are two types of Change Detection Strategies in angular",
+                    "list": {
+                        "Default Change Detection Strategy": "Default change detection strategy is applied to the component while it is created. If a component strategy is not configured, it is marked as default. In this strategy, the change detection cycle runs on each and every event that occur inside the Component.",
+                        "OnPush Change Detection Strategy": "OnPush Strategy gets executed when the specified object in component gets modified.Otherwise it remains as it's. That's why It makes efficient."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "63",
+            "Que": [
+                {
+                    "q": "Q63 : What all methods of performance optimization techniques in Angular?",
+                    "a": "These are a few essential hacks that can help us significantly alleviate the performance.",
+                    "type": "text",
+                    "id": 63,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list": {
+                        "1": "Using AoT Compilation.",
+                        "2": "Using OnPush Change Detection Strategy.",
+                        "3": "Using Pure Pipes.",
+                        "4": "Unsubscribe from Observables.",
+                        "5": "Lazy Loading",
+                        "6": "Use trackBy option for For Loop",
+                        "7": "Avoid computation in template files",
+                        "8": "Usage of Web Workers"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "64",
+            "Que": [
+                {
+                    "q": "Q64 : What is RxJS?",
+                    "a": "RxJS is a library for composing asynchronous and callback-based code in a functional, reactive style using Observables. Many APIs such as HttpClient produce and consume RxJS Observables and also uses operators for processing observables.",
+                    "type": "text",
+                    "id": 64,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "simple_text": "For example, you can import observables and operators for using HttpClient as below,",
+                    "code": "\nimport { Observable, throwError } from 'rxjs';\nimport { catchError, retry } from 'rxjs/operators';",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "65",
+            "Que": [
+                {
+                    "q": "Q65 : What is Stream?",
+                    "a": "A stream refers to values of data overtime.",
+                    "type": "text",
+                    "id": 65,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "66",
+            "Que": [
+                {
+                    "q": "Q66 : What is subscribing?",
+                    "a": "An Observable instance begins publishing values only when someone subscribes to it. So you need to subscribe by calling the subscribe() method of the instance, passing an observer object to receive the notifications.",
+                    "type": "text",
+                    "id": 66,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Let's take an example of creating and subscribing to a simple observable, with an observer that logs the received message to the console.",
+                    "code": "\nCreates an observable sequence of 5 integers, starting from 1\nconst source = range(1, 5);\n\n// Create observer object\nconst myObserver = {\n\tnext: x => console.log('Observer got a next value: ' + x),\n\terror: err => console.error('Observer got an error: ' + err),\n\tcomplete: () => console.log('Observer got a complete notification'),\n};\n\n// Execute with the observer object and Prints out each item\nsource.subscribe(myObserver);\n// => Observer got a next value: 1\n// => Observer got a next value: 2\n// => Observer got a next value: 3\n// => Observer got a next value: 4\n// => Observer got a next value: 5\n// => Observer got a complete notification",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "67",
+            "Que": [
+                {
+                    "q": "Q67 : What are RxJS Operators?",
+                    "a": "An operator is simply a method that acts on an Observable and changes the stream in some way. The purpose of operator, to modify or filter originally emitted values in the way we need for the project tasks.",
+                    "type": "text",
+                    "id": 67,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "68",
+            "Que": [
+                {
+                    "q": "Q68 : What is Observers and Subscriptions?",
+                    "a": "Observers and Subscriptions are related to the concept of Observable.",
+                    "type": "text",
+                    "id": 68,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Observers : ",
+                    "list": {
+                        "1": "Observer is a set of callbacks that know how to listen to the values of the Observable.",
+                        "2": "Observers are also referred to as listeners (or consumers)",
+                        "3": "Observers may listen or subscribe to the data being observed."
+                    }
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Subscription : ",
+                    "list": {
+                        "1": "Subscription is an observable execution",
+                        "2": "Subscriptions are objects returned when an Observable is subscribed.",
+                        "3": "Subscription is useful mainly to cancel the execution"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "69",
+            "Que": [
+                {
+                    "q": "Q69 : What is Subject?",
+                    "a": "Subjects are special types of Observers, so you can also subscribe to other Observables and listen to published data",
+                    "type": "text",
+                    "id": 69,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "70",
+            "Que": [
+                {
+                    "q": "Q70 : What is multicasting?",
+                    "a": "Multi-casting is the practice of broadcasting to a list of multiple subscribers in a single execution.",
+                    "type": "text",
+                    "id": 70,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Let's demonstrate the multi-casting feature,",
+                    "code": "\nvar source = Rx.Observable.from([1, 2, 3]);\nvar subject = new Rx.Subject();\nvar multicasted = 'source.multicast(subject);'\n\n// These are, under the hood, `subject.subscribe({...})`:\nmulticasted.subscribe({\n\tnext: (v) => console.log('observerA: ' + v)\n});\nmulticasted.subscribe({\n\tnext: (v) => console.log('observerB: ' + v)\n});",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "71",
+            "Que": [
+                {
+                    "q": "Q71 : What are different between of Subject, BehaviorSubject and ReplaySubject?",
+                    "a": "",
+                    "type": "text",
+                    "id": 71,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Subject : ",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "In case of Subject, Observers who are subscribed at a later date will not obtain the data values emitted prior to their subscription."
+                    }
+                },
+                {
+                    "type": "list",
+                    "list_text": "ReplaySubject : ",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "In ReplaySubject, Observers who are subscribed at a later point will receive all the old data values issued prior to their subscription. As it operates by using a buffer that holds the values emitted and re-emits (replaying) a sequence of old values once new Observers are subscribed."
+                    }
+                },
+                {
+                    "type": "list",
+                    "list_text": "BehaviorSubject : ",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "BehaviorSubject functions similar to ReplaySubject but only re-issues the last emitted value (current value). So you're interested in the last / current value of the observer, if BehaviorSubject is useful."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "72",
+            "Que": [
+                {
+                    "q": "Q72 : When we use the switchMap, mergeMap and concatMap?",
+                    "a": "",
+                    "type": "text",
+                    "id": 72,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "flatMap/mergeMap": "creates an Observable immediately for any source item, all previous Observables are kept alive. Note flatMap is an alias for mergeMap and flatMap will be removed in RxJS 8.",
+                        "concatMap": "waits for the previous Observable to complete before creating the next one.",
+                        "switchMap": "for any source item, completes the previous Observable and immediately creates the next one.",
+                        "exhaustMap ": "source items are ignored while the previous Observable is not completed."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "73",
+            "Que": [
+                {
+                    "q": "Q73 : What are the utility functions provided by RxJS?",
+                    "a": "The RxJS library also provides below utility functions for creating and working with observables.",
+                    "type": "text",
+                    "id": 73,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Converting existing code for async operations into observables",
+                        "2": "Iterating through the values in a stream",
+                        "3": "Mapping values to different types",
+                        "4": "Filtering streams",
+                        "5": "Composing multiple streams."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "74",
+            "Que": [
+                {
+                    "q": "Q74 : What is the difference b/w Hot Observable  and Cold Observable?",
+                    "a": "",
+                    "type": "text",
+                    "id": 74,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Hot observable": "A hot Observable will start emitting as soon as it's created, and as such the values it emits are produced outside of it. A hot Observable's emitted objects are shared between its subscribers - this is called multicasting. Because of this behavior, an observer may start observing the sequence somewhere in the middle of it.",
+                        "Cold observable": "A cold Observable waits until an observer subscribes to it to start emitting. Observables are lazy by default, meaning they only execute when an observer subscribes to it. This behavior allows an observer to observe the entire sequence of emitted values."
+                    }
+                },
+                {
+                    "note": "Note: When the data is produced by the Observable itself, we call it a cold Observable. When the data is produced outside the Observable, we call it a hot Observable.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "75",
+            "Que": [
+                {
+                    "q": "Q75 : What are angular elements?",
+                    "a": "Angular elements are Angular components packaged as custom elements(a web standard for defining new HTML elements in a framework-agnostic way). Angular Elements hosts an Angular component, providing a bridge between the data and logic defined in the component and standard DOM APIs, thus, providing a way to use Angular components in non-Angular environments.",
+                    "type": "text",
+                    "id": 75,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "76",
+            "Que": [
+                {
+                    "q": "Q76 : What is the browser support of Angular Elements?",
+                    "a": "Since Angular elements are packaged as custom elements the browser support of angular elements is same as custom elements support.",
+                    "type": "text",
+                    "id": 76,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Browser"
+                        },
+                        {
+                            "label": "Angular Element Support"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Chrome"
+                                },
+                                {
+                                    "col": "Natively supported"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Opera"
+                                },
+                                {
+                                    "col": "Natively supported"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Safari"
+                                },
+                                {
+                                    "col": "Natively supported"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Firefox"
+                                },
+                                {
+                                    "col": "Natively supported from 63 version onwards. You need to enable dom.webcomponents.enabled and dom.webcomponents.customelements.enabled in older browsers"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Edge"
+                                },
+                                {
+                                    "col": "Currently it is in progress"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "77",
+            "Que": [
+                {
+                    "q": "Q77 : What are custom elements?",
+                    "a": "Custom elements (or Web Components) are a Web Platform feature which extends HTML by allowing you to define a tag whose content is created and controlled by JavaScript code. The browser maintains a CustomElementRegistry of defined custom elements, which maps an instantiable JavaScript class to an HTML tag. Currently this feature is supported by Chrome, Firefox, Opera, and Safari, and available in other browsers through polyfills.",
+                    "type": "text",
+                    "id": 77,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "78",
+            "Que": [
+                {
+                    "q": "Q78 : Do I need to bootstrap custom elements?",
+                    "a": "No, custom elements bootstrap (or start) automatically when they are added to the DOM, and are automatically destroyed when removed from the DOM. Once a custom element is added to the DOM for any page, it looks and behaves like any other HTML element, and does not require any special knowledge of Angular.",
+                    "type": "text",
+                    "id": 78,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "79",
+            "Que": [
+                {
+                    "q": "Q79 : Explain how custom elements works internally?",
+                    "a": "Below are the steps in an order about custom elements functionality,",
+                    "type": "text",
+                    "id": 79,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "App registers custom element with browser": "Use the createCustomElement() function to convert a component into a class that can be registered with the browser as a custom element.",
+                        "App adds custom element to DOM": "Add custom element just like a built-in HTML element directly into the DOM.",
+                        "Browser instantiate component based class": "Browser creates an instance of the registered class and adds it to the DOM.",
+                        "Instance provides content with data binding and change detection": "The content with in template is rendered using the component and DOM data. The flow chart of the custom elements functionality would be as follows,"
+                    }
+                },
+                {
+                    "type": "img",
+                    "img": "customElement.png"
+                }
+            ]
+        },
+        {
+            "id": "80",
+            "Que": [
+                {
+                    "q": "Q80 : How to transfer components to custom elements?",
+                    "a": "Transforming components to custom elements involves two major steps,",
+                    "type": "text",
+                    "id": 80,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Build custom element class": "Angular provides the createCustomElement() function for converting an Angular component (along with its dependencies) to a custom element. The conversion process implements NgElementConstructor interface, and creates a constructor class which is used to produce a self-bootstrapping instance of Angular component.",
+                        "Register element class with browser": "It uses customElements.define() JS function, to register the configured constructor and its associated custom-element tag with the browser's CustomElementRegistry. When the browser encounters the tag for the registered element, it uses the constructor to create a custom-element instance."
+                    }
+                },
+                {
+                    "type": "img",
+                    "img": "createElement.png"
+                }
+            ]
+        },
+        {
+            "id": "81",
+            "Que": [
+                {
+                    "q": "Q81 : What are the mapping rules between Angular component and custom element?",
+                    "a": "The Component properties and logic maps directly into HTML attributes and the browser's event system. Let us describe them in two steps,",
+                    "type": "text",
+                    "id": 81,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "The createCustomElement() API parses the component input properties with corresponding attributes for the custom element. For example, component @Input('myInputProp') converted as custom element attribute my-input-prop.",
+                        "2": "The Component outputs are dispatched as HTML Custom Events, with the name of the custom event matching the output name. For example, component @Output() valueChanged = new EventEmitter() converted as custom element with dispatch event as 'valueChanged'."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "82",
+            "Que": [
+                {
+                    "q": "Q82 : How do you define typings for custom elements?",
+                    "a": "You can use the NgElement and WithProperties types exported from @angular/elements.Let's see how it can be applied by comparing with Angular component.",
+                    "type": "text",
+                    "id": 82,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "simple_text": "The simple container with input property would be as below,",
+                    "code": "\n@Component(...)\nclass MyContainer {\n\t@Input() message: string;\n}",
+                    "type": "code",
+                    "lang": "typescript"
+                },
+                {
+                    "simple_text": "After applying types typescript validates input value and their types,",
+                    "code": "\nconst container = document.createElement('my-container') as NgElement & WithProperties<{message: string}>;\ncontainer.message = 'Welcome to Angular elements!';\ncontainer.message = true;  // <-- ERROR: TypeScript knows this should be a string.\ncontainer.greet = 'News';  // <-- ERROR: TypeScript knows there is no `greet` property on `container`.",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "83",
+            "Que": [
+                {
+                    "q": "Q83 : What are different types of compilation in Angular?",
+                    "a": "Angular offers two ways to compile your application.",
+                    "type": "text",
+                    "id": 83,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Just-in-Time (JIT)",
+                        "2": "Ahead-of-Time (AOT)"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "84",
+            "Que": [
+                {
+                    "q": "Q84 : What is JIT?",
+                    "a": "Just-in-Time (JIT) is a type of compilation that compiles your app in the browser at runtime. JIT compilation is the default when you run the ng build (build only) or ng serve (build and serve locally) CLI commands. i.e, the below commands used for JIT compilation,",
+                    "type": "text",
+                    "id": 84,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "simple_text": "The simple container with input property would be as below,",
+                    "code": "\nng build\nng serve",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "85",
+            "Que": [
+                {
+                    "q": "Q85 : What is AOT?",
+                    "a": "Ahead-of-Time (AOT) is a type of compilation that compiles your app at build time. For AOT compilation, include the --aot option with the ng build or ng serve command as below,",
+                    "type": "text",
+                    "id": 85,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "simple_text": "The simple container with input property would be as below,",
+                    "code": "\nng build --aot\nng serve --aot",
+                    "type": "code",
+                    "lang": "typescript"
+                },
+                {
+                    "note": "Note: The ng build command with the --prod meta-flag (ng build --prod) compiles with AOT by default.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "86",
+            "Que": [
+                {
+                    "q": "Q86 : Why do we need compilation process?",
+                    "a": "The Angular components and templates cannot be understood by the browser directly. Due to that Angular applications require a compilation process before they can run in a browser. For example, In AOT compilation, both Angular HTML and TypeScript code converted into efficient JavaScript code during the build phase before browser runs it.",
+                    "type": "text",
+                    "id": 86,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "87",
+            "Que": [
+                {
+                    "q": "Q87 : What are the advantages with AOT?",
+                    "a": "Below are the list of AOT benefits,",
+                    "type": "text",
+                    "id": 87,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Faster rendering": "The browser downloads a pre-compiled version of the application. So it can render the application immediately without compiling the app.",
+                        "Fewer asynchronous requests": "It inlines external HTML templates and CSS style sheets within the application javascript which eliminates separate ajax requests.",
+                        "Smaller Angular framework download size": "Doesn't require downloading the Angular compiler. Hence it dramatically reduces the application payload.",
+                        "Detect template errors earlier": "Detects and reports template binding errors during the build step itself.",
+                        "Better security": "It compiles HTML templates and components into JavaScript. So there won't be any injection attacks."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "88",
+            "Que": [
+                {
+                    "q": "Q88 : What are the ways to control AOT compilation?",
+                    "a": "You can control your app compilation in two ways,",
+                    "type": "text",
+                    "id": 88,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "By providing template compiler options in the tsconfig.json file",
+                        "2": "By configuring Angular metadata with decorators"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "89",
+            "Que": [
+                {
+                    "q": "Q89 : What are the restrictions of metadata?",
+                    "a": "In Angular, You must write metadata with the following general constraints,",
+                    "type": "text",
+                    "id": 89,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Write expression syntax with in the supported range of javascript features.",
+                        "2": "The compiler can only reference symbols which are exported.",
+                        "3": "Only call the functions supported by the compiler.",
+                        "4": "Decorated and data-bound class members must be public."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "90",
+            "Que": [
+                {
+                    "q": "Q90 : What are the three phases of AOT?",
+                    "a": "The AOT compiler works in three phases,",
+                    "type": "text",
+                    "id": 90,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "Code Analysis": "The compiler records a representation of the source",
+                        "Code generation": "It handles the interpretation as well as places restrictions on what it interprets.",
+                        "Validation": " In this phase, the Angular template compiler uses the TypeScript compiler to validate the binding expressions in templates."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "91",
+            "Que": [
+                {
+                    "q": "Q91 : Can I use arrow functions in AOT?",
+                    "a": "No, Arrow functions or lambda functions can’t be used to assign values to the decorator properties. For example, the following snippet is invalid:",
+                    "type": "text",
+                    "id": 91,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "code": "\n@Component({\nproviders: [{\n\tprovide: MyService, useFactory: () => getService()\n\t}]\n})",
+                    "type": "code",
+                    "lang": "typescript"
+                },
+                {
+                    "simple_text": "To fix this, it has to be changed as following exported function:",
+                    "code": "\nfunction getService(){\n\treturn new MyService();\n}\n\n@Component({\n\tproviders: [{\n\t\tprovide: MyService, useFactory: getService\n\t}]\n})",
+                    "type": "code",
+                    "lang": "typescript",
+                    "bottom_text": "If you still use arrow function, it generates an error node in place of the function. When the compiler later interprets this node, it reports an error to turn the arrow function into an exported function. Note: From Angular5 onwards, the compiler automatically performs this rewriting while emitting the .js file."
+                }
+            ]
+        },
+        {
+            "id": "92",
+            "Que": [
+                {
+                    "q": "Q92 : What is folding?",
+                    "a": "The compiler can only resolve references to exported symbols in the metadata. Where as some of the non-exported members are folded while generating the code. i.e Folding is a process in which the collector evaluate an expression during collection and record the result in the .metadata.json instead of the original expression. For example, the compiler couldn't refer selector reference because it is not exported",
+                    "type": "text",
+                    "id": 92,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "code": "\nlet selector = 'app-root';\n@Component({\n\tselector: selector\n})",
+                    "type": "code",
+                    "lang": "typescript"
+                },
+                {
+                    "simple_text": "Will be folded into inline selector",
+                    "code": "\n@Component({\n\tselector: 'app-root'\n})",
+                    "type": "code",
+                    "lang": "typescript",
+                    "bottom_text": "Remember that the compiler can’t fold everything. For example, spread operator on arrays, objects created using new keywords and function calls."
+                }
+            ]
+        },
+        {
+            "id": "93",
+            "Que": [
+                {
+                    "q": "Q93 : What are macros?",
+                    "a": "The AOT compiler supports macros in the form of functions or static methods that return an expression in a single return expression. For example, let us take a below macro function,",
+                    "type": "text",
+                    "id": 93,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "code": "\nexport function wrapInArray<T>(value: T): T[] {\n\treturn [value];\n}",
+                    "type": "code",
+                    "lang": "typescript"
+                },
+                {
+                    "simple_text": "You can use it inside metadata as an expression,",
+                    "code": "\n@NgModule({\n\tdeclarations: wrapInArray(TypicalComponent)\n})\nexport class TypicalModule {}",
+                    "type": "code",
+                    "lang": "typescript",
+                    "bottom_text": "The compiler treats the macro expression as it written directly"
+                },
+                {
+                    "code": "\n@NgModule({\n\tdeclarations: [TypicalComponent]\n})\nexport class TypicalModule {}",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "94",
+            "Que": [
+                {
+                    "q": "Q94 : What is the purpose of any type cast function?",
+                    "a": "You can disable binding expression type checking using $any() type cast function(by surrounding the expression). In the following example, the error Property contacts does not exist is suppressed by casting user to the any type.",
+                    "type": "text",
+                    "id": 94,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "code": "\n  template:'{{ $any(user).contacts.email }}'",
+                    "type": "code",
+                    "lang": "typescript"
+                },
+                {
+                    "simple_text": "The $any() cast function also works with this to allow access to undeclared members of the component.",
+                    "code": "\n   template:'{{ $any(this).contacts.email }}'",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "95",
+            "Que": [
+                {
+                    "q": "Q95 : What is Non null type assertion operator?",
+                    "a": "You can use the non-null type assertion operator to suppress the Object is possibly 'undefined' error. In the following example, the user and contact properties are always set together, implying that contact is always non-null if user is non-null. The error is suppressed in the example by using contact!.email.",
+                    "type": "text",
+                    "id": 95,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "code": "\n@Component({\n\tselector: 'my-component',\n\ttemplate: '<span *ngIf='user'> {{user.name}} contacted through {{contact!.email}} </span>'\n})\nclass MyComponent {\n\tuser?: User;\n\tcontact?: Contact;\n\n\tsetData(user: User, contact: Contact) {\n\t\tthis.user = user;\n\t\tthis.contact = contact;\n\t}\n}",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "96",
+            "Que": [
+                {
+                    "q": "Q96 : What is type narrowing?",
+                    "a": "The expression used in an ngIf directive is used to narrow type unions in the Angular template compiler similar to if expression in typescript. So *ngIf allows the typeScript compiler to infer that the data used in the binding expression will never be undefined.",
+                    "type": "text",
+                    "id": 96,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "code": "\n@Component({\n\tselector: 'my-component',\n\ttemplate: '<span *ngIf='user'> {{user.contact.email}} </span>'\n\t})\nclass MyComponent {\n\tuser?: User;\n}",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "97",
+            "Que": [
+                {
+                    "q": "Q97 : How do you describe various dependencies in angular application?",
+                    "a": "The dependencies section of package.json with in an angular application can be divided as follow,",
+                    "type": "text",
+                    "id": 97,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Angular packages": "Angular core and optional modules; their package names begin @angular/.",
+                        "Support packages": "Third-party libraries that must be present for Angular apps to run.",
+                        "Polyfill packages": "Polyfills plug gaps in a browser's JavaScript implementation."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "98",
+            "Que": [
+                {
+                    "q": "Q98 : What is zone?",
+                    "a": "A Zone is an execution context that persists across async tasks. Angular relies on zone.js to run Angular's change detection processes when native JavaScript operations raise events",
+                    "type": "text",
+                    "id": 98,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "99",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q99 : What is codelyzer?",
+                    "a": "Codelyzer provides set of tslint rules for static code analysis of Angular TypeScript projects. ou can run the static code analyzer over web apps, NativeScript, Ionic etc. Angular CLI has support for this and it can be use as below,",
+                    "type": "text",
+                    "id": 99
+                },
+                {
+                    "code": "\nng new codelyzer\nng lint",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "100",
+            "Que": [
+                {
+                    "q": "Q100 : What is a service worker and its role in Angular?",
+                    "a": "A service worker is a script that runs in the web browser and manages caching for an application. Starting from 5.0.0 version, Angular ships with a service worker implementation. Angular service worker is designed to optimize the end user experience of using an application over a slow or unreliable network connection, while also minimizing the risks of serving outdated content.",
+                    "type": "text",
+                    "id": 100,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "101",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q101 : What are the design goals of service workers?",
+                    "a": "Below are the list of design goals of Angular's service workers,",
+                    "type": "text",
+                    "id": 101
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "It caches an application just like installing a native application",
+                        "2": "A running application continues to run with the same version of all files without any incompatible files",
+                        "3": "When you refresh the application, it loads the latest fully cached version",
+                        "4": "When changes are published then it immediately updates in the background.",
+                        "5": "Service workers saves the bandwidth by downloading the resources only when they changed"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "102",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q102 : What is Angular Ivy?",
+                    "a": "Angular Ivy is a new rendering engine for Angular. You can choose to opt in a preview version of Ivy from Angular version 8.",
+                    "type": "text",
+                    "id": 102
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "You can enable ivy in a new project by using the --enable-ivy flag with the ng new command"
+                    }
+                },
+                {
+                    "code": "\nng new codelyzer\nng lint",
+                    "type": "code",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "You can add it to an existing project by adding enableIvy option in the angularCompilerOptions in your project's tsconfig.app.json."
+                    }
+                },
+                {
+                    "code": "\n{\n'compilerOptions': { ... },\n'angularCompilerOptions': {\n\t\t'enableIvy': true\n\t}\n}",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "103",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q103 : What are the features included in ivy preview?",
+                    "a": "You can expect below features with Ivy preview,",
+                    "type": "text",
+                    "id": 103
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Generated code that is easier to read and debug at runtime",
+                        "2": "Faster re-build time",
+                        "3": "Improved payload size",
+                        "4": "Improved template type checking"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "104",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q104 : Can I use AOT compilation with Ivy?",
+                    "a": "Yes, it is a recommended configuration. Also, AOT compilation with Ivy is faster. So you need set the default build options(with in angular.json) for your project to always use AOT compilation.",
+                    "type": "text",
+                    "id": 104
+                },
+                {
+                    "code": "\n{\n\t'projects': {\n\t\t'my-project': {\n\t\t\t'architect': {\n\t\t\t\t'build': {\n\t\t\t\t\t'options': {\n\t\t\t\t\t...'aot': true,\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        }
+    ]
+}

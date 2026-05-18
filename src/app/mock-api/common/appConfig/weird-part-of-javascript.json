@@ -1,0 +1,494 @@
+{
+    "weird-part-of-javascript": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "heading_HTML": "<h4>1 : <span class='code-color'>[]</span> is equal <span class='code-color'>![]</span> (Array is equal not array)</h4>",
+                    "accordion": "true",
+                    "answer": "true<h3> Explanation: </h3><p dir='auto'>The abstract equality operator converts both sides to numbers to compare them, and both sides become the number <code>0</code> for different reasons. Arrays are truthy, so on the right, the opposite of a truthy value is <code>false</code>, which is then coerced to <code>0</code>. On the left, however, an empty array is coerced to a number without becoming a boolean first, and empty arrays are coerced to <code>0</code>, despite being truthy.</p> <pre><span class='pl-c1'>+</span><span class='pl-kos'>[</span><span class='pl-kos'>]</span> <span class='pl-c1'>==</span> <span class='pl-c1'>+</span><span class='pl-c1'>!</span><span class='pl-kos'>[</span><span class='pl-kos'>]</span><span class='pl-kos'>;</span><br/> <span class='pl-c1'>0</span> <span class='pl-c1'>==</span> <span class='pl-c1'>+</span><span class='pl-c1'>false</span><span class='pl-kos'>;</span><br/> <span class='pl-c1'>0</span> <span class='pl-c1'>==</span> <span class='pl-c1'>0</span><span class='pl-kos'>;</span><br/> <span class='pl-c1'>true</span><span class='pl-kos'>;</span></pre>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n[] == ![];"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "type": "code",
+                    "heading_HTML": "<h4>2 : Guess The Output 🤔?</h4>",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<pre><span  >true</span> <span  >==</span> <span  >[</span><span  >]</span><span  >;</span> <span  >// -&gt; false</span><br> <span  >true</span> <span  >==</span> <span  >!</span><span  >[</span><span  >]</span><span  >;</span> <span  >// -&gt; false</span><br> <span  >false</span> <span  >==</span> <span  >[</span><span  >]</span><span  >;</span> <span  >// -&gt; true</span><br> <span  >false</span> <span  >==</span> <span  >!</span><span  >[</span><span  >]</span><span  >;</span> <span  >// -&gt; true</span></pre><h3>Explanation:</h3><pre><span  >true</span> <span  >==</span> <span  >[</span><span  >]</span><span  >;</span> <span  >// -&gt; false</span><br> <span  >true</span> <span  >==</span> <span  >!</span><span  >[</span><span  >]</span><span  >;</span> <span  >// -&gt; false</span><br><br> <span  >// According to the specification</span><br> <span  >true</span> <span  >==</span> <span  >[</span><span  >]</span><span  >;</span> <span  >// -&gt; false</span><br> <span>toNumber</span><span  >(</span><span  >true</span><span  >)</span><span  >;</span> <span  >// -&gt; 1</span><br> <span>toNumber</span><span  >(</span><span  >[</span><span  >]</span><span  >)</span><span  >;</span> <span  >// -&gt; 0</span><br> <span  >1</span> <span  >==</span> <span  >0</span><span  >;</span> <span  >// -&gt; false</span><br> <span  >true</span> <span  >==</span> <span  >!</span><span  >[</span><span  >]</span><span  >;</span> <span  >// -&gt; false</span><br> <span  >!</span><span  >[</span><span  >]</span><span  >;</span> <span  >// -&gt; false</span><br> <span  >true</span> <span  >==</span> <span  >false</span><span  >;</span> <span  >// -&gt; false</span></pre><pre><span  >false</span> <span  >==</span> <span  >[</span><span  >]</span><span  >;</span> <span  >// -&gt; true</span><br> <span  >false</span> <span  >==</span> <span  >!</span><span  >[</span><span  >]</span><span  >;</span> <span  >// -&gt; true</span><br><br> <span  >// According to the specification</span><br><br> <span  >false</span> <span  >==</span> <span  >[</span><span  >]</span><span  >;</span> <span  >// -&gt; true</span><br> <span  >toNumber</span><span  >(</span><span  >false</span><span  >)</span><span  >;</span> <span  >// -&gt; 0</span><br> <span  >toNumber</span><span  >(</span><span  >[</span><span  >]</span><span  >)</span><span  >;</span> <span  >// -&gt; 0</span><br> <span  >0</span> <span  >==</span> <span  >0</span><span  >;</span> <span  >// -&gt; true</span><br> <span  >false</span> <span  >==</span> <span  >!</span><span  >[</span><span  >]</span><span  >;</span> <span  >// -&gt; true</span><br> <span  >!</span><span  >[</span><span  >]</span><span  >;</span> <span  >// -&gt; false</span><br> <span  >false</span> <span  >==</span> <span  >false</span><span  >;</span> <span  >// -&gt; true</span></pre>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\ntrue == [];\ntrue == ![];\nfalse == [];\nfalse == ![];"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>3 : <span class='code-color'>true</span> is <span class='code-color'>false</span></h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<pre>!!'false' == !!'true'; // -> true<br>!!'false' === !!'true'; // -> true</pre>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n!!'false' == !!'true';\n!!'false' === !!'true';"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>4 : <span class='code-color'>null</span>  is <span class='code-color'>falsy</span>, but not <span class='code-color'>false</span></h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>false</p><p>false</p>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n!!null;\nnull == false;"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>5 : <span class='code-color'>document.all</span> is an object, but it is undefined</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>true</p><p>undefined</p><p>Despite the fact that document.all is an array-like object and it gives access to the DOM nodes in the page, it responds to the typeof function as undefined.</p><p>At the same time, document.all is not equal to undefined.</p><code>document.all === undefined; // -> false<br>document.all === null; // -> false</code><p>But at the same time:</p><code>document.all == null; // -> true</code><h3>Explanation:</h3><blockquote> <p dir='auto'><code class='code-color'>document.all</code> used to be a way to access DOM elements, in particular with old versions of IE. While it has never been a standard it was broadly used in the old age JS code. When the standard progressed with new APIs (such as <code class='code-color'>document.getElementById</code>) this API call became obsolete and the standard committee had to decide what to do with it. Because of its broad use they decided to keep the API but introduce a willful violation of the JavaScript specification. The reason why it responds to <code class='code-color'>false</code> when using the <a href='https://www.ecma-international.org/ecma-262/#sec-strict-equality-comparison' rel='nofollow' target='_blank'>Strict Equality Comparison</a> with <code class='code-color'>undefined</code> while <code class='code-color'>true</code> when using the <a href='https://262.ecma-international.org/11.0/index.html#sec-abstract-equality-comparison' rel='nofollow' target='_blank'>Abstract Equality Comparison</a> is due to the willful violation of the specification that explicitly allows that.</p> </blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\ndocument.all instanceof Object;\ntypeof document.all; // -> 'undefined'"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>6 : <span class='code-color'>NaN</span> is not a <span class='code-color'>NaN</span></h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "false<h3>Explanation:</h3><p>The specification strictly defines the logic behind this behavior:</p><blockquote> <ol > <li>If <code>Type(x)</code> is different from <code>Type(y)</code>, return <strong>false</strong>.</li> <li>If <code>Type(x)</code> is Number, then <ol > <li>If <code>x</code> is <strong>NaN</strong>, return <strong>false</strong>.</li> <li>If <code>y</code> is <strong>NaN</strong>, return <strong>false</strong>.</li> <li>… … …</li> </ol> </li> </ol> <p >— <a href='https://www.ecma-international.org/ecma-262/#sec-strict-equality-comparison' rel='nofollow' target='_blank'><strong>7.2.14</strong> Strict Equality Comparison</a></p> </blockquote><p>Following the definition of NaN from the IEEE:</p><blockquote> <p >Four mutually exclusive relations are possible: less than, equal, greater than, and unordered. The last case arises when at least one operand is NaN. Every NaN shall compare unordered with everything, including itself.</p> <p >— <a href='https://stackoverflow.com/questions/1565164/1573715#1573715' rel='nofollow' target='_blank'>“What is the rationale for all comparisons returning false for IEEE754 NaN values?”</a> at StackOverflow</p> </blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nNaN === NaN; // -> false"
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>7 : <span class='code-color'>Object.is()</span> and <span class='code-color'>===</span> weird cases",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p>In JavaScript lingo, NaN and NaN are the same value but they're not strictly equal. NaN === NaN being false is apparently due to historical reasons so it would probably be better to accept it as it is.</p><p>Similarly, -0 and 0 are strictly equal, but they're not the same value.</p><p>For more details about NaN === NaN, see the above case.</p><ul dir='auto'> <li><a href='https://tc39.es/ecma262/#sec-object.is' rel='nofollow' target='_blank'>Here are the TC39 specs about Object.is</a></li> <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness' rel='nofollow' target='_blank'>Equality comparisons and sameness</a> on MDN</li> </ul></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nObject.is(NaN, NaN); // -> true\nNaN === NaN; // -> false\n\nObject.is(-0, 0); // ->  \n-0 === 0; // -> true\n\nObject.is(NaN, 0 / 0); // -> true\nNaN === 0 / 0; // -> false"
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>8 : It's a fail</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p>By breaking that mass of symbols into pieces, we notice that the following pattern occurs often:</p><pre><span >!</span><span >[</span><span >]</span> <span >+</span> <span >[</span><span >]</span><span >;</span> <span >// -&gt; 'false'</span><br> <span >!</span><span >[</span><span >]</span><span >;</span> <span >// -&gt; false</span></pre><p dir='auto'>So we try adding <code>[]</code> to <code>false</code>. But due to a number of internal function calls (<code>binary + Operator</code> -&gt; <code>ToPrimitive</code> -&gt; <code>[[DefaultValue]]</code>) we end up converting the right operand to a string:</p><pre><span >!</span><span >[</span><span >]</span> <span >+</span> <span >[</span><span >]</span><span >.</span><span >toString</span><span >(</span><span >)</span><span >;</span> <span>// 'false'</span></pre><p dir='auto'>Thinking of a string as an array we can access its first character via <code>[0]</code>:</p><pre><span >'false '</span><span >[</span><span >0</span><span >]</span><span >;</span> <span>// -&gt; 'f'</span></pre><p dir='auto'>The rest is obvious, but the <code>i</code> is tricky. The <code>i</code> in <code>fail</code> is grabbed by generating the string <code>'falseundefined'</code> and grabbing the element on index <code>['10']</code>.</p><div dir='auto'><pre><span >+</span><span >!</span><span >[</span><span >]</span>          <span >// -&gt; 0</span><br> <span >+</span><span >!</span><span >!</span><span >[</span><span >]</span>         <span >// -&gt; 1</span><br> <span >!</span><span >!</span><span >[</span><span >]</span>          <span >// -&gt; true</span><br> <span >!</span><span >[</span><span >]</span>           <span >// -&gt; false</span><br> <span >[</span><span >]</span><span >[</span><span >[</span><span >]</span><span >]</span>        <span >// -&gt; undefined</span><br> <span >+</span><span >!</span><span >!</span><span >[</span><span >]</span> <span >/</span> <span >+</span><span >!</span><span >[</span><span >]</span>  <span >// -&gt; Infinity</span><br> <span >[</span><span >]</span> <span >+</span> <span >{</span><span >}</span>       <span >// -&gt; '[object Object]'</span><br> <span >+</span><span >{</span><span >}</span>           <span >// -&gt; NaN</span></pre><div> </div></div></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n(![] + [])[+[]] +\n(![] + [])[+!+[]] +\n([![]] + [][[]])[+!+[] + [+[]]] +\n(![] + [])[!+[] + !+[]];// -> 'fail'"
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>9 : <span class='code-color'>[]</span> is truthy, but not true</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p>An array is a truthy value, however, it's not equal to true.</p></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n!![]       // -> true\n[] == true // -> false"
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>10 : <span class='code-color'>null</span> is falsy, but not <span class='code-color'>false</span></h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n!!null; // -> false\nnull == false; // -> false\n\n//At the same time, other falsy values, like 0 or '' are equal to false.\n\n0 == false; // -> true\n'' == false; // -> true"
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>11 : <span class='code-color'>Number.MIN_VALUE</span> is the smallest number, which is greater than zero</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p>Number.MIN_VALUE is 5e-324, i.e. the smallest positive number that can be represented within float precision, i.e. that's as close as you can get to zero. It defines the best resolution that floats can give you.</p><p>Now the overall smallest value is Number.NEGATIVE_INFINITY although it's not really numeric in a strict sense.</p><p dir='auto'>— <a href='https://stackoverflow.com/questions/26614728/why-is-0-less-than-number-min-value-in-javascript' rel='nofollow' target='_blank'>“Why is <code>0</code> less than <code>Number.MIN_VALUE</code> in JavaScript?”</a> at StackOverflow</p></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nNumber.MIN_VALUE > 0; // -> true"
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>12 : What if you try to add two arrays?</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "'1,2,34,5,6'<h3>Explanation</h3><blockquote><p>The concatenation happens. Step-by-step, it looks like this:</p><pre><span >[</span><span >1</span><span >,</span> <span >2</span><span >,</span> <span >3</span><span >]</span> <span >+</span><br> <span >[</span><span >4</span><span >,</span> <span >5</span><span >,</span> <span >6</span><span >]</span><span >[</span><br> <span >// call toString()</span> <span >(</span><span >1</span><span >,</span> <span >2</span><span >,</span> <span >3</span><span >)</span><br> <span >]</span><span >.</span><span >toString</span><span >(</span><span >)</span> <span >+</span> <span >[</span><span >4</span><span >,</span> <span >5</span><span >,</span> <span >6</span><span >]</span><span >.</span><span >toString</span><span >(</span><span >)</span><span >;</span> <span >// concatenation</span><br> <span >'1,2,3'</span> <span >+</span> <span >'4,5,6'</span><span >;</span> <span >// -&gt;</span><br> <span >(</span><span >'1,2,34,5,6'</span><span >)</span><span >;</span></pre></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n[1, 2, 3] + [4, 5, 6];"
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>13 : Trailing commas in array</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p>Trailing commas (sometimes called 'final commas') can be useful when adding new elements, parameters, or properties to JavaScript code. If you want to add a new property, you can simply add a new line without modifying the previously last line if that line already uses a trailing comma. This makes version-control diffs cleaner and editing code might be less troublesome.</p><p dir='auto'>— <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas' rel='nofollow' target='_blank'>'Trailing commas'</a> at MDN</p></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nlet a = [, , ,];\na.length; // -> 3\na.toString(); // -> ',,'"
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>14 : Array equality is a monster ☠</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p dir='auto'>You should watch very carefully for the above examples! The behaviour is described in section <a href='https://262.ecma-international.org/11.0/index.html#sec-abstract-equality-compariso' rel='nofollow' target='_blank'><strong>7.2.15</strong> Abstract Equality Comparison</a> of the specification.</p></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n[] == ''   // -> true\n[] == 0    // -> true\n[''] == '' // -> true\n[0] == 0   // -> true\n[0] == ''  // -> false\n[''] == 0  // -> true\n\n[null] == ''      // true\n[null] == 0       // true\n[undefined] == '' // true\n[undefined] == 0  // true\n\n[[]] == 0  // true\n[[]] == '' // true\n\n[[[[[[]]]]]] == '' // true\n[[[[[[]]]]]] == 0  // true\n[[[[[[ null ]]]]]] == 0  // true\n[[[[[[ null ]]]]]] == '' // true\n\n[[[[[[ undefined ]]]]]] == 0  // true\n[[[[[[ undefined ]]]]]] == '' // true"
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>15 : <span class='code-color'>undefined</span> and <span class='code-color'>Number</span></h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p>If we don't pass any arguments into the Number constructor, we'll get 0. The value undefined is assigned to formal arguments when there are no actual arguments, so you might expect that Number without arguments takes undefined as a value of its parameter. However, when we pass undefined, we will get NaN.</p><p>According to the specification:</p><ol dir='auto'> <li>If no arguments were passed to this function's invocation, let <code>n</code> be <code>+0</code>.</li> <li>Else, let <code>n</code> be ? <code>ToNumber(value)</code>.</li> <li>In case of <code>undefined</code>, <code>ToNumber(undefined)</code> should return <code>NaN</code>.</li> </ol><ul dir='auto'> <li><a href='https://www.ecma-international.org/ecma-262/#sec-number-constructor' rel='nofollow' target='_blank'><strong>20.1.1</strong> The Number Constructor</a></li> <li><a href='https://www.ecma-international.org/ecma-262/#sec-tonumber' rel='nofollow'><strong>7.1.3</strong> ToNumber(<code>argument</code>)</a></li> </ul></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nNumber(); // -> 0\nNumber(undefined); // -> NaN"
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "type": "code",
+                    "heading_HTML": "<h4>16 : <span class='code-color'>parseInt</span> is a bad guy 😈</h4>",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p>This happens because parseInt will continue parsing character-by-character until it hits a character it doesn't know. The f in 'f*ck' is the hexadecimal digit 15.</p><p>Parsing Infinity to integer is something…</p><pre> <span >parseInt</span><span >(</span><span >'Infinity'</span><span >,</span> <span >10</span><span >)</span><span >;</span> <span >// -&gt; NaN</span><br> <span >parseInt</span><span >(</span><span >'Infinity'</span><span >,</span> <span >18</span><span >)</span><span >;</span> <span >// -&gt; NaN...</span><br> <span >parseInt</span><span >(</span><span >'Infinity'</span><span >,</span> <span >19</span><span >)</span><span >;</span> <span >// -&gt; 18</span><br> <span >parseInt</span><span >(</span><span >'Infinity'</span><span >,</span> <span >23</span><span >)</span><span >;</span> <span >// -&gt; 18...</span><br> <span >parseInt</span><span >(</span><span >'Infinity'</span><span >,</span> <span >24</span><span >)</span><span >;</span> <span >// -&gt; 151176378</span><br> <span >parseInt</span><span >(</span><span >'Infinity'</span><span >,</span> <span >29</span><span >)</span><span >;</span> <span >// -&gt; 385849803</span><br> <span >parseInt</span><span >(</span><span >'Infinity'</span><span >,</span> <span >30</span><span >)</span><span >;</span> <span >// -&gt; 13693557269</span><br> <span >parseInt</span><span >(</span><span >'Infinity'</span><span >,</span> <span >34</span><span >)</span><span >;</span> <span >// -&gt; 28872273981</span><br> <span >parseInt</span><span >(</span><span >'Infinity'</span><span >,</span> <span >35</span><span >)</span><span >;</span> <span >// -&gt; 1201203301724</span><br> <span >parseInt</span><span >(</span><span >'Infinity'</span><span >,</span> <span >36</span><span >)</span><span >;</span> <span >// -&gt; 1461559270678...</span><br> <span >parseInt</span><span >(</span><span >'Infinity'</span><span >,</span> <span >37</span><span >)</span><span >;</span> <span >// -&gt; NaN</span></pre></blockquote><h4>Be careful with parsing null too:</h4><pre><span >parseInt</span><span >(</span><span >null</span><span >,</span> <span >24</span><span >)</span><span >;</span> <span>// -&gt; 23</span></pre><h3>Explanation</h3><blockquote><p>If the input string begins with '0', radix is eight (octal) or 10 (decimal). Exactly which radix is chosen is implementation-dependent. ECMAScript 5 specifies that 10 (decimal) is used, but not all browsers support this yet. For this reason always specify a radix when using parseInt.</p><p>parseInt always convert input to string:</p><pre><span >parseInt</span><span >(</span><span >{</span> <span >toString</span>: <span >(</span><span >)</span> <span >=&gt;</span> <span >2</span><span >,</span> <span >valueOf</span>: <span >(</span><span >)</span> <span >=&gt;</span> <span >1</span> <span >}</span><span >)</span><span >;</span> <span >// -&gt; 2</span><br> <span >Number</span><span >(</span><span >{</span> <span >toString</span>: <span >(</span><span >)</span> <span >=&gt;</span> <span >2</span><span >,</span> <span >valueOf</span>: <span >(</span><span >)</span> <span >=&gt;</span> <span >1</span> <span >}</span><span >)</span><span >;</span> <span >// -&gt; 1</span></pre></blockquote><h4>Be careful while parsing floating point values</h4><pre><span >parseInt</span><span >(</span><span >0.000001</span><span >)</span><span >;</span> <span >// -&gt; 0</span><br> <span >parseInt</span><span >(</span><span >0.0000001</span><span >)</span><span >;</span> <span >// -&gt; 1</span><br> <span >parseInt</span><span >(</span><span >1</span> <span >/</span> <span >1999999</span><span >)</span><span >;</span> <span >// -&gt; 5</span></pre><h3>Explanation</h3><blockquote><p> ParseInt takes a string argument and returns an integer of the specified radix. ParseInt also strips anything after and including the first non-digit in the string parameter. 0.000001 is converted to a string '0.000001' and the parseInt returns 0. When 0.0000001 is converted to a string it is treated as '1e-7' and hence parseInt returns 1. 1/1999999 is interpreted as 5.00000250000125e-7 and parseInt returns 5.</p></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nparseInt('f*ck'); // -> NaN\nparseInt('f*ck', 16); // -> 15"
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>17 : <span class='code-color'>Math</span> with <span class='code-color'>true</span> and <span class='code-color'>false</sapn> 😧</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p>We can coerce values to numbers with the Number constructor. It's quite obvious that true will be coerced to 1:</p><pre><span >Number</span><span >(</span><span >true</span><span >)</span><span >;</span> <span >// -&gt; 1</span></pre><p>The unary plus operator attempts to convert its value into a number. It can convert string representations of integers and floats, as well as the non-string values true, false, and null. If it cannot parse a particular value, it will evaluate to NaN. That means we can coerce true to 1 easier:</p><pre><span >+</span><span >true</span><span >;</span> <span >// -&gt; 1</span></pre><p>When you're performing addition or multiplication, the ToNumber method is invoked. According to the specification, this method returns:</p><h3>If argument is true, return 1. If argument is false, return +0</h3><p>That's why we can add boolean values as regular numbers and get correct results.</p></blockquote><ul dir='auto'> <li><a href='https://www.ecma-international.org/ecma-262/#sec-unary-plus-operator' rel='nofollow' target='_blank'><strong>12.5.6</strong> Unary <code>+</code> Operator</a></li> <li><a href='https://www.ecma-international.org/ecma-262/#sec-addition-operator-plus' rel='nofollow' target='_blank'><strong>12.8.3</strong> The Addition Operator (<code>+</code>)</a></li> <li><a href='https://www.ecma-international.org/ecma-262/#sec-tonumber' target='_blank' rel='nofollow'><strong>7.1.3</strong> ToNumber(<code>argument</code>)</a></li> </ul>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\ntrue + true; // -> 2\n(true + true) * (true + true) - true; // -> 3"
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>18 : <span class='code-color'>HTML</span> comments are valid in JavaScript 🤐</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "You will be impressed<h3>Explanation</h3><blockquote><p>Impressed? HTML-like comments were intended to allow browsers that didn't understand the script tag to degrade gracefully. These browsers, e.g. Netscape 1.x are no longer popular. So there is really no point in putting HTML comments in your script tags anymore.</p><p>Since Node.js is based on the V8 engine, HTML-like comments are supported by the Node.js runtime too. Moreover, they're a part of the specification:</p><ul dir='auto'> <li><a href='https://www.ecma-international.org/ecma-262/#sec-html-like-comments' target='_blank' rel='nofollow'><strong>B.1.3</strong> HTML-like Comments</a></li> </ul></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n// valid comment\n<!-- valid comment too"
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>19 : <span class='code-color'>[]</span> and <span class='code-color'>null</span> are objects",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p>The behavior of typeof operator is defined in this section of the specification:</p><ul dir='auto'> <li><a href='https://262.ecma-international.org/12.0/#sec-typeof-operator' rel='nofollow' target='_blank'><strong>13.5.3</strong> The <code>typeof</code> Operator</a></li> </ul><p dir='auto'>According to the specification, the <code>typeof</code> operator returns a string according to <a href='https://262.ecma-international.org/12.0/#table-typeof-operator-results' rel='nofollow' target='_blank'>Table 37: <code>typeof</code> Operator Results</a>. For <code>null</code>, ordinary, standard exotic and non-standard exotic objects, which do not implement <code>[[Call]]</code>, it returns the string <code>'object'</code>.</p><p>However, you can check the type of an object by using the toString method.</p><pre><span >Object</span><span >.</span><span >prototype</span><span >.</span><span >toString</span><span >.</span><span >call</span><span >(</span><span >[</span><span >]</span><span >)</span><span >;</span><br> <span >// -&gt; '[object Array]'</span><br><br> <span >Object</span><span >.</span><span >prototype</span><span >.</span><span >toString</span><span >.</span><span >call</span><span >(</span><span>new</span> <span >Date</span><span >(</span><span >)</span><span >)</span><span >;</span><br> <span >// -&gt; '[object Date]'</span><br><br> <span >Object</span><span >.</span><span >prototype</span><span >.</span><span >toString</span><span >.</span><span >call</span><span >(</span><span >null</span><span >)</span><span >;</span> <span >// -&gt; '[object Null]'</span></pre></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\ntypeof []; // -> 'object'\ntypeof null; // -> 'object'\n\n// however\nnull instanceof Object; // false"
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>20 : Magically increasing numbers 😮.</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment.",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n999999999999999; // -> 999999999999999\n9999999999999999; // -> 10000000000000000\n10000000000000000; // -> 10000000000000000\n10000000000000000 + 1; // -> 10000000000000000\n10000000000000000 + 1.1; // -> 10000000000000002"
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>21 : Precision of <span class='code-color'>0.1 + 0.2</span></h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "The answer for the <a href='https://stackoverflow.com/questions/588004/is-floating-point-math-broken' target='_blank' rel='nofollow'>'Is floating point math broken?'</a> question on StackOverflow:<h3>Explanation</h3><blockquote><p dir='auto'>The constants <code>0.2</code> and <code>0.3</code> in your program will also be approximations to their true values. It happens that the closest <code>double</code> to <code>0.2</code> is larger than the rational number <code>0.2</code> but that the closest <code>double</code> to <code>0.3</code> is smaller than the rational number <code>0.3</code>. The sum of <code>0.1</code> and <code>0.2</code> winds up being larger than the rational number <code>0.3</code> and hence disagreeing with the constant in your code.</p></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n0.1 + 0.2; // -> 0.30000000000000004\n0.1 + 0.2 === 0.3; // -> false"
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>22 : Patching numbers.</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "You can add your own methods to wrapper objects like Number or String.Given in code itself as a comment<h3>Explanation</h3><blockquote><p dir='auto'>Obviously, you can extend the <code>Number</code> object like any other object in JavaScript. However, it's not recommended if the behavior of the defined method is not a part of the specification. Here is the list of <code>Number</code>'s properties:</p></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nNumber.prototype.isOne = function() {\n\treturn Number(this) === 1;\n};\n\n(1.0).isOne(); // -> true\n(1).isOne(); // -> true\n(2.0).isOne(); // -> false\n(7).isOne(); // -> false"
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>23 : Comparison of three numbers.</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p>Why does this work that way? Well, the problem is in the first part of an expression. Here's how it works:</p><pre><span >1</span> <span >&lt;</span> <span >2</span> <span >&lt;</span> <span >3</span><span >;</span> <span >// 1 &lt; 2 -&gt; true</span>\n <span >true</span> <span >&lt;</span> <span >3</span><span >;</span> <span >// true -&gt; 1</span>\n <span >1</span> <span >&lt;</span> <span >3</span><span >;</span> <span >// -&gt; true</span>\n\n <span >3</span> <span >&gt;</span> <span >2</span> <span >&gt;</span> <span >1</span><span >;</span> <span >// 3 &gt; 2 -&gt; true</span>\n <span >true</span> <span >&gt;</span> <span >1</span><span >;</span> <span >// true -&gt; 1</span>\n <span >1</span> <span >&gt;</span> <span >1</span><span >;</span> <span >// -&gt; false</span></pre><p dir='auto'>We can fix this with <em>Greater than or equal operator (<code>&gt;=</code>)</em>:</p><pre><span >3</span> <span >&gt;</span> <span >2</span> <span >&gt;=</span> <span >1</span><span >;</span> <span >// true</span></pre></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n1 < 2 < 3; // -> true\n3 > 2 > 1; // -> false"
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>24 : Funny math 😵</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p>What's happening in the first four examples? Here's a small table to understand addition in JavaScript:</p><pre><code>Number  + Number  -&gt; addition\n Boolean + Number  -&gt; addition\n Boolean + Boolean -&gt; addition\n Number  + String  -&gt; concatenation\n String  + Boolean -&gt; concatenation\n String  + String  -&gt; concatenation </code></pre><p dir='auto'>What about other examples? A <code>ToPrimitive</code> and <code>ToString</code> methods are being implicitly called for <code>[]</code> and <code>{}</code> before addition. Read more about evaluation process in the specification:</p><ul dir='auto'> <li><a href='https://www.ecma-international.org/ecma-262/#sec-addition-operator-plus' target='_blank' rel='nofollow'><strong>12.8.3</strong> The Addition Operator (<code>+</code>)</a></li> <li><a href='https://www.ecma-international.org/ecma-262/#sec-toprimitive' target='_blank' rel='nofollow'><strong>7.1.1</strong> ToPrimitive(<code>input</code> [,<code>PreferredType</code>])</a></li> <li><a href='https://www.ecma-international.org/ecma-262/#sec-tostring' target='_blank' rel='nofollow'><strong>7.1.12</strong> ToString(<code>argument</code>)</a></li> </ul><p dir='auto'>Notably, <code>{} + []</code> here is the exception. The reason why it differs from <code>[] + {}</code> is that, without parenthesis, it is interpreted as a code block and then a unary +, converting <code>[]</code> into a number. It sees the following:</p><pre><span>{</span>\n <span >// a code block here</span>\n <span>}</span>\n <span >+</span><span>[</span><span>]</span><span>;</span> <span >// -&gt; 0</span></pre><p dir='auto'>To get the same output as <code>[] + {}</code> we can wrap it in parenthesis.</p><pre><span>(</span><span>{</span><span>}</span> <span >+</span> <span>[</span><span>]</span><span>)</span><span>;</span> <span >// -&gt; [object Object]</span></pre></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n 3  - 1  // -> 2\n3  + 1  // -> 4\n'3' - 1  // -> 2\n'3' + 1  // -> '31'\n\n'' + '' // -> ''\n[] + [] // -> ''\n{} + [] // -> 0\n[] + {} // -> '[object Object]'\n{} + {} // -> '[object Object][object Object]'\n\n'222' - -'111' // -> 333\n\n[4] * [4]       // -> 16\n[] * []         // -> 0\n[4, 4] * [4, 4] // NaN"
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>25 : Strings aren't instances of String.</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p>The String constructor returns a string:</p><pre><span >typeof</span> <span>String</span><span>(</span><span >'str'</span><span>)</span><span>;</span> <span >// -&gt; 'string'</span>\n <span>String</span><span>(</span><span >'str'</span><span>)</span><span>;</span> <span >// -&gt; 'str'</span>\n <span>String</span><span>(</span><span >'str'</span><span>)</span> <span >==</span> <span >'str'</span><span>;</span> <span >// -&gt; true</span></pre></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n'str'; // -> 'str'\ntypeof 'str'; // -> 'string'\n'str' instanceof String; // -> false"
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>26 : Calling functions with backticks</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Well, this is not magic at all if you're familiar with Tagged template literals. In the example above, f function is a tag for template literal. Tags before template literal allow you to parse template literals with a function. The first argument of a tag function contains an array of string values. The remaining arguments are related to the expressions. Example:<h3>Explanation</h3><blockquote><pre><span >function</span> <span >template</span><span>(</span><span >strings</span><span>,</span> ...<span >keys</span><span>)</span> <span>{</span>\n\t <span >// do something with strings and keys…</span>\n <span >}</span></pre><p dir='auto'>This is the <a href='http://mxstbr.blog/2016/11/styled-components-magic-explained/' target='_blank' rel='nofollow'>magic behind</a> famous library called <a href='https://www.styled-components.com/' rel='nofollow' target='_blank'><g-emoji class='g-emoji' alias='nail_care' fallback-src='https://github.githubassets.com/images/icons/emoji/unicode/1f485.png'>💅</g-emoji> styled-components</a>, which is popular in the React community.</p></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nfunction f(...args) {\n\treturn args;\n}\nf(1, 2, 3); // -> [ 1, 2, 3 ]//normal calling\n\n//But did you know you can call any function with backticks?\nf`true is ${true}, false is ${false}, array is ${[1, 2, 3]}`;\n// -> [ [ 'true is ', ', false is ', ', array is ', '' ],\n// ->   true,\n// ->   false,\n// ->   [ 1, 2, 3 ] ]"
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>27 : Call call call</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<h3>Explanation</h3><blockquote><p dir='auto'>Attention, it could break your mind! Try to reproduce this code in your head: we're applying the <code>call</code> method using the <code>apply</code> method. Read more:</p><ul dir='auto'> <li><a href='https://www.ecma-international.org/ecma-262/#sec-function.prototype.call' rel='nofollow' target='_blank'><strong>19.2.3.3</strong> Function.prototype.call(<code>thisArg</code>, ...<code>args</code>)</a></li> <li><a href='https://www.ecma-international.org/ecma-262/#sec-function.prototype.apply' rel='nofollow'  target='_blank'>**19.2.3.1 ** Function.prototype.apply(<code>thisArg</code>, <code>argArray</code>)</a></li> </ul></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nconsole.log.call.call.call.call.call.apply(a => a, [1, 2]);"
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>28 : A <span class='code-color'>constructor</span> property</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "An Object.prototype.constructor returns a reference to the Object constructor function that created the instance object. In case with strings it is String, in case with numbers it is Number and so on.<blockquote><ul dir='auto'> <li><a href='https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor' target='_blank' rel='nofollow'><code>Object.prototype.constructor</code></a> at MDN</li> <li><a href='https://www.ecma-international.org/ecma-262/#sec-object.prototype.constructor' rel='nofollow' target='_blank'><strong>19.1.3.1</strong> Object.prototype.constructor</a></li> </ul></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nconst c = 'constructor';\nc[c][c]('console.log('WTF?')')(); // > WTF?"
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>29 : Object as a key of object's property</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p>Why does this work so? Here we're using a Computed property name. When you pass an object between those brackets, it coerces object to a string, so we get the property key '[object Object]' and the value {}.</p><p>We can make 'brackets hell' like this:</p><pre><span >(</span><span >{</span> <span >[</span><span >{</span><span >}</span><span >]</span>: <span >{</span> <span >[</span><span >{</span><span >}</span><span >]</span>: <span >{</span><span >}</span> <span >}</span> <span >}</span><span >[</span><span >{</span><span >}</span><span >]</span><span >[</span><span >{</span><span >}</span><span >]</span><span >)</span><span >;</span> <span >// -&gt; {}</span>\n <span >// structure:</span>\n <span >// {</span>\n <span >//   '[object Object]': {</span>\n <span >//     '[object Object]': {}</span>\n <span >//   }</span>\n <span >// }</span></pre><p>Read more about object literals here:</p><ul dir='auto'> <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer' rel='nofollow' target='_blank'>Object initializer</a> at MDN</li> <li><a href='http://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer' rel='nofollow' target='_blank'><strong>12.2.6</strong> Object Initializer</a></li> </ul></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n{ [{}]: {} } // -> { '[object Object]': {} }"
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>30 :<span class='code-color'>`${{Object}}`</span></h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "// -> '[object Object]'",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n`${{ Object }}`;"
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>31 : Dots and spreading</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment<h3>Explanation</h3><blockquote><p>Why 3? When we use the spread operator, the @@iterator method is called, and the returned iterator is used to obtain the values to be iterated. The default iterator for string spreads a string into characters. After spreading, we pack these characters into an array. Then we spread this array again and pack it back to an array.</p><p>A '...' string consists with three . characters, so the length of resulting array is 3.</p></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n[...[...'...']].length; // -> 3"
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>32 : Insidious <span class='code-color'>try..catch</span></h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "The answer is 3. Surprised?<h3>Explanation</h3><blockquote><ul dir='auto'> <li><a href='https://www.ecma-international.org/ecma-262/#sec-try-statement' target='_blank' rel='nofollow'><strong>13.15</strong> The <code>try</code> Statement</a></li> </ul></blockquote>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n(() => {\n\ttry {\n\t\treturn 2;\n\t} finally {\n\t\treturn 3;\n\t}\n})();"
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>33 : <span class='code-color'>{}{} is undefined</span></h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n{}{}; // -> undefined\n{}{}{}; // -> undefined\n{}{}{}{}; // -> undefined\n{foo: 'bar'}{}; // -> 'bar'\n{}{foo: 'bar'}; // -> 'bar'\n{}{foo: 'bar'}{}; // -> 'bar'\n{a: 'b'}{c:' d'}{}; // -> 'd'\n{a: 'b', c: 'd'}{}; // > SyntaxError: Unexpected token ':'\n({}{}); // > SyntaxError: Unexpected token '{'"
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>34 : A stringified string</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "false",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nJSON.stringify('production') === 'production';"
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "heading_HTML": "<h4>35 : Non-strict comparison of a number to true</h4>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Given in code itself as a comment",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n1 == true; // -> true\n// but…\nBoolean(1.1); // -> true\n1.1 == true; // -> false"
+                }
+            ]
+        }
+    ]
+}

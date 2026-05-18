@@ -1,0 +1,262 @@
+{
+    "nodejs-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is NodeJS?",
+                    "a": "Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser. Node JS was created by Ryan Dahl, Ryan Dahl is a software engineer and the original developer of the Node.js JavaScript runtime.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : What are the benefits of using Node.js?",
+                    "a": "Following are main benefits of using Node.js",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Aynchronous and Event Driven": "All APIs of Node.js library are aynchronous that is non-blocking. It essentially means a Node.js based server never waits for a API to return data. Server moves to next API after calling it and a notification mechanism of Events of Node.js helps server to get response from the previous API call.",
+                        "Very Fast": "Being built on Google Chrome's V8 JavaScript Engine, Node.js library is very fast in code execution.",
+                        "Single Threaded but highly Scalable": "Node.js uses a single threaded model with event looping. Event mechanism helps server to respond in a non-bloking ways and makes server highly scalable as opposed to traditional servers which create limited threads to handle requests. Node.js uses a single threaded program and same program can services much larger number of requests than traditional server like Apache HTTP Server.",
+                        "No Buffering": " Node.js applications never buffer any data. These applications simply output the data in chunks.",
+                        "Single module caching": "Another contributor to Node’s performance advantages is its use of single-module caching. The first time a module is requested, it is cached in in-app memory. Subsequent calls to the module access the cached version, rather than recompiling the module. As a result, Node.js applications load faster and are more responsive."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : Is NodeJS single threaded?",
+                    "a": "Yes, Node.js is single-threaded for async processing. By doing async processing on a single-thread under typical web loads, more performance and scalability can be achieved as opposed to the typical thread-based implementation.",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : How does Node.js differ from traditional server-side languages like Java or PHP?",
+                    "a": "Node.js differs from traditional server-side languages like Java or PHP in a few key ways:",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Non-blocking I/O": " Node.js operates on a single-threaded event loop that uses non-blocking I/O operations. This means that instead of blocking the execution of code while waiting for I/O operations (such as reading from a file or querying a database), Node.js continues executing other tasks. This approach allows Node.js to handle a large number of concurrent connections efficiently.",
+                        "Scalability": "Due to its non-blocking, event-driven architecture, Node.js excels at handling a high volume of concurrent requests. Traditional server-side languages often rely on thread-based models, where each connection requires a separate thread, which can lead to resource limitations and decreased performance under heavy loads. Node.js, on the other hand, can handle thousands of concurrent connections with minimal resources.",
+                        "JavaScript": "Node.js uses JavaScript as its primary language for server-side development. This is significant because JavaScript is a widely known and widely used language, making it easier for web developers who are already familiar with JavaScript to transition to server-side development using Node.js. It also enables code sharing between the client-side and server-side, enhancing development efficiency.",
+                        "Full-stack JavaScript": "Node.js has a vibrant and extensive ecosystem with a vast collection of open-source modules available through the Node Package Manager (NPM). This rich ecosystem provides developers with a wide range of tools, libraries, and frameworks to build efficient and scalable applications rapidly.",
+                        "Ecosystem": "Node.js has a vibrant and extensive ecosystem with a vast collection of open-source modules available through the Node Package Manager (NPM). This rich ecosystem provides developers with a wide range of tools, libraries, and frameworks to build efficient and scalable applications rapidly.",
+                        "Microservices and APIs": "Node.js is well-suited for building microservices and developing RESTful APIs. Its lightweight nature and non-blocking I/O make it ideal for creating small, independent services that can communicate with each other. Node.js frameworks like Express.js provide a robust foundation for building APIs quickly and efficiently.",
+                        "Community and Industry Adoption": " Node.js has gained significant popularity and has been widely adopted by both the developer community and many prominent companies. Its performance, scalability, and ability to handle real-time applications have made it a preferred choice for building web servers, streaming platforms, chat applications, and more.."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : Explain the event-driven architecture of Node.js?",
+                    "a": "The event-driven architecture is a key aspect of Node.js that enables its asynchronous and non-blocking nature. It revolves around an event loop and event emitters. The event loop continuously checks for pending events and executes the associated event handlers. Event emitters are objects that emit named events when certain actions or conditions occur. Event handlers are functions registered to handle specific events and are called when the corresponding events are emitted. The event-driven flow allows programs to initiate asynchronous operations and continue processing other tasks while waiting for those operations to complete. Callback functions are commonly used to handle events and asynchronous operations. Overall, the event-driven architecture of Node.js contributes to its scalability and performance advantages..",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : How does Node.js handle asynchronous programming?",
+                    "a": "Node.js handles asynchronous programming through several mechanisms:",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Callbacks": " Callbacks are a traditional approach to handle asynchronous operations in Node.js. When initiating an asynchronous operation, a callback function is passed as an argument. Once the operation completes, the callback is invoked, allowing the program to react to the result. This callback-based approach can lead to callback nesting, also known as 'callback hell,' making the code complex and harder to maintain.",
+                        "Promises": "Promises provide a more structured and readable way to handle asynchronous operations. A Promise represents the eventual completion (or failure) of an asynchronous operation and allows chaining of methods like .then() and .catch(). Promises simplify error handling and make asynchronous code look more synchronous and readable.",
+                        "Async/await": "Async/await is a syntax introduced in ECMAScript 2017 (ES8) that allows writing asynchronous code using a synchronous-like syntax. It is built on top of Promises and provides a way to write asynchronous code in a more sequential and readable manner. The async keyword is used to define an asynchronous function, and the await keyword is used to pause the execution of the function until the awaited Promise is resolved."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : Explain the concept of streams in Node.js?",
+                    "a": "Streams are a fundamental concept in Node.js that provide an efficient way to handle reading from or writing to data sources or destinations in a chunked and asynchronous manner. Streams allow for the processing of large amounts of data without loading the entire content into memory at once.",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_heading": "In Node.js, there are four types of streams:",
+                    "list": {
+                        "Readable streams": "Readable streams represent a source of data from which data can be read. Examples of readable streams include reading from a file, receiving HTTP requests, or generating data dynamically. Readable streams emit events such as 'data' to indicate that new data is available to be consumed.",
+                        "Writable streams": "Writable streams represent a destination to which data can be written. Examples of writable streams include writing to a file, sending HTTP responses, or storing data in a database. Writable streams provide methods like .write() to write data to the stream and emit events such as 'drain' to indicate when the destination is ready to receive more data.",
+                        "Duplex streams": "Duplex streams represent both a readable and writable stream. They allow for bidirectional data flow, where data can be both written to and read from the stream simultaneously. Examples of duplex streams include network sockets.",
+                        "Transform streams": "Transform streams are a special type of duplex streams that allow for data manipulation while it is being read or written. Transform streams take input data, apply transformations, and emit the transformed data. Examples of transform streams include data compression or encryption streams"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : Explain the concept of middleware in Node.js.?",
+                    "a": "In Node.js, middleware refers to functions or software components that sit between the incoming request and the outgoing response in the application's request-response cycle. Middleware functions have access to the request and response objects and can perform operations on them, modify them, or execute additional code before passing the request to the next middleware function in the chain.",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_heading": "Middleware functions are typically used for tasks such as:",
+                    "list": {
+                        "Request preprocessing": "Middleware can handle tasks like parsing request bodies, cookies, or query parameters, and transforming them into a more convenient format for further processing.",
+                        "Authentication and authorization": "Middleware can authenticate users by checking credentials or verifying tokens. It can also authorize access to certain routes or resources based on user permissions.",
+                        "Error handling": "Middleware can catch and handle errors that occur during the request processing. It can log the error, format the error response, and provide meaningful error messages to the client.",
+                        "Logging and analytics": "Middleware can log request details, track application usage, or gather analytics data for monitoring and analysis purposes.",
+                        "Caching": "Middleware can implement caching mechanisms to store frequently accessed data and serve subsequent requests more efficiently.",
+                        "Routing": "Middleware can examine the request path and redirect or forward the request to the appropriate route or controller based on predefined rules.",
+                        "Compression and response formatting": "Middleware can compress response payloads, format responses in a specific data format (e.g., JSON), or add headers to enhance security or optimize caching."
+                    }
+                },
+                {
+                    "type": "code",
+                    "heading_text": "Here's an example of how middleware can be implemented using Express.js, one of the popular frameworks for building web applications in Node.js:",
+                    "simple_text": "By using middleware, Node.js applications can modularize their functionality, improve code reusability, and separate concerns by delegating specific tasks to specialized middleware functions. This approach allows for cleaner and more maintainable code while providing flexibility in extending the application's behavior.",
+                    "code": "\nconst express = require('express');\nconst app = express();\napp.use((req, res, next) => {\n\tconsole.log('Request received. Preprocessing...');\n\treq.customData = 'Custom data added';\n\tnext();\n});\napp.use((req, res, next) => {\n\tconsole.log('Authenticating...');\n\tconst isAuthenticated = true;\n\tif (isAuthenticated) {\n\t\tnext();\n\t} else {\n\t\tres.status(401).send('Unauthorized');\n\t}\n});\napp.get('/data', (req, res) => {\n\tconsole.log('Handling /data route');\n\tconsole.log('Custom data:', req.customData);\n\tres.send('Data response');\n});\napp.use((err, req, res, next) => {\n\tconsole.error('Error:', err);\n\tres.status(500).send('Internal Server Error');\n});\napp.listen(3000, () => {\n\tconsole.log('Server listening on port 3000');\n});",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_heading": "In this example, we have three middleware functions:",
+                    "list": {
+                        "1": "The first middleware function performs request preprocessing by logging a message and adding custom data (req.customData) to the request object. It then passes control to the next middleware function using next().",
+                        "2": "The second middleware function handles authentication by checking if the user is authenticated. If authenticated, it passes control to the next middleware function. Otherwise, it sends a 401 Unauthorized response.",
+                        "3": "The route handler /data is defined with a callback function to handle the route. It accesses the req.customData added by the previous middleware and sends the response.",
+                        "4": "An error handling middleware is defined to catch any errors that occur during the request processing. It logs the error and sends a 500 Internal Server Error response."
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Note that the order in which middleware functions are defined matters. They are executed in the order they are added using app.use(). The next() function is used to pass control to the next middleware function in the chain."
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : What is Express.js? How does it relate to Node.js?",
+                    "a": "Express.js is a web application framework built on top of Node.js that simplifies the process of creating server-side applications and handling HTTP requests and responses. It extends the capabilities of Node.js by providing a structured and streamlined API for common web development tasks. Express.js abstracts away low-level details and offers a more intuitive and developer-friendly interface, making it easier to build web servers and handle network operations while leveraging the power of Node.js",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_heading": "Express.js offers several advantages:",
+                    "list": {
+                        "1": "Simplified routing: Express.js provides a routing system that allows developers to define routes for different URLs and HTTP methods easily. It enables handling of various request types (GET, POST, PUT, DELETE, etc.) and parameters in a straightforward manner.",
+                        "2": "Middleware support: Express.js has a robust middleware system that allows developers to inject middleware functions into the request-response pipeline. Middleware functions can handle tasks such as request preprocessing, authentication, error handling, and more. This modular approach enhances code reusability and improves application maintainability.",
+                        "3": "Template rendering: Express.js provides built-in support for rendering dynamic HTML templates using template engines like EJS, Pug (formerly known as Jade), Handlebars, and more. This allows developers to generate dynamic web pages by combining server-side logic with templates.",
+                        "4": "Static file serving: Express.js simplifies serving static files (CSS, JavaScript, images, etc.) by providing a built-in middleware function for serving static assets from a specified directory. This feature eliminates the need for manual handling of static file requests.",
+                        "5": "Middleware ecosystem: Express.js benefits from a vast ecosystem of third-party middleware modules, which can be easily integrated into an application. This ecosystem offers a wide range of functionalities, including authentication, logging, caching, and more, allowing developers to enhance their applications with minimal effort."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : How does Node.js handle caching?",
+                    "a": "Node.js provides several mechanisms for caching data to improve performance and reduce the load on resources. Here are some common approaches to caching in Node.js:",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_heading": "",
+                    "list": {
+                        "In-Memory Caching": "Node.js can use in-memory data structures, such as objects or maps, to store frequently accessed data. This allows for quick retrieval of cached data without making additional requests or computations. However, in-memory caching is limited to the current instance of the Node.js application and is not shared among multiple instances or servers.",
+                        "External Caching Systems": "Node.js applications can utilize external caching systems like Redis or Memcached. These systems provide fast, scalable, and distributed caching solutions. They can store data in memory and persist it to disk if needed. External caching systems offer advanced features like cache expiration, data eviction policies, and distributed caching across multiple servers.",
+                        "HTTP Caching": "Node.js applications can leverage HTTP caching mechanisms, such as setting appropriate cache-control headers and using ETags (Entity Tags), to cache responses on the client side or intermediate proxies. By specifying cache-control directives like max-age or no-cache, the application can control how long the client or proxy caches the response.",
+                        "Content Delivery Networks (CDNs)": "CDNs can be used with Node.js applications to cache static assets, such as images, CSS, and JavaScript files, on edge servers distributed worldwide. When a request is made for a static asset, the CDN delivers the cached copy from the nearest edge server, reducing the load on the application server and improving response time."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : What is clustering in Node.js, and why is it useful?",
+                    "a": "Clustering in Node.js refers to the technique of creating multiple child processes, known as workers, to distribute the workload across multiple CPU cores. Each worker operates independently and can handle incoming requests, thereby improving the application's performance and scalability",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_heading": "Clustering is useful in Node.js for several reasons:",
+                    "list": {
+                        "Enhanced Performance": "By utilizing multiple CPU cores, clustering allows Node.js applications to handle a higher volume of requests concurrently. Each worker can process requests in parallel, leading to improved response times and increased throughput.",
+                        "Scalability": "Clustering enables horizontal scaling by distributing the workload across multiple workers. As the application's demand grows, additional workers can be spawned dynamically to handle the increased load, ensuring smooth and efficient scaling.",
+                        "High Availability": "In a clustered environment, if a worker crashes or becomes unresponsive, the master process can detect the failure and automatically restart the worker. This feature enhances the application's robustness and availability by preventing a single point of failure.",
+                        "Resource Utilization": "By utilizing all available CPU cores, clustering maximizes the utilization of system resources. It allows the application to make the most efficient use of the underlying hardware, optimizing performance and reducing wastage.",
+                        "Fault Isolation": "Each worker operates in its own isolated process, preventing errors or crashes in one worker from affecting the others. This isolation ensures that the application remains stable and responsive even in the presence of faulty code or unpredictable scenarios."
+                    }
+                }
+            ]
+        }
+    ]
+}

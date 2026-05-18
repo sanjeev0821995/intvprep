@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Title, Meta, DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { AppServiceService } from 'app/mock-api/common/appConfig/app-service.service';
@@ -27,7 +28,8 @@ export class ViewContentComponent implements OnInit {
         private activateRoute: ActivatedRoute,
         private title: Title,
         private meta: Meta,
-        private appService: AppServiceService
+        private appService: AppServiceService,
+        @Inject(PLATFORM_ID) private platformId: Object // Inject the platform ID
     ) {}
 
     ngOnInit(): void {
@@ -108,18 +110,18 @@ export class ViewContentComponent implements OnInit {
         this.title.setTitle(title);
     }
 
-    setMetaTag(metaDes, imgUrl = 'https://interviewant.tech/logo.PNG'): void {
+    setMetaTag(metaDes, imgUrl = 'https://intvprep.com/logo.PNG'): void {
         this.meta.updateTag({
             name: 'description',
             content: metaDes,
         });
         this.meta.updateTag({
             property: 'og:site_name',
-            content: 'Interview Ant',
+            content: 'Intvprep.',
         });
         this.meta.updateTag({
             property: 'og:site',
-            content: 'Interview Ant',
+            content: 'Intvprep.',
         });
         this.meta.updateTag({
             property: 'og:description',
@@ -134,80 +136,80 @@ export class ViewContentComponent implements OnInit {
     getName(): string {
         if (this.path.includes('angular')) {
             this.setTitle(
-                'Top 100+ Angular Interview Questions Form Beginner to Experienced(2023) - Interview Ant'
+                'Top 100+ Angular Interview Questions Form Beginner to Experienced(2023) - Intvprep.'
             );
             this.setMetaTag(
                 // eslint-disable-next-line max-len
                 'Prepare from this comprehensive list of the latest Angular Interview Questions and crack your dream company interview. These angular questions cater to freshers as well as experienced professionals.',
-                'https://interviewant.tech/logo.PNG'
+                'https://intvprep.com/logo.PNG'
             );
             this.trackUsers('Angular-interview-Questions');
 
             return 'angular';
         } else if (this.path.includes('react')) {
             this.setTitle(
-                'Top 100+ ReactJS Interview Questions Form Beginner to Experienced(2023) - Interview Ant'
+                'Top 100+ ReactJS Interview Questions Form Beginner to Experienced(2023) - Intvprep.'
             );
             this.setMetaTag(
                 // eslint-disable-next-line max-len
                 'Prepare from this list of VueJS Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
-                'https://interviewant.tech/logo.PNG'
+                'https://intvprep.com/logo.PNG'
             );
             this.trackUsers('React-interview-Questions');
 
             return 'react';
         } else if (this.path.includes('vue')) {
             this.setTitle(
-                'Top 50+ VueJS Interview Questions Form Beginner to Experienced(2023) - Interview Ant'
+                'Top 50+ VueJS Interview Questions Form Beginner to Experienced(2023) - Intvprep.'
             );
             this.setMetaTag(
                 // eslint-disable-next-line max-len
                 'Prepare from this list of VueJS Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
-                'https://interviewant.tech/logo.PNG'
+                'https://intvprep.com/logo.PNG'
             );
             this.trackUsers('Vue-interview-Questions');
 
             return 'vue';
         } else if (this.path.includes('javascript')) {
              if (this.path.includes('quiz')) {
-                this.setTitle('JavaScript Quiz - Interview Ant');
+                this.setTitle('JavaScript Quiz - Intvprep.');
                 this.setMetaTag(
                     // eslint-disable-next-line max-len
                     'Learn and Practice on almost all javascript coding Interview Questions mostly asked in the interview and get the job..',
-                    'https://interviewant.tech/logo.PNG'
+                    'https://intvprep.com/logo.PNG'
                 );
             } else if (this.path.includes('coding')) {
                 this.setTitle(
-                    'JavaScript Coding Interview Questions (2023) - Interview Ant'
+                    'JavaScript Coding Interview Questions (2023) - Intvprep.'
                 );
                 if (this.id) {
                     this.setTitle(
                         // eslint-disable-next-line quotes
-                        `JavaScript ${this.id} Coding Interview Questions (2023) - Interview Ant`
+                        `JavaScript ${this.id} Coding Interview Questions (2023) - Intvprep.`
                     );
                 }
                 this.setMetaTag(
                     // eslint-disable-next-line max-len
                     'Learn and Practice on almost all javascript coding Interview Questions mostly asked in the interview and get the job..',
-                    'https://interviewant.tech/logo.PNG'
+                    'https://intvprep.com/logo.PNG'
                 );
             } else if (this.path.includes('weird')) {
                 this.setTitle(
-                    'Weird Part of JavaScript Questions (2023) - Interview Ant'
+                    'Weird Part of JavaScript Questions (2023) - Intvprep.'
                 );
                 this.setMetaTag(
                     // eslint-disable-next-line max-len
                     'Learn and Practice on almost all javascript coding Interview Questions mostly asked in the interview and get the job..',
-                    'https://interviewant.tech/logo.PNG'
+                    'https://intvprep.com/logo.PNG'
                 );
             } else {
                 this.setTitle(
-                    'Top 50+ javaScript Interview Questions Form Beginner to Experienced(2023) - Interview Ant'
+                    'Top 50+ javaScript Interview Questions Form Beginner to Experienced(2023) - Intvprep.'
                 );
                 this.setMetaTag(
                     // eslint-disable-next-line max-len
                     'Learn and Practice on almost all javascript Questions for freshers and experienced candidates and ace your Interview.',
-                    'https://interviewant.tech/logo.PNG'
+                    'https://intvprep.com/logo.PNG'
                 );
             }
             this.trackUsers('JavaScript-interview-Questions');
@@ -215,55 +217,55 @@ export class ViewContentComponent implements OnInit {
             return 'javascript';
         } else if (this.path.includes('html')) {
             this.setTitle(
-                'Top 30+ HTML and HTML5 Interview Questions (2023) - Interview Ant'
+                'Top 30+ HTML and HTML5 Interview Questions (2023) - Intvprep.'
             );
             this.setMetaTag(
                 'Prepare from this list of HTML & HTML5 Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
-                'https://interviewant.tech/logo.PNG'
+                'https://intvprep.com/logo.PNG'
             );
             this.trackUsers('Html-interview-Questions');
 
             return 'html';
         } else if (this.path.includes('css')) {
             this.setTitle(
-                'Top 20+ CSS Interview Questions (2023) - Interview Ant'
+                'Top 20+ CSS Interview Questions (2023) - Intvprep.'
             );
             this.setMetaTag(
                 'Find top CSS interview questions asked. Explore basic, intermediate, and advanced level questions.',
-                'https://interviewant.tech/logo.PNG'
+                'https://intvprep.com/logo.PNG'
             );
             this.trackUsers('CSS-interview-Questions');
 
             return 'css';
         } else if (this.path.includes('node')) {
             this.setTitle(
-                'Most Asked NodeJs Interview Questions (2023) - Interview Ant'
+                'Most Asked NodeJs Interview Questions (2023) - Intvprep.'
             );
             this.setMetaTag(
                 'Prepare from this list of NodeJs Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
-                'https://interviewant.tech/logo.PNG'
+                'https://intvprep.com/logo.PNG'
             );
             this.trackUsers('nodejs-interview-Questions');
 
             return 'nodejs';
         } else if (this.path.includes('git')) {
             this.setTitle(
-                'Top 10+ Commonly Asked GIT Interview Questions (2023) - Interview Ant'
+                'Top 10+ Commonly Asked GIT Interview Questions (2023) - Intvprep.'
             );
             this.setMetaTag(
                 'Prepare from this list of Git Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
-                'https://interviewant.tech/logo.PNG'
+                'https://intvprep.com/logo.PNG'
             );
             this.trackUsers('git-interview-Questions');
 
             return 'git';
         } else if (this.path.includes('contact-us')) {
-            this.setTitle('Contact Us - Interview Ant');
+            this.setTitle('Contact Us - Intvprep.');
             this.trackUsers('contact-us');
 
             return 'contact-us';
         } else if (this.path.includes('privacy-policy')) {
-            this.setTitle('Privacy Policy - Interview Ant');
+            this.setTitle('Privacy Policy - Intvprep.');
             this.trackUsers('privacy-policy');
 
             return 'privacy-policy';
@@ -271,9 +273,11 @@ export class ViewContentComponent implements OnInit {
     }
 
     trackUsers(title): void {
-        window['gtag']('event', 'page_view', {
-            page_title: title,
-        });
+        if (isPlatformBrowser(this.platformId)) {
+            window['gtag']('event', 'page_view', {
+                page_title: title,
+            });
+        }
     }
 
     getCodingConfig(name: any): any {

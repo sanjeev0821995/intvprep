@@ -1,0 +1,1516 @@
+{
+    "javascript-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q1 : What is JavaScript?",
+                    "a": "JavaScript is high-level, often just-in-time compiled and multi-paradigm. It has dynamic typing, prototype-based object-orientation and first-class functions.JavaScript is a scripting language for the web. It is an interpreted language, which means it does not need a compiler to translate its code like C or C++. JavaScript code runs directly in a web browser.JavaScript works with HTML and CSS to build web apps or web pages.",
+                    "type": "text",
+                    "id": 1
+                },
+                {
+                    "type": "img",
+                    "img": "jsworks.png"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q2 : What is 'undefined' in JavaScript?",
+                    "a": "Before any value is assigned to a variable in javascript, the variable contains 'undefined'.",
+                    "type": "text",
+                    "id": 2
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nlet x; \nconsole.log(x); // undefined \nconsole.log(typeof x); // undefined",
+                    "note": "Note : 'undefined' is datatype in javascript."
+                },
+                {
+                    "type": "note",
+                    "note": "Note : 'undefined' is datatype in javascript."
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q3 : What is 'null' in JavaScript?",
+                    "a": "null is an assignment value. It can be assigned to a variable as a representation of no value",
+                    "type": "text",
+                    "id": 3
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "'null' is exactly same as the other programming variable.",
+                        "2": "'null' means nothing.",
+                        "3": "when we have a variable or object which we want to make empty then we assign null to a variable."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q4 : What will be the output of undefined==null & undefined===null? Why?",
+                    "a": "output will be true for undefined==null because both undefined and null represent nothing-ness but contains different datatype.",
+                    "type": "text",
+                    "id": 4
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nundefined == null //true \nundefined === null //false"
+                },
+                {
+                    "type": "note",
+                    "note": "Note : 'undefined' itself is data type, 'null' is a primitive data type."
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q5 : Can you explicitly assign 'undefined' to a variable?",
+                    "a": "Yes",
+                    "type": "text",
+                    "id": 5
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q6 : What is scope in javascript?",
+                    "a": "Scope is the accessibility of variables, functions, and objects in some particular part of your code during runtime. In other words, scope determines the visibility of variables and other resources in areas of your code.",
+                    "type": "text",
+                    "id": 6
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "The four scopes are:",
+                    "list": {
+                        "Global Scope ": "visible by everything",
+                        "Function Scope": "visible within a function (and its sub-functions and blocks).",
+                        "Block Scope": "visible within a block (and its sub-blocks)",
+                        "Module Scope": "visible within a module"
+                    }
+                },
+                {
+                    "note": "Outside of the special cases of global and module scope, variables are declared using var (function scope), let (block scope), and const (block scope). Most other forms of identifier declaration have block scope in strict mode.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q7 : What is Automatic Semicolon Insertion (ASI) ?",
+                    "a": "Unlike other C-like languages, JavaScript does not enforce the use of a semicolon at the end of a statement. Instead, the semicolon is optional, and the JavaScript interpreter will 'intelligently' add them when it runs the code.But there are three basic rules of semicolon insertion:",
+                    "type": "text",
+                    "id": 7
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "When, as the program is parsed from left to right, a token (called the offending token) is encountered that is not allowed by any production of the grammar, then a semicolon is automatically inserted before the offending token if one or more of the following conditions is true:",
+                        "2": "When, as the program is parsed from left to right, the end of the input stream of tokens is encountered and the parser is unable to parse the input token stream as a single complete ECMAScript Program, then a semicolon is automatically inserted at the end of the input stream.",
+                        "3": "When, as the program is parsed from left to right, a token is encountered that is allowed by some production of the grammar, but the production is a restricted production and the token would be the first token for a terminal or nonterminal immediately following the annotation ' [no LineTerminator here] ' within the restricted production (and therefore such a token is called a restricted token), and the restricted token is separated from the previous token by at least one LineTerminator, then a semicolon is automatically inserted before the restricted token."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q8 : JavaScript Rest vs Spread Operator – What’s the Difference?",
+                    "a": "The main difference between rest and spread is that the rest operator puts the rest of some specific user-supplied values into a JavaScript array. But the spread syntax expands iterables into individual elements.",
+                    "type": "text",
+                    "id": 8
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "heading_text": "Rest Operator",
+                    "simple_text": "The rest operator is used to put the rest of some specific user-supplied values into a JavaScript array.",
+                    "code": "\n// Define a function with two regular parameters and one rest parameter:\nfunction myBio(firstName, lastName, ...otherInfo) { \n\treturn otherInfo;\n}\n\n// Invoke myBio function while passing five arguments to its parameters:\nmyBio('Oluwatobi', 'Sofela', 'CodeSweetly', 'Web Developer', 'Male');\n\n// The invocation above will return:\n['CodeSweetly', 'Web Developer', 'Male']"
+                },
+                {
+                    "note": "Note : Beware! You Cannot Use “use strict” Inside a Function Containing a Rest Parameter",
+                    "type": "note"
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "heading_text": "Spread Operator",
+                    "simple_text": "The spread operator (...) helps you expand iterables into individual elements.",
+                    "code": "\nconst myName = ['Sofela', 'is', 'my'];\nconst aboutMe = ['Oluwatobi', ...myName, 'name.'];\nconsole.log(aboutMe);\n// The invocation above will return:\n [ 'Oluwatobi','Sofela', 'is', 'my','name.' ]"
+                },
+                {
+                    "note": "Note : Spread operators can’t expand object literal’s values",
+                    "type": "note"
+                },
+                {
+                    "note": "Note : The spread operator does not clone identical properties",
+                    "type": "note"
+                },
+                {
+                    "note": "Note : Beware of how spread works when used on objects containing non-primitives!",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q9 : When do you get NaN as output?",
+                    "a": "NaN is a property of the global object. In other words, it is a variable in global scope.",
+                    "type": "text",
+                    "id": 9
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "There are five different types of operations that return NaN:",
+                    "list": {
+                        "1": "Failed number conversion (e.g. explicit ones like parseInt('blabla'), Number(undefined), or implicit ones like Math.abs(undefined))",
+                        "2": "Math operation where the result is not a real number (e.g. Math.sqrt(-1)).",
+                        "3": "Indeterminate form (e.g. 0 * Infinity, 1 ** Infinity, Infinity / Infinity, Infinity - Infinity)",
+                        "4": "A method or expression whose operand is or gets coerced to NaN (e.g. 7 ** NaN, 7 * 'blabla') — this means NaN is contagious",
+                        "5": "Other cases where an invalid value is to be represented as a number (e.g. an invalid Date new Date('blabla').getTime(), ''.charCodeAt(1))"
+                    }
+                },
+                {
+                    "note": "Note : NaN is also one of the falsy values in JavaScript.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q10 : What are lambda or arrow functions?",
+                    "a": "An arrow function is a shorter syntax for a function expression and does not have its own this, arguments, super, or new.target. These functions are best suited for non-method functions, and they cannot be used as constructors.",
+                    "type": "text",
+                    "id": 10
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q11 : When Arrow functions should not be used?",
+                    "a": "An Arrow functions should not be used in the following senerios.",
+                    "type": "text",
+                    "id": 11
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "When we want function hoisting": "as arrow functions are anonymous",
+                        "When we want to use this/arguments in a function": "as arrow functions do not have this/arguments of their own, they depend upon their outer context.",
+                        "When we want to use named function": "as arrow functions are anonymous.",
+                        "When we want to use function as a constructor": "as arrow functions do not have their own this",
+                        "When we want to add function as a property in object literal and use object in it": "When we want to add function as a property in object literal and use object in it."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q12 : What is the difference between isNaN() and isFinite() method?",
+                    "a": "isFinite(number) is a JavaScript built-in function that determines whether a number object can be converted to a finite digit.The IsNaN() NaN property is a special value that represents a non-numeric value. This property is used to indicate that a value is not a number.",
+                    "type": "text",
+                    "id": 12
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nConsole.log (Isfinite (1));//True\nConsole.log (IsNaN (1)); False\nConsole.log (Isfinite (' 1 '));//true\nConsole.log (IsNaN (' 1 '));//false\nConsole.log (Isfinite (NaN));//false\nConsole.log (IsNaN (NaN));//true\nConsole.log (Isfinite (0/0));//false\nConsole.log (IsNaN (0/0));//true\nConsole.log (Isfinite (' Hello World '));//false\nConsole.log (IsNaN (' Hello World '));//true\nConsole.log (Isfinite (Infinity));//false Infinity False\nConsole.log (Isfinite (-infinity));//false Infinity False\nConsole.log (IsNaN (Infinity));//false\nConsole.log (IsNaN (-infinity));//false"
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q13 : Why “this” does not work in arrow function?",
+                    "a": "Arrow functions have a lexical this which means that the value of this inside the function is the same as the value of this outside the function.It does not mean that this points to an object containing all the variables from outside the function..",
+                    "type": "text",
+                    "id": 13
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nconst anObject = {\n\taValue: 'example value',\n\taMethod: function() {\n\t\tconsole.log('aMethod', this.aValue);\n\t\tconst arrow = () => {\n\t\t\tconsole.log('arrow', this.aValue);\n\t\t}\n\tarrow();\n\t}\n}\nanObject.aMethod();\nconst copyOfAMethod = anObject.aMethod;\ncopyOfAMethod();"
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q14 : What is function currying?",
+                    "a": "Currying is an advanced technique of working with functions. It’s used not only in JavaScript, but in other languages as well.Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).Currying doesn’t call a function. It just transforms it.",
+                    "type": "text",
+                    "id": 14
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nfunction curry(f) { // curry(f) does the currying transform\n\treturn function(a) {\n\t\treturn function(b) {\n\t\t\treturn f(a, b);\n\t\t};\n\t};\n}\n\n// usage\nfunction sum(a, b) {\n\treturn a + b;\n\t}\nlet curriedSum = curry(sum);\nalert( curriedSum(1)(2) ); // 3"
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q15 : Explain practical usage of function currying?",
+                    "a": "Currying is a type of partial function application. We can use its returned functions to make a lighter version of an existing function. It’s helpful when we have many places that use a function with exactly the same way. Our implementation will be shorter and more readable.",
+                    "type": "text",
+                    "id": 15
+                },
+                {
+                    "type": "code",
+                    "bottom_text": "Sounds cool. But it’s not the main benefit. As I mention in previous section, currying requires strictly use of unary function. It makes a great foundation for a standard interface. When we have a set of functions implement a common interface, we can easily introduce flexible usages on them. It’s pretty similar to how Promise defines its standard and becomes super powerful.",
+                    "lang": "typescript",
+                    "code": "\n// Normal usageconst PERCENT_120 = 1.2\nconst multiply = (a, b) => a * b\nconst newSalary = multiply(salary, PERCENT_120)\n// Currying usage\nconst multiply = a => b => a * b\nconst increase20Percent = multiply(1.2)\nconst newSalary = increase20Percent(salary)"
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q16 : What are arrow function limitations?",
+                    "a": "An arrow function expression is a compact alternative to a traditional function expression, but is limited and can't be used in all situations.",
+                    "type": "text",
+                    "id": 16
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "There are differences between arrow functions and traditional functions, as well as some limitations:",
+                    "list": {
+                        "1": "Arrow functions don't have their own bindings to this, arguments or super, and should not be used as methods.",
+                        "2": "Arrow functions don't have access to the new.target keyword.",
+                        "3": "Arrow functions aren't suitable for call, apply and bind methods, which generally rely on establishing a scope.",
+                        "4": "Arrow functions cannot be used as constructors.",
+                        "5": "Arrow functions cannot use yield, within its body."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q17 : What is iterator?",
+                    "a": "An iterator is an object which defines a sequence and a return value upon its termination. It implements the Iterator protocol with a next() method which returns an object with two properties: value (the next value in the sequence) and done (which is true if the last value in the sequence has been consumed).",
+                    "type": "text",
+                    "id": 17
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q18 : How does synchronous iteration works?",
+                    "a": "Synchronous iteration was introduced in ES6 and it works with below set of components,Iterable: It is an object which can be iterated over via a method whose key is Symbol.iterator. Iterator: It is an object returned by invoking [Symbol.iterator]() on an iterable. This iterator object wraps each iterated element in an object and returns it via next() method one by one. IteratorResult: It is an object returned by next() method. The object contains two properties; the value property contains an iterated element and the done property determines whether the element is the last element or not.",
+                    "type": "text",
+                    "id": 18
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nconst iterable = ['one', 'two', 'three'];\nconst iterator = iterable[Symbol.iterator]();\nconsole.log(iterator.next()); // { value: 'one', done: false }\nconsole.log(iterator.next()); // { value: 'two', done: false }\nconsole.log(iterator.next()); // { value: 'three', done: false }\nconsole.log(iterator.next()); // { value: 'undefined, done: true }"
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q19 : What is the difference between for...in and for...of?",
+                    "a": "Both for..in and for..of are looping constructs which are used to iterate over data structures. The only difference between them is the entities they iterate over:",
+                    "type": "text",
+                    "id": 19
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "There are differences between arrow functions and traditional functions, as well as some limitations:",
+                    "list": {
+                        "for..in": "iterates over all enumerable property keys of an object.",
+                        "for..of": "iterates over the values of an iterable object. Examples of iterable objects are arrays, strings, and NodeLists."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nlet arr = ['el1', 'el2', 'el3'];\n\narr.addedProp = 'arrProp';\n// elKey are the property keys\nfor (let elKey in arr) {\n\tconsole.log(elKey);\n}\n\n// elValue are the property values\nfor (let elValue of arr) {\n\tconsole.log(elValue)\n}"
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q20 : What is the difference between Shallow copy & Deep copy?",
+                    "a": "In Shallow copy, a copy of the original object is stored and only the reference address is finally copied. In Deep copy, the copy of the original object and the repetitive copies both are stored.",
+                    "type": "text",
+                    "id": 20
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Shallow copy": "A bitwise copy of an object, where a new object is created and it has the same copy of the values in the original object, is called a Shallow copy. If any of the object fields refer to the other object then in such cases only the reference address is copied.",
+                        "Deep copy": "When the process of copying occurs repetitively and a copy of the object is always copied in another object, then it is called deep copy. In this process, initially, a new collection of the object is constructed, and then the copies of the child object frequently populate those found in the original."
+                    }
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Shallow Copy"
+                        },
+                        {
+                            "label": "Deep Copy"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "In Shallow copy, a copy of the original object is stored and only the reference address is finally copied."
+                                },
+                                {
+                                    "col": "In Deep copy, the copy of the original object and the repetitive copies both are stored."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Shallow copy is faster than Deep copy."
+                                },
+                                {
+                                    "col": "Deep copy is slower than Shallow copy."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "The changes made in the copied object also reflect the original object."
+                                },
+                                {
+                                    "col": "There is no reflection on the original object when the changes are made in the copied object."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "It stores references of the object in the main memory."
+                                },
+                                {
+                                    "col": "It stores copies of the object values."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q21 : What is the difference between call(), apply() & bind()?",
+                    "a": "All three of the call, bind, and apply methods set the this argument to the function.",
+                    "type": "text",
+                    "id": 21
+                },
+                {
+                    "heading_text": "call()",
+                    "simple_text": "The call method binds the this value to the function and executes the function. It takes the this value and a list of arguments as parameters. Then, it returns the value returned by the function, which is called using the call method.",
+                    "type": "code",
+                    "lang": "typescript",
+                    "bottom_text": "In the code above, we have called the test function using the call method. The call method will invoke the test function with the this value as the object passed to the call method.",
+                    "code": "\nfunction test(arg1, arg2){\n\tconsole.log(this.num, arg1, arg2); // 100, 10, 20\n}\ntest.call({num: 100}, 10, 20);"
+                },
+                {
+                    "heading_text": "apply()",
+                    "simple_text": "The apply method binds the this value to the function and executes the function. It takes the this value and a single array object as parameters, and it returns the value returned by the function, which is called using the apply method.",
+                    "type": "code",
+                    "lang": "typescript",
+                    "bottom_text": "In the code above, we have called the test function using the apply method and with the this value as the object passed to the apply method.",
+                    "code": "\nfunction test(...arguments){\n\tconsole.log(this.num, arguments);//100, [1,2,3]\n}\ntest.apply({num: 100}, [1,2,3]);"
+                },
+                {
+                    "heading_text": "bind()",
+                    "simple_text": "The bind method binds the this value to the function and returns a new function. However, we still need to separately invoke the returned function.",
+                    "type": "code",
+                    "lang": "typescript",
+                    "bottom_text": "In the above code, we bind the this value for the test function and invoke the returned function from the bind method.",
+                    "code": "\nfunction test(arg){\n\tconsole.log(this.number, arg);\n}\nlet bindedFn = test.bind({number: 99}, 'argument');\nbindedFn(); // 99, 'argument'"
+                },
+                {
+                    "note": "Note : call() and apply() are identical in functionality, the only difference is that call() accepts a list of arguments; whereas, apply() accepts a single array of arguments.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q22 : How can you create a class?",
+                    "a": "Classes are in fact 'special functions', and just as you can define function expressions and function declarations, the class syntax has two components: class expressions and class declarations.",
+                    "type": "text",
+                    "id": 22
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nclass Rectangle {\n\tconstructor(height, width) {\n\t\tthis.height = height;\n\t\tthis.width = width;\n\t}\n}"
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q23 : When does constructor() called?",
+                    "a": "A constructor enables you to provide any custom initialization that must be done before any other methods can be called on an instantiated object.",
+                    "type": "text",
+                    "id": 23
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nclass Person {\n\tconstructor(name) {\n\t\tthis.name = name;\n\t}\nintroduce() {\n\tconsole.log(`Hello, my name is ${this.name}`);\n\t}\n}\nconst otto = new Person('Otto');\notto.introduce(); // Hello, my name is Otto"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "If you don't provide your own constructor, then a default constructor will be supplied for you. If your class is a base class, the default constructor is empty:",
+                    "lang": "typescript",
+                    "code": "\nconstructor() {}"
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q24 : What is Tagged templates?",
+                    "a": "Tags allow you to parse template literals with a function. The first argument of a tag function contains an array of string values. The remaining arguments are related to the expressions.",
+                    "type": "text",
+                    "id": 24
+                },
+                {
+                    "type": "code",
+                    "simple_text": "The tag function can then perform whatever operations on these arguments you wish, and return the manipulated string. (Alternatively, it can return something completely different, as described in one of the following examples.)",
+                    "lang": "typescript",
+                    "code": "\nconst person = 'Mike';\nconst age = 28;\nfunction myTag(strings, personExp, ageExp) {\n\tconst str0 = strings[0]; // 'That '\n\tconst str1 = strings[1]; // ' is a '\n\tconst str2 = strings[2]; // '.'\n\tconst ageStr = ageExp > 99 ? 'centenarian' : 'youngster';\n\t// We can even return a string built using a template literal\n\treturn `${str0}${personExp}${str1}${ageStr}${str2}`;\n}\nconst output = myTag`That ${person} is a ${age}.`;\nconsole.log(output);\n// That Mike is a youngster."
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q25 : What is event bubbling & event capturing ?",
+                    "a": "Event bubbling and capturing are two ways of event propagation in the HTML DOM API, when an event occurs in an element inside another element, and both elements have registered a handle for that event. The event propagation mode determines in which order the elements receive the event.",
+                    "type": "text",
+                    "id": 25
+                },
+                {
+                    "img": "bubbling.PNG",
+                    "type": "img",
+                    "height": "15rem",
+                    "width": "70%",
+                    "imgCaption": "With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements."
+                },
+                {
+                    "img": "capturing.PNG",
+                    "type": "img",
+                    "height": "15rem",
+                    "width": "70%",
+                    "imgCaption": "With capturing, the event is first captured by the outermost element and propagated to the inner elements."
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q26 : How can you stop the event propagation?",
+                    "a": "The stopPropagation() method of the Event interface prevents further propagation of the current event in the capturing and bubbling phases. It does not, however, prevent any default behaviors from occurring; for instance, clicks on links are still processed. If you want to stop those behaviors, see the preventDefault() method. It also does not prevent immediate propagation to other event-handlers. If you want to stop those, see stopImmediatePropagation().",
+                    "type": "text",
+                    "id": 26
+                },
+                {
+                    "code": "\nevent.stopPropagation()",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q27 : What is event delegation?",
+                    "a": "DOM event delegation is a mechanism of responding to ui-events via a single common parent rather than each child, through the magic of event 'bubbling' (aka event propagation).",
+                    "type": "text",
+                    "id": 27
+                },
+                {
+                    "heading_text": "When an event is triggered on an element, the following occurs:",
+                    "simple_text": "The event is dispatched to its target EventTarget and any event listeners found there are triggered. Bubbling events will then trigger any additional event listeners found by following the EventTarget's parent chain upward, checking for any event listeners registered on each successive EventTarget. This upward propagation will continue up to and including the Document.",
+                    "code": "\n<ul onclick='alert(event.type + '!')'>\n\t<li>One</li>\n\t<li>Two</li>\n\t<li>Three</li>\n</ul>",
+                    "type": "code",
+                    "lang": "html",
+                    "bottom_text": "With that example if you were to click on any of the child <li> nodes, you would see an alert of 'click!', even though there is no click handler bound to the <li> you clicked on. If we bound onclick='...' to each <li> you would get the same effect."
+                },
+                {
+                    "heading_text": "So what's the benefit?",
+                    "simple_text": "Imagine you now have a need to dynamically add new <li> items to the above list via DOM manipulation:",
+                    "code": "\nvar newLi = document.createElement('li');\nnewLi.innerHTML = 'Four';\nmyUL.appendChild(newLi);",
+                    "type": "code",
+                    "lang": "javascript",
+                    "bottom_text": "Without using event delegation you would have to 'rebind' the 'onclick' event handler to the new <li> element, in order for it to act the same way as its siblings. With event delegation you don't need to do anything. Just add the new <li> to the list and you're done.This is absolutely fantastic for web apps with event handlers bound to many elements, where new elements are dynamically created and/or removed in the DOM. With event delegation the number of event bindings can be drastically decreased by moving them to a common parent element, and code that dynamically creates new elements on the fly can be decoupled from the logic of binding their event handlers. Another benefit to event delegation is that the total memory footprint used by event listeners goes down (since the number of event bindings go down). It may not make much of a difference to small pages that unload often (i.e. user's navigate to different pages often). But for long-lived applications it can be significant. There are some really difficult-to-track-down situations when elements removed from the DOM still claim memory (i.e. they leak), and often this leaked memory is tied to an event binding. With event delegation you're free to destroy child elements without risk of forgetting to ' unbind ' their event listeners (since the listener is on the ancestor). These types of memory leaks can then be contained (if not eliminated, which is freaking hard to do sometimes. IE I'm looking at you)."
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q28 : What is debouncing?",
+                    "a": "Debouncing is a programming pattern that allows delaying execution of some piece of code until a specified time to avoid unnecessary CPU cycles, API calls and improve performance. The debounce function make sure that your code is only triggered once per user input. The common usecases are Search box suggestions, text-field auto-saves, and eliminating double-button clicks.",
+                    "type": "text",
+                    "id": 28
+                },
+                {
+                    "simple_text": "Let's say you want to show suggestions for a search query, but only after a visitor has finished typing it. So here you write a debounce function where the user keeps writing the characters with in 500ms then previous timer cleared out using clearTimeout and reschedule API call/DB query for a new time—300 ms in the future.",
+                    "code": "\nfunction debounce(func, timeout = 500) {\n\tlet timer;\n\t\treturn (...args) => {\n\t\t\tclearTimeout(timer);\n\t\t\ttimer = setTimeout(() => {\n\t\t\t\tfunc.apply(this, args);\n\t\t\t}, timeout);\n\t\t};\n\t}\nfunction fetchResults() {\n\tconsole.log('Fetching input suggestions');\n}\nconst processChange = debounce(() => fetchResults());",
+                    "type": "code",
+                    "lang": "typescript",
+                    "bottom_text": "The debounce() function can be used on input, button and window events"
+                },
+                {
+                    "code": "\n<input type='text' onkeyup='processChange()' />",
+                    "type": "code",
+                    "lang": "typescript",
+                    "heading_text": "Input : "
+                },
+                {
+                    "code": "\n<button onclick='processChange()'>Click me</button>",
+                    "type": "code",
+                    "lang": "typescript",
+                    "heading_text": "Button : "
+                },
+                {
+                    "code": "\nwindow.addEventListener('scroll', processChange);",
+                    "type": "code",
+                    "lang": "typescript",
+                    "heading_text": "Windows event : "
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q29 : What is throttling?",
+                    "a": "Throttling is a technique used to limit the execution of an event handler function, even when this event triggers continuously due to user actions. The common use cases are browser resizing, window scrolling etc.",
+                    "type": "text",
+                    "id": 29
+                },
+                {
+                    "simple_text": "The below example creates a throttle function to reduce the number of events for each pixel change and trigger scroll event for each 100ms except for the first event.",
+                    "code": "\nconst throttle = (func, limit) => {\n\tlet inThrottle;\n\t\treturn (...args) => {\n\t\t\tif (!inThrottle) {\n\t\t\t\tfunc.apply(this, args);\n\t\t\tinThrottle = true;\n\t\t\tsetTimeout(() => (inThrottle = false), limit);\n\t\t}\n\t};\n\n};\nwindow.addEventListener('scroll', () => {\n\tthrottle(handleScrollAnimation, 100);\n});",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q30 : What is optional chaining?",
+                    "a": "According to MDN official docs, the optional chaining operator (?.) permits reading the value of a property located deep within a chain of connected objects without having to expressly validate that each reference in the chain is valid.",
+                    "type": "text",
+                    "id": 30
+                },
+                {
+                    "simple_text": "According to MDN official docs, the optional chaining operator (?.) permits reading the value of a property located deep within a chain of connected objects without having to expressly validate that each reference in the chain is valid.",
+                    "code": "\n const adventurer = {\n\tname: 'Alice',\n\tcat: {\n\t\tname: 'Dinah'\n\t}\n};\nconst dogName = adventurer.dog?.name;\nconsole.log(dogName);\n// expected output: undefined\nconsole.log(adventurer.someNonExistentMethod?.());\n// expected output: undefined",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q31 : What is a callback function?",
+                    "a": "A callback function is a function passed into another function as an argument. This function is invoked inside the outer function to complete an action. Let's take a simple example of how to use callback function",
+                    "type": "text",
+                    "id": 31
+                },
+                {
+                    "code": "\n function callbackFunction(name) {\n\tconsole.log('Hello ' + name);\n}\nfunction outerFunction(callback) {\n\tlet name = prompt('Please enter your name.');\n\tcallback(name);\n}\nouterFunction(callbackFunction);",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q32 : Why do we need callbacks?",
+                    "a": "The callbacks are needed because javascript is an event driven language. That means instead of waiting for a response javascript will keep executing while listening for other events. Let's take an example with the first function invoking an API call(simulated by setTimeout) and the next function which logs the message.",
+                    "type": "text",
+                    "id": 32
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q33 : What is the meaning of callback hell or pyramid of doom?",
+                    "a": "Callback Hell is an anti-pattern with multiple nested callbacks which makes code hard to read and debug when dealing with asynchronous logic. The callback hell looks like below,",
+                    "type": "text",
+                    "id": 33
+                },
+                {
+                    "code": "\nasync1(function(){\n\tasync2(function(){\n\t\tasync3(function(){\n\t\t\tasync4(function(){\n\t\t\t\t....\n\t\t\t});\n\t\t});\n\t});\n});",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q34 : What is a promise?",
+                    "a": "A promise is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). It will be in one of the 3 possible states: fulfilled, rejected, or pending.",
+                    "type": "text",
+                    "id": 34
+                },
+                {
+                    "code": "\nconst promise = new Promise(\n\t(resolve) => {\n\t\tsetTimeout(() => {\n\t\t\tresolve('I'm a Promise!');\n\t\t}, 5000);\n\t},\n(reject) => {}\n);\n\npromise.then((value) => console.log(value));",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q35 : What are the three states of promise?",
+                    "a": "Promises have three states:",
+                    "type": "text",
+                    "id": 35
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Pending": "This is an initial state of the Promise before an operation begins.",
+                        "Fulfilled": "This is an initial state of the Promise before an operation begins.",
+                        "Rejected": "This state indicates that the operation did not complete. In this case an error value will be thrown."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q36 : Explain Promise.all() Vs. Promise.allSettled() Vs. Promise.race()?",
+                    "a": "Promises have three states:",
+                    "type": "text",
+                    "id": 36
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Promise.all()": "It resolves only when all promises passed to it ( as an array) resolves else it will reject with the first rejected promise error.",
+                        "Promise.allSettled()": "This one will always get resolved with an array having info about resolved and rejected promises. Have a close look at following properties (status, value, reason ) of resulting array.",
+                        "Promise.race()": "Promise.race is a JS built in function that accepts an iterable of Promises (e.g. Array) as an argument. This function then asynchronously returns a Promise as soon as one in of the Promises passed in the iterable is either resolved or rejected."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q37 : What is a async function?",
+                    "a": "An async function is a function declared with the async keyword which enables asynchronous, promise-based behavior to be written in a cleaner style by avoiding promise chains. These functions can contain zero or more await expressions.",
+                    "type": "text",
+                    "id": 37
+                },
+                {
+                    "code": "\nasync function logger() {\n\tlet data = await fetch('http://someapi.com/users'); // pause until fetch returns\n\tconsole.log(data);\n}\nlogger();",
+                    "type": "code",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q38 : What are the differences between cookie, local storage and session storage?",
+                    "a": "Below are some of the differences between cookie, local storage and session storage,",
+                    "type": "text",
+                    "id": 38
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Feature"
+                        },
+                        {
+                            "label": "Cookie"
+                        },
+                        {
+                            "label": "Local storage"
+                        },
+                        {
+                            "label": "Session storage"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Accessed on client or server side"
+                                },
+                                {
+                                    "col": "Accessed on client or server side"
+                                },
+                                {
+                                    "col": "client-side only"
+                                },
+                                {
+                                    "col": "client-side only"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Lifetime"
+                                },
+                                {
+                                    "col": "As configured using Expires option."
+                                },
+                                {
+                                    "col": "until deleted"
+                                },
+                                {
+                                    "col": "until tab is closed"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "SSL support"
+                                },
+                                {
+                                    "col": "Supported"
+                                },
+                                {
+                                    "col": "Not Supported"
+                                },
+                                {
+                                    "col": "Not Supported"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Maximum data size"
+                                },
+                                {
+                                    "col": "4KB"
+                                },
+                                {
+                                    "col": "5 MB"
+                                },
+                                {
+                                    "col": "5 MB"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q39 : Is JavaScript synchronous?",
+                    "a": "Yes, JavaScript is a synchronous, single-threaded language",
+                    "type": "text",
+                    "id": 39
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Synchronous": "One command at a time.",
+                        "Single-threaded": "In a specific synchronous order."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q40 : What is Execution Context?",
+                    "a": "Everything in JS happens inside the execution context. Imagine a sealed-off container inside which JS runs. It is an abstract concept that hold info about the env. within the current code is being executed.",
+                    "type": "text",
+                    "id": 40
+                },
+                {
+                    "img": "exe_context.png",
+                    "type": "img",
+                    "height": "15rem",
+                    "width": "20rem"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "In the container the first component is memory component and the 2nd one is code component.",
+                        "2": "Memory component has all the variables and functions in key value pairs. It is also called Variable environment.",
+                        "3": "Code component is the place where code is executed one line at a time. It is also called the Thread of Execution."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q41 : How JavaScript works?",
+                    "a": "Everything in JS happens inside an Execution Context.",
+                    "type": "text",
+                    "id": 41
+                },
+                {
+                    "type": "list",
+                    "list_heading": "Execution Context: Component where JS is executed. It has:",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Memory or Variable Env.": "Here variables are stored as key: value pair.",
+                        "Code Env or Thread of execution": "Here variables are stored as key: value pair."
+                    }
+                },
+                {
+                    "note": "Note: JavaScript is a synchronous single-thread language",
+                    "type": "note"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_heading": "1st Phase: Memory creation phase",
+                    "list": {
+                        "1": "Everything happens in a ‘Global’ execution context.",
+                        "2": "In this phase, memory is allocated to all variables and function(s).",
+                        "3": "For variable(s), key is the variable name itself and value is undefined (even if the variable is initialized). And, for function(s), key is the function name and value is body of the code."
+                    }
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_heading": "2nd Phase: Code Execution phase",
+                    "list": {
+                        "1": "Code is traversed line by line and actual value of variables are assigned to them.",
+                        "2": "A new ‘local’ execution context is created, when function ‘invocation’ is encountered. Again, two phase perform their role"
+                    }
+                },
+                {
+                    "img": "op1.PNG",
+                    "type": "img",
+                    "height": "15rem",
+                    "width": "20rem"
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q42 : How it manages all the execution context, i.e., local & global?",
+                    "a": "It is managed through Stack, aka, Call stack, with Global execution context at the bottom and all the subsequent function invocation or new execution context is pushed to this call stack. Once the execution context is done with the task, it is popped. Well, call stack is also called by names like, Execution context, Program, Machine, Control, Runtime stack.",
+                    "type": "text",
+                    "id": 42
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q43 : Hoisting in JavaScript (variables & functions)?",
+                    "a": "Hoisting is a concept which enables us to extract values of variables and functions even before initialising/assigning value without getting error and this is happening due to the 1st phase (memory creation phase) of the Execution Context.",
+                    "type": "text",
+                    "id": 43
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Let's consider the below example and it's explaination::",
+                    "code": "\ngetName();//welcome to Javascript\nconsole.log(x); // undefined\nvar x = 7;\nfunction getName() {\n\tconsole.log('welcome to Javascript ');\n}",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "It should have been an outright error in many other languages, as it is not possible to even access something which is not even created (defined) yet But in JS, We know that in memory creation phase it assigns undefined and puts the content of function to function's memory. And in execution, it then executes whatever is asked. Here, as execution goes line by line and not after compiling, it could only print undefined and nothing else. This phenomenon, is not an error. However, if we remove var x = 7; then it gives error. Uncaught ReferenceError: x is not defined",
+                        "2": "we learnt that execution context gets created in two phase, so even before code execution, memory is created so in case of variable, it will be initialized as undefined while in case of function the whole function code is placed in the memory. Example:"
+                    }
+                },
+                {
+                    "type": "code",
+                    "code": "\ngetName(); // welcome to JavaScript\nconsole.log(x); // undefined\nconsole.log(getName); // f getName(){ console.log('welcome to JavaScript'); }\nfunction getName(){\n\tconsole.log('welcome to JavaScript');\n}",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Now let's observe a different example and try to understand the output.",
+                    "code": "\ngetName(); // Uncaught TypeError: getName is not a function\nconsole.log(getName);\nvar getName = function () {\n\tconsole.log('welcome to JavaScript');\n}\n// The code won't execute as the first line itself throws an TypeError.",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q44 : Functions and Variable scope?",
+                    "a": "Let's consider the below example and it's explaination:",
+                    "type": "text",
+                    "id": 44
+                },
+                {
+                    "type": "code",
+                    "code": "\nvar x = 1;\na();\nb(); // we are calling the functions before defining them. This will work properly, as seen in Hoisting.\nconsole.log(x);\nfunction a() {\n\tvar x = 10; // local scope because of separate execution context\n\tconsole.log(x);\n}\nfunction b() {\n\tvar x = 100;\n\tconsole.log(x);\n}\n\nOutput :- \n10\n100\n1",
+                    "lang": "javascript"
+                },
+                {
+                    "type": "list",
+                    "list_heading": "Code Flow in terms of Execution Context",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "The Global Execution Context (GEC) is created (the big box with Memory and Code subparts). Also GEC is pushed into Call Stack",
+                        "2": "In first phase of GEC (memory phase), variable x:undefined and a and b have their entire function code as value initialized.",
+                        "3": "In second phase of GEC (execution phase), when the function is called, a new local Execution Context is created. After x = 1 assigned to GEC x, a() is called. So local EC for a is made inside code part of GEC.",
+                        "4": "For local EC, a totally different x variable assigned undefined(x inside a()) in phase 1 , and in phase 2 it is assigned 10 and printed in console log. After printing, no more commands to run, so a() local EC is removed from both GEC and from Call stack",
+                        "5": "Cursor goes back to b() function call. Same steps repeat",
+                        "6": "Call Stack :[GEC, b()] -> GEC (after printing yet another totally different x value as 100 in console log)",
+                        "7": "Finally GEC is deleted and also removed from call stack. Program ends."
+                    }
+                },
+                {
+                    "img": "scope.PNG",
+                    "type": "img",
+                    "height": "15rem",
+                    "width": "30rem",
+                    "margin": "2rem 0 2rem 0"
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q45 : What is JS Engine?",
+                    "a": "It is responsible for any js code to execute. It creates:",
+                    "type": "text",
+                    "id": 45
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Global object (in browsers, it is called window) which is referenced by ‘this’..",
+                        "2": "Global execution context"
+                    }
+                },
+                {
+                    "note": "Note : Any global attribute, say a, can be accessed, in browser, by a, this.a or window.a.  In browser, window object, thus created, comes with various inbuilt attributes and functions.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q46 : What is Lexical Environment?",
+                    "a": "Whenever execution context is created, a lexical environment is also created",
+                    "type": "text",
+                    "id": 46
+                },
+                {
+                    "img": "lexienv.PNG",
+                    "heading_text": "It comprises of local memory and ‘reference’ (and not ‘copy’) of lexical environment of its parent. For Global Exec. Context, lexical environment points to null.",
+                    "bottom_text": "Whenever a variable is encountered while execution, it is first searched in the local memory space and if not found, it goes to the lexical environment of its parent and perform the same step, until found or reaches global scope.",
+                    "type": "img",
+                    "height": "20rem",
+                    "width": "60vw"
+                },
+                {
+                    "type": "note",
+                    "note": "Note : The above ‘chaining’ of lexical environments in order to find a particular variable, is called scope chain."
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : What is the difference between var, let & const?",
+                    "a": "Some of the major difference in tabular form",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "var"
+                        },
+                        {
+                            "label": "let"
+                        },
+                        {
+                            "label": "const"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "var variables are hoisted to the top of their scope and initialized with a value of undefined."
+                                },
+                                {
+                                    "col": "let is hoisted but stored in different memory space than other variables like var. (And hence they cannot be access via window object or this specifier)"
+                                },
+                                {
+                                    "col": "const is hoisted but stored in different memory space than other variables like var. (And hence they cannot be access via window object or this specifier)"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "var variable can be accessed before declaration."
+                                },
+                                {
+                                    "col": "They cannot be accessed until they’re initialized. Hence, the time from hoisting these variable(s) and initialization is temporal dead zone, and during this we cannot access let & const, in turns throws Reference error. "
+                                },
+                                {
+                                    "col": "They cannot be accessed until they’re initialized. Hence, the time from hoisting these variable(s) and initialization is temporal dead zone, and during this we cannot access let & const, in turns throws Reference error. "
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "var can be re-declared in the same scope."
+                                },
+                                {
+                                    "col": "let cannot be re-declared in the same scope unlike var."
+                                },
+                                {
+                                    "col": "In case of const we need to declare and initialise at the same line/time. If we try changing the value later at some line to const variable, we’ll get Type Error.."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "note": "Note: In case of const array or object, if we try to change the value, it is perfectly fine/valid. The property of a const object can be change but it cannot be change to reference to the new object.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q48 : What is Block in js?",
+                    "a": "Block combines multiple js statement and can be used at places where single line is expected. let & const cannot be accessed outside the block, in which they reside. Hence, they’re called as block scoped, and var to be function scoped",
+                    "type": "text",
+                    "id": 48
+                },
+                {
+                    "type": "note",
+                    "note": "Note: The variable(s) in the local scope shadows the same-named variable in the outer scope. But due to the fact that let & const is block scoped, a different memory space is created for let & const variable(s) but same variable is over-written in case of var. Well, this phenomenon is called Shadowing."
+                },
+                {
+                    "code": "\nvar x = 1;\nlet y = 1;\n\nif (true) {\n\tvar x = 2;\n\tlet y = 2;\n}\nconsole.log(x);// expected output: 2\nconsole.log(y);// expected output: 1",
+                    "lang": "javascript",
+                    "type": "code"
+                },
+                {
+                    "heading_text": "Block scoping rules with var or function declaration in non-strict mode",
+                    "code": "\nvar x = 1;\n{\n\tvar x = 2;\n}\nconsole.log(x); // 2",
+                    "lang": "javascript",
+                    "type": "code"
+                },
+                {
+                    "heading_text": "Block scoping rules with let, const, class, or function declaration in strict mode",
+                    "code": "\nlet x = 1;\n{\n\tlet x = 2;\n}\nconsole.log(x); // 1\n//The x = 2 is limited in scope to the block in which it was defined.\n//The same is true of const:\n\nconst c = 1;\n{\n\tconst c = 2;\n}\nconsole.log(c); // 1; does not throw SyntaxError",
+                    "lang": "javascript",
+                    "type": "code"
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q49 : What is Illegal Shadowing?",
+                    "a": "Shadowing a let variable with var type is not allowed and this is called Illegal Shadowing. (Why?) Because var ‘overflows’ from the inner scope to outer (since it is function scoped) where let variable is present and we are now left with multiple declaration of let variable which is invalid.",
+                    "type": "text",
+                    "id": 49
+                },
+                {
+                    "code": "\nlet a = 10;\n{\n\tvar a = 100;\n}\n//illegal shadowing throws Syntax Error",
+                    "lang": "javascript",
+                    "type": "code"
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q50 : Closures in JavaScript?",
+                    "a": "A Closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).That means, each function in JS has access to its surrounding environment (which includes variables and functions).",
+                    "type": "text",
+                    "id": 50
+                },
+                {
+                    "code": "\n//notice use of double parenthesis\nfunction outer(){\n\tvar a = 10;\n\t\tfunction inner(){\n\t\t\tconsole.log(a);\n\t\t}\n\treturn inner;\n}\nouter()(); // output 10",
+                    "lang": "javascript",
+                    "type": "code"
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "q": "Q51 : What are the Advantages and Disadvantages of Closures?",
+                    "a": "here are the Advantages and Disadvantages",
+                    "type": "text",
+                    "id": 51,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_heading": "Advantages of closures",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "They allow you to attach variables to an execution context.",
+                        "2": "Variables in closures can help you maintain a state that you can use later.",
+                        "3": "They provide data encapsulation.",
+                        "4": "They help remove redundant code.",
+                        "5": "They help maintain modular code."
+                    }
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_heading": "Disadvantages of closures",
+                    "list_text": "Closure is associated directly with memory consumption. Hence, it leads to high consumption of memory, if lot of closures are created, since the allocated memory are not garbage collected till program expires.",
+                    "list": {
+                        "1": "The variables declared inside a closure are not garbage collected.",
+                        "2": "Too many closures can slow down your application. This is actually caused by duplication of code in the memory."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "q": "Q52 : Garbage Collector in javascript?",
+                    "a": "It is a program in the browser/JS Engine which is responsible for freeing up the memory which are unutilised",
+                    "type": "text",
+                    "id": 52,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "q": "Q53 : What are CallBack functions?",
+                    "a": "Functions passed as argument into another functions. JS is synchronous single threaded language but through use of Callback functions we can perform async task. Eg, Event listeners make use of this.",
+                    "type": "text",
+                    "id": 53,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "code": "\nfunction greeting(name) {\n\talert(`Hello, ${name}`);\n}\n\nfunction processUserInput(callback) {\n\tconst name = prompt('Please enter your name.');\n\tcallback(name);\n}\nprocessUserInput(greeting);\n",
+                    "lang": "javascript",
+                    "type": "code"
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "q": "Q54 : Why do we need to remove event listeners?",
+                    "a": "Event listeners are heavy, i.e., it takes memory. And even if the call stack is empty, memory is not freed up from the lexical environment of the event listener function.",
+                    "type": "text",
+                    "id": 54,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "Que": [
+                {
+                    "q": "Q55 : What is Web APIs?",
+                    "a": "All the code execution is done inside call stack, which is present in JS engine, which in turn is in browser. Browser has some added functionalities like, Local storage, Timer, Address field, etc.",
+                    "type": "text",
+                    "id": 55,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "For incorporating additional functionalities and connecting to outer ENV like localStorage, fetching data from remote source, etc, browser comes up with Web APIs like:.",
+                    "list": {
+                        "1": "SetTimeout()",
+                        "2": "DOM APIs",
+                        "3": "Fetch()",
+                        "4": "LocalStorage",
+                        "5": "Console",
+                        "6": "Location"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "56",
+            "Que": [
+                {
+                    "q": "Q56 : How JS engine works?",
+                    "a": "A JavaScript engine generally consists of a baseline compiler that works on the compilation of the code in the form of intermediate representation (IR) /byte code and then passes the byte code to the interpreter.",
+                    "type": "text",
+                    "id": 56,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "JS Engine follows 3 steps",
+                    "list": {
+                        "Parsing": "Code is broken into tokens, which are converted into Abstract Syntax Tree.",
+                        "Compilation ": "The AST is converted by interpreter. A Compiler also works simultaneously to optim the code.",
+                        "Exection": "Exection done with the help of Heap and call stack"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "57",
+            "Que": [
+                {
+                    "q": "Q57 : Why we should not trust on setTimeOut?",
+                    "a": "setTimeOut with timer of 5s does not exactly guarantee that the callback function will execute after 5sec. It means that it'll al least take 5sec, before executing. But time may increase if there are more line of code to execute. in the stack.",
+                    "type": "text",
+                    "id": 57,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "58",
+            "Que": [
+                {
+                    "q": "Q58 : What is an event loop?",
+                    "a": "The Event Loop is a queue of callback functions. When an async function executes, the callback function is pushed into the queue. The JavaScript engine doesn't start processing the event loop until the async function has finished executing the code. Note: It allows Node.js to perform non-blocking I/O operations even though JavaScript is single-threaded.",
+                    "type": "text",
+                    "id": 58,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "59",
+            "Que": [
+                {
+                    "q": "Q59 : What is an event queue?",
+                    "a": "The event queue follows the queue data structure. It stores async callbacks to be added to the call stack. It is also known as the Callback Queue or Macrotask Queue.Whenever the call stack receives an async function, it is moved into the Web API. Based on the function, Web API executes it and awaits the result. Once it is finished, it moves the callback into the event queue (the callback of the promise is moved into the microtask queue).The event queue constantly checks whether or not the call stack is empty. Once the call stack is empty and there is a callback in the event queue, the event queue moves the callback into the call stack. If there is a callback in the microtask queue as well, it is moved first. The microtask queue has a higher priority than the event queue.",
+                    "type": "text",
+                    "id": 59,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        }
+    ]
+}

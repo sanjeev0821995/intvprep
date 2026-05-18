@@ -1,18 +1,18 @@
 import { DOCUMENT } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-// import { off } from 'process';
 import { of } from 'rxjs';
 
 @Injectable({
     providedIn: 'root',
 })
 export class AppServiceService {
-    constructor(private http: HttpClient, @Inject(DOCUMENT) private doc) {}
+    constructor( private http: HttpClient, @Inject(DOCUMENT) private doc, ) {}
 
     getConfig(name: any): any {
         // eslint-disable-next-line @typescript-eslint/no-shadow
-        const config = require('./app-config.json');
+        const fileName = name ? name : 'app-config';
+        const config = require(`./${fileName}.json`);
         for (const [key, value] of Object.entries(config)) {
             if (name === key) {
                 return of({ config: value });

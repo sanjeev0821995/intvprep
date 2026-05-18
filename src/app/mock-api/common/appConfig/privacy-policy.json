@@ -1,0 +1,41 @@
+{
+    "privacy-policy": [
+        {
+            "Que": [
+                {
+                    "type": "text",
+                    "id": 1
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_heading": "At Intvprep., we have been accumulating some policy to serve you better. It will be useful for those who are very concerned about how their personal information will be used on the Internet. PII (Personally identifiable information) is used in US privacy law where information of an individual can be used on its own. Read the below-mentioned policy carefully to get the idea of why we want your personal information, how we collect and use PII. ",
+                    "list": {
+                        "1": "When an individual comes on website, blog or app and wants to register on any of these, he/she can be asked to enter their details like name, email address or contact number to get the updates and check the two-way security.",
+                        "2": "At Intvprep., we only ask those visitor's information who are trying to subscribe to a newsletter or enter data on our site.",
+                        "3": "The information we ask you at the time of subscription can be used when you register on our website, make a purchase, signup for our newsletter, reply to a survey, marketing communication, etc.",
+                        "4": "We have nothing to do personally with your information so we never use vulnerability scanning or scanning to PCI standards.",
+                        "5": "We only send you emails and messages about products, articles, and information. Apart from that, we will never ask for your credit card numbers or bank details.",
+                        "6": "There can be chances when we offer or include products of any third party on our website just for promotion but, they will have their separate privacy policy, which you should have read once. We are not liable for any negative things or happening on these linked websites. As well as, we do not even seek to preserve the honor of that site and welcome any feedback about them.",
+                        "7": "Google's Advertising Principles can sum up any of the advertisement requirements on Google. All are just put to be together to offer a positive experience for users.",
+                        "8": "You have a choice to set a particular thing for how Google advertises to you using the Google Ad Settings surface. Otherwise, you also have an option to opt out by hitting the Network Advertising Initiative opt-out page.",
+                        "9": "It is mandatory for all website to post a privacy policy. If you are running any website and asking for personal information of users, you have to tell them the reasons why are you collecting their information and to whom it is being shared.",
+                        "10": "It is entirely in the hand of uses and their wish. If any user wants to visit our website anonymously, they can.",
+                        "11": "After creating a suitable and right privacy policy, we will add this on the homepage to our website.",
+                        "12": "Our Privacy Policy link adds the word 'Privacy.' So, you can search it whenever you want by the word itself.",
+                        "13": "If we amend in the privacy policy, users will be notified.",
+                        "14": "Users have rights to change their personal information.",
+                        "15": "When DNT (do not track) browser me tool is in place, we are not likely to track cookies.",
+                        "16": "At this website, we track record and allow third-party behavioral tracking.",
+                        "17": "If the children are below 13 years, under the Children’s Online Privacy Protection Act, we asked for parent’s information. We do not specifically sell to kids fewer than 13.",
+                        "18": "The concepts mentioned by the Fair Information Practices Principles play a significant role in the development of data protection law. The law explains how they should be implemented which is crucial to comply with the different privacy laws that protect personal information.",
+                        "19": " Every user will be notified via email- within seven business days.",
+                        "20": "To send you information, reply to inquiries, and also use for requests or questions. We promote our mailing list or able to send emails to our clients.",
+                        "21": "As per the CAN-SPAM act, we agree to the following: We do not use any false and misleading subject or email addresses.",
+                        "22": "In some obvious way, the entire message should be recognized as an advertisement.It is must to add the physical address of our business."
+                    }
+                }
+            ]
+        }
+    ]
+}

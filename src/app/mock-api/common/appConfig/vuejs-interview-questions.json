@@ -1,0 +1,1478 @@
+{
+    "vuejs-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is VueJS?",
+                    "a": "Vue.js is an open-source, progressive Javascript framework for building user interfaces that aim to be incrementally adoptable. The core library of VueJS is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : What are the major features of VueJS?",
+                    "a": "Below are the some of major features available with VueJS",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Virtual DOM": " It uses virtual DOM similar to other existing frameworks such as ReactJS, Ember etc. Virtual DOM is a light-weight in-memory tree representation of the original HTML DOM and updated without affecting the original DOM.",
+                        "Components": "Used to create reusable custom elements in VueJS applications.",
+                        "Templates": "VueJS provides HTML based templates that bind the DOM with the Vue instance data.",
+                        "Routing": "Navigation between pages is achieved through vue-router.",
+                        "Light weight": "VueJS is light weight library compared to other frameworks."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : What are the lifecycle methods of VueJS?",
+                    "a": "Lifecycle hooks are a window into how the library you’re using works behind-the-scenes. By using these hooks, you will know when your component is created, added to the DOM, updated, or destroyed. Let's look at lifecycle diagram before going to each lifecycle hook in detail,",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "img",
+                    "img": "lifecycle.png"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Creation(Initialization)": "Creation Hooks allow you to perform actions before your component has even been added to the DOM. You need to use these hooks if you need to set things up in your component both during client rendering and server rendering. Unlike other hooks, creation hooks are also run during server-side rendering."
+                    }
+                },
+                {
+                    "type": "code",
+                    "heading_text": "1 : beforeCreate:",
+                    "simple_text": "This hook runs at the very initialization of your component. hook observes data and initialization events in your component. Here, data is still not reactive and events that occur during the component’s lifecycle have not been set up yet.",
+                    "lang": "typescript",
+                    "margin": "0 0 0 2rem",
+                    "code": "\nnew Vue({\n\tdata: {\n\t\tcount: 10\n\t},\nbeforeCreate: function () {\n\tconsole.log('Nothing gets called at this moment')\n\t// `this` points to the view model instance\n\tconsole.log('count is ' + this.count);\n\t}\n})"
+                },
+                {
+                    "type": "code",
+                    "heading_text": "2 : created:",
+                    "simple_text": "This hook is invoked when Vue has set up events and data observation. Here, events are active and access to reactive data is enabled though templates have not yet been mounted or rendered.",
+                    "lang": "typescript",
+                    "margin": "0 0 0 2rem",
+                    "code": "\nnew Vue({\n\tdata: {\n\t\tcount: 10\n\t},\n\tcreated: function () {\n\t\t// `this` points to the view model instance\n\tconsole.log('count is: ' + this.count)\n\t}\n})\n// count is: 10"
+                },
+                {
+                    "type": "note",
+                    "margin": "0 0 0 2rem",
+                    "note": "Note: Remember that, You will not have access to the DOM or the target mounting element (this.$el) inside of creation hooks."
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Mounting(DOM Insertion)": "Mounting hooks are often the most-used hooks and they allow you to access your component immediately before and after the first render."
+                    }
+                },
+                {
+                    "type": "code",
+                    "heading_text": "1 : beforeMount:",
+                    "simple_text": "The beforeMount allows you to access your component immediately before and after the first render.",
+                    "lang": "typescript",
+                    "margin": "0 0 0 2rem",
+                    "code": "\nnew Vue({\n\tbeforeMount: function () {\n\t\t // `this` points to the view model instance\n\t\tconsole.log(`this.$el is yet to be created`);\n\t}\n})"
+                },
+                {
+                    "type": "code",
+                    "heading_text": "2 : mounted:",
+                    "simple_text": "This is a most used hook and you will have full access to the reactive component, templates, and rendered DOM (via. this.$el). The most frequently used patterns are fetching data for your component.",
+                    "lang": "typescript",
+                    "margin": "0 0 0 2rem",
+                    "code": "\n<div id='app'>\n\t<p>I’m text inside the component.</p>\n</div>\nnew Vue({\n\tel: ‘#app’,\n\tmounted: function() {\n\t\tconsole.log(this.$el.textContent); // I'm text inside the component.\n\t}\n})"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Updating (Diff & Re-render)": "Updating hooks are called whenever a reactive property used by your component changes, or something else causes it to re-render."
+                    }
+                },
+                {
+                    "type": "code",
+                    "heading_text": "1 : beforeUpdate:",
+                    "simple_text": "The beforeUpdate hook runs after data changes on your component and the update cycle begins, right before the DOM is patched and re-rendered.",
+                    "lang": "typescript",
+                    "margin": "0 0 0 2rem",
+                    "code": "\n<div id='app'>\n\t<p>{{counter}}</p>\n</div>\n...// rest of the code\nnew Vue({\n\tel: '#app',\n\tdata() {\n\t\treturn {\n\t\t\tcounter: 0\n\t\t}\n\t},\ncreated: function() {\n\tsetInterval(() => {\n\t\tthis.counter++\n\t}, 1000)\n},\nbeforeUpdate: function() {\n\tconsole.log(this.counter) // Logs the counter value every second, before the DOM updates.\n}\n})"
+                },
+                {
+                    "type": "code",
+                    "heading_text": "2 : updated:",
+                    "simple_text": "This hook runs after data changes on your component and the DOM re-renders.",
+                    "lang": "typescript",
+                    "margin": "0 0 0 2rem",
+                    "code": "\n<div id='app'>\n\t<p ref='dom'>{{counter}}</p>\n</div>\n...//\nnew Vue({\n\tel: '#app',\n\t\tdata() {\n\t\t\treturn {\n\t\t\t\tcounter: 0\n\t\t\t}\n\t\t},\n\tcreated: function() {\n\t\tsetInterval(() => {\n\t\t\tthis.counter++\n\t}, 1000)\n\t},\nupdated: function() {\n\tconsole.log(+this.$refs['dom'].textContent === this.counter) // Logs true every second\n}\n})"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Destruction (Teardown)": "Destruction hooks allow you to perform actions when your component is destroyed, such as cleanup or analytics sending."
+                    }
+                },
+                {
+                    "type": "code",
+                    "heading_text": "1 : beforeDestroy:",
+                    "simple_text": "beforeDestroy is fired right before teardown. If you need to cleanup events or reactive subscriptions, beforeDestroy would probably be the time to do it. Your component will still be fully present and functional.",
+                    "lang": "typescript",
+                    "margin": "0 0 0 2rem",
+                    "code": "\nnew Vue ({\n\tdata() {\n\t\treturn {\n\t\t\tmessage: 'Welcome VueJS developers'\n\t\t}\n\t},\n\nbeforeDestroy: function() {\n\tthis.message = null\n\tdelete this.message\n\t}\n})"
+                },
+                {
+                    "type": "code",
+                    "heading_text": "2 : destroyed:",
+                    "simple_text": "This hooks is called after your component has been destroyed, its directives have been unbound and its event listeners have been removed.",
+                    "lang": "typescript",
+                    "margin": "0 0 0 2rem",
+                    "code": "\nnew Vue ({\n\tdestroyed: function() {\n\t\tconsole.log(this) // Nothing to show here\n\t}\n})"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : What is the difference between v-show and v-if directives?",
+                    "a": "Below are some of the main differences between v-show and v-if directives,",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": " v-if only renders the element to the DOM if the expression passes whereas v-show renders all elements to the DOM and then uses the CSS display property to show/hide elements based on expression.",
+                        "2": "v-if supports v-else and v-else-if directives whereas v-show doesn't support else directives.",
+                        "3": "v-if has higher toggle costs while v-show has higher initial render costs. i.e, v-show has a performance advantage if the elements are switched on and off frequently, while the v-if has the advantage when it comes to initial render time.",
+                        "4": "v-if supports <template> tab but v-show doesn't support."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : What is vue instance?",
+                    "a": "Every Vue application works by creating a new Vue instance with the Vue function. Generally the variable vm (short for ViewModel) is used to refer Vue instance. You can create vue instance as below,",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "bottom_text": "As mentioned in the above code snippets, you need to pass options object. You can find the full list of options in the API reference.",
+                    "lang": "typescript",
+                    "code": "\nvar vm = new Vue({\n\t// options\n})"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : How do you achieve conditional group of elements?",
+                    "a": "You can achieve conditional group of elements(toggle multiple elements at a time) by applying v-if directive on <template> element which works as invisible wrapper(no rendering) for group of elements.",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "simple_text": "For example, you can conditionally group user details based on valid user condition.",
+                    "lang": "typescript",
+                    "code": "\n<template v-if='condition'>\n\t<h1>Name</h1>\n\t<p>Address</p>\n\t<p>Contact Details</p>\n</template>"
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : Why should not use if and for directives together on the same element?",
+                    "a": "It is recommended not to use v-if on the same element as v-for. Because v-for directive has a higher priority than v-if.There are two cases where developers try to use this combination,",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "To filter items in a list"
+                    }
+                },
+                {
+                    "type": "code",
+                    "simple_text": "For example, if you try to filter the list using v-if tag,",
+                    "lang": "typescript",
+                    "margin": "0 0 0 2rem",
+                    "code": "\n<ul>\n\t<li v-for='user in users' v-if='user.isActive' :key='user.id'>\n\t\t{{ user.name }}\n\t<li>\n</ul>"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "This can be avoided by preparing the filtered list using computed property on the initial list",
+                    "lang": "typescript",
+                    "margin": "0 0 0 2rem",
+                    "code": "\ncomputed: {\n\tactiveUsers: function () {\n\t\treturn this.users.filter(function (user) {\n\t\t\treturn user.isActive\n\t\t})\n\t}\n}\n...... //\n...... //\n<ul>\n\t<li v-for='user in activeUsers':key='user.id'>\n\t\t{{ user.name }}\n\t<li>\n</ul>"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "To avoid rendering a list if it should be hidden"
+                    }
+                },
+                {
+                    "type": "code",
+                    "simple_text": "For example, if you try to conditionally check if the user is to be shown or hidden",
+                    "lang": "typescript",
+                    "margin": "0 0 0 2rem",
+                    "code": "\n<ul>\n\t<li v-for='user in users' v-if='shouldShowUsers':key='user.id'>\n\t\t{{ user.name }}\n\t<li>\n</ul>"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "This can be solved by moving the condition to a parent by avoiding this check for each user",
+                    "lang": "typescript",
+                    "margin": "0 0 0 2rem",
+                    "code": "\n<ul v-if='shouldShowUsers'>\n\t<li v-for='user in users' :key='user.id'>\n\t\t{{ user.name }}\n\t<li>\n</ul>"
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : Why do you need to use key attribute on v-for directive?",
+                    "a": "In order to track each node’s identity, and thus reuse and reorder existing elements, you need to provide a unique key attribute for each item with in v-for iteration. An ideal value for key would be the unique id of each item.",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Let us take an example usage,",
+                    "bottom_text": "Hence, It is always recommended to provide a key with v-for whenever possible, unless the iterated DOM content is simple.",
+                    "lang": "typescript",
+                    "code": "\n<div v-for='item in items' :key='item.id'>\n\t{{item.name}}\n</div>"
+                },
+                {
+                    "note": "Note: You shouldn’t use non-primitive values like objects and arrays as v-for keys. Use string or numeric values instead.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : What are the array detection mutation methods?",
+                    "a": "As the name suggests, mutation methods modifies the original array.",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Below are the list of array mutation methods which trigger view updates",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "push()",
+                        "2": "pop()",
+                        "3": "shift()",
+                        "4": "unshift()",
+                        "5": "splice()",
+                        "6": "sort()",
+                        "7": "reverse()"
+                    }
+                },
+                {
+                    "type": "code",
+                    "simple_text": "If you perform any of the above mutation method on the list then it triggers view update. For example, push method on array named 'items' trigger a view update,",
+                    "lang": "typescript",
+                    "code": "\nvm.todos.push({ message: 'Baz' })"
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : What are the array detection non-mutation methods?",
+                    "a": "The methods which do not mutate the original array but always return a new array are called non-mutation methods.",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Below are the list of non-mutation methods,",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "filter    ()",
+                        "2": "concat()",
+                        "3": "slice()"
+                    }
+                },
+                {
+                    "type": "code",
+                    "simple_text": "For example, lets take a todo list where it replaces the old array with new one based on status filter,",
+                    "lang": "typescript",
+                    "bottom_text": "This approach won't re-render the entire list due to VueJS implementation.",
+                    "code": "\nvm.todos = vm.todos.filter(function (todo) {\n\treturn todo.status.match(/Completed/)\n})"
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : What are the event modifiers provided by vue?",
+                    "a": "Normally, javascript provides event.preventDefault() or event.stopPropagation() inside event handlers. You can use methods provided by vue, but these methods are meant for data logic instead of dealing with DOM events. Vue provides below event modifiers for v-on and these modifiers are directive postfixes denoted by a dot.",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Below are the list of non-mutation methods,",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": ".stop",
+                        "2": ".prevent",
+                        "3": ".capture",
+                        "4": ".self",
+                        "5": ".once",
+                        "6": ".passive"
+                    }
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Let's take an example of stop modifier,",
+                    "lang": "typescript",
+                    "code": "\n<!-- the click event's propagation will be stopped -->\n<a v-on:click.stop='methodCall'></a>"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "You can also chain modifiers as below,",
+                    "lang": "typescript",
+                    "code": "\n<!-- modifiers can be chained -->\n<a v-on:click.stop.prevent='doThat'></a>"
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : How do you implement two-way binding?",
+                    "a": "You can use the v-model directive to create two-way data bindings on form input, textarea, and select elements.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "bottom_text": "Remember, v-model will ignore the initial value, checked or selected attributes found on any form elements. So it always use the Vue instance data as the source of truth.",
+                    "simple_text": "Lets take an example of it using input component,",
+                    "lang": "typescript",
+                    "code": "\n<input v-model='message' placeholder='Enter input here'>\n<p>The message is: {{ message }}</p>"
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : What are props?",
+                    "a": "Props are custom attributes you can register on a component. When a value is passed to a prop attribute, it becomes a property on that component instance. You can pass those list of values as props option and use them as similar to data variables in template.",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nVue.component('todo-item', {\n\tprops: ['title'],\n\ttemplate: '<h2>{{ title }}</h2>'\n})"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Once the props are registered, you can pass them as custom attributes.",
+                    "lang": "typescript",
+                    "code": "\n<todo-item title='Learn Vue conceptsnfirst'></todo-item>"
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : When component needs a single root element?",
+                    "a": "In VueJS 2.x, every component must have a single root element when template has more than one element. In this case, you need to wrap the elements with a parent element.",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "bottom_text": "Otherwise there will an error throwing, saying that 'Component template should contain exactly one root element...'.",
+                    "code": "\n<template>\n\t<div class='todo-item'>\n\t<h2>{{ title }}</h2>\n\t<div v-html='content'></div>\n\t</div>\n</template>"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Whereas in 3.x, components now can have multiple root nodes. This way of adding multiple root nodes is called as fragments.",
+                    "lang": "typescript",
+                    "code": "\n<template>\n\t<h2>{{ title }}</h2\n\t<div v-html='content'></div>\n</template>"
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : How do you communicate from child to parent using events?",
+                    "a": "If you want child wants to communicate back up to the parent, then emit an event from child using $emit object to parent,",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nVue.component('todo-item', {\n\tprops: ['todo'],\n\ttemplate: `\n\t\t<div class='todo-item'>\n\t\t\t<h3>{{ todo.title }}</h3>\n\t\t\t<button v-on:click='$emit('increment-count', 1)'>\n\t\t\t\tAdd\n\t\t\t</button>\n\t\t<div v-html='todo.description'></div>\n\t</div>\n`})"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Now you can use this todo-item in parent component to access the count value.",
+                    "lang": "typescript",
+                    "code": "\n<ul v-for='todo in todos'>\n\t<li>\n\t\t<todo-item\n\t\t\tv-bind:key='todo.id'\n\t\t\tv-bind:todo='todo'\n\t\t\tv-on:increment-count='total += 1'\n\t\t/></todo-item>\n\t</li>\n\t</ul>\n<span> Total todos count is {{total}}</span>"
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : What are slots?",
+                    "a": "Vue implements a content distribution API using the element to serve as distribution outlets for content created after the current Web Components spec draft.",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Let's create an alert component with slots for content insertion,",
+                    "code": "\nVue.component('alert', {\n\ttemplate: `\n\t\t<div class='alert-box'>\n\t\t\t<strong>Error!</strong>\n\t\t<slot></slot>\n\t</div>\n`})"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Now you can insert dynamic content as below,.",
+                    "lang": "typescript",
+                    "code": "\n<alert>\n\tThere is an issue with in application.\n</alert>"
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : What is the difference between local and global registration in module system?",
+                    "a": "In local registration, you need to create each component in components folder(optional but it is recommended) and import them in another component file components section.",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "bottom_text": "Now both ComponentA and ComponentB can be used inside ComponentC‘s template.",
+                    "simple_text": "Let's say you want to register component A and B in component C, the configuration seems as below,",
+                    "code": "\nimport ComponentA from './ComponentA'\nimport ComponentB from './ComponentB'\n\nexport default {\n\tcomponents: {\n\t\tComponentA,\n\t\tComponentB\n\t},\n}"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "In global registration, you need to export all common or base components in a separate file. But some of the popular bundlers like webpack make this process simpler by using require.context to globally register base components in the below entry file(one-time).",
+                    "lang": "typescript",
+                    "code": "\nVue.component(\n\tcomponentName,\n\t\t// Look for the component options on `.default`, which will\n\t\t// exist if the component was exported with `export default`,\n\t\t// otherwise fall back to module's root.\n\t\tcomponentConfig.default || componentConfig\n\t)"
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : What are possible prop types?",
+                    "a": "You can declare props with type or without type. But it is recommended to have prop types because it provides the documentation for the component and warns the developer for any incorrect data type being assigned.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "bottom_text": "As mentioned in the above code snippet, you can list props as an object, where the properties’ names and values contain the prop names and types, respectively.",
+                    "simple_text": "Let's say you want to register component A and B in component C, the configuration seems as below,",
+                    "code": "\nprops: {\n\tname: String,\n\tage: Number,\n\tisAuthenticated: Boolean,\n\tphoneNumbers: Array,\n\taddress: Object\n}"
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : What are the possible ways to provide transitions?",
+                    "a": "There are many ways Vue provides transition effects when items are inserted, updated, or removed from the DOM.",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Below are the possible ways,",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Automatically apply classes for CSS transitions and animations",
+                        "2": "Integrate 3rd-party CSS animation libraries. For example, Animate.css",
+                        "3": "Use JavaScript to directly manipulate the DOM during transition hooks",
+                        "4": "Integrate 3rd-party JavaScript animation libraries. For example, Velocity.js"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : What is vue router and their features?",
+                    "a": "Vue Router is a official routing library for single-page applications designed for use with the Vue.js framework.",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Below are their features,",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Below are their features,",
+                        "2": "Modular, component-based router configuration",
+                        "3": "Route params, query, wildcards",
+                        "4": "View transition effects powered by Vue.js' transition system",
+                        "5": "Fine-grained navigation control",
+                        "6": "Links with automatic active CSS classes",
+                        "7": "HTML5 history mode or hash mode, with auto-fallback in IE9",
+                        "8": "Restore scroll position when going back in history mode"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : What is route matching priority?",
+                    "a": "Sometimes the URL might be matched by multiple routes and the confusion of which route need to be mapped is resolved by route matching priority. The priority is based on order of routes configuration. i.e, The route which declared first has higher priority.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "bottom_text": "As mentioned in the above code snippet, you can list props as an object, where the properties’ names and values contain the prop names and types, respectively.",
+                    "simple_text": "Let's say you want to register component A and B in component C, the configuration seems as below,",
+                    "code": "\nconst router = new VueRouter({\n\troutes: [\n\t\t// dynamic segments start with a colon\n\t\t{ path: '/user/:name', component: User } // This route gets higher priority\n\t\t{ path: '/user/:name', component: Admin }\n\t\t{ path: '/user/:name', component: Customer }\n\t]\n})"
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : What are single file components?",
+                    "a": "Single File Components are an easy concept to understand. Earlier you might heard about all three parts(HTML, JavaScript and CSS) of your application kept in different components. But Single File Components encapsulate the structure, styling and behaviour into one file. In the beginning, it seems strange to have all three parts in one file, but it actually makes a lot more sense.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "bottom_text": "As mentioned in the above code snippet, you can list props as an object, where the properties’ names and values contain the prop names and types, respectively.",
+                    "simple_text": "Let's take an example of Singile File Components",
+                    "code": "\n<template>\n\t<div>\n\t\t<h1>Welcome {{ name }}!</h1>\n\t</div>\n</template>\n\n<script>\nmodule.exports = {\n\tdata: function() {\n\t\treturn {\n\t\t\tname: 'John'\n\t\t}\n\t}\n}\n</script>\n\n<style scoped>\nh1 {\n\tcolor: #34c779;\n\tpadding: 3px;\n}\n</style>"
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : What are the problems solved by Single File Components?",
+                    "a": "The Single File Components solve the common problems occurred in a javascript driven application with a .vue extension. The list of issues are,",
+                    "type": "text",
+                    "id": 23,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Global definitions force unique names for every component",
+                        "2": "String templates lack syntax highlighting and require ugly slashes for multiline HTML",
+                        "3": "No CSS support means that while HTML and JavaScript are modularized into components, CSS is conspicuously left out",
+                        "4": "No build step restricts us to HTML and ES5 JavaScript, rather than preprocessors like Pug (formerly Jade) and Babel."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "q": "Q24 : What are filters?",
+                    "a": "Filters can be used to apply common text formatting. These Filters should be appended to the end of the JavaScript expression, denoted by the “pipe” symbol. You can use them in two specific cases:",
+                    "type": "text",
+                    "id": 24,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "mustache interpolations",
+                        "2": "v-bind expressions"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "For example, Let's define a local filter named capitalize in a component’s options",
+                    "code": "\nfilters: {\n\tcapitalize: function (value) {\n\t\tif (!value) return ''\n\t\tvalue = value.toString()\n\t\treturn value.charAt(0).toUpperCase() + value.slice(1)\n\t}\n}"
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Now you can use the filter in either mustache interpolation or v-bind expression,",
+                    "code": "\n<!-- in mustaches -->\n{{ username | capitalize }}\n<!-- in v-bind -->\n<div v-bind:id='username | capitalize'></div>"
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "q": "Q25 : What are plugins and their various services?",
+                    "a": "Plugins provides global-level functionality to Vue application. The plugins provide various services,",
+                    "type": "text",
+                    "id": 25,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Add some global methods or properties. For example, vue-custom-element",
+                        "2": "Add one or more global assets (directives, filters and transitions). For example, vue-touch",
+                        "3": "Add some component options by global mixin. For example, vue-router",
+                        "4": "Add some Vue instance methods by attaching them to Vue.prototype.",
+                        "5": "A library that provides an API of its own, while at the same time injecting some combination of the above. For example, vue-router"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "q": "Q26 : What are mixins?",
+                    "a": "Mixin gives us a way to distribute reusable functionalities in Vue components. These reusable functions are merged with existing functions. A mixin object can contain any component options. Let us take an example of mixin with created lifecycle which can be shared across components,",
+                    "type": "text",
+                    "id": 26,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nconst myMixin = {\n\tcreated(){\n\t\tconsole.log('Welcome to Mixins!'')\n\t}\n}\nvar app = new Vue({\n\tel: '#root',\n\t\tmixins: [myMixin]\n\t})"
+                },
+                {
+                    "note": "Note: Multiple mixins can be specified in the mixin array of the component.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "q": "Q27 : What are custom directives?",
+                    "a": "Custom Directives are tiny commands that you can attach to DOM elements. They are prefixed with v- to let the library know you're using a special bit of markup and to keep syntax consistent. They are typically useful if you need low-level access to an HTML element to control a bit of behavior.",
+                    "type": "text",
+                    "id": 27,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Let's create a custom focus directive to provide focus on specific form element during page load time,",
+                    "code": "\n// Register a global custom directive called `v-focus`\n\tVue.directive('focus', {\n\t\t// When the bound element is inserted into the DOM...\n\t\tinserted: function (el) {\n\t\t\t// Focus the element\n\t\tel.focus()\n\t}\n})"
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Now you can use v-focus directive on any element as below,",
+                    "code": "\n<input v-focus>"
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q28 : List down the template equivalents in render functions?",
+                    "a": "VueJS provides proprietary alternatives and plain javascript usage for the template features.",
+                    "type": "text",
+                    "id": 28
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Templates"
+                        },
+                        {
+                            "label": "Render function"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Conditional and looping directives: v-if and v-for"
+                                },
+                                {
+                                    "col": "Use JavaScript’s if/else and map concepts"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Two-way binding: v-model"
+                                },
+                                {
+                                    "col": "Apply own JS logic with value binding and event binding"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Capture Event modifiers: .passive, .capture, .once and .capture.once or .once.capture"
+                                },
+                                {
+                                    "col": "&, !, ~ and ~!"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Event and key modifiers: .stop, .prevent, .self, keys(.enter, .13) and Modifiers Keys(.ctrl, .alt, .shift, .meta)"
+                                },
+                                {
+                                    "col": "Use javascript solutions: event.stopPropagation(), event.preventDefault(), if (event.target !== event.currentTarget) return, if (event.keyCode !== 13) return and if (!event.ctrlKey) return"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Slots: slot attributes"
+                                },
+                                {
+                                    "col": "Render functions provide this.$slots and this.$scopedSlots instance properties"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "q": "Q29 : what is reactivity?",
+                    "a": "Reactivity – When you change the data value, the page is updated to reflect the changes. Data properties and computed properties in Vue are reactive. Vue.js services are not reactive. Visit Reactivity in Vue.js for additional information.",
+                    "type": "text",
+                    "id": 29,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "q": "Q30 : How do you verify if a mutation occurs?",
+                    "a": "It will be easy to test mutations because they are simply functions that rely only on their arguments. You must keep mutations contained within your store.The mutations should also be exported as a named export, apart from the default export.",
+                    "type": "text",
+                    "id": 30,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "q": "Q31 : What are functional components?",
+                    "a": "The functional components are just simple functions to create simple components just by passing a context. Every functional component follows two rules,",
+                    "type": "text",
+                    "id": 31,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Stateless": "It doesn’t keep any state by itself",
+                        "Instanceless": "It has no instance, thus no this"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Now you can use v-focus directive on any element as below,",
+                    "code": "\nVue.component('my-component', {\n\tfunctional: true,\n\t// Props are optional\n\tprops: {\n\t\t// ...\n\t},\n// To compensate for the lack of an instance,\n\t// we are now provided a 2nd context argument.\n\trender: function (createElement, context) {\n\t\t// ...\n\t}\n})"
+                },
+                {
+                    "note": "Note: The functional components are quite popular in React community too.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q32 : What is the difference between VueJS and ReactJS?",
+                    "a": "Even though VueJS and ReactJS share few common features there are many difference between them.",
+                    "type": "text",
+                    "id": 32
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Feature"
+                        },
+                        {
+                            "label": "VueJS"
+                        },
+                        {
+                            "label": "ReactJS"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Type"
+                                },
+                                {
+                                    "col": "JavaScript MVC Framework"
+                                },
+                                {
+                                    "col": "JavaScript Library"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Platform"
+                                },
+                                {
+                                    "col": "Primarily focused on web development"
+                                },
+                                {
+                                    "col": "Both Web and Native"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Learning Curve"
+                                },
+                                {
+                                    "col": "Easy to learn the framework"
+                                },
+                                {
+                                    "col": "A steep learning curve and requires deep knowledge"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Simplicity"
+                                },
+                                {
+                                    "col": "Vue is simpler than React"
+                                },
+                                {
+                                    "col": "React is more complex than Vue"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Bootstrap Application"
+                                },
+                                {
+                                    "col": "Vue-cli"
+                                },
+                                {
+                                    "col": "CRA (Create React App)"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q33 : List down the template equivalents in render functions?",
+                    "a": "VueJS provides proprietary alternatives and plain javascript usage for the template features.",
+                    "type": "text",
+                    "id": 33
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Feature"
+                        },
+                        {
+                            "label": "VueJS"
+                        },
+                        {
+                            "label": "Angular"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Complexity"
+                                },
+                                {
+                                    "col": "Easy to learn, simple API and design"
+                                },
+                                {
+                                    "col": "The framework is bit huge and need some learning curve on typescript etc"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Binding of Data"
+                                },
+                                {
+                                    "col": "One-way binding"
+                                },
+                                {
+                                    "col": "Two-way binding"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Learning Curve"
+                                },
+                                {
+                                    "col": "Easy to learn the framework"
+                                },
+                                {
+                                    "col": "A steep learning curve and requires deep knowledge"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Founders"
+                                },
+                                {
+                                    "col": "Created by Former Google Employee"
+                                },
+                                {
+                                    "col": "Powered by Google"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Model"
+                                },
+                                {
+                                    "col": "Based on Virtual DOM(Document Object Model)"
+                                },
+                                {
+                                    "col": "Based on MVC(Model-View-Controller)"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Written in"
+                                },
+                                {
+                                    "col": "JavaScript"
+                                },
+                                {
+                                    "col": "typeScript"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "q": "Q34 : What are dynamic components?",
+                    "a": "The dynamic component is used to dynamically switch beetween multiple components using element and pass data to v-bind:is attribute.",
+                    "type": "text",
+                    "id": 34,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "q": "Q35 : What is the purpose of keep alive tag?",
+                    "a": "Keep-alive tag is an abstract component used to preserve component state or avoid re-rendering. When you wrapped tag around a dynamic component, it caches the inactive component instances without destroying them.",
+                    "type": "text",
+                    "id": 35,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "note": "Note: Remember that keep-alive tag doesn’t render a DOM element itself, and doesn’t show up in the component parent chain.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "q": "Q36 : What is the difference between full and runtime only builds?",
+                    "a": "There are two types of builds provided by VueJS,",
+                    "type": "text",
+                    "id": 36,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Full": "These are the builds that contain both the compiler and the runtime.",
+                        "Runtime Only": "These builds doesn't include compiler but the code is responsible for creating Vue instances, rendering and patching virtual DOM. These are about 6KB lighter min+gzip."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "q": "Q37 : How do you access parent instance?",
+                    "a": "The $parent object refers to the immediate outer scope. The parent will be accessible as this.$parent for the child, and the child will be pushed into the parent’s $children array. It establishes a parent-child relationship between the two instances(parent and child). You can access parent data and properties similar to $root.",
+                    "type": "text",
+                    "id": 37,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "q": "Q38 : What all methods of performance optimization techniques in Vuejs?",
+                    "a": "These are a few essential hacks that can help us significantly alleviate the performance.",
+                    "type": "text",
+                    "id": 38,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "isListKeyRequired": false,
+                    "type": "list",
+                    "list": {
+                        "1": "Update Only What’s Needed.",
+                        "2": "Eliminate Duplicate Rendering.",
+                        "3": "Optimize Event Handling.",
+                        "4": "Remove or Reduce Slow Components.",
+                        "5": "Render Once",
+                        "6": "Virtual Scrolling",
+                        "7": "Avoid computation in template files",
+                        "8": "Usage of Web Workers"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "q": "Q39 : What is hot reloading in vue loader?",
+                    "a": "Hot reloading is not about reloading the page when you edit any .vue file. Instead, when you edit a *.vue file, all instances of that component will be swapped in without reloading the page. It improves the development experience when you are tweaking the templates or styling of your components.",
+                    "type": "text",
+                    "id": 39,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "q": "Q40 : Why arrow functions not being used in Vue instances while writing lifecycle hooks?",
+                    "a": "Because arrow functions are not self-contained, they cannot define a 'this' of their own. The arrow functions are confined to the context of their parent function.The keyword 'this' does not bind to the Vue instance when the arrow function (=>) is used in the Vue app, resulting in problems.As a result, instead of using the arrow function, you strongly recommend utilising the regular function declaration.",
+                    "type": "text",
+                    "id": 40,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "q": "Q41 : What is vuex?",
+                    "a": "Vuex is a state management pattern + library (Flux-inspired Application Architecture) for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion.",
+                    "type": "text",
+                    "id": 41,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "q": "Q42 : How one way data flow works in vuex?",
+                    "a": "Vue.js has a one-way data flow model, through the props property. The same concept can be represented in vuex has below",
+                    "type": "text",
+                    "id": 42,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "img",
+                    "img": "flow-vue.png",
+                    "height": "15rem",
+                    "width": "20rem"
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "q": "Q43 : What is Vuex plugin?",
+                    "a": "A Vuex plugin is simply a function that receives the store as the only argument. In simple terms, a plugin is a function that is triggered/called when a certain type of mutation or action is called in Vuex.",
+                    "type": "text",
+                    "id": 43,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "q": "Q44 : What is vuex store?",
+                    "a": "A Vuex 'store' is basically a container that holds your application state. The store creation is pretty straightforward.",
+                    "type": "text",
+                    "id": 44,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "q": "Q45 : What are the differences of vuex store and plain global object?",
+                    "a": "Below are the two major differences between vuex store and plain global object,",
+                    "type": "text",
+                    "id": 45,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Vuex stores are reactive: If the store's state changes then vue components will reactively and efficiently get updated",
+                        "2": "Cannot directly mutate the store's state: The store's state is changed by explicitly committing mutations to ensure that every state change leaves a track-able record for tooling purpose"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "q": "Q46 : What is the reason not to update the state directly?",
+                    "a": "We want to explicitly track application state in order to implement tools that can log every mutation, take state snapshots, or even perform time travel debugging. So we need to commit a mutation instead of changing store's state directly.",
+                    "type": "text",
+                    "id": 46,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : What is Single state tree?",
+                    "a": "Vuex's single state tree is single object contains all your application level state and serves as the 'single source of truth'. It does not conflict with modularity when you split state and mutations into sub modules.",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "q": "Q48 : What are mutations?",
+                    "a": "Vuex mutations are similar to any events with a string type and a handler. The handler function is where we perform actual state modifications, and it will receive the state as the first argument.",
+                    "type": "text",
+                    "id": 48,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "For example, the counter example with increment mutation would be as below,",
+                    "code": "\nconst store = new Vuex.Store({\n\tstate: {\n\t\tcount: 0\n\t},\n\tmutations: {\n\t\tincrement (state) {\n\t\t\t// mutate state\n\t\tstate.count++\n\t}\n}\n})"
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "You can't directly invoke mutation instead you need to call store.commit with its type. The above mutation would be triggered as folows",
+                    "code": "\nstore.commit('increment')"
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "q": "Q49 : Why mutations should be synchronous?",
+                    "a": "You need to remember that mutation handler functions must be synchronous. This is why because any state mutation performed in the callback is essentially un-trackable. It is going to be problematic when the devtool will need to capture a 'before' and 'after' snapshots of the state during the mutations.",
+                    "type": "text",
+                    "id": 49,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nmutations: {\n\tsomeMutation (state) {\n\t\tapi.callAsyncMethod(() => {\n\t\t\tstate.count++\n\t\t})\n\t}\n}"
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "q": "Q50 : What are differences between mutations and actions?",
+                    "a": "Actions are similar to mutations, but there are two main differences,",
+                    "type": "text",
+                    "id": 50,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Mutations perform mutations on the state, actions commit mutations.",
+                        "2": "Actions can contain arbitrary asynchronous operations unlike mutations."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "q": "Q51 : What is instant prototyping?",
+                    "a": "In Vue CLI, Instant prototyping is known as rapid prototyping with just a single *.vue file with the vue serve(similar to vue create) and vue build commands. But you need to install below global addon for this.",
+                    "type": "text",
+                    "id": 51,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nnpm install -g @vue/cli-service-global\n# or\nyarn global add @vue/cli-service-global"
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "You can also provide entry component for vue serve and target file for vue build using below commands",
+                    "code": "\nvue serve MyComponent.vue\nvue build MyComponent.vue"
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "q": "Q52 : What are presets?",
+                    "a": "A Vue CLI preset is a JSON object that contains pre-defined options and plugins for creating a new project without interactive prompts to select them. During project creation(using vue create), the presets will be saved in a ~/.vuerc which can modified at any time.",
+                    "type": "text",
+                    "id": 52,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nnpm install -g @vue/cli-service-global\n# or\nyarn global add @vue/cli-service-global"
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "For example, the generated JSON object(or preset) would be as below",
+                    "code": "\n{\n\t'useConfigFiles': true,\n\t'router': true,\n\t'vuex': true,\n\t'cssPreprocessor': 'sass',\n\t'plugins': {\n\t\t'@vue/cli-plugin-babel': {},\n\t\t'@vue/cli-plugin-eslint': {\n\t\t\t'config': 'airbnb',\n\t\t\t'lintOn': ['save', 'commit']\n\t\t}\n\t}\n}"
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "q": "Q53 : What is the best way to re-render a component?",
+                    "a": "The best way to force Vue to re-render a component is to set a :key on the component. i.e, Whenever the component to be re-rendered, just change the value of the key then Vue will re-render the component.",
+                    "type": "text",
+                    "id": 53,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "q": "Q54 : What is the reason for recommendation for multi-word component names?",
+                    "a": "Component names should always be multi-word, except for root level or built-in vue components(such as <transition> or <component> etc). This recommendation is to prevent conflicts with existing and future HTML elements, since all HTML elements are a single word.",
+                    "type": "text",
+                    "id": 54,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nVue.component('user', { //bad approach\n\t// ...\n})\nVue.component('user-profile', { //good approach\n\t// ...\n})"
+                }
+            ]
+        }
+    ]
+}

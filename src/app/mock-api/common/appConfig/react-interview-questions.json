@@ -1,0 +1,2451 @@
+{
+    "react-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q1 : what is React?",
+                    "a": "React is an open-source front-end JavaScript library that is used for building user interfaces, especially for single-page applications. It is used for handling view layer for web and mobile apps. React was created by Jordan Walke, a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.",
+                    "type": "text",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q2 : How does React work?",
+                    "a": "React creates a virtual DOM. When state changes in a component it firstly runs a 'diffing' algorithm, which identifies what has changed in the virtual DOM. The second step is reconciliation, where it updates the DOM with the results of the difference",
+                    "type": "text",
+                    "id": 2
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q3 : What are the major features of React?",
+                    "a": "The major features of React are:",
+                    "type": "text",
+                    "id": 3
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "It uses VirtualDOM instead of RealDOM considering that RealDOM manipulations are expensive.",
+                        "2": "Supports server-side rendering.",
+                        "3": "Follows Unidirectional data flow or data binding.",
+                        "4": "Uses reusable/composable UI components to develop the view."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q4 : What is JSX?",
+                    "a": "JSX is a XML-like syntax extension to ECMAScript (the acronym stands for JavaScript XML). Basically it just provides syntactic sugar for the React.createElement() function, giving us expressiveness of JavaScript along with HTML like template syntax.",
+                    "type": "text",
+                    "id": 4
+                },
+                {
+                    "type": "code",
+                    "simple_text": "In the example below text inside <h1> tag is returned as JavaScript function to the render function.",
+                    "code": "\nclass App extends React.Component { \n\trender() { \n\t\treturn( \n\t\t\t<div> \n\t\t\t\t<h1>{'Welcome to React world!'}</h1> \n\t\t\t</div> \n\t\t) \n\t} \n}",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q5 : What is the virtual DOM?",
+                    "a": "The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation.This approach enables the declarative API of React: You tell React what state you want the UI to be in, and it makes sure the DOM matches that state. This abstracts out the attribute manipulation, event handling, and manual DOM updating that you would otherwise have to use to build your app.",
+                    "type": "text",
+                    "id": 5
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q6 : Is the Shadow DOM the same as the Virtual DOM?",
+                    "a": "No, they are different. The Shadow DOM is a browser technology designed primarily for scoping variables and CSS in web components. The virtual DOM is a concept implemented by libraries in JavaScript on top of browser APIs.",
+                    "type": "text",
+                    "id": 6
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q7 : What is the difference between Element and Component?",
+                    "a": "An Element is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. Elements can contain other Elements in their props. Creating a React element is cheap. Once an element is created, it is never mutated.",
+                    "type": "text",
+                    "id": 7
+                },
+                {
+                    "type": "code",
+                    "simple_text": "The object representation of React Element would be as follows:",
+                    "code": "\nconst element = React.createElement(\n\t'div',{id: 'login-btn'},'Login'\n)",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "The above React.createElement() function returns an object:",
+                    "code": "\n{\n\ttype: 'div',\n\tprops: {\n\t\tchildren: 'Login',\n\t\tid: 'login-btn'\n\t}\n}",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "And finally it renders to the DOM using ReactDOM.render():",
+                    "code": "\n<div id='login-btn'>Login</div>",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Whereas a component can be declared in several different ways. It can be a class with a render() method or it can be defined as a function. In either case, it takes props as an input, and returns a JSX tree as the output:",
+                    "code": "\nconst Button = ({ onLogin }) => \n<div id={'login-btn'} onClick={onLogin}>Login</div>",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Then JSX gets transpiled to a React.createElement() function tree:",
+                    "code": "\nconst Button = ({ onLogin }) => React.createElement(\n\t'div',{ id: 'login-btn', onClick: onLogin },'Login'\n)",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q8 : Can web browsers read JSX directly? ",
+                    "a": "",
+                    "type": "text",
+                    "id": 8
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "",
+                    "list": {
+                        "1": "Web browsers cannot read JSX directly. This is because they are built to only read regular JS objects and JSX is not a regular JavaScript object.",
+                        "2": "For a web browser to read a JSX file, the file needs to be transformed into a regular JavaScript object. For this, we use Babel."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q9 : What are the limitations of React? ",
+                    "a": "",
+                    "type": "text",
+                    "id": 9
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "The few limitations of React are as given below:",
+                    "list": {
+                        "1": "React is not a full-blown framework as it is only a library.",
+                        "2": "The components of React are numerous and will take time to fully grasp the benefits of all.",
+                        "3": "It might be difficult for beginner programmers to understand React.",
+                        "4": "Coding might become complex as it will make use of inline templating and JSX."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q10 : How to create components in React?",
+                    "a": "",
+                    "type": "text",
+                    "id": 10
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "There are two possible ways to create a component.",
+                    "list": {
+                        "Function Components": "This is the simplest way to create a component. Those are pure JavaScript functions that accept props object as the first parameter and return React elements:"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nfunction Greeting({ message }) {\n\treturn <h1>{`Hello, ${message}`}</h1>\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "",
+                    "list": {
+                        "Class Components": "You can also use ES6 class to define a component. The above function component can be written as:"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nclass Greeting extends React.Component {\n\trender() {\n\t\treturn <h1>{`Hello, ${this.props.message}`}</h1>\n\t}\n}"
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q11 : When to use a Class Component over a Function Component?",
+                    "a": "If the component needs state or lifecycle methods then use class component otherwise use function component. However, from React 16.8 with the addition of Hooks, you could use state , lifecycle methods and other features that were only available in class component right in your function component. *So, it is always recommended to use Function components, unless you need a React functionality whose Function component equivalent is not present yet, like Error Boundaries *",
+                    "type": "text",
+                    "id": 11
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q12 : What are Pure Components?",
+                    "a": "React.PureComponent is exactly the same as React.Component except that it handles the shouldComponentUpdate() method for you. When props or state changes, PureComponent will do a shallow comparison on both props and state. Component on the other hand won't compare current props and state to next out of the box. Thus, the component will re-render by default whenever shouldComponentUpdate is called.",
+                    "type": "text",
+                    "id": 12
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q13 : What is state in React?",
+                    "a": "State of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components.",
+                    "type": "text",
+                    "id": 13
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nclass User extends React.Component {\n\tconstructor(props) {\n\t\tsuper(props)\n\t\tthis.state = {\n\t\t\tmessage: 'Welcome to React world';\n\t\t}\n\t}\n\t\trender() {\n\t\t\treturn (<div><h1>{this.state.message}</h1></div>)\n\t}\n}"
+                },
+                {
+                    "type": "img",
+                    "img": "state.jpg"
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q14 : What are props in React?",
+                    "a": "Props are inputs to components. They are single values or objects containing a set of values that are passed to components on creation using a naming convention similar to HTML-tag attributes. They are data passed down from a parent component to a child component.",
+                    "type": "text",
+                    "id": 14
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "The primary purpose of props in React is to provide following component functionality:",
+                    "list": {
+                        "1": "Pass custom data to your component.",
+                        "2": "Trigger state changes.",
+                        "3": "Use via this.props.reactProp inside component's render() method."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "For example, let us create an element with reactProp property:",
+                    "code": "\n<Element reactProp={'1'} />"
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "This reactProp (or whatever you came up with) name then becomes a property attached to React's native props object which originally already exists on all components created using React library.",
+                    "code": "\nprops.reactProp"
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q15 : What is the difference between state and props?",
+                    "a": "Both props and state are plain JavaScript objects. While both of them hold information that influences the output of render, they are different in their functionality with respect to component. Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function.",
+                    "type": "text",
+                    "id": 15
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q16 : Why should we not update the state directly?",
+                    "a": "",
+                    "type": "text",
+                    "id": 16
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "If you try to update the state directly then it won't re-render the component.",
+                    "code": "\n//Wrong\nthis.state.message = 'Hello world'"
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Instead use setState() method. It schedules an update to a component's state object. When state changes, the component responds by re-rendering.",
+                    "code": "\n//Correct\nthis.setState({ message: 'Hello World' })"
+                },
+                {
+                    "type": "note",
+                    "note": "Note: You can directly assign to the state object either in constructor or using latest javascript's class field declaration syntax."
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q17 : What is the purpose of callback function as an argument of setState()?",
+                    "a": "The callback function is invoked when setState finished and the component gets rendered. Since setState() is asynchronous the callback function is used for any post action.",
+                    "type": "text",
+                    "id": 17
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nsetState({ name: 'John' }, () => console.log('The name has updated and component re-rendered'))"
+                },
+                {
+                    "type": "note",
+                    "note": "Note: It is recommended to use lifecycle method rather than this callback function."
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q18 : How to bind methods or event handlers in JSX callbacks?",
+                    "a": "There are 3 possible ways to achieve this:",
+                    "type": "text",
+                    "id": 18
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Binding in Constructor": "In JavaScript classes, the methods are not bound by default. The same thing applies for React event handlers defined as class methods. Normally we bind them in constructor."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nclass Foo extends Component {\n\tconstructor(props) {\n\tsuper(props);\n\t\tthis.handleClick = this.handleClick.bind(this);\n\t}\n\thandleClick() {\n\t\tconsole.log('Click happened');\n\t}\n\trender() {\n\t\treturn <button onClick={this.handleClick}>Click Me</button>;\n\t}\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Public class fields syntax": " If you don't like to use bind approach then public class fields syntax can be used to correctly bind callbacks."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nhandleClick = () => {\n\tconsole.log('this is:', this)\n}"
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\n<button onClick={this.handleClick}>\n\t{'Click me'}\n</button>"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Arrow functions in callbacks": "You can use arrow functions directly in the callbacks."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nhandleClick() {\n\tconsole.log('Click happened');\n}\nrender() {\n\treturn <button onClick={() => this.handleClick()}>Click Me</button>;\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "Note: If the callback is passed as prop to child components, those components might do an extra re-rendering. In those cases, it is preferred to go with .bind() or public class fields syntax approach considering performance."
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q19 : How to pass a parameter to an event handler or callback?",
+                    "a": "TYou can use an arrow function to wrap around an event handler and pass parameters:",
+                    "type": "text",
+                    "id": 19
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\n<button onClick={() => this.handleClick(id)} />"
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "This is an equivalent to calling .bind:",
+                    "code": "\n<button onClick={this.handleClick.bind(this, id)} />"
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Apart from these two approaches, you can also pass arguments to a function which is defined as arrow function",
+                    "code": "\n<button onClick={this.handleClick(id)} />\nshandleClick = (id) => () => {\n\tconsole.log('Hello, your ticket number is', id)\n};"
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q20 : What are synthetic events in React?",
+                    "a": "SyntheticEvent is a cross-browser wrapper around the browser's native event. Its API is same as the browser's native event, including stopPropagation() and preventDefault(), except the events work identically across all browsers.",
+                    "type": "text",
+                    "id": 20
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q21 : What are inline conditional expressions?",
+                    "a": "You can use either if statements or ternary expressions which are available from JS to conditionally render expressions. Apart from these approaches, you can also embed any expressions in JSX by wrapping them in curly braces and then followed by JS logical operator &&.",
+                    "type": "text",
+                    "id": 21
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Apart from these two approaches, you can also pass arguments to a function which is defined as arrow function",
+                    "code": "\n<h1>Hello!</h1>\nd{\n\tmessages.length > 0 && !isLogin?\n\t\t <h2>\n\t\t\tYou have {messages.length} unread messages.\n\t\t</h2>\n\t:\n\t<h2>\n\tYou don't have unread messages.\n\t</h2>\n}"
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q22 : What is the use of refs?",
+                    "a": "Refs provide a way to access DOM nodes or React elements created in the render method. They should be avoided in most cases, however, they can be useful when we need direct access to the DOM element or an instance of a component.",
+                    "type": "text",
+                    "id": 22
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "There are a few good use cases for refs:",
+                    "list": {
+                        "1": "Managing focus, text selection, or media playback.",
+                        "2": "Triggering imperative animations.",
+                        "3": "Triggering imperative animations."
+                    }
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Refs are created using React.createRef() and attached to React elements via the ref attribute. Refs are commonly assigned to an instance property when a component is constructed so they can be referenced throughout the component.",
+                    "code": "\nclass MyComponent extends React.Component {\n\tconstructor(props) {\n\t\tsuper(props);\n\t\tthis.myRef = React.createRef();  \n\t}\n\trender() {\n\t\treturn <div ref={this.myRef} />;  \n\t}\n}",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q23 : What are forward refs?",
+                    "a": "Ref forwarding is a feature that lets some components take a ref they receive, and pass it further down to a child.",
+                    "type": "text",
+                    "id": 23
+                },
+                {
+                    "type": "code",
+                    "code": "\nconst ButtonElement = React.forwardRef((props, ref) => (\n\t<button ref={ref} className='CustomButton'>\n\t\t{props.children}\n\t</button>\n));\n\n// Create ref to the DOM button:\nconst ref = React.createRef();\n<ButtonElement ref={ref}>{'Forward Ref'}</ButtonElement>",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q24 : Which is preferred option with in callback refs and findDOMNode()?",
+                    "a": "It is preferred to use callback refs over findDOMNode() API. Because findDOMNode() prevents certain improvements in React in the future.",
+                    "type": "text",
+                    "id": 24
+                },
+                {
+                    "type": "code",
+                    "simple_text": "The legacy approach of using findDOMNode:",
+                    "code": "\nclass MyComponent extends Component {\n\tcomponentDidMount() {\n\t\tfindDOMNode(this).scrollIntoView()\n\t}\n\nrender() {\n\t\treturn <div />\n\t}\n}",
+                    "lang": "typescript"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "The recommended approach is:",
+                    "code": "\nclass MyComponent extends Component {\n\tconstructor(props){\n\t\tsuper(props);\n\t\tthis.node = createRef();\n\t}\ncomponentDidMount() {\n\tthis.node.current.scrollIntoView();\n}\n\nrender() {\n\t\treturn <div ref={this.node} />\n\t}\n}",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q25 : How Virtual DOM works?",
+                    "a": "The Virtual DOM works in three simple steps.",
+                    "type": "text",
+                    "id": 25
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "1": "Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation."
+                    }
+                },
+                {
+                    "type": "img",
+                    "img": "vdom1.png",
+                    "height": "15rem"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "2": "Then the difference between the previous DOM representation and the new one is calculated."
+                    }
+                },
+                {
+                    "type": "img",
+                    "img": "vdom2.png",
+                    "height": "15rem"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "3": "Once the calculations are done, the real DOM will be updated with only the things that have actually changed."
+                    }
+                },
+                {
+                    "type": "img",
+                    "img": "vdom3.png",
+                    "height": "15rem",
+                    "width": "20rem"
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q26 : What is React Fiber?",
+                    "a": "Fiber is the new reconciliation engine or reimplementation of core algorithm in React v16. The goal of React Fiber is to increase its suitability for areas like animation, layout, gestures, ability to pause, abort, or reuse work and assign priority to different types of updates; and new concurrency primitives.",
+                    "type": "text",
+                    "id": 26
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q27 : What is the main goal of React Fiber?",
+                    "a": "The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.",
+                    "type": "text",
+                    "id": 27
+                },
+                {
+                    "type": "list",
+                    "list_text": "Its main goals are:",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Ability to split interruptible work in chunks.",
+                        "2": "Ability to prioritize, rebase and reuse work in progress.",
+                        "3": "Ability to split interruptible work in chunks.Ability to yield back and forth between parents and children to support layout in React.",
+                        "4": "Ability to return multiple elements from render().",
+                        "5": "Better support for error boundaries."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q28 : What are controlled components?",
+                    "a": "A component that controls the input elements within the forms on subsequent user input is called Controlled Component, i.e, every state mutation will have an associated handler function.",
+                    "type": "text",
+                    "id": 28
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nhandleChange(event) {\n\tthis.setState({value: event.target.value.toUpperCase()})\n}",
+                    "simple_text": "For example, to write all the names in uppercase letters, we use handleChange as below,"
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q29 : What are uncontrolled components?",
+                    "a": "The Uncontrolled Components are the ones that store their own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.",
+                    "type": "text",
+                    "id": 29
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nclass UserProfile extends React.Component {\n\tconstructor(props) {\n\t\tsuper(props)\n\t\tthis.handleSubmit = this.handleSubmit.bind(this)\n\t\tthis.input = React.createRef()\n\t}\n\thandleSubmit(event) {\n\t\talert('A name was submitted: ' + this.input.current.value)\n\t\tevent.preventDefault()\n\t}\nrender() {\n\treturn (\n\t\t<form onSubmit={this.handleSubmit}>\n\t\t\t<label>\n\t\t\t\t{'Name:'}\n\t\t\t<input type='text' ref={this.input} />\n\t\t\t</label>\n\t\t<input type='submit' value='Submit' />\n\t</form>);\n\t}\n}",
+                    "simple_text": "In the below UserProfile component, the name input is accessed using ref."
+                },
+                {
+                    "type": "note",
+                    "note": "Note : In most cases, it's recommend to use controlled components to implement forms. In a controlled component, form data is handled by a React component. The alternative is uncontrolled components, where form data is handled by the DOM itself."
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q30 : What is the difference between createElement and cloneElement?",
+                    "a": "JSX elements will be transpiled to React.createElement() functions to create React elements which are going to be used for the object representation of UI. Whereas cloneElement is used to clone an element and pass it new props.",
+                    "type": "text",
+                    "id": 30
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q31 : What is Lifting State Up in React?",
+                    "a": "When several components need to share the same changing data then it is recommended to lift the shared state up to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.",
+                    "type": "text",
+                    "id": 31
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q32 : What are the different phases of component lifecycle?",
+                    "a": "The component lifecycle has three distinct lifecycle phases:",
+                    "type": "text",
+                    "id": 32
+                },
+                {
+                    "type": "list",
+                    "list_text": "",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Mounting": "The component is ready to mount in the browser DOM. This phase covers initialization from constructor(), getDerivedStateFromProps(), render(), and componentDidMount() lifecycle methods.",
+                        "Updating": " In this phase, the component gets updated in two ways, sending the new props and updating the state either from setState() or forceUpdate(). This phase covers getDerivedStateFromProps(), shouldComponentUpdate(), render(), getSnapshotBeforeUpdate() and componentDidUpdate() lifecycle methods.",
+                        "Unmounting": " In this last phase, the component is not needed and gets unmounted from the browser DOM. This phase includes componentWillUnmount() lifecycle method."
+                    }
+                },
+                {
+                    "type": "list",
+                    "list_text": "It's worth mentioning that React internally has a concept of phases when applying changes to the DOM. They are separated as follows",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Mounting": "It's worth mentioning that React internally has a concept of phases when applying changes to the DOM. They are separated as follows",
+                        "Updating": "Pre-commit Before the component actually applies the changes to the DOM, there is a moment that allows React to read from the DOM through the getSnapshotBeforeUpdate().",
+                        "Unmounting": "Commit React works with the DOM and executes the final lifecycles respectively componentDidMount() for mounting, componentDidUpdate() for updating, and componentWillUnmount() for unmounting."
+                    }
+                },
+                {
+                    "type": "img",
+                    "img": "phases.png",
+                    "imgCaption": "React 16.3+ Phases (or an interactive version)"
+                },
+                {
+                    "type": "img",
+                    "img": "phases16.4.png",
+                    "imgCaption": "Before React 16.3"
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q33 : What are the lifecycle methods of React?",
+                    "a": "",
+                    "type": "text",
+                    "id": 33
+                },
+                {
+                    "type": "list",
+                    "list_text": "Before React 16.3",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "componentWillMount": "Executed before rendering and is used for App level configuration in your root component.",
+                        "componentDidMount": "Executed after first rendering and here all AJAX requests, DOM or state updates, and set up event listeners should occur.",
+                        "componentWillReceiveProps": "Executed when particular prop updates to trigger state transitions.",
+                        "shouldComponentUpdate": "Determines if the component will be updated or not. By default it returns true. If you are sure that the component doesn't need to render after state or props are updated, you can return false value. It is a great place to improve performance as it allows you to prevent a re-render if component receives new prop.",
+                        "componentWillUpdate": "Executed before re-rendering the component when there are props & state changes confirmed by shouldComponentUpdate() which returns true.",
+                        "componentDidUpdate": "Mostly it is used to update the DOM in response to prop or state changes.",
+                        "componentWillUnmount": "It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component."
+                    }
+                },
+                {
+                    "type": "list",
+                    "list_text": "React 16.3+:",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "getDerivedStateFromProps": "Invoked right before calling render() and is invoked on every render. This exists for rare use cases where you need a derived state. Worth reading if you need derived state.",
+                        "componentDidMount": "Executed after first rendering and where all AJAX requests, DOM or state updates, and set up event listeners should occur.",
+                        "shouldComponentUpdate": " Determines if the component will be updated or not. By default, it returns true. If you are sure that the component doesn't need to render after the state or props are updated, you can return a false value. It is a great place to improve performance as it allows you to prevent a re-render if component receives a new prop.",
+                        "getSnapshotBeforeUpdate": ": Executed right before rendered output is committed to the DOM. Any value returned by this will be passed into componentDidUpdate(). This is useful to capture information from the DOM i.e. scroll position.",
+                        "componentDidUpdate": "Mostly it is used to update the DOM in response to prop or state changes. This will not fire if shouldComponentUpdate() returns false",
+                        "componentWillUnmount ": "It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q34 : What are Higher-Order Components?",
+                    "a": "A higher-order component (HOC) is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.We call them pure components because they can accept any dynamically provided child component but they won't modify or copy any behavior from their input components.",
+                    "type": "text",
+                    "id": 34
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nconst EnhancedComponent = higherOrderComponent(WrappedComponent)"
+                },
+                {
+                    "type": "list",
+                    "list_text": "HOC can be used for many use cases:",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Code reuse, logic and bootstrap abstraction.",
+                        "2": "Render hijacking.",
+                        "3": "State abstraction and manipulation.",
+                        "4": "Props manipulation."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q35 : How to create props proxy for HOC component?",
+                    "a": "You can add/edit props passed to the component using props proxy pattern like this:",
+                    "type": "text",
+                    "id": 35
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nfunction HOC(WrappedComponent) {\n\treturn class Test extends Component {\n\t\trender() {\n\t\t\tconst newProps = {\n\t\t\ttitle: 'New Header',\n\t\t\tfooter: false,\n\t\t\tshowFeatureX: false,\n\t\t\tshowFeatureY: true\n\t\t}\n\t\treturn <WrappedComponent {...this.props} {...newProps} />\n\t\t}\n\t}\n}"
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q36 : What is context?",
+                    "a": "Context provides a way to pass data through the component tree without having to pass props down manually at every level.",
+                    "type": "text",
+                    "id": 36
+                },
+                {
+                    "type": "code",
+                    "simple_text": "For example, authenticated users, locale preferences, UI themes need to be accessed in the application by many components.",
+                    "lang": "typescript",
+                    "code": "\nconst {Provider, Consumer} = React.createContext(defaultValue)"
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q37 : What is children prop?",
+                    "a": "Children is a prop (this.props.children) that allows you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as children prop.",
+                    "type": "text",
+                    "id": 37
+                },
+                {
+                    "type": "code",
+                    "simple_text": "There are several methods available in the React API to work with this prop. These include React.Children.map, React.Children.forEach, React.Children.count, React.Children.only, React.Children.toArray.",
+                    "lang": "typescript",
+                    "code": "\nconst MyDiv = React.createClass({\n\tsrender: function() {\n\t\treturn <div>{this.props.children}</div>\n\t}\n})\n\nReactDOM.render(\n\t<MyDiv>\n\t\t<span>{'Hello'}</span>\n\t\t<span>{'World'}</span>\n\t</MyDiv>,\n\tnode\n)"
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q38 : What is the purpose of using super constructor with props argument?",
+                    "a": "A child class constructor cannot make use of this reference until the super() method has been called. The same applies to ES6 sub-classes as well. The main reason for passing props parameter to super() call is to access this.props in your child constructors.",
+                    "type": "text",
+                    "id": 38
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Passing props:",
+                    "lang": "typescript",
+                    "code": "\nclass MyComponent extends React.Component {\n\tconstructor(props) {\n\t\tsuper(props)\n\t\tconsole.log(this.props) // prints { name: 'John', age: 42 }\n\t}\n}"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Not passing props:",
+                    "lang": "typescript",
+                    "code": "\nclass MyComponent extends React.Component {\n\tconstructor(props) {\n\t\tsuper()\n\t\tconsole.log(this.props) // prints undefined\n\t\t// but props parameter is still available\n\t\tconsole.log(props) // prints { name: 'John', age: 42 }\n\t}\n\trender() {\n\t\t// no difference outside constructor\n\t\tconsole.log(this.props) // prints { name: 'John', age: 42 }\n\t}\n}"
+                },
+                {
+                    "note": "Note : The above code snippets reveals that this.props is different only within the constructor. It would be the same outside the constructor.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q39 : What is reconciliation?",
+                    "a": "When a component's props or state change, React decides whether an actual DOM update is necessary by comparing the newly returned element with the previously rendered one. When they are not equal, React will update the DOM. This process is called reconciliation.",
+                    "type": "text",
+                    "id": 39
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q40 : What would be the common mistake of function being called every time the component renders?",
+                    "a": "",
+                    "type": "text",
+                    "id": 40
+                },
+                {
+                    "type": "code",
+                    "simple_text": "You need to make sure that function is not being called while passing the function as a parameter.",
+                    "lang": "typescript",
+                    "code": "\nrender() {\n\t// Wrong: handleClick is called instead of passed as a reference!\n\treturn <button onClick={this.handleClick()}>{'Click Me'}</button>\n}"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Instead, pass the function itself without parenthesis:",
+                    "lang": "typescript",
+                    "code": "\nrender() {\n\t// Correct: handleClick is passed as a reference!\n\treturn <button onClick={this.handleClick}>{'Click Me'}</button>\n}"
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q41 : Why React uses className over class attribute?",
+                    "a": "class is a keyword in JavaScript, and JSX is an extension of JavaScript. That's the principal reason why React uses className instead of class. Pass a string as the className prop.",
+                    "type": "text",
+                    "id": 41
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nrender() {\n\treturn <span className={'menu navigation-menu'}>{'Menu'}</span>\n}"
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q42 : What are fragments?",
+                    "a": "It's a common pattern in React which is used for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.",
+                    "type": "text",
+                    "id": 42
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nrender() {\n\treturn (\n\t\t<React.Fragment>\n\t\t\t<ChildA />\n\t\t\t<ChildB />\n\t\t\t<ChildC />\n\t\t</React.Fragment>\n\t)\n}"
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "There is also a shorter syntax, but it's not supported in many tools:",
+                    "code": "\nrender() {\n\treturn (\n\t\t<>\n\t\t\t<ChildA />\n\t\t\t<ChildB />\n\t\t\t<ChildC />\n\t\t</>\n\t)\n}"
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q43 : Why fragments are better than container divs?",
+                    "a": "Below are the list of reasons,",
+                    "type": "text",
+                    "id": 43
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.",
+                        "2": "Some CSS mechanisms like Flexbox and CSS Grid have a special parent-child relationships, and adding divs in the middle makes it hard to keep the desired layout.",
+                        "3": "The DOM Inspector is less cluttered."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q44 : What are portals in React?",
+                    "a": "Portal is a recommended way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.",
+                    "type": "text",
+                    "id": 44
+                },
+                {
+                    "type": "code",
+                    "simple_text": "The first argument is any render-able React child, such as an element, string, or fragment. The second argument is a DOM element.",
+                    "code": "\nReactDOM.createPortal(child, container)",
+                    "lang": "typescript"
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q45 : What are stateless components?",
+                    "a": "If the behaviour of a component is independent of its state then it can be a stateless component. You can use either a function or a class for creating stateless components. But unless you need to use a lifecycle hook in your components, you should go for function components. There are a lot of benefits if you decide to use function components here; they are easy to write, understand, and test, a little faster, and you can avoid the this keyword altogether.",
+                    "type": "text",
+                    "id": 45
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q46 : What are stateful components?",
+                    "a": "If the behaviour of a component is dependent on the state of the component then it can be termed as stateful component. These stateful components are always class components and have a state that gets initialized in the constructor.",
+                    "type": "text",
+                    "id": 46
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Hooks let you use state and other React features without writing classes.",
+                    "code": "\nimport React, {useState} from 'react';\n\nconst App = (props) => {\n\tconst [count, setCount] = useState(0);\n\treturn (// JSX)\n}"
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q47 : What are the advantages of React?",
+                    "a": "Below are the list of main advantages of React,",
+                    "type": "text",
+                    "id": 47
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Increases the application's performance with Virtual DOM.",
+                        "2": "JSX makes code easy to read and write.",
+                        "3": "It renders both on client and server side (SSR)",
+                        "4": "Easy to integrate with frameworks (Angular, Backbone) since it is only a view library.",
+                        "5": "Easy to write unit and integration tests with tools such as Jest."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q48 : What are the limitations of React?",
+                    "a": "Apart from the advantages, there are few limitations of React too,",
+                    "type": "text",
+                    "id": 48
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "React is just a view library, not a full framework.",
+                        "2": "There is a learning curve for beginners who are new to web development.",
+                        "3": "Integrating React into a traditional MVC framework requires some additional configuration.",
+                        "4": "The code complexity increases with inline templating and JSX."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q49 : What are the differences between controlled and uncontrolled components?",
+                    "a": "Controlled and uncontrolled components are just different approaches to handling input from elements in react. ",
+                    "type": "text",
+                    "id": 49
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Feature"
+                        },
+                        {
+                            "label": "Uncontrolled"
+                        },
+                        {
+                            "label": "Controlled"
+                        },
+                        {
+                            "label": "Name attrs"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "One-time value retrieval (e.g. on submit)"
+                                },
+                                {
+                                    "col": "✔"
+                                },
+                                {
+                                    "col": "✔"
+                                },
+                                {
+                                    "col": "✔"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Validating on submit"
+                                },
+                                {
+                                    "col": "✔"
+                                },
+                                {
+                                    "col": "✔"
+                                },
+                                {
+                                    "col": "✔"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Field-level Validation"
+                                },
+                                {
+                                    "col": "❌"
+                                },
+                                {
+                                    "col": "✔"
+                                },
+                                {
+                                    "col": "✔"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Not a mobile friendly framework."
+                                },
+                                {
+                                    "col": "❌"
+                                },
+                                {
+                                    "col": "✔"
+                                },
+                                {
+                                    "col": "✔"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Field-level Validation"
+                                },
+                                {
+                                    "col": "❌"
+                                },
+                                {
+                                    "col": "✔"
+                                },
+                                {
+                                    "col": "✔"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Conditionally disabling submit button"
+                                },
+                                {
+                                    "col": "❌"
+                                },
+                                {
+                                    "col": "✔"
+                                },
+                                {
+                                    "col": "✔"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Enforcing input format"
+                                },
+                                {
+                                    "col": "❌"
+                                },
+                                {
+                                    "col": "✔"
+                                },
+                                {
+                                    "col": "✔"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "several inputs for one piece of data"
+                                },
+                                {
+                                    "col": "❌"
+                                },
+                                {
+                                    "col": "✔"
+                                },
+                                {
+                                    "col": "✔"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "dynamic inputs"
+                                },
+                                {
+                                    "col": "❌"
+                                },
+                                {
+                                    "col": "✔"
+                                },
+                                {
+                                    "col": "✔"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q50 : What will happen if you use setState() in constructor?",
+                    "a": "When you use setState(), then apart from assigning to the object state React also re-renders the component and all its children. You would get error like this: Can only update a mounted or mounting component. So we need to use this.state to initialize variables inside constructor.",
+                    "type": "text",
+                    "id": 50
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q51 : Why we need to be careful when spreading props on DOM elements?",
+                    "a": "When we spread props we run into the risk of adding unknown HTML attributes, which is a bad practice. Instead we can use prop destructuring with ...rest operator, so it will add only required props.",
+                    "type": "text",
+                    "id": 51
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "For example,",
+                    "code": "\nconst ComponentA = () =>\n\t<ComponentB isDisplay={true} className={'componentStyle'} />\nconst ComponentB = ({ isDisplay, ...domProps }) =>\n\t<div {...domProps}>{'ComponentB'}</div>"
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q52 : How you implement Server Side Rendering or SSR?",
+                    "a": "React is already equipped to handle rendering on Node servers. A special version of the DOM renderer is available, which follows the same pattern as on the client side.",
+                    "type": "text",
+                    "id": 52
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "This method will output the regular HTML as a string, which can be then placed inside a page body as part of the server response. On the client side, React detects the pre-rendered content and seamlessly picks up where it left off.",
+                    "code": "\nimport ReactDOMServer from 'react-dom/server'\nimport App from './App'\n\nReactDOMServer.renderToString(<App />)"
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q53 : What is the lifecycle methods order in mounting?",
+                    "a": "The lifecycle methods are called in the following order when an instance of a component is being created and inserted into the DOM.",
+                    "type": "text",
+                    "id": 53
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "constructor()",
+                        "2": "static getDerivedStateFromProps()",
+                        "3": "render()",
+                        "4": "componentDidMount()"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q54 : What are the lifecycle methods going to be deprecated in React v16?",
+                    "a": "The following lifecycle methods going to be unsafe coding practices and will be more problematic with async rendering.",
+                    "type": "text",
+                    "id": 54
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "componentWillMount()",
+                        "2": "componentWillReceiveProps()",
+                        "3": "componentWillUpdate()"
+                    }
+                },
+                {
+                    "note": "Starting with React v16.3 these methods are aliased with UNSAFE_ prefix, and the unprefixed version will be removed in React v17.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q55 : What is prop drilling in React?",
+                    "a": "Props drilling is the process of passing data or props from a parent component to a child component. But, in between, other components have access to the data or props as we are passing it down the chain. This would result in unnecessary exchange of data to the component which don't really need it. To avoid this we can use possible solutions like React context API, Redux etc.",
+                    "type": "text",
+                    "id": 55
+                },
+                {
+                    "type": "img",
+                    "img": "propdrilling.png"
+                },
+                {
+                    "note": "The disadvantage of using prop drilling is that the components that should otherwise be not aware of the data have access to the data.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "56",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q56 : What is React Hooks?",
+                    "a": "React Hooks are the built-in functions that permit developers for using the state and lifecycle methods within React components. These are newly added features made available in React 16.8 version. Each lifecycle of a component is having 3 phases which include mount, unmount, and update. Along with that, components have properties and states. Hooks will allow using these methods by developers for improving the reuse of code with higher flexibility navigating the component tree.Using Hook, all features of React can be used without writing class components. For example, before React version 16.8, it required a class component for managing the state of a component. But now using the useState hook, we can keep the state in a functional component.",
+                    "type": "text",
+                    "id": 56
+                }
+            ]
+        },
+        {
+            "id": "57",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q57 : What are Hooks?",
+                    "a": "Hooks are functions that let us “hook into” React state and lifecycle features from a functional component.React Hooks cannot be used in class components. They let us write components without class.",
+                    "type": "text",
+                    "id": 57
+                }
+            ]
+        },
+        {
+            "id": "58",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q58 : What rules need to be followed for hooks?",
+                    "a": "You need to follow two rules in order to use hooks,",
+                    "type": "text",
+                    "id": 58
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Call Hooks only at the top level of your react functions. i.e, You shouldn’t call Hooks inside loops, conditions, or nested functions. This will ensure that Hooks are called in the same order each time a component renders and it preserves the state of Hooks between multiple useState and useEffect calls.",
+                        "2": "Call Hooks from React Functions only. i.e, You shouldn’t call Hooks from regular JavaScript functions."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "59",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q59 : How to fetch data with React Hooks?",
+                    "a": "The effect hook called useEffect is used to fetch the data with axios from the API and to set the data in the local state of the component with the state hook’s update function.",
+                    "type": "text",
+                    "id": 59
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nimport React, { useState, useEffect } from 'react';\nimport axios from 'axios';\n\nfunction App() {\n\tconst [data, setData] = useState({ hits: [] });\n\tuseEffect(() => {\n\t\t(async () => {\n\t\t\t const result = await axios(\n\t\t\t\t'http://hn.algolia.com/api/v1/search?query=react',\n\t\t\t );\n\t\tsetData(result.data);\n\t})()\n}, []);\n\nreturn (\n\t<ul>\n\t\t{data.hits.map(item => (\n\t\t\t<li key={item.objectID}>\n\t\t\t\t<a href={item.url}>{item.title}</a>\n\t\t\t</li>\n\t\t))}\n\t</ul>\n);\n}\nexport default App;"
+                },
+                {
+                    "note": "Remember we provided an empty array as second argument to the effect hook to avoid activating it on component updates but only on mounting of the component. i.e, It fetches only on component mount.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "60",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q60 : What is a switching component?",
+                    "a": "A switching component is a component that renders one of many components. We need to use object to map prop values to components.",
+                    "type": "text",
+                    "id": 60
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "For example, a switching component to display different pages based on page prop:",
+                    "code": "\nimport HomePage from './HomePage'\nimport AboutPage from './AboutPage'\nimport ServicesPage from './ServicesPage'\nimport ContactPage from './ContactPage'\n\nconst PAGES = {\n\thome: HomePage,\n\tabout: AboutPage,\n\tservices: ServicesPage,\n\tcontact: ContactPage\n}\n\nconst Page = (props) => {\n\tconst Handler = PAGES[props.page] || ContactPage\n\treturn <Handler {...props} />\n\t}\n// The keys of the PAGES object can be used in the prop types to catch dev-time errors.Page.propTypes = {\n\tpage: PropTypes.oneOf(Object.keys(PAGES)).isRequired\n}"
+                }
+            ]
+        },
+        {
+            "id": "61",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q61 : What are React Mixins?",
+                    "a": "Mixins are a way to totally separate components to have a common functionality. Mixins should not be used and can be replaced with higher-order components or decorators.",
+                    "type": "text",
+                    "id": 61
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "One of the most commonly used mixins is PureRenderMixin. You might be using it in some components to prevent unnecessary re-renders when the props and state are shallowly equal to the previous props and state:",
+                    "code": "\nconst PureRenderMixin = require('react-addons-pure-render-mixin')\n\nconst Button = React.createClass({\n\tmixins: [PureRenderMixin],\n\t// ...\n})"
+                }
+            ]
+        },
+        {
+            "id": "62",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q62 : Why is a component constructor called only once?",
+                    "a": "React's reconciliation algorithm assumes that without any information to the contrary, if a custom component appears in the same place on subsequent renders, it's the same component as before, so reuses the previous instance rather than creating a new one.",
+                    "type": "text",
+                    "id": 62
+                }
+            ]
+        },
+        {
+            "id": "63",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q63 : Is it possible to use async/await in plain React?",
+                    "a": "If you want to use async/await in React, you will need Babel and transform-async-to-generator plugin. React Native ships with Babel and a set of transforms.",
+                    "type": "text",
+                    "id": 63
+                }
+            ]
+        },
+        {
+            "id": "64",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q64 : How to improve the performance of React Application?",
+                    "a": "There are ways where you can still speed up your React application.",
+                    "type": "text",
+                    "id": 64
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Using Immutable Data Structures.",
+                        "2": "Function/Stateless Components and React.PureComponent.",
+                        "3": "Multiple Chunk Files.",
+                        "4": "Using Production Mode Flag in Webpack",
+                        "5": ".Dependency optimization",
+                        "6": "Use React.Fragments to Avoid Additional HTML Element Wrappers",
+                        "7": " Avoid Inline Function Definition in the Render Function.",
+                        "8": "Throttling and Debouncing Event Action in JavaScript",
+                        "9": "Consider Server-side Rendering",
+                        "10": "Avoid using Index as Key for map",
+                        "11": "Avoiding Props in Initial States",
+                        "12": "Spreading props on DOM elements",
+                        "13": "Use Reselect in Redux to Avoid Frequent Re-render",
+                        "14": "Avoid Async Initialization in componentWillMount()",
+                        "15": "Memoize React Components",
+                        "16": "CSS Animations Instead of JS Animations",
+                        "17": "Using Web Workers for CPU Extensive Tasks",
+                        "18": "Virtualize Long Lists",
+                        "20": "Analyzing and Optimizing Your Webpack Bundle Bloat",
+                        "21": "Enable Gzip Compression on Web Server"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "65",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q65 : How to make AJAX call and in which component lifecycle methods should I make an AJAX call?",
+                    "a": "You can use AJAX libraries such as Axios, jQuery AJAX, and the browser built-in fetch. You should fetch data in the componentDidMount() lifecycle method. This is so you can use setState() to update your component when the data is retrieved.",
+                    "type": "text",
+                    "id": 65
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "For example, the employees list fetched from API and set local state:",
+                    "code": "\nclass MyComponent extends React.Component {\n\tconstructor(props) {\n\t\tsuper(props)\n\t\tthis.state = {\n\t\t\temployees: [],\n\t\t\terror: null\n\t\t}\n\t}\n\ncomponentDidMount() {\n\tfetch('https://api.example.com/items')\n\t\t.then(res => res.json())\n\t\t.then(\n\t\t\t(result) => {\n\t\t\t\tthis.setState({\n\t\t\t\t\temployees: result.employees\n\t\t\t\t})\n\t\t\t},\n\t\t(error) => {\n\t\t\tthis.setState({ error })\n\t\t}\n\t)\n}\n\nrender() {\n\tconst { error, employees } = this.state\n\t\tif (error) {\n\t\t\treturn <div>Error: {error.message}</div>;\n\t\t} else {\n\treturn (\n\t\t<ul>\n\t\t\t{employees.map(employee => (\n\t\t\t\t<li key={employee.name}>\n\t\t\t\t{employee.name}-{employee.experience}\n\t\t\t</li>\n\t\t))}\n\t</ul>\n\t\t\t)\n\t\t}\n\t}\n}"
+                }
+            ]
+        },
+        {
+            "id": "66",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q66 : What are render props?",
+                    "a": "Render Props is a simple technique for sharing code between components using a prop whose value is a function. The below component uses render prop which returns a React element.",
+                    "type": "text",
+                    "id": 66
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Libraries such as React Router and DownShift are using this pattern.",
+                    "code": "\n<DataProvider render={data => (\n\t<h1>{`Hello ${data.target}`}</h1>\n)}/>"
+                }
+            ]
+        },
+        {
+            "id": "67",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q67 : What are render props?",
+                    "a": "Render Props is a simple technique for sharing code between components using a prop whose value is a function. The below component uses render prop which returns a React element.",
+                    "type": "text",
+                    "id": 67
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Libraries such as React Router and DownShift are using this pattern.",
+                    "code": "\n<DataProvider render={data => (\n\t<h1>{`Hello ${data.target}`}</h1>\n)}/>"
+                }
+            ]
+        },
+        {
+            "id": "68",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q68 : What is React Router?",
+                    "a": "React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.",
+                    "type": "text",
+                    "id": 68
+                }
+            ]
+        },
+        {
+            "id": "69",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q69 : How React Router is different from history library?",
+                    "a": "React Router is a wrapper around the history library which handles interaction with the browser's window.history with its browser and hash histories. It also provides memory history which is useful for environments that don't have global history, such as mobile app development (React Native) and unit testing with Node.",
+                    "type": "text",
+                    "id": 69
+                }
+            ]
+        },
+        {
+            "id": "70",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q70 : What is the purpose of push() and replace() methods of history?",
+                    "a": "A history instance has two methods for navigation purpose.",
+                    "type": "text",
+                    "id": 70
+                },
+                {
+                    "type": "list",
+                    "list_text": "If you think of the history as an array of visited locations, push() will add a new location to the array and replace() will replace the current location in the array with the new one.",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "push()",
+                        "2": "replace()"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "71",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q71 : Why you get 'Router may have only one child element' warning?",
+                    "a": "You have to wrap your Route's in a <Switch> block because <Switch> is unique in that it renders a route exclusively.",
+                    "type": "text",
+                    "id": 71
+                },
+                {
+                    "code": "\nimport { Switch, Router, Route } from 'react-router'",
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "At first you need to add Switch to your imports:"
+                },
+                {
+                    "code": "\n<Router>\n\t<Switch>\n\t\t<Route {/* ... */} />\n\t\t<Route {/* ... */} />\n\t</Switch>\n</Router>",
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Then define the routes within <Switch> block:"
+                }
+            ]
+        },
+        {
+            "id": "72",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q72 : How to implement default or NotFound page?",
+                    "a": "A <Switch> renders the first child <Route> that matches. A <Route> with no path always matches. So you just need to simply drop path attribute as below",
+                    "type": "text",
+                    "id": 72
+                },
+                {
+                    "code": "\n<Switch>\n\t<Route exact path=' / ' component={Home}/>\n\t<Route path=' / user ' component={User}/>\n\t<Route component={NotFound} />\n</Switch>",
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "At first you need to add Switch to your imports:"
+                }
+            ]
+        },
+        {
+            "id": "73",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q73 : What is React Intl?",
+                    "a": "The React Intl library makes internationalization in React straightforward, with off-the-shelf components and an API that can handle everything from formatting strings, dates, and numbers, to pluralization. React Intl is part of FormatJS which provides bindings to React via its components and API",
+                    "type": "text",
+                    "id": 73
+                }
+            ]
+        },
+        {
+            "id": "74",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q74 : What are the main features of React Intl?",
+                    "a": "Below are the main features of React Intl",
+                    "type": "text",
+                    "id": 74
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Display numbers with separators.",
+                        "2": "Display dates and times correctly.",
+                        "3": "Display dates relative to 'now'.",
+                        "4": "Pluralize labels in strings.",
+                        "5": "Support for 150+ languages.",
+                        "6": "Runs in the browser and Node.",
+                        "7": "Built on standards."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "75",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q75 : What is flux?",
+                    "a": "Flux is an application design paradigm used as a replacement for the more traditional MVC pattern. It is not a framework or a library but a new kind of architecture that complements React and the concept of Unidirectional Data Flow. Facebook uses this pattern internally when working with React.",
+                    "type": "text",
+                    "id": 75
+                },
+                {
+                    "type": "img",
+                    "img": "Flux.png"
+                }
+            ]
+        },
+        {
+            "id": "76",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q76 : What is Redux?",
+                    "a": "Redux is a predictable state container for JavaScript apps based on the Flux design pattern. Redux can be used together with React, or with any other view library. It is tiny (about 2kB) and has no dependencies.",
+                    "type": "text",
+                    "id": 76
+                },
+                {
+                    "type": "img",
+                    "img": "redux.gif"
+                }
+            ]
+        },
+        {
+            "id": "77",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q77 : What are the core principles of Redux?",
+                    "a": "Redux follows three fundamental principles:",
+                    "type": "text",
+                    "id": 77
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Single source of truth": "The state of your whole application is stored in an object tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.",
+                        "State is read-only": "The only way to change the state is to emit an action, an object describing what happened. This ensures that neither the views nor the network callbacks will ever write directly to the state.",
+                        "hanges are made with pure functions": " To specify how the state tree is transformed by actions, you write reducers. Reducers are just pure functions that take the previous state and an action as parameters, and return the next state."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "78",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q78 : What are the downsides of Redux compared to Flux?",
+                    "a": "Instead of saying downsides we can say that there are few compromises of using Redux over Flux. Those are as follows:",
+                    "type": "text",
+                    "id": 78
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "You will need to learn to avoid mutations": "Flux is un-opinionated about mutating data, but Redux doesn't like mutations and many packages complementary to Redux assume you never mutate the state. You can enforce this with dev-only packages like redux-immutable-state-invariant, Immutable.js, or instructing your team to write non-mutating code.",
+                        "You're going to have to carefully pick your packages": "While Flux explicitly doesn't try to solve problems such as undo/redo, persistence, or forms, Redux has extension points such as middleware and store enhancers, and it has spawned a rich ecosystem.",
+                        "There is no nice Flow integration yet": "Flux currently lets you do very impressive static type checks which Redux doesn't support yet."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "79",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q79 : What are the drawbacks of MVW pattern?",
+                    "a": "",
+                    "type": "text",
+                    "id": 79
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "DOM manipulation is very expensive which causes applications to behave slow and inefficient.",
+                        "2": "Due to circular dependencies, a complicated model was created around models and views.",
+                        "3": "Lot of data changes happens for collaborative applications(like Google Docs).",
+                        "4": "No way to do undo (travel back in time) easily without adding so much extra code."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "80",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q80 : Are there any similarities between Redux and RxJS?",
+                    "a": "These libraries are very different for very different purposes, but there are some vague similarities. Redux is a tool for managing state throughout the application. It is usually used as an architecture for UIs. Think of it as an alternative to (half of) Angular. RxJS is a reactive programming library. It is usually used as a tool to accomplish asynchronous tasks in JavaScript. Think of it as an alternative to Promises. Redux uses the Reactive paradigm because the Store is reactive. The Store observes actions from a distance, and changes itself. RxJS also uses the Reactive paradigm, but instead of being an architecture, it gives you basic building blocks, Observables, to accomplish this pattern.",
+                    "type": "text",
+                    "id": 80
+                }
+            ]
+        },
+        {
+            "id": "81",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q81 : What is the difference between React context and React Redux?",
+                    "a": "You can use Context in your application directly and is going to be great for passing down data to deeply nested components which what it was designed for. Whereas Redux is much more powerful and provides a large number of features that the Context API doesn't provide. Also, React Redux uses context internally but it doesn't expose this fact in the public API.",
+                    "type": "text",
+                    "id": 81
+                }
+            ]
+        },
+        {
+            "id": "82",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q82 : Should I keep all component's state in Redux store?",
+                    "a": "Keep your data in the Redux store, and the UI related state internally in the component.",
+                    "type": "text",
+                    "id": 82
+                }
+            ]
+        },
+        {
+            "id": "83",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q83 : What is the difference between component and container in React Redux?",
+                    "a": "Component is a class or function component that describes the presentational part of your application. Container is an informal term for a component that is connected to a Redux store. Containers subscribe to Redux state updates and dispatch actions, and they usually don't render DOM elements; they delegate rendering to presentational child components.",
+                    "type": "text",
+                    "id": 83
+                }
+            ]
+        },
+        {
+            "id": "84",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q84 : How to structure Redux top level directories?",
+                    "a": "Most of the applications has several top-level directories as below:",
+                    "type": "text",
+                    "id": 84
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Components": "Used for dumb components unaware of Redux.",
+                        "Containers": "Used for smart components connected to Redux.",
+                        "Actions": "Used for all action creators, where file names correspond to part of the app.",
+                        "Reducers": " Used for all reducers, where files name correspond to state key.",
+                        "Store": "Used for store initialization."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "85",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q85 : What is redux-saga?",
+                    "a": "redux-saga is a library that aims to make side effects (asynchronous things like data fetching and impure things like accessing the browser cache) in React/Redux applications easier and better.",
+                    "type": "text",
+                    "id": 85
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\n$ npm install --save redux-saga",
+                    "simple_text": "It is available in NPM:"
+                }
+            ]
+        },
+        {
+            "id": "86",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q86 : What is the mental model of redux-saga?",
+                    "a": "Saga is like a separate thread in your application, that's solely responsible for side effects. redux-saga is a redux middleware, which means this thread can be started, paused and cancelled from the main application with normal Redux actions, it has access to the full Redux application state and it can dispatch Redux actions as well.",
+                    "type": "text",
+                    "id": 86
+                }
+            ]
+        },
+        {
+            "id": "87",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q87 : What is Redux Thunk?",
+                    "a": "Redux Thunk middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods dispatch() and getState() as parameters.",
+                    "type": "text",
+                    "id": 87
+                }
+            ]
+        },
+        {
+            "id": "88",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q88 : What are the differences between redux-saga and redux-thunk?",
+                    "a": "Both Redux Thunk and Redux Saga take care of dealing with side effects. In most of the scenarios, Thunk uses Promises to deal with them, whereas Saga uses Generators. Thunk is simple to use and Promises are familiar to many developers, Sagas/Generators are more powerful but you will need to learn them. But both middleware can coexist, so you can start with Thunks and introduce Sagas when/if you need them.",
+                    "type": "text",
+                    "id": 88
+                }
+            ]
+        },
+        {
+            "id": "89",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q89 : What is the difference between React and Angular?",
+                    "a": "Let's see the difference between React and Angular in a table format.",
+                    "type": "text",
+                    "id": 89
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "React"
+                        },
+                        {
+                            "label": "Angular"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "React is a library and has only the View layer"
+                                },
+                                {
+                                    "col": "Angular is a framework and has complete MVC functionality"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "React handles rendering on the server side"
+                                },
+                                {
+                                    "col": "AngularJS renders only on the client side but Angular 2 and above renders on the server side"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "React uses JSX that looks like HTML in JS which can be confusing"
+                                },
+                                {
+                                    "col": "Angular follows the template approach for HTML, which makes code shorter and easy to understand"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "React Native, which is a React type to build mobile applications are faster and more stable."
+                                },
+                                {
+                                    "col": "Ionic, Angular's mobile native app is relatively less stable and slower"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "In React, data flows only in one way and hence debugging is easy"
+                                },
+                                {
+                                    "col": "In Angular, data flows both way i.e it has two-way data binding between children and parent and hence debugging is often difficult"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "90",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q90 : How does the performance of using Hooks will differ in comparison with the classes?",
+                    "a": "",
+                    "type": "text",
+                    "id": 90
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "React Hooks will avoid a lot of overheads such as the instance creation, binding of events, etc., that are present with classes.",
+                        "2": "Hooks in React will result in smaller component trees since they will be avoiding the nesting that exists in HOCs (Higher Order Components) and will render props which result in less amount of work to be done by React"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "91",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q91 : How to create a switching component for displaying different pages?",
+                    "a": "A switching component refers to a component that will render one of the multiple components. We should use an object for mapping prop values to components.",
+                    "type": "text",
+                    "id": 91
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nimport HomePage from './HomePage'\nimport AboutPage from './AboutPage'\nimport FacilitiesPage from './FacilitiesPage'\nimport ContactPage from './ContactPage'\nimport HelpPage from './HelpPage'\nconst PAGES = {\n\thome: HomePage,\n\tabout: AboutPage,\n\tfacilitiess: FacilitiesPage,\n\tcontact: ContactPage\n\thelp: HelpPage\n}\nconst Page = (props) => {\n\tconst Handler = PAGES[props.page] || HelpPage\n\treturn <Handler {...props} />\n}\n// The PAGES object keys can be used in the prop types for catching errors during dev-time.\nPage.propTypes = {\n\tpage: PropTypes.oneOf(Object.keys(PAGES)).isRequired\n}",
+                    "simple_text": "A below-given example will show you how to display different pages based on page prop using switching component:"
+                }
+            ]
+        },
+        {
+            "id": "92",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q92 : How to re-render the view when the browser is resized?",
+                    "a": "It is possible to listen to the resize event in componentDidMount() and then update the width and height dimensions. It requires the removal of the event listener in the componentWillUnmount() method.",
+                    "type": "text",
+                    "id": 92
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nclass WindowSizeDimensions extends React.Component {\n\tconstructor(props){\n\t\tsuper(props);\n\t\tthis.updateDimension = this.updateDimension.bind(this);\n\t}\n\n\tcomponentWillMount() {\n\t\tthis.updateDimension()\n\t}\n\tcomponentDidMount() {\n\t\twindow.addEventListener('resize', this.updateDimension)\n\t}\n\tcomponentWillUnmount() {\n\t\twindow.removeEventListener('resize', this.updateDimension)\n\t}\n\tupdateDimension() {\n\t\tthis.setState({width: window.innerWidth, height: window.innerHeight})\n\t}\n\trender() {\n\t\treturn <span>{this.state.width} x {this.state.height}</span>\n\t}\n}",
+                    "simple_text": "Using the below-given code, we can render the view when the browser is resized."
+                }
+            ]
+        },
+        {
+            "id": "93",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q93 : What is render hijacking in react?",
+                    "a": "The concept of render hijacking is the ability to control what a component will output from another component. It means that you decorate your component by wrapping it into a Higher-Order component. By wrapping, you can inject additional props or make other changes, which can cause changing logic of rendering. It does not actually enable hijacking, but by using HOC you make your component behave differently",
+                    "type": "text",
+                    "id": 93
+                }
+            ]
+        },
+        {
+            "id": "94",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q94 : What are HOC factory implementations?",
+                    "a": "There are two main ways of implementing HOCs in React.",
+                    "type": "text",
+                    "id": 94
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Props Proxy (PP) and",
+                        "2": "Inheritance Inversion (II)."
+                    }
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Props Proxy": ""
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nfunction ppHOC(WrappedComponent) {\n\treturn class PP extends React.Component {\n\t\trender() {\n\t\t\treturn <WrappedComponent {...this.props}/>\n\t\t}\n\t}\n}",
+                    "simple_text": "In this approach, the render method of the HOC returns a React Element of the type of the WrappedComponent. We also pass through the props that the HOC receives, hence the name Props Proxy."
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Inheritance Inversion": ""
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nfunction iiHOC(WrappedComponent) {\n\treturn class Enhancer extends WrappedComponent {\n\t\trender() {\n\t\t\treturn super.render()\n\t\t}\n\t}\n}",
+                    "simple_text": "In this approach, the returned HOC class (Enhancer) extends the WrappedComponent. It is called Inheritance Inversion because instead of the WrappedComponent extending some Enhancer class, it is passively extended by the Enhancer. In this way the relationship between them seems inverse."
+                }
+            ]
+        },
+        {
+            "id": "95",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q95 : What is React lazy function?",
+                    "a": "The React.lazy function lets you render a dynamic import as a regular component. It will automatically load the bundle containing the OtherComponent when the component gets rendered. This must return a Promise which resolves to a module with a default export containing a React component.",
+                    "type": "text",
+                    "id": 95
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nconst OtherComponent = React.lazy(() => import('./OtherComponent'));\n\function MyComponent() {\n\treturn (\n\t\t<div>\n\t\t\t<OtherComponent />\n\t\t</div>\n\t);\n}"
+                },
+                {
+                    "note": "Note: React.lazy and Suspense is not yet available for server-side rendering. If you want to do code-splitting in a server rendered app, we still recommend React Loadable.",
+                    "type": "note"
+                }
+            ]
+        },
+        {
+            "id": "96",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q96 : What is React memo function?",
+                    "a": "Class components can be restricted from re-rendering when their input props are the same using PureComponent or shouldComponentUpdate. Now you can do the same with function components by wrapping them in React.memo.",
+                    "type": "text",
+                    "id": 96
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nconst MyComponent = React.memo(function MyComponent(props) {\n\t /* only rerenders if props change */\n});"
+                }
+            ]
+        },
+        {
+            "id": "97",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q97 : What are the differences between Flux and Redux?",
+                    "a": "Below are the major differences between Flux and Redux",
+                    "type": "text",
+                    "id": 97
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Flux"
+                        },
+                        {
+                            "label": "Redux"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "State is mutable"
+                                },
+                                {
+                                    "col": "State is immutable"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "The Store contains both state and change logic"
+                                },
+                                {
+                                    "col": "The Store and change logic are separate"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "There are multiple stores exist"
+                                },
+                                {
+                                    "col": "There is only one store exist"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "All the stores are disconnected and flat"
+                                },
+                                {
+                                    "col": "Single store with hierarchical reducers"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "It has a singleton dispatcher"
+                                },
+                                {
+                                    "col": "There is no concept of dispatcher"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "React components subscribe to the store"
+                                },
+                                {
+                                    "col": "Container components uses connect function"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "98",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q98 : What is the main purpose of constructor?",
+                    "a": "The constructor is mainly used for two purposes,",
+                    "type": "text",
+                    "id": 98
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "To initialize local state by assigning object to this.state",
+                        "2": "For binding event handler methods to the instance For example, the below code covers both the above cases"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "code": "\nconstructor(props) {\n\tsuper(props);\n\t// Don't call this.setState() here!\n\tthis.state = { counter: 0 };\n\tthis.handleClick = this.handleClick.bind(this);\n}"
+                }
+            ]
+        },
+        {
+            "id": "99",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q99 : What is the benefit of strict mode?",
+                    "a": "The will be helpful in the below cases",
+                    "type": "text",
+                    "id": 99
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Identifying components with unsafe lifecycle methods.",
+                        "2": "Warning about legacy string ref API usage.",
+                        "3": "Detecting unexpected side effects.",
+                        "4": "Detecting legacy context API.",
+                        "5": "Warning about deprecated findDOMNode usage"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "100",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q100 : How to prevent a function from being called multiple times?",
+                    "a": "If you use an event handler such as onClick or onScroll and want to prevent the callback from being fired too quickly, then you can limit the rate at which callback is executed. This can be achieved in the below possible ways,",
+                    "type": "text",
+                    "id": 100
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Throttling": "Changes based on a time based frequency. For example, it can be used using _.throttle lodash function.",
+                        "Debouncing": " Publish changes after a period of inactivity. For example, it can be used using _.debounce lodash function.",
+                        "RequestAnimationFrame throttling": "Changes based on requestAnimationFrame. For example, it can be used using raf-schd lodash function."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "101",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q101 : How JSX prevents Injection Attacks?",
+                    "a": "React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered.",
+                    "type": "text",
+                    "id": 101
+                },
+                {
+                    "type": "code",
+                    "simple_text": "This way you can prevent XSS(Cross-site-scripting) attacks in the application.",
+                    "lang": "typescript",
+                    "code": "\nconst name = response.potentiallyMaliciousInput;\nconst element = <h1>{name}</h1>;"
+                }
+            ]
+        },
+        {
+            "id": "111",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q111 : What is the difference between try catch block and error boundaries?",
+                    "a": "Try catch block works with imperative code whereas error boundaries are meant for declarative code to render on the screen.",
+                    "type": "text",
+                    "id": 111
+                },
+                {
+                    "type": "code",
+                    "simple_text": "For example, the try catch block used for below imperative code.",
+                    "lang": "typescript",
+                    "code": "\ntry {\n\tshowButton();\n} catch (error) {\n\t// ...\n}"
+                },
+                {
+                    "type": "code",
+                    "simple_text": "Whereas error boundaries wrap declarative code as below,",
+                    "lang": "typescript",
+                    "code": "\n<ErrorBoundary>\n\t<MyComponent />\n</ErrorBoundary>"
+                },
+                {
+                    "note": "So if an error occurs in a componentDidUpdate method caused by a setState somewhere deep in the tree, it will still correctly propagate to the closest error boundary.",
+                    "type": "note"
+                }
+            ]
+        }
+    ]
+}

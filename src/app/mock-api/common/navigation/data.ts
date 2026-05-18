@@ -75,22 +75,23 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 link: '/weird-part-of-javascript',
             },
             // {
-            //     id: 'apps.angular',
-            //     title: 'Angular',
+            //     id: 'apps.Testing',
+            //     title: 'Testing',
             //     type: 'collapsable',
             //     icon: 'heroicons_outline:code',
             //     children: [
             //         {
-            //             id: 'angular.basic',
-            //             title: 'Angular Basic Question',
+            //             id: 'react.basic',
+            //             title: 'ReactJS Interview Question',
             //             type: 'basic',
-            //             link: '/angular-interview-questions',
+            //             icon: 'heroicons_outline:code',
+            //             link: '/react-interview-questions',
             //         },
             //         {
-            //             id: 'angular.advance',
-            //             title: 'Angular Advance Question',
+            //             id: 'tesing.selenium',
+            //             title: 'selenium 2',
             //             type: 'basic',
-            //             link: '/advance-angular-interview-questions',
+            //             link: '/selenium-2',
             //         },
             //     ],
             // },
@@ -105,7 +106,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
             //             title: 'React Basic Question',
             //             type: 'basic',
             //             link: '/react-interview-questions',
-            //         },
+            //         },+
             //         {
             //             id: 'react.advance',
             //             title: 'React Advance Question',

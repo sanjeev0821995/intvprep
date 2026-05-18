@@ -1,0 +1,24 @@
+{
+    "javascript-coding-interview-questions": [
+        {
+            "heading": "Patterns",
+            "path": "pattern",
+            "icon": "heroicons_outline:adjustments"
+        },
+        {
+            "heading": "Searching",
+            "path": "searching",
+            "icon": "heroicons_outline:search"
+        },
+        {
+            "heading": "Sorting",
+            "path": "sorting",
+            "icon": "heroicons_outline:sort-ascending"
+        },
+        {
+            "heading": "Miscellaneous",
+            "path": "miscellaneous",
+            "icon": "heroicons_outline:code"
+        }
+    ]
+}

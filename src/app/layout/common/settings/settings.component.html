@@ -25,7 +25,6 @@
             <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
                 List Of Questions :
             </h2>
-            
             <ul class="space-y-1 max-w-md  list-outside text-black dark:text-gray-400">
                 <li *ngFor="let x of getConfig" (click)="navigate(x.id)">
                     <span class="leading-9 text-lg cursor-pointer hover:border-b-2 border-indigo-700 dark:hover:text-white" *ngFor="let y of x.Que">{{y.q }}</span>

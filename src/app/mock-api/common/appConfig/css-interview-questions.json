@@ -1,0 +1,600 @@
+{
+    "css-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is the Box model in CSS?",
+                    "a": "A rectangle box is wrapped around every HTML element. The box model is used to determine the height and width of the rectangular box. The CSS Box consists of Width and height (or in the absence of that, default values and the content inside), padding, borders, margin.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "img",
+                    "img": "boxmodel.png",
+                    "height": "15rem",
+                    "width": "70%"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Content": " Actual Content of the box where the text or image is placed.",
+                        "Padding": "Area surrounding the content (Space between the border and content).",
+                        "Border": " Area surrounding the padding.",
+                        "Margin": "Area surrounding the border."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : What are the advantages of using CSS?",
+                    "a": "The main advantages of CSS are given below:",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Separation of content from presentation": " CSS provides a way to present the same content in multiple presentation formats in mobile or desktop or laptop.",
+                        "Easy to maintain": "CSS, built effectively can be used to change the look and feel complete by making small changes. To make a global change, simply change the style, and all elements in all the web pages will be updated automatically.",
+                        "Bandwidth ": "Used effectively, the style sheets will be stored in the browser cache and they can be used on multiple pages, without having to download again."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : What are the limitations of CSS?",
+                    "a": "Disadvantages of CSS are given below:",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Browser Compatibility": "Some style selectors are supported and some are not. We have to determine which style is supported or not using the @support selector).",
+                        "Cross Browser issue": "Some selectors behave differently in a different browser).",
+                        "There is no parent selector ": "Some selectors behave differently in a different browser)."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : How to include CSS in the webpage?",
+                    "a": "There are different ways to include a CSS in a webpage, ",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "heading_text": "External Style Sheet: An external file linked to your HTML document: Using link tag, we can link the style sheet to the HTML page.",
+                    "code": "\n<link rel='stylesheet' type='text/css' href='mystyles.css' />"
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "heading_text": "Embed CSS with a style tag: A set of CSS styles included within your HTML page.",
+                    "simple_text": "Add your CSS rules between the opening and closing style tags and write your CSS exactly the same way as you do in stand-alone stylesheet files.",
+                    "code": "\n<style type='text/css'>\n\t/*Add style rules here*/\n</style>"
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "heading_text": "Add inline styles to HTML elements(CSS rules applied directly within an HTML tag.): Style can be added directly to the HTML element using a style tag.",
+                    "code": "\n<h2 style='color:red;background:black'>Inline Style</h2>"
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "heading_text": "Import a stylesheet file (An external file imported into another CSS file): Another way to add CSS is by using the @import rule. This is to add a new CSS file within CSS itself..",
+                    "code": "\n@import 'path/to/style.css';"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : What are the different types of Selectors in CSS?",
+                    "a": "A CSS selector is the part of a CSS ruleset that actually selects the content you want to style. Different types of selectors are listed below.",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Universal Selector": " The universal selector works like a wildcard character, selecting all elements on a page. In the given example, the provided styles will get applied to all the elements on the page."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "margin": "0 0 0 2rem",
+                    "code": "\n* {\n\tcolor: 'green';\n\tfont-size: 20px;\n\tline-height: 25px;\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Element Type Selector": " This selector matches one or more HTML elements of the same name. In the given example, the provided styles will get applied to all the ul elements on the page."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "margin": "0 0 0 2rem",
+                    "code": "\nul {\n\tline-style: none;\n\tborder: solid 1px #ccc;\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "ID Selector": " This selector matches any HTML element that has an ID attribute with the same value as that of the selector. In the given example, the provided styles will get applied to all the elements having ID as a container on the page."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "margin": "0 0 0 2rem",
+                    "code": "\n#container {\n\twidth: 960px;\n\tmargin: 0 auto;\n}\n\n<div id='container'></div>"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Class Selector": " The class selector also matches all elements on the page that have their class attribute set to the same value as the class.  In the given example, the provided styles will get applied to all the elements having ID as the box on the page."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "margin": "0 0 0 2rem",
+                    "code": "\n.box {\n\tpadding: 10px;\n\tmargin: 10px;\n\twidth: 240px;\n}\n\n<div class='box'></div>"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Descendant Combinator": "The descendant selector or, more accurately, the descendant combinator lets you combine two or more selectors so you can be more specific in your selection method."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "margin": "0 0 0 2rem",
+                    "bottom_text": "This declaration block will apply to all elements that have a class of box that is inside an element with an ID of the container. It’s worth noting that the .box element doesn’t have to be an immediate child: there could be another element wrapping .box, and the styles would still apply.",
+                    "code": "\n#container .box {\n\tfloat: left;\n\tpadding-bottom: 15px;\n}\n\n<div id='container'>\n\t<div class='box'></div>\n\t<div class='box-2'></div>\n</div>\n\n<div class='box'></div>"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Child Combinator": "A selector that uses the child combinator is similar to a selector that uses a descendant combinator, except it only targets immediate child elements."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "margin": "0 0 0 2rem",
+                    "bottom_text": "The selector will match all elements that have a class of box and that are immediate children of the #container element. That means, unlike the descendant combinator, there can’t be another element wrapping .box it has to be a direct child element.",
+                    "code": "\n#container> .box {\n\tfloat: left;\n\tpadding-bottom: 15px;\n}\n\n<div id='container'>\n\t<div class='box'></div>\n\t<div>\n\t\t<div class='box'></div>\n\t</div>\n</div>"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "General Sibling Combinator": "A selector that uses a general sibling combinator to match elements based on sibling relationships. The selected elements are beside each other in the HTML.."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "margin": "0 0 0 2rem",
+                    "bottom_text": "In this example, all paragraph elements (<p>) will be styled with the specified rules, but only if they are siblings of <h2> elements. There could be other elements in between the <h2> and <p>, and the styles would still apply.",
+                    "code": "\nh2 ~ p {\n\tmargin-bottom: 20px;\n}\n\n<h2>Title</h2>\n<p>Paragraph example.</p>\n<p>Paragraph example.</p>\n<p>Paragraph example.</p>\n<div class='box'>\n\t<p>Paragraph example.</p>\n</div>"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Adjacent Sibling Combinator": "A selector that uses the adjacent sibling combinator uses the plus symbol (+), and is almost the same as the general sibling selector. The difference is that the targeted element must be an immediate sibling, not just a general sibling."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "margin": "0 0 0 2rem",
+                    "bottom_text": "The above example will apply the specified styles only to paragraph elements that immediately follow other paragraph elements. This means the first paragraph element on a page would not receive these styles. Also, if another element appeared between two paragraphs, the second paragraph of the two wouldn’t have the styles applied.",
+                    "code": "\np + p {\n\ttext-indent: 1.Sem;\n\tmargin-bottom: 0;\n}\n\n<h2>Title</h2>\n<p>Paragraph example.</p>\n<p>Paragraph example.</p>\n<p>Paragraph example.</p>\n<div class='box'>\n\t<p>Paragraph example.</p>\n\t<p>Paragraph example.</p>\n</div>"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Attribute Selector": "The attribute selector targets elements based on the presence and/or value of HTML attributes, and is declared using square brackets."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "margin": "0 0 0 2rem",
+                    "code": "\ninput [type='text'] {\n\tbackground-color: #444;\n\twidth: 200px;\n}\n\n<input type='text'>"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : What is VH/VW (viewport height/ viewport width) in CSS?",
+                    "a": "It’s a CSS unit used to measure the height and width in percentage with respect to the viewport. It is used mainly in responsive design techniques. The measure VH is equal to 1/100 of the height of the viewport. If the height of the browser is 1000px, 1vh is equal to 10px. Similarly, if the width is 1000px, then 1 vw is equal to 10px.",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : Difference between reset vs normalize CSS?. How do they differ?",
+                    "a": "",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Reset CSS": "CSS resets aim to remove all built-in browser styling. For example margins, paddings, font-sizes of all elements are reset to be the same. ",
+                        "Normalize CSS": "Normalize CSS aims to make built-in browser styling consistent across browsers. It also corrects bugs for common browser dependencies"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : What is the difference between inline, inline-block, and block?",
+                    "a": "",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Block Element": "The block elements always start on a new line. They will also take space for an entire row or width. List of block elements are <div>, <p>. ",
+                        "Inline Elements": " Inline elements don't start on a new line, they appear on the same line as the content and tags beside them. Some examples of inline elements are <a>, <span> , <strong>, and <img> tags.",
+                        "Inline Block Elements": " Inline-block elements are similar to inline elements, except they can have padding and margins and set height and width values."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : What are Pseudo elements and Pseudo classes?",
+                    "a": "",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_heading": "Pseudo-elements allows us to create items that do not normally exist in the document tree, for example ::after.",
+                    "list": {
+                        "1": "::before",
+                        "2": "::after",
+                        "3": "::first-letter",
+                        "4": "::first-line",
+                        "5": "::selection"
+                    }
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_heading": "Pseudo-classes select regular elements but under certain conditions like when the user is hovering over the link.",
+                    "list": {
+                        "1": ":link",
+                        "2": ":visited",
+                        "3": ":hover",
+                        "4": ":active",
+                        "5": ":focus"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : How do you specify units in the CSS?. What are the different ways to do it?",
+                    "a": "There are different ways to specify units in CSS like px, em, pt, percentage (%). px(Pixel) gives fine-grained control and maintains alignment because 1 px or multiple of 1 px is guaranteed to look sharp. px is not cascade. em maintains relative size. you can have responsive fonts. Em, will cascade 1em is equal to the current font-size of the element or the browser default. If u sent font-size to 16px then 1em = 16px. The common practice is to set default body font-size to 62.5% (equal to 10px).pt(point) are traditionally used in print. 1pt = 1/72 inch and it is a fixed-size unit.%(percentage) sets font-size relative to the font size of the body. Hence, you have to set the font-size of the body to a reasonable size.",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : Does margin-top or margin-bottom have an effect on inline elements?",
+                    "a": "No, it doesn’t affect the inline elements. Inline elements flow with the contents of the page",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : What is a z-index, how does it function?",
+                    "a": "z-index is used for specifying the vertical stacking of the overlapping elements that occur at the time of its positioning. It specifies the vertical stack order of the elements positioned that helps to define how the display of elements should happen in cases of overlapping.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "bottom_text": "The elements having a lesser value of z-index is stacked lower than the ones with a higher z-index",
+                    "list_heading": "Pseudo-classes select regular elements but under certain conditions like when the user is hovering over the link.",
+                    "list": {
+                        "Auto": "The stack order will be set equal to the parent.",
+                        "Number": "The number can be positive or negative. It defines the stack order.",
+                        "Initial": "The default value of 0 is set to the property.",
+                        "Inherit": "The properties are inherited from the parent."
+                    }
+                },
+                {
+                    "type": "img",
+                    "img": "z-index.png"
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : Explain CSS position property?",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "bottom_text": "The elements having a lesser value of z-index is stacked lower than the ones with a higher z-index",
+                    "list_heading": "Pseudo-classes select regular elements but under certain conditions like when the user is hovering over the link.",
+                    "list": {
+                        "Absolute": "To place an element exactly where you want to place it. absolute position is actually set relative to the element's parent. if no parent is available then the relative place to the page itself (it will default all the way back up to the element).",
+                        "Relative": "'Relative to itself'. Setting position: relative; on an element and no other positioning attributes, it will no effect on its positioning. It allows the use of z-index on the element and it limits the scope of absolutely positioned child elements. Any child element will be absolutely positioned within that block. ",
+                        "Fixed": "The element is positioned relative to the viewport or the browser window itself. viewport doesn't change if you scroll and hence the fixed element will stay right in the same position. ",
+                        "Static": "Static default for every single page element. The only reason you would ever set an element to position: static is to forcefully remove some positioning that got applied to an element outside of your control.",
+                        "Sticky": "Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned."
+                    }
+                },
+                {
+                    "type": "img",
+                    "img": "css-position-all.png"
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : When does DOM reflow occur?",
+                    "a": "Reflow is the name of the web browser process for re-calculating the positions and geometries of elements in the document, for the purpose of re-rendering part or all of the document. ",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_heading": "Reflow occurs when:",
+                    "list": {
+                        "1": "Insert, remove or update an element in the DOM.",
+                        "2": "Modify content on the page, e.g. the text in an input box.",
+                        "3": "Move a DOM element.",
+                        "4": "Animate a DOM element.",
+                        "5": "Take measurements of an element such as offsetHeight or getComputedStyle.",
+                        "6": "Change a CSS style"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : Different Box Sizing Property?",
+                    "a": "The box-sizing CSS property sets how the total width and height of an element are calculated.",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_heading": "Reflow occurs when:",
+                    "list": {
+                        "Content-box": "The default width and height values apply to the element's content only. The padding and border are added to the outside of the box.",
+                        "Padding-box": "Width and height values apply to the element's content and its padding. The border is added to the outside of the box. Currently, only Firefox supports the padding-box value.",
+                        "Border-box": "Width and height values apply to the content, padding, and border."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : Can you name the four types of @media properties?",
+                    "a": "The four types of @media properties are:",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_heading": "Reflow occurs when:",
+                    "list": {
+                        "All": "It’s the default property. Used for all media-type devices.",
+                        "Screen": "Used for computer screen, mobile screen.",
+                        "Print ": "Used for printers.",
+                        "Speech": "Used for screen readers"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : What are the different ways to hide the element using CSS?",
+                    "a": "The four types of @media properties are:",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Using display property(display: none). It’s not available for screen readers. The element will not exist in the DOM if display: none is used.",
+                        "2": "Using visibility property(visibility: hidden), will take up the space of the element. It will be available to screen reader users. The element will actually be present in the DOM, but not shown on the screen.",
+                        "3 ": "Using position property (position: absolute). Make it available outside the screen."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : What does the :root pseudo-class refer to?",
+                    "a": "The :root selector allows you to target the highest-level “parent” element in the DOM, or document tree. It is defined in the CSS Selectors Level 3 specification.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : Difference between CSS grid vs flexbox?",
+                    "a": "",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "CSS Grid Layout is a two-dimensional system, meaning it can handle both columns and rows. Grid layout is intended for larger-scale layouts which aren’t linear in design.",
+                        "2": "Flexbox is largely a one-dimensional system (either in a column or a row). Flexbox layout is most appropriate to the components of an application."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : What does !important mean in CSS?",
+                    "a": "The style is having the important will have the highest precedence and it overrides the cascaded property.",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "bottom_text": "In this example, all paragraph elements (<p>) will be styled with the specified rules, but only if they are siblings of <h2> elements. There could be other elements in between the <h2> and <p>, and the styles would still apply.",
+                    "code": "\np {\n\tcolor: red !important;\n}\n#thing {\n\tcolor: green;\n}\n<p id='thing'>Will be RED.</p>"
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : What is specificity? How to calculate specificity?",
+                    "a": "A process of determining which CSS rule will be applied to an element. It actually determines which rules will take precedence. Inline style usually wins then ID then the class value (or pseudo-class or attribute selector), the universal selector (*) has no specificity. ID selectors have a higher specificity than attribute selectors.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : What is progressive rendering? How do you implement progressive rendering in the website?",
+                    "a": "Progressive rendering is the name given to techniques used to improve the performance of a webpage (in particular, improve perceived load time) to render content for display as quickly as possible.We can implement the progressive rendering of the page by loading the lazy loading of the images.  We can use Intersection Observer API to lazy load the image. The API makes it simple to detect when an element enters the viewport and take an action when it does. Once the image enters the viewport, we will start loading the images.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        }
+    ]
+}

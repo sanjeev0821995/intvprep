@@ -1,0 +1,459 @@
+{
+    "javascript-quiz": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Uncaught SyntaxError: Illegal break statement",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nlet arr = ['ES5','ES6','ES7','ES8'];\narr.forEach(function(element,index){\n\tconsole.log(element,index);\n\tif (index==2){\n\t\tbreak;\n\t}\n})"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "undefined",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nlet arr=[7,9,0];\nconsole.log(arr[arr.length]);"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Second",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nlet obj={a:'First'};\nlet obj1 = obj;\nobj1.a='Second';\nconsole.log(obj.a);"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "-1",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nlet arr=['One','Two','Three','Four','Five'];\nconsole.log(arr.lastIndexOf('Abcd'));"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Window Object",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nfunction test(){\n\tconsole.log(this);\n}\ntest();"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Window Object",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nlet obj={\n\ttest:()=>{\n\t\tconsole.log(this);\n\t}\n}\nobj.test();"
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "{test: ƒ}",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nlet obj={\n\ttest(){\n\t\tconsole.log(this);\n\t}\n}\nobj.test();"
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "1undefined",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nvar y = 1;\n\tif (function f() {}) {\n\t\ty += typeof f;\n\t}\nconsole.log(y);"
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "5",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n(function() {\n\tvar a = b = 5;\n})();\n\nconsole.log(b);"
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>a defined? false</p>\n<p>b defined? true</p>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n(function(){\n\tvar a = b = 3;\n})();\n\nconsole.log('a defined? ' + (typeof a !== 'undefined'));\nconsole.log('b defined? ' + (typeof b !== 'undefined'));"
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>outer func:  this.foo = bar</p><p>outer func:  self.foo = bar</p><p>inner func:  this.foo = undefined</p><p>inner func:  self.foo = bar</p>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nvar myObject = {\n\tfoo: 'bar',\n\tfunc: function() {\n\t\tvar self = this;\n\t\tconsole.log('outer func:  this.foo = ' + this.foo);\n\t\tconsole.log('outer func:  self.foo = ' + self.foo);\n\t\t(function() {\n\t\t\tconsole.log('inner func:  this.foo = ' + this.foo);\n\t\t\tconsole.log('inner func:  self.foo = ' + self.foo);\n\t\t\t}());\n\t\t}\n\t};\nmyObject.func();"
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>foo1 returns: {bar: 'hello'} </p><p>foo2 returns: undefined</p> ",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nfunction foo1()\n\t{\n\t\treturn {\n\t\t\tbar: 'hello'\n\t\t};\n\t}\n\nfunction foo2()\n\t{\n\t\treturn\n\t\t{\n\t\t\tbar: 'hello '\n\t\t};\n\t}"
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>0.30000000000000004 </p><p>false</p> ",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nconsole.log(0.1 + 0.2);\nconsole.log(0.1 + 0.2 == 0.3);"
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>1</p><p>4</p><p>3</p><p>2</p>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n(function() {\n\tconsole.log(1); \n\tsetTimeout(function(){console.log(2)}, 1000); \n\tsetTimeout(function(){console.log(3)}, 0); \n\tconsole.log(4);\n})();"
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>1</p><p>4</p><p>3</p><p>2</p>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n(function() {\n\tconsole.log(1); \n\tsetTimeout(function(){console.log(2)}, 1000); \n\tsetTimeout(function(){console.log(3)}, 0); \n\tconsole.log(4);\n})();"
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>'array 1: length=5 last=j,o,n,e,s'</p><p>'array 2: length=5 last=j,o,n,e,s'</p>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nvar arr1 = 'john'.split('');\nvar arr2 = arr1.reverse();\nvar arr3 = 'jones '.split('');\narr2.push(arr3);\nconsole.log('array 1: length=' + arr1.length + ' last=' + arr1.slice(-1));\nconsole.log('array 2: length=' + arr2.length + ' last=' + arr2.slice(-1));"
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>'122'</p><p>'32'</p><p>'02'</p><p>'02'</p><p>'112'</p><p>'NaN2'</p><p>NaN</p>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nconsole.log(1 +  '2' + '2');\nconsole.log(1 +  +'2' + '2');\nconsole.log(1 +  -'1' + '2');\nconsole.log(+'1' +  '1' + '2');\nconsole.log( 'A' - 'B' + '2');\nconsole.log( 'A' - 'B' + 2);"
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>0 || 1 = 1</p><p>1 || 2 = 1</p><p>0 && 1 = 0</p><p>1 && 2 = 2</p>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nconsole.log('0 || 1 = '+(0 || 1));\nconsole.log('1 || 2 = '+(1 || 2));\nconsole.log('0 && 1 = '+(0 && 1));\nconsole.log('1 && 2 = '+(1 && 2));"
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>true</p><p>false</p>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nconsole.log(false == '0')\nconsole.log(false === '0')"
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "The output of this code will be <mark>456 (not 123)</mark>.The reason for this is as follows: When setting an object property, JavaScript will implicitly <strong>stringify</strong> the parameter value. In this case, since <mark> b </mark>and <mark> c </mark>are both objects, they will both be converted to <mark>'[object Object]'</mark>. As a result, <mark>a[b]</mark> and <mark>a[c]</mark> are both equivalent to <mark>a[' [object Object]'] </mark>and can be used interchangeably. Therefore, setting or referencing <mark>a[c]</mark> is precisely the same as setting or referencing <mark>a[b]</mark>.",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nvar a={},\nb={key:'b'},\nc={key:'c'};\na[b]=123;\na[c]=456;\n\nconsole.log(a[b]);"
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "The code will output the value of 10 factorial <mark> (i.e., 10!, or 3,628,800) </mark>.",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nconsole.log((function f(n){return ((n > 1) ? n * f(n-1) : n)})(10));"
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "1",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n(function(x) {\n\treturn (function(y) {\n\t\tconsole.log(x);\n\t})(2)\n})(1);"
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>undefined</p><p>John Doe</p>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nvar hero = {\n\t_name: 'John Doe',\n\tgetSecretIdentity: function (){\n\t\treturn this._name;\n\t}\n};\n\nvar stoleSecretIdentity = hero.getSecretIdentity;\n\nconsole.log(stoleSecretIdentity());\nconsole.log(hero.getSecretIdentity());"
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>1</p><p>undefined</p><p>2</p>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\n(function () {\n\ttry {\n\t\tthrow new Error();\n\t} catch (x) {\n\t\tvar x = 1, y = 2;\n\tconsole.log(x);\n}\nconsole.log(x);\nconsole.log(y);\n})();"
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Neither 21, nor 20, the result is <mark>.undefined</mark>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nvar x = 21;\nvar girl = function () {\n\tconsole.log(x);\n\tvar x = 20;\n};\ngirl ();"
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "It will print<mark> 0 1 2 3 4 </mark>, because we use<mark> let </mark> instead of <mark> var </mark>here. The variable i is only seen in the for loop’s block scope.",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nfor (let i = 0; i < 5; i++) {\n\tsetTimeout(function() { console.log(i); }, i * 1000 );\n}"
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "3",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nvar b = 1;\nfunction outer(){\n\tvar b = 2\n\tfunction inner(){\n\t\tb++;\n\t\tvar b = 3;\n\t\tconsole.log(b)\n\t}\n\tinner();\n}\nouter();"
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "<p>1 </p><p>'undefined'</p><p>'number'</p>",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nfunction foo() {\n\tlet x = y = 0;\n\tx++;\n\ty++;\n\treturn x;\n}\n\nconsole.log(foo(), typeof x, typeof y);"
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "A,C and B",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nfunction main(){\n\tconsole.log('A');\n\tsetTimeout(\n\t\tfunction print(){ console.log('B'); },0);\n\tconsole.log('C');\n}\n\nmain();"
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "33 ",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nfunction doSomething(){\n\tx = 33;\n\tconsole.log(x);\n\tvar x;\n}\n\n doSomething();"
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "NaN.",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nvar x = 23;\n(function(){\n\tvar x = 43;\n\t\t(function random(){\n\t\tx++;\n\t\tconsole.log(x);\n\t\tvar x = 21;\n\t})();\n})();"
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "1",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nlet i = 3;\nwhile (i) {\n\talert( i-- );\n}"
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "From 1 to 4.",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nlet i = 0;\nwhile (++i < 5) alert( i );"
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "from 0 to 4.",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nfor (let i = 0; i < 5; i++) alert( i );"
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "accordion": "true",
+                    "answer": "Error: Cannot read property 'name' of undefined.",
+                    "accordion_header": "Check the Answer",
+                    "code": "\nfunction makeUser() {\n\treturn {\n\t\tname: 'John',\n\t\tref: this\n\t};\n}\nlet user = makeUser();\nalert( user.ref.name ); // What's the result?"
+                }
+            ]
+        }
+    ]
+}

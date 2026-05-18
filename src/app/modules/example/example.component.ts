@@ -24,7 +24,7 @@ export class ExampleComponent implements OnInit, OnDestroy {
     ngOnInit(): void {
         this.appService.destroyLinkForCanonicalURL();
         this.appService.createLinkForCanonicalURL();
-        this.title.setTitle('Interview Ant');
+        this.title.setTitle('Intvprep.');
         this.meta.addTags([
             {
                 name: 'description',
@@ -33,11 +33,11 @@ export class ExampleComponent implements OnInit, OnDestroy {
             },
             {
                 property: 'og:site_name',
-                content: 'Interview Ant',
+                content: 'Intvprep.',
             },
             {
                 property: 'og:site',
-                content: 'Interview Ant',
+                content: 'Intvprep.',
             },
             {
                 property: 'og:description',
@@ -46,7 +46,7 @@ export class ExampleComponent implements OnInit, OnDestroy {
             },
             {
                 property: 'og:image',
-                content: 'https://interviewant.tech/logo.PNG',
+                content: 'https://intvprep.com/logo.PNG',
             },
         ]);
 
