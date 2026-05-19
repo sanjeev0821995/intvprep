@@ -1,0 +1,708 @@
+{
+  "spring-security-interview-questions": [
+    {
+      "id": "1",
+      "Que": [
+        {
+          "q": "Q1 : How does Spring Security integrate with OAuth2 for authorization?",
+          "a": "Spring Security integrates with OAuth2 by acting as a client that communicates with an OAuth2 authorization server. When a user tries to access a protected resource, Spring Security redirects the user to the OAuth2 provider for authentication. After successful login, the provider sends an authorization code or access token back to the application. Spring Security then validates the token and grants access based on the user’s permissions and roles. This integration provides secure authentication and authorization for modern applications.",
+          "example": "Example: Using Google Login in a Spring Boot application with OAuth2 authentication.",
+          "type": "text",
+          "id": 1,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "Que": [
+        {
+          "q": "Q2 : Explain Cross-Origin Resource Sharing (CORS) and how you would configure it in a Spring Boot application.",
+          "a": "Cross-Origin Resource Sharing, also known as CORS, is a security mechanism that allows web applications running on one domain to access resources from another domain. Browsers normally block cross-origin requests for security reasons, but CORS allows trusted domains to communicate with the application. In Spring Boot, CORS can be configured using the @CrossOrigin annotation on controllers or by defining global CORS configuration in the security configuration class. This helps control which domains, HTTP methods, and headers are allowed to access the application.",
+          "example": "Example: Allowing requests from http://localhost:3000 to access Spring Boot APIs.",
+          "type": "text",
+          "id": 2,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "Que": [
+        {
+          "q": "Q3 : Explain SecurityContext and SecurityContextHolder in Spring Security.",
+          "a": "In Spring Security, the SecurityContext stores details about the currently authenticated user, such as username, roles, authorities, and authentication status. The SecurityContextHolder is a helper class that holds and manages the SecurityContext for the current thread of execution. It acts like a storage container for authentication information throughout the request lifecycle. This allows developers to access logged-in user details from anywhere in the application and make security-related decisions based on user roles and permissions.",
+          "example": "Example: Fetching the currently logged-in username using SecurityContextHolder.",
+          "type": "text",
+          "id": 3,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "Que": [
+        {
+          "q": "Q4 : What do you mean by OAuth2 Authorization Code Grant Type?",
+          "a": "The OAuth2 Authorization Code Grant Type is one of the most secure OAuth2 authentication flows. In this process, the user is redirected to the OAuth2 provider login page, such as Google or GitHub, for authentication. After successful login, the provider sends an authorization code to the client application. The backend server then exchanges this code for an access token. Since the token exchange happens on the server side, sensitive credentials remain secure and are not exposed to the browser.",
+          "example": "Example: Logging into an application using Google OAuth2 authentication.",
+          "type": "text",
+          "id": 4,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "Que": [
+        {
+          "q": "Q5 : How does Spring Security protect against CSRF attacks?",
+          "a": "Spring Security protects against Cross-Site Request Forgery attacks by generating a unique CSRF token for each user session. This token must be included in every state-changing request, such as POST, PUT, or DELETE requests. When the request reaches the server, Spring Security validates the token to ensure the request is legitimate and originated from the authenticated user. CSRF protection is commonly enabled by default in Spring Security applications.",
+          "example": "Example: Adding CSRF tokens in form submissions for secure authentication.",
+          "type": "text",
+          "id": 5,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "Que": [
+        {
+          "q": "Q6 : Under what circumstances might you disable CSRF protection?",
+          "a": "CSRF protection is usually disabled for stateless REST APIs that are accessed by mobile applications, external systems, or non-browser clients. Since these APIs generally use token-based authentication like JWT instead of session-based authentication, the risk of CSRF attacks is lower. Disabling CSRF in such cases simplifies API communication while maintaining security through tokens.",
+          "example": "Example: Disabling CSRF for JWT-based REST APIs in Spring Boot.",
+          "type": "text",
+          "id": 6,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "Que": [
+        {
+          "q": "Q7 : How can you implement method-level security in a Spring application?",
+          "a": "Method-level security in Spring Security can be implemented using annotations such as @PreAuthorize, @PostAuthorize, and @Secured. These annotations are placed directly on methods to control access based on user roles, permissions, or custom conditions. This approach provides fine-grained security control because authorization checks happen before or after method execution.",
+          "example": "Example: @PreAuthorize(\"hasRole('ADMIN')\") used on admin service methods.",
+          "type": "text",
+          "id": 7,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "Que": [
+        {
+          "q": "Q8 : What are the advantages of method-level security?",
+          "a": "Method-level security provides fine-grained access control within the application. It allows developers to secure specific business methods instead of securing only URL endpoints. This improves flexibility, enhances application security, and keeps authorization logic close to business logic. It also makes applications easier to maintain and manage.",
+          "example": "Example: Restricting delete operations only to ADMIN users while allowing read operations for USER roles.",
+          "type": "text",
+          "id": 8,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "Que": [
+        {
+          "q": "Q9 : How would you secure an API Gateway using Spring Security?",
+          "a": "An API Gateway can be secured using Spring Security by validating authentication tokens like JWT or OAuth2 access tokens before forwarding requests to downstream microservices. The gateway acts as a centralized security layer, ensuring that only authenticated and authorized requests are allowed. This reduces duplicate security logic in individual microservices and improves overall system security.",
+          "example": "Example: Validating JWT tokens at Spring Cloud Gateway before routing requests.",
+          "type": "text",
+          "id": 9,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "Que": [
+        {
+          "q": "Q10 : How can you use Spring Expression Language (SpEL) for fine-grained access control?",
+          "a": "Spring Expression Language, also known as SpEL, can be used inside annotations like @PreAuthorize to create dynamic and fine-grained security rules. SpEL expressions can check user roles, permissions, method parameters, or custom conditions before granting access. This allows developers to create highly flexible and context-aware authorization rules without cluttering business logic.",
+          "example": "Example: @PreAuthorize(\"hasRole('ADMIN') and #id == authentication.principal.id\")",
+          "type": "text",
+          "id": 10,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+
+    {
+      "id": "11",
+      "Que": [
+        {
+          "q": "Q11 : How would you configure role-based access control for ADMIN and USER roles in Spring Security?",
+          "a": "Role-based access control in Spring Security can be configured by defining URL patterns and assigning roles to them inside the security configuration. Different API endpoints can be restricted based on user roles such as ADMIN and USER. Spring Security checks the authenticated user’s role before allowing access to the requested resource. This helps ensure that users can only access functionalities they are authorized for.",
+          "example": "Example: Allowing '/admin/**' endpoints only for ADMIN users and '/user/**' endpoints for USER roles.",
+          "type": "text",
+          "id": 11,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "Que": [
+        {
+          "q": "Q12 : What do you mean by Digest Authentication?",
+          "a": "Digest Authentication is a security mechanism where the actual password is never sent directly over the network. Instead, the password is converted into a hashed value along with additional information before transmission. The server compares the hashed value with its own generated hash to authenticate the user. This approach is more secure than Basic Authentication because the real password is not exposed during communication.",
+          "example": "Example: Using hashed credentials during API authentication instead of sending plain text passwords.",
+          "type": "text",
+          "id": 12,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "Que": [
+        {
+          "q": "Q13 : What is the best practice for storing passwords in Spring Security?",
+          "a": "The best practice for storing passwords in Spring Security is to never store passwords in plain text format. Passwords should always be hashed using strong one-way hashing algorithms like BCrypt. Spring Security provides BCryptPasswordEncoder for secure password hashing. Salting is also automatically handled by BCrypt, which adds extra security against rainbow table attacks and brute-force attacks.",
+          "example": "Example: Using BCryptPasswordEncoder to encode passwords before storing them in the database.",
+          "type": "text",
+          "id": 13,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "Que": [
+        {
+          "q": "Q14 : Explain the purpose of the Spring Security Filter Chain.",
+          "a": "The Spring Security Filter Chain is a sequence of security filters that process incoming HTTP requests before they reach the application. Each filter performs a specific security task such as authentication, authorization, session management, CSRF validation, or exception handling. The filter chain ensures that every request passes through security checks in the correct order before accessing protected resources.",
+          "example": "Example: Authentication filters validating JWT tokens before API requests reach controllers.",
+          "type": "text",
+          "id": 14,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "Que": [
+        {
+          "q": "Q15 : How would you add or customize a filter in Spring Security?",
+          "a": "A custom filter can be added in Spring Security by creating a filter class and registering it within the filter chain using methods like addFilterBefore(), addFilterAfter(), or addFilterAt(). Custom filters are useful for implementing additional authentication logic, request logging, token validation, or custom security checks.",
+          "example": "Example: Adding a JWT authentication filter before UsernamePasswordAuthenticationFilter.",
+          "type": "text",
+          "id": 15,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "Que": [
+        {
+          "q": "Q16 : How does Spring Security handle session management?",
+          "a": "Spring Security manages user sessions after successful authentication. It creates and maintains sessions to track authenticated users across multiple requests. Spring Security also provides session management features like session fixation protection, invalid session handling, and concurrent session control to improve application security.",
+          "example": "Example: Automatically invalidating expired user sessions after logout.",
+          "type": "text",
+          "id": 16,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "Que": [
+        {
+          "q": "Q17 : What are concurrent sessions in Spring Security?",
+          "a": "Concurrent session management controls how many active sessions a user can have at the same time. Spring Security allows developers to limit concurrent sessions and define behavior when the session limit is exceeded. This helps improve security and prevents unauthorized multiple logins.",
+          "example": "Example: Restricting users to only one active login session at a time.",
+          "type": "text",
+          "id": 17,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "Que": [
+        {
+          "q": "Q18 : How would you debug unexpected access denial issues in Spring Security?",
+          "a": "To debug access denial issues, I would first check the security configuration, roles, and permissions assigned to the user. Then I would review application logs and enable Spring Security debug logging for detailed information. I would also verify method-level security annotations, URL access rules, and authentication tokens to identify why access is being denied.",
+          "example": "Example: Enabling debug logs using logging.level.org.springframework.security=DEBUG.",
+          "type": "text",
+          "id": 18,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "Que": [
+        {
+          "q": "Q19 : How do you implement dynamic access-control policies in Spring Security?",
+          "a": "Dynamic access-control policies can be implemented using Spring Expression Language (SpEL) and runtime authorization checks. Access decisions can be based on user roles, permissions, method parameters, database values, or application conditions. This provides flexible and context-aware authorization instead of hardcoded security rules.",
+          "example": "Example: Granting access only if the logged-in user owns the requested resource.",
+          "type": "text",
+          "id": 19,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "Que": [
+        {
+          "q": "Q20 : How do you test security configurations in Spring applications?",
+          "a": "Security configurations in Spring applications can be tested using Spring Security testing support with annotations like @WithMockUser and @WithAnonymousUser. MockMvc is commonly used to simulate API requests and validate authentication and authorization behavior. These tests help verify whether secured endpoints correctly allow or deny access based on user roles and permissions.",
+          "example": "Example: Testing admin APIs using @WithMockUser(roles = 'ADMIN').",
+          "type": "text",
+          "id": 20,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+
+    {
+      "id": "21",
+      "Que": [
+        {
+          "q": "Q21 : Explain salting and its usage in Spring Security.",
+          "a": "Salting is the process of adding a random value to a password before hashing it. This makes each password hash unique, even if two users have the same password. Salting improves security by protecting against rainbow table attacks and hash comparison attacks. In Spring Security, BCryptPasswordEncoder automatically handles salting while encoding passwords. This ensures that passwords remain secure even if database data is compromised.",
+          "example": "Example: Two users having the same password will still have different hashed values because of salting.",
+          "type": "text",
+          "id": 21,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "Que": [
+        {
+          "q": "Q22 : What is AuthenticationManager in Spring Security?",
+          "a": "AuthenticationManager is one of the core interfaces in Spring Security responsible for processing authentication requests. It verifies user credentials like username and password and decides whether authentication is successful or not. AuthenticationManager acts as the main entry point for authentication processing in Spring Security.",
+          "example": "Example: Validating login credentials entered by a user during authentication.",
+          "type": "text",
+          "id": 22,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "Que": [
+        {
+          "q": "Q23 : What is ProviderManager in Spring Security?",
+          "a": "ProviderManager is the default implementation of AuthenticationManager in Spring Security. It works with multiple AuthenticationProviders and checks each provider until one successfully authenticates the user. This design allows Spring Security to support multiple authentication mechanisms such as database authentication, LDAP authentication, and OAuth2 authentication.",
+          "example": "Example: Using one provider for database login and another for LDAP authentication.",
+          "type": "text",
+          "id": 23,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "Que": [
+        {
+          "q": "Q24 : How would you configure a custom access denied page in Spring Security?",
+          "a": "A custom access denied page can be configured in Spring Security using exception handling configuration. When a user tries to access a protected resource without proper permissions, Spring Security redirects the user to a custom error page instead of showing the default error message. This improves user experience and provides clearer guidance to users.",
+          "example": "Example: Redirecting unauthorized users to '/access-denied' page.",
+          "type": "text",
+          "id": 24,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "Que": [
+        {
+          "q": "Q25 : What is authentication in Spring Security?",
+          "a": "Authentication is the process of verifying the identity of a user. In Spring Security, authentication usually happens using credentials like username and password, tokens, or OAuth2 providers. Once the credentials are validated successfully, Spring Security marks the user as authenticated and stores the user details in the SecurityContext.",
+          "example": "Example: User login using username and password in a Spring Boot application.",
+          "type": "text",
+          "id": 25,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "Que": [
+        {
+          "q": "Q26 : What is authorization in Spring Security?",
+          "a": "Authorization is the process of checking whether an authenticated user has permission to access a specific resource or perform a certain action. Spring Security handles authorization using roles, authorities, and access rules defined in the security configuration or annotations.",
+          "example": "Example: Allowing only ADMIN users to access '/admin/**' APIs.",
+          "type": "text",
+          "id": 26,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "Que": [
+        {
+          "q": "Q27 : What is JWT authentication in Spring Security?",
+          "a": "JWT, also known as JSON Web Token, is a token-based authentication mechanism used in modern applications. After successful login, the server generates a JWT token containing user information and permissions. The client sends this token in every request, and Spring Security validates the token before granting access. JWT authentication is commonly used in stateless REST APIs.",
+          "example": "Example: Sending JWT token in Authorization header using Bearer token format.",
+          "type": "text",
+          "id": 27,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "Que": [
+        {
+          "q": "Q28 : What are AuthenticationProvider classes in Spring Security?",
+          "a": "AuthenticationProvider is an interface in Spring Security responsible for performing authentication logic. Different providers can authenticate users using different methods such as database authentication, LDAP, JWT, or OAuth2. Spring Security checks providers one by one until authentication succeeds.",
+          "example": "Example: DaoAuthenticationProvider used for username-password database authentication.",
+          "type": "text",
+          "id": 28,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "Que": [
+        {
+          "q": "Q29 : What is UserDetailsService in Spring Security?",
+          "a": "UserDetailsService is an interface used to load user-specific data during authentication. It fetches user details such as username, password, and authorities from the database or another source. Spring Security uses this information for validating user credentials and assigning permissions.",
+          "example": "Example: Loading user data from MySQL database during login authentication.",
+          "type": "text",
+          "id": 29,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "Que": [
+        {
+          "q": "Q30 : What is PasswordEncoder in Spring Security?",
+          "a": "PasswordEncoder is an interface used for hashing and verifying passwords securely in Spring Security. It prevents storing passwords in plain text format. Popular implementations include BCryptPasswordEncoder, which provides strong hashing and built-in salting for password security.",
+          "example": "Example: Encoding passwords using BCrypt before saving them into the database.",
+          "type": "text",
+          "id": 30,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+  
+    {
+      "id": "31",
+      "Que": [
+        {
+          "q": "Q31 : What is BCryptPasswordEncoder in Spring Security?",
+          "a": "BCryptPasswordEncoder is a password hashing implementation provided by Spring Security. It uses the BCrypt hashing algorithm to securely encode passwords before storing them in the database. BCrypt automatically handles salting and generates a unique hash each time, even for the same password. This improves security and protects against brute-force and rainbow table attacks.",
+          "example": "Example: Using new BCryptPasswordEncoder().encode(password) before saving user data.",
+          "type": "text",
+          "id": 31,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "Que": [
+        {
+          "q": "Q32 : What is Basic Authentication in Spring Security?",
+          "a": "Basic Authentication is a simple authentication mechanism where the username and password are sent in the HTTP Authorization header in encoded format. Spring Security validates these credentials before granting access to protected resources. Although it is easy to implement, it is generally used only in secure HTTPS environments because credentials can be exposed if transmitted over unsecured networks.",
+          "example": "Example: Sending username and password in Base64 encoded format for API authentication.",
+          "type": "text",
+          "id": 32,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "Que": [
+        {
+          "q": "Q33 : What is form-based authentication in Spring Security?",
+          "a": "Form-based authentication is a login mechanism where users enter their credentials through an HTML login form. Spring Security processes the login request, validates user credentials, and creates an authenticated session. This is one of the most commonly used authentication methods in web applications.",
+          "example": "Example: Login page with username and password fields secured by Spring Security.",
+          "type": "text",
+          "id": 33,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "Que": [
+        {
+          "q": "Q34 : What is stateless authentication?",
+          "a": "Stateless authentication means the server does not store session information for users. Each request contains all necessary authentication details, usually in the form of JWT tokens. Stateless authentication improves scalability and is commonly used in REST APIs and microservices architectures.",
+          "example": "Example: Sending JWT token in every API request without maintaining server sessions.",
+          "type": "text",
+          "id": 34,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "Que": [
+        {
+          "q": "Q35 : What is stateful authentication?",
+          "a": "Stateful authentication means the server stores user session information after successful login. Each subsequent request uses the stored session to identify the user. This approach is commonly used in traditional web applications with session-based authentication.",
+          "example": "Example: Maintaining logged-in user sessions using JSESSIONID cookies.",
+          "type": "text",
+          "id": 35,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "Que": [
+        {
+          "q": "Q36 : What is the difference between authentication and authorization?",
+          "a": "Authentication is the process of verifying the identity of a user, while authorization determines what resources or actions the authenticated user is allowed to access. Authentication happens first, followed by authorization. Both are essential for application security.",
+          "example": "Example: Login verifies user identity, while role checks decide whether the user can access admin APIs.",
+          "type": "text",
+          "id": 36,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "Que": [
+        {
+          "q": "Q37 : What is role-based access control (RBAC)?",
+          "a": "Role-Based Access Control, also known as RBAC, is a security model where permissions are assigned based on user roles. Instead of assigning permissions individually to each user, users are grouped into roles such as ADMIN, USER, or MANAGER. This simplifies security management and improves maintainability.",
+          "example": "Example: ADMIN users can manage users, while USER roles can only view data.",
+          "type": "text",
+          "id": 37,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "Que": [
+        {
+          "q": "Q38 : What is remember-me authentication in Spring Security?",
+          "a": "Remember-me authentication allows users to remain logged in even after closing the browser. Spring Security stores a remember-me token in cookies and uses it to automatically authenticate users during future visits. This improves user convenience but should be configured securely.",
+          "example": "Example: 'Remember Me' checkbox on a login page keeping users logged in for 7 days.",
+          "type": "text",
+          "id": 38,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "Que": [
+        {
+          "q": "Q39 : What is LDAP authentication in Spring Security?",
+          "a": "LDAP authentication allows Spring Security to authenticate users against an LDAP directory service such as Active Directory. LDAP is commonly used in enterprise applications for centralized user management and authentication.",
+          "example": "Example: Employees logging into company applications using corporate Active Directory credentials.",
+          "type": "text",
+          "id": 39,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "Que": [
+        {
+          "q": "Q40 : What is OAuth2 in Spring Security?",
+          "a": "OAuth2 is an authorization framework that allows secure access to protected resources without sharing user credentials directly with applications. Spring Security provides built-in support for OAuth2 login, client authentication, authorization servers, and resource servers. OAuth2 is widely used for social logins and secure API access.",
+          "example": "Example: Logging into an application using Google or GitHub OAuth2 authentication.",
+          "type": "text",
+          "id": 40,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+
+    {
+      "id": "41",
+      "Que": [
+        {
+          "q": "Q41 : What is a JWT token?",
+          "a": "JWT, also known as JSON Web Token, is a compact and secure token format used for authentication and authorization in modern applications. A JWT token contains encoded information such as user details, roles, and expiration time. It is digitally signed to ensure data integrity and security. JWT is commonly used in REST APIs because it supports stateless authentication and reduces server-side session management.",
+          "example": "Example: Sending JWT token in Authorization header using 'Bearer token' format.",
+          "type": "text",
+          "id": 41,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "Que": [
+        {
+          "q": "Q42 : What are the advantages of JWT authentication?",
+          "a": "JWT authentication provides several advantages such as stateless authentication, improved scalability, reduced server memory usage, and easier integration with microservices. Since JWT tokens contain user information inside the token itself, the server does not need to store session data. JWT also works well with mobile applications, SPAs, and distributed systems.",
+          "example": "Example: Using JWT authentication in microservices architecture without maintaining server sessions.",
+          "type": "text",
+          "id": 42,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "Que": [
+        {
+          "q": "Q43 : What is a Security Filter in Spring Security?",
+          "a": "A Security Filter in Spring Security is a component that intercepts HTTP requests and performs security-related operations such as authentication, authorization, session validation, CSRF protection, and exception handling. Multiple filters work together inside the Spring Security filter chain to secure application requests before they reach controllers.",
+          "example": "Example: JWT authentication filter validating tokens before processing API requests.",
+          "type": "text",
+          "id": 43,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "Que": [
+        {
+          "q": "Q44 : What is OncePerRequestFilter in Spring Security?",
+          "a": "OncePerRequestFilter is a Spring Security filter base class that guarantees a filter executes only once per request. It is commonly used for custom authentication filters such as JWT token validation. This prevents duplicate filter execution during request forwarding or internal dispatching.",
+          "example": "Example: Creating a custom JWT authentication filter extending OncePerRequestFilter.",
+          "type": "text",
+          "id": 44,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "Que": [
+        {
+          "q": "Q45 : What is exception handling in Spring Security?",
+          "a": "Exception handling in Spring Security is used to manage authentication and authorization errors gracefully. It handles exceptions such as unauthorized access, access denied errors, invalid credentials, and expired tokens. Custom exception handlers can provide meaningful error responses or redirect users to custom error pages.",
+          "example": "Example: Returning custom JSON response for unauthorized API access attempts.",
+          "type": "text",
+          "id": 45,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "Que": [
+        {
+          "q": "Q46 : What is AccessDeniedException in Spring Security?",
+          "a": "AccessDeniedException occurs when an authenticated user tries to access a resource without having the required permissions or roles. Spring Security throws this exception during authorization checks when access rules fail.",
+          "example": "Example: USER role attempting to access ADMIN-only endpoints.",
+          "type": "text",
+          "id": 46,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "Que": [
+        {
+          "q": "Q47 : What is AuthenticationException in Spring Security?",
+          "a": "AuthenticationException occurs when user authentication fails due to invalid credentials, expired accounts, locked accounts, or invalid tokens. Spring Security handles these exceptions during the authentication process and prevents unauthorized access.",
+          "example": "Example: Login failure due to incorrect username or password.",
+          "type": "text",
+          "id": 47,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "Que": [
+        {
+          "q": "Q48 : What is the difference between hasRole and hasAuthority in Spring Security?",
+          "a": "hasRole checks whether the user has a specific role, while hasAuthority checks for a specific authority or permission. Roles are generally prefixed with 'ROLE_' internally in Spring Security. Authorities provide more fine-grained access control compared to roles.",
+          "example": "Example: hasRole('ADMIN') versus hasAuthority('DELETE_USER').",
+          "type": "text",
+          "id": 48,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "Que": [
+        {
+          "q": "Q49 : What are the advantages of Spring Security?",
+          "a": "Spring Security provides strong authentication and authorization support for Java applications. It offers features such as role-based access control, OAuth2 integration, JWT authentication, CSRF protection, session management, method-level security, and password encryption. It is highly customizable, integrates well with Spring Boot, and is widely used in enterprise applications.",
+          "example": "Example: Securing REST APIs using JWT and role-based authorization in Spring Boot.",
+          "type": "text",
+          "id": 49,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "Que": [
+        {
+          "q": "Q50 : Why is Spring Security widely used in enterprise applications?",
+          "a": "Spring Security is widely used in enterprise applications because it provides a complete and flexible security framework for authentication and authorization. It supports modern security standards like OAuth2, JWT, LDAP, and SAML. It also integrates seamlessly with Spring Boot and microservices architectures. Enterprise companies prefer Spring Security because it is highly secure, customizable, scalable, and supported by a large developer community.",
+          "example": "Example: Using Spring Security in banking and enterprise-level applications for secure API and user authentication.",
+          "type": "text",
+          "id": 50,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    }
+  ]
+}
