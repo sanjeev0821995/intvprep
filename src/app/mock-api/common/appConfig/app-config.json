@@ -87,6 +87,14 @@
             "imgUrl": "git",
             "buttonName": "Continue",
             "description": "All git Interview Questions from beginner to advanced"
+        },
+        {
+            "id": "/basic-springboot-interview-questions",
+            "title": "Basic Springboot Interview Questions",
+            "category": "springboot",
+            "imgUrl": "springboot",
+            "buttonName": "Continue",
+            "description": "All springboot Interview Questions from beginner to advanced"
         }
     ]
 }

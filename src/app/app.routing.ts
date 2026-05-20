@@ -142,6 +142,127 @@ export const appRoutes: Route[] = [
             ),
     },
     {
+        path: 'java-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                m => m.ViewContentModule
+            ),
+    },
+    {
+        path: 'basic-springboot-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                m => m.ViewContentModule
+            ),
+    },
+    {
+        path: 'datascience-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                m => m.ViewContentModule
+            ),
+    },
+    {
+        path: 'java-multithreading-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                m => m.ViewContentModule
+            ),
+    },
+    {
+        path: 'java-microservices-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                m => m.ViewContentModule
+            ),
+    },
+    {
+        path: 'playwright-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                m => m.ViewContentModule
+            ),
+    },
+    {
+        path: 'python-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                m => m.ViewContentModule
+            ),
+    },
+    {
+        path: 'selenium-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                m => m.ViewContentModule
+            ),
+    },
+    {
+        path: 'springboot-security-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                m => m.ViewContentModule
+            ),
+    },
+    {
+        path: 'springboot-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                m => m.ViewContentModule
+            ),
+    },
+    {
+        path: 'springbootJPA-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                m => m.ViewContentModule
+            ),
+    },
+    {
         path: 'contact-us',
         component: LayoutComponent,
         resolve: {
