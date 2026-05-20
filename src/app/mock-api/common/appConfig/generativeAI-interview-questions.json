@@ -1,0 +1,713 @@
+{
+  "generative-ai-interview-questions": [
+    {
+      "id": "1",
+      "Que": [
+        {
+          "q": "Q1 : What is Generative AI?",
+          "a": "Generative AI is a branch of Artificial Intelligence that focuses on creating new content such as text, images, videos, audio, and code using deep learning models. Unlike traditional AI systems that mainly classify or analyze existing data, Generative AI learns patterns, structures, and relationships from huge datasets and then generates completely new outputs that resemble human-created content. These models are trained using neural networks and large-scale datasets to understand language, visuals, and context. Generative AI is widely used in applications like ChatGPT, image generation tools, virtual assistants, recommendation systems, and automated content creation. It has become one of the most powerful technologies in modern software development and business automation.",
+          "example": "Example: ChatGPT generating answers, DALL·E creating images, and GitHub Copilot writing code automatically.",
+          "type": "text",
+          "id": 1,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "Que": [
+        {
+          "q": "Q2 : Explain the fundamental difference between an LLM's pre-training phase and its fine-tuning phase.",
+          "a": "The pre-training phase is the initial stage where a Large Language Model is trained on massive amounts of raw internet text, books, articles, and datasets to learn grammar, sentence structure, language patterns, reasoning, and world knowledge. During this phase, the model learns general-purpose intelligence through next-token prediction. Fine-tuning happens after pre-training and focuses on improving the model for specific tasks or domains using smaller, curated datasets. Fine-tuning adjusts the model’s weights to make it more accurate for applications such as customer support, coding assistance, medical AI, or instruction following. Pre-training creates the foundation model, while fine-tuning customizes the model for specialized business requirements and real-world tasks.",
+          "example": "Example: GPT models are pre-trained on internet-scale datasets and later fine-tuned for chatbot conversations or coding tasks.",
+          "type": "text",
+          "id": 2,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "Que": [
+        {
+          "q": "Q3 : What is a Transformer model in Generative AI?",
+          "a": "A Transformer model is a deep learning architecture introduced in 2017 that became the foundation of modern Generative AI and Large Language Models. Transformers use a mechanism called self-attention to process all words or tokens in a sequence simultaneously instead of sequentially like older recurrent neural networks. This architecture allows models to understand context, relationships, and dependencies between words much more efficiently. Transformers are highly scalable and support parallel computation, making them suitable for training very large AI models. Modern systems like GPT, BERT, Llama, and Gemini are all based on Transformer architecture. The Transformer revolutionized AI because it significantly improved language understanding, reasoning, and content generation capabilities.",
+          "example": "Example: GPT-4 and ChatGPT use Transformer-based neural networks for generating human-like responses.",
+          "type": "text",
+          "id": 3,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "Que": [
+        {
+          "q": "Q4 : What is tokenization and why is it necessary?",
+          "a": "Tokenization is the process of breaking text into smaller units called tokens before sending it to an AI model. Tokens can represent words, subwords, punctuation marks, or even characters depending on the tokenizer design. Neural networks cannot directly process raw text, so tokenization converts language into numerical representations that models can understand mathematically. Tokenization is important because it helps the model efficiently process language, manage vocabulary size, and improve memory optimization. Modern Large Language Models use advanced tokenization techniques such as Byte Pair Encoding and SentencePiece to handle multiple languages and unknown words efficiently. The quality of tokenization directly affects model performance, context understanding, and generation quality.",
+          "example": "Example: The sentence 'I love AI' may be converted into separate tokens like ['I', 'love', 'AI'].",
+          "type": "text",
+          "id": 4,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "Que": [
+        {
+          "q": "Q5 : What does hallucination mean in Large Language Models?",
+          "a": "Hallucination in Large Language Models refers to situations where the AI generates information that appears correct and convincing but is actually false, misleading, or completely fabricated. Hallucinations occur because LLMs predict the most probable sequence of words based on training patterns rather than verifying factual accuracy. The model may generate fake references, incorrect statistics, imaginary facts, or non-existent sources confidently. Hallucinations are one of the biggest challenges in Generative AI because they can reduce trust and reliability in critical domains such as healthcare, finance, and law. Techniques like Retrieval-Augmented Generation, fine-tuning, fact-checking systems, and human feedback are commonly used to reduce hallucinations and improve factual grounding.",
+          "example": "Example: An AI model inventing a fake research paper citation that does not actually exist.",
+          "type": "text",
+          "id": 5,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+
+    {
+      "id": "6",
+      "Que": [
+        {
+          "q": "Q6 : What is a prompt embedding?",
+          "a": "A prompt embedding is a numerical vector representation of input text that captures its semantic meaning and contextual relationships. When a user enters a prompt into a Large Language Model, the text is first tokenized and then converted into embeddings using embedding layers inside the neural network. These embeddings allow the model to mathematically understand language, relationships, emotions, meanings, and context. Similar prompts usually generate embeddings that are located close together in vector space. Prompt embeddings are extremely important because they help AI systems perform semantic search, recommendation systems, clustering, vector similarity matching, and Retrieval-Augmented Generation. Modern AI applications heavily depend on embeddings for efficient information retrieval and contextual understanding.",
+          "example": "Example: Similar prompts like 'buy laptop' and 'purchase computer' produce closely related embeddings in vector databases.",
+          "type": "text",
+          "id": 6,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "Que": [
+        {
+          "q": "Q7 : What is the purpose of the Temperature parameter in LLM text generation?",
+          "a": "The Temperature parameter controls the randomness and creativity of text generation in Large Language Models. It adjusts the probability distribution of token selection during output generation. A low temperature value such as 0.1 or 0.2 makes the model more deterministic and focused on selecting highly probable words, resulting in predictable and factual responses. A higher temperature value such as 0.8 or 1.0 increases randomness and creativity, allowing the model to generate more diverse and imaginative outputs. Temperature is important because it helps balance creativity and accuracy depending on the application. Lower temperatures are preferred for coding and factual tasks, while higher temperatures are commonly used for storytelling, brainstorming, and creative writing.",
+          "example": "Example: Temperature 0.2 is used for precise coding answers, while temperature 0.9 is used for creative story generation.",
+          "type": "text",
+          "id": 7,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "Que": [
+        {
+          "q": "Q8 : What is Retrieval-Augmented Generation (RAG)?",
+          "a": "Retrieval-Augmented Generation, also known as RAG, is an AI architecture that improves Large Language Model responses by combining information retrieval systems with text generation models. Instead of relying only on internal model knowledge, RAG retrieves relevant documents or database records from external sources and injects them into the prompt before generating a response. This approach improves factual accuracy, reduces hallucinations, and enables AI systems to access real-time or private organizational data without retraining the entire model. RAG systems usually involve embedding models, vector databases, semantic search, and LLMs working together. RAG is widely used in enterprise AI applications such as customer support systems, internal company knowledge assistants, and AI-powered search engines.",
+          "example": "Example: A company chatbot retrieving policy documents from a vector database before answering employee questions.",
+          "type": "text",
+          "id": 8,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "Que": [
+        {
+          "q": "Q9 : What is a Diffusion Model and what is its primary application?",
+          "a": "A Diffusion Model is a generative deep learning model used mainly for creating high-quality images, audio, and video content. It works by gradually adding noise to training data and then learning how to reverse the noise process step-by-step to reconstruct realistic outputs. During generation, the model starts with random noise and iteratively refines it into meaningful content. Diffusion Models became extremely popular because they can generate highly detailed and realistic outputs with strong visual quality. They are widely used in AI image generation systems, creative design tools, video synthesis, and audio generation applications. Compared to older GAN-based architectures, diffusion models generally produce more stable and higher-quality results.",
+          "example": "Example: Stable Diffusion generating realistic AI images from text prompts.",
+          "type": "text",
+          "id": 9,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "Que": [
+        {
+          "q": "Q10 : Explain what an embedding model does.",
+          "a": "An embedding model converts raw input data such as text, images, or audio into fixed-length numerical vectors called embeddings. These embeddings capture semantic meaning, relationships, and contextual similarities between different pieces of data. Embedding models are essential in modern AI systems because neural networks operate mathematically on vectors instead of raw human-readable content. Similar items produce embeddings located close together in vector space, enabling semantic search and similarity comparison. Embedding models are widely used in recommendation systems, search engines, vector databases, clustering, classification, and Retrieval-Augmented Generation systems. High-quality embeddings significantly improve AI system performance and contextual understanding.",
+          "example": "Example: Converting customer queries into embeddings for semantic search in a chatbot system.",
+          "type": "text",
+          "id": 10,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+  
+    {
+      "id": "11",
+      "Que": [
+        {
+          "q": "Q11 : What is a Foundation Model?",
+          "a": "A Foundation Model is a very large-scale AI model trained on massive and diverse datasets that can be adapted for multiple downstream tasks with minimal additional training. These models learn general-purpose knowledge, reasoning abilities, language understanding, and pattern recognition during the pre-training phase. Foundation Models serve as the base layer for many AI applications such as chatbots, code generation systems, image generators, recommendation engines, and virtual assistants. Instead of building separate models for every task from scratch, developers can fine-tune or prompt Foundation Models for specialized use cases. These models require enormous computational resources and data during training but provide exceptional flexibility and scalability across industries.",
+          "example": "Example: GPT-4, Gemini, Claude, Llama, and Stable Diffusion are examples of Foundation Models.",
+          "type": "text",
+          "id": 11,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "Que": [
+        {
+          "q": "Q12 : What are the parameters of a neural network?",
+          "a": "Parameters in a neural network are the internal numerical values called weights and biases that the model learns during training. These parameters determine how input data is processed and transformed into predictions or outputs. During training, optimization algorithms such as gradient descent continuously update these parameters to minimize prediction errors and improve model performance. The number of parameters in a model represents its learning capacity and complexity. Large Language Models often contain billions or even trillions of parameters, enabling them to learn highly complex language patterns and reasoning abilities. However, larger parameter counts also require more memory, computational power, and training data.",
+          "example": "Example: GPT models contain billions of trainable parameters used for understanding and generating human language.",
+          "type": "text",
+          "id": 12,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "Que": [
+        {
+          "q": "Q13 : What is the difference between an autoregressive model and a masked language model?",
+          "a": "Autoregressive models generate text sequentially by predicting the next token based only on previously generated tokens. They process language from left to right and are highly effective for text generation tasks such as chatbots, story generation, and code completion. GPT models are examples of autoregressive architectures. Masked Language Models, on the other hand, predict missing or masked tokens by looking at both left and right context simultaneously. These models focus more on understanding language rather than generating long text sequences. BERT is a popular example of a masked language model. Autoregressive models excel at content creation, while masked language models perform better in classification, search, and contextual understanding tasks.",
+          "example": "Example: GPT predicts the next word in a sentence, while BERT predicts hidden words inside a sentence.",
+          "type": "text",
+          "id": 13,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "Que": [
+        {
+          "q": "Q14 : What is standard prompt engineering?",
+          "a": "Prompt engineering is the process of designing and optimizing input instructions to guide Large Language Models toward generating accurate, relevant, and high-quality outputs. Since LLMs are highly sensitive to prompt wording, structure, examples, and formatting, carefully crafted prompts can significantly improve response quality without retraining the model. Prompt engineering involves defining tasks clearly, providing constraints, specifying response formats, and including examples when needed. It is widely used in AI applications such as chatbots, coding assistants, content generation, customer support systems, and business automation. Advanced prompt engineering techniques include chain-of-thought prompting, few-shot prompting, role-based prompting, and context injection.",
+          "example": "Example: Asking an AI model to 'Act as a Java interview expert and explain step-by-step' improves response quality.",
+          "type": "text",
+          "id": 14,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "Que": [
+        {
+          "q": "Q15 : What is the role of the context window in an LLM?",
+          "a": "The context window defines the maximum number of tokens a Large Language Model can process at one time during a conversation or task. It includes both user input and generated responses. A larger context window allows the model to remember longer conversations, analyze larger documents, and maintain better contextual understanding across multiple prompts. If the total token count exceeds the context window limit, older information is truncated, causing the model to lose memory of earlier context. Context window size is extremely important in applications involving document summarization, coding assistance, long conversations, and Retrieval-Augmented Generation systems. Modern AI systems continuously improve context window sizes to handle more complex workflows efficiently.",
+          "example": "Example: Models with large context windows can analyze entire PDFs, contracts, or long coding files in one prompt.",
+          "type": "text",
+          "id": 15,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+ 
+    {
+      "id": "16",
+      "Que": [
+        {
+          "q": "Q16 : Define what a multi-modal AI model is.",
+          "a": "A multi-modal AI model is an advanced artificial intelligence system capable of processing, understanding, and generating multiple types of data simultaneously, such as text, images, audio, video, and speech. Unlike traditional models that work with only one data type, multi-modal systems combine different modalities into a shared understanding space, enabling deeper contextual reasoning and interaction. These models can analyze relationships between visual and textual information together, making them highly useful for real-world applications. Multi-modal AI significantly improves human-computer interaction because it allows AI systems to understand complex user inputs naturally. Modern AI assistants, autonomous systems, healthcare applications, and content generation tools increasingly rely on multi-modal capabilities for more intelligent and accurate outputs.",
+          "example": "Example: GPT-4 Vision analyzing uploaded images while simultaneously answering text-based questions about them.",
+          "type": "text",
+          "id": 16,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "Que": [
+        {
+          "q": "Q17 : What is the difference between Zero-Shot and Few-Shot prompting?",
+          "a": "Zero-Shot prompting means asking a Large Language Model to perform a task without providing any examples inside the prompt. The model relies completely on its pre-trained knowledge and reasoning ability to generate the response. Few-Shot prompting provides a small number of example input-output pairs inside the prompt to guide the model toward the expected format, tone, or reasoning style. Few-Shot prompting usually improves consistency and accuracy for complex tasks because the model learns from the provided examples. Both techniques are widely used in prompt engineering, but Few-Shot prompting generally performs better when tasks require structured formatting, domain-specific responses, or higher precision.",
+          "example": "Example: Providing sample customer support replies before asking the model to generate a new response is Few-Shot prompting.",
+          "type": "text",
+          "id": 17,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "Que": [
+        {
+          "q": "Q18 : What is standard RLHF?",
+          "a": "RLHF, also known as Reinforcement Learning from Human Feedback, is a model alignment technique used to improve the behavior, helpfulness, and safety of Large Language Models. In RLHF, human reviewers evaluate model responses and rank them based on quality, usefulness, and correctness. These rankings are used to train a reward model that guides the AI system toward generating preferred outputs. Reinforcement learning algorithms such as PPO are then used to optimize the language model based on the reward signals. RLHF is extremely important because it helps AI systems produce safer, more aligned, and more human-friendly responses while reducing harmful, biased, or inappropriate outputs.",
+          "example": "Example: Human reviewers ranking chatbot responses to improve conversation quality in ChatGPT-like systems.",
+          "type": "text",
+          "id": 18,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "Que": [
+        {
+          "q": "Q19 : What is a parameter-efficient fine-tuning (PEFT) method?",
+          "a": "Parameter-Efficient Fine-Tuning, also known as PEFT, is a method used to adapt large AI models for specialized tasks without retraining all model parameters. Instead of updating billions of weights, PEFT trains only a small subset of additional parameters while keeping the majority of the original model frozen. This approach significantly reduces memory usage, computational cost, storage requirements, and training time. PEFT methods are especially useful when working with very large models on limited hardware resources. Popular PEFT techniques include LoRA, adapters, and prefix tuning. PEFT allows organizations to customize foundation models efficiently for domain-specific applications such as healthcare, finance, customer support, and coding systems.",
+          "example": "Example: Using LoRA to fine-tune a large language model for legal document analysis with limited GPU resources.",
+          "type": "text",
+          "id": 19,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "Que": [
+        {
+          "q": "Q20 : What is a Vector Database?",
+          "a": "A Vector Database is a specialized database designed to store, index, and search high-dimensional embedding vectors generated by AI models. Unlike traditional relational databases that search exact keywords or structured fields, vector databases perform semantic similarity searches by comparing vector distances mathematically. They are essential components of modern AI systems because embeddings capture semantic meaning and contextual relationships. Vector databases are heavily used in Retrieval-Augmented Generation systems, recommendation engines, semantic search applications, and AI assistants. Popular vector databases include Pinecone, Weaviate, ChromaDB, and Milvus. Efficient vector indexing techniques such as Approximate Nearest Neighbor search help these systems retrieve relevant information quickly even across massive datasets.",
+          "example": "Example: A chatbot retrieving the most semantically relevant company documents using vector similarity search.",
+          "type": "text",
+          "id": 20,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+
+    {
+      "id": "21",
+      "Que": [
+        {
+          "q": "Q21 : What is standard fine-tuning?",
+          "a": "Standard fine-tuning, also known as Full Parameter Fine-Tuning, is the process of updating all the trainable parameters of a pre-trained AI model using a smaller task-specific dataset. During this process, the model adjusts its internal weights to specialize in a particular domain, business requirement, or application. Unlike parameter-efficient fine-tuning methods, full fine-tuning modifies the entire neural network, which allows deeper behavioral adaptation and better customization. However, it requires significant computational resources, GPU memory, and storage because billions of parameters must be retrained. Standard fine-tuning is commonly used when organizations need maximum performance for highly specialized tasks such as medical AI systems, legal document analysis, financial prediction systems, or enterprise-specific chatbots.",
+          "example": "Example: Fine-tuning a base GPT model using medical datasets to create a healthcare assistant.",
+          "type": "text",
+          "id": 21,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "Que": [
+        {
+          "q": "Q22 : What is next-token prediction?",
+          "a": "Next-token prediction is the core training objective used in autoregressive Large Language Models such as GPT. During training, the model receives a sequence of tokens and learns to predict the most probable next token based on the previous context. By repeating this process across massive datasets containing books, websites, articles, and conversations, the model gradually learns grammar, reasoning, sentence structure, facts, and contextual relationships. The prediction process relies on probability distributions generated by neural network layers. Next-token prediction is extremely powerful because it allows models to learn language patterns without requiring manually labeled datasets. This simple yet scalable training objective is the foundation behind modern conversational AI and generative systems.",
+          "example": "Example: Given the phrase 'Artificial Intelligence is', the model predicts the next likely token such as 'transforming' or 'powerful'.",
+          "type": "text",
+          "id": 22,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "Que": [
+        {
+          "q": "Q23 : What is the difference between a base model and an instruct model?",
+          "a": "A base model is the raw version of a Large Language Model immediately after pre-training. It learns general language patterns and can continue text effectively, but it may not follow instructions properly or behave conversationally. Instruct models are created by further fine-tuning base models using instruction-response datasets and alignment techniques such as RLHF. This additional training teaches the model how to answer questions, follow commands, maintain safety guidelines, and interact naturally with users. Base models are mainly useful for research and advanced customization, while instruct models are optimized for real-world conversational AI applications and user-friendly interactions.",
+          "example": "Example: A base model may continue random text generation, while an instruct model responds properly to commands like 'Explain Java in simple words'.",
+          "type": "text",
+          "id": 23,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "Que": [
+        {
+          "q": "Q24 : What is catastrophic forgetting in machine learning?",
+          "a": "Catastrophic forgetting is a problem in machine learning where a model loses previously learned knowledge after being fine-tuned on a new task or dataset. This usually happens when the model aggressively updates its weights to optimize for the new task, causing older knowledge and general reasoning capabilities to be overwritten. Catastrophic forgetting is especially common in full parameter fine-tuning of Large Language Models using narrow domain-specific datasets. As a result, the model becomes highly specialized but performs poorly on broader tasks it originally handled well. Techniques such as experience replay, regularization, multi-task learning, and parameter-efficient fine-tuning are commonly used to reduce catastrophic forgetting and preserve general intelligence capabilities.",
+          "example": "Example: A chatbot fine-tuned only on legal data losing its ability to answer general knowledge questions accurately.",
+          "type": "text",
+          "id": 24,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "Que": [
+        {
+          "q": "Q25 : What is System 1 versus System 2 thinking in the context of AI models?",
+          "a": "System 1 and System 2 thinking are concepts borrowed from cognitive science and applied to AI reasoning systems. System 1 thinking refers to fast, intuitive, and automatic responses generated by predicting the next token quickly without deeper reasoning steps. Most standard Large Language Model outputs operate in this manner because they optimize for speed and fluent text generation. System 2 thinking introduces deliberate reasoning, structured analysis, step-by-step problem solving, and logical verification before producing a final answer. Techniques such as chain-of-thought prompting, reasoning frameworks, and external tools help simulate System 2 behavior in AI systems. Combining both approaches improves accuracy, reasoning quality, and reliability for complex tasks.",
+          "example": "Example: Solving a mathematical equation step-by-step using chain-of-thought reasoning demonstrates System 2 thinking.",
+          "type": "text",
+          "id": 25,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+  
+    {
+      "id": "26",
+      "Que": [
+        {
+          "q": "Q26 : What is Chain-of-Thought prompting?",
+          "a": "Chain-of-Thought prompting is a prompt engineering technique used to improve reasoning abilities in Large Language Models by encouraging the model to think step-by-step before generating the final answer. Instead of directly producing a response, the model explains intermediate reasoning steps, calculations, or logical analysis during the generation process. This approach significantly improves performance on complex reasoning tasks such as mathematics, coding, logical puzzles, and decision-making problems. Chain-of-Thought prompting helps reduce reasoning errors because the model breaks complicated problems into smaller understandable parts. It also improves transparency by allowing users to observe how the model arrived at its conclusion. Modern advanced AI systems heavily rely on reasoning-based prompting techniques for higher-quality outputs.",
+          "example": "Example: Asking an AI model to solve a math problem step-by-step instead of directly giving the final answer.",
+          "type": "text",
+          "id": 26,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "Que": [
+        {
+          "q": "Q27 : What is prompt injection in Generative AI security?",
+          "a": "Prompt injection is a security vulnerability where malicious or manipulated input prompts are used to override the intended instructions or behavior of a Large Language Model. Attackers may craft hidden instructions inside user inputs, uploaded documents, websites, or external data sources to manipulate AI responses, bypass safety restrictions, leak sensitive information, or trigger unintended actions. Prompt injection is one of the major security concerns in enterprise AI systems because modern AI models often interact with APIs, databases, browsers, and external tools. Organizations use techniques such as input validation, instruction isolation, access controls, and output filtering to reduce prompt injection risks and improve AI system security.",
+          "example": "Example: A malicious user instructing a chatbot to ignore previous safety rules and reveal confidential information.",
+          "type": "text",
+          "id": 27,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "Que": [
+        {
+          "q": "Q28 : What is quantization in Large Language Models?",
+          "a": "Quantization is a model optimization technique used to reduce the memory usage and computational requirements of Large Language Models by lowering the numerical precision of model weights and calculations. Instead of using high-precision formats such as 32-bit floating-point numbers, quantized models use lower-precision formats such as 16-bit, 8-bit, or 4-bit representations. This significantly decreases model size, speeds up inference, and enables deployment on smaller hardware devices with limited resources. Although quantization may slightly reduce model accuracy, advanced techniques minimize performance loss while improving efficiency. Quantization is extremely important for deploying AI models on edge devices, mobile applications, and cost-efficient production systems.",
+          "example": "Example: Running a 4-bit quantized LLM on a laptop GPU instead of requiring expensive cloud infrastructure.",
+          "type": "text",
+          "id": 28,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "Que": [
+        {
+          "q": "Q29 : What is latency in Generative AI systems?",
+          "a": "Latency in Generative AI systems refers to the amount of time required for the model to process input and generate a response. Lower latency is extremely important for real-time applications such as chatbots, voice assistants, customer support systems, and AI-powered search engines because users expect fast interactions. Several factors influence latency, including model size, hardware performance, context window length, token generation speed, network delays, and retrieval system complexity. Large models with billions of parameters often produce higher latency because they require extensive computation. Optimization techniques such as quantization, caching, batching, and efficient inference engines are commonly used to reduce latency and improve user experience.",
+          "example": "Example: A customer support chatbot taking 10 seconds to respond has higher latency than one responding in 1 second.",
+          "type": "text",
+          "id": 29,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "Que": [
+        {
+          "q": "Q30 : What is inference in Large Language Models?",
+          "a": "Inference is the process where a trained AI model uses learned knowledge to generate predictions or responses for new input data. During inference, the model does not learn or update its parameters; instead, it performs forward computations to generate outputs based on existing trained weights. In Large Language Models, inference involves tokenizing user input, processing it through transformer layers, calculating probability distributions, and generating tokens sequentially. Inference performance is extremely important because it directly affects speed, scalability, latency, and user experience in production AI systems. Optimizing inference is a major focus area in enterprise AI deployment.",
+          "example": "Example: ChatGPT generating a response after a user asks a question is called inference.",
+          "type": "text",
+          "id": 30,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+ 
+      "id": "31",
+      "Que": [
+        {
+          "q": "Q31 : What is beam search in text generation?",
+          "a": "Beam Search is a decoding algorithm used in Large Language Models and sequence generation systems to improve the quality of generated text. Instead of selecting only the single most probable token at each generation step, beam search keeps track of multiple highly probable token sequences simultaneously. These sequences are called beams. During every iteration, the algorithm expands and evaluates the best possible candidate sequences before selecting the final output. Beam search helps generate more coherent, grammatically correct, and contextually meaningful responses compared to simple greedy decoding. However, larger beam sizes increase computational cost and latency. Beam search is commonly used in machine translation, text summarization, speech recognition, and advanced AI content generation systems.",
+          "example": "Example: Machine translation systems using beam search to generate more accurate sentence translations.",
+          "type": "text",
+          "id": 31,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "Que": [
+        {
+          "q": "Q32 : What is Top-K sampling in Generative AI?",
+          "a": "Top-K sampling is a text generation technique used in Large Language Models to improve output diversity while controlling randomness. During token generation, instead of considering the entire vocabulary, the model selects only the top K most probable tokens and randomly chooses one from them. This prevents extremely unlikely tokens from being selected while still allowing creative variation in responses. Lower K values make responses more deterministic and focused, while higher K values increase diversity and creativity. Top-K sampling is commonly combined with temperature settings to balance coherence and creativity in AI-generated content.",
+          "example": "Example: Using Top-K sampling in AI storytelling applications to generate more varied and interesting narratives.",
+          "type": "text",
+          "id": 32,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "Que": [
+        {
+          "q": "Q33 : What is Top-P sampling in Large Language Models?",
+          "a": "Top-P sampling, also known as nucleus sampling, is a text generation technique where the model dynamically selects tokens from the smallest possible group whose combined probability exceeds a threshold value P. Unlike Top-K sampling, which uses a fixed number of tokens, Top-P adjusts the candidate pool size dynamically depending on probability distribution. This allows more flexible and natural text generation while maintaining contextual quality. Lower P values generate safer and more predictable outputs, while higher values increase creativity and diversity. Top-P sampling is widely used in conversational AI systems because it balances coherence and variation effectively.",
+          "example": "Example: Using Top-P value 0.9 allows the model to select from the most probable token group contributing to 90% cumulative probability.",
+          "type": "text",
+          "id": 33,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "Que": [
+        {
+          "q": "Q34 : What is LoRA in Generative AI?",
+          "a": "LoRA, also known as Low-Rank Adaptation, is a Parameter-Efficient Fine-Tuning technique used to customize Large Language Models with significantly lower computational requirements. Instead of retraining all model weights, LoRA introduces small trainable matrices into selected neural network layers while keeping the original model parameters frozen. This drastically reduces memory consumption, GPU requirements, and storage costs while still achieving strong fine-tuning performance. LoRA has become extremely popular because it enables organizations and developers to adapt large models on affordable hardware. It is widely used for domain adaptation, personalized AI systems, and specialized enterprise applications.",
+          "example": "Example: Fine-tuning a base language model for customer support using LoRA on a single GPU.",
+          "type": "text",
+          "id": 34,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "Que": [
+        {
+          "q": "Q35 : What is alignment in Large Language Models?",
+          "a": "Alignment refers to the process of ensuring that Large Language Models behave according to human values, safety guidelines, ethical standards, and intended user goals. Since LLMs learn from massive internet datasets containing both good and harmful information, alignment techniques are necessary to reduce toxic, unsafe, biased, or misleading outputs. Alignment is achieved using methods such as Reinforcement Learning from Human Feedback, supervised fine-tuning, safety filters, constitutional AI, and policy-based moderation systems. Proper alignment improves trustworthiness, reliability, and user safety in AI applications. Alignment is considered one of the most critical challenges in modern Generative AI development.",
+          "example": "Example: Preventing AI chatbots from generating harmful instructions or offensive responses using alignment techniques.",
+          "type": "text",
+          "id": 35,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+ 
+    {
+      "id": "36",
+      "Que": [
+        {
+          "q": "Q36 : What is Constitutional AI?",
+          "a": "Constitutional AI is a safety and alignment approach used in Generative AI systems where models are trained to follow a predefined set of ethical principles, behavioral rules, and safety guidelines called a constitution. Instead of relying only on human feedback, the AI model learns to critique and improve its own responses based on these principles. Constitutional AI helps reduce harmful, biased, toxic, or unsafe outputs while improving transparency and scalability in AI alignment. This method is especially useful because it reduces dependency on large amounts of human moderation and creates more consistent behavior across different tasks. Constitutional AI plays an important role in building responsible AI systems for enterprise, healthcare, education, and customer-facing applications.",
+          "example": "Example: An AI assistant refusing to generate harmful or illegal instructions based on predefined ethical guidelines.",
+          "type": "text",
+          "id": 36,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "Que": [
+        {
+          "q": "Q37 : What is model distillation in AI?",
+          "a": "Model distillation is a machine learning optimization technique where a smaller model, called the student model, learns from a larger and more powerful model called the teacher model. The goal is to transfer knowledge from the large model into a lightweight version that is faster, cheaper, and easier to deploy while maintaining good performance. During distillation, the student model learns not only final outputs but also probability distributions and internal patterns generated by the teacher model. Distillation is extremely important in Generative AI because very large models often require expensive hardware and high inference costs. Smaller distilled models make AI deployment possible on edge devices, mobile applications, and real-time systems.",
+          "example": "Example: Creating a lightweight chatbot model for smartphones using knowledge learned from a large GPT model.",
+          "type": "text",
+          "id": 37,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "Que": [
+        {
+          "q": "Q38 : What is synthetic data in Generative AI?",
+          "a": "Synthetic data refers to artificially generated data created using AI models instead of collecting real-world data directly from users or systems. Generative AI models can produce realistic text, images, audio, video, or structured datasets that closely resemble actual data while avoiding privacy and compliance risks. Synthetic data is widely used for model training, testing, simulation, and improving machine learning systems when real data is limited, sensitive, or expensive to obtain. It helps organizations scale AI development while protecting confidential information. However, the quality and diversity of synthetic data must be carefully validated to avoid introducing biases or unrealistic patterns into AI systems.",
+          "example": "Example: Generating artificial medical records for AI training without exposing real patient information.",
+          "type": "text",
+          "id": 38,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "Que": [
+        {
+          "q": "Q39 : What is an AI agent in Generative AI systems?",
+          "a": "An AI agent is an intelligent software system that can autonomously perform tasks, make decisions, interact with tools, and achieve goals using Large Language Models and external resources. Unlike traditional chatbots that only generate text responses, AI agents can plan actions, execute workflows, access APIs, retrieve information, and maintain memory across tasks. AI agents often combine reasoning, tool usage, retrieval systems, and automation capabilities to solve complex multi-step problems. Modern AI agents are increasingly used in customer support, software development, business automation, research assistance, and productivity tools. The development of autonomous AI agents is considered one of the major advancements in the Generative AI ecosystem.",
+          "example": "Example: An AI agent booking meetings, sending emails, and generating reports automatically using integrated business tools.",
+          "type": "text",
+          "id": 39,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "Que": [
+        {
+          "q": "Q40 : What is tool calling in Large Language Models?",
+          "a": "Tool calling is a capability in modern Large Language Models where the AI can interact with external tools, APIs, databases, calculators, browsers, or software systems to complete tasks more accurately and efficiently. Instead of relying only on internal knowledge, the model determines when external information or computation is required and invokes the appropriate tool automatically. Tool calling significantly improves factual accuracy, real-time information access, reasoning abilities, and task automation. It enables AI systems to perform actions such as searching the web, querying databases, executing code, retrieving documents, or interacting with enterprise systems. Tool usage is a major step toward building powerful AI agents and enterprise automation systems.",
+          "example": "Example: An AI assistant using a weather API to provide real-time weather updates instead of guessing information.",
+          "type": "text",
+          "id": 40,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+
+    {
+      "id": "41",
+      "Que": [
+        {
+          "q": "Q41 : What is prompt chaining in Generative AI?",
+          "a": "Prompt chaining is a technique in Generative AI where multiple prompts are connected together in a sequence to solve complex tasks step-by-step. Instead of asking the model to perform everything in one large prompt, the workflow is divided into smaller manageable tasks where the output of one prompt becomes the input for the next step. Prompt chaining improves reasoning quality, response accuracy, task organization, and overall workflow reliability. It is widely used in AI automation systems, research workflows, document summarization, customer support systems, and multi-step reasoning tasks. By breaking large problems into structured stages, prompt chaining helps reduce hallucinations and improves control over AI-generated outputs.",
+          "example": "Example: First summarizing a document, then extracting key points, and finally generating an email response using multiple chained prompts.",
+          "type": "text",
+          "id": 41,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "Que": [
+        {
+          "q": "Q42 : What is context grounding in Large Language Models?",
+          "a": "Context grounding is the process of providing reliable external information to a Large Language Model so that responses are based on verified data instead of only relying on internal training knowledge. Grounding helps improve factual accuracy, reduce hallucinations, and make AI outputs more trustworthy. This is commonly achieved using Retrieval-Augmented Generation systems, vector databases, enterprise documents, APIs, or real-time search systems. Context grounding is extremely important in business applications where accurate and up-to-date information is required. Without grounding, models may generate confident but incorrect answers because they predict language patterns rather than verify facts.",
+          "example": "Example: A company chatbot retrieving employee policy documents before answering HR-related questions.",
+          "type": "text",
+          "id": 42,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "Que": [
+        {
+          "q": "Q43 : What is semantic search in Generative AI?",
+          "a": "Semantic search is an advanced information retrieval technique where AI systems search based on meaning and context instead of exact keyword matching. It uses embedding models and vector similarity calculations to identify content that is semantically related to the user query. Semantic search improves search accuracy because it understands intent, synonyms, relationships, and contextual meaning between words. This technique is widely used in AI-powered search engines, recommendation systems, enterprise chatbots, and Retrieval-Augmented Generation applications. Vector databases are commonly used to store embeddings and perform fast semantic similarity searches across large datasets.",
+          "example": "Example: Searching for 'buy laptop' and still finding results related to 'purchase computer' because the meanings are semantically similar.",
+          "type": "text",
+          "id": 43,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "Que": [
+        {
+          "q": "Q44 : What is hallucination mitigation in Generative AI?",
+          "a": "Hallucination mitigation refers to techniques used to reduce false, fabricated, or misleading outputs generated by Large Language Models. Since LLMs generate responses based on probability predictions instead of real-time fact verification, hallucinations can occur frequently in complex or domain-specific tasks. Mitigation strategies include Retrieval-Augmented Generation, fine-tuning, prompt engineering, fact-checking systems, external tool integration, context grounding, and human feedback mechanisms. Reducing hallucinations is extremely important in industries such as healthcare, law, banking, and enterprise AI where incorrect information can cause serious consequences. Reliable AI systems focus heavily on grounding and verification methods to improve trustworthiness.",
+          "example": "Example: Using external knowledge databases to verify answers before displaying them to users.",
+          "type": "text",
+          "id": 44,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "Que": [
+        {
+          "q": "Q45 : What is token limit in Large Language Models?",
+          "a": "The token limit refers to the maximum number of tokens a Large Language Model can process during a single interaction. Tokens include both user input and generated responses. Since transformer-based models require significant computational resources for processing long sequences, context windows are limited to specific token capacities. If the token count exceeds the limit, older information may be truncated or removed from memory. Token limits directly affect conversation length, document analysis capability, and contextual understanding. Modern AI systems continuously increase token limits to support larger workflows such as analyzing long PDFs, codebases, contracts, and enterprise documents.",
+          "example": "Example: A model with a 128K token context window can process extremely large documents within one session.",
+          "type": "text",
+          "id": 45,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+ 
+    {
+      "id": "46",
+      "Que": [
+        {
+          "q": "Q46 : What is memory in AI agents and conversational systems?",
+          "a": "Memory in AI agents and conversational systems refers to the ability of the model or system to store, retrieve, and use previous interactions, context, or external information during conversations and task execution. Memory helps AI systems maintain continuity, personalization, and contextual understanding across multiple interactions instead of treating every prompt independently. There are different types of memory such as short-term memory, long-term memory, conversational memory, and external vector-based memory. Modern AI agents often use vector databases, retrieval systems, and session management techniques to store important information efficiently. Memory significantly improves user experience because the AI can remember preferences, previous discussions, workflows, and task history while performing complex multi-step operations.",
+          "example": "Example: A chatbot remembering a user’s preferred programming language across multiple conversations.",
+          "type": "text",
+          "id": 46,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "Que": [
+        {
+          "q": "Q47 : What is inference optimization in Generative AI?",
+          "a": "Inference optimization refers to techniques used to improve the speed, efficiency, scalability, and cost-effectiveness of AI model execution during prediction or response generation. Since Large Language Models require massive computational resources, optimized inference is critical for real-time production systems. Optimization techniques include quantization, batching, caching, pruning, tensor parallelism, distillation, hardware acceleration, and efficient inference engines. The goal is to reduce latency, memory usage, and infrastructure cost while maintaining acceptable model accuracy. Inference optimization is especially important in enterprise applications, mobile AI systems, cloud deployments, and customer-facing AI products where fast response times directly impact user experience and operational expenses.",
+          "example": "Example: Using 4-bit quantization to run a large language model efficiently on limited GPU hardware.",
+          "type": "text",
+          "id": 47,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "Que": [
+        {
+          "q": "Q48 : What is responsible AI in Generative AI systems?",
+          "a": "Responsible AI refers to the development and deployment of Artificial Intelligence systems in a safe, ethical, transparent, fair, and accountable manner. In Generative AI, responsible AI focuses on reducing harmful outputs, bias, misinformation, privacy violations, and security risks while ensuring models behave according to ethical guidelines and legal regulations. Responsible AI practices include fairness testing, explainability, content moderation, alignment techniques, human oversight, safety filters, and governance frameworks. Organizations implementing Generative AI must ensure that systems respect user privacy, avoid discrimination, and provide trustworthy outputs. Responsible AI has become a critical requirement because AI systems increasingly influence business decisions, healthcare, education, finance, and public information systems.",
+          "example": "Example: Preventing an AI recruitment system from generating biased hiring recommendations against specific groups.",
+          "type": "text",
+          "id": 48,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "Que": [
+        {
+          "q": "Q49 : What are the limitations of Large Language Models?",
+          "a": "Large Language Models are extremely powerful, but they still have several important limitations. They can generate hallucinations, produce incorrect or outdated information, inherit biases from training data, and struggle with true reasoning or factual verification. LLMs also require massive computational resources, expensive infrastructure, and significant energy consumption for training and deployment. Since these models predict patterns statistically rather than truly understanding concepts like humans, they may fail in complex logical reasoning or real-world decision-making situations. Privacy, security, and prompt injection attacks are additional concerns in enterprise AI systems. Understanding these limitations is critical for building reliable and safe Generative AI applications.",
+          "example": "Example: An AI model confidently generating incorrect legal or medical advice due to hallucination issues.",
+          "type": "text",
+          "id": 49,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "Que": [
+        {
+          "q": "Q50 : Why is Generative AI considered transformative for modern industries?",
+          "a": "Generative AI is considered transformative because it significantly improves automation, productivity, creativity, decision-making, and human-computer interaction across industries. These systems can generate content, analyze information, write code, automate workflows, assist in research, personalize user experiences, and support complex business operations at large scale. Industries such as healthcare, finance, education, software development, entertainment, cybersecurity, and customer support are rapidly adopting Generative AI to reduce operational costs and improve efficiency. Generative AI also enables organizations to create entirely new products and services that were previously impossible. Its ability to process natural language and generate human-like outputs makes it one of the most impactful technological advancements of the modern digital era.",
+          "example": "Example: Companies using AI copilots for coding, automated customer support, content generation, and enterprise productivity enhancement.",
+          "type": "text",
+          "id": 50,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    }
+  ]
+}
