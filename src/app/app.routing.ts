@@ -263,6 +263,28 @@ export const appRoutes: Route[] = [
             ),
     },
     {
+        path: 'agenticAI-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                m => m.ViewContentModule
+            ),
+    },
+    {
+        path: 'generativeAI-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                m => m.ViewContentModule
+            ),
+    },
+    {
         path: 'contact-us',
         component: LayoutComponent,
         resolve: {

@@ -375,6 +375,28 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('python-interview-questions');
 
             return 'python';
+        } else if (this.path.includes('generativeAI')) {
+            this.setTitle(
+        `Top 100+ Generative AI Interview Questions and Answers for Freshers & Experienced (${this.getYear()}) - Intvprep.`,
+    );
+    this.setMetaTag(
+        'Prepare the most asked Generative AI Interview Questions and Answers for freshers and experienced candidates to crack your next AI interview.',
+        'https://intvprep.com/logo.PNG',
+    );
+            this.trackUsers('generativeAI-interview-questions');
+
+            return 'generativeAI';
+        } else if (this.path.includes('agenticAI')) {
+            this.setTitle(
+        `Top 100+ Agentic AI Interview Questions and Answers for Freshers & Experienced (${this.getYear()}) - Intvprep.`,
+    );
+    this.setMetaTag(
+        'Prepare the most asked Agentic AI Interview Questions and Answers for freshers and experienced candidates to crack your next AI interview.',
+        'https://intvprep.com/logo.PNG',
+    );
+            this.trackUsers('agenticAI-interview-questions');
+
+            return 'agenticAI';
         } else if (this.path.includes('datascience')) {
             this.setTitle(
         `Top 100+ Data Science Questions and Answers for Freshers & Experienced (${this.getYear()}) - Intvprep.`,

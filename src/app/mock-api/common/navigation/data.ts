@@ -322,6 +322,20 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 link: '/python-interview-questions',
                 icon: 'heroicons_outline:code',
             },
+            {
+                id: 'generativeAI.basic',
+                title: 'Generative AI Interview Questions',
+                type: 'basic',
+                link: '/generativeAI-interview-questions',
+                icon: 'heroicons_outline:code',
+            },
+            {
+                id: 'agenticAI.basic',
+                title: 'Agentic AI Interview Questions',
+                type: 'basic',
+                link: '/agenticAI-interview-questions',
+                icon: 'heroicons_outline:code',
+            },
              {
                 id: 'data.science.basic',
                 title: 'Data Science Interview Questions',

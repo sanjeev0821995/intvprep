@@ -89,12 +89,108 @@
             "description": "All git Interview Questions from beginner to advanced"
         },
         {
+    "id": "/java-interview-questions",
+    "title": "Java Interview Questions",
+    "category": "java",
+    "imgUrl": "java",
+    "buttonName": "Continue",
+    "description": "All Java Interview Questions from beginner to advanced"
+},
+{
+    "id": "/java-microservices-interview-questions",
+    "title": "Java Microservices Interview Questions",
+    "category": "java",
+    "imgUrl": "java",
+    "buttonName": "Continue",
+    "description": "All Java Microservices Interview Questions from beginner to advanced"
+},
+{
+    "id": "/java-multithreading-interview-questions",
+    "title": "Java Multithreading Interview Questions",
+    "category": "java",
+    "imgUrl": "java",
+    "buttonName": "Continue",
+    "description": "All Java Multithreading Interview Questions from beginner to advanced"
+},
+        {
             "id": "/basic-springboot-interview-questions",
             "title": "Basic Springboot Interview Questions",
             "category": "springboot",
             "imgUrl": "springboot",
             "buttonName": "Continue",
-            "description": "All springboot Interview Questions from beginner to advanced"
-        }
+            "description": "All basic springboot Interview Questions"
+        },
+        {
+    "id": "/springboot-interview-questions",
+    "title": "Springboot Interview Questions",
+    "category": "springboot",
+    "imgUrl": "springboot",
+    "buttonName": "Continue",
+    "description": "All Springboot Interview Questions from beginner to advanced"
+},
+{
+    "id": "/springboot-security-interview-questions",
+    "title": "Springboot Security Interview Questions",
+    "category": "springboot",
+    "imgUrl": "springboot",
+    "buttonName": "Continue",
+    "description": "All Springboot Security Interview Questions from beginner to advanced"
+},
+{
+    "id": "/springbootJPA-interview-questions",
+    "title": "Springboot JPA Interview Questions",
+    "category": "springboot",
+    "imgUrl": "springboot",
+    "buttonName": "Continue",
+    "description": "All Springboot JPA Interview Questions from beginner to advanced"
+},
+        {
+    "id": "/selenium-interview-questions",
+    "title": "Selenium Interview Questions",
+    "category": "selenium",
+    "imgUrl": "selenium",
+    "buttonName": "Continue",
+    "description": "All Selenium Interview Questions from beginner to advanced"
+},
+        {
+    "id": "/playwright-interview-questions",
+    "title": "Playwright Interview Questions",
+    "category": "playwright",
+    "imgUrl": "playwright",
+    "buttonName": "Continue",
+    "description": "All Playwright Interview Questions from beginner to advanced"
+},
+{
+    "id": "/python-interview-questions",
+    "title": "Python Interview Questions",
+    "category": "python",
+    "imgUrl": "python",
+    "buttonName": "Continue",
+    "description": "All Python Interview Questions from beginner to advanced"
+},
+        {
+    "id": "/agenticAI-interview-questions",
+    "title": "Agentic AI Interview Questions",
+    "category": "agenticAI",
+    "imgUrl": "agenticAI",
+    "buttonName": "Continue",
+    "description": "All Agentic AI Interview Questions from beginner to advanced"
+},
+{
+    "id": "/generativeAI-interview-questions",
+    "title": "Generative AI Interview Questions",
+    "category": "generativeAI",
+    "imgUrl": "generativeAI",
+    "buttonName": "Continue",
+    "description": "All Generative AI Interview Questions from beginner to advanced"
+} ,
+{
+    "id": "/datascience-interview-questions",
+    "title": "Data Science Interview Questions",
+    "category": "datascience",
+    "imgUrl": "datascience",
+    "buttonName": "Continue",
+    "description": "All Data Science Interview Questions from beginner to advanced"
+}
     ]
 }
