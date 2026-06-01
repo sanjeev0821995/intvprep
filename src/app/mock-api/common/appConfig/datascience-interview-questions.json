@@ -1,707 +1,707 @@
 {
-  "data-science-interview-questions": [
-    {
-      "id": "1",
-      "Que": [
+    "datascience-interview-questions": [
         {
-          "q": "Q1 : What is the primary difference between Supervised and Unsupervised Learning?",
-          "a": "Supervised Learning and Unsupervised Learning are two major categories of machine learning. In Supervised Learning, the model is trained using labeled data, meaning the input data already contains the correct output values. The algorithm learns the relationship between input and output so it can make predictions on new unseen data. Supervised learning is mainly used for classification and regression problems. In Unsupervised Learning, the data is unlabeled, so the model tries to identify hidden patterns, structures, or relationships on its own without predefined answers. Unsupervised learning is commonly used for clustering, dimensionality reduction, and pattern recognition. Supervised learning focuses on prediction accuracy, while unsupervised learning focuses on discovering hidden insights from data.",
-          "example": "Example: Predicting house prices using historical labeled data is supervised learning, while grouping customers based on purchasing behavior is unsupervised learning.",
-          "type": "text",
-          "id": 1,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "Que": [
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is the primary difference between Supervised and Unsupervised Learning?",
+                    "a": "Supervised Learning and Unsupervised Learning are two major categories of machine learning. In Supervised Learning, the model is trained using labeled data, meaning the input data already contains the correct output values. The algorithm learns the relationship between input and output so it can make predictions on new unseen data. Supervised learning is mainly used for classification and regression problems. In Unsupervised Learning, the data is unlabeled, so the model tries to identify hidden patterns, structures, or relationships on its own without predefined answers. Unsupervised learning is commonly used for clustering, dimensionality reduction, and pattern recognition. Supervised learning focuses on prediction accuracy, while unsupervised learning focuses on discovering hidden insights from data.",
+                    "example": "Example: Predicting house prices using historical labeled data is supervised learning, while grouping customers based on purchasing behavior is unsupervised learning.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q2 : Explain the concept of Overfitting in machine learning models.",
-          "a": "Overfitting occurs when a machine learning model learns the training data too well, including noise, random fluctuations, and unnecessary details. As a result, the model performs extremely well on training data but fails to generalize properly on unseen testing data. Overfitting usually happens when the model is too complex compared to the amount of available training data. Common causes include excessive features, deep decision trees, and insufficient training data. Overfitting reduces the model’s real-world performance because the model memorizes data instead of learning meaningful patterns. Techniques such as cross-validation, regularization, pruning, dropout, and collecting more data are commonly used to reduce overfitting.",
-          "example": "Example: A model achieving 99% training accuracy but only 70% testing accuracy is likely overfitting.",
-          "type": "text",
-          "id": 2,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "Que": [
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : Explain the concept of Overfitting in machine learning models.",
+                    "a": "Overfitting occurs when a machine learning model learns the training data too well, including noise, random fluctuations, and unnecessary details. As a result, the model performs extremely well on training data but fails to generalize properly on unseen testing data. Overfitting usually happens when the model is too complex compared to the amount of available training data. Common causes include excessive features, deep decision trees, and insufficient training data. Overfitting reduces the model’s real-world performance because the model memorizes data instead of learning meaningful patterns. Techniques such as cross-validation, regularization, pruning, dropout, and collecting more data are commonly used to reduce overfitting.",
+                    "example": "Example: A model achieving 99% training accuracy but only 70% testing accuracy is likely overfitting.",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q3 : What are the definitions and differences between Mean, Median, and Mode?",
-          "a": "Mean, Median, and Mode are measures of central tendency used in statistics to summarize data. The Mean is the mathematical average obtained by dividing the sum of all values by the total number of observations. The Median is the middle value in a sorted dataset and is less affected by outliers. The Mode is the value that appears most frequently in the dataset. Mean is useful when data is evenly distributed, Median works better with skewed data or outliers, and Mode is commonly used for categorical data analysis.",
-          "example": "Example: In the dataset [2, 4, 4, 6, 8], Mean = 4.8, Median = 4, and Mode = 4.",
-          "type": "text",
-          "id": 3,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "Que": [
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : What are the definitions and differences between Mean, Median, and Mode?",
+                    "a": "Mean, Median, and Mode are measures of central tendency used in statistics to summarize data. The Mean is the mathematical average obtained by dividing the sum of all values by the total number of observations. The Median is the middle value in a sorted dataset and is less affected by outliers. The Mode is the value that appears most frequently in the dataset. Mean is useful when data is evenly distributed, Median works better with skewed data or outliers, and Mode is commonly used for categorical data analysis.",
+                    "example": "Example: In the dataset [2, 4, 4, 6, 8], Mean = 4.8, Median = 4, and Mode = 4.",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q4 : What is a Confusion Matrix, and what key components does it track?",
-          "a": "A Confusion Matrix is a performance evaluation table used for classification models. It compares actual target values with predicted values and helps analyze model performance in detail. The matrix mainly tracks four important metrics: True Positives (TP), True Negatives (TN), False Positives (FP), and False Negatives (FN). True Positives represent correctly predicted positive cases, while True Negatives represent correctly predicted negative cases. False Positives occur when the model incorrectly predicts positive outcomes, and False Negatives occur when actual positive cases are predicted as negative. A confusion matrix is extremely useful for calculating metrics such as accuracy, precision, recall, specificity, and F1-score.",
-          "example": "Example: In spam email detection, correctly identifying spam emails counts as True Positives.",
-          "type": "text",
-          "id": 4,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "Que": [
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : What is a Confusion Matrix, and what key components does it track?",
+                    "a": "A Confusion Matrix is a performance evaluation table used for classification models. It compares actual target values with predicted values and helps analyze model performance in detail. The matrix mainly tracks four important metrics: True Positives (TP), True Negatives (TN), False Positives (FP), and False Negatives (FN). True Positives represent correctly predicted positive cases, while True Negatives represent correctly predicted negative cases. False Positives occur when the model incorrectly predicts positive outcomes, and False Negatives occur when actual positive cases are predicted as negative. A confusion matrix is extremely useful for calculating metrics such as accuracy, precision, recall, specificity, and F1-score.",
+                    "example": "Example: In spam email detection, correctly identifying spam emails counts as True Positives.",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q5 : Define Precision and Recall in binary classification tasks.",
-          "a": "Precision and Recall are important evaluation metrics for classification models, especially in imbalanced datasets. Precision measures how many predicted positive cases are actually correct. It focuses on prediction quality and reduces false positives. Recall measures how many actual positive cases were correctly identified by the model. It focuses on capturing all important positive cases and reduces false negatives. High precision means fewer incorrect positive predictions, while high recall means fewer missed positive cases. The importance of precision or recall depends on the business problem.",
-          "example": "Example: In disease prediction, recall is important because missing actual patients can be dangerous.",
-          "type": "text",
-          "id": 5,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "Que": [
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : Define Precision and Recall in binary classification tasks.",
+                    "a": "Precision and Recall are important evaluation metrics for classification models, especially in imbalanced datasets. Precision measures how many predicted positive cases are actually correct. It focuses on prediction quality and reduces false positives. Recall measures how many actual positive cases were correctly identified by the model. It focuses on capturing all important positive cases and reduces false negatives. High precision means fewer incorrect positive predictions, while high recall means fewer missed positive cases. The importance of precision or recall depends on the business problem.",
+                    "example": "Example: In disease prediction, recall is important because missing actual patients can be dangerous.",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q6 : What is the bias-variance tradeoff in machine learning?",
-          "a": "The bias-variance tradeoff is one of the most important concepts in machine learning and directly affects model performance. Bias refers to the error caused when a model makes overly simple assumptions about the data, leading to underfitting. Variance refers to the error caused when a model becomes too sensitive to training data and captures noise, leading to overfitting. A high-bias model performs poorly because it cannot learn complex patterns, while a high-variance model performs poorly because it memorizes training data instead of generalizing. The main goal is to balance both bias and variance to achieve the best prediction accuracy on unseen data.",
-          "example": "Example: Linear Regression may suffer from high bias, while deep decision trees may suffer from high variance.",
-          "type": "text",
-          "id": 6,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "Que": [
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : What is the bias-variance tradeoff in machine learning?",
+                    "a": "The bias-variance tradeoff is one of the most important concepts in machine learning and directly affects model performance. Bias refers to the error caused when a model makes overly simple assumptions about the data, leading to underfitting. Variance refers to the error caused when a model becomes too sensitive to training data and captures noise, leading to overfitting. A high-bias model performs poorly because it cannot learn complex patterns, while a high-variance model performs poorly because it memorizes training data instead of generalizing. The main goal is to balance both bias and variance to achieve the best prediction accuracy on unseen data.",
+                    "example": "Example: Linear Regression may suffer from high bias, while deep decision trees may suffer from high variance.",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q7 : How do you identify and handle missing values inside a Pandas DataFrame?",
-          "a": "Missing values are very common in real-world datasets and must be handled carefully before training machine learning models. In Pandas, missing values can be identified using methods like isnull(), isna(), and sum() functions. Once identified, missing values can be handled in multiple ways depending on the business requirement. Rows or columns containing missing values can be removed using dropna(), or missing values can be replaced using fillna() with statistical values such as mean, median, or mode. Advanced methods like interpolation or predictive imputation can also be used for better accuracy.",
-          "example": "Example: df.isnull().sum() identifies missing values and df.fillna(df.mean()) replaces them using average values.",
-          "type": "text",
-          "id": 7,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "Que": [
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : How do you identify and handle missing values inside a Pandas DataFrame?",
+                    "a": "Missing values are very common in real-world datasets and must be handled carefully before training machine learning models. In Pandas, missing values can be identified using methods like isnull(), isna(), and sum() functions. Once identified, missing values can be handled in multiple ways depending on the business requirement. Rows or columns containing missing values can be removed using dropna(), or missing values can be replaced using fillna() with statistical values such as mean, median, or mode. Advanced methods like interpolation or predictive imputation can also be used for better accuracy.",
+                    "example": "Example: df.isnull().sum() identifies missing values and df.fillna(df.mean()) replaces them using average values.",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q8 : What is the purpose of data normalization and standardization?",
-          "a": "Normalization and standardization are feature scaling techniques used to improve machine learning model performance. Normalization scales data values between 0 and 1, making all features comparable regardless of their original range. Standardization transforms data so that it has a mean of 0 and a standard deviation of 1. These techniques are important because many machine learning algorithms such as KNN, SVM, and Neural Networks are sensitive to feature magnitude. Without scaling, features with larger values can dominate the learning process and reduce model accuracy.",
-          "example": "Example: Scaling salary values and age values before training a KNN model.",
-          "type": "text",
-          "id": 8,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "Que": [
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : What is the purpose of data normalization and standardization?",
+                    "a": "Normalization and standardization are feature scaling techniques used to improve machine learning model performance. Normalization scales data values between 0 and 1, making all features comparable regardless of their original range. Standardization transforms data so that it has a mean of 0 and a standard deviation of 1. These techniques are important because many machine learning algorithms such as KNN, SVM, and Neural Networks are sensitive to feature magnitude. Without scaling, features with larger values can dominate the learning process and reduce model accuracy.",
+                    "example": "Example: Scaling salary values and age values before training a KNN model.",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q9 : Explain the difference between L1 (Lasso) and L2 (Ridge) Regularization.",
-          "a": "L1 and L2 Regularization are techniques used to reduce overfitting in machine learning models. L1 Regularization, also known as Lasso Regression, adds the absolute value of coefficients as a penalty term in the cost function. It can shrink some coefficients completely to zero, effectively performing feature selection. L2 Regularization, also known as Ridge Regression, adds the squared value of coefficients as a penalty. It reduces coefficient values smoothly but usually does not eliminate features entirely. L1 is useful for selecting important features, while L2 is useful for reducing model complexity while retaining all variables.",
-          "example": "Example: Lasso regression removing unnecessary features automatically during training.",
-          "type": "text",
-          "id": 9,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "Que": [
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : Explain the difference between L1 (Lasso) and L2 (Ridge) Regularization.",
+                    "a": "L1 and L2 Regularization are techniques used to reduce overfitting in machine learning models. L1 Regularization, also known as Lasso Regression, adds the absolute value of coefficients as a penalty term in the cost function. It can shrink some coefficients completely to zero, effectively performing feature selection. L2 Regularization, also known as Ridge Regression, adds the squared value of coefficients as a penalty. It reduces coefficient values smoothly but usually does not eliminate features entirely. L1 is useful for selecting important features, while L2 is useful for reducing model complexity while retaining all variables.",
+                    "example": "Example: Lasso regression removing unnecessary features automatically during training.",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q10 : What is a p-value in statistical hypothesis testing?",
-          "a": "A p-value is a statistical measure used to determine the significance of test results in hypothesis testing. It represents the probability of obtaining the observed results assuming the null hypothesis is true. A smaller p-value indicates stronger evidence against the null hypothesis. In most cases, a p-value less than 0.05 is considered statistically significant, meaning the null hypothesis can be rejected. P-values are widely used in experiments, A/B testing, regression analysis, and scientific research to validate results.",
-          "example": "Example: A p-value of 0.01 indicates there is only a 1% probability that the observed result occurred randomly.",
-          "type": "text",
-          "id": 10,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-  
-    {
-      "id": "11",
-      "Que": [
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : What is a p-value in statistical hypothesis testing?",
+                    "a": "A p-value is a statistical measure used to determine the significance of test results in hypothesis testing. It represents the probability of obtaining the observed results assuming the null hypothesis is true. A smaller p-value indicates stronger evidence against the null hypothesis. In most cases, a p-value less than 0.05 is considered statistically significant, meaning the null hypothesis can be rejected. P-values are widely used in experiments, A/B testing, regression analysis, and scientific research to validate results.",
+                    "example": "Example: A p-value of 0.01 indicates there is only a 1% probability that the observed result occurred randomly.",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+
         {
-          "q": "Q11 : What is the difference between correlation and covariance?",
-          "a": "Correlation and covariance are statistical measures used to determine the relationship between two variables. Covariance indicates whether two variables move in the same direction or opposite directions, but it does not provide a standardized value, making interpretation difficult. Correlation is a normalized version of covariance that measures both the strength and direction of the relationship between variables. Correlation values always range between -1 and +1, making them easier to interpret. A positive value indicates variables move together, while a negative value indicates inverse movement.",
-          "example": "Example: A strong positive correlation between study hours and exam scores.",
-          "type": "text",
-          "id": 11,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "12",
-      "Que": [
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : What is the difference between correlation and covariance?",
+                    "a": "Correlation and covariance are statistical measures used to determine the relationship between two variables. Covariance indicates whether two variables move in the same direction or opposite directions, but it does not provide a standardized value, making interpretation difficult. Correlation is a normalized version of covariance that measures both the strength and direction of the relationship between variables. Correlation values always range between -1 and +1, making them easier to interpret. A positive value indicates variables move together, while a negative value indicates inverse movement.",
+                    "example": "Example: A strong positive correlation between study hours and exam scores.",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q12 : What is feature engineering in machine learning?",
-          "a": "Feature engineering is the process of creating, selecting, transforming, and improving input variables to increase machine learning model performance. It is one of the most important steps in data science because good features significantly improve prediction accuracy. Feature engineering includes tasks such as handling missing values, encoding categorical variables, creating new derived features, scaling data, and removing irrelevant variables. Effective feature engineering helps models learn meaningful patterns more efficiently.",
-          "example": "Example: Creating an 'Age Group' feature from a customer's age column.",
-          "type": "text",
-          "id": 12,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "13",
-      "Que": [
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : What is feature engineering in machine learning?",
+                    "a": "Feature engineering is the process of creating, selecting, transforming, and improving input variables to increase machine learning model performance. It is one of the most important steps in data science because good features significantly improve prediction accuracy. Feature engineering includes tasks such as handling missing values, encoding categorical variables, creating new derived features, scaling data, and removing irrelevant variables. Effective feature engineering helps models learn meaningful patterns more efficiently.",
+                    "example": "Example: Creating an 'Age Group' feature from a customer's age column.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q13 : What is one-hot encoding and why is it used?",
-          "a": "One-hot encoding is a technique used to convert categorical variables into numerical format so machine learning algorithms can process them. It creates separate binary columns for each category and assigns values of 1 or 0 depending on whether the category is present. This prevents algorithms from incorrectly assuming an order between categories.",
-          "example": "Example: Converting 'Red', 'Blue', and 'Green' into separate binary columns.",
-          "type": "text",
-          "id": 13,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "14",
-      "Que": [
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : What is one-hot encoding and why is it used?",
+                    "a": "One-hot encoding is a technique used to convert categorical variables into numerical format so machine learning algorithms can process them. It creates separate binary columns for each category and assigns values of 1 or 0 depending on whether the category is present. This prevents algorithms from incorrectly assuming an order between categories.",
+                    "example": "Example: Converting 'Red', 'Blue', and 'Green' into separate binary columns.",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q14 : What is cross-validation in machine learning?",
-          "a": "Cross-validation is a model evaluation technique used to measure how well a machine learning model generalizes to unseen data. The dataset is divided into multiple subsets, and the model is trained and tested several times using different data splits. This reduces the risk of overfitting and provides a more reliable performance estimate compared to a single train-test split.",
-          "example": "Example: Using 5-fold cross-validation where the dataset is divided into 5 parts for repeated training and testing.",
-          "type": "text",
-          "id": 14,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "15",
-      "Que": [
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : What is cross-validation in machine learning?",
+                    "a": "Cross-validation is a model evaluation technique used to measure how well a machine learning model generalizes to unseen data. The dataset is divided into multiple subsets, and the model is trained and tested several times using different data splits. This reduces the risk of overfitting and provides a more reliable performance estimate compared to a single train-test split.",
+                    "example": "Example: Using 5-fold cross-validation where the dataset is divided into 5 parts for repeated training and testing.",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q15 : What is the difference between training data and testing data?",
-          "a": "Training data is the portion of the dataset used to teach the machine learning model patterns and relationships between variables. Testing data is separate unseen data used to evaluate how well the trained model performs on new information. Proper separation of training and testing data helps measure model generalization and prevents data leakage.",
-          "example": "Example: Using 80% of data for training and 20% for testing.",
-          "type": "text",
-          "id": 15,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "16",
-      "Que": [
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : What is the difference between training data and testing data?",
+                    "a": "Training data is the portion of the dataset used to teach the machine learning model patterns and relationships between variables. Testing data is separate unseen data used to evaluate how well the trained model performs on new information. Proper separation of training and testing data helps measure model generalization and prevents data leakage.",
+                    "example": "Example: Using 80% of data for training and 20% for testing.",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q16 : What is Logistic Regression?",
-          "a": "Logistic Regression is a supervised machine learning algorithm mainly used for binary classification problems. It predicts the probability of a data point belonging to a particular class using the sigmoid activation function. Unlike Linear Regression, Logistic Regression outputs values between 0 and 1, making it suitable for classification tasks such as spam detection, disease prediction, and fraud detection.",
-          "example": "Example: Predicting whether an email is spam or not spam.",
-          "type": "text",
-          "id": 16,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "17",
-      "Que": [
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : What is Logistic Regression?",
+                    "a": "Logistic Regression is a supervised machine learning algorithm mainly used for binary classification problems. It predicts the probability of a data point belonging to a particular class using the sigmoid activation function. Unlike Linear Regression, Logistic Regression outputs values between 0 and 1, making it suitable for classification tasks such as spam detection, disease prediction, and fraud detection.",
+                    "example": "Example: Predicting whether an email is spam or not spam.",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q17 : What is Linear Regression?",
-          "a": "Linear Regression is a supervised machine learning algorithm used to predict continuous numerical values. It establishes a linear relationship between independent variables and the dependent variable using a straight-line equation. Linear Regression is widely used for forecasting, trend analysis, and predictive modeling.",
-          "example": "Example: Predicting house prices based on area, location, and number of rooms.",
-          "type": "text",
-          "id": 17,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "18",
-      "Que": [
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : What is Linear Regression?",
+                    "a": "Linear Regression is a supervised machine learning algorithm used to predict continuous numerical values. It establishes a linear relationship between independent variables and the dependent variable using a straight-line equation. Linear Regression is widely used for forecasting, trend analysis, and predictive modeling.",
+                    "example": "Example: Predicting house prices based on area, location, and number of rooms.",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q18 : What is the difference between classification and regression problems?",
-          "a": "Classification problems involve predicting discrete categories or labels, while regression problems involve predicting continuous numerical values. Classification models answer questions like yes/no or category selection, whereas regression models estimate measurable quantities.",
-          "example": "Example: Predicting whether a customer will buy a product is classification, while predicting product sales amount is regression.",
-          "type": "text",
-          "id": 18,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "19",
-      "Que": [
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : What is the difference between classification and regression problems?",
+                    "a": "Classification problems involve predicting discrete categories or labels, while regression problems involve predicting continuous numerical values. Classification models answer questions like yes/no or category selection, whereas regression models estimate measurable quantities.",
+                    "example": "Example: Predicting whether a customer will buy a product is classification, while predicting product sales amount is regression.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q19 : What is a Decision Tree in machine learning?",
-          "a": "A Decision Tree is a supervised learning algorithm used for both classification and regression tasks. It works by splitting the dataset into smaller subsets based on feature conditions, forming a tree-like structure. Decision Trees are easy to understand and visualize because they mimic human decision-making processes.",
-          "example": "Example: Predicting loan approval based on salary, age, and credit score.",
-          "type": "text",
-          "id": 19,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "20",
-      "Que": [
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : What is a Decision Tree in machine learning?",
+                    "a": "A Decision Tree is a supervised learning algorithm used for both classification and regression tasks. It works by splitting the dataset into smaller subsets based on feature conditions, forming a tree-like structure. Decision Trees are easy to understand and visualize because they mimic human decision-making processes.",
+                    "example": "Example: Predicting loan approval based on salary, age, and credit score.",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q20 : What is Random Forest and why is it used?",
-          "a": "Random Forest is an ensemble machine learning algorithm that combines multiple decision trees to improve prediction accuracy and reduce overfitting. Each tree is trained on different random subsets of data and features, and the final prediction is made using majority voting or averaging. Random Forest provides better generalization and stability compared to individual decision trees.",
-          "example": "Example: Using Random Forest for customer churn prediction in telecom companies.",
-          "type": "text",
-          "id": 20,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "21",
-      "Que": [
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : What is Random Forest and why is it used?",
+                    "a": "Random Forest is an ensemble machine learning algorithm that combines multiple decision trees to improve prediction accuracy and reduce overfitting. Each tree is trained on different random subsets of data and features, and the final prediction is made using majority voting or averaging. Random Forest provides better generalization and stability compared to individual decision trees.",
+                    "example": "Example: Using Random Forest for customer churn prediction in telecom companies.",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q21 : What is K-Nearest Neighbors (KNN) algorithm?",
-          "a": "K-Nearest Neighbors, also known as KNN, is a supervised machine learning algorithm used for both classification and regression problems. It works by identifying the nearest data points to a new input based on distance metrics such as Euclidean distance. The algorithm predicts the output based on the majority class or average value of its nearest neighbors. KNN is simple to implement and does not require a separate training phase because it stores all training data. However, it can become slow with large datasets because distance calculations increase significantly as data grows.",
-          "example": "Example: Predicting whether a customer will buy a product based on similar customer behavior.",
-          "type": "text",
-          "id": 21,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "22",
-      "Que": [
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : What is K-Nearest Neighbors (KNN) algorithm?",
+                    "a": "K-Nearest Neighbors, also known as KNN, is a supervised machine learning algorithm used for both classification and regression problems. It works by identifying the nearest data points to a new input based on distance metrics such as Euclidean distance. The algorithm predicts the output based on the majority class or average value of its nearest neighbors. KNN is simple to implement and does not require a separate training phase because it stores all training data. However, it can become slow with large datasets because distance calculations increase significantly as data grows.",
+                    "example": "Example: Predicting whether a customer will buy a product based on similar customer behavior.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q22 : What is Support Vector Machine (SVM)?",
-          "a": "Support Vector Machine, also known as SVM, is a supervised machine learning algorithm mainly used for classification tasks. It works by finding the optimal hyperplane that separates data points into different classes with the maximum possible margin. SVM performs well in high-dimensional datasets and can handle both linear and non-linear classification problems using kernel functions. It is widely used in text classification, image recognition, and bioinformatics applications.",
-          "example": "Example: Classifying emails as spam or non-spam using SVM.",
-          "type": "text",
-          "id": 22,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "23",
-      "Que": [
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : What is Support Vector Machine (SVM)?",
+                    "a": "Support Vector Machine, also known as SVM, is a supervised machine learning algorithm mainly used for classification tasks. It works by finding the optimal hyperplane that separates data points into different classes with the maximum possible margin. SVM performs well in high-dimensional datasets and can handle both linear and non-linear classification problems using kernel functions. It is widely used in text classification, image recognition, and bioinformatics applications.",
+                    "example": "Example: Classifying emails as spam or non-spam using SVM.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q23 : What is clustering in machine learning?",
-          "a": "Clustering is an unsupervised machine learning technique used to group similar data points together based on patterns or similarities. Unlike supervised learning, clustering does not use labeled data. The main objective is to identify hidden structures inside datasets. Clustering is widely used in customer segmentation, recommendation systems, anomaly detection, and image processing.",
-          "example": "Example: Grouping customers based on shopping behavior for marketing campaigns.",
-          "type": "text",
-          "id": 23,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "24",
-      "Que": [
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : What is clustering in machine learning?",
+                    "a": "Clustering is an unsupervised machine learning technique used to group similar data points together based on patterns or similarities. Unlike supervised learning, clustering does not use labeled data. The main objective is to identify hidden structures inside datasets. Clustering is widely used in customer segmentation, recommendation systems, anomaly detection, and image processing.",
+                    "example": "Example: Grouping customers based on shopping behavior for marketing campaigns.",
+                    "type": "text",
+                    "id": 23,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q24 : What is K-Means clustering?",
-          "a": "K-Means is one of the most popular clustering algorithms used in unsupervised learning. It divides data into K predefined clusters based on similarity. The algorithm works iteratively by assigning data points to the nearest cluster centroid and then recalculating centroid positions until convergence. K-Means is simple, fast, and effective for large datasets, but choosing the correct number of clusters can be challenging.",
-          "example": "Example: Segmenting customers into different groups based on purchase history.",
-          "type": "text",
-          "id": 24,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "25",
-      "Que": [
+            "id": "24",
+            "Que": [
+                {
+                    "q": "Q24 : What is K-Means clustering?",
+                    "a": "K-Means is one of the most popular clustering algorithms used in unsupervised learning. It divides data into K predefined clusters based on similarity. The algorithm works iteratively by assigning data points to the nearest cluster centroid and then recalculating centroid positions until convergence. K-Means is simple, fast, and effective for large datasets, but choosing the correct number of clusters can be challenging.",
+                    "example": "Example: Segmenting customers into different groups based on purchase history.",
+                    "type": "text",
+                    "id": 24,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q25 : What is dimensionality reduction?",
-          "a": "Dimensionality reduction is the process of reducing the number of input features while preserving important information in the dataset. High-dimensional data can increase model complexity, training time, and risk of overfitting. Dimensionality reduction techniques help simplify models, improve performance, and make visualization easier. It is commonly used in machine learning and data analysis.",
-          "example": "Example: Reducing hundreds of image features into a smaller set of important components.",
-          "type": "text",
-          "id": 25,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "26",
-      "Que": [
+            "id": "25",
+            "Que": [
+                {
+                    "q": "Q25 : What is dimensionality reduction?",
+                    "a": "Dimensionality reduction is the process of reducing the number of input features while preserving important information in the dataset. High-dimensional data can increase model complexity, training time, and risk of overfitting. Dimensionality reduction techniques help simplify models, improve performance, and make visualization easier. It is commonly used in machine learning and data analysis.",
+                    "example": "Example: Reducing hundreds of image features into a smaller set of important components.",
+                    "type": "text",
+                    "id": 25,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q26 : What is Principal Component Analysis (PCA)?",
-          "a": "Principal Component Analysis, also known as PCA, is a dimensionality reduction technique used to transform high-dimensional data into fewer dimensions while preserving maximum variance. PCA creates new variables called principal components that capture the most important information from the original dataset. It helps reduce computational cost and improves model efficiency.",
-          "example": "Example: Compressing image data while retaining important visual patterns.",
-          "type": "text",
-          "id": 26,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "27",
-      "Que": [
+            "id": "26",
+            "Que": [
+                {
+                    "q": "Q26 : What is Principal Component Analysis (PCA)?",
+                    "a": "Principal Component Analysis, also known as PCA, is a dimensionality reduction technique used to transform high-dimensional data into fewer dimensions while preserving maximum variance. PCA creates new variables called principal components that capture the most important information from the original dataset. It helps reduce computational cost and improves model efficiency.",
+                    "example": "Example: Compressing image data while retaining important visual patterns.",
+                    "type": "text",
+                    "id": 26,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q27 : What is feature selection in machine learning?",
-          "a": "Feature selection is the process of selecting the most relevant input variables for model training while removing unnecessary or redundant features. It improves model accuracy, reduces overfitting, decreases training time, and enhances interpretability. Feature selection techniques include filter methods, wrapper methods, and embedded methods.",
-          "example": "Example: Removing irrelevant customer ID columns before training a prediction model.",
-          "type": "text",
-          "id": 27,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "28",
-      "Que": [
+            "id": "27",
+            "Que": [
+                {
+                    "q": "Q27 : What is feature selection in machine learning?",
+                    "a": "Feature selection is the process of selecting the most relevant input variables for model training while removing unnecessary or redundant features. It improves model accuracy, reduces overfitting, decreases training time, and enhances interpretability. Feature selection techniques include filter methods, wrapper methods, and embedded methods.",
+                    "example": "Example: Removing irrelevant customer ID columns before training a prediction model.",
+                    "type": "text",
+                    "id": 27,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q28 : What is an outlier in data science?",
-          "a": "An outlier is a data point that differs significantly from other observations in a dataset. Outliers may occur due to errors, unusual behavior, or rare events. They can negatively affect statistical analysis and machine learning models, especially algorithms sensitive to extreme values. Detecting and handling outliers is an important step in data preprocessing.",
-          "example": "Example: A salary value of 10 million in a dataset where most salaries are below 100,000.",
-          "type": "text",
-          "id": 28,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "29",
-      "Que": [
+            "id": "28",
+            "Que": [
+                {
+                    "q": "Q28 : What is an outlier in data science?",
+                    "a": "An outlier is a data point that differs significantly from other observations in a dataset. Outliers may occur due to errors, unusual behavior, or rare events. They can negatively affect statistical analysis and machine learning models, especially algorithms sensitive to extreme values. Detecting and handling outliers is an important step in data preprocessing.",
+                    "example": "Example: A salary value of 10 million in a dataset where most salaries are below 100,000.",
+                    "type": "text",
+                    "id": 28,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q29 : How do you detect outliers in a dataset?",
-          "a": "Outliers can be detected using statistical and visualization techniques. Common methods include box plots, Z-score analysis, Interquartile Range (IQR), scatter plots, and standard deviation methods. Machine learning techniques such as Isolation Forest can also identify anomalies in large datasets. Proper outlier detection improves model quality and reliability.",
-          "example": "Example: Using the IQR method to identify values outside the acceptable range.",
-          "type": "text",
-          "id": 29,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "30",
-      "Que": [
+            "id": "29",
+            "Que": [
+                {
+                    "q": "Q29 : How do you detect outliers in a dataset?",
+                    "a": "Outliers can be detected using statistical and visualization techniques. Common methods include box plots, Z-score analysis, Interquartile Range (IQR), scatter plots, and standard deviation methods. Machine learning techniques such as Isolation Forest can also identify anomalies in large datasets. Proper outlier detection improves model quality and reliability.",
+                    "example": "Example: Using the IQR method to identify values outside the acceptable range.",
+                    "type": "text",
+                    "id": 29,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q30 : What is data preprocessing in machine learning?",
-          "a": "Data preprocessing is the process of cleaning, transforming, and preparing raw data before feeding it into machine learning models. It includes handling missing values, removing duplicates, encoding categorical variables, scaling features, detecting outliers, and feature engineering. Good preprocessing improves model accuracy, efficiency, and reliability because machine learning algorithms perform best on clean and structured data.",
-          "example": "Example: Filling missing values and scaling numerical features before training a prediction model.",
-          "type": "text",
-          "id": 30,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
- 
-    {
-      "id": "31",
-      "Que": [
+            "id": "30",
+            "Que": [
+                {
+                    "q": "Q30 : What is data preprocessing in machine learning?",
+                    "a": "Data preprocessing is the process of cleaning, transforming, and preparing raw data before feeding it into machine learning models. It includes handling missing values, removing duplicates, encoding categorical variables, scaling features, detecting outliers, and feature engineering. Good preprocessing improves model accuracy, efficiency, and reliability because machine learning algorithms perform best on clean and structured data.",
+                    "example": "Example: Filling missing values and scaling numerical features before training a prediction model.",
+                    "type": "text",
+                    "id": 30,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+
         {
-          "q": "Q31 : What is the difference between structured and unstructured data?",
-          "a": "Structured data is highly organized and stored in a fixed format such as rows and columns inside relational databases. It is easy to search, process, and analyze using SQL queries and data analysis tools. Examples include customer records, bank transactions, and sales reports. Unstructured data does not follow a predefined format and is more complex to process. It includes text files, images, videos, social media posts, emails, and audio recordings. Most real-world data generated today is unstructured, which is why technologies like big data processing, machine learning, and natural language processing are widely used to analyze it.",
-          "example": "Example: Excel spreadsheets contain structured data, while YouTube videos and social media posts contain unstructured data.",
-          "type": "text",
-          "id": 31,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "32",
-      "Que": [
+            "id": "31",
+            "Que": [
+                {
+                    "q": "Q31 : What is the difference between structured and unstructured data?",
+                    "a": "Structured data is highly organized and stored in a fixed format such as rows and columns inside relational databases. It is easy to search, process, and analyze using SQL queries and data analysis tools. Examples include customer records, bank transactions, and sales reports. Unstructured data does not follow a predefined format and is more complex to process. It includes text files, images, videos, social media posts, emails, and audio recordings. Most real-world data generated today is unstructured, which is why technologies like big data processing, machine learning, and natural language processing are widely used to analyze it.",
+                    "example": "Example: Excel spreadsheets contain structured data, while YouTube videos and social media posts contain unstructured data.",
+                    "type": "text",
+                    "id": 31,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q32 : What is the difference between AI, Machine Learning, and Deep Learning?",
-          "a": "Artificial Intelligence, also known as AI, is a broad field focused on creating systems that can simulate human intelligence and decision-making. Machine Learning is a subset of AI where systems learn patterns from data and improve automatically without explicit programming. Deep Learning is a subset of Machine Learning that uses artificial neural networks with multiple hidden layers to solve highly complex problems. AI is the overall concept, Machine Learning enables systems to learn from data, and Deep Learning specializes in advanced tasks such as image recognition, speech processing, and natural language understanding.",
-          "example": "Example: Chatbots use AI, recommendation systems use Machine Learning, and facial recognition systems use Deep Learning.",
-          "type": "text",
-          "id": 32,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "33",
-      "Que": [
+            "id": "32",
+            "Que": [
+                {
+                    "q": "Q32 : What is the difference between AI, Machine Learning, and Deep Learning?",
+                    "a": "Artificial Intelligence, also known as AI, is a broad field focused on creating systems that can simulate human intelligence and decision-making. Machine Learning is a subset of AI where systems learn patterns from data and improve automatically without explicit programming. Deep Learning is a subset of Machine Learning that uses artificial neural networks with multiple hidden layers to solve highly complex problems. AI is the overall concept, Machine Learning enables systems to learn from data, and Deep Learning specializes in advanced tasks such as image recognition, speech processing, and natural language understanding.",
+                    "example": "Example: Chatbots use AI, recommendation systems use Machine Learning, and facial recognition systems use Deep Learning.",
+                    "type": "text",
+                    "id": 32,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q33 : What is Natural Language Processing (NLP)?",
-          "a": "Natural Language Processing, also known as NLP, is a branch of Artificial Intelligence that enables computers to understand, interpret, process, and generate human language. NLP combines machine learning, linguistics, and deep learning techniques to analyze text and speech data. It is widely used in applications such as chatbots, language translation, sentiment analysis, virtual assistants, and voice recognition systems.",
-          "example": "Example: Google Translate and ChatGPT are applications that use NLP technologies.",
-          "type": "text",
-          "id": 33,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "34",
-      "Que": [
+            "id": "33",
+            "Que": [
+                {
+                    "q": "Q33 : What is Natural Language Processing (NLP)?",
+                    "a": "Natural Language Processing, also known as NLP, is a branch of Artificial Intelligence that enables computers to understand, interpret, process, and generate human language. NLP combines machine learning, linguistics, and deep learning techniques to analyze text and speech data. It is widely used in applications such as chatbots, language translation, sentiment analysis, virtual assistants, and voice recognition systems.",
+                    "example": "Example: Google Translate and ChatGPT are applications that use NLP technologies.",
+                    "type": "text",
+                    "id": 33,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q34 : What is a Neural Network in Deep Learning?",
-          "a": "A Neural Network is a computational model inspired by the structure and functioning of the human brain. It consists of interconnected nodes called neurons organized into input, hidden, and output layers. Neural networks learn patterns from data through training and are capable of solving complex tasks such as image recognition, speech recognition, and prediction problems. Deep neural networks contain multiple hidden layers, allowing them to learn highly complex relationships in data.",
-          "example": "Example: Image classification systems using convolutional neural networks to recognize objects.",
-          "type": "text",
-          "id": 34,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "35",
-      "Que": [
+            "id": "34",
+            "Que": [
+                {
+                    "q": "Q34 : What is a Neural Network in Deep Learning?",
+                    "a": "A Neural Network is a computational model inspired by the structure and functioning of the human brain. It consists of interconnected nodes called neurons organized into input, hidden, and output layers. Neural networks learn patterns from data through training and are capable of solving complex tasks such as image recognition, speech recognition, and prediction problems. Deep neural networks contain multiple hidden layers, allowing them to learn highly complex relationships in data.",
+                    "example": "Example: Image classification systems using convolutional neural networks to recognize objects.",
+                    "type": "text",
+                    "id": 34,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q35 : What is Big Data?",
-          "a": "Big Data refers to extremely large and complex datasets that cannot be processed efficiently using traditional data processing systems. Big Data is commonly defined using the 5Vs: Volume, Velocity, Variety, Veracity, and Value. Big Data technologies help organizations process massive amounts of structured and unstructured data for business insights, predictions, and decision-making.",
-          "example": "Example: Social media platforms processing billions of user interactions daily.",
-          "type": "text",
-          "id": 35,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "36",
-      "Que": [
+            "id": "35",
+            "Que": [
+                {
+                    "q": "Q35 : What is Big Data?",
+                    "a": "Big Data refers to extremely large and complex datasets that cannot be processed efficiently using traditional data processing systems. Big Data is commonly defined using the 5Vs: Volume, Velocity, Variety, Veracity, and Value. Big Data technologies help organizations process massive amounts of structured and unstructured data for business insights, predictions, and decision-making.",
+                    "example": "Example: Social media platforms processing billions of user interactions daily.",
+                    "type": "text",
+                    "id": 35,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q36 : What is Hadoop and why is it used?",
-          "a": "Hadoop is an open-source Big Data framework designed for storing and processing massive datasets across distributed computer clusters. It provides scalability, fault tolerance, and high-performance distributed processing. Hadoop mainly consists of HDFS for storage and MapReduce for data processing. It is widely used in big data analytics and large-scale data management.",
-          "example": "Example: Processing terabytes of customer transaction data using Hadoop clusters.",
-          "type": "text",
-          "id": 36,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "37",
-      "Que": [
+            "id": "36",
+            "Que": [
+                {
+                    "q": "Q36 : What is Hadoop and why is it used?",
+                    "a": "Hadoop is an open-source Big Data framework designed for storing and processing massive datasets across distributed computer clusters. It provides scalability, fault tolerance, and high-performance distributed processing. Hadoop mainly consists of HDFS for storage and MapReduce for data processing. It is widely used in big data analytics and large-scale data management.",
+                    "example": "Example: Processing terabytes of customer transaction data using Hadoop clusters.",
+                    "type": "text",
+                    "id": 36,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q37 : What is Apache Spark?",
-          "a": "Apache Spark is a fast and powerful distributed data processing framework used for big data analytics and machine learning. Unlike Hadoop MapReduce, Spark processes data in memory, making it significantly faster for large-scale computations. Spark supports batch processing, streaming, SQL queries, graph processing, and machine learning.",
-          "example": "Example: Real-time fraud detection systems using Apache Spark streaming.",
-          "type": "text",
-          "id": 37,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "38",
-      "Que": [
+            "id": "37",
+            "Que": [
+                {
+                    "q": "Q37 : What is Apache Spark?",
+                    "a": "Apache Spark is a fast and powerful distributed data processing framework used for big data analytics and machine learning. Unlike Hadoop MapReduce, Spark processes data in memory, making it significantly faster for large-scale computations. Spark supports batch processing, streaming, SQL queries, graph processing, and machine learning.",
+                    "example": "Example: Real-time fraud detection systems using Apache Spark streaming.",
+                    "type": "text",
+                    "id": 37,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q38 : What is data visualization and why is it important?",
-          "a": "Data visualization is the graphical representation of data using charts, graphs, dashboards, and plots. It helps users understand trends, patterns, and insights more effectively compared to raw numerical data. Visualization improves decision-making, communication, and business analysis by making complex data easier to interpret.",
-          "example": "Example: Using bar charts and dashboards to analyze company sales performance.",
-          "type": "text",
-          "id": 38,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "39",
-      "Que": [
+            "id": "38",
+            "Que": [
+                {
+                    "q": "Q38 : What is data visualization and why is it important?",
+                    "a": "Data visualization is the graphical representation of data using charts, graphs, dashboards, and plots. It helps users understand trends, patterns, and insights more effectively compared to raw numerical data. Visualization improves decision-making, communication, and business analysis by making complex data easier to interpret.",
+                    "example": "Example: Using bar charts and dashboards to analyze company sales performance.",
+                    "type": "text",
+                    "id": 38,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q39 : What are some commonly used Python libraries in Data Science?",
-          "a": "Python provides many powerful libraries for data science and machine learning. NumPy is used for numerical operations, Pandas for data analysis, Matplotlib and Seaborn for visualization, Scikit-learn for machine learning, TensorFlow and PyTorch for deep learning, and SciPy for scientific computing. These libraries simplify data analysis and model development significantly.",
-          "example": "Example: Using Pandas for cleaning datasets and Matplotlib for creating graphs.",
-          "type": "text",
-          "id": 39,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "40",
-      "Que": [
+            "id": "39",
+            "Que": [
+                {
+                    "q": "Q39 : What are some commonly used Python libraries in Data Science?",
+                    "a": "Python provides many powerful libraries for data science and machine learning. NumPy is used for numerical operations, Pandas for data analysis, Matplotlib and Seaborn for visualization, Scikit-learn for machine learning, TensorFlow and PyTorch for deep learning, and SciPy for scientific computing. These libraries simplify data analysis and model development significantly.",
+                    "example": "Example: Using Pandas for cleaning datasets and Matplotlib for creating graphs.",
+                    "type": "text",
+                    "id": 39,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q40 : What is model evaluation in machine learning?",
-          "a": "Model evaluation is the process of measuring how well a machine learning model performs on unseen data. Evaluation helps determine whether the model can generalize effectively to real-world situations. Different evaluation metrics are used depending on the problem type, such as accuracy, precision, recall, F1-score, RMSE, and ROC-AUC. Proper model evaluation helps select the best-performing model.",
-          "example": "Example: Using accuracy and confusion matrix to evaluate a classification model.",
-          "type": "text",
-          "id": 40,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
- 
-    {
-      "id": "41",
-      "Que": [
+            "id": "40",
+            "Que": [
+                {
+                    "q": "Q40 : What is model evaluation in machine learning?",
+                    "a": "Model evaluation is the process of measuring how well a machine learning model performs on unseen data. Evaluation helps determine whether the model can generalize effectively to real-world situations. Different evaluation metrics are used depending on the problem type, such as accuracy, precision, recall, F1-score, RMSE, and ROC-AUC. Proper model evaluation helps select the best-performing model.",
+                    "example": "Example: Using accuracy and confusion matrix to evaluate a classification model.",
+                    "type": "text",
+                    "id": 40,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+
         {
-          "q": "Q41 : What is accuracy in machine learning?",
-          "a": "Accuracy is one of the most commonly used evaluation metrics in machine learning classification problems. It measures how many predictions made by the model are correct compared to the total number of predictions. Accuracy is simple to understand and works well when datasets are balanced. However, in imbalanced datasets where one class dominates, accuracy alone can be misleading because the model may predict the majority class most of the time while still showing high accuracy. Therefore, other metrics such as precision, recall, and F1-score are also considered for proper evaluation.",
-          "example": "Example: If a model correctly predicts 90 out of 100 cases, its accuracy is 90%.",
-          "type": "text",
-          "id": 41,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "42",
-      "Que": [
+            "id": "41",
+            "Que": [
+                {
+                    "q": "Q41 : What is accuracy in machine learning?",
+                    "a": "Accuracy is one of the most commonly used evaluation metrics in machine learning classification problems. It measures how many predictions made by the model are correct compared to the total number of predictions. Accuracy is simple to understand and works well when datasets are balanced. However, in imbalanced datasets where one class dominates, accuracy alone can be misleading because the model may predict the majority class most of the time while still showing high accuracy. Therefore, other metrics such as precision, recall, and F1-score are also considered for proper evaluation.",
+                    "example": "Example: If a model correctly predicts 90 out of 100 cases, its accuracy is 90%.",
+                    "type": "text",
+                    "id": 41,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q42 : What is the F1-Score in machine learning?",
-          "a": "F1-Score is a performance evaluation metric that combines both precision and recall into a single value. It is calculated as the harmonic mean of precision and recall, making it especially useful when dealing with imbalanced datasets. F1-Score provides a balanced measurement because it considers both false positives and false negatives. A high F1-Score indicates that the model performs well in identifying positive cases accurately while minimizing prediction errors.",
-          "example": "Example: Fraud detection systems often use F1-Score because both false positives and false negatives are important.",
-          "type": "text",
-          "id": 42,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "43",
-      "Que": [
+            "id": "42",
+            "Que": [
+                {
+                    "q": "Q42 : What is the F1-Score in machine learning?",
+                    "a": "F1-Score is a performance evaluation metric that combines both precision and recall into a single value. It is calculated as the harmonic mean of precision and recall, making it especially useful when dealing with imbalanced datasets. F1-Score provides a balanced measurement because it considers both false positives and false negatives. A high F1-Score indicates that the model performs well in identifying positive cases accurately while minimizing prediction errors.",
+                    "example": "Example: Fraud detection systems often use F1-Score because both false positives and false negatives are important.",
+                    "type": "text",
+                    "id": 42,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q43 : What is ROC Curve and AUC?",
-          "a": "ROC, also known as Receiver Operating Characteristic Curve, is a graphical representation used to evaluate the performance of classification models. It plots the True Positive Rate against the False Positive Rate at different threshold values. AUC, also known as Area Under the Curve, measures the overall ability of the model to distinguish between positive and negative classes. A higher AUC value indicates better model performance. ROC-AUC is especially useful for comparing multiple classification models.",
-          "example": "Example: A model with AUC value close to 1 performs better than a model with AUC value close to 0.5.",
-          "type": "text",
-          "id": 43,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "44",
-      "Que": [
+            "id": "43",
+            "Que": [
+                {
+                    "q": "Q43 : What is ROC Curve and AUC?",
+                    "a": "ROC, also known as Receiver Operating Characteristic Curve, is a graphical representation used to evaluate the performance of classification models. It plots the True Positive Rate against the False Positive Rate at different threshold values. AUC, also known as Area Under the Curve, measures the overall ability of the model to distinguish between positive and negative classes. A higher AUC value indicates better model performance. ROC-AUC is especially useful for comparing multiple classification models.",
+                    "example": "Example: A model with AUC value close to 1 performs better than a model with AUC value close to 0.5.",
+                    "type": "text",
+                    "id": 43,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q44 : What is gradient descent in machine learning?",
-          "a": "Gradient Descent is an optimization algorithm used to minimize the error or loss function in machine learning models. It works by repeatedly adjusting model parameters in the direction that reduces prediction error the most. The algorithm calculates gradients or slopes of the loss function and updates weights iteratively until the model reaches the minimum error point. Gradient descent is widely used in linear regression, logistic regression, and deep learning models.",
-          "example": "Example: Training a neural network using gradient descent to reduce prediction error during learning.",
-          "type": "text",
-          "id": 44,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "45",
-      "Que": [
+            "id": "44",
+            "Que": [
+                {
+                    "q": "Q44 : What is gradient descent in machine learning?",
+                    "a": "Gradient Descent is an optimization algorithm used to minimize the error or loss function in machine learning models. It works by repeatedly adjusting model parameters in the direction that reduces prediction error the most. The algorithm calculates gradients or slopes of the loss function and updates weights iteratively until the model reaches the minimum error point. Gradient descent is widely used in linear regression, logistic regression, and deep learning models.",
+                    "example": "Example: Training a neural network using gradient descent to reduce prediction error during learning.",
+                    "type": "text",
+                    "id": 44,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q45 : What is the difference between batch gradient descent and stochastic gradient descent?",
-          "a": "Batch Gradient Descent updates model parameters using the entire training dataset in each iteration. It provides stable and accurate updates but can be slow for very large datasets. Stochastic Gradient Descent, also known as SGD, updates parameters using one training example at a time, making it much faster and suitable for large datasets. However, SGD produces noisier updates because of random sample selection. Mini-batch gradient descent combines advantages of both approaches.",
-          "example": "Example: Deep learning models often use mini-batch gradient descent for efficient training.",
-          "type": "text",
-          "id": 45,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "46",
-      "Que": [
+            "id": "45",
+            "Que": [
+                {
+                    "q": "Q45 : What is the difference between batch gradient descent and stochastic gradient descent?",
+                    "a": "Batch Gradient Descent updates model parameters using the entire training dataset in each iteration. It provides stable and accurate updates but can be slow for very large datasets. Stochastic Gradient Descent, also known as SGD, updates parameters using one training example at a time, making it much faster and suitable for large datasets. However, SGD produces noisier updates because of random sample selection. Mini-batch gradient descent combines advantages of both approaches.",
+                    "example": "Example: Deep learning models often use mini-batch gradient descent for efficient training.",
+                    "type": "text",
+                    "id": 45,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q46 : What is hyperparameter tuning in machine learning?",
-          "a": "Hyperparameter tuning is the process of selecting the best configuration values for machine learning models to improve performance. Hyperparameters are settings that are defined before training begins, such as learning rate, number of trees, batch size, or maximum depth. Proper tuning improves model accuracy, reduces overfitting, and increases generalization. Common tuning techniques include Grid Search, Random Search, and Bayesian Optimization.",
-          "example": "Example: Finding the best value of K in K-Nearest Neighbors algorithm.",
-          "type": "text",
-          "id": 46,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "47",
-      "Que": [
+            "id": "46",
+            "Que": [
+                {
+                    "q": "Q46 : What is hyperparameter tuning in machine learning?",
+                    "a": "Hyperparameter tuning is the process of selecting the best configuration values for machine learning models to improve performance. Hyperparameters are settings that are defined before training begins, such as learning rate, number of trees, batch size, or maximum depth. Proper tuning improves model accuracy, reduces overfitting, and increases generalization. Common tuning techniques include Grid Search, Random Search, and Bayesian Optimization.",
+                    "example": "Example: Finding the best value of K in K-Nearest Neighbors algorithm.",
+                    "type": "text",
+                    "id": 46,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q47 : What is ensemble learning?",
-          "a": "Ensemble learning is a machine learning technique where multiple models are combined to improve overall prediction accuracy and robustness. Instead of relying on a single model, ensemble methods aggregate predictions from several models to reduce errors and improve stability. Common ensemble techniques include bagging, boosting, and stacking. Ensemble learning often produces better performance compared to individual models.",
-          "example": "Example: Random Forest combines multiple decision trees to improve predictions.",
-          "type": "text",
-          "id": 47,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "48",
-      "Que": [
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : What is ensemble learning?",
+                    "a": "Ensemble learning is a machine learning technique where multiple models are combined to improve overall prediction accuracy and robustness. Instead of relying on a single model, ensemble methods aggregate predictions from several models to reduce errors and improve stability. Common ensemble techniques include bagging, boosting, and stacking. Ensemble learning often produces better performance compared to individual models.",
+                    "example": "Example: Random Forest combines multiple decision trees to improve predictions.",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q48 : What is boosting in machine learning?",
-          "a": "Boosting is an ensemble learning technique where multiple weak learners are trained sequentially, and each new model focuses on correcting errors made by previous models. Boosting improves prediction accuracy by combining many small models into a strong predictive model. Popular boosting algorithms include AdaBoost, Gradient Boosting, XGBoost, and LightGBM.",
-          "example": "Example: XGBoost widely used in machine learning competitions for high-performance predictions.",
-          "type": "text",
-          "id": 48,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "49",
-      "Que": [
+            "id": "48",
+            "Que": [
+                {
+                    "q": "Q48 : What is boosting in machine learning?",
+                    "a": "Boosting is an ensemble learning technique where multiple weak learners are trained sequentially, and each new model focuses on correcting errors made by previous models. Boosting improves prediction accuracy by combining many small models into a strong predictive model. Popular boosting algorithms include AdaBoost, Gradient Boosting, XGBoost, and LightGBM.",
+                    "example": "Example: XGBoost widely used in machine learning competitions for high-performance predictions.",
+                    "type": "text",
+                    "id": 48,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q49 : What is bagging in machine learning?",
-          "a": "Bagging, also known as Bootstrap Aggregating, is an ensemble learning technique that improves model stability and accuracy by training multiple models independently on random subsets of the dataset. The final prediction is made by averaging or majority voting across all models. Bagging helps reduce variance and overfitting.",
-          "example": "Example: Random Forest uses bagging by training multiple decision trees on random samples.",
-          "type": "text",
-          "id": 49,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "50",
-      "Que": [
+            "id": "49",
+            "Que": [
+                {
+                    "q": "Q49 : What is bagging in machine learning?",
+                    "a": "Bagging, also known as Bootstrap Aggregating, is an ensemble learning technique that improves model stability and accuracy by training multiple models independently on random subsets of the dataset. The final prediction is made by averaging or majority voting across all models. Bagging helps reduce variance and overfitting.",
+                    "example": "Example: Random Forest uses bagging by training multiple decision trees on random samples.",
+                    "type": "text",
+                    "id": 49,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q50 : Why is Data Science important in modern industries?",
-          "a": "Data Science is extremely important because modern organizations generate massive amounts of data every day. Data Science helps convert raw data into meaningful insights that support business decisions, automation, prediction, optimization, and innovation. Industries such as healthcare, banking, e-commerce, cybersecurity, education, and social media use Data Science for customer analysis, fraud detection, recommendation systems, forecasting, and process improvement. Data-driven decision-making helps companies improve efficiency, reduce risks, and gain competitive advantages in the market.",
-          "example": "Example: Netflix using Data Science to recommend movies and personalize user experiences.",
-          "type": "text",
-          "id": 50,
-          "playButton": true,
-          "pauseButton": false
+            "id": "50",
+            "Que": [
+                {
+                    "q": "Q50 : Why is Data Science important in modern industries?",
+                    "a": "Data Science is extremely important because modern organizations generate massive amounts of data every day. Data Science helps convert raw data into meaningful insights that support business decisions, automation, prediction, optimization, and innovation. Industries such as healthcare, banking, e-commerce, cybersecurity, education, and social media use Data Science for customer analysis, fraud detection, recommendation systems, forecasting, and process improvement. Data-driven decision-making helps companies improve efficiency, reduce risks, and gain competitive advantages in the market.",
+                    "example": "Example: Netflix using Data Science to recommend movies and personalize user experiences.",
+                    "type": "text",
+                    "id": 50,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

@@ -16,7 +16,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -27,7 +27,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -38,7 +38,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -49,7 +49,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -62,15 +62,15 @@ export const appRoutes: Route[] = [
             {
                 path: ':id',
                 loadChildren: () =>
-                import('app/modules/view-content/view-content.module').then(
-                    m => m.ViewContentModule
-                ),
+                    import('app/modules/view-content/view-content.module').then(
+                        (m) => m.ViewContentModule,
+                    ),
             },
             {
                 path: '',
                 loadChildren: () =>
                     import('app/modules/coding-view/coding-view.module').then(
-                        m => m.CodingViewModule
+                        (m) => m.CodingViewModule,
                     ),
             },
         ],
@@ -83,7 +83,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -94,7 +94,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -105,7 +105,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -116,7 +116,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -127,7 +127,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -138,7 +138,150 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'java-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'basic-springboot-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'datascience-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'java-multithreading-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'java-microservices-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'playwright-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'python-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'selenium-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'springboot-security-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'springboot-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'springbootJPA-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'agenticAI-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'generativeAI-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -149,7 +292,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -160,7 +303,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -171,7 +314,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/example/example.module').then(
-                m => m.ExampleModule
+                (m) => m.ExampleModule,
             ),
     },
 ];
