@@ -16,7 +16,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -27,7 +27,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -38,7 +38,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -49,7 +49,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -62,15 +62,15 @@ export const appRoutes: Route[] = [
             {
                 path: ':id',
                 loadChildren: () =>
-                import('app/modules/view-content/view-content.module').then(
-                    m => m.ViewContentModule
-                ),
+                    import('app/modules/view-content/view-content.module').then(
+                        (m) => m.ViewContentModule,
+                    ),
             },
             {
                 path: '',
                 loadChildren: () =>
                     import('app/modules/coding-view/coding-view.module').then(
-                        m => m.CodingViewModule
+                        (m) => m.CodingViewModule,
                     ),
             },
         ],
@@ -83,7 +83,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -94,7 +94,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -105,7 +105,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -116,7 +116,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -127,7 +127,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -138,7 +138,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -149,7 +149,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -160,7 +160,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -171,7 +171,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -182,7 +182,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -193,7 +193,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -204,7 +204,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -215,7 +215,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -226,7 +226,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -237,7 +237,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -248,7 +248,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -259,7 +259,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -270,7 +270,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -281,7 +281,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -292,7 +292,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -303,7 +303,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/view-content/view-content.module').then(
-                m => m.ViewContentModule
+                (m) => m.ViewContentModule,
             ),
     },
     {
@@ -314,7 +314,7 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () =>
             import('app/modules/example/example.module').then(
-                m => m.ExampleModule
+                (m) => m.ExampleModule,
             ),
     },
 ];

@@ -1,0 +1,707 @@
+{
+  "python-interview-questions": [
+    {
+      "id": "1",
+      "Que": [
+        {
+          "q": "Q1 : What are the built-in mutable and immutable data types in Python?",
+          "a": "Python provides both mutable and immutable data types. Mutable data types are objects whose values can be modified after creation. Examples include lists, dictionaries, and sets. Immutable data types cannot be changed once created, and any modification creates a new object instead. Examples include integers, floats, strings, tuples, and booleans. Understanding mutable and immutable types is important for memory management, performance optimization, and avoiding unintended data changes in applications.",
+          "example": "Example: Lists can be updated using append(), while tuples cannot be modified after creation.",
+          "type": "text",
+          "id": 1,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "Que": [
+        {
+          "q": "Q2 : Explain the difference between a list and a tuple in Python.",
+          "a": "Lists and tuples are both collection data types in Python, but they differ mainly in mutability. Lists are mutable, meaning elements can be added, removed, or modified after creation. Tuples are immutable, so their contents cannot be changed once defined. Lists use square brackets [], while tuples use parentheses (). Tuples are generally faster and consume less memory compared to lists because they are immutable.",
+          "example": "Example: myList = [1, 2, 3] can be modified, while myTuple = (1, 2, 3) cannot be changed.",
+          "type": "text",
+          "id": 2,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "Que": [
+        {
+          "q": "Q3 : What is PEP 8 and why is it important?",
+          "a": "PEP 8 is Python’s official style guide that defines coding standards and best practices for writing clean and readable Python code. It includes guidelines for indentation, variable naming, line length, spacing, imports, and code formatting. Following PEP 8 improves code consistency, maintainability, and collaboration between developers.",
+          "example": "Example: Using snake_case for variable names according to PEP 8 standards.",
+          "type": "text",
+          "id": 3,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "Que": [
+        {
+          "q": "Q4 : How does the break statement differ from continue in a loop?",
+          "a": "The break statement immediately terminates the current loop and transfers execution to the next statement after the loop. The continue statement skips the remaining code in the current iteration and moves control to the next iteration of the loop. Both statements are used to control loop execution flow.",
+          "example": "Example: break stops the loop completely, while continue skips only one iteration.",
+          "type": "text",
+          "id": 4,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "Que": [
+        {
+          "q": "Q5 : What is the purpose of the __init__ method in Python classes?",
+          "a": "The __init__ method is a special constructor method in Python classes that automatically executes when an object is created. It is used to initialize instance variables and set up the initial state of an object. The constructor helps assign values to object attributes during object creation.",
+          "example": "Example: Initializing employee name and salary when creating an Employee object.",
+          "type": "text",
+          "id": 5,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "Que": [
+        {
+          "q": "Q6 : How do you add elements to a list, and what is the difference between append and extend?",
+          "a": "Elements can be added to a Python list using methods like append() and extend(). The append() method adds a single element to the end of the list, while extend() adds multiple elements from another iterable individually into the existing list. append() adds the entire object as one element, whereas extend() merges collections together.",
+          "example": "Example: list.append([4,5]) adds one nested list, while list.extend([4,5]) adds individual elements.",
+          "type": "text",
+          "id": 6,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "Que": [
+        {
+          "q": "Q7 : What is a lambda function in Python and when should you use it?",
+          "a": "A lambda function is a small anonymous function defined using the lambda keyword. It can contain only a single expression and is commonly used for short, temporary operations. Lambda functions are useful when passing simple logic into functions like map(), filter(), and sorted().",
+          "example": "Example: lambda x: x * 2 doubles a number.",
+          "type": "text",
+          "id": 7,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "Que": [
+        {
+          "q": "Q8 : Explain the concept of list comprehension with a basic example.",
+          "a": "List comprehension is a concise way to create lists using a single line of code. It combines loops and conditional logic into a compact syntax that improves readability and performance. List comprehensions are commonly used for transforming or filtering data.",
+          "example": "Example: [x*x for x in range(5)] creates a list of square values.",
+          "type": "text",
+          "id": 8,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "Que": [
+        {
+          "q": "Q9 : What are local and global variables in Python?",
+          "a": "Local variables are declared inside functions and can only be accessed within that specific function scope. Global variables are declared outside all functions and are accessible throughout the entire program. Python uses scope rules to determine variable accessibility.",
+          "example": "Example: A variable created inside a function cannot be accessed outside unless declared global.",
+          "type": "text",
+          "id": 9,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "Que": [
+        {
+          "q": "Q10 : How do you handle exceptions in Python?",
+          "a": "Exceptions in Python are handled using try, except, finally, and else blocks. The try block contains risky code that may generate exceptions. The except block handles errors gracefully without crashing the application. The finally block always executes regardless of exceptions and is often used for cleanup operations.",
+          "example": "Example: Using try-except to handle division by zero errors safely.",
+          "type": "text",
+          "id": 10,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+
+    {
+      "id": "11",
+      "Que": [
+        {
+          "q": "Q11 : What is the difference between the is operator and the == operator?",
+          "a": "The == operator checks whether two variables have the same value, while the is operator checks whether two variables reference the exact same object in memory. In simple terms, == compares values and is compares object identities.",
+          "example": "Example: Two lists with the same values may return True with == but False with is.",
+          "type": "text",
+          "id": 11,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "Que": [
+        {
+          "q": "Q12 : What does the pass statement do in Python?",
+          "a": "The pass statement is a placeholder statement that performs no operation. It is used when syntactically some code is required but no actual logic is needed yet. Developers commonly use it while creating empty classes, functions, or loops during development.",
+          "example": "Example: def myFunction(): pass",
+          "type": "text",
+          "id": 12,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "Que": [
+        {
+          "q": "Q13 : How can you convert a string '123' to an integer and a float?",
+          "a": "Python provides built-in type conversion functions for converting data types. The int() function converts strings into integers, while the float() function converts strings into floating-point numbers.",
+          "example": "Example: int('123') returns 123 and float('123') returns 123.0",
+          "type": "text",
+          "id": 13,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "Que": [
+        {
+          "q": "Q14 : What are Python dictionaries and how do you access their values safely?",
+          "a": "Dictionaries are data structures that store information in key-value pairs. Keys must be unique and immutable. Values can be accessed safely using the get() method because it returns None or a default value instead of raising an error when a key does not exist.",
+          "example": "Example: myDict.get('name') safely retrieves a value without KeyError.",
+          "type": "text",
+          "id": 14,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "Que": [
+        {
+          "q": "Q15 : Explain the use of the with statement in Python file handling.",
+          "a": "The with statement is used for resource management in Python. In file handling, it automatically opens and closes files safely without requiring explicit close() calls. This prevents memory leaks and ensures proper cleanup even if exceptions occur.",
+          "example": "Example: with open('file.txt', 'r') as file:",
+          "type": "text",
+          "id": 15,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "Que": [
+        {
+          "q": "Q16 : What is the purpose of the len(), max(), and min() functions?",
+          "a": "The len() function returns the total number of elements in a collection. The max() function returns the largest value from an iterable, while min() returns the smallest value. These functions are commonly used for data analysis and collection operations.",
+          "example": "Example: len([1,2,3]) returns 3, max([1,5,2]) returns 5.",
+          "type": "text",
+          "id": 16,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "Que": [
+        {
+          "q": "Q17 : How do you check if a specific key exists within a Python dictionary?",
+          "a": "The in keyword is used to check whether a key exists in a dictionary. It returns True if the key is present and False otherwise.",
+          "example": "Example: if 'name' in myDict:",
+          "type": "text",
+          "id": 17,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "Que": [
+        {
+          "q": "Q18 : What is a string slice and how do you reverse a string using it?",
+          "a": "String slicing is a technique used to extract portions of a string using indexes. Python supports slicing with the format start:stop:step. A string can be reversed using a negative step value.",
+          "example": "Example: reversedString = myString[::-1]",
+          "type": "text",
+          "id": 18,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "Que": [
+        {
+          "q": "Q19 : What are the rules for defining variable names in Python?",
+          "a": "Python variable names must start with a letter or underscore and can contain letters, numbers, and underscores. Variable names are case-sensitive and cannot contain spaces or special characters. Reserved Python keywords also cannot be used as variable names.",
+          "example": "Example: user_name is valid, but 2name is invalid.",
+          "type": "text",
+          "id": 19,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "Que": [
+        {
+          "q": "Q20 : How do you remove duplicates from a list while ignoring order?",
+          "a": "Duplicates can be removed from a list by converting it into a set because sets only store unique values. The set can then be converted back into a list if needed.",
+          "example": "Example: list(set(myList)) removes duplicate values.",
+          "type": "text",
+          "id": 20,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "Que": [
+        {
+          "q": "Q21 : What is the difference between deep copy and shallow copy in Python?",
+          "a": "A shallow copy creates a new object but references the same nested objects from the original object. Changes made to nested objects affect both copies. A deep copy creates a completely independent copy of the original object along with all nested objects, so changes do not affect each other.",
+          "example": "Example: copy.copy() creates a shallow copy, while copy.deepcopy() creates a deep copy.",
+          "type": "text",
+          "id": 21,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "Que": [
+        {
+          "q": "Q22 : What are *args and **kwargs in Python?",
+          "a": "*args and **kwargs are used to pass variable numbers of arguments to functions. *args allows passing multiple positional arguments as a tuple, while **kwargs allows passing multiple keyword arguments as a dictionary. These features improve function flexibility and reusability.",
+          "example": "Example: def add(*args): return sum(args)",
+          "type": "text",
+          "id": 22,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "Que": [
+        {
+          "q": "Q23 : Explain the difference between remove(), pop(), and del in Python lists.",
+          "a": "remove() deletes a specific element by value from a list. pop() removes and returns an element based on its index, with the last element removed by default. del is a keyword used to delete elements, slices, or entire objects from memory.",
+          "example": "Example: myList.remove(5), myList.pop(0), del myList[2]",
+          "type": "text",
+          "id": 23,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "Que": [
+        {
+          "q": "Q24 : What is the difference between sort() and sorted() in Python?",
+          "a": "The sort() method modifies the original list directly and does not return a new list. The sorted() function returns a new sorted list without changing the original iterable. sorted() works with multiple iterable types, while sort() only works with lists.",
+          "example": "Example: myList.sort() changes the original list, while sorted(myList) creates a new sorted list.",
+          "type": "text",
+          "id": 24,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "Que": [
+        {
+          "q": "Q25 : What is a set in Python and what are its advantages?",
+          "a": "A set is an unordered collection of unique elements in Python. Sets automatically remove duplicate values and support fast membership testing. They are commonly used for mathematical operations like union, intersection, and difference.",
+          "example": "Example: set([1,2,2,3]) returns {1,2,3}",
+          "type": "text",
+          "id": 25,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "Que": [
+        {
+          "q": "Q26 : What is the difference between mutable and immutable objects?",
+          "a": "Mutable objects can be modified after creation, while immutable objects cannot be changed once created. Mutable objects include lists, dictionaries, and sets. Immutable objects include strings, tuples, and integers. Immutable objects are generally safer in multithreaded environments.",
+          "example": "Example: Lists are mutable, but tuples are immutable.",
+          "type": "text",
+          "id": 26,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "Que": [
+        {
+          "q": "Q27 : What is inheritance in Python?",
+          "a": "Inheritance is an object-oriented programming concept where one class acquires the properties and methods of another class. The existing class is called the parent or base class, while the new class is called the child or derived class. Inheritance improves code reusability and maintainability.",
+          "example": "Example: A Dog class inheriting properties from an Animal class.",
+          "type": "text",
+          "id": 27,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "Que": [
+        {
+          "q": "Q28 : What is polymorphism in Python?",
+          "a": "Polymorphism allows objects of different classes to be treated using the same interface. The same method name can perform different operations depending on the object type. Polymorphism improves flexibility and extensibility in object-oriented programming.",
+          "example": "Example: Different classes implementing the same display() method differently.",
+          "type": "text",
+          "id": 28,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "Que": [
+        {
+          "q": "Q29 : What is encapsulation in Python?",
+          "a": "Encapsulation is the process of bundling data and methods together inside a class while restricting direct access to internal details. It improves data security and hides implementation complexity from external code.",
+          "example": "Example: Using private variables with double underscores like __salary.",
+          "type": "text",
+          "id": 29,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "Que": [
+        {
+          "q": "Q30 : What is abstraction in Python?",
+          "a": "Abstraction is the process of hiding implementation details and showing only essential features to users. Python supports abstraction using abstract classes and interfaces through the abc module. Abstraction reduces complexity and improves maintainability.",
+          "example": "Example: Users interacting with a car through steering and pedals without knowing engine implementation details.",
+          "type": "text",
+          "id": 30,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+
+    {
+      "id": "31",
+      "Que": [
+        {
+          "q": "Q31 : What is a Python module?",
+          "a": "A Python module is a file containing Python code such as functions, classes, and variables that can be reused in other programs. Modules help organize code into separate files, making applications more modular and maintainable. Python provides both built-in modules and user-defined modules.",
+          "example": "Example: Importing the math module using import math.",
+          "type": "text",
+          "id": 31,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "Que": [
+        {
+          "q": "Q32 : What is a package in Python?",
+          "a": "A package is a collection of related Python modules organized inside a directory. Packages help structure large applications into manageable components. A package usually contains an __init__.py file to indicate that the directory should be treated as a package.",
+          "example": "Example: Organizing utility, database, and API modules inside separate packages.",
+          "type": "text",
+          "id": 32,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "Que": [
+        {
+          "q": "Q33 : What is the difference between range() and xrange()?",
+          "a": "In Python 2, range() returns a list while xrange() returns an iterator object that generates values lazily. xrange() is more memory efficient for large ranges. In Python 3, xrange() was removed and range() behaves like xrange() from Python 2.",
+          "example": "Example: range(1,1000000) in Python 3 generates values lazily without storing the full list.",
+          "type": "text",
+          "id": 33,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "Que": [
+        {
+          "q": "Q34 : What is the difference between Python 2 and Python 3?",
+          "a": "Python 3 introduced several improvements over Python 2, including better Unicode support, simplified syntax, improved libraries, and enhanced performance. Print statements became functions in Python 3, integer division behavior changed, and many outdated features from Python 2 were removed. Python 2 is no longer officially supported.",
+          "example": "Example: print 'Hello' in Python 2 becomes print('Hello') in Python 3.",
+          "type": "text",
+          "id": 34,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "Que": [
+        {
+          "q": "Q35 : What is recursion in Python?",
+          "a": "Recursion is a programming technique where a function calls itself repeatedly until a stopping condition is reached. Recursive functions are commonly used for solving problems like factorials, tree traversal, and mathematical computations.",
+          "example": "Example: Calculating factorial using a recursive function.",
+          "type": "text",
+          "id": 35,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "Que": [
+        {
+          "q": "Q36 : What is the difference between a parameter and an argument?",
+          "a": "A parameter is a variable defined in a function declaration, while an argument is the actual value passed to the function during execution. Parameters act as placeholders for input values.",
+          "example": "Example: In def add(a,b), a and b are parameters, while add(5,10) contains arguments.",
+          "type": "text",
+          "id": 36,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "Que": [
+        {
+          "q": "Q37 : What are decorators in Python?",
+          "a": "Decorators are functions used to modify or extend the behavior of other functions or methods without changing their original code. They are commonly used for logging, authentication, validation, caching, and performance monitoring.",
+          "example": "Example: Using @staticmethod or @login_required decorators.",
+          "type": "text",
+          "id": 37,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "Que": [
+        {
+          "q": "Q38 : What are generators in Python?",
+          "a": "Generators are special functions that produce values one at a time using the yield keyword instead of returning all values at once. They improve memory efficiency when working with large datasets or streams of data.",
+          "example": "Example: Generating numbers using yield inside a loop.",
+          "type": "text",
+          "id": 38,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "Que": [
+        {
+          "q": "Q39 : What is the difference between yield and return in Python?",
+          "a": "The return statement exits the function completely and returns a final value, while yield pauses the function execution and returns a value temporarily. Functions using yield become generators and can resume execution later.",
+          "example": "Example: yield allows generating multiple values one by one without storing them all in memory.",
+          "type": "text",
+          "id": 39,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "Que": [
+        {
+          "q": "Q40 : What is exception propagation in Python?",
+          "a": "Exception propagation occurs when an exception raised inside a function is not handled there and moves upward through the call stack until it is caught by an appropriate exception handler. If no handler is found, the program terminates with an error.",
+          "example": "Example: A ZeroDivisionError raised inside a function propagating to the main program.",
+          "type": "text",
+          "id": 40,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "Que": [
+        {
+          "q": "Q41 : What is multithreading in Python?",
+          "a": "Multithreading in Python is a technique where multiple threads execute concurrently within the same program. It is commonly used for tasks like file handling, network operations, and background processing. Python provides the threading module for creating and managing threads.",
+          "example": "Example: Downloading files while updating the user interface simultaneously.",
+          "type": "text",
+          "id": 41,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "Que": [
+        {
+          "q": "Q42 : What is the Global Interpreter Lock (GIL) in Python?",
+          "a": "The Global Interpreter Lock, also known as GIL, is a mechanism in CPython that allows only one thread to execute Python bytecode at a time. It simplifies memory management but limits true parallel execution of CPU-bound threads.",
+          "example": "Example: Multiple Python threads cannot fully utilize multiple CPU cores simultaneously due to GIL.",
+          "type": "text",
+          "id": 42,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "Que": [
+        {
+          "q": "Q43 : What is multiprocessing in Python?",
+          "a": "Multiprocessing is a technique where multiple independent processes run simultaneously using separate memory spaces. Unlike multithreading, multiprocessing bypasses the GIL and allows true parallel execution on multiple CPU cores.",
+          "example": "Example: Processing large datasets using multiple CPU cores with the multiprocessing module.",
+          "type": "text",
+          "id": 43,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "Que": [
+        {
+          "q": "Q44 : What is the difference between multithreading and multiprocessing in Python?",
+          "a": "Multithreading uses multiple threads within the same process and shares memory between threads, while multiprocessing uses separate processes with independent memory spaces. Multithreading is better for I/O-bound tasks, whereas multiprocessing is more suitable for CPU-bound tasks.",
+          "example": "Example: Using threading for API calls and multiprocessing for heavy mathematical computations.",
+          "type": "text",
+          "id": 44,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "Que": [
+        {
+          "q": "Q45 : What is a virtual environment in Python?",
+          "a": "A virtual environment is an isolated Python environment that allows developers to install project-specific dependencies without affecting the global Python installation. Virtual environments help manage package versions and avoid dependency conflicts between projects.",
+          "example": "Example: Creating a virtual environment using python -m venv myenv.",
+          "type": "text",
+          "id": 45,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "Que": [
+        {
+          "q": "Q46 : What is pip in Python?",
+          "a": "pip is the package manager for Python used to install, update, and manage external libraries and packages from the Python Package Index (PyPI). It simplifies dependency management in Python projects.",
+          "example": "Example: pip install requests installs the requests library.",
+          "type": "text",
+          "id": 46,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "Que": [
+        {
+          "q": "Q47 : What is NumPy in Python?",
+          "a": "NumPy is a powerful Python library used for numerical and scientific computing. It provides support for multidimensional arrays, mathematical operations, linear algebra, and high-performance calculations.",
+          "example": "Example: Performing matrix multiplication using NumPy arrays.",
+          "type": "text",
+          "id": 47,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "Que": [
+        {
+          "q": "Q48 : What is Pandas in Python?",
+          "a": "Pandas is a popular Python library used for data analysis and data manipulation. It provides powerful data structures such as Series and DataFrames for handling structured data efficiently.",
+          "example": "Example: Reading CSV files and analyzing data using pandas DataFrame.",
+          "type": "text",
+          "id": 48,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "Que": [
+        {
+          "q": "Q49 : What are the advantages of Python?",
+          "a": "Python is easy to learn, has simple syntax, supports multiple programming paradigms, provides large community support, and offers extensive libraries for web development, automation, data science, machine learning, and testing. Python also improves developer productivity due to its readable and concise code.",
+          "example": "Example: Using Python for automation testing, web development, and AI applications.",
+          "type": "text",
+          "id": 49,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "Que": [
+        {
+          "q": "Q50 : Why is Python widely used in modern software development?",
+          "a": "Python is widely used because of its simplicity, versatility, readability, and massive ecosystem of libraries and frameworks. It supports rapid development and is heavily used in web development, automation, data science, machine learning, cloud computing, cybersecurity, and DevOps. Python’s strong community support and cross-platform compatibility also contribute to its popularity.",
+          "example": "Example: Companies like Google, Netflix, and Instagram using Python in large-scale applications.",
+          "type": "text",
+          "id": 50,
+          "playButton": true,
+          "pauseButton": false
+        }
+      ]
+    }
+  ]
+}
+ 

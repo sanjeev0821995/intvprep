@@ -56,8 +56,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 link: '/javascript-coding-interview-questions',
                 badge: {
                     title: 'New',
-                    classes:
-                    'px-2 bg-yellow-300 text-black rounded-full',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
                 },
             },
             {
@@ -252,21 +251,21 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 link: '/git-interview-questions',
                 icon: 'heroicons_outline:code',
             },
-             {
+            {
                 id: 'java.basic',
                 title: 'Java Interview Questions',
                 type: 'basic',
                 link: '/java-interview-questions',
                 icon: 'heroicons_outline:code',
             },
-             {
+            {
                 id: 'java.microservices',
                 title: 'Java Micro-services Interview Questions',
                 type: 'basic',
                 link: '/java-microservices-interview-questions',
                 icon: 'heroicons_outline:code',
             },
-             {
+            {
                 id: 'java.multithreading',
                 title: 'Java Multi-threading Interview Questions',
                 type: 'basic',
@@ -280,14 +279,14 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 link: '/basic-springboot-interview-questions',
                 icon: 'heroicons_outline:code',
             },
-             {
+            {
                 id: 'java.springboot.advanced',
                 title: 'Spring-Boot Interview Questions',
                 type: 'basic',
                 link: '/springboot-interview-questions',
                 icon: 'heroicons_outline:code',
             },
-             {
+            {
                 id: 'java.springboot.security',
                 title: 'Spring-Boot Security Interview Questions',
                 type: 'basic',
@@ -301,21 +300,21 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 link: '/springbootJPA-interview-questions',
                 icon: 'heroicons_outline:code',
             },
-             {
+            {
                 id: 'selenium.basic',
                 title: 'Selenium Interview Questions',
                 type: 'basic',
                 link: '/selenium-interview-questions',
                 icon: 'heroicons_outline:code',
             },
-             {
+            {
                 id: 'playwright.basic',
                 title: 'Playwright Interview Questions',
                 type: 'basic',
                 link: '/playwright-interview-questions',
                 icon: 'heroicons_outline:code',
             },
-             {
+            {
                 id: 'python.basic',
                 title: 'Python Interview Questions',
                 type: 'basic',
@@ -336,7 +335,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 link: '/agenticAI-interview-questions',
                 icon: 'heroicons_outline:code',
             },
-             {
+            {
                 id: 'data.science.basic',
                 title: 'Data Science Interview Questions',
                 type: 'basic',
