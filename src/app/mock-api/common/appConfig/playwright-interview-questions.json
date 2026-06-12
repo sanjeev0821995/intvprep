@@ -1,654 +1,1397 @@
 {
-  "playwright-interview-questions": [
-    {
-      "id": "1",
-      "Que": [
+    "playwright-interview-questions": [
         {
-          "q": "Q1 : What is Playwright?",
-          "a": "Playwright is an open-source automation testing framework developed by Microsoft. It is mainly used for end-to-end testing of web applications. It supports multiple browsers like Chromium, Firefox, and WebKit using a single unified API. Playwright helps testers automate web applications faster and more reliably. For example, if you want to test a login feature on Chrome, Firefox, and Safari, Playwright can do this with the same test script without any major changes. It was built by the same team that originally created Puppeteer at Google, and it improves upon many of Puppeteer's limitations. Playwright works at the browser protocol level, which makes it significantly faster and more stable than older tools. It is widely adopted by QA teams and developers for building reliable test suites in modern web development workflows.",
-          "type": "text",
-          "id": 1,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "Que": [
+            "id": "1",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q1 : What is Playwright?",
+                    "a": "Playwright is an open-source end-to-end automation framework developed by Microsoft for testing modern web applications. It supports Chromium, Firefox, and WebKit browsers through a single API. Playwright provides reliable automation with features like auto-waiting, network interception, screenshots, video recording, and tracing. It is widely used by QA engineers and developers to create fast and stable automated tests. Its direct browser communication makes execution faster and more reliable compared to traditional browser automation tools.",
+                    "type": "text",
+                    "id": 1
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Key Features",
+                    "list": {
+                        "1": "Cross-browser support",
+                        "2": "Auto-waiting",
+                        "3": "Parallel execution",
+                        "4": "Network interception",
+                        "5": "Built-in reporting"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Playwright was developed by Microsoft and supports modern web applications."
+                }
+            ]
+        },
         {
-          "q": "Q2 : Which browsers are supported by Playwright?",
-          "a": "Playwright supports three major browser engines: Chromium, Firefox, and WebKit. Chromium is used for testing on Google Chrome and Microsoft Edge browsers. Firefox is used for Mozilla Firefox browser testing. WebKit is the engine behind Apple Safari and is mainly used for Safari browser testing on both desktop and mobile. For example, if your application has different behaviors on Chrome and Safari, Playwright allows you to run the same test against both browsers with a simple configuration change in the playwright.config file. Playwright also supports mobile browser emulation, meaning you can simulate Chrome on Android and Safari on iPhone without needing real devices. This broad browser coverage makes Playwright a strong choice for cross-browser testing strategies.",
-          "type": "text",
-          "id": 2,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "Que": [
+            "id": "2",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q2 : Which browsers are supported by Playwright?",
+                    "a": "Playwright supports three major browser engines: Chromium, Firefox, and WebKit. Chromium is used for Chrome and Edge testing, Firefox supports Mozilla Firefox testing, and WebKit enables Safari testing. With a single test script, Playwright can execute tests across all supported browsers. It also provides mobile browser emulation, allowing teams to validate applications on different browser environments without maintaining separate automation frameworks.",
+                    "type": "text",
+                    "id": 2
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Browser Engine" },
+                        { "label": "Used For" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Chromium" },
+                                { "col": "Chrome, Edge" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Firefox" },
+                                { "col": "Mozilla Firefox" }
+                            ]
+                        },
+                        {
+                            "row": [{ "col": "WebKit" }, { "col": "Safari" }]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q3 : Why is Playwright popular in automation testing?",
-          "a": "Playwright has become very popular in automation testing because of its rich feature set, reliability, and speed. It provides auto-waiting, which means tests do not fail due to timing issues since Playwright waits for elements to be ready before acting. It supports parallel execution, allowing multiple tests to run simultaneously and reduce overall execution time. Playwright also provides built-in features like screenshots, video recording of test runs, and tracing for debugging failures. For example, if a test fails in a CI pipeline, the trace viewer allows you to replay the exact steps visually to understand what went wrong. It also supports API testing, so you can validate your backend endpoints in the same framework. Playwright handles modern web application features like Shadow DOM, service workers, single-page applications, and dynamic content very effectively, which makes it highly suitable for today's complex web applications.",
-          "type": "text",
-          "id": 3,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "Que": [
+            "id": "3",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q3 : Why is Playwright popular in automation testing?",
+                    "a": "Playwright is popular because it provides fast execution, reliable automation, and powerful built-in features. It includes auto-waiting, parallel execution, screenshots, videos, tracing, API testing, and network mocking without requiring additional libraries. These capabilities reduce flaky tests and simplify framework maintenance. Playwright also supports modern web technologies such as Shadow DOM and Single Page Applications, making it a preferred automation framework for contemporary web development projects.",
+                    "type": "text",
+                    "id": 3
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Reasons for Popularity",
+                    "list": {
+                        "1": "Auto-waiting",
+                        "2": "Fast execution",
+                        "3": "Cross-browser support",
+                        "4": "Built-in debugging tools",
+                        "5": "API testing support"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q4 : Which programming languages are supported in Playwright?",
-          "a": "Playwright supports five programming languages: JavaScript, TypeScript, Python, Java, and C#. JavaScript and TypeScript are the most widely used languages with Playwright, especially in the frontend and full-stack development community. TypeScript is particularly popular because it adds type safety, which helps catch errors early during development. Python bindings make Playwright accessible to data engineers and Python developers who want to automate testing. Java and C# support allows enterprise teams already using those languages to adopt Playwright without changing their existing tech stack. For example, a Java-based backend team can write Playwright tests in Java and integrate them with their existing Maven or Gradle build systems. Each language has its own official Playwright library maintained by Microsoft, ensuring consistency across all supported languages.",
-          "type": "text",
-          "id": 4,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "Que": [
+            "id": "4",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q4 : Which programming languages are supported in Playwright?",
+                    "a": "Playwright supports JavaScript, TypeScript, Python, Java, and C#. This flexibility allows teams to use Playwright with their preferred programming language while maintaining the same automation capabilities. TypeScript is commonly used because of its strong type checking, while Java and C# are popular in enterprise environments. Microsoft officially maintains all supported language bindings to ensure consistency and feature parity across platforms.",
+                    "type": "text",
+                    "id": 4
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Supported Languages",
+                    "list": {
+                        "1": "JavaScript",
+                        "2": "TypeScript",
+                        "3": "Python",
+                        "4": "Java",
+                        "5": "C#"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q5 : What is the difference between Selenium and Playwright?",
-          "a": "Selenium is one of the oldest and most widely used automation tools that communicates with browsers through the WebDriver protocol, which adds an extra layer and can sometimes cause slowness or flakiness. Playwright, on the other hand, communicates directly with the browser using browser-specific protocols like Chrome DevTools Protocol, making it significantly faster and more reliable. Playwright has built-in auto-waiting, meaning it automatically waits for elements to be ready before interacting, while Selenium requires testers to write explicit waits manually, which can be error-prone. Playwright natively supports multiple tabs, iframes, file downloads, network interception, API testing, screenshots, and video recording out of the box, while Selenium needs third-party libraries for most of these. For example, handling a file download in Selenium requires complex workarounds, but in Playwright it is handled with just a few lines using the download event. Playwright also has a more modern and intuitive API compared to Selenium. However, Selenium still has a larger community and broader language support, and it works well for legacy applications.",
-          "type": "text",
-          "id": 5,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "Que": [
+            "id": "5",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q5 : What is the difference between Selenium and Playwright?",
+                    "a": "Selenium communicates with browsers through the WebDriver protocol, while Playwright directly communicates with browser engines. Playwright offers built-in auto-waiting, tracing, network interception, screenshots, and API testing. Selenium often requires additional libraries for similar capabilities. Playwright generally provides faster execution and better handling of modern web applications. However, Selenium has a larger ecosystem, broader community support, and is widely used in enterprise automation projects.",
+                    "type": "text",
+                    "id": 5
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Selenium" },
+                        { "label": "Playwright" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Uses WebDriver" },
+                                { "col": "Direct browser communication" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Manual waits often required" },
+                                { "col": "Auto-waiting built-in" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Large ecosystem" },
+                                { "col": "Modern built-in features" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+
         {
-          "q": "Q6 : What is auto-waiting in Playwright?",
-          "a": "Auto-waiting is one of the most powerful features of Playwright. It means Playwright automatically waits for elements to become visible, enabled, stable, and ready before performing any action on them. This eliminates the need to add manual sleep or explicit wait statements in most cases. For example, if you click a button that appears after an API call completes, Playwright will automatically wait until that button is visible and clickable before attempting the click action. Without auto-waiting, testers would have to add code like waitForSelector or Thread.sleep, which can make tests slow or brittle. Playwright checks multiple conditions before acting on an element, such as whether the element is attached to the DOM, is visible, is not obscured by another element, and is not in a disabled state. This intelligent waiting mechanism reduces flaky tests significantly and makes test scripts cleaner and easier to maintain.",
-          "type": "text",
-          "id": 6,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "Que": [
+            "id": "6",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q6 : What is auto-waiting in Playwright?",
+                    "a": "Auto-waiting is a built-in Playwright feature that automatically waits for elements to become visible, enabled, stable, and ready before performing actions. This eliminates the need for most manual waits and sleep statements. Playwright checks whether an element is attached to the DOM, visible, and actionable before interacting with it. Auto-waiting significantly reduces flaky tests and makes automation scripts cleaner, more reliable, and easier to maintain compared to traditional automation approaches.",
+                    "type": "text",
+                    "id": 6
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Playwright Waits For",
+                    "list": {
+                        "1": "Element Visibility",
+                        "2": "Element Stability",
+                        "3": "Element Enabled State",
+                        "4": "DOM Attachment"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Auto-waiting is one of the biggest reasons Playwright tests are less flaky."
+                }
+            ]
+        },
         {
-          "q": "Q7 : How do you install Playwright?",
-          "a": "Installing Playwright is straightforward using Node.js and npm. First, make sure Node.js is installed on your machine. Then create a new project folder and initialize it using the command 'npm init -y'. After that, install Playwright using 'npm install -D @playwright/test'. To install the required browser binaries, run 'npx playwright install', which downloads Chromium, Firefox, and WebKit automatically. You can also use 'npm init playwright@latest' to set up Playwright with an interactive wizard that creates the config file and example test files for you. For Python, you would use 'pip install playwright' followed by 'playwright install'. For Java, you add the Playwright Maven dependency to your pom.xml. Once installed, you can verify the setup by running 'npx playwright test' to execute the sample tests that come with the installation.",
-          "type": "text",
-          "id": 7,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "Que": [
+            "id": "7",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q7 : How do you install Playwright?",
+                    "a": "Playwright can be installed using Node.js and npm. After creating a project, install Playwright using npm install -D @playwright/test and then download browser binaries using npx playwright install. Playwright also provides an initialization wizard that creates configuration files and sample tests automatically. Once installation is complete, tests can be executed using the Playwright test runner. The setup process is simple and supports multiple programming languages including JavaScript, TypeScript, Java, Python, and C#.",
+                    "type": "text",
+                    "id": 7
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Playwright Installation",
+                    "code": "\nnpm init playwright@latest\nnpm install -D @playwright/test\nnpx playwright install"
+                }
+            ]
+        },
         {
-          "q": "Q8 : What is a Browser Context in Playwright?",
-          "a": "A Browser Context in Playwright is an isolated browser session that functions like a completely fresh incognito window. Each context has its own separate cookies, local storage, session storage, cache, and authentication state. Multiple contexts can run within the same browser instance simultaneously without interfering with each other. This is extremely useful for testing multi-user scenarios. For example, if you want to test a chat application where User A sends a message and User B receives it, you can create two browser contexts in the same test, log in as different users in each context, and interact with them independently. Browser contexts are also lightweight compared to launching separate browser instances, so they help speed up parallel testing. They are the foundation for features like storageState, which allows you to save a logged-in session and reuse it across multiple tests without repeating the login steps every time.",
-          "type": "text",
-          "id": 8,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "Que": [
+            "id": "8",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q8 : What is a Browser Context in Playwright?",
+                    "a": "A Browser Context is an isolated browser session that behaves like a separate incognito window. Each context has its own cookies, cache, local storage, and session data. Multiple contexts can run within the same browser instance without sharing information. Browser Contexts are useful for testing multiple users simultaneously and improving execution speed. They form the foundation for authentication state management and parallel execution in Playwright automation frameworks.",
+                    "type": "text",
+                    "id": 8
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Browser Context Features",
+                    "list": {
+                        "1": "Separate Cookies",
+                        "2": "Separate Storage",
+                        "3": "Independent Sessions",
+                        "4": "Supports Multi-User Testing"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Create Browser Context",
+                    "code": "\nconst context = await browser.newContext();\nconst page = await context.newPage();"
+                }
+            ]
+        },
         {
-          "q": "Q9 : What is a Page object in Playwright?",
-          "a": "A Page object in Playwright represents a single browser tab or webpage. It is the central object used to interact with a web page during test execution. Using the page object, you can perform a wide range of actions such as navigating to a URL using page.goto(), clicking elements, filling input fields, taking screenshots, waiting for elements, reading text content, and making API requests. For example, to open a website and click a login button, you would write page.goto('https://example.com') followed by page.click('#loginButton'). Each browser context can have multiple page objects, representing multiple open tabs. The Page object also emits events that you can listen to, such as page.on('dialog') for handling alerts or page.on('download') for handling file downloads. It is the most frequently used object in any Playwright test script.",
-          "type": "text",
-          "id": 9,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "Que": [
+            "id": "9",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q9 : What is a Page object in Playwright?",
+                    "a": "A Page object represents a browser tab or webpage in Playwright. It is the primary interface used to interact with web applications. Through the Page object, testers can navigate to URLs, click elements, enter text, take screenshots, handle dialogs, and validate content. Every browser context can contain multiple pages. Most Playwright automation scripts heavily rely on the Page object because it provides access to all user interactions and browser events.",
+                    "type": "text",
+                    "id": 9
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Using Page Object",
+                    "code": "\nawait page.goto('https://example.com');\nawait page.click('#loginBtn');"
+                },
+                {
+                    "type": "note",
+                    "note": "The Page object is one of the most frequently used objects in Playwright."
+                }
+            ]
+        },
         {
-          "q": "Q10 : What are locators in Playwright?",
-          "a": "Locators in Playwright are used to identify and interact with web elements on a webpage. They represent a way to find elements and are lazy by nature, meaning they do not immediately search the DOM but wait until an action is performed. Playwright provides a rich set of locator strategies including CSS selectors like page.locator('#submitBtn'), XPath like page.locator('//button[@id=\"submit\"]'), text-based locators like page.getByText('Login'), role-based locators like page.getByRole('button', { name: 'Submit' }), label locators like page.getByLabel('Username'), placeholder locators like page.getByPlaceholder('Enter email'), and test ID locators like page.getByTestId('login-btn'). For example, instead of using a fragile CSS class selector that might change with UI updates, using page.getByRole('button', { name: 'Submit' }) is much more stable and readable. Playwright recommends using user-facing locators that reflect how a real user interacts with the page.",
-          "type": "text",
-          "id": 10,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "11",
-      "Que": [
+            "id": "10",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q10 : What are locators in Playwright?",
+                    "a": "Locators are Playwright objects used to identify and interact with web elements. They are designed to be reliable and automatically support waiting and retry mechanisms. Playwright offers several locator strategies such as getByRole, getByText, getByLabel, getByPlaceholder, CSS selectors, XPath, and getByTestId. User-facing locators are recommended because they closely match how real users interact with applications and are more resistant to UI changes.",
+                    "type": "text",
+                    "id": 10
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Common Locator Types",
+                    "list": {
+                        "1": "getByRole",
+                        "2": "getByText",
+                        "3": "getByLabel",
+                        "4": "getByPlaceholder",
+                        "5": "getByTestId",
+                        "6": "CSS Selector",
+                        "7": "XPath"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Locator Example",
+                    "code": "\nawait page.getByRole('button', { name: 'Login' }).click();"
+                }
+            ]
+        },
         {
-          "q": "Q11 : Which locator is mostly recommended in Playwright?",
-          "a": "Playwright strongly recommends using user-facing locators because they are resilient to UI changes and reflect how real users interact with the application. The most recommended locators are getByRole, getByText, getByLabel, getByPlaceholder, and getByTestId. getByRole is the most preferred because it targets elements based on their ARIA role and accessible name, which makes tests accessible and stable. For example, page.getByRole('button', { name: 'Sign In' }) will find a button with the visible text 'Sign In' regardless of its CSS class or HTML structure changes. getByLabel is ideal for form fields because it finds inputs associated with a label element. getByTestId is used when developers add custom data-testid attributes to elements specifically for testing purposes, providing a stable identifier that is unlikely to change. Avoiding brittle locators like XPath with absolute paths or CSS selectors based on dynamically generated class names is strongly advised.",
-          "type": "text",
-          "id": 11,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "12",
-      "Que": [
+            "id": "11",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q11 : Which locator is mostly recommended in Playwright?",
+                    "a": "Playwright recommends using user-facing locators because they are stable, readable, and closely represent how users interact with applications. The most preferred locator is getByRole() because it uses ARIA roles and accessible names to identify elements. Other recommended locators include getByText(), getByLabel(), getByPlaceholder(), and getByTestId(). These locators reduce dependency on implementation details such as CSS classes and IDs, making tests more reliable and easier to maintain.",
+                    "type": "text",
+                    "id": 11
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Recommended Locators",
+                    "list": {
+                        "1": "getByRole()",
+                        "2": "getByText()",
+                        "3": "getByLabel()",
+                        "4": "getByPlaceholder()",
+                        "5": "getByTestId()"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "getByRole() is considered the most reliable locator in Playwright."
+                }
+            ]
+        },
         {
-          "q": "Q12 : What is getByRole in Playwright?",
-          "a": "getByRole is a locator strategy in Playwright that identifies elements based on their ARIA role and accessible name. ARIA roles describe the purpose of an element, such as button, textbox, checkbox, link, heading, listitem, combobox, and many others. This makes tests closely aligned with how screen readers and assistive technologies interpret the page. For example, page.getByRole('button', { name: 'Add to Cart' }) finds a button element whose accessible name is 'Add to Cart'. Similarly, page.getByRole('textbox', { name: 'Email' }) finds an input field associated with the label 'Email'. getByRole is considered the most reliable locator because it does not depend on implementation details like CSS classes or IDs that developers might change. It also supports additional options like exact for exact text matching and checked for checkbox state. Using getByRole also improves the overall accessibility of your application, since it encourages developers to implement proper ARIA attributes.",
-          "type": "text",
-          "id": 12,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "13",
-      "Que": [
+            "id": "12",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q12 : What is getByRole in Playwright?",
+                    "a": "getByRole() is a Playwright locator strategy that identifies elements based on their ARIA role and accessible name. It closely matches how assistive technologies interact with web applications, making tests more stable and accessible. Common roles include button, textbox, checkbox, link, and heading. Since getByRole focuses on user-visible behavior rather than implementation details, it is considered one of the most reliable locator strategies available in Playwright.",
+                    "type": "text",
+                    "id": 12
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Using getByRole",
+                    "code": "\nawait page.getByRole('button', { name: 'Login' }).click();"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Common Roles",
+                    "list": {
+                        "1": "button",
+                        "2": "textbox",
+                        "3": "checkbox",
+                        "4": "link",
+                        "5": "heading"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q13 : How do you launch a browser in Playwright?",
-          "a": "In Playwright, a browser can be launched using the browserType.launch() method. Playwright provides three browser types: chromium, firefox, and webkit. For example, to launch Chrome, you write const browser = await chromium.launch(). To launch in headed mode where you can see the browser window, you pass the headless option as false: const browser = await chromium.launch({ headless: false }). You can also pass additional options like slowMo to slow down actions for debugging, or args to pass custom browser arguments. In most real-world projects using the Playwright Test Runner, you do not need to manually launch browsers because the test runner handles browser lifecycle automatically based on the configuration in playwright.config.js. The config file allows you to specify which browsers to run tests on using the projects array, making cross-browser execution very simple.",
-          "type": "text",
-          "id": 13,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "14",
-      "Que": [
+            "id": "13",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q13 : How do you launch a browser in Playwright?",
+                    "a": "Browsers in Playwright are launched using browserType.launch() methods. Playwright supports Chromium, Firefox, and WebKit browsers. Browsers can be launched in headless or headed mode depending on testing requirements. Additional options such as slowMo, viewport settings, and browser arguments can also be configured during launch. In Playwright Test Runner projects, browser lifecycle management is usually handled automatically through the configuration file.",
+                    "type": "text",
+                    "id": 13
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Launch Chromium Browser",
+                    "code": "\nconst browser = await chromium.launch({ headless: false });"
+                },
+                {
+                    "type": "note",
+                    "note": "Playwright supports Chromium, Firefox, and WebKit using the same API."
+                }
+            ]
+        },
         {
-          "q": "Q14 : What is headless mode in Playwright?",
-          "a": "Headless mode means the browser runs entirely in the background without opening any visible browser window or user interface on the screen. The browser still performs all actions, renders pages, and executes JavaScript, but none of this is displayed visually. Headless mode is the default in Playwright and is commonly used in CI/CD pipelines where there is no display available, such as in GitHub Actions, Jenkins, or Docker containers. Running in headless mode makes tests execute faster because the system does not need to spend resources on rendering the graphical interface. For example, in a GitHub Actions workflow, all Playwright tests run in headless mode automatically since there is no screen. You can enable headless mode explicitly by setting headless: true in the browser launch options. While headless mode is great for speed and automation pipelines, it can sometimes behave slightly differently from headed mode, so it is good practice to verify critical tests in both modes.",
-          "type": "text",
-          "id": 14,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "15",
-      "Que": [
+            "id": "14",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q14 : What is headless mode in Playwright?",
+                    "a": "Headless mode allows the browser to run in the background without displaying a graphical user interface. The browser still performs all actions, executes JavaScript, and renders pages, but no browser window is visible. Headless execution is faster and consumes fewer resources, making it ideal for CI/CD pipelines and automated test environments. Playwright uses headless mode by default, although it can be disabled when visual debugging is required.",
+                    "type": "text",
+                    "id": 14
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Headless Mode" },
+                        { "label": "Headed Mode" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "No Browser UI" },
+                                { "col": "Visible Browser UI" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Faster Execution" },
+                                { "col": "Useful for Debugging" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Ideal for CI/CD" },
+                                { "col": "Ideal for Development" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q15 : What is headed mode in Playwright?",
-          "a": "Headed mode means the browser opens with a fully visible user interface during test execution, just like a regular user browsing the web. In headed mode, you can see every action the test performs in real time, such as clicking buttons, filling forms, and navigating between pages. This is extremely useful during test development and debugging phases. For example, if a test is failing and you are not sure why, running it in headed mode with slowMo enabled allows you to visually observe each step and identify the problem. To run tests in headed mode, you can either set headless: false in the playwright.config.js or pass the --headed flag in the command line like npx playwright test --headed. You can also combine headed mode with the Playwright Inspector by using the --debug flag, which pauses execution at each step and lets you inspect elements interactively. Headed mode should generally not be used in production CI pipelines as it requires a display server.",
-          "type": "text",
-          "id": 15,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "16",
-      "Que": [
+            "id": "15",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q15 : What is headed mode in Playwright?",
+                    "a": "Headed mode runs the browser with a visible graphical interface so testers can observe every action during execution. It is commonly used while developing, debugging, and troubleshooting automation scripts. Testers can visually verify browser interactions such as clicks, form submissions, and navigation steps. Headed mode can be enabled through browser launch options or command-line flags. Although slower than headless execution, it provides excellent visibility into test behavior.",
+                    "type": "text",
+                    "id": 15
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Launch Browser in Headed Mode",
+                    "code": "\nconst browser = await chromium.launch({ headless: false });"
+                },
+                {
+                    "type": "note",
+                    "note": "Headed mode is extremely useful when debugging failed automation tests."
+                }
+            ]
+        },
         {
-          "q": "Q16 : How do you take screenshots in Playwright?",
-          "a": "Playwright provides a built-in screenshot() method that can capture screenshots at any point during test execution. To take a full-page screenshot, you use await page.screenshot({ path: 'screenshot.png', fullPage: true }). For a screenshot of only the visible viewport, you simply use await page.screenshot({ path: 'screenshot.png' }). You can also take a screenshot of a specific element using await page.locator('#elementId').screenshot({ path: 'element.png' }). Playwright also supports automatic screenshot capture on test failure by configuring screenshot: 'only-on-failure' in playwright.config.js, which is very useful for debugging CI failures without any extra code. Screenshots can be saved in PNG or JPEG format. For example, in an e-commerce test, you might take a screenshot after adding an item to the cart to visually verify the cart updated correctly. Screenshots are stored in the test-results folder by default when using the Playwright Test Runner.",
-          "type": "text",
-          "id": 16,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "17",
-      "Que": [
+            "id": "16",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q16 : How do you take screenshots in Playwright?",
+                    "a": "Playwright provides a built-in screenshot() method to capture screenshots during test execution. Screenshots can be taken for the entire page, visible viewport, or a specific element. They are commonly used for debugging failures, visual verification, and reporting. Playwright also supports automatic screenshot capture on test failures through configuration settings. Screenshots help testers quickly identify UI issues and understand the application state when a test fails.",
+                    "type": "text",
+                    "id": 16
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Take Full Page Screenshot",
+                    "code": "\nawait page.screenshot({ path: 'screenshot.png', fullPage: true });"
+                },
+                {
+                    "type": "note",
+                    "note": "Playwright can automatically capture screenshots for failed test cases."
+                }
+            ]
+        },
         {
-          "q": "Q17 : What is trace viewer in Playwright?",
-          "a": "Trace Viewer is a powerful debugging tool built into Playwright that records a complete log of a test execution including screenshots of each step, network requests and responses, console logs, DOM snapshots, and all actions performed. The trace is saved as a zip file that can be opened in the Playwright Trace Viewer UI, which allows you to replay the test step by step visually. This is incredibly useful for diagnosing failures in CI environments where you cannot see the browser. For example, if a test passes locally but fails in GitHub Actions, you can enable tracing in the config using trace: 'on-first-retry' and then download the trace file from the CI artifacts to investigate what happened. To view a trace file, you run npx playwright show-trace trace.zip. The Trace Viewer shows a timeline, a call log, network panel, and DOM snapshot side by side, giving you a complete picture of what went wrong during the test.",
-          "type": "text",
-          "id": 17,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "18",
-      "Que": [
+            "id": "17",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q17 : What is Trace Viewer in Playwright?",
+                    "a": "Trace Viewer is a powerful debugging tool that records every step of a Playwright test execution. It captures screenshots, DOM snapshots, network activity, console logs, and user actions. The generated trace file can be opened later to visually replay the test and investigate failures. Trace Viewer is especially useful in CI/CD environments where testers cannot directly observe browser execution. It provides detailed insights into what happened before, during, and after a test failure.",
+                    "type": "text",
+                    "id": 17
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Trace Viewer Records",
+                    "list": {
+                        "1": "Screenshots",
+                        "2": "Network Requests",
+                        "3": "Console Logs",
+                        "4": "DOM Snapshots",
+                        "5": "User Actions"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Open Trace File",
+                    "code": "\nnpx playwright show-trace trace.zip"
+                }
+            ]
+        },
         {
-          "q": "Q18 : What is Playwright Inspector?",
-          "a": "Playwright Inspector is an interactive graphical debugging tool that opens alongside the browser during test execution. It allows testers to pause test execution, inspect locators, step through actions one at a time, explore the DOM structure, and generate locator suggestions for elements on the page. To open Playwright Inspector, you run tests with the --debug flag: npx playwright test --debug. The Inspector window shows the current test code highlighted at the step being executed, and you can use the step-over button to move to the next action. One of the most useful features of the Inspector is its ability to suggest the best locator for any element you hover over in the browser, which is very helpful when writing new tests. For example, if you hover over a login button, the Inspector might suggest page.getByRole('button', { name: 'Login' }) as the recommended locator. It also includes a record feature that lets you interact with the browser manually and generates the corresponding Playwright code automatically.",
-          "type": "text",
-          "id": 18,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "19",
-      "Que": [
+            "id": "18",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q18 : What is Playwright Inspector?",
+                    "a": "Playwright Inspector is an interactive debugging tool that helps developers and testers inspect locators, pause execution, step through test actions, and analyze application behavior. It opens alongside the browser and highlights the currently executing test step. Inspector also suggests recommended locators and allows interactive test debugging. This tool is extremely useful while developing automation scripts because it simplifies locator identification and troubleshooting of failed test cases.",
+                    "type": "text",
+                    "id": 18
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Run Playwright Inspector",
+                    "code": "\nnpx playwright test --debug"
+                },
+                {
+                    "type": "note",
+                    "note": "Inspector can generate recommended Playwright locators automatically."
+                }
+            ]
+        },
         {
-          "q": "Q19 : How do you handle dropdowns in Playwright?",
-          "a": "Dropdowns in Playwright are handled using the selectOption() method for standard HTML select elements. You can select a dropdown value by its visible text, its value attribute, or its index. For example, to select an option by visible text you write await page.selectOption('#country', { label: 'India' }). To select by value attribute, you write await page.selectOption('#country', 'IN'). To select by index, you write await page.selectOption('#country', { index: 2 }). Playwright also supports selecting multiple options in a multi-select dropdown by passing an array. For custom dropdowns that are not built with the native select element, such as those built with div and ul elements, you need to click the dropdown trigger first and then click the desired option using standard click actions. For example, await page.click('.dropdown-trigger') followed by await page.click('text=India'). Always verify the selected value after selection using an assertion to ensure the correct option was chosen.",
-          "type": "text",
-          "id": 19,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "20",
-      "Que": [
+            "id": "19",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q19 : How do you handle dropdowns in Playwright?",
+                    "a": "Dropdowns in Playwright are handled using the selectOption() method for standard HTML select elements. Options can be selected using visible text, value attributes, or indexes. For custom dropdowns built with div elements, regular click actions are used to open the dropdown and select an option. Playwright also supports multiple selections in multi-select dropdowns. After selecting an option, validations should be performed to ensure the correct value has been chosen.",
+                    "type": "text",
+                    "id": 19
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Select Dropdown Value",
+                    "code": "\nawait page.selectOption('#country', { label: 'India' });"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Selection Methods",
+                    "list": {
+                        "1": "label",
+                        "2": "value",
+                        "3": "index"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q20 : How do you handle alerts in Playwright?",
-          "a": "Alerts, confirms, and prompts in Playwright are handled using the page.on('dialog') event listener. This event fires whenever a dialog box appears on the page, allowing you to handle it programmatically. To accept an alert, you use dialog.accept(). To dismiss a confirm dialog, you use dialog.dismiss(). To enter text in a prompt dialog, you use dialog.accept('some input text'). The handler must be registered before the action that triggers the dialog. For example, if clicking a delete button shows a confirmation dialog, you first register the handler: page.on('dialog', dialog => dialog.accept()), and then perform the click. You can also read the message of the dialog using dialog.message() to assert its content. For example, await expect(dialog.message()).toBe('Are you sure you want to delete?'). If no handler is registered, Playwright automatically dismisses dialogs to prevent tests from hanging.",
-          "type": "text",
-          "id": 20,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "21",
-      "Que": [
+            "id": "20",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q20 : How do you handle alerts in Playwright?",
+                    "a": "Alerts, confirmation dialogs, and prompt dialogs are handled using the dialog event in Playwright. Testers can accept, dismiss, or provide input to dialogs through dialog methods. Event handlers should be registered before performing the action that triggers the dialog. Playwright automatically dismisses dialogs if no handler is provided, preventing tests from hanging. Dialog handling is commonly used when validating delete confirmations, alerts, and prompt-based user interactions.",
+                    "type": "text",
+                    "id": 20
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Accept Alert Dialog",
+                    "code": "\npage.on('dialog', dialog => dialog.accept());"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Dialog Methods",
+                    "list": {
+                        "1": "accept()",
+                        "2": "dismiss()",
+                        "3": "message()"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q21 : How do you handle frames in Playwright?",
-          "a": "Frames, also known as iframes, are embedded documents within a webpage. Playwright handles them using the frameLocator() or frame() methods. frameLocator() is the recommended approach as it integrates with Playwright's locator system and supports auto-waiting. For example, to interact with an element inside an iframe, you write const frame = page.frameLocator('#iframeId') and then frame.getByRole('button', { name: 'Submit' }).click(). The frame() method can be used to get a frame by its name attribute or URL: const frame = page.frame({ name: 'frameName' }). Unlike Selenium, Playwright does not require switching context into the frame and then switching back out, which makes the code much cleaner. Nested iframes can also be handled by chaining frameLocator calls. For example, in a payment processing form that embeds a third-party payment gateway in an iframe, you would use frameLocator to find and interact with the card number input inside that iframe.",
-          "type": "text",
-          "id": 21,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "22",
-      "Que": [
+            "id": "21",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q21 : How do you handle frames in Playwright?",
+                    "a": "Playwright handles frames using frameLocator() and frame() methods. The recommended approach is frameLocator() because it integrates with Playwright locators and supports auto-waiting. Unlike Selenium, Playwright does not require switching in and out of frames, making automation simpler and cleaner. Frames are commonly used for embedded content such as payment gateways, advertisements, and external widgets. Playwright can easily interact with elements inside single or nested iframes using dedicated frame locators.",
+                    "type": "text",
+                    "id": 21
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Working with Frame Locator",
+                    "code": "\nconst frame = page.frameLocator('#iframeId');\nawait frame.getByRole('button', { name: 'Submit' }).click();"
+                },
+                {
+                    "type": "note",
+                    "note": "frameLocator() is the preferred method for handling iframes in Playwright."
+                }
+            ]
+        },
         {
-          "q": "Q22 : How do you handle multiple tabs in Playwright?",
-          "a": "Multiple tabs in Playwright are handled using browser contexts and page events. When an action like clicking a link opens a new tab, Playwright can capture this new page using the page event on the browser context. The recommended approach is to wait for the new page event using a Promise before triggering the action. For example: const [newPage] = await Promise.all([context.waitForEvent('page'), page.click('a[target=\"_blank\"]')]). After this, newPage represents the newly opened tab and you can interact with it independently. You can switch between tabs simply by using different page objects. For example, to perform an action on the original tab after working on the new tab, you just use the original page variable. You can also close a tab using newPage.close(). This is useful in scenarios where clicking a product link in an e-commerce app opens the product details in a new tab and you need to verify the product information there.",
-          "type": "text",
-          "id": 22,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "23",
-      "Que": [
+            "id": "22",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q22 : How do you handle multiple tabs in Playwright?",
+                    "a": "Multiple tabs are handled using browser contexts and page events. When a user action opens a new tab, Playwright captures it through the page event. The new tab is represented by a separate Page object, allowing independent interactions. Testers can switch between tabs by referencing different page variables. This approach makes handling multiple browser tabs straightforward and reliable, especially when validating external links, product pages, or third-party integrations.",
+                    "type": "text",
+                    "id": 22
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Handle New Tab",
+                    "code": "\nconst [newPage] = await Promise.all([\n context.waitForEvent('page'),\n page.click('a[target=\"_blank\"]')\n]);"
+                },
+                {
+                    "type": "note",
+                    "note": "Every browser tab is represented by a separate Page object."
+                }
+            ]
+        },
         {
-          "q": "Q23 : What is Page Object Model in Playwright?",
-          "a": "Page Object Model, commonly called POM, is a widely used design pattern in test automation where each web page or component of the application is represented by a separate class. This class contains the locators for elements on that page and the methods that represent user actions on that page. For example, a LoginPage class would contain locators for the username input, password input, and login button, along with a login() method that fills in the credentials and clicks the button. The test file then uses this class without dealing with locator details directly. This separation of concerns makes tests easier to read and maintain. If the UI changes, you only need to update the locator in one place, the page object class, rather than updating every test that uses it. Playwright works naturally with POM since it uses class-based fixtures and TypeScript support. POM combined with Playwright fixtures makes the framework highly scalable for large test suites.",
-          "type": "text",
-          "id": 23,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "24",
-      "Que": [
+            "id": "23",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q23 : What is Page Object Model in Playwright?",
+                    "a": "Page Object Model (POM) is a design pattern that separates page elements and business actions from test scripts. Each page is represented by a dedicated class containing locators and reusable methods. This improves code maintainability, readability, and reusability. When UI changes occur, updates are required only in the page class instead of multiple test files. POM is widely used in Playwright frameworks to build scalable and maintainable automation solutions.",
+                    "type": "text",
+                    "id": 23
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Page Object Method",
+                    "code": "\nasync login(username: string, password: string) {\n await this.username.fill(username);\n await this.password.fill(password);\n await this.loginButton.click();\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Benefits of POM",
+                    "list": {
+                        "1": "Reusability",
+                        "2": "Maintainability",
+                        "3": "Readability",
+                        "4": "Scalability"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q24 : What is the use of beforeEach in Playwright?",
-          "a": "beforeEach is a test hook in Playwright that automatically runs a specified block of code before every individual test case within a describe block or test file. It is commonly used for repetitive setup tasks that every test needs, such as logging in to the application, navigating to a specific page, or initializing test data. For example, if every test in a suite requires the user to be logged in, you can put the login steps in a beforeEach hook instead of repeating them in every test. This keeps your tests concise and focused on what they are actually testing. In Playwright, beforeEach receives the page and other fixtures as arguments: test.beforeEach(async ({ page }) => { await page.goto('/login'); await page.fill('#username', 'testuser'); await page.fill('#password', 'password'); await page.click('#loginBtn'); }). This ensures every test starts from a consistent state, making tests more reliable and independent from each other.",
-          "type": "text",
-          "id": 24,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "25",
-      "Que": [
+            "id": "24",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q24 : What is the use of beforeEach in Playwright?",
+                    "a": "beforeEach is a Playwright hook that runs before every test case. It is typically used for common setup activities such as launching applications, logging in users, creating test data, or navigating to a specific page. By placing repetitive setup logic in beforeEach, test scripts become shorter and easier to maintain. It also ensures every test starts from a consistent state, improving reliability and reducing dependencies between test cases.",
+                    "type": "text",
+                    "id": 24
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "beforeEach Hook Example",
+                    "code": "\ntest.beforeEach(async ({ page }) => {\n await page.goto('/login');\n});"
+                },
+                {
+                    "type": "note",
+                    "note": "beforeEach executes before every individual test case."
+                }
+            ]
+        },
         {
-          "q": "Q25 : What is the use of afterEach in Playwright?",
-          "a": "afterEach is a test hook that runs after every individual test case, regardless of whether the test passed or failed. It is mainly used for cleanup activities to reset the application state and ensure tests do not interfere with each other. Common use cases include logging out of the application, deleting test data created during the test, capturing additional logs or screenshots, or closing extra browser pages that were opened. For example, if a test creates a new user account, the afterEach hook can delete that account so the next test starts with a clean state. Another common scenario is capturing a screenshot in afterEach if the test failed for additional debugging context. In Playwright, afterEach is written as test.afterEach(async ({ page }) => { await page.click('#logoutBtn'); }). Proper cleanup in afterEach ensures test isolation and prevents cascading failures where one test's side effects break a subsequent test.",
-          "type": "text",
-          "id": 25,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "26",
-      "Que": [
+            "id": "25",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q25 : What is the use of afterEach in Playwright?",
+                    "a": "afterEach is a Playwright hook that executes after every test case, regardless of whether the test passes or fails. It is mainly used for cleanup activities such as logging out users, deleting test data, capturing logs, taking screenshots, or closing resources. Proper cleanup ensures test isolation and prevents one test from affecting another. Using afterEach helps maintain a stable and predictable test environment throughout execution.",
+                    "type": "text",
+                    "id": 25
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "afterEach Hook Example",
+                    "code": "\ntest.afterEach(async ({ page }) => {\n await page.click('#logoutBtn');\n});"
+                },
+                {
+                    "type": "note",
+                    "note": "afterEach runs even when a test case fails."
+                }
+            ]
+        },
         {
-          "q": "Q26 : What is parallel execution in Playwright?",
-          "a": "Parallel execution in Playwright means running multiple test cases or test files simultaneously instead of sequentially. This significantly reduces the total test suite execution time. By default, Playwright runs test files in parallel using multiple worker processes. The number of workers can be configured using the workers option in playwright.config.js. For example, setting workers: 4 means four test files run at the same time across four separate browser instances. Within a single file, tests run sequentially by default, but you can enable full parallelism within files using test.describe.configure({ mode: 'parallel' }). For example, a test suite with 100 tests that takes 50 minutes sequentially might complete in under 15 minutes with parallel execution. Playwright uses browser contexts to isolate parallel tests, ensuring they do not share cookies or state. It is important to write independent tests when using parallel execution to avoid race conditions or shared state issues.",
-          "type": "text",
-          "id": 26,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "27",
-      "Que": [
+            "id": "26",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q26 : What is parallel execution in Playwright?",
+                    "a": "Parallel execution allows multiple test cases or test files to run simultaneously, reducing overall execution time. Playwright supports parallel execution through worker processes that run tests independently. Each worker uses isolated browser contexts to prevent data sharing between tests. This approach improves efficiency, especially for large regression suites. Parallel execution is commonly configured in playwright.config.js and is widely used in CI/CD pipelines to speed up automated testing and provide faster feedback.",
+                    "type": "text",
+                    "id": 26
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Configure Parallel Workers",
+                    "code": "\nexport default defineConfig({\n workers: 4\n});"
+                },
+                {
+                    "type": "note",
+                    "note": "Tests should be independent when using parallel execution."
+                }
+            ]
+        },
         {
-          "q": "Q27 : What is Playwright Test Runner?",
-          "a": "Playwright Test Runner is the official built-in testing framework provided by Playwright, available through the @playwright/test package. It is a full-featured test runner that provides everything needed to write, organize, and execute automated tests without requiring additional libraries. It supports features like test hooks such as beforeAll, beforeEach, afterEach, and afterAll, parallel execution with multiple workers, automatic retries for failed tests, rich HTML reporting, assertions using the expect library, fixtures for dependency injection, and parameterized tests. For example, you can write a test using test('login test', async ({ page }) => { await page.goto('/login'); }) and the runner handles browser launch, context creation, page creation, and cleanup automatically. The test runner also integrates seamlessly with TypeScript, supports tagging and filtering tests, and generates detailed reports showing passed, failed, and skipped tests along with error messages and screenshots. It is the recommended way to use Playwright in any project.",
-          "type": "text",
-          "id": 27,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "28",
-      "Que": [
+            "id": "27",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q27 : What is Playwright Test Runner?",
+                    "a": "Playwright Test Runner is the official testing framework provided by Playwright. It offers features such as test execution, assertions, hooks, retries, parallel execution, reporting, fixtures, and browser management. The Test Runner automatically handles browser setup and cleanup, allowing testers to focus on writing test logic. It integrates seamlessly with Playwright features and supports modern testing practices, making it the recommended choice for Playwright automation projects.",
+                    "type": "text",
+                    "id": 27
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Key Features",
+                    "list": {
+                        "1": "Assertions",
+                        "2": "Hooks",
+                        "3": "Retries",
+                        "4": "Parallel Execution",
+                        "5": "HTML Reports"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "@playwright/test is the official Playwright Test Runner package."
+                }
+            ]
+        },
         {
-          "q": "Q28 : What are assertions in Playwright?",
-          "a": "Assertions in Playwright are used to validate that the actual behavior of the application matches the expected behavior. Playwright provides a powerful set of web-first assertions through the expect API that are designed specifically for async web interactions. These assertions automatically retry until the condition is met or a timeout occurs, which makes them much more reliable than simple synchronous checks. Common assertions include await expect(page).toHaveURL('/dashboard') to verify the current URL, await expect(page.locator('h1')).toHaveText('Welcome') to verify element text, await expect(page.locator('#submitBtn')).toBeVisible() to verify element visibility, await expect(page.locator('#checkbox')).toBeChecked() to verify a checkbox is checked, and await expect(page).toHaveTitle('My App') to verify the page title. For example, after submitting a login form, you would assert that the URL changed to the dashboard and a welcome message is visible. Soft assertions are also available using expect.soft(), which allows tests to continue even after an assertion failure and report all failures at the end.",
-          "type": "text",
-          "id": 28,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "29",
-      "Que": [
+            "id": "28",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q28 : What are assertions in Playwright?",
+                    "a": "Assertions are validations that compare actual application behavior with expected results. Playwright provides web-first assertions through the expect API, which automatically wait for conditions before failing. Common assertions verify visibility, text, URL, title, checkbox state, and element presence. Assertions improve test reliability by reducing timing issues and ensuring application functionality behaves correctly. They are a fundamental part of automated testing and help determine whether a test passes or fails.",
+                    "type": "text",
+                    "id": 28
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Assertion Example",
+                    "code": "\nawait expect(page.locator('#loginBtn')).toBeVisible();"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Common Assertions",
+                    "list": {
+                        "1": "toBeVisible()",
+                        "2": "toHaveText()",
+                        "3": "toHaveURL()",
+                        "4": "toHaveTitle()",
+                        "5": "toBeChecked()"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q29 : How do you wait for an element in Playwright?",
-          "a": "Playwright's auto-waiting handles most waiting scenarios automatically, but there are cases where explicit waiting is needed. The primary way to wait for an element is to use expect assertions with Playwright's web-first assertions, such as await expect(page.locator('#element')).toBeVisible(). For waiting until an element appears in the DOM, you can use await page.waitForSelector('#element'). To wait for navigation to complete, use await page.waitForURL('/expected-path') or await page.waitForLoadState('networkidle'). For waiting for a specific network request or response, use await page.waitForResponse('**/api/data'). For custom waiting conditions, you can use await page.waitForFunction(() => document.querySelector('#element') !== null). For example, after clicking a submit button that triggers an API call, you might wait for the success message to appear using await expect(page.getByText('Saved successfully')).toBeVisible({ timeout: 10000 }). It is best practice to rely on semantic assertions rather than arbitrary timeouts, as they make tests faster and more reliable.",
-          "type": "text",
-          "id": 29,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "30",
-      "Que": [
+            "id": "29",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q29 : How do you wait for an element in Playwright?",
+                    "a": "Playwright automatically waits for most element interactions, but explicit waiting can be used when necessary. Testers commonly use web-first assertions such as expect(locator).toBeVisible() or methods like waitForSelector(), waitForURL(), and waitForLoadState(). These approaches wait for specific conditions before continuing execution. Using meaningful waits instead of fixed delays improves test stability, reduces flakiness, and ensures faster execution by waiting only when required.",
+                    "type": "text",
+                    "id": 29
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Wait for Element Visibility",
+                    "code": "\nawait expect(page.locator('#successMessage')).toBeVisible();"
+                },
+                {
+                    "type": "note",
+                    "note": "Prefer assertions over hardcoded waits like setTimeout or sleep."
+                }
+            ]
+        },
         {
-          "q": "Q30 : How do you upload files in Playwright?",
-          "a": "File uploads in Playwright are handled using the setInputFiles() method on a file input element. This method directly sets the files on the input without requiring you to open the operating system file dialog, which makes it much simpler and more reliable than traditional approaches. For a single file upload, you write await page.locator('input[type=\"file\"]').setInputFiles('path/to/file.pdf'). For multiple file uploads, you pass an array: await page.locator('input[type=\"file\"]').setInputFiles(['file1.jpg', 'file2.jpg']). To clear previously selected files, pass an empty array: await page.locator('input[type=\"file\"]').setInputFiles([]). For drag-and-drop file upload areas that do not use a standard file input, you may need to use the DataTransfer API via page.evaluate(). For example, in a document management system test, you upload a contract PDF by locating the file input and calling setInputFiles with the test document path, then asserting the uploaded file name appears in the upload confirmation area.",
-          "type": "text",
-          "id": 30,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "31",
-      "Que": [
+            "id": "30",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q30 : How do you upload files in Playwright?",
+                    "a": "File uploads in Playwright are handled using the setInputFiles() method. This method directly assigns files to file input elements without interacting with operating system dialogs. Playwright supports uploading single files, multiple files, and clearing uploaded files when required. The approach is simple, reliable, and works consistently across browsers. File upload functionality is commonly tested in document management systems, profile image uploads, and form submission workflows.",
+                    "type": "text",
+                    "id": 30
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Upload File Example",
+                    "code": "\nawait page.locator('input[type=\"file\"]').setInputFiles('sample.pdf');"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Supported Upload Types",
+                    "list": {
+                        "1": "Single File",
+                        "2": "Multiple Files",
+                        "3": "Clear Existing Files"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q31 : How do you download files in Playwright?",
-          "a": "File downloads in Playwright are handled using the download event on the page. When a download is triggered by a user action, Playwright captures it and provides a Download object that you can use to save and verify the file. The recommended pattern is to start waiting for the download event before triggering the action that causes it, similar to how multiple tabs are handled. For example: const [download] = await Promise.all([page.waitForEvent('download'), page.click('#downloadBtn')]). After capturing the download, you can save it to a specific path using await download.saveAs('./downloads/report.pdf'). You can also check the suggested filename using download.suggestedFilename() and verify the download URL using download.url(). For example, in a reporting application test, you click the Export button, capture the download event, save the file, and then verify the file exists and has the correct name. This approach works reliably without needing to configure browser download settings manually.",
-          "type": "text",
-          "id": 31,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "32",
-      "Que": [
+            "id": "31",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q31 : How do you download files in Playwright?",
+                    "a": "Playwright handles file downloads through the download event. When a download is triggered, Playwright captures it and provides a Download object that can be used to save and verify the file. The recommended approach is to wait for the download event before performing the action that starts the download. This ensures reliable file handling and allows testers to validate downloaded files as part of automated test scenarios.",
+                    "type": "text",
+                    "id": 31
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Download File Example",
+                    "code": "\nconst [download] = await Promise.all([\n page.waitForEvent('download'),\n page.click('#downloadBtn')\n]);\nawait download.saveAs('./downloads/report.pdf');"
+                },
+                {
+                    "type": "note",
+                    "note": "Playwright does not require special browser settings for handling downloads."
+                }
+            ]
+        },
         {
-          "q": "Q32 : What is API testing in Playwright?",
-          "a": "Playwright supports API testing through its built-in request context, allowing testers to send HTTP requests directly without opening a browser. This is useful for testing REST APIs, setting up test data, or bypassing the UI for steps that do not need visual validation. The APIRequestContext provides methods for GET, POST, PUT, PATCH, and DELETE requests. For example, to test a login API: const response = await request.post('/api/login', { data: { username: 'user', password: 'pass' } }); await expect(response).toBeOK(). You can also use API calls to create test data before a UI test to speed up setup. For instance, instead of filling out a registration form in the UI, you call the registration API in beforeEach to create a user account and then test the UI login directly. Playwright's API testing supports headers, authentication tokens, JSON body, form data, and response validation including status codes and response body content.",
-          "type": "text",
-          "id": 32,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "33",
-      "Que": [
+            "id": "32",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q32 : What is API testing in Playwright?",
+                    "a": "Playwright provides built-in API testing capabilities through APIRequestContext. Testers can send HTTP requests such as GET, POST, PUT, PATCH, and DELETE directly without opening a browser. API testing is useful for validating backend services, preparing test data, and verifying application behavior. Combining UI and API testing in a single framework improves efficiency, reduces execution time, and allows more comprehensive end-to-end validation.",
+                    "type": "text",
+                    "id": 32
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "API POST Request",
+                    "code": "\nconst response = await request.post('/api/login', {\n data: {\n  username: 'admin',\n  password: 'admin123'\n }\n});"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Supported Methods",
+                    "list": {
+                        "1": "GET",
+                        "2": "POST",
+                        "3": "PUT",
+                        "4": "PATCH",
+                        "5": "DELETE"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q33 : What is the use of fixtures in Playwright?",
-          "a": "Fixtures in Playwright are a mechanism for providing reusable setup and teardown logic to tests through dependency injection. They are one of the most powerful features of the Playwright Test Runner. Built-in fixtures include page, browser, context, and request, which are automatically created and cleaned up for each test. You can also create custom fixtures to extend this with your own objects like page object model classes, authenticated pages, or test data. For example, you can create a loggedInPage fixture that performs the login process and provides an authenticated page object to any test that needs it: const test = base.extend({ loggedInPage: async ({ page }, use) => { await page.goto('/login'); await page.fill('#username', 'user'); await page.click('#loginBtn'); await use(page); } }). Tests using this fixture automatically get an authenticated page without writing login code themselves. Fixtures also handle teardown automatically, ensuring resources are properly released after each test. They make test code cleaner, more modular, and easier to maintain.",
-          "type": "text",
-          "id": 33,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "34",
-      "Que": [
+            "id": "33",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q33 : What is the use of fixtures in Playwright?",
+                    "a": "Fixtures in Playwright provide reusable setup and teardown functionality through dependency injection. Built-in fixtures include browser, context, page, and request. Custom fixtures can also be created to manage authenticated sessions, page objects, or test data. Fixtures help reduce duplicate code, improve maintainability, and ensure a consistent test environment. They are widely used in large automation frameworks to simplify test creation and resource management.",
+                    "type": "text",
+                    "id": 33
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Built-in Fixtures",
+                    "list": {
+                        "1": "browser",
+                        "2": "context",
+                        "3": "page",
+                        "4": "request"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Fixtures automatically manage setup and cleanup of resources."
+                }
+            ]
+        },
         {
-          "q": "Q34 : What is test.describe in Playwright?",
-          "a": "test.describe is a grouping mechanism in Playwright that allows you to organize related test cases into logical blocks, similar to describe in Jest or Mocha. It helps structure large test files by grouping tests that belong to the same feature or user flow. For example, all tests related to the login functionality can be grouped under test.describe('Login Tests', () => { ... }). Describe blocks can be nested to create hierarchical groupings, such as grouping smoke tests within a feature group. Each describe block can have its own beforeEach and afterEach hooks that only apply to tests within that block, providing more granular control over setup and teardown. test.describe also supports configuration options like test.describe.configure({ mode: 'parallel' }) to run tests within that group in parallel. In test reports, tests are organized by their describe group names, which makes it easier to navigate and understand the test results. It is a best practice to use descriptive names for describe blocks that clearly communicate what feature or workflow is being tested.",
-          "type": "text",
-          "id": 34,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "35",
-      "Que": [
+            "id": "34",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q34 : What is test.describe in Playwright?",
+                    "a": "test.describe is used to group related test cases into logical sections. It helps organize test files and improves readability by keeping feature-specific tests together. Each describe block can have its own hooks such as beforeEach and afterEach. Grouping tests also makes reports easier to understand and supports configuration options like parallel execution within a specific group. It is considered a best practice when creating structured automation frameworks.",
+                    "type": "text",
+                    "id": 34
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Describe Block Example",
+                    "code": "\ntest.describe('Login Tests', () => {\n test('Valid Login', async ({ page }) => {\n  // Test Steps\n });\n});"
+                },
+                {
+                    "type": "note",
+                    "note": "test.describe improves organization and readability of test suites."
+                }
+            ]
+        },
         {
-          "q": "Q35 : What is test.only in Playwright?",
-          "a": "test.only is a modifier in Playwright that causes only the marked test or describe block to run while all other tests in the file are automatically skipped. It is an extremely useful feature during development and debugging when you want to focus on a single failing test without waiting for the entire test suite to execute. For example, if you have 50 tests in a file and only one is failing, you can temporarily change test('my test', ...) to test.only('my test', ...) and run the file to execute just that one test. Similarly, test.describe.only marks all tests within a describe block to run while skipping others. It is important to remember to remove .only modifiers before committing code, as leaving them in would cause other tests to be silently skipped in CI pipelines. Some teams use linting rules to prevent .only from being committed accidentally. The --grep option in the command line is an alternative approach that does not require modifying test code.",
-          "type": "text",
-          "id": 35,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "36",
-      "Que": [
+            "id": "35",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q35 : What is test.only in Playwright?",
+                    "a": "test.only is a Playwright modifier used to execute only a specific test or group of tests while skipping all others. It is useful during development and debugging when focusing on a particular test case. Using test.only speeds up troubleshooting because only the selected test runs. However, developers should remove test.only before committing code because it can unintentionally skip important tests in automated pipelines.",
+                    "type": "text",
+                    "id": 35
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Run Single Test",
+                    "code": "\ntest.only('Login Test', async ({ page }) => {\n // Test Steps\n});"
+                },
+                {
+                    "type": "note",
+                    "note": "Never commit test.only to source control as it skips all other tests."
+                }
+            ]
+        },
         {
-          "q": "Q36 : What is test.skip in Playwright?",
-          "a": "test.skip is a modifier in Playwright used to skip a test case or a group of tests during execution. Skipped tests are not executed but are reported as skipped in the test results, making it clear they were intentionally bypassed. It is useful when a feature is under development, a test is known to be broken due to a bug that is not yet fixed, or a test is not applicable in certain environments. For example, test.skip('payment test', async ({ page }) => { ... }) will skip that test entirely. You can also conditionally skip tests based on the browser or environment: test.skip(({ browserName }) => browserName === 'firefox', 'Not supported in Firefox'). Another pattern is test.fixme which marks a test as broken and expected to fail, signaling to the team that it needs attention. In playwright.config.js, you can skip tests by project or tag using grep filters. Unlike test.only, test.skip is safe to commit to source control when used to mark genuinely non-applicable tests.",
-          "type": "text",
-          "id": 36,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "37",
-      "Que": [
+            "id": "36",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q36 : What is test.skip in Playwright?",
+                    "a": "test.skip is a Playwright modifier used to skip test execution intentionally. Skipped tests appear in reports but are not executed. It is useful when a feature is under development, a known bug exists, or a test is not applicable for certain environments or browsers. Playwright also supports conditional skipping based on runtime conditions. Using test.skip helps teams manage unstable or temporary scenarios without removing test cases from the automation suite.",
+                    "type": "text",
+                    "id": 36
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Skip Test Example",
+                    "code": "\ntest.skip('Payment Test', async ({ page }) => {\n // Test Steps\n});"
+                },
+                {
+                    "type": "note",
+                    "note": "Skipped tests are shown in reports but are not executed."
+                }
+            ]
+        },
         {
-          "q": "Q37 : What is the use of hooks in Playwright?",
-          "a": "Hooks in Playwright are special lifecycle functions that run at specific points during test execution, allowing you to perform setup and cleanup operations. Playwright provides four main hooks. beforeAll runs once before all tests in a describe block and is used for expensive one-time setup like starting a server or creating a database. beforeEach runs before every individual test and is used for per-test setup like navigating to a page or logging in. afterEach runs after every individual test and is used for per-test cleanup like logging out or deleting test data. afterAll runs once after all tests complete and is used for teardown like stopping a server or closing database connections. For example, in a test suite for a shopping cart feature, beforeAll might set up the test product catalog in the database, beforeEach might ensure the user is logged in, afterEach might clear the cart, and afterAll might remove the test catalog. Hooks can also be defined globally in a setup file to apply across all test files.",
-          "type": "text",
-          "id": 37,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "38",
-      "Que": [
+            "id": "37",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q37 : What is the use of hooks in Playwright?",
+                    "a": "Hooks are lifecycle methods that execute before or after tests. Playwright provides beforeAll, beforeEach, afterEach, and afterAll hooks. They are used for setup and cleanup activities such as launching applications, creating test data, logging in users, deleting test records, and releasing resources. Hooks improve code reusability and keep test cases focused on business logic. They also ensure consistency by preparing a predictable environment for every test execution.",
+                    "type": "text",
+                    "id": 37
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Hook" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "beforeAll" },
+                                { "col": "Runs once before all tests" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "beforeEach" },
+                                { "col": "Runs before every test" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "afterEach" },
+                                { "col": "Runs after every test" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "afterAll" },
+                                { "col": "Runs once after all tests" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q38 : How do you generate reports in Playwright?",
-          "a": "Playwright provides multiple built-in reporters and also supports third-party reporting tools. The most popular built-in reporter is the HTML reporter, which generates a rich, interactive HTML report showing all test results with pass/fail status, duration, error messages, screenshots, traces, and videos. To generate an HTML report, configure reporter: 'html' in playwright.config.js and run your tests. After the run, use npx playwright show-report to open the report in a browser. Other built-in reporters include list for console output, dot for minimal output in CI, json for machine-readable output, and junit for integration with CI tools like Jenkins. For example, for GitHub Actions integration you might use the github reporter to annotate failing lines directly in pull requests. Multiple reporters can be combined simultaneously, such as using list for console and html for detailed output. Third-party integrations like Allure Report can also be connected using community plugins. The HTML report is particularly valuable because it links directly to traces and videos for failed tests.",
-          "type": "text",
-          "id": 38,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "39",
-      "Que": [
+            "id": "38",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q38 : How do you generate reports in Playwright?",
+                    "a": "Playwright provides built-in reporting capabilities including HTML, List, Dot, JSON, and JUnit reporters. The HTML report is the most commonly used because it provides detailed information about passed, failed, and skipped tests along with screenshots, videos, and traces. Reports help teams analyze execution results and troubleshoot failures. Reporter configurations are defined in playwright.config.js and can be integrated with CI/CD tools for automated reporting.",
+                    "type": "text",
+                    "id": 38
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "HTML Reporter Configuration",
+                    "code": "\nexport default defineConfig({\n reporter: 'html'\n});"
+                },
+                {
+                    "type": "note",
+                    "note": "Use 'npx playwright show-report' to open the generated HTML report."
+                }
+            ]
+        },
         {
-          "q": "Q39 : What is retry functionality in Playwright?",
-          "a": "Retry functionality in Playwright automatically re-runs failed test cases a specified number of times before marking them as ultimately failed. This helps reduce false negatives caused by transient issues like network latency, slow server responses, or timing-related test flakiness that are not actual application bugs. Retries can be configured in playwright.config.js using the retries option, for example retries: 2 means a failing test will be retried up to two additional times. You can also set retries differently for local runs and CI runs: retries: process.env.CI ? 2 : 0. This way, retries only happen in CI where network conditions might be less reliable, while local runs fail immediately to give developers faster feedback. When a test is retried, Playwright resets the browser context to ensure a clean state. Test results reports show how many retries were needed for each test, which helps identify consistently flaky tests that need investigation. Playwright also supports the concept of test.fail() to mark tests that are expected to fail as a temporary measure.",
-          "type": "text",
-          "id": 39,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "40",
-      "Que": [
+            "id": "39",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q39 : What is retry functionality in Playwright?",
+                    "a": "Retry functionality automatically reruns failed tests a specified number of times before marking them as failed. It helps reduce false failures caused by temporary issues such as network delays or unstable environments. Retries are configured in playwright.config.js and are commonly enabled in CI/CD pipelines. Although retries improve execution stability, consistently failing tests should be investigated instead of relying on retries as a permanent solution.",
+                    "type": "text",
+                    "id": 39
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Retry Configuration",
+                    "code": "\nexport default defineConfig({\n retries: 2\n});"
+                },
+                {
+                    "type": "note",
+                    "note": "Retries help identify flaky tests but should not replace proper debugging."
+                }
+            ]
+        },
         {
-          "q": "Q40 : What is the difference between fill() and type() in Playwright?",
-          "a": "fill() and type() are both methods for entering text into input fields but they work differently. fill() is the recommended approach in most cases. It first clears any existing text in the field and then sets the entire value at once, instantly without simulating key presses. This makes it fast and reliable for most input scenarios. For example, await page.fill('#emailInput', 'user@example.com') immediately sets the email field value. type() on the other hand simulates a real user typing character by character, dispatching individual keydown, keypress, keyup, and input events for each character. This is useful when the application has input masking, character-by-character validation, or autocomplete behavior that relies on keyboard events. For example, a phone number field with an input mask might behave incorrectly with fill() but work correctly with type(). type() is also useful when testing keystroke-level features like a typeahead search that shows suggestions as the user types. Note that type() is slower than fill() due to the character-by-character approach.",
-          "type": "text",
-          "id": 40,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "41",
-      "Que": [
+            "id": "40",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q40 : What is the difference between fill() and type() in Playwright?",
+                    "a": "fill() and type() are both used to enter text into input fields, but they behave differently. fill() clears existing content and instantly sets the entire value, making it faster and more reliable. type() simulates real keyboard typing by sending characters one at a time and triggering keyboard events. fill() is preferred for most automation scenarios, while type() is useful when applications rely on keypress events, autocomplete behavior, or input masking functionality.",
+                    "type": "text",
+                    "id": 40
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "fill()" }, { "label": "type()" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Sets value instantly" },
+                                { "col": "Types character by character" }
+                            ]
+                        },
+                        {
+                            "row": [{ "col": "Faster" }, { "col": "Slower" }]
+                        },
+                        {
+                            "row": [
+                                { "col": "Best for standard inputs" },
+                                { "col": "Best for keyboard event testing" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "fill vs type Example",
+                    "code": "\nawait page.fill('#email', 'user@test.com');\nawait page.type('#email', 'user@test.com');"
+                }
+            ]
+        },
+
         {
-          "q": "Q41 : How do you perform mouse actions in Playwright?",
-          "a": "Playwright provides comprehensive mouse action support through both high-level locator methods and the low-level mouse API. For clicking, you can use locator.click() for a single click, locator.dblclick() for a double click, and locator.click({ button: 'right' }) for a right click. For hovering, locator.hover() moves the mouse over an element, which is useful for triggering tooltip or dropdown menus. For drag-and-drop, Playwright provides locator.dragTo(targetLocator) which drags an element to a target location. For more precise control, the page.mouse API allows you to move the mouse to specific coordinates using page.mouse.move(x, y), press buttons using page.mouse.down() and page.mouse.up(), and click at coordinates using page.mouse.click(x, y). For example, in a Kanban board application, you might use drag-and-drop to move a task card from the To Do column to the In Progress column. For a drawing canvas test, you might use page.mouse.move and page.mouse.down to simulate drawing actions. These capabilities cover virtually all mouse interactions a real user would perform.",
-          "type": "text",
-          "id": 41,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "42",
-      "Que": [
+            "id": "41",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q41 : How do you perform mouse actions in Playwright?",
+                    "a": "Playwright provides several methods for performing mouse actions such as click, double-click, right-click, hover, and drag-and-drop. High-level locator methods are recommended because they automatically handle waiting and retries. For advanced interactions, the mouse API can move the cursor to specific coordinates and simulate mouse button actions. Mouse operations are useful for testing menus, tooltips, drag-and-drop functionality, and other interactive web application features.",
+                    "type": "text",
+                    "id": 41
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Common Mouse Actions",
+                    "list": {
+                        "1": "click()",
+                        "2": "dblclick()",
+                        "3": "hover()",
+                        "4": "dragTo()",
+                        "5": "right-click"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Mouse Hover Example",
+                    "code": "\nawait page.locator('#menu').hover();"
+                }
+            ]
+        },
         {
-          "q": "Q42 : How do you handle keyboard actions in Playwright?",
-          "a": "Playwright handles keyboard actions through both high-level and low-level keyboard APIs. The high-level approach uses locator.press('key') to press a key while an element is focused. For example, await page.locator('#searchInput').press('Enter') simulates pressing Enter in the search field. The keyboard class provides low-level control with page.keyboard.press(), page.keyboard.type(), page.keyboard.down(), and page.keyboard.up(). For keyboard shortcuts, you can use combinations like await page.keyboard.press('Control+C') for copy or 'Control+V' for paste. For Tab navigation, await page.keyboard.press('Tab') moves focus to the next focusable element, which is useful for accessibility testing. For special keys like Escape, Backspace, Delete, Arrow keys, and function keys, you use their names like 'Escape', 'Backspace', 'ArrowDown', 'F5'. For example, to test an autocomplete dropdown, you might type a few characters and then use 'ArrowDown' to navigate options and 'Enter' to select one. The keyboard API also supports holding modifier keys while pressing others, useful for testing multi-key scenarios.",
-          "type": "text",
-          "id": 42,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "43",
-      "Que": [
+            "id": "42",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q42 : How do you handle keyboard actions in Playwright?",
+                    "a": "Keyboard actions in Playwright can be performed using locator.press() or the keyboard API. Playwright supports typing text, pressing special keys, keyboard shortcuts, and key combinations. Common actions include Enter, Tab, Escape, Arrow keys, and Control-based shortcuts. Keyboard automation is useful for testing accessibility, form navigation, search functionality, and applications that rely heavily on keyboard interactions. Playwright accurately simulates real user keyboard behavior.",
+                    "type": "text",
+                    "id": 42
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Common Keyboard Keys",
+                    "list": {
+                        "1": "Enter",
+                        "2": "Tab",
+                        "3": "Escape",
+                        "4": "ArrowDown",
+                        "5": "Control"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Press Enter Key",
+                    "code": "\nawait page.locator('#search').press('Enter');"
+                }
+            ]
+        },
         {
-          "q": "Q43 : What is network interception in Playwright?",
-          "a": "Network interception in Playwright allows testers to monitor, intercept, modify, block, or mock network requests and responses during test execution. This is done using page.route() to intercept requests matching a URL pattern. For example, to mock an API response, you can write page.route('**/api/users', route => route.fulfill({ status: 200, body: JSON.stringify([{ id: 1, name: 'Test User' }]) })). This returns a fake response without hitting the real server, which is useful for testing UI behavior with specific data or error states. To abort a request, you use route.abort(), which can simulate network failures. To allow a request to continue normally while logging it, you use route.continue(). Network interception is also valuable for performance testing by blocking unnecessary resources like images or analytics scripts. For example, to test how the UI handles a server error, you can intercept the login API and make it return a 500 status. This powerful capability allows comprehensive testing of edge cases and error handling scenarios that would be difficult to reproduce with a real backend.",
-          "type": "text",
-          "id": 43,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "44",
-      "Que": [
+            "id": "43",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q43 : What is network interception in Playwright?",
+                    "a": "Network interception allows Playwright to monitor, modify, block, or mock network requests and responses during test execution. Using page.route(), testers can simulate successful responses, server errors, slow networks, or unavailable services. This helps validate application behavior under different conditions without depending on real backend systems. Network interception is particularly useful for testing error handling, API integrations, and edge cases that are difficult to reproduce consistently.",
+                    "type": "text",
+                    "id": 43
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Mock API Response",
+                    "code": "\nawait page.route('**/api/users', route => {\n route.fulfill({\n  status: 200,\n  body: JSON.stringify([{ name: 'Test User' }])\n });\n});"
+                },
+                {
+                    "type": "note",
+                    "note": "Network interception helps test application behavior without relying on actual backend services."
+                }
+            ]
+        },
         {
-          "q": "Q44 : How do you run Playwright tests from the command line?",
-          "a": "Playwright tests are executed from the command line using the npx playwright test command. There are many useful options and flags available. To run all tests, simply use npx playwright test. To run a specific test file, use npx playwright test tests/login.spec.ts. To run tests matching a specific name, use npx playwright test --grep 'login'. To run tests in a specific project or browser, use npx playwright test --project=chromium. To run in headed mode, add the --headed flag. To run in debug mode with the Inspector, add the --debug flag. To run with a specific number of workers, use --workers=4. To generate the HTML report after running, add --reporter=html. To update snapshots, use --update-snapshots. For example, in a CI pipeline you might run npx playwright test --reporter=junit --workers=4 to run all tests in parallel and generate a JUnit report for the CI tool. You can also create custom npm scripts in package.json to simplify frequently used command combinations, like 'test:chrome': 'npx playwright test --project=chromium'.",
-          "type": "text",
-          "id": 44,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "45",
-      "Que": [
+            "id": "44",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q44 : How do you run Playwright tests from the command line?",
+                    "a": "Playwright tests are executed using the Playwright Test Runner command-line interface. Testers can run all tests, specific test files, browser-specific tests, debug sessions, and parallel executions through different command options. Command-line execution is widely used in local development and CI/CD pipelines. Playwright also supports filtering tests, generating reports, and controlling execution behavior through command flags, making automation management flexible and efficient.",
+                    "type": "text",
+                    "id": 44
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Useful Commands",
+                    "list": {
+                        "1": "npx playwright test",
+                        "2": "--headed",
+                        "3": "--debug",
+                        "4": "--project=chromium",
+                        "5": "--workers=4"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Run All Tests",
+                    "code": "\nnpx playwright test"
+                }
+            ]
+        },
         {
-          "q": "Q45 : What is CI/CD integration in Playwright?",
-          "a": "Playwright integrates smoothly with all major CI/CD platforms including GitHub Actions, Jenkins, Azure DevOps, GitLab CI, CircleCI, and more. In CI environments, Playwright runs in headless mode by default since there is no display available. For GitHub Actions, you add a workflow file that installs Node.js, installs Playwright with npx playwright install --with-deps to include required browser binaries and OS dependencies, and then runs npx playwright test. For Docker environments, Microsoft provides official Playwright Docker images that come with all browsers pre-installed. For example, a GitHub Actions workflow might trigger on every pull request, run all Playwright tests in parallel, and upload the HTML report and traces as artifacts so developers can download and inspect failures. In Jenkins, you can use the pipeline script to run Playwright tests and publish the JUnit XML report. Azure DevOps supports Playwright through its standard task pipeline with the junit reporter for test result publishing. CI integration ensures that every code change is automatically validated against the full test suite before merging.",
-          "type": "text",
-          "id": 45,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "46",
-      "Que": [
+            "id": "45",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q45 : What is CI/CD integration in Playwright?",
+                    "a": "Playwright integrates easily with CI/CD platforms such as GitHub Actions, Jenkins, Azure DevOps, and GitLab CI. Automated test execution can be triggered whenever code changes are committed, ensuring continuous quality validation. Playwright runs efficiently in headless mode and supports parallel execution, reporting, screenshots, traces, and videos. CI/CD integration helps teams detect issues early, reduce manual effort, and maintain software quality throughout the development lifecycle.",
+                    "type": "text",
+                    "id": 45
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Popular CI/CD Tools",
+                    "list": {
+                        "1": "GitHub Actions",
+                        "2": "Jenkins",
+                        "3": "Azure DevOps",
+                        "4": "GitLab CI",
+                        "5": "CircleCI"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Playwright is commonly executed in headless mode within CI/CD pipelines."
+                }
+            ]
+        },
         {
-          "q": "Q46 : What is the use of playwright.config file?",
-          "a": "The playwright.config.js or playwright.config.ts file is the central configuration file for a Playwright project. It controls all aspects of test execution and behavior. The most important settings include testDir to specify the folder where tests are located, timeout to set the maximum time a test can run, retries to configure automatic retries for failed tests, workers to control parallel execution, use for global browser options like baseURL, headless mode, viewport size, and screenshot settings, and projects to define cross-browser testing configurations. For example, you can define three projects for Chromium, Firefox, and WebKit to run all tests on all browsers automatically. The baseURL option is particularly useful as it allows you to write page.goto('/login') instead of the full URL, making it easy to switch between staging and production environments by changing just the baseURL value. The config also controls reporting options, trace settings, video recording settings, and global setup and teardown files. A well-configured playwright.config file is essential for maintaining a consistent and maintainable test automation framework.",
-          "type": "text",
-          "id": 46,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "47",
-      "Que": [
+            "id": "46",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q46 : What are the advantages of Playwright?",
+                    "a": "Playwright offers several advantages including fast execution, cross-browser support, auto-waiting, parallel execution, API testing, network interception, and built-in debugging tools. It reduces flaky tests by automatically waiting for elements to become ready before interaction. Playwright also supports screenshots, videos, traces, and mobile emulation without requiring additional libraries. These features simplify automation framework development and make Playwright a powerful solution for testing modern web applications efficiently.",
+                    "type": "text",
+                    "id": 46
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Major Advantages",
+                    "list": {
+                        "1": "Auto-Waiting",
+                        "2": "Cross-Browser Support",
+                        "3": "Parallel Execution",
+                        "4": "API Testing",
+                        "5": "Network Mocking",
+                        "6": "Built-in Reports"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Playwright provides many features out of the box that require additional tools in other frameworks."
+                }
+            ]
+        },
         {
-          "q": "Q47 : What is cross-browser testing in Playwright?",
-          "a": "Cross-browser testing means running the same automated test suite against multiple browsers to verify that the application works correctly and consistently across all of them. Playwright makes cross-browser testing straightforward through its projects configuration. By defining separate projects for Chromium, Firefox, and WebKit in playwright.config.js, you can run all tests against all three browsers with a single npx playwright test command. For example, if a date picker component works on Chrome but renders incorrectly on Firefox, cross-browser tests would catch this regression before it reaches production. Playwright also supports mobile browser emulation, allowing you to test on devices like iPhone 13 or Pixel 5 within the same framework. Each project can have its own browser-specific settings like viewport size and user agent. Cross-browser testing is especially important for consumer-facing web applications where users access the site from diverse browser environments. Playwright's native support for all three major rendering engines makes it one of the most comprehensive tools for cross-browser automated testing.",
-          "type": "text",
-          "id": 47,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "48",
-      "Que": [
+            "id": "47",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q47 : What are the limitations of Playwright?",
+                    "a": "Although Playwright is powerful, it has some limitations. It is primarily focused on web application automation and does not support desktop application testing. The community ecosystem is smaller than Selenium's, and some organizations still have large Selenium-based frameworks that are costly to migrate. Learning advanced Playwright concepts such as fixtures, tracing, and network interception may require additional effort. However, Playwright continues to evolve rapidly and gain industry adoption.",
+                    "type": "text",
+                    "id": 47
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Limitations",
+                    "list": {
+                        "1": "No Desktop App Testing",
+                        "2": "Smaller Ecosystem",
+                        "3": "Migration Challenges",
+                        "4": "Learning Curve for Advanced Features"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Despite limitations, Playwright is one of the fastest-growing automation frameworks."
+                }
+            ]
+        },
         {
-          "q": "Q48 : What is cross-platform testing in Playwright?",
-          "a": "Cross-platform testing means executing the same test suite on different operating systems such as Windows, Linux, and macOS to ensure the application behaves consistently regardless of the platform it is accessed from. While web applications are generally platform-independent at the user level, subtle differences in browser rendering, font rendering, OS-level clipboard behavior, file system paths, and keyboard shortcuts can cause platform-specific issues. Playwright supports running tests on all three major operating systems. In a CI/CD pipeline, you can configure a matrix strategy to run tests on multiple OS environments simultaneously. For example, a GitHub Actions workflow can be configured with a matrix of ubuntu-latest, windows-latest, and macos-latest to run Playwright tests on all three. This is particularly important for Electron applications or progressive web apps where OS-level integration is more significant. Cross-platform testing also helps validate that development team members on different operating systems such as developers on macOS and servers on Linux get consistent test results.",
-          "type": "text",
-          "id": 48,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "49",
-      "Que": [
+            "id": "48",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q48 : Why is Playwright preferred for modern web applications?",
+                    "a": "Playwright is preferred for modern web applications because it handles dynamic content, asynchronous operations, and single-page applications effectively. Features such as auto-waiting, web-first assertions, network interception, and browser context isolation improve test reliability. It also supports Shadow DOM, multiple tabs, API testing, and mobile emulation. These capabilities make Playwright well-suited for modern frontend technologies such as React, Angular, and Vue applications where traditional automation tools may face challenges.",
+                    "type": "text",
+                    "id": 48
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Reasons for Preference",
+                    "list": {
+                        "1": "Auto-Waiting",
+                        "2": "SPA Support",
+                        "3": "Shadow DOM Support",
+                        "4": "API Testing",
+                        "5": "Reliable Assertions"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Playwright was designed specifically to address challenges faced in modern web automation."
+                }
+            ]
+        },
         {
-          "q": "Q49 : What are the advantages of Playwright?",
-          "a": "Playwright offers a wide range of advantages that make it one of the top choices for modern web automation testing. It provides very fast test execution due to direct browser communication without proxy layers. Auto-waiting eliminates the need for manual sleep statements, making tests more reliable and less brittle. It supports all major browsers including Chromium, Firefox, and WebKit from a single API. Built-in parallel execution reduces overall test suite runtime significantly. Native support for multiple tabs, iframes, shadow DOM, and service workers handles complex modern web applications with ease. Integrated API testing support allows combining UI and backend validation in the same framework. Powerful debugging tools including Playwright Inspector, Trace Viewer, and video recording make diagnosing failures much easier. The HTML report provides a clear and comprehensive view of test results. Network interception and mocking capabilities enable robust testing of edge cases and error scenarios. Strong TypeScript support with full type definitions improves developer experience. Active development and maintenance by Microsoft ensures regular updates, security patches, and new features. These advantages collectively make Playwright highly effective for both small projects and large enterprise test automation frameworks.",
-          "type": "text",
-          "id": 49,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "50",
-      "Que": [
+            "id": "49",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q49 : What is authentication state in Playwright?",
+                    "a": "Authentication state is a Playwright feature that allows testers to save and reuse logged-in session information across multiple test executions. Instead of performing login steps before every test, Playwright stores cookies and local storage data in a state file. Tests can then load this file to start in an authenticated state. This reduces execution time, improves efficiency, and simplifies framework design for applications requiring user authentication.",
+                    "type": "text",
+                    "id": 49
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Save Authentication State",
+                    "code": "\nawait page.context().storageState({ path: 'auth.json' });"
+                },
+                {
+                    "type": "note",
+                    "note": "Authentication state is commonly used in Playwright framework setup projects."
+                }
+            ]
+        },
         {
-          "q": "Q50 : Why do companies prefer Playwright for automation testing?",
-          "a": "Companies prefer Playwright for automation testing for several compelling reasons. First, it significantly reduces test flakiness through auto-waiting and reliable element interaction, which means fewer false failures and less time spent investigating spurious test results. Second, its comprehensive built-in feature set eliminates the need for multiple additional libraries, reducing project complexity and maintenance overhead. Third, its speed through parallel execution and direct browser communication means faster feedback cycles, which is critical in modern agile and DevOps environments. Fourth, Playwright's excellent support for modern web application architectures including single-page applications, server-side rendering, and progressive web apps makes it future-proof. Fifth, the combination of UI testing and API testing in one framework allows teams to build more efficient end-to-end test strategies. Sixth, strong CI/CD integration capabilities make it easy to embed Playwright into deployment pipelines for continuous quality verification. Seventh, its active development by Microsoft with regular releases and excellent documentation gives companies confidence in its long-term viability. Organizations that have switched from Selenium or Cypress to Playwright frequently report reduced test maintenance effort, higher test reliability, and faster execution times as key benefits driving their adoption decision.",
-          "type": "text",
-          "id": 50,
-          "playButton": true,
-          "pauseButton": false
+            "id": "50",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q50 : Why should companies choose Playwright?",
+                    "a": "Companies choose Playwright because it offers modern automation capabilities, fast execution, excellent browser support, and built-in testing utilities. Features such as auto-waiting, tracing, screenshots, videos, network mocking, and API testing reduce framework complexity and maintenance effort. Playwright integrates smoothly with CI/CD pipelines and cloud platforms, helping teams deliver high-quality software faster. Its reliability and support for modern web technologies make it a strong choice for contemporary automation projects.",
+                    "type": "text",
+                    "id": 50
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Business Benefits",
+                    "list": {
+                        "1": "Faster Test Execution",
+                        "2": "Reduced Maintenance",
+                        "3": "Built-in Features",
+                        "4": "CI/CD Integration",
+                        "5": "Modern Web Support"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Many organizations are adopting Playwright for new automation projects because of its modern architecture."
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

@@ -1,712 +1,1256 @@
 {
-  "java-microservices-interview-questions": [
-    {
-      "id": "1",
-      "Que": [
+    "java-microservices-interview-questions": [
         {
-          "q": "Q1 : What are microservices?",
-          "a": "Microservices are an architectural approach where an application is divided into multiple small and independent services. Each service performs a specific business function and communicates with other services using APIs or messaging systems. These services can be developed, deployed, and scaled independently, which makes applications more flexible, maintainable, and scalable. Microservices are widely used in modern cloud-based and enterprise applications.",
-          "example": "Example: In an e-commerce application, separate microservices can handle payments, orders, inventory, and user management independently.",
-          "type": "text",
-          "id": 1,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "Que": [
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What are microservices?",
+                    "a": "Microservices are an architectural style in which an application is divided into multiple small, independent services. Each service focuses on a specific business capability and can be developed, deployed, scaled, and maintained independently. Microservices communicate with each other through APIs, messaging systems, or event-driven mechanisms. This architecture improves flexibility, scalability, and fault isolation compared to traditional approaches. Organizations often use microservices to build large and complex applications because teams can work independently on different services without affecting the entire system.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Small and independent services",
+                        "2": "Focused on a single business capability",
+                        "3": "Independent deployment",
+                        "4": "Easy scalability",
+                        "5": "API-based communication"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q2 : How do microservices differ from monolithic architecture?",
-          "a": "In a monolithic architecture, the entire application is built as one large unit where all modules are tightly connected. In microservices architecture, the application is divided into smaller independent services. Microservices allow independent deployment, scaling, and maintenance, while monolithic systems become harder to manage as the application grows.",
-          "example": "Example: Updating the payment service in microservices does not require redeploying the entire application.",
-          "type": "text",
-          "id": 2,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "Que": [
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : How do microservices differ from monolithic architecture?",
+                    "a": "In a monolithic architecture, all application components are packaged and deployed as a single unit. In contrast, microservices divide the application into smaller independent services that can be developed and deployed separately. Monolithic systems are simpler initially but become difficult to scale and maintain as they grow. Microservices offer better scalability, fault isolation, and technology flexibility. However, they introduce additional complexity related to communication, monitoring, deployment, and distributed system management. The choice depends on application size, team structure, and business requirements.",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Monolithic" },
+                        { "label": "Microservices" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Single deployment unit" },
+                                { "col": "Multiple independent services" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Harder to scale selectively" },
+                                { "col": "Scale services independently" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Tightly coupled" },
+                                { "col": "Loosely coupled" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Single technology stack" },
+                                { "col": "Multiple technology choices" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q3 : What are the benefits of using microservices?",
-          "a": "Microservices provide several benefits such as independent deployment, better scalability, improved fault isolation, technology flexibility, faster development, and easier maintenance. Teams can work on different services independently, which improves productivity and reduces deployment risks.",
-          "example": "Example: Scaling only the user authentication service during high login traffic.",
-          "type": "text",
-          "id": 3,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "Que": [
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : What are the benefits of using microservices?",
+                    "a": "Microservices provide several advantages including independent deployment, better scalability, fault isolation, and faster development cycles. Teams can work on different services simultaneously without interfering with each other. Individual services can be scaled based on demand, improving resource utilization. If one service fails, the entire application may continue functioning. Microservices also allow organizations to use different technologies for different services. These benefits make microservices a popular choice for cloud-native applications, large enterprise systems, and rapidly evolving business environments.",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Independent deployment",
+                        "2": "Better scalability",
+                        "3": "Fault isolation",
+                        "4": "Technology flexibility",
+                        "5": "Faster development and releases"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q4 : What challenges are faced while working with microservices?",
-          "a": "Microservices introduce challenges such as complex service communication, distributed system management, data consistency issues, network latency, monitoring difficulties, debugging complexity, and security management. Managing multiple independent services also increases deployment and infrastructure complexity.",
-          "example": "Example: Troubleshooting failures across multiple communicating services can become difficult.",
-          "type": "text",
-          "id": 4,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "Que": [
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : What challenges are faced while working with microservices?",
+                    "a": "Although microservices provide many benefits, they also introduce significant challenges. Managing distributed systems requires handling service discovery, network latency, fault tolerance, monitoring, logging, and security. Data consistency becomes more difficult because multiple services may maintain separate databases. Deployment and testing processes also become more complex due to the large number of services involved. Debugging distributed transactions and communication failures can be challenging. Organizations must adopt proper tools, automation, and monitoring strategies to successfully manage microservice-based architectures.",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Distributed system complexity",
+                        "2": "Network latency",
+                        "3": "Data consistency issues",
+                        "4": "Monitoring and logging challenges",
+                        "5": "Complex deployments"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q5 : What is the role of API Gateway in microservices?",
-          "a": "An API Gateway acts as the single entry point for all client requests in a microservices architecture. It routes requests to the appropriate services, handles authentication, authorization, rate limiting, logging, caching, and security checks. API Gateway simplifies client communication and improves system security and performance.",
-          "example": "Example: Netflix Zuul or Spring Cloud Gateway routing client requests to backend services.",
-          "type": "text",
-          "id": 5,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "Que": [
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : What is the role of API Gateway in microservices?",
+                    "a": "An API Gateway acts as a single entry point for all client requests in a microservices architecture. Instead of clients directly communicating with multiple services, requests are routed through the gateway. It handles responsibilities such as request routing, authentication, authorization, rate limiting, monitoring, logging, and load balancing. API Gateway simplifies client interactions and hides the internal structure of microservices. It also improves security and reduces complexity by centralizing common cross-cutting concerns in one location.",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Routing": "Routes requests to appropriate services",
+                        "Security": "Handles authentication and authorization",
+                        "Monitoring": "Collects metrics and logs",
+                        "Rate Limiting": "Controls API usage",
+                        "Load Balancing": "Distributes traffic across instances"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q6 : How does an API Gateway manage traffic?",
-          "a": "API Gateway manages traffic by routing requests to the correct services, balancing loads between service instances, limiting excessive requests, caching common responses, and preventing service overload. It improves system performance and reliability.",
-          "example": "Example: Distributing incoming requests evenly across multiple payment service instances.",
-          "type": "text",
-          "id": 6,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "Que": [
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : How does an API Gateway manage traffic?",
+                    "a": "An API Gateway manages traffic by acting as a centralized control layer between clients and backend services. It receives incoming requests, applies security and validation rules, and forwards them to the appropriate microservice. Traffic management features often include request routing, throttling, rate limiting, caching, load balancing, and request transformation. These capabilities help prevent service overload, improve response times, and ensure efficient resource utilization. By controlling traffic centrally, the gateway enhances system reliability and scalability across distributed microservice environments.",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "API Gateway acts as a traffic controller for all incoming and outgoing API requests."
+                }
+            ]
+        },
         {
-          "q": "Q7 : What security measures can be implemented at the API Gateway?",
-          "a": "Security measures at the API Gateway include authentication, authorization, SSL/TLS encryption, rate limiting, request validation, IP filtering, API keys, JWT validation, and protection against attacks such as SQL injection and XSS. These measures secure communication between clients and services.",
-          "example": "Example: Validating JWT tokens before allowing access to protected APIs.",
-          "type": "text",
-          "id": 7,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "Que": [
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : What security measures can be implemented at the API Gateway?",
+                    "a": "API Gateway is an ideal place to implement security controls because all requests pass through it. Common security measures include authentication, authorization, SSL/TLS encryption, rate limiting, IP filtering, API key validation, JWT token verification, and protection against malicious traffic. The gateway can also integrate with OAuth2 providers and identity management systems. Centralizing security at the gateway reduces duplication across services and ensures consistent enforcement of security policies throughout the microservices architecture.",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Authentication",
+                        "2": "Authorization",
+                        "3": "JWT validation",
+                        "4": "Rate limiting",
+                        "5": "SSL/TLS encryption",
+                        "6": "IP whitelisting"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q8 : How does API Gateway handle load balancing?",
-          "a": "API Gateway handles load balancing by distributing incoming requests across multiple service instances. It uses algorithms based on server health, traffic load, and performance metrics to ensure no single service instance becomes overloaded.",
-          "example": "Example: Routing user requests evenly across multiple authentication servers.",
-          "type": "text",
-          "id": 8,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "Que": [
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : How does API Gateway handle load balancing?",
+                    "a": "API Gateway can distribute incoming requests across multiple instances of a microservice to prevent overloading any single server. It uses load balancing algorithms such as round robin, least connections, or weighted distribution to determine where requests should be routed. This improves application availability, scalability, and fault tolerance. If one service instance becomes unavailable, traffic can be redirected to healthy instances. Load balancing at the gateway level helps ensure efficient resource utilization and consistent user experience even during periods of high traffic.",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Algorithm" },
+                        { "label": "Description" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Round Robin" },
+                                { "col": "Distributes requests sequentially" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Least Connections" },
+                                {
+                                    "col": "Chooses server with fewer connections"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Weighted" },
+                                {
+                                    "col": "Assigns traffic based on server capacity"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q9 : How do microservices communicate with each other?",
-          "a": "Microservices communicate using synchronous methods like REST APIs and HTTP calls or asynchronous methods like message queues and event brokers. APIs allow services to exchange data and requests while remaining independent from each other.",
-          "example": "Example: Order service communicating with payment service using REST API.",
-          "type": "text",
-          "id": 9,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "Que": [
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : How do microservices communicate with each other?",
+                    "a": "Microservices communicate through network-based mechanisms because they run as independent processes. The most common communication methods include REST APIs, gRPC, message queues, event streaming platforms, and WebSockets. Communication can be synchronous, where one service waits for a response, or asynchronous, where messages are exchanged without blocking execution. The choice depends on performance, scalability, and reliability requirements. Effective service communication is critical because it directly impacts application responsiveness, fault tolerance, and overall system design in a distributed architecture.",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "REST APIs",
+                        "2": "gRPC",
+                        "3": "Message Queues",
+                        "4": "Kafka",
+                        "5": "WebSockets"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q10 : What is synchronous vs asynchronous communication?",
-          "a": "Synchronous communication means one service waits for another service to respond before continuing execution. Asynchronous communication allows services to continue processing without waiting for immediate responses. Asynchronous communication improves scalability and responsiveness in distributed systems.",
-          "example": "Example: REST API calls are synchronous, while Kafka message processing is asynchronous.",
-          "type": "text",
-          "id": 10,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-
-    {
-      "id": "11",
-      "Que": [
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : What is synchronous vs asynchronous communication?",
+                    "a": "Synchronous communication occurs when one service sends a request and waits for a response before continuing execution. REST API calls are a common example. Asynchronous communication allows a service to send a message and continue processing without waiting for an immediate response. Message brokers such as Kafka and RabbitMQ are commonly used for asynchronous communication. Synchronous communication is simpler but can create dependencies between services, while asynchronous communication improves scalability, resilience, and fault tolerance in distributed microservice architectures.",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Synchronous" },
+                        { "label": "Asynchronous" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Waits for response" },
+                                { "col": "Does not wait for response" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Tightly coupled" },
+                                { "col": "Loosely coupled" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Simple implementation" },
+                                { "col": "Better scalability" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "REST APIs" },
+                                { "col": "Kafka, RabbitMQ" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q11 : What is the role of message brokers in microservices?",
-          "a": "Message brokers help microservices communicate asynchronously by sending and receiving messages between services. They act as intermediaries that manage message delivery, routing, and queuing. Message brokers improve scalability, reliability, and loose coupling between services.",
-          "example": "Example: Apache Kafka and RabbitMQ used for asynchronous communication between services.",
-          "type": "text",
-          "id": 11,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "12",
-      "Que": [
+            "id": "11",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q11 : What is the role of message brokers in microservices?",
+                    "a": "Message brokers act as intermediaries between microservices and enable asynchronous communication. Instead of services calling each other directly, messages are sent to a broker which routes them to the appropriate consumers. This reduces coupling, improves scalability, increases reliability, and helps handle traffic spikes. Popular message brokers such as RabbitMQ, Apache Kafka, and ActiveMQ are widely used in event-driven architectures where services need to exchange data efficiently without depending on the availability of other services.",
+                    "type": "text",
+                    "id": 11
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Decoupling": "Services remain independent of each other.",
+                        "Scalability": "Handles large volumes of messages efficiently.",
+                        "Reliability": "Messages can be stored until consumers process them.",
+                        "Asynchronous Processing": "Services do not need immediate responses."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q12 : What are the risks involved with inter-service communication?",
-          "a": "Inter-service communication may introduce risks such as network failures, increased latency, data inconsistency, message loss, security vulnerabilities, and communication overhead. Managing multiple service dependencies can also make debugging and monitoring more difficult.",
-          "example": "Example: Failure in one service causing delays in dependent services.",
-          "type": "text",
-          "id": 12,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "13",
-      "Que": [
+            "id": "12",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q12 : What are the risks involved with inter-service communication?",
+                    "a": "Inter-service communication introduces several challenges and risks in microservices architecture. Network failures, increased latency, service unavailability, message loss, security vulnerabilities, and version compatibility issues can impact application reliability. Since services depend on each other, a failure in one service may trigger cascading failures across the system. Proper monitoring, retries, circuit breakers, load balancing, and secure communication mechanisms should be implemented to reduce these risks and maintain overall system stability.",
+                    "type": "text",
+                    "id": 12
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Network latency and communication delays",
+                        "2": "Service downtime and cascading failures",
+                        "3": "Security threats during data transfer",
+                        "4": "Version incompatibility between services",
+                        "5": "Message duplication or loss"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q13 : What is a Service Registry in microservices?",
-          "a": "A Service Registry is a centralized directory where microservices register themselves and store their network locations. Other services use the registry to discover and communicate with available services dynamically.",
-          "example": "Example: Eureka Server used as a service registry in Spring Cloud.",
-          "type": "text",
-          "id": 13,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "14",
-      "Que": [
+            "id": "13",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q13 : What is a Service Registry in microservices?",
+                    "a": "A Service Registry is a central directory that stores information about available microservices and their locations. Services register themselves when they start and update their status regularly. Other services can query the registry to discover service instances dynamically instead of using hardcoded addresses. This approach improves flexibility, scalability, and fault tolerance. Popular service registry solutions include Netflix Eureka, Consul, and Apache Zookeeper, which help manage service discovery in distributed systems.",
+                    "type": "text",
+                    "id": 13
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Registration": "Services register their network location.",
+                        "Discovery": "Clients locate services dynamically.",
+                        "Health Monitoring": "Registry tracks service availability.",
+                        "Load Distribution": "Supports multiple service instances."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q14 : How does service discovery work in microservices?",
-          "a": "Service discovery allows services to find and communicate with each other dynamically using a Service Registry. When a service starts, it registers itself with the registry. Other services query the registry to locate service instances during communication.",
-          "example": "Example: Payment service discovering inventory service using Eureka discovery server.",
-          "type": "text",
-          "id": 14,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "15",
-      "Que": [
+            "id": "14",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q14 : How does service discovery work in microservices?",
+                    "a": "Service discovery allows microservices to locate each other dynamically without hardcoded URLs. When a service starts, it registers itself with a service registry along with its network details. Client services query the registry to obtain available service instances and communicate with them. Service discovery supports dynamic scaling because new instances automatically become available through the registry. This mechanism is essential in cloud-native environments where service locations frequently change due to scaling and deployment operations.",
+                    "type": "text",
+                    "id": 14
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Typical service discovery flow",
+                    "code": "\nService -> Registry -> Client Request -> Service Instance"
+                }
+            ]
+        },
         {
-          "q": "Q15 : What happens if a Service Registry fails?",
-          "a": "If a Service Registry fails, services may not be able to discover or communicate with each other properly. This can lead to application downtime or request failures. To avoid this issue, high availability setups with multiple registry instances are commonly used.",
-          "example": "Example: Using clustered Eureka servers to avoid single points of failure.",
-          "type": "text",
-          "id": 15,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "16",
-      "Que": [
+            "id": "15",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q15 : What happens if a Service Registry fails?",
+                    "a": "If a Service Registry fails, new services may not be able to register and clients may be unable to discover service instances. Existing services may continue working temporarily if discovery information is cached locally. However, prolonged registry failure can affect scalability, failover mechanisms, and dynamic service discovery. To avoid this single point of failure, service registries are usually deployed in clustered or replicated configurations. High availability setups ensure that service discovery remains operational even if one registry node becomes unavailable.",
+                    "type": "text",
+                    "id": 15
+                },
+                {
+                    "type": "note",
+                    "note": "Production systems typically use clustered service registries to prevent downtime."
+                }
+            ]
+        },
         {
-          "q": "Q16 : How do microservices update their registration information?",
-          "a": "Microservices regularly send heartbeat signals to the Service Registry to indicate they are active and available. If a service changes its location or stops responding, the registry updates or removes its information automatically.",
-          "example": "Example: Eureka client sending heartbeat requests to Eureka server periodically.",
-          "type": "text",
-          "id": 16,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "17",
-      "Que": [
+            "id": "16",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q16 : How do microservices update their registration information?",
+                    "a": "Microservices periodically send heartbeat messages to the service registry to indicate that they are healthy and available. If service details such as IP address, port, or status change, the service updates its registration information automatically. Registries continuously monitor these updates and remove services that stop sending heartbeats. This mechanism ensures that only active and healthy service instances are available for discovery, helping clients communicate with valid service endpoints in dynamic cloud environments.",
+                    "type": "text",
+                    "id": 16
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Service starts and registers.",
+                        "2": "Heartbeat messages are sent periodically.",
+                        "3": "Registry updates service status.",
+                        "4": "Inactive services are removed automatically."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q17 : How do you handle data consistency in microservices?",
-          "a": "Data consistency in microservices is handled using patterns like eventual consistency, Saga pattern, distributed transactions, and event-driven communication. Since each service manages its own database, maintaining consistency across services requires coordination.",
-          "example": "Example: Updating order and payment services using Saga orchestration.",
-          "type": "text",
-          "id": 17,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "18",
-      "Que": [
+            "id": "17",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q17 : How do you handle data consistency in microservices?",
+                    "a": "Data consistency in microservices is challenging because each service usually owns its own database. Instead of using distributed database transactions, systems often rely on patterns such as Saga, event-driven communication, and eventual consistency. Services exchange events to synchronize data changes across boundaries. Careful design of business workflows, compensation transactions, and reliable messaging mechanisms helps maintain consistency while preserving service independence and scalability. The chosen approach depends on business requirements and consistency expectations.",
+                    "type": "text",
+                    "id": 17
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Saga Pattern": "Coordinates distributed business transactions.",
+                        "Event-Driven Architecture": "Synchronizes data through events.",
+                        "Message Brokers": "Ensure reliable delivery of updates.",
+                        "Compensation Actions": "Rollback business operations when needed."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q18 : What is eventual consistency?",
-          "a": "Eventual consistency means data changes made in one service may take some time to become visible across all services. Instead of immediate synchronization, the system guarantees that all services will eventually have consistent data.",
-          "example": "Example: Inventory updates reflecting across all services after some delay.",
-          "type": "text",
-          "id": 18,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "19",
-      "Que": [
+            "id": "18",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q18 : What is eventual consistency?",
+                    "a": "Eventual consistency is a consistency model where all services and databases become consistent over time rather than immediately. After an update occurs, there may be a temporary period during which different services hold slightly different versions of the data. As synchronization events propagate through the system, all copies eventually reach the same state. Eventual consistency is widely used in distributed systems because it improves scalability and availability while avoiding the complexity of maintaining strict consistency across multiple services.",
+                    "type": "text",
+                    "id": 18
+                },
+                {
+                    "type": "note",
+                    "note": "Eventual consistency prioritizes scalability and availability over immediate consistency."
+                }
+            ]
+        },
         {
-          "q": "Q19 : How do you implement transactions across multiple services?",
-          "a": "Transactions across multiple services are commonly implemented using the Saga pattern. In this approach, a large transaction is divided into smaller local transactions handled by different services. If one step fails, compensating transactions are executed to rollback completed operations.",
-          "example": "Example: Cancelling payment if order creation fails during checkout process.",
-          "type": "text",
-          "id": 19,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "20",
-      "Que": [
+            "id": "19",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q19 : How do you implement transactions across multiple services?",
+                    "a": "Transactions across multiple microservices are typically implemented using the Saga pattern rather than traditional distributed transactions. In a Saga, each service performs a local transaction and publishes an event that triggers the next step. If a failure occurs, compensating transactions are executed to undo previous actions. This approach avoids tight coupling and improves scalability. Orchestration-based and choreography-based Saga implementations are commonly used to coordinate business processes spanning multiple independent services.",
+                    "type": "text",
+                    "id": 19
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Saga transaction flow",
+                    "code": "\nOrder Service -> Payment Service -> Inventory Service -> Shipping Service"
+                }
+            ]
+        },
         {
-          "q": "Q20 : What is the difference between eventual consistency and strong consistency?",
-          "a": "Strong consistency ensures all services immediately see updated data after a transaction, while eventual consistency allows temporary differences until all services synchronize over time. Strong consistency provides accuracy but reduces performance, whereas eventual consistency improves scalability and availability.",
-          "example": "Example: Banking systems prefer strong consistency, while social media systems often use eventual consistency.",
-          "type": "text",
-          "id": 20,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
- 
-    {
-      "id": "21",
-      "Que": [
+            "id": "20",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q20 : What is the difference between eventual consistency and strong consistency?",
+                    "a": "Strong consistency guarantees that every read operation immediately returns the latest written value, ensuring all users see the same data at all times. Eventual consistency allows temporary differences between data copies, but guarantees synchronization over time. Strong consistency provides higher accuracy but may impact scalability and availability. Eventual consistency improves performance and fault tolerance in distributed systems. The choice depends on business requirements, with banking systems often preferring strong consistency and large-scale distributed applications favoring eventual consistency.",
+                    "type": "text",
+                    "id": 20
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Strong Consistency" },
+                        { "label": "Eventual Consistency" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Immediate data synchronization" },
+                                { "col": "Synchronization happens over time" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Higher accuracy" },
+                                { "col": "Higher scalability" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "May reduce availability" },
+                                { "col": "Improves availability" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Used in banking systems" },
+                                { "col": "Used in distributed cloud systems" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q21 : What are some deployment strategies used in microservices?",
-          "a": "Common deployment strategies in microservices include blue-green deployment, canary release, rolling updates, and container-based deployment using Docker and Kubernetes. These strategies help minimize downtime, improve reliability, and allow safe deployment of new application versions.",
-          "example": "Example: Using Kubernetes rolling updates to deploy a new microservice version gradually.",
-          "type": "text",
-          "id": 21,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "22",
-      "Que": [
+            "id": "21",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q21 : What are some deployment strategies used in microservices?",
+                    "a": "Microservices support several deployment strategies that help organizations release updates safely and minimize downtime. Common approaches include blue-green deployment, canary releases, rolling updates, recreate deployment, and A/B testing. These strategies allow teams to introduce new versions gradually, monitor performance, and quickly roll back if issues occur. The choice depends on factors such as risk tolerance, infrastructure capabilities, and business requirements. Effective deployment strategies improve application reliability, availability, and user experience while supporting continuous delivery practices.",
+                    "type": "text",
+                    "id": 21
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Blue-Green Deployment",
+                        "2": "Canary Release",
+                        "3": "Rolling Update",
+                        "4": "Recreate Deployment",
+                        "5": "A/B Testing"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q22 : What is blue-green deployment?",
-          "a": "Blue-green deployment is a deployment strategy where two identical environments are maintained. One environment runs the current application version while the other prepares the new version. After testing the new version, traffic is switched from the old environment to the new one with minimal downtime.",
-          "example": "Example: Switching user traffic from the old payment service to the updated payment service instantly.",
-          "type": "text",
-          "id": 22,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "23",
-      "Que": [
+            "id": "22",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q22 : What is blue-green deployment?",
+                    "a": "Blue-green deployment is a release strategy where two identical production environments are maintained. The current live version runs in one environment, called Blue, while the new version is deployed to the other environment, called Green. After testing the new version, traffic is switched from Blue to Green. If problems are detected, traffic can quickly be redirected back to the previous version. This approach minimizes downtime, reduces deployment risks, and enables safer application releases in microservices environments.",
+                    "type": "text",
+                    "id": 22
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Blue-Green Deployment Flow",
+                    "code": "\nUsers -> Blue (Current)\nDeploy New Version -> Green\nSwitch Traffic -> Green"
+                }
+            ]
+        },
         {
-          "q": "Q23 : What is canary release deployment?",
-          "a": "Canary release is a deployment strategy where a new application version is first released to a small group of users. If the new version performs successfully, it is gradually rolled out to all users. This reduces deployment risk and helps identify issues early.",
-          "example": "Example: Releasing a new recommendation feature to 5% of users before global deployment.",
-          "type": "text",
-          "id": 23,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "24",
-      "Que": [
+            "id": "23",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q23 : What is canary release deployment?",
+                    "a": "Canary deployment is a release strategy in which a new version of a service is gradually exposed to a small percentage of users before being rolled out to everyone. This allows teams to observe system behavior, collect performance metrics, and identify potential issues with minimal impact. If the new version performs well, traffic is increased progressively. If problems occur, the deployment can be stopped or rolled back. Canary releases reduce risk and improve confidence in production deployments.",
+                    "type": "text",
+                    "id": 23
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Step 1": "Deploy new version to a few users.",
+                        "Step 2": "Monitor logs and performance metrics.",
+                        "Step 3": "Gradually increase traffic percentage.",
+                        "Step 4": "Roll back if issues are detected."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q24 : What tools are commonly used for microservices deployment?",
-          "a": "Popular deployment tools for microservices include Docker, Kubernetes, Jenkins, Helm, OpenShift, GitHub Actions, and Terraform. These tools automate building, deploying, scaling, and managing microservices efficiently.",
-          "example": "Example: Using Jenkins CI/CD pipeline with Docker and Kubernetes for automated deployment.",
-          "type": "text",
-          "id": 24,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "25",
-      "Que": [
+            "id": "24",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q24 : What tools are commonly used for microservices deployment?",
+                    "a": "Microservices deployment typically relies on containerization, orchestration, and automation tools. Docker is widely used for packaging services into portable containers, while Kubernetes manages deployment, scaling, and service orchestration. CI/CD tools such as Jenkins, GitHub Actions, GitLab CI/CD, and Azure DevOps automate build and deployment pipelines. Infrastructure tools like Helm and Terraform simplify environment management. These tools help teams deploy applications consistently, improve scalability, and support modern cloud-native architectures.",
+                    "type": "text",
+                    "id": 24
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Tool" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Docker" },
+                                { "col": "Containerization" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Kubernetes" },
+                                { "col": "Container Orchestration" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Jenkins" },
+                                { "col": "CI/CD Automation" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Terraform" },
+                                { "col": "Infrastructure Provisioning" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q25 : How do you monitor and manage microservices?",
-          "a": "Microservices are monitored using tools that track metrics, logs, traces, and system health. Tools like Prometheus, Grafana, ELK Stack, Jaeger, and Zipkin help monitor service performance, detect failures, and troubleshoot issues.",
-          "example": "Example: Using Prometheus and Grafana dashboards to monitor API response times.",
-          "type": "text",
-          "id": 25,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "26",
-      "Que": [
+            "id": "25",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q25 : How do you monitor and manage microservices?",
+                    "a": "Monitoring and managing microservices requires visibility into application performance, health, logs, and resource usage. Teams typically use centralized logging, metrics collection, distributed tracing, health checks, and alerting systems. Monitoring platforms collect information from multiple services and provide dashboards for real-time analysis. Automated scaling, service discovery, and orchestration tools help manage service instances efficiently. Proper monitoring enables faster troubleshooting, improves reliability, and ensures that services continue to operate effectively in production environments.",
+                    "type": "text",
+                    "id": 25
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Centralized Logging",
+                        "2": "Metrics Collection",
+                        "3": "Distributed Tracing",
+                        "4": "Health Monitoring",
+                        "5": "Alerting and Notifications"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q26 : What metrics are important in microservices monitoring?",
-          "a": "Important monitoring metrics include response time, error rate, request count, CPU usage, memory usage, network latency, throughput, and service availability. Monitoring these metrics helps maintain system performance and reliability.",
-          "example": "Example: Tracking API error rates during peak traffic hours.",
-          "type": "text",
-          "id": 26,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "27",
-      "Que": [
+            "id": "26",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q26 : What metrics are important in microservices monitoring?",
+                    "a": "Several metrics are essential for monitoring microservices effectively. Response time measures how quickly services process requests, while throughput indicates the number of requests handled over time. Error rate helps identify failures, and CPU and memory utilization reveal resource consumption. Availability, latency, request success rate, and database performance metrics are also important. Monitoring these indicators helps teams detect performance bottlenecks, identify failures early, and maintain the overall health and reliability of distributed systems.",
+                    "type": "text",
+                    "id": 26
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Latency": "Measures request processing time.",
+                        "Throughput": "Tracks requests handled per second.",
+                        "Error Rate": "Shows failed request percentage.",
+                        "CPU Usage": "Monitors processor utilization.",
+                        "Memory Usage": "Tracks memory consumption."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q27 : What is distributed tracing in microservices?",
-          "a": "Distributed tracing tracks requests as they travel through multiple microservices. It helps identify delays, bottlenecks, and failures in distributed systems by providing visibility into request flow across services.",
-          "example": "Example: Using Jaeger to trace requests across order, payment, and inventory services.",
-          "type": "text",
-          "id": 27,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "28",
-      "Que": [
+            "id": "27",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q27 : What is distributed tracing in microservices?",
+                    "a": "Distributed tracing is a technique used to track requests as they travel through multiple microservices. Each request is assigned a unique trace identifier that follows it across service boundaries. This allows developers to visualize request flow, identify bottlenecks, and troubleshoot failures in complex distributed systems. Distributed tracing provides detailed insights into service interactions and performance. It is especially useful when a single user request triggers calls across many independent services within a microservices architecture.",
+                    "type": "text",
+                    "id": 27
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Example Request Trace",
+                    "code": "\nClient -> API Gateway -> Order Service -> Payment Service -> Inventory Service"
+                }
+            ]
+        },
         {
-          "q": "Q28 : What tools are used for logging and monitoring in microservices?",
-          "a": "Tools commonly used for logging and monitoring include ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Grafana, Splunk, Jaeger, and Zipkin. These tools help analyze logs, monitor system performance, and troubleshoot issues effectively.",
-          "example": "Example: Using ELK Stack to collect and visualize logs from multiple services.",
-          "type": "text",
-          "id": 28,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "29",
-      "Que": [
+            "id": "28",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q28 : What tools are used for logging and monitoring in microservices?",
+                    "a": "Microservices commonly use specialized tools for logging, monitoring, and observability. Logging solutions such as ELK Stack and Splunk collect and analyze application logs. Monitoring tools like Prometheus and Grafana gather metrics and visualize system performance. Distributed tracing platforms such as Jaeger and Zipkin help track requests across services. These tools provide valuable insights into application behavior, simplify troubleshooting, and help maintain service reliability in large-scale distributed environments.",
+                    "type": "text",
+                    "id": 28
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Tool" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "ELK Stack" },
+                                { "col": "Centralized Logging" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Prometheus" },
+                                { "col": "Metrics Collection" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Grafana" },
+                                { "col": "Visualization and Dashboards" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Jaeger / Zipkin" },
+                                { "col": "Distributed Tracing" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q29 : How do you ensure security in microservices?",
-          "a": "Security in microservices is ensured through authentication, authorization, HTTPS encryption, API Gateway security, JWT tokens, OAuth2, rate limiting, service-to-service authentication, and regular vulnerability scanning. Proper logging and monitoring also help identify security threats quickly.",
-          "example": "Example: Securing APIs using OAuth2 authentication and HTTPS communication.",
-          "type": "text",
-          "id": 29,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "30",
-      "Que": [
+            "id": "29",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q29 : How do you ensure security in microservices?",
+                    "a": "Security in microservices requires protection at multiple layers. Authentication and authorization mechanisms such as OAuth2 and JWT help verify user identity and permissions. Communication between services should be encrypted using TLS. API Gateways can enforce rate limiting, token validation, and access control policies. Secrets should be stored securely, and services should follow the principle of least privilege. Continuous monitoring, auditing, vulnerability scanning, and secure coding practices further strengthen security across the microservices ecosystem.",
+                    "type": "text",
+                    "id": 29
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "JWT Authentication",
+                        "2": "OAuth2 Authorization",
+                        "3": "TLS Encryption",
+                        "4": "API Gateway Security",
+                        "5": "Role-Based Access Control",
+                        "6": "Secret Management"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q30 : What are common security patterns used in microservices?",
-          "a": "Common security patterns include API Gateway pattern, OAuth2 authentication, JWT token validation, mutual TLS (mTLS), service mesh security, sidecar security pattern, and zero-trust security models. These patterns help secure communication and protect services from unauthorized access.",
-          "example": "Example: Using API Gateway for centralized authentication and authorization.",
-          "type": "text",
-          "id": 30,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-   
-    {
-      "id": "31",
-      "Que": [
+            "id": "30",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q30 : What are common security patterns used in microservices?",
+                    "a": "Several security patterns are commonly used in microservices architectures to protect services and data. API Gateway security centralizes authentication and authorization. OAuth2 and JWT enable secure identity management. Circuit breakers help defend against cascading failures caused by malicious or failing services. Mutual TLS secures service-to-service communication, while role-based access control restricts resource access. Secret management systems protect sensitive credentials. These patterns work together to create a secure, scalable, and resilient microservices ecosystem.",
+                    "type": "text",
+                    "id": 30
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "API Gateway Pattern": "Centralized security enforcement.",
+                        "JWT Pattern": "Token-based authentication.",
+                        "OAuth2 Pattern": "Delegated authorization.",
+                        "mTLS Pattern": "Secure service-to-service communication.",
+                        "RBAC Pattern": "Role-based access control."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q31 : How can services securely communicate with each other in microservices?",
-          "a": "Services can securely communicate using HTTPS, SSL/TLS encryption, mutual TLS (mTLS), API keys, OAuth2 tokens, and service authentication mechanisms. These security methods ensure that only authorized services can exchange information securely across the network.",
-          "example": "Example: Using mTLS authentication between payment and order services.",
-          "type": "text",
-          "id": 31,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "32",
-      "Que": [
+            "id": "31",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q31 : How can services securely communicate with each other in microservices?",
+                    "a": "Secure communication between microservices is achieved through multiple security layers. Services typically use HTTPS with TLS encryption to protect data in transit. Authentication mechanisms such as JWT, OAuth2, API keys, and mutual TLS (mTLS) help verify service identities before communication occurs. API Gateways and service meshes can enforce security policies, monitor traffic, and provide centralized access control. Proper certificate management, secret storage, and network segmentation further strengthen communication security and reduce the risk of unauthorized access or data breaches.",
+                    "type": "text",
+                    "id": 31
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "TLS/HTTPS": "Encrypts communication between services.",
+                        "JWT": "Provides token-based authentication.",
+                        "OAuth2": "Supports secure authorization.",
+                        "mTLS": "Verifies both client and server identities.",
+                        "API Gateway": "Applies centralized security policies."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q32 : What are the security implications of service-specific databases?",
-          "a": "Service-specific databases improve security by isolating data between services. If one service is compromised, only its database is affected instead of the entire system. However, managing security policies, access controls, and database updates across multiple databases becomes more complex.",
-          "example": "Example: User service and payment service maintaining separate secure databases.",
-          "type": "text",
-          "id": 32,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "33",
-      "Que": [
+            "id": "32",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q32 : What are the security implications of service-specific databases?",
+                    "a": "Service-specific databases improve isolation because each microservice owns and manages its own data. However, they introduce security challenges such as access control management, data duplication, and secure data synchronization. Every database must be protected independently using proper authentication, encryption, backups, and auditing. Unauthorized access to one service should not expose data from other services. Organizations must also ensure secure communication between services when sharing information and implement strong monitoring to detect suspicious database activities.",
+                    "type": "text",
+                    "id": 32
+                },
+                {
+                    "type": "note",
+                    "note": "Each microservice should access only its own database and follow the principle of least privilege."
+                }
+            ]
+        },
         {
-          "q": "Q33 : What patterns are used to handle failures in microservices?",
-          "a": "Failure handling patterns in microservices include Circuit Breaker, Retry, Timeout, Bulkhead, Fallback, and Saga patterns. These patterns improve system resilience and prevent failures in one service from affecting the entire application.",
-          "example": "Example: Using Circuit Breaker to stop requests to an unhealthy service.",
-          "type": "text",
-          "id": 33,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "34",
-      "Que": [
+            "id": "33",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q33 : What patterns are used to handle failures in microservices?",
+                    "a": "Microservices architectures rely on several resilience patterns to handle failures gracefully. Common patterns include Circuit Breaker, Retry, Backoff, Bulkhead, Timeout, Fallback, and Saga patterns. These approaches help prevent cascading failures, improve system availability, and allow services to recover automatically from temporary issues. By isolating failures and controlling retries, applications remain responsive even when some services become unavailable. Combining multiple resilience patterns creates a robust distributed system capable of handling network failures and service outages effectively.",
+                    "type": "text",
+                    "id": 33
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Circuit Breaker",
+                        "2": "Retry Pattern",
+                        "3": "Exponential Backoff",
+                        "4": "Bulkhead Pattern",
+                        "5": "Timeout Pattern",
+                        "6": "Fallback Pattern"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q34 : What is the Circuit Breaker pattern?",
-          "a": "The Circuit Breaker pattern prevents repeated requests to a failing service. When failures exceed a threshold, the circuit opens and temporarily blocks requests to the service. After a waiting period, the system checks whether the service has recovered before allowing traffic again.",
-          "example": "Example: Resilience4j Circuit Breaker stopping repeated payment service failures.",
-          "type": "text",
-          "id": 34,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "35",
-      "Que": [
+            "id": "34",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q34 : What is the Circuit Breaker pattern?",
+                    "a": "The Circuit Breaker pattern prevents repeated calls to a failing service. When a service experiences multiple failures, the circuit breaker opens and blocks further requests temporarily. This prevents resource exhaustion and reduces pressure on the failing service. After a defined period, the circuit enters a half-open state to test whether the service has recovered. If successful, normal communication resumes. Circuit breakers improve system stability and are commonly implemented using frameworks such as Resilience4j and Hystrix.",
+                    "type": "text",
+                    "id": 34
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "State" }, { "label": "Behavior" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Closed" },
+                                { "col": "Requests are processed normally." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Open" },
+                                { "col": "Requests are blocked." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Half-Open" },
+                                {
+                                    "col": "Limited requests are allowed for testing."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q35 : How does the Bulkhead pattern improve system resilience?",
-          "a": "The Bulkhead pattern isolates resources and services into separate sections so that failures in one part do not affect the entire system. This improves fault tolerance and prevents resource exhaustion across services.",
-          "example": "Example: Isolating database connections for inventory and payment services separately.",
-          "type": "text",
-          "id": 35,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "36",
-      "Que": [
+            "id": "35",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q35 : How does the Bulkhead pattern improve system resilience?",
+                    "a": "The Bulkhead pattern isolates resources such as threads, connection pools, or service instances into separate compartments. If one compartment fails or becomes overloaded, other compartments continue operating normally. This prevents a failure in one service from affecting the entire application. Inspired by ship bulkheads that prevent flooding from spreading, this pattern improves fault isolation and system resilience. It is especially useful in distributed systems where resource contention and service overload can impact overall application performance.",
+                    "type": "text",
+                    "id": 35
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Bulkhead Isolation",
+                    "code": "\nPayment Pool -> Isolated\nOrder Pool -> Isolated\nNotification Pool -> Isolated"
+                }
+            ]
+        },
         {
-          "q": "Q36 : What are Retry and Backoff patterns in microservices?",
-          "a": "The Retry pattern automatically retries failed requests when temporary issues occur. The Backoff pattern introduces delays between retries, usually increasing the delay after each failed attempt. Together, these patterns help handle transient failures without overwhelming the system.",
-          "example": "Example: Retrying failed API calls with exponential backoff delays.",
-          "type": "text",
-          "id": 36,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "37",
-      "Que": [
+            "id": "36",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q36 : What are Retry and Backoff patterns in microservices?",
+                    "a": "The Retry pattern automatically attempts a failed operation again when temporary issues occur, such as network interruptions or service timeouts. The Backoff pattern controls how retries are performed by introducing delays between attempts. Exponential backoff gradually increases the waiting time after each failed attempt, reducing system load and preventing excessive retry storms. Together, these patterns improve reliability and increase the chances of successful recovery from transient failures without overwhelming dependent services.",
+                    "type": "text",
+                    "id": 36
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Retry": "Repeats failed operations automatically.",
+                        "Fixed Backoff": "Uses a constant delay between retries.",
+                        "Exponential Backoff": "Increases delay after each failure.",
+                        "Jitter": "Adds randomness to avoid synchronized retries."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q37 : What is containerization in microservices?",
-          "a": "Containerization is the process of packaging microservices along with their dependencies into lightweight containers. Containers ensure that applications run consistently across different environments. Docker is the most commonly used containerization platform.",
-          "example": "Example: Running a payment service inside a Docker container.",
-          "type": "text",
-          "id": 37,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "38",
-      "Que": [
+            "id": "37",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q37 : What is containerization in microservices?",
+                    "a": "Containerization is the process of packaging an application along with its dependencies, libraries, and runtime environment into a lightweight, portable container. Containers ensure that applications run consistently across different environments such as development, testing, and production. In microservices architectures, each service can be packaged independently, making deployment, scaling, and maintenance easier. Containerization improves resource efficiency, portability, and isolation compared to traditional virtual machines, making it a key technology in cloud-native application development.",
+                    "type": "text",
+                    "id": 37
+                },
+                {
+                    "type": "note",
+                    "note": "Docker is the most widely used containerization platform in modern microservices environments."
+                }
+            ]
+        },
         {
-          "q": "Q38 : What is Kubernetes in microservices architecture?",
-          "a": "Kubernetes is a container orchestration platform used to automate deployment, scaling, monitoring, and management of containerized microservices. It helps maintain high availability and efficient resource management in distributed systems.",
-          "example": "Example: Automatically scaling order service containers during high traffic.",
-          "type": "text",
-          "id": 38,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "39",
-      "Que": [
+            "id": "38",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q38 : What is Kubernetes in microservices architecture?",
+                    "a": "Kubernetes is an open-source container orchestration platform used to automate the deployment, scaling, management, and monitoring of containerized applications. It helps manage large numbers of microservices by handling tasks such as load balancing, service discovery, self-healing, rolling updates, and resource allocation. Kubernetes ensures high availability and efficient utilization of infrastructure resources. It has become the industry standard for running microservices in cloud environments because it simplifies operational complexity and supports large-scale distributed systems.",
+                    "type": "text",
+                    "id": 38
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Deployment": "Automates application deployment.",
+                        "Scaling": "Increases or decreases service instances.",
+                        "Self-Healing": "Restarts failed containers automatically.",
+                        "Load Balancing": "Distributes traffic efficiently.",
+                        "Service Discovery": "Helps services locate each other."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q39 : What is Docker in microservices?",
-          "a": "Docker is a containerization platform that packages applications and their dependencies into portable containers. Docker ensures consistent execution across development, testing, and production environments.",
-          "example": "Example: Creating Docker images for user authentication service deployment.",
-          "type": "text",
-          "id": 39,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "40",
-      "Que": [
+            "id": "39",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q39 : What is Docker in microservices?",
+                    "a": "Docker is a containerization platform that allows developers to package applications and their dependencies into portable containers. These containers can run consistently across different operating systems and environments. In microservices architecture, each service is often packaged as an independent Docker container, simplifying deployment and scaling. Docker improves development efficiency, reduces environment-related issues, and works seamlessly with orchestration platforms like Kubernetes. Its lightweight nature makes it a popular choice for building and deploying cloud-native applications.",
+                    "type": "text",
+                    "id": 39
+                },
+                {
+                    "type": "code",
+                    "lang": "docker",
+                    "simple_text": "Simple Docker command",
+                    "code": "\ndocker run -p 8080:8080 my-microservice"
+                }
+            ]
+        },
         {
-          "q": "Q40 : What is the Saga pattern in microservices?",
-          "a": "The Saga pattern manages distributed transactions across multiple microservices using a sequence of local transactions. If one transaction fails, compensating actions are executed to rollback previously completed steps and maintain consistency.",
-          "example": "Example: Cancelling inventory reservation if payment processing fails.",
-          "type": "text",
-          "id": 40,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-   
-    {
-      "id": "41",
-      "Que": [
+            "id": "40",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q40 : What is the Saga pattern in microservices?",
+                    "a": "The Saga pattern is a distributed transaction management approach used in microservices architectures. Instead of using a single global transaction, a Saga breaks a business process into multiple local transactions executed by different services. Each service performs its transaction and publishes an event to trigger the next step. If a failure occurs, compensating transactions are executed to undo completed actions. The Saga pattern improves scalability, reduces coupling, and provides a practical solution for maintaining consistency across multiple services.",
+                    "type": "text",
+                    "id": 40
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Saga Workflow Example",
+                    "code": "\nOrder Service -> Payment Service -> Inventory Service -> Shipping Service\nFailure -> Execute Compensation Transactions"
+                }
+            ]
+        },
         {
-          "q": "Q41 : What is centralized logging in microservices?",
-          "a": "Centralized logging is a process where logs from multiple microservices are collected and stored in a single centralized system. This makes monitoring, debugging, and troubleshooting easier because developers can analyze logs from all services in one place.",
-          "example": "Example: Using ELK Stack to collect logs from multiple microservices.",
-          "type": "text",
-          "id": 41,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "42",
-      "Que": [
+            "id": "41",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q41 : What is centralized logging in microservices?",
+                    "a": "Centralized logging is the practice of collecting logs from multiple microservices and storing them in a single centralized platform. Since microservices generate logs independently, troubleshooting becomes difficult if logs remain scattered across services. Centralized logging allows developers and administrators to search, analyze, monitor, and correlate logs from different services in one place. It improves debugging, auditing, security monitoring, and performance analysis. Popular centralized logging solutions include ELK Stack, Graylog, Splunk, and Loki, which provide powerful visualization and log management capabilities.",
+                    "type": "text",
+                    "id": 41
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "ELK Stack": "Elasticsearch, Logstash, and Kibana for log management.",
+                        "Splunk": "Enterprise log analysis platform.",
+                        "Graylog": "Centralized log management solution.",
+                        "Loki": "Lightweight logging system often used with Grafana."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q42 : What is service mesh in microservices?",
-          "a": "A service mesh is an infrastructure layer that manages service-to-service communication in microservices. It provides features such as traffic management, security, monitoring, load balancing, and observability without changing application code.",
-          "example": "Example: Istio service mesh managing communication between microservices.",
-          "type": "text",
-          "id": 42,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "43",
-      "Que": [
+            "id": "42",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q42 : What is service mesh in microservices?",
+                    "a": "A service mesh is an infrastructure layer that manages communication between microservices. It handles concerns such as service discovery, load balancing, traffic routing, authentication, encryption, observability, and fault tolerance without requiring changes to application code. Service meshes typically use sidecar proxies that intercept and manage network traffic between services. This approach simplifies microservice development because developers can focus on business logic while the service mesh manages communication and security responsibilities across the distributed system.",
+                    "type": "text",
+                    "id": 42
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Traffic Management",
+                        "2": "Service Discovery",
+                        "3": "Security and mTLS",
+                        "4": "Load Balancing",
+                        "5": "Monitoring and Observability"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q43 : What is resilience in microservices?",
-          "a": "Resilience in microservices refers to the system’s ability to continue functioning even when some services fail. Resilient systems use patterns like Circuit Breaker, Retry, Timeout, and Bulkhead to handle failures gracefully and maintain availability.",
-          "example": "Example: Fallback responses displayed when recommendation service becomes unavailable.",
-          "type": "text",
-          "id": 43,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "44",
-      "Que": [
+            "id": "43",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q43 : What is resilience in microservices?",
+                    "a": "Resilience refers to the ability of a microservices system to continue functioning correctly even when individual services fail or experience unexpected issues. A resilient system can recover from failures, handle traffic spikes, and maintain acceptable performance levels. Techniques such as circuit breakers, retries, fallbacks, bulkheads, and redundancy help improve resilience. In distributed systems, failures are inevitable, so resilience is an essential design principle that ensures applications remain available and responsive despite network, hardware, or software failures.",
+                    "type": "text",
+                    "id": 43
+                },
+                {
+                    "type": "note",
+                    "note": "Resilience focuses on recovery and continuity rather than completely preventing failures."
+                }
+            ]
+        },
         {
-          "q": "Q44 : What is fault tolerance in microservices?",
-          "a": "Fault tolerance is the ability of a microservices system to continue operating correctly even when one or more components fail. Fault-tolerant systems automatically recover from failures and minimize service interruptions.",
-          "example": "Example: Switching requests to backup service instances during failures.",
-          "type": "text",
-          "id": 44,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "45",
-      "Que": [
+            "id": "44",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q44 : What is fault tolerance in microservices?",
+                    "a": "Fault tolerance is the capability of a microservices system to continue operating even when some components fail. Instead of allowing a single failure to disrupt the entire application, fault-tolerant systems detect failures and take corrective actions automatically. This may involve switching to backup services, retrying failed operations, or using fallback mechanisms. Fault tolerance improves system reliability and availability, making it a critical requirement in large-scale distributed applications where service failures, network interruptions, and infrastructure issues can occur frequently.",
+                    "type": "text",
+                    "id": 44
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Redundancy": "Maintain backup instances.",
+                        "Failover": "Switch traffic to healthy services.",
+                        "Retry": "Attempt failed requests again.",
+                        "Fallback": "Provide alternative responses."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q45 : What is horizontal scaling in microservices?",
-          "a": "Horizontal scaling means increasing system capacity by adding more service instances or servers instead of increasing hardware resources of a single server. Microservices architecture supports horizontal scaling efficiently.",
-          "example": "Example: Adding additional payment service containers during high traffic.",
-          "type": "text",
-          "id": 45,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "46",
-      "Que": [
+            "id": "45",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q45 : What is horizontal scaling in microservices?",
+                    "a": "Horizontal scaling is the process of increasing application capacity by adding more service instances instead of increasing the resources of a single machine. Load balancers distribute incoming requests across multiple service instances, improving performance and availability. Horizontal scaling is commonly used in cloud-native microservices because it provides better fault tolerance and flexibility. If one instance fails, others continue serving requests. This approach allows applications to handle growing traffic demands efficiently while maintaining high availability and reliability.",
+                    "type": "text",
+                    "id": 45
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Horizontal Scaling Example",
+                    "code": "\nLoad Balancer\n   |\nService-1\nService-2\nService-3"
+                }
+            ]
+        },
         {
-          "q": "Q46 : What is vertical scaling in microservices?",
-          "a": "Vertical scaling means improving system performance by increasing hardware resources such as CPU, RAM, or storage on an existing server. Unlike horizontal scaling, it does not add new servers or service instances.",
-          "example": "Example: Increasing memory allocation for a database server.",
-          "type": "text",
-          "id": 46,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "47",
-      "Que": [
+            "id": "46",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q46 : What is vertical scaling in microservices?",
+                    "a": "Vertical scaling refers to increasing the resources of an existing server or service instance by adding more CPU, memory, storage, or processing power. Unlike horizontal scaling, no additional service instances are created. Vertical scaling is simpler to implement but has physical hardware limitations and may require downtime during upgrades. It is often suitable for smaller applications, while large-scale microservices environments typically prefer horizontal scaling because it offers better scalability, availability, and fault tolerance.",
+                    "type": "text",
+                    "id": 46
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Vertical Scaling" },
+                        { "label": "Horizontal Scaling" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Add more resources" },
+                                { "col": "Add more instances" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Limited by hardware" },
+                                { "col": "Highly scalable" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Less fault tolerant" },
+                                { "col": "More fault tolerant" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q47 : What is CI/CD in microservices?",
-          "a": "CI/CD stands for Continuous Integration and Continuous Deployment or Delivery. It automates building, testing, and deploying microservices frequently and reliably. CI/CD pipelines help deliver new features and fixes faster with reduced manual effort.",
-          "example": "Example: Using Jenkins pipeline to automatically deploy updated microservices.",
-          "type": "text",
-          "id": 47,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "48",
-      "Que": [
+            "id": "47",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q47 : What is CI/CD in microservices?",
+                    "a": "CI/CD stands for Continuous Integration and Continuous Delivery or Continuous Deployment. It is a development practice that automates code building, testing, integration, and deployment processes. In microservices environments, CI/CD pipelines help teams release updates frequently and reliably without manual intervention. Automated testing ensures quality, while deployment automation reduces errors and speeds up delivery. CI/CD enables rapid innovation, faster feedback cycles, and consistent releases across multiple independently deployable microservices within a distributed architecture.",
+                    "type": "text",
+                    "id": 47
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Typical CI/CD Pipeline",
+                    "code": "\nCode -> Build -> Test -> Deploy -> Monitor"
+                }
+            ]
+        },
         {
-          "q": "Q48 : What is the Strangler pattern in microservices?",
-          "a": "The Strangler pattern is used to gradually migrate a monolithic application into microservices. Instead of rewriting the entire system at once, new microservices slowly replace old monolithic components over time.",
-          "example": "Example: Replacing old payment module with a new payment microservice gradually.",
-          "type": "text",
-          "id": 48,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "49",
-      "Que": [
+            "id": "48",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q48 : What is the Strangler pattern in microservices?",
+                    "a": "The Strangler pattern is a migration strategy used to gradually replace a monolithic application with microservices. Instead of rewriting the entire system at once, new functionality is developed as independent microservices while existing features continue operating within the monolith. Over time, components are migrated incrementally until the monolith is completely replaced. This approach reduces migration risk, minimizes downtime, and allows organizations to modernize applications progressively. The pattern is named after the strangler fig tree, which gradually replaces its host.",
+                    "type": "text",
+                    "id": 48
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Migration Flow",
+                    "code": "\nMonolith -> Partial Microservices -> More Microservices -> Fully Microservices"
+                }
+            ]
+        },
         {
-          "q": "Q49 : What are the advantages of microservices architecture?",
-          "a": "Microservices architecture provides advantages such as independent deployment, better scalability, improved fault isolation, faster development, easier maintenance, technology flexibility, and better team productivity. It also supports cloud-native and distributed application development effectively.",
-          "example": "Example: Scaling only the search service instead of scaling the entire application.",
-          "type": "text",
-          "id": 49,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "50",
-      "Que": [
+            "id": "49",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q49 : What are the advantages of microservices architecture?",
+                    "a": "Microservices architecture offers several advantages, including independent deployment, better scalability, fault isolation, technology flexibility, and faster development cycles. Each service can be developed, tested, and deployed separately, allowing teams to work independently. Failures in one service are less likely to affect the entire application. Microservices also support continuous delivery, cloud-native development, and efficient resource utilization. These benefits make the architecture highly suitable for large, complex applications that require agility, scalability, and maintainability over time.",
+                    "type": "text",
+                    "id": 49
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Independent Deployment",
+                        "2": "Better Scalability",
+                        "3": "Fault Isolation",
+                        "4": "Technology Flexibility",
+                        "5": "Faster Development",
+                        "6": "Improved Maintainability"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q50 : Why are microservices widely used in modern applications?",
-          "a": "Microservices are widely used because they support scalability, flexibility, cloud deployment, independent service development, and faster software delivery. Modern enterprise applications require highly available and distributed systems, which microservices architecture handles efficiently.",
-          "example": "Example: Netflix, Amazon, and Uber using microservices architecture for scalable applications.",
-          "type": "text",
-          "id": 50,
-          "playButton": true,
-          "pauseButton": false
+            "id": "50",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q50 : Why are microservices widely used in modern applications?",
+                    "a": "Microservices are widely used because they align well with modern cloud-native development practices and business requirements. Organizations need systems that can scale efficiently, support rapid feature releases, and remain highly available. Microservices enable independent development teams to work on separate services simultaneously, accelerating innovation and reducing deployment risks. They integrate well with containers, Kubernetes, CI/CD pipelines, and cloud platforms. Their flexibility, scalability, maintainability, and resilience make them the preferred architecture for many modern enterprise applications.",
+                    "type": "text",
+                    "id": 50
+                },
+                {
+                    "type": "note",
+                    "note": "Companies such as Netflix, Amazon, Uber, and Spotify use microservices to support large-scale distributed applications."
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
- 
-
-  
- 

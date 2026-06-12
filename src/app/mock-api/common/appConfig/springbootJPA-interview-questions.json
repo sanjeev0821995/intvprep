@@ -1,709 +1,989 @@
 {
-  "springbootJPA-interview-questions": [
-    {
-      "id": "1",
-      "Que": [
+    "springbootJPA-interview-questions": [
         {
-          "q": "Q1 : What is Spring Data JPA?",
-          "a": "Spring Data JPA is a part of the Spring Data project that simplifies database access in Java applications. It provides an abstraction layer on top of JPA, also known as Java Persistence API, which reduces boilerplate code and makes database operations easier. Instead of writing large amounts of SQL and DAO code, developers can directly use repository interfaces and built-in methods provided by Spring Data JPA. It helps developers focus more on business logic rather than database interaction details.",
-          "example": "Example: Using JpaRepository to perform CRUD operations without writing SQL queries manually.",
-          "type": "text",
-          "id": 1,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "Que": [
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is Spring Data JPA?",
+                    "a": "Spring Data JPA is a part of the Spring Data project that simplifies database access in Java applications. It provides an abstraction layer on top of JPA (Java Persistence API), reducing boilerplate code and eliminating the need to write repetitive SQL and DAO logic. Developers can directly use repository interfaces and built-in methods for database operations. This allows developers to focus more on business logic rather than database handling details, making development faster, cleaner, and more maintainable in enterprise applications.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Key Benefits",
+                    "list": {
+                        "1": "Reduces boilerplate code",
+                        "2": "Provides repository abstraction",
+                        "3": "Built-in CRUD operations",
+                        "4": "Improves developer productivity"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q2 : Explain the features of Spring Data JPA.",
-          "a": "Spring Data JPA provides several powerful features that simplify database operations. Some important features include automatic repository implementation, query method generation, pagination support, sorting, custom queries using @Query annotation, auditing, transaction management, and integration with Spring Boot. It also provides built-in CRUD operations and reduces the amount of repetitive database code developers need to write.",
-          "example": "Example: Automatically generating query methods like findByEmail() without writing SQL queries.",
-          "type": "text",
-          "id": 2,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "Que": [
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : Explain the features of Spring Data JPA.",
+                    "a": "Spring Data JPA provides multiple powerful features that simplify database operations in Java applications. It supports automatic repository implementation, query method generation, pagination, sorting, custom queries using @Query, auditing, and transaction management. It integrates seamlessly with Spring Boot, making configuration easier. It also reduces repetitive database code and improves maintainability. These features help developers build scalable and efficient backend systems with minimal effort.",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Core Features",
+                    "list": {
+                        "1": "Automatic repository implementation",
+                        "2": "Derived query methods",
+                        "3": "Pagination and sorting support",
+                        "4": "Custom @Query support",
+                        "5": "Transaction management"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q3 : How do you create a custom Repository class in Spring JPA?",
-          "a": "To create a custom repository in Spring JPA, we usually create an interface that extends JpaRepository or CrudRepository. We can then add custom query methods inside that interface. Spring Data JPA automatically provides the implementation for standard methods and query generation based on method naming conventions.",
-          "example": "Example: public interface UserRepository extends JpaRepository<User, Long> {}",
-          "type": "text",
-          "id": 3,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "Que": [
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : How do you create a custom repository in Spring JPA?",
+                    "a": "In Spring JPA, a custom repository is created by defining an interface that extends JpaRepository or CrudRepository. Spring Data JPA automatically generates the implementation at runtime. Developers can also define custom query methods using method naming conventions or @Query annotations. This approach removes the need for writing manual DAO classes and simplifies database interaction significantly.",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Repository Interface Example",
+                    "code": "\npublic interface UserRepository extends JpaRepository<User, Long> {}"
+                }
+            ]
+        },
         {
-          "q": "Q4 : What is the difference between CrudRepository and JpaRepository?",
-          "a": "CrudRepository provides basic CRUD operations such as save, delete, findById, and findAll. JpaRepository extends CrudRepository and provides additional JPA-specific functionalities such as batch processing, flushing changes to the database, pagination, and sorting support. JpaRepository is generally preferred in Spring Boot applications because it provides more advanced features.",
-          "example": "Example: JpaRepository provides methods like flush() and deleteInBatch() which are not available in CrudRepository.",
-          "type": "text",
-          "id": 4,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "Que": [
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : What is the difference between CrudRepository and JpaRepository?",
+                    "a": "CrudRepository provides basic CRUD operations such as save, delete, findById, and findAll. JpaRepository extends CrudRepository and adds advanced JPA-specific features such as pagination, sorting, flushing, and batch operations. Because of these additional capabilities, JpaRepository is preferred in most Spring Boot applications for building scalable and production-ready systems.",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Key Differences",
+                    "list": {
+                        "1": "CrudRepository → Basic CRUD operations",
+                        "2": "JpaRepository → Advanced JPA features",
+                        "3": "JpaRepository supports pagination",
+                        "4": "JpaRepository supports batch operations"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q5 : How do you write a custom query in Spring JPA?",
-          "a": "Custom queries in Spring JPA can be written using the @Query annotation. This annotation allows developers to write JPQL or native SQL queries directly inside repository interfaces. It is useful when complex queries cannot be generated automatically using method naming conventions.",
-          "example": "Example: @Query(\"SELECT u FROM User u WHERE u.firstName = :firstName\")",
-          "type": "text",
-          "id": 5,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "Que": [
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : How do you write a custom query in Spring JPA?",
+                    "a": "Custom queries in Spring JPA are written using the @Query annotation. This allows developers to define JPQL or native SQL queries directly inside repository interfaces. It is useful when method naming conventions are not sufficient for complex queries. This feature provides flexibility in querying relational databases while still keeping code inside the repository layer.",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Custom Query Example",
+                    "code": "\n@Query(\"SELECT u FROM User u WHERE u.firstName = :firstName\")"
+                }
+            ]
+        },
         {
-          "q": "Q6 : What is the purpose of the save() method in CrudRepository?",
-          "a": "The save() method is used to insert or update an entity in the database. If the entity does not exist, Spring Data JPA performs an insert operation. If the entity already exists with the same primary key, it performs an update operation. This method simplifies data persistence in applications.",
-          "example": "Example: userRepository.save(user);",
-          "type": "text",
-          "id": 6,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "Que": [
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : What is the purpose of the save() method in CrudRepository?",
+                    "a": "The save() method is used to persist an entity in the database. It performs both insert and update operations depending on whether the entity already exists. If the primary key is present, it updates the record; otherwise, it inserts a new one. This makes it a convenient and unified method for handling data persistence in Spring Data JPA applications.",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "save() automatically decides between INSERT and UPDATE based on entity state."
+                }
+            ]
+        },
         {
-          "q": "Q7 : What is the use of @Modifying annotation?",
-          "a": "The @Modifying annotation is used with custom update or delete queries in Spring Data JPA. It tells Spring that the query will modify database data instead of just fetching records. Without this annotation, update and delete operations using @Query will not work properly.",
-          "example": "Example: @Modifying @Query(\"UPDATE User u SET u.status='ACTIVE' WHERE u.id=:id\")",
-          "type": "text",
-          "id": 7,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "Que": [
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : What is the use of @Modifying annotation?",
+                    "a": "@Modifying annotation is used with @Query when performing update or delete operations in Spring Data JPA. It informs Spring that the query will modify data instead of just reading it. Without this annotation, update and delete queries will not execute properly. It is often used along with transactional support to ensure data consistency.",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "@Modifying is mandatory for update and delete queries in Spring Data JPA."
+                }
+            ]
+        },
         {
-          "q": "Q8 : What is the difference between findById() and getOne()?",
-          "a": "findById() immediately fetches the entity from the database and returns an Optional object. getOne() returns a proxy object and loads the entity lazily only when required. If the entity does not exist, getOne() may throw an EntityNotFoundException when accessed.",
-          "example": "Example: findById() is commonly used for immediate data retrieval, while getOne() supports lazy loading.",
-          "type": "text",
-          "id": 8,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "Que": [
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : What is the difference between findById() and getOne()?",
+                    "a": "findById() immediately fetches data from the database and returns an Optional object. getOne() returns a lazy proxy object and loads the actual data only when it is accessed. If the entity does not exist, getOne() may throw an exception when the proxy is accessed. Because of this behavior, findById() is safer and more commonly used.",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Comparison",
+                    "list": {
+                        "1": "findById → Eager loading",
+                        "2": "getOne → Lazy loading",
+                        "3": "findById returns Optional",
+                        "4": "getOne returns proxy object"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q9 : What is the use of @Temporal annotation?",
-          "a": "The @Temporal annotation is used to define how date and time values should be stored in the database. It is mainly applied to java.util.Date and java.util.Calendar fields. It supports DATE, TIME, and TIMESTAMP types depending on the required format.",
-          "example": "Example: @Temporal(TemporalType.DATE) for storing only the date part.",
-          "type": "text",
-          "id": 9,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "Que": [
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : What is the use of @Temporal annotation?",
+                    "a": "@Temporal annotation is used to define how date and time values are stored in the database. It is applied to Date or Calendar fields to specify whether only date, only time, or full timestamp should be stored. This ensures correct mapping between Java date types and database date formats.",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Used with TemporalType.DATE, TIME, or TIMESTAMP."
+                }
+            ]
+        },
         {
-          "q": "Q10 : How do you write a query method for sorting in Spring Data JPA?",
-          "a": "Sorting in Spring Data JPA can be implemented by using the OrderBy keyword in repository method names or by using Sort objects. This allows developers to retrieve records in ascending or descending order based on entity attributes.",
-          "example": "Example: List<User> findByOrderByLastNameAsc();",
-          "type": "text",
-          "id": 10,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
- 
-    {
-      "id": "11",
-      "Que": [
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : How do you write a query method for sorting in Spring Data JPA?",
+                    "a": "Sorting in Spring Data JPA can be achieved using method naming conventions like OrderBy or by using Sort parameter. It allows results to be returned in ascending or descending order based on entity fields. This makes it easy to control data ordering without writing explicit SQL queries.",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Sorting Example",
+                    "code": "\nList<User> findByOrderByLastNameAsc();"
+                }
+            ]
+        },
         {
-          "q": "Q11 : Explain @Transactional annotation in Spring.",
-          "a": "The @Transactional annotation is used to manage transactions in Spring applications. It ensures that multiple database operations are executed as a single unit of work. If all operations complete successfully, the transaction is committed. If any exception occurs, the transaction is rolled back automatically. This helps maintain data consistency and integrity in applications.",
-          "example": "Example: Transferring money between bank accounts where both debit and credit operations should succeed together.",
-          "type": "text",
-          "id": 11,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "12",
-      "Que": [
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : Explain @Transactional annotation in Spring.",
+                    "a": "@Transactional annotation is used to manage database transactions in Spring applications. It ensures that a group of operations are executed as a single unit of work. If all operations succeed, the transaction is committed; if any exception occurs, the entire transaction is rolled back automatically. This guarantees data consistency and integrity, especially in critical operations like banking, order processing, or multi-step database updates where partial execution is not acceptable.",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "If any step fails inside a @Transactional method, all changes are rolled back automatically."
+                }
+            ]
+        },
         {
-          "q": "Q12 : What is the difference between FetchType.EAGER and FetchType.LAZY?",
-          "a": "FetchType.EAGER loads related entities immediately along with the main entity, even if they are not required. This can sometimes affect performance due to unnecessary data loading. FetchType.LAZY loads related entities only when they are accessed, which improves performance and reduces memory usage. Lazy loading is generally preferred for large applications.",
-          "example": "Example: Loading customer orders only when the user opens the order details page.",
-          "type": "text",
-          "id": 12,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "13",
-      "Que": [
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : Difference between FetchType.EAGER and FetchType.LAZY?",
+                    "a": "FetchType defines how related entities are loaded in JPA. EAGER loading fetches related data immediately along with the main entity, even if it is not required. LAZY loading fetches related data only when it is accessed, which improves performance and reduces memory usage. In real-world applications, LAZY loading is generally preferred because it avoids unnecessary database queries and improves system efficiency.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Comparison",
+                    "list": {
+                        "1": "EAGER → Loads related data immediately",
+                        "2": "LAZY → Loads data on demand",
+                        "3": "EAGER → Higher memory usage",
+                        "4": "LAZY → Better performance"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q13 : What is the use of @Id annotation?",
-          "a": "The @Id annotation is used to define the primary key of an entity in Spring JPA. It uniquely identifies each record in the database table. Every entity must have at least one field marked with @Id for proper entity management.",
-          "example": "Example: @Id private Long id;",
-          "type": "text",
-          "id": 13,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "14",
-      "Que": [
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : What is the use of @Id annotation?",
+                    "a": "@Id annotation is used to define the primary key of an entity in Spring JPA. It uniquely identifies each record in a database table. Every entity must have a primary key field annotated with @Id so that JPA can manage object persistence correctly and maintain entity identity within the persistence context.",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Every JPA entity must contain exactly one primary key defined using @Id."
+                }
+            ]
+        },
         {
-          "q": "Q14 : How do you create a composite primary key in Spring JPA?",
-          "a": "A composite primary key can be created using @Embeddable and @EmbeddedId annotations. First, a separate class is created to represent the composite key, and then it is embedded into the entity class. Composite keys are useful when multiple columns together uniquely identify a record.",
-          "example": "Example: Using studentId and courseId together as a composite primary key.",
-          "type": "text",
-          "id": 14,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "15",
-      "Que": [
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : How do you create a composite primary key in Spring JPA?",
+                    "a": "A composite primary key is used when a combination of multiple fields uniquely identifies a record. In Spring JPA, it is implemented using @Embeddable and @EmbeddedId annotations. A separate key class is created to define the composite structure, which is then embedded into the entity. This approach ensures proper mapping of complex keys in relational databases.",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Required Annotations",
+                    "list": {
+                        "1": "@Embeddable → Defines composite key class",
+                        "2": "@EmbeddedId → Used in entity class"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q15 : What is the use of @EnableJpaRepositories annotation?",
-          "a": "The @EnableJpaRepositories annotation is used to enable JPA repository support in Spring applications. It tells Spring where to scan for repository interfaces and automatically creates their implementations at runtime.",
-          "example": "Example: @EnableJpaRepositories(basePackages = \"com.example.repository\")",
-          "type": "text",
-          "id": 15,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "16",
-      "Que": [
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : What is the use of @EnableJpaRepositories annotation?",
+                    "a": "@EnableJpaRepositories is used to enable JPA repository scanning in Spring applications. It tells Spring where to find repository interfaces and automatically generates their implementations at runtime. This annotation is usually placed in configuration classes and helps bootstrap Spring Data JPA support in the application context.",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q16 : What rules should be followed while declaring custom methods in Repository?",
-          "a": "Custom repository methods in Spring Data JPA must follow naming conventions for automatic query generation. Method names should start with keywords like findBy, countBy, deleteBy, or existsBy, followed by entity property names and optional conditions such as And, Or, Between, or OrderBy.",
-          "example": "Example: findByFirstNameAndLastName(String firstName, String lastName)",
-          "type": "text",
-          "id": 16,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "17",
-      "Que": [
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : Rules for defining custom repository methods?",
+                    "a": "Spring Data JPA allows automatic query generation based on method names. Custom repository methods must follow naming conventions such as findBy, countBy, deleteBy, or existsBy, followed by entity field names. Logical keywords like And, Or, Between, and OrderBy can also be used to build complex queries without writing SQL.",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Naming Keywords",
+                    "list": {
+                        "1": "findBy",
+                        "2": "countBy",
+                        "3": "deleteBy",
+                        "4": "existsBy",
+                        "5": "OrderBy"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q17 : Explain Query By Example (QBE) in Spring Data JPA.",
-          "a": "Query By Example, also known as QBE, is a feature that allows dynamic query creation using example entities. Developers create an example object with specific field values, and Spring Data JPA automatically generates the query based on non-null fields. This reduces the need for writing custom queries.",
-          "example": "Example: Searching users by providing only the firstName field in an example entity.",
-          "type": "text",
-          "id": 17,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "18",
-      "Que": [
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : Explain Query By Example (QBE) in Spring Data JPA.",
+                    "a": "Query By Example (QBE) is a dynamic query technique where an example entity is created with sample values. Spring Data JPA automatically builds queries based on non-null fields of the example object. It eliminates the need for writing explicit queries and is useful for simple dynamic search requirements.",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "QBE is useful for dynamic filtering without writing SQL or JPQL."
+                }
+            ]
+        },
         {
-          "q": "Q18 : What is pagination and how is it implemented in Spring Data JPA?",
-          "a": "Pagination is a technique used to divide large datasets into smaller pages for easier data management and improved performance. In Spring Data JPA, pagination is implemented using Pageable and Page interfaces. Developers can specify page number, page size, and sorting information while fetching records.",
-          "example": "Example: Fetching 10 users per page using Pageable object.",
-          "type": "text",
-          "id": 18,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "19",
-      "Que": [
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : What is pagination in Spring Data JPA?",
+                    "a": "Pagination is used to divide large datasets into smaller, manageable pages. In Spring Data JPA, it is implemented using Pageable and Page interfaces. Developers can define page number, page size, and sorting criteria to efficiently fetch data. This improves performance by reducing memory usage and avoiding loading large datasets at once.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Pagination Components",
+                    "list": {
+                        "1": "Pageable → Defines page request",
+                        "2": "Page → Holds paginated result",
+                        "3": "Sort → Defines ordering"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q19 : Explain some commonly used CrudRepository methods.",
-          "a": "CrudRepository provides several commonly used methods such as save() for inserting or updating data, findById() for retrieving records by primary key, findAll() for fetching all records, deleteById() for deleting records, and count() for counting total records. These methods simplify database operations in Spring applications.",
-          "example": "Example: userRepository.findAll() retrieves all users from the database.",
-          "type": "text",
-          "id": 19,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "20",
-      "Que": [
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : Commonly used CrudRepository methods?",
+                    "a": "CrudRepository provides basic methods to interact with the database such as saving entities, retrieving records, deleting data, and counting records. These methods help eliminate boilerplate code and simplify CRUD operations in Spring applications.",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Common Methods",
+                    "list": {
+                        "1": "save() → Insert/Update",
+                        "2": "findById() → Fetch record",
+                        "3": "findAll() → Fetch all records",
+                        "4": "deleteById() → Delete record",
+                        "5": "count() → Total records"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q20 : What is the difference between delete() and deleteInBatch() methods?",
-          "a": "The delete() method removes one entity at a time from the database, while deleteInBatch() deletes multiple entities in a single batch operation. Batch deletion improves performance because it reduces database round trips and executes operations more efficiently.",
-          "example": "Example: deleteInBatch() is useful for deleting thousands of records quickly.",
-          "type": "text",
-          "id": 20,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-  
-    {
-      "id": "21",
-      "Que": [
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : Difference between delete() and deleteInBatch()?",
+                    "a": "The delete() method removes a single entity at a time, whereas deleteInBatch() removes multiple entities in a single batch operation. Batch deletion is more efficient because it reduces database calls and improves performance when dealing with large datasets. However, deleteInBatch() should be used carefully because it bypasses some entity lifecycle events.",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "deleteInBatch() is faster but bypasses some JPA lifecycle callbacks."
+                }
+            ]
+        },
         {
-          "q": "Q21 : How do you execute complex queries involving multiple tables in Spring JPA?",
-          "a": "Complex queries in Spring JPA can be implemented using the @Query annotation with JPQL or native SQL queries. These queries can include joins, subqueries, conditions, aggregations, and multiple table operations. For highly complex requirements, native SQL queries are often preferred because they provide more flexibility and direct database control.",
-          "example": "Example: Using JOIN queries to fetch user and order details together.",
-          "type": "text",
-          "id": 21,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "22",
-      "Que": [
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : How do you execute complex queries involving multiple tables in Spring JPA?",
+                    "a": "Complex queries in Spring JPA are executed using the @Query annotation with JPQL or native SQL. These queries support joins, subqueries, aggregations, and multi-table operations. JPQL is preferred for database independence, while native SQL is used when advanced or database-specific features are required. This approach gives flexibility while keeping query logic inside repository interfaces.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Query Types",
+                    "list": {
+                        "1": "JPQL → Object-oriented queries",
+                        "2": "Native SQL → Database-specific queries",
+                        "3": "Supports JOIN operations",
+                        "4": "Supports subqueries and aggregation"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q22 : How do you optimize batch insertion in Spring JPA?",
-          "a": "Batch insertion in Spring JPA can be optimized by enabling Hibernate batch processing using properties like spring.jpa.properties.hibernate.jdbc.batch_size. This allows multiple insert operations to be grouped together, reducing database round trips and improving performance significantly. Batch processing is very useful when inserting large datasets.",
-          "example": "Example: Inserting thousands of employee records efficiently using batch size configuration.",
-          "type": "text",
-          "id": 22,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "23",
-      "Que": [
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : How do you optimize batch insertion in Spring JPA?",
+                    "a": "Batch insertion in Spring JPA is optimized by enabling Hibernate batch processing using configuration properties like hibernate.jdbc.batch_size. This groups multiple insert operations into a single batch, reducing database round trips and improving performance significantly. It is especially useful when inserting large datasets such as logs, transactions, or bulk user records.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Batch processing improves performance by reducing database communication overhead."
+                }
+            ]
+        },
         {
-          "q": "Q23 : How do you manage bidirectional relationships in Spring JPA?",
-          "a": "Bidirectional relationships in Spring JPA are managed using annotations like @OneToMany, @ManyToOne, and mappedBy attributes. Proper mapping helps maintain relationships between entities correctly. To avoid infinite recursion during JSON serialization, annotations like @JsonManagedReference and @JsonBackReference are commonly used.",
-          "example": "Example: Managing relationships between Customer and Orders entities.",
-          "type": "text",
-          "id": 23,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "24",
-      "Que": [
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : How do you manage bidirectional relationships in Spring JPA?",
+                    "a": "Bidirectional relationships in Spring JPA are managed using @OneToMany, @ManyToOne, and mappedBy attributes. These mappings define how entities are connected in both directions. To prevent infinite loops during JSON serialization, annotations like @JsonManagedReference and @JsonBackReference are used. Proper relationship mapping ensures data integrity and efficient entity navigation.",
+                    "type": "text",
+                    "id": 23,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Key Concepts",
+                    "list": {
+                        "1": "@OneToMany → Parent side",
+                        "2": "@ManyToOne → Child side",
+                        "3": "mappedBy → Defines ownership",
+                        "4": "Jackson annotations prevent recursion"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q24 : How do you handle schema migration in Spring JPA projects?",
-          "a": "Schema migration in Spring JPA projects is usually handled using tools like Flyway or Liquibase. These tools help manage database schema changes through version-controlled migration scripts. During application startup or deployment, migration scripts are executed automatically to keep the database schema synchronized with application requirements.",
-          "example": "Example: Adding a new column to the user table using Flyway migration scripts.",
-          "type": "text",
-          "id": 24,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "25",
-      "Que": [
+            "id": "24",
+            "Que": [
+                {
+                    "q": "Q24 : How do you handle schema migration in Spring JPA projects?",
+                    "a": "Schema migration in Spring JPA is handled using tools like Flyway or Liquibase. These tools manage database changes using versioned scripts that run automatically during application startup. This ensures that database schema stays synchronized with application code across different environments like development, testing, and production.",
+                    "type": "text",
+                    "id": 24,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Flyway and Liquibase help maintain version control for database schema changes."
+                }
+            ]
+        },
         {
-          "q": "Q25 : How do you implement caching in Spring JPA?",
-          "a": "Caching in Spring JPA is implemented using Spring Cache abstraction with cache providers like EHCache, Redis, or Hazelcast. Frequently accessed data can be cached using annotations such as @Cacheable. This reduces repeated database queries and improves application performance significantly.",
-          "example": "Example: Caching frequently accessed product details using Redis cache.",
-          "type": "text",
-          "id": 25,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "26",
-      "Que": [
+            "id": "25",
+            "Que": [
+                {
+                    "q": "Q25 : How do you implement caching in Spring JPA?",
+                    "a": "Caching in Spring JPA is implemented using Spring Cache abstraction along with providers like Redis, EHCache, or Hazelcast. Frequently accessed data is stored in cache memory to reduce repeated database calls. This improves application performance and reduces database load significantly, especially in high-traffic systems.",
+                    "type": "text",
+                    "id": 25,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Caching reduces database load by storing frequently accessed data in memory."
+                }
+            ]
+        },
         {
-          "q": "Q26 : What is JPA in Java?",
-          "a": "JPA, also known as Java Persistence API, is a specification used for managing relational data in Java applications. It provides a standard approach for object-relational mapping, allowing Java objects to be mapped directly to database tables. JPA simplifies database operations and reduces the need for writing raw SQL queries.",
-          "example": "Example: Mapping a User Java class to a users database table using JPA annotations.",
-          "type": "text",
-          "id": 26,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "27",
-      "Que": [
+            "id": "26",
+            "Que": [
+                {
+                    "q": "Q26 : What is JPA in Java?",
+                    "a": "JPA (Java Persistence API) is a specification used for object-relational mapping in Java. It provides a standard way to map Java objects to database tables. Instead of writing complex SQL queries, developers use JPA annotations and APIs to perform database operations in an object-oriented manner, making development simpler and more maintainable.",
+                    "type": "text",
+                    "id": 26,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "JPA is only a specification; Hibernate is one of its implementations."
+                }
+            ]
+        },
         {
-          "q": "Q27 : What is Hibernate in Spring JPA?",
-          "a": "Hibernate is one of the most popular implementations of the JPA specification. It provides ORM capabilities that map Java objects to database tables automatically. Hibernate handles SQL generation, caching, lazy loading, and transaction management internally, making database operations easier for developers.",
-          "example": "Example: Automatically generating SQL insert statements for entity objects using Hibernate.",
-          "type": "text",
-          "id": 27,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "28",
-      "Que": [
+            "id": "27",
+            "Que": [
+                {
+                    "q": "Q27 : What is Hibernate in Spring JPA?",
+                    "a": "Hibernate is a popular implementation of the JPA specification that provides ORM capabilities. It automatically maps Java objects to database tables and handles SQL generation, caching, lazy loading, and transaction management. Hibernate reduces boilerplate code and simplifies database interaction in enterprise Java applications.",
+                    "type": "text",
+                    "id": 27,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Hibernate Features",
+                    "list": {
+                        "1": "Automatic SQL generation",
+                        "2": "ORM mapping",
+                        "3": "Caching support",
+                        "4": "Lazy loading",
+                        "5": "Transaction management"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q28 : What is ORM in Spring JPA?",
-          "a": "ORM, also known as Object Relational Mapping, is a technique used to map Java objects to relational database tables. ORM frameworks like Hibernate reduce manual SQL coding and simplify data persistence. Developers work with Java objects instead of directly interacting with database tables.",
-          "example": "Example: Automatically storing Employee objects into employee database tables.",
-          "type": "text",
-          "id": 28,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "29",
-      "Que": [
+            "id": "28",
+            "Que": [
+                {
+                    "q": "Q28 : What is ORM in Spring JPA?",
+                    "a": "ORM (Object Relational Mapping) is a technique that maps Java objects to relational database tables. It allows developers to interact with databases using objects instead of SQL queries. ORM frameworks like Hibernate handle the conversion between object models and relational data automatically.",
+                    "type": "text",
+                    "id": 28,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "ORM eliminates the need to write manual SQL for most CRUD operations."
+                }
+            ]
+        },
         {
-          "q": "Q29 : What is the use of @Entity annotation in Spring JPA?",
-          "a": "The @Entity annotation marks a Java class as a JPA entity that should be mapped to a database table. Spring JPA uses this annotation to recognize entity classes and manage them automatically through the persistence context.",
-          "example": "Example: @Entity class User { }",
-          "type": "text",
-          "id": 29,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "30",
-      "Que": [
+            "id": "29",
+            "Que": [
+                {
+                    "q": "Q29 : What is the use of @Entity annotation in Spring JPA?",
+                    "a": "The @Entity annotation marks a Java class as a JPA entity that is mapped to a database table. Spring JPA uses this annotation to identify classes that should be persisted in the database. Each entity represents a table, and each object represents a row in that table.",
+                    "type": "text",
+                    "id": 29,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Every entity class must be annotated with @Entity for JPA to manage it."
+                }
+            ]
+        },
         {
-          "q": "Q30 : What is the use of @Table annotation in Spring JPA?",
-          "a": "The @Table annotation is used to specify the database table name associated with an entity class. If the annotation is not provided, Spring JPA uses the class name as the table name by default. It also allows configuring schema names and unique constraints.",
-          "example": "Example: @Table(name = \"employees\")",
-          "type": "text",
-          "id": 30,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-
-    {
-      "id": "31",
-      "Que": [
+            "id": "30",
+            "Que": [
+                {
+                    "q": "Q30 : What is the use of @Table annotation in Spring JPA?",
+                    "a": "The @Table annotation is used to define the database table name associated with a JPA entity. If not specified, Spring JPA uses the class name as the table name by default. It also allows configuration of schema, unique constraints, and table-level metadata for better database control.",
+                    "type": "text",
+                    "id": 30,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "@Table is optional but useful for customizing table mapping."
+                }
+            ]
+        },
         {
-          "q": "Q31 : What is the use of @Column annotation in Spring JPA?",
-          "a": "The @Column annotation is used to map an entity field to a database table column. It allows developers to configure column properties such as name, length, nullable constraints, uniqueness, and default values. This annotation helps customize database column mapping according to application requirements.",
-          "example": "Example: @Column(name = \"email\", nullable = false, unique = true)",
-          "type": "text",
-          "id": 31,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "32",
-      "Que": [
+            "id": "31",
+            "Que": [
+                {
+                    "q": "Q31 : What is the use of @Column annotation in Spring JPA?",
+                    "a": "@Column annotation is used to map a Java entity field to a database table column. It allows customization of column properties such as name, length, nullable constraint, uniqueness, and default values. This annotation gives fine-grained control over how entity fields are stored in the database, ensuring proper schema design and validation rules at the database level.",
+                    "type": "text",
+                    "id": 31,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Column Configurations",
+                    "list": {
+                        "1": "name → column name mapping",
+                        "2": "nullable → allows/disallows null values",
+                        "3": "unique → ensures uniqueness",
+                        "4": "length → sets string size limit"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q32 : What is the use of @GeneratedValue annotation?",
-          "a": "The @GeneratedValue annotation is used to automatically generate primary key values for entities. It supports different generation strategies such as AUTO, IDENTITY, SEQUENCE, and TABLE. This removes the need for manually assigning primary key values.",
-          "example": "Example: @GeneratedValue(strategy = GenerationType.IDENTITY)",
-          "type": "text",
-          "id": 32,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "33",
-      "Que": [
+            "id": "32",
+            "Que": [
+                {
+                    "q": "Q32 : What is the use of @GeneratedValue annotation?",
+                    "a": "@GeneratedValue annotation is used to automatically generate primary key values for entities in Spring JPA. It eliminates the need for manual ID assignment. It supports multiple strategies like AUTO, IDENTITY, SEQUENCE, and TABLE, depending on database capabilities. This ensures consistent and unique identifier generation for each entity record.",
+                    "type": "text",
+                    "id": 32,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Generation Strategies",
+                    "list": {
+                        "1": "AUTO → Default strategy",
+                        "2": "IDENTITY → Auto increment in DB",
+                        "3": "SEQUENCE → Uses DB sequence",
+                        "4": "TABLE → Uses a separate table for IDs"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q33 : What is the difference between @OneToOne and @OneToMany relationships?",
-          "a": "@OneToOne defines a relationship where one entity is associated with only one other entity. @OneToMany defines a relationship where one entity is associated with multiple entities. These relationships help model real-world database relationships using object-oriented concepts.",
-          "example": "Example: One user having one profile uses @OneToOne, while one customer having multiple orders uses @OneToMany.",
-          "type": "text",
-          "id": 33,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "34",
-      "Que": [
+            "id": "33",
+            "Que": [
+                {
+                    "q": "Q33 : Difference between @OneToOne and @OneToMany relationships?",
+                    "a": "@OneToOne relationship means one entity instance is associated with exactly one instance of another entity. @OneToMany means one entity is associated with multiple instances of another entity. These mappings help represent real-world relationships in database design using object-oriented principles.",
+                    "type": "text",
+                    "id": 33,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Relationship Comparison",
+                    "list": {
+                        "1": "OneToOne → single related entity",
+                        "2": "OneToMany → multiple related entities",
+                        "3": "Used for user-profile mapping",
+                        "4": "Used for customer-orders mapping"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q34 : What is the use of @ManyToOne annotation?",
-          "a": "The @ManyToOne annotation defines a many-to-one relationship between entities. It means multiple records from one entity can be associated with a single record of another entity. This is one of the most commonly used relationship mappings in JPA.",
-          "example": "Example: Multiple employees belonging to one department.",
-          "type": "text",
-          "id": 34,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "35",
-      "Que": [
+            "id": "34",
+            "Que": [
+                {
+                    "q": "Q34 : What is the use of @ManyToOne annotation?",
+                    "a": "@ManyToOne annotation defines a relationship where multiple entities are associated with a single parent entity. It is commonly used in relational database modeling to represent hierarchical relationships such as employees belonging to a department.",
+                    "type": "text",
+                    "id": 34,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "ManyToOne is the most frequently used relationship in JPA mappings."
+                }
+            ]
+        },
         {
-          "q": "Q35 : What is the use of @JoinColumn annotation?",
-          "a": "The @JoinColumn annotation is used to specify the foreign key column in relationship mappings. It defines how two tables are linked together in the database. This annotation is commonly used with @OneToOne, @OneToMany, and @ManyToOne relationships.",
-          "example": "Example: @JoinColumn(name = \"department_id\")",
-          "type": "text",
-          "id": 35,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "36",
-      "Que": [
+            "id": "35",
+            "Que": [
+                {
+                    "q": "Q35 : What is the use of @JoinColumn annotation?",
+                    "a": "@JoinColumn annotation is used to define the foreign key column in a relationship mapping. It specifies how two tables are connected in the database. It is typically used in @OneToOne, @OneToMany, and @ManyToOne relationships to establish proper table relationships.",
+                    "type": "text",
+                    "id": 35,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "@JoinColumn defines the foreign key column in relational mapping."
+                }
+            ]
+        },
         {
-          "q": "Q36 : What is lazy loading in Hibernate?",
-          "a": "Lazy loading is a feature where related entities are loaded from the database only when they are actually accessed. This improves application performance by avoiding unnecessary data fetching. Hibernate supports lazy loading by default for collections and relationships.",
-          "example": "Example: Loading order items only when the user opens order details.",
-          "type": "text",
-          "id": 36,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "37",
-      "Que": [
+            "id": "36",
+            "Que": [
+                {
+                    "q": "Q36 : What is lazy loading in Hibernate?",
+                    "a": "Lazy loading is a performance optimization technique where related entities are loaded only when they are accessed. Instead of fetching all related data immediately, Hibernate delays loading until it is required. This reduces unnecessary database queries and improves application performance.",
+                    "type": "text",
+                    "id": 36,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Lazy loading helps reduce memory usage and improves performance."
+                }
+            ]
+        },
         {
-          "q": "Q37 : What is eager loading in Hibernate?",
-          "a": "Eager loading means related entities are fetched immediately along with the parent entity, even if they are not required at that moment. While eager loading simplifies data access, it can sometimes reduce performance due to unnecessary database queries and memory usage.",
-          "example": "Example: Loading customer and all associated orders together during retrieval.",
-          "type": "text",
-          "id": 37,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "38",
-      "Que": [
+            "id": "37",
+            "Que": [
+                {
+                    "q": "Q37 : What is eager loading in Hibernate?",
+                    "a": "Eager loading fetches all related entities immediately along with the main entity. This ensures data is readily available but may lead to performance overhead due to unnecessary data retrieval. It is useful when related data is always required.",
+                    "type": "text",
+                    "id": 37,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Eager Loading Characteristics",
+                    "list": {
+                        "1": "Loads related data immediately",
+                        "2": "Increases memory usage",
+                        "3": "Can reduce performance",
+                        "4": "Useful when data is always needed"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q38 : What is JPQL in Spring JPA?",
-          "a": "JPQL, also known as Java Persistence Query Language, is an object-oriented query language used in JPA. Instead of working directly with database tables and columns, JPQL works with entity classes and their fields. It provides portability across different databases.",
-          "example": "Example: SELECT u FROM User u WHERE u.email = :email",
-          "type": "text",
-          "id": 38,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "39",
-      "Que": [
+            "id": "38",
+            "Que": [
+                {
+                    "q": "Q38 : What is JPQL in Spring JPA?",
+                    "a": "JPQL (Java Persistence Query Language) is an object-oriented query language used in JPA. It works with entity classes and their fields instead of database tables. JPQL is database-independent and allows writing portable queries across different database systems.",
+                    "type": "text",
+                    "id": 38,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "JPQL queries are written using entity names, not table names."
+                }
+            ]
+        },
         {
-          "q": "Q39 : What is the difference between JPQL and native SQL queries?",
-          "a": "JPQL works with entity objects and entity fields, while native SQL queries work directly with database tables and columns. JPQL is database-independent, whereas native SQL queries may vary depending on the database system being used. Native queries are generally preferred for complex database-specific operations.",
-          "example": "Example: JPQL uses entity names like User, while native SQL uses table names like users.",
-          "type": "text",
-          "id": 39,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "40",
-      "Que": [
+            "id": "39",
+            "Que": [
+                {
+                    "q": "Q39 : Difference between JPQL and native SQL queries?",
+                    "a": "JPQL is object-oriented and works with entity classes, while native SQL works directly with database tables. JPQL is database-independent, making it portable across systems. Native SQL is database-specific and is used when advanced or performance-critical queries are required.",
+                    "type": "text",
+                    "id": 39,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Comparison",
+                    "list": {
+                        "1": "JPQL → works with entities",
+                        "2": "SQL → works with tables",
+                        "3": "JPQL → database independent",
+                        "4": "SQL → database dependent"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q40 : What is the persistence context in JPA?",
-          "a": "Persistence context is a cache-like environment where JPA manages entity objects during a transaction. It keeps track of entity states and automatically synchronizes changes with the database. Persistence context improves performance and ensures consistency between Java objects and database records.",
-          "example": "Example: Updating an entity object automatically updates the database during transaction commit.",
-          "type": "text",
-          "id": 40,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-
-    {
-      "id": "41",
-      "Que": [
+            "id": "40",
+            "Que": [
+                {
+                    "q": "Q40 : What is the persistence context in JPA?",
+                    "a": "Persistence context is a first-level cache managed by JPA that tracks entity objects during a transaction. It ensures that any changes made to entities are automatically synchronized with the database. It improves performance by reducing repeated database calls and maintains consistency between Java objects and database state.",
+                    "type": "text",
+                    "id": 40,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Persistence context automatically tracks entity state changes within a transaction."
+                }
+            ]
+        },
         {
-          "q": "Q41 : What are the different entity states in JPA?",
-          "a": "In JPA, entity objects can exist in different states such as Transient, Persistent, Detached, and Removed. A transient entity is a normal Java object not connected to the database. A persistent entity is managed by the persistence context and synchronized with the database. A detached entity was previously persistent but is no longer managed. A removed entity is marked for deletion from the database.",
-          "example": "Example: A new User object becomes persistent after calling save() method.",
-          "type": "text",
-          "id": 41,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "42",
-      "Que": [
+            "id": "41",
+            "Que": [
+                {
+                    "q": "Q41 : What are the different entity states in JPA?",
+                    "a": "In JPA, entities pass through different lifecycle states: Transient, Persistent, Detached, and Removed. Transient objects are simple Java objects not associated with the persistence context. Persistent objects are managed by JPA and synchronized with the database. Detached objects were once persistent but are no longer tracked. Removed entities are marked for deletion from the database during transaction commit.",
+                    "type": "text",
+                    "id": 41,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Entity States",
+                    "list": {
+                        "1": "Transient → Not saved in DB",
+                        "2": "Persistent → Managed by JPA",
+                        "3": "Detached → No longer managed",
+                        "4": "Removed → Marked for deletion"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q42 : What is dirty checking in Hibernate?",
-          "a": "Dirty checking is a Hibernate feature that automatically detects changes made to persistent entity objects during a transaction. Hibernate compares the current entity state with its original state and updates the database automatically if changes are found. This reduces the need for explicit update queries.",
-          "example": "Example: Modifying an employee salary field automatically updates the database during transaction commit.",
-          "type": "text",
-          "id": 42,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "43",
-      "Que": [
+            "id": "42",
+            "Que": [
+                {
+                    "q": "Q42 : What is dirty checking in Hibernate?",
+                    "a": "Dirty checking is a Hibernate mechanism that automatically detects changes made to persistent entities within a transaction. Hibernate compares the original state of an entity with its current state and updates the database if changes are found. This removes the need for explicit update queries and simplifies data persistence logic.",
+                    "type": "text",
+                    "id": 42,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Dirty checking happens automatically during transaction commit in Hibernate."
+                }
+            ]
+        },
         {
-          "q": "Q43 : What is cascading in JPA?",
-          "a": "Cascading in JPA allows operations performed on a parent entity to automatically propagate to related child entities. Common cascade operations include PERSIST, MERGE, REMOVE, REFRESH, and ALL. Cascading simplifies entity management and ensures related data remains consistent.",
-          "example": "Example: Saving an Order entity automatically saves all related OrderItem entities.",
-          "type": "text",
-          "id": 43,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "44",
-      "Que": [
+            "id": "43",
+            "Que": [
+                {
+                    "q": "Q43 : What is cascading in JPA?",
+                    "a": "Cascading in JPA allows operations performed on a parent entity to automatically propagate to its associated child entities. This ensures consistency across related entities and reduces manual database operations. Common cascade types include PERSIST, MERGE, REMOVE, REFRESH, DETACH, and ALL.",
+                    "type": "text",
+                    "id": 43,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Cascade Types",
+                    "list": {
+                        "1": "PERSIST → Saves related entities",
+                        "2": "MERGE → Updates related entities",
+                        "3": "REMOVE → Deletes related entities",
+                        "4": "ALL → Applies all operations"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q44 : What is orphanRemoval in JPA?",
-          "a": "orphanRemoval is a JPA feature used to automatically delete child entities when they are removed from a parent entity relationship. It helps maintain database consistency and prevents unused records from remaining in the database.",
-          "example": "Example: Removing an order item from an order automatically deletes it from the database.",
-          "type": "text",
-          "id": 44,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "45",
-      "Que": [
+            "id": "44",
+            "Que": [
+                {
+                    "q": "Q44 : What is orphanRemoval in JPA?",
+                    "a": "orphanRemoval is a JPA feature that automatically deletes child entities when they are removed from their parent entity relationship. It helps maintain database integrity by preventing orphan records from remaining in the database when they are no longer associated with any parent.",
+                    "type": "text",
+                    "id": 44,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "orphanRemoval = true ensures child entities are deleted when removed from parent."
+                }
+            ]
+        },
         {
-          "q": "Q45 : What is optimistic locking in JPA?",
-          "a": "Optimistic locking is a concurrency control mechanism used to prevent data conflicts when multiple users update the same record simultaneously. JPA uses a version field with the @Version annotation to track entity updates. If another transaction modifies the same record, an exception is thrown to avoid overwriting data.",
-          "example": "Example: Preventing two users from updating the same product inventory record at the same time.",
-          "type": "text",
-          "id": 45,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "46",
-      "Que": [
+            "id": "45",
+            "Que": [
+                {
+                    "q": "Q45 : What is optimistic locking in JPA?",
+                    "a": "Optimistic locking is a concurrency control technique used to prevent conflicts when multiple transactions update the same record. It uses a version field annotated with @Version to track changes. If another transaction modifies the record, an exception is thrown to avoid overwriting data.",
+                    "type": "text",
+                    "id": 45,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Optimistic locking is best for systems with fewer write conflicts."
+                }
+            ]
+        },
         {
-          "q": "Q46 : What is pessimistic locking in JPA?",
-          "a": "Pessimistic locking locks database records immediately during a transaction to prevent other users from modifying them until the transaction completes. This approach provides strict consistency but can reduce performance if locks are held for a long time.",
-          "example": "Example: Locking a bank account record during money transfer operations.",
-          "type": "text",
-          "id": 46,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "47",
-      "Que": [
+            "id": "46",
+            "Que": [
+                {
+                    "q": "Q46 : What is pessimistic locking in JPA?",
+                    "a": "Pessimistic locking locks database records during a transaction to prevent other transactions from modifying them until the lock is released. This ensures strong consistency but may reduce performance due to blocked access in concurrent systems.",
+                    "type": "text",
+                    "id": 46,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Pessimistic locking is useful in high-conflict scenarios like banking systems."
+                }
+            ]
+        },
         {
-          "q": "Q47 : What is the N+1 query problem in Hibernate?",
-          "a": "The N+1 query problem occurs when Hibernate executes one query to fetch parent entities and then executes additional queries for each related child entity. This can cause performance issues due to excessive database queries. The problem can be solved using JOIN FETCH, EntityGraph, or batch fetching strategies.",
-          "example": "Example: Fetching all customers and then separately fetching orders for each customer.",
-          "type": "text",
-          "id": 47,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "48",
-      "Que": [
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : What is the N+1 query problem in Hibernate?",
+                    "a": "The N+1 query problem occurs when Hibernate executes one query to fetch parent entities and then executes additional queries for each associated child entity. This leads to performance degradation due to excessive database calls. It can be solved using JOIN FETCH, EntityGraph, or batch fetching strategies.",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Solutions",
+                    "list": {
+                        "1": "JOIN FETCH",
+                        "2": "EntityGraph",
+                        "3": "Batch fetching",
+                        "4": "DTO projection"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q48 : What is EntityManager in JPA?",
-          "a": "EntityManager is the main interface in JPA used for interacting with the persistence context. It manages entity lifecycle operations such as persist, merge, remove, find, and refresh. EntityManager acts as a bridge between Java objects and the database.",
-          "example": "Example: Using entityManager.persist(user) to save an entity into the database.",
-          "type": "text",
-          "id": 48,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "49",
-      "Que": [
+            "id": "48",
+            "Que": [
+                {
+                    "q": "Q48 : What is EntityManager in JPA?",
+                    "a": "EntityManager is the core interface in JPA used to interact with the persistence context. It manages entity lifecycle operations such as persist, merge, remove, find, and refresh. It acts as a bridge between Java objects and the database, enabling ORM functionality.",
+                    "type": "text",
+                    "id": 48,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "EntityManager Operations",
+                    "list": {
+                        "1": "persist → Insert entity",
+                        "2": "merge → Update entity",
+                        "3": "remove → Delete entity",
+                        "4": "find → Fetch entity"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q49 : What are the advantages of Spring Data JPA?",
-          "a": "Spring Data JPA reduces boilerplate code, simplifies database operations, and improves developer productivity. It provides automatic query generation, pagination, sorting, transaction management, auditing, and integration with Spring Boot. It also supports custom queries and ORM features through Hibernate.",
-          "example": "Example: Performing CRUD operations without writing SQL queries manually.",
-          "type": "text",
-          "id": 49,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "50",
-      "Que": [
+            "id": "49",
+            "Que": [
+                {
+                    "q": "Q49 : What are the advantages of Spring Data JPA?",
+                    "a": "Spring Data JPA simplifies database access by reducing boilerplate code and providing built-in repository support. It offers automatic query generation, pagination, sorting, transaction management, auditing, and seamless integration with Spring Boot. It improves productivity and makes applications easier to maintain and scale.",
+                    "type": "text",
+                    "id": 49,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Reduces boilerplate code",
+                        "2": "Built-in CRUD operations",
+                        "3": "Supports pagination and sorting",
+                        "4": "Easy Spring Boot integration"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q50 : Why is Spring Data JPA widely used in enterprise applications?",
-          "a": "Spring Data JPA is widely used because it simplifies database interaction, reduces development time, and integrates seamlessly with Spring Boot applications. It provides powerful ORM support, transaction management, scalability, and maintainable code structure. Enterprise applications prefer Spring Data JPA because it improves productivity while supporting complex database operations efficiently.",
-          "example": "Example: Building scalable enterprise-level banking or e-commerce applications using Spring Boot and Spring Data JPA.",
-          "type": "text",
-          "id": 50,
-          "playButton": true,
-          "pauseButton": false
+            "id": "50",
+            "Que": [
+                {
+                    "q": "Q50 : Why is Spring Data JPA widely used in enterprise applications?",
+                    "a": "Spring Data JPA is widely used in enterprise applications because it simplifies database interaction, supports scalable architecture, and integrates seamlessly with Spring Boot. It reduces development time, improves maintainability, and provides powerful ORM capabilities suitable for complex business systems like banking, e-commerce, and SaaS platforms.",
+                    "type": "text",
+                    "id": 50,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "It is preferred in enterprise systems due to scalability, productivity, and strong ORM support."
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
-  

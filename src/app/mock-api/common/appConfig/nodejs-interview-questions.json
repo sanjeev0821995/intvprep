@@ -257,6 +257,798 @@
                     }
                 }
             ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : What is the Event Loop in Node.js?",
+                    "a": "The Event Loop is the core mechanism in Node.js that allows it to perform non-blocking asynchronous operations using a single thread. It continuously monitors the call stack and callback queues and executes tasks in phases, enabling high scalability and performance.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Call Stack": "Executes synchronous code",
+                        "Callback Queue": "Stores async callbacks waiting for execution",
+                        "Microtask Queue": "Handles Promises and nextTick operations",
+                        "Event Loop": "Coordinates execution between stack and queues"
+                    }
+                }
+            ]
+        },
+
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : What are the phases of the Event Loop in Node.js?",
+                    "a": "The Event Loop consists of multiple phases that handle different types of asynchronous operations in a structured order.",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Phase" },
+                        { "label": "Description" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Timers" },
+                                {
+                                    "col": "Executes setTimeout and setInterval callbacks"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Pending Callbacks" },
+                                { "col": "Executes deferred I/O callbacks" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Poll" },
+                                { "col": "Retrieves new I/O events" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Check" },
+                                { "col": "Executes setImmediate callbacks" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Close Callbacks" },
+                                { "col": "Handles cleanup events" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : What is Libuv in Node.js?",
+                    "a": "Libuv is a C library that provides Node.js with its event loop, thread pool, and asynchronous I/O capabilities. It allows Node.js to perform non-blocking operations across different operating systems.",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : Difference between process.nextTick() and setImmediate()?",
+                    "a": "process.nextTick() executes callbacks immediately after the current operation completes, before the event loop continues. setImmediate() executes callbacks in the next event loop cycle.",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "process.nextTick()": "Executes before event loop continues",
+                        "setImmediate()": "Executes in next event loop phase",
+                        "Risk": "nextTick can block event loop if misused",
+                        "Use Case": "Immediate execution vs deferred execution"
+                    }
+                }
+            ]
+        },
+
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : What is the difference between microtasks and macrotasks?",
+                    "a": "Microtasks and macrotasks are two types of asynchronous task queues in Node.js. Microtasks are executed before macrotasks and have higher priority.",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Feature" },
+                        { "label": "Microtasks" },
+                        { "label": "Macrotasks" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Priority" },
+                                { "col": "High" },
+                                { "col": "Low" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Examples" },
+                                { "col": "Promises, nextTick" },
+                                { "col": "setTimeout, setInterval" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Execution Time" },
+                                { "col": "Before next event loop phase" },
+                                { "col": "In next event loop cycle" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : Difference between CommonJS and ES Modules?",
+                    "a": "CommonJS and ES Modules are two module systems in Node.js. CommonJS is older and synchronous, while ES Modules are modern, asynchronous, and standardized.",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Feature" },
+                        { "label": "CommonJS" },
+                        { "label": "ES Modules" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Syntax" },
+                                { "col": "require" },
+                                { "col": "import/export" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Loading" },
+                                { "col": "Synchronous" },
+                                { "col": "Asynchronous" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Performance" },
+                                { "col": "Slower" },
+                                { "col": "Optimized" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : What is module caching in Node.js?",
+                    "a": "Node.js caches modules after the first load. This improves performance because subsequent require calls return the cached version instead of reloading the module.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : Difference between require and import?",
+                    "a": "require is used in CommonJS and loads modules dynamically at runtime. import is used in ES Modules and supports static analysis and tree shaking.",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : What are streams in Node.js?",
+                    "a": "Streams are objects used to handle data in chunks instead of loading entire data into memory. This makes Node.js efficient for large file processing and real-time data handling.",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Efficiency": "Processes data in chunks",
+                        "Memory": "Low memory consumption",
+                        "Speed": "Faster processing of large data",
+                        "Use Case": "File handling, video streaming, APIs"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Readable stream example",
+                    "code": "\nconst fs = require('fs');\nconst stream = fs.createReadStream('file.txt');\nstream.on('data', chunk => {\n  console.log(chunk.toString());\n});"
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : What is Buffer in Node.js?",
+                    "a": "A Buffer in Node.js is a temporary memory storage used to handle binary data directly. It is mainly used when working with streams, files, or network protocols where data is received in raw binary format instead of strings.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Binary Data": "Handles raw binary data",
+                        "Performance": "Faster for I/O operations",
+                        "Use Case": "File reading, TCP streams, image processing"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : Difference between Buffer and Stream?",
+                    "a": "Buffer stores entire data in memory before processing, while streams process data in chunks, making streams more memory-efficient for large datasets.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Feature" },
+                        { "label": "Buffer" },
+                        { "label": "Stream" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Data Handling" },
+                                { "col": "Loads full data in memory" },
+                                { "col": "Processes data in chunks" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Memory Usage" },
+                                { "col": "High" },
+                                { "col": "Low" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Efficiency" },
+                                { "col": "Less efficient for large data" },
+                                { "col": "Highly efficient for large data" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : What is clustering in Node.js?",
+                    "a": "Clustering in Node.js is a technique that allows you to create multiple child processes (workers) to utilize multiple CPU cores efficiently, improving performance and scalability.",
+                    "type": "text",
+                    "id": 23,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "q": "Q24 : What is PM2 in Node.js?",
+                    "a": "PM2 is a production-grade process manager for Node.js applications. It helps in process management, load balancing, clustering, and automatic restart on failure.",
+                    "type": "text",
+                    "id": 24,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Process Management": "Manages Node.js processes",
+                        "Auto Restart": "Restarts app on crash",
+                        "Clustering": "Uses multiple CPU cores",
+                        "Monitoring": "Tracks performance and logs"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "q": "Q25 : What is a memory leak in Node.js?",
+                    "a": "A memory leak occurs when unused memory is not released properly, leading to increased memory usage over time and eventual performance degradation.",
+                    "type": "text",
+                    "id": 25,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "q": "Q26 : How do you debug Node.js applications?",
+                    "a": "Node.js debugging can be done using built-in inspector tools, console logs, and external tools like Chrome DevTools or VS Code debugger.",
+                    "type": "text",
+                    "id": 26,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Console Logging": "Simple debugging method",
+                        "Node Inspector": "Built-in debugging tool",
+                        "VS Code Debugger": "Advanced step-through debugging",
+                        "Chrome DevTools": "Remote debugging support"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "q": "Q27 : What is JWT in Node.js?",
+                    "a": "JWT (JSON Web Token) is a compact and secure method used to transmit information between client and server in Node.js applications. It is mainly used for authentication and authorization. A JWT contains three parts: header, payload, and signature. The payload stores user data, while the signature ensures data integrity. It is widely used in stateless authentication systems because it removes the need to store session data on the server.",
+                    "type": "text",
+                    "id": 27,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "q": "Q28 : What is bcrypt used for?",
+                    "a": "bcrypt is a password hashing library used in Node.js applications to securely store passwords. Instead of saving plain text passwords, bcrypt converts them into irreversible hashed values using a strong hashing algorithm. It also adds salt to protect against rainbow table attacks. During login, the entered password is hashed again and compared with the stored hash, making it highly secure for authentication systems.",
+                    "type": "text",
+                    "id": 28,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "q": "Q29 : What is CORS in Node.js?",
+                    "a": "CORS (Cross-Origin Resource Sharing) is a security mechanism that allows or restricts resources on a web server to be requested from another domain. In Node.js, it is commonly used in APIs to control which frontend applications can access backend services. Without CORS, browsers block cross-origin requests for security reasons. It is configured using middleware like the cors package in Express.js applications.",
+                    "type": "text",
+                    "id": 29,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "q": "Q30 : What is REST API?",
+                    "a": "REST API (Representational State Transfer API) is an architectural style used to build scalable web services that communicate over HTTP. It allows client-server interaction using standard HTTP methods. REST APIs are stateless, meaning each request contains all required information, and the server does not store client session data. It is widely used in Node.js backend development for building modern web and mobile applications.",
+                    "type": "text",
+                    "id": 30,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "HTTP Method" },
+                        { "label": "Operation" },
+                        { "label": "Use Case" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "GET" },
+                                { "col": "Read data" },
+                                { "col": "Fetch user details or list of items" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "POST" },
+                                { "col": "Create data" },
+                                { "col": "Add new user or resource" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "PUT" },
+                                { "col": "Update data (full)" },
+                                { "col": "Replace entire user record" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "PATCH" },
+                                { "col": "Partial update" },
+                                { "col": "Update specific fields like email" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "DELETE" },
+                                { "col": "Remove data" },
+                                { "col": "Delete user or resource" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "q": "Q31 : What is middleware in Express.js?",
+                    "a": "Middleware functions are functions that execute during the request-response cycle and can modify request and response objects.",
+                    "type": "text",
+                    "id": 31,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Request Handling": "Processes incoming requests",
+                        "Authentication": "Validates user identity",
+                        "Logging": "Tracks request data",
+                        "Error Handling": "Manages application errors"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "q": "Q32 : What is rate limiting?",
+                    "a": "Rate limiting is a technique used in backend systems to control the number of requests a client can make to a server within a specific time window. It is mainly used to prevent abuse, protect APIs from being overloaded, and ensure fair usage among all users. In Node.js applications, rate limiting is commonly implemented using middleware like express-rate-limit, which tracks user requests and blocks or delays excessive traffic. It is widely used in authentication systems and public APIs.",
+                    "type": "text",
+                    "id": 32,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "q": "Q33 : What is load balancing?",
+                    "a": "Load balancing is a technique used to distribute incoming network or application traffic across multiple servers to ensure no single server becomes overloaded. It improves system reliability, scalability, and performance by evenly distributing requests. In Node.js-based systems, load balancing is often achieved using tools like Nginx, HAProxy, or cloud-based solutions. It also ensures high availability by redirecting traffic to healthy servers in case one server fails.",
+                    "type": "text",
+                    "id": 33,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "q": "Q34 : What is the role of V8 engine?",
+                    "a": "The V8 engine is an open-source JavaScript engine developed by Google that compiles JavaScript code into optimized machine code for fast execution. In Node.js, V8 plays a critical role by executing JavaScript outside the browser environment. It converts JS into native machine instructions, making Node.js highly efficient. It also includes features like garbage collection and memory optimization, which help improve performance and scalability of backend applications.",
+                    "type": "text",
+                    "id": 34,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "q": "Q35 : What is non-blocking I/O?",
+                    "a": "Non-blocking I/O is a core feature of Node.js that allows the system to handle multiple operations simultaneously without waiting for any single operation to complete. Instead of blocking the execution thread, Node.js continues executing other tasks while I/O operations are processed in the background. Once the operation completes, a callback or promise is triggered. This model makes Node.js highly efficient for handling large-scale concurrent requests.",
+                    "type": "text",
+                    "id": 35,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "q": "Q36 : What is event-driven architecture?",
+                    "a": "Event-driven architecture is a software design pattern where the flow of the program is determined by events such as user actions, messages, or system triggers. In Node.js, this architecture is implemented using an event loop and event emitters. When an event occurs, a corresponding handler function is executed. This model allows asynchronous, scalable, and efficient handling of operations, making Node.js ideal for real-time applications.",
+                    "type": "text",
+                    "id": 36,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "q": "Q37 : What is package.json?",
+                    "a": "package.json is a configuration file in Node.js projects that contains metadata about the application, including dependencies, scripts, version, and project details. It acts as the central file for managing project configuration. It also defines npm scripts that automate tasks like starting the server, testing, or building the project. Without package.json, dependency management and project setup in Node.js would become difficult and unorganized.",
+                    "type": "text",
+                    "id": 37,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "q": "Q38 : What is dependency injection?",
+                    "a": "Dependency injection is a design pattern used in software development where dependencies are provided to a class or function from the outside rather than being created internally. This improves modularity, testability, and code reusability. In Node.js applications, dependency injection is often used in large-scale systems to manage services like databases, logging, or external APIs in a clean and maintainable way.",
+                    "type": "text",
+                    "id": 38,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "q": "Q39 : What is socket programming?",
+                    "a": "Socket programming is a method used for enabling communication between two devices over a network using sockets. In Node.js, it is commonly used for real-time applications like chat systems, gaming servers, and live updates. It allows bidirectional communication between client and server using TCP connections, enabling continuous data exchange without repeated HTTP requests.",
+                    "type": "text",
+                    "id": 39,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "q": "Q40 : What is WebSocket?",
+                    "a": "WebSocket is a communication protocol that provides full-duplex, real-time communication between client and server over a single persistent connection. Unlike HTTP, it allows continuous data exchange without repeatedly opening new connections. In Node.js, WebSockets are widely used in chat applications, live dashboards, and multiplayer games where real-time updates are required.",
+                    "type": "text",
+                    "id": 40,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "q": "Q41 : What is EventEmitter?",
+                    "a": "EventEmitter is a core module in Node.js used to handle custom events. It allows objects to emit events and listen for them using event listeners. This pattern is widely used in asynchronous programming where different parts of an application need to communicate with each other. It forms the backbone of Node.js's event-driven architecture and is heavily used in frameworks and libraries.",
+                    "type": "text",
+                    "id": 41,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "q": "Q42 : What are async hooks?",
+                    "a": "Async hooks in Node.js provide an API to track the lifecycle of asynchronous operations. They allow developers to monitor when asynchronous resources are created, executed, and destroyed. This is useful for debugging, logging, and performance monitoring in complex applications. However, they are advanced features and should be used carefully due to potential performance overhead.",
+                    "type": "text",
+                    "id": 42,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "q": "Q43 : What is garbage collection?",
+                    "a": "Garbage collection is an automatic memory management process used in Node.js (via V8 engine) to free up memory that is no longer in use. It helps prevent memory leaks and optimizes application performance. The garbage collector identifies unused objects and removes them from memory, ensuring efficient resource utilization in long-running applications.",
+                    "type": "text",
+                    "id": 43,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "q": "Q44 : What are worker threads?",
+                    "a": "Worker threads in Node.js allow the execution of CPU-intensive tasks in parallel threads without blocking the main event loop. This is useful for tasks like data processing, encryption, or image manipulation. By using worker threads, Node.js can achieve better performance in multi-core systems while maintaining its asynchronous nature.",
+                    "type": "text",
+                    "id": 44,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "q": "Q45 : What is scaling in Node.js?",
+                    "a": "Scaling in Node.js refers to improving application performance and capacity to handle increased load. It can be achieved by vertical scaling (adding more resources to a single machine) or horizontal scaling (adding more machines). Scaling ensures that applications remain fast, responsive, and reliable even under high traffic conditions.",
+                    "type": "text",
+                    "id": 45,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "q": "Q46 : What is horizontal scaling?",
+                    "a": "Horizontal scaling is the process of increasing application capacity by adding more servers or machines to distribute the load. In Node.js applications, this is commonly achieved using clustering or load balancers. It improves fault tolerance and ensures high availability by spreading traffic across multiple systems.",
+                    "type": "text",
+                    "id": 46,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : What is vertical scaling?",
+                    "a": "Vertical scaling refers to increasing the capacity of a single server by adding more CPU, RAM, or storage. Unlike horizontal scaling, it does not involve adding more machines. While it is easier to implement, it has hardware limitations and is less fault-tolerant compared to horizontal scaling.",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "q": "Q48 : What is an API gateway?",
+                    "a": "An API gateway is a server that acts as a single entry point for all client requests in a microservices architecture. It handles routing, authentication, rate limiting, and load balancing. In Node.js systems, API gateways help simplify communication between clients and multiple backend services.",
+                    "type": "text",
+                    "id": 48,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "q": "Q49 : What is Docker in Node.js?",
+                    "a": "Docker is a containerization platform used to package Node.js applications along with all dependencies into a portable container. This ensures consistent execution across different environments like development, testing, and production. It eliminates environment-related issues and simplifies deployment.",
+                    "type": "text",
+                    "id": 49,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "q": "Q50 : What are best practices for Node.js production apps?",
+                    "a": "Best practices for Node.js production applications include using environment variables for configuration, implementing proper error handling, using logging tools for monitoring, securing APIs, optimizing performance, and using process managers like PM2. These practices ensure scalability, maintainability, and stability of production systems.",
+                    "type": "text",
+                    "id": 50,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "q": "Q51 : What is microservices architecture in Node.js?",
+                    "a": "Microservices architecture is a design approach where an application is built as a collection of small, independent services that communicate over APIs.",
+                    "type": "text",
+                    "id": 51,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Independence": "Each service runs independently",
+                        "Scalability": "Services can scale separately",
+                        "Fault Isolation": "Failure in one service does not affect others",
+                        "Technology Flexibility": "Each service can use different technologies"
+                    }
+                }
+            ]
         }
     ]
 }

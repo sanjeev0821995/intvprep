@@ -4,12 +4,12 @@
             "id": "1",
             "Que": [
                 {
-                    "q": "Q1 : What is Spring Boot?",
-                    "a": "Spring Boot is a powerful framework built on top of the Spring Framework that simplifies the development, testing, and deployment of Java applications. It helps developers create production-ready applications quickly by reducing boilerplate configuration and setup work. One of the biggest advantages of Spring Boot is its auto-configuration capability, which automatically configures the application based on the dependencies available in the project. This removes the need for writing large XML configuration files or complex setup code manually. Spring Boot also provides embedded servers such as Tomcat, Jetty, and Undertow, allowing developers to run applications directly without deploying them separately on external servers. It includes several starter dependencies that bundle commonly used libraries together, making dependency management easier and faster. Spring Boot is highly suitable for building microservices and cloud-native applications because it supports rapid development, scalability, and easy deployment. Additionally, it integrates smoothly with other Spring projects like Spring Security, Spring Data JPA, and Spring Cloud. It also offers monitoring and management tools through Spring Boot Actuator, which provides health checks, metrics, and application insights. Overall, Spring Boot simplifies enterprise application development, improves productivity, and allows developers to focus more on business logic instead of configuration and infrastructure setup.",
-                    "type": "text",
-                    "id": 1,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q1 : What is Spring Boot?",
+                    "a": "Spring Boot is an open-source framework built on top of the Spring Framework that simplifies the development of Java applications. It reduces configuration complexity by providing auto-configuration, embedded servers, and starter dependencies. Developers can quickly create production-ready applications with minimal setup and boilerplate code. Spring Boot is widely used for building REST APIs, microservices, and enterprise applications because it improves development speed, simplifies deployment, and integrates seamlessly with the Spring ecosystem while following convention-over-configuration principles.",
+                    "type": "text",
+                    "id": 1
                 }
             ]
         },
@@ -17,12 +17,25 @@
             "id": "2",
             "Que": [
                 {
-                    "q": "Q2 : What are the Features of Spring Boot?",
-                    "a": "Spring Boot provides many powerful features that simplify Java application development and make it faster and more efficient. One of the main features is auto-configuration, which automatically configures application components based on the dependencies available in the classpath. This significantly reduces manual configuration and boilerplate code. Another important feature is embedded servers like Tomcat, Jetty, and Undertow, which allow applications to run independently without requiring separate web server installation. Spring Boot also offers starter dependencies, which are pre-configured dependency packages designed for specific functionalities such as web development, security, database access, and testing. These starter kits simplify dependency management and project setup. Spring Boot Actuator is another major feature that provides production-ready tools for monitoring and managing applications. It offers endpoints for health checks, metrics, application status, and performance monitoring. Additionally, Spring Boot supports externalized configuration using properties or YAML files, making environment-specific configurations easier to manage. It also provides strong support for microservices and cloud-native development through integration with Spring Cloud. Features like rapid application development, minimal XML configuration, developer-friendly tools, command-line interface support, and seamless integration with the Spring ecosystem make Spring Boot highly popular for enterprise application development. Overall, these features improve productivity, simplify deployment, and help developers build scalable and maintainable applications efficiently.",
-                    "type": "text",
-                    "id": 2,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q2 : What are the Features of Spring Boot?",
+                    "a": "Spring Boot provides several powerful features that simplify application development and deployment. It offers auto-configuration, starter dependencies, embedded servers, production-ready monitoring tools, and simplified configuration management. It supports rapid application development and integrates easily with databases, messaging systems, cloud platforms, and security frameworks. Spring Boot also provides actuator endpoints for monitoring application health and metrics. These features help developers focus on business logic rather than spending time configuring infrastructure and framework components manually.",
+                    "type": "text",
+                    "id": 2
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Major Features",
+                    "list": {
+                        "1": "Auto Configuration",
+                        "2": "Starter Dependencies",
+                        "3": "Embedded Servers",
+                        "4": "Actuator Monitoring",
+                        "5": "Externalized Configuration",
+                        "6": "Rapid Development Support"
+                    }
                 }
             ]
         },
@@ -30,12 +43,25 @@
             "id": "3",
             "Que": [
                 {
-                    "q": "Q3 : What are the advantages of using Spring Boot?",
-                    "a": "Spring Boot offers several advantages that make Java application development faster, easier, and more efficient. One major advantage is reduced configuration because Spring Boot automatically configures the application based on the dependencies available in the project. This eliminates the need for complex XML configuration and extensive setup code, allowing developers to focus more on business logic. Another important advantage is the availability of embedded servers like Tomcat and Jetty, which remove the need for separate server installation and make deployment much simpler. Spring Boot also provides starter dependencies that bundle commonly used libraries together, simplifying dependency management and reducing compatibility issues. It supports rapid application development by minimizing boilerplate code and providing ready-to-use configurations. Spring Boot integrates smoothly with other Spring modules such as Spring Security, Spring Data JPA, Spring MVC, and Spring Cloud, enabling developers to build secure and scalable enterprise applications easily. Additionally, it is highly suitable for developing microservices because it supports lightweight, standalone, and independently deployable applications. Spring Boot Actuator provides monitoring and management capabilities such as health checks, metrics, and performance tracking, which are extremely useful in production environments. The framework also supports externalized configuration, making it easier to manage different environments like development, testing, and production. Overall, Spring Boot increases developer productivity, reduces development time, simplifies deployment, and helps create scalable, maintainable, and production-ready applications efficiently.",
-                    "type": "text",
-                    "id": 3,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q3 : What are the advantages of using Spring Boot?",
+                    "a": "Spring Boot offers numerous advantages including reduced configuration effort, faster application development, and easier deployment. It eliminates the need for complex XML configurations and provides sensible defaults through auto-configuration. Embedded servers allow applications to run independently without external deployment. Spring Boot also supports microservices architecture, cloud-native development, monitoring, and testing. Its rich ecosystem and integration with other Spring projects make it an ideal choice for modern enterprise applications that require scalability, maintainability, and rapid development cycles.",
+                    "type": "text",
+                    "id": 3
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Less Configuration",
+                        "2": "Faster Development",
+                        "3": "Embedded Servers",
+                        "4": "Production Ready Features",
+                        "5": "Microservices Support",
+                        "6": "Easy Deployment"
+                    }
                 }
             ]
         },
@@ -43,12 +69,25 @@
             "id": "4",
             "Que": [
                 {
-                    "q": "Q4 : Define the Key Components of Spring Boot.",
-                    "a": "Spring Boot consists of several key components that simplify application development and improve productivity. One of the most important components is Spring Boot Starters. These are dependency descriptors that bundle commonly used libraries together for specific functionalities such as web development, database connectivity, security, and testing. They simplify dependency management and reduce configuration effort. Another major component is Spring Boot AutoConfiguration, which automatically configures the application based on the libraries and dependencies available in the project. This removes the need for extensive manual configuration and allows applications to start quickly with minimal setup. Spring Boot CLI, or Command Line Interface, is another useful component that helps developers quickly create, run, and test Spring Boot applications using simple commands. It reduces the need for complex project setup during development. Spring Boot Actuator is a production-ready component that provides monitoring and management features such as health checks, metrics, application information, logging, and performance monitoring. These features are extremely useful for maintaining and troubleshooting applications in production environments. Embedded servers such as Tomcat, Jetty, and Undertow are also important components because they allow applications to run independently without deploying them on external servers. Additionally, Spring Boot supports externalized configuration through properties and YAML files, enabling developers to manage configurations for different environments easily. Together, these components make Spring Boot a powerful and developer-friendly framework for building scalable, maintainable, and production-ready applications.",
-                    "type": "text",
-                    "id": 4,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q4 : Define the Key Components of Spring Boot.",
+                    "a": "Spring Boot consists of several key components that work together to simplify application development. Starter dependencies provide predefined dependency bundles, auto-configuration configures beans automatically, and embedded servers enable standalone deployment. Spring Boot Actuator offers monitoring and management capabilities, while Spring Initializr helps generate project structures. Configuration files such as application.properties or application.yml manage application settings. Together, these components reduce boilerplate code and accelerate the development of robust and production-ready Java applications.",
+                    "type": "text",
+                    "id": 4
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Key Components",
+                    "list": {
+                        "1": "Starter Dependencies",
+                        "2": "Auto Configuration",
+                        "3": "Embedded Servers",
+                        "4": "Spring Boot Actuator",
+                        "5": "Spring Initializr",
+                        "6": "Configuration Files"
+                    }
                 }
             ]
         },
@@ -56,12 +95,39 @@
             "id": "5",
             "Que": [
                 {
-                    "q": "Q5 : Why do we prefer Spring Boot over Spring?",
-                    "a": "Spring Boot is generally preferred over traditional Spring Framework because it simplifies application development and significantly reduces manual configuration work. In traditional Spring applications, developers often need to configure XML files, set up dependencies manually, and manage server configurations separately, which can be time-consuming and complex. Spring Boot solves these problems by providing auto-configuration capabilities that automatically configure the application based on the project dependencies and environment. Another major advantage is the availability of embedded servers like Tomcat and Jetty, which allow applications to run independently without requiring external deployment servers. Spring Boot also provides starter dependencies that bundle commonly used libraries together, simplifying dependency management and reducing compatibility issues. It helps developers create production-ready applications quickly by offering built-in features like health monitoring, metrics, logging, and application management through Spring Boot Actuator. Spring Boot is also highly suitable for building microservices because it supports lightweight and independently deployable applications. Additionally, it reduces boilerplate code, improves development speed, and enhances developer productivity. Spring Boot integrates seamlessly with other Spring projects such as Spring Security, Spring Data, and Spring Cloud, making enterprise application development more efficient. The framework also supports rapid testing, externalized configuration, and cloud-native application development. Overall, Spring Boot is preferred because it simplifies setup, speeds up development, reduces complexity, and provides powerful production-ready features that make application development easier and more efficient compared to traditional Spring.",
-                    "type": "text",
-                    "id": 5,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q5 : Why do we prefer Spring Boot over Spring?",
+                    "a": "Spring Boot is preferred over traditional Spring because it significantly reduces configuration effort and accelerates development. Traditional Spring applications require extensive XML or Java-based configuration, whereas Spring Boot provides auto-configuration and starter dependencies. It includes embedded servers that eliminate the need for external deployment containers. Spring Boot also offers built-in monitoring, easier testing, and simplified dependency management. These features allow developers to focus on implementing business logic instead of spending time on infrastructure and framework setup.",
+                    "type": "text",
+                    "id": 5
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Spring" },
+                        { "label": "Spring Boot" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Requires manual configuration" },
+                                { "col": "Provides auto-configuration" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Needs external server" },
+                                { "col": "Uses embedded server" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "More setup time" },
+                                { "col": "Rapid development" }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -69,12 +135,25 @@
             "id": "6",
             "Que": [
                 {
-                    "q": "Q6 : Explain the internal working of Spring Boot.",
-                    "a": "Spring Boot works internally by simplifying and automating the setup process of a Spring application. When a Spring Boot application starts, the main method usually calls SpringApplication.run(), which bootstraps the entire application. This method creates and initializes the Spring ApplicationContext, which is responsible for managing beans, dependencies, and configurations. One of the core features of Spring Boot is auto-configuration. Spring Boot checks the libraries and dependencies present in the classpath and automatically configures the required components. For example, if Spring MVC dependencies are detected, Spring Boot automatically configures a web application setup with an embedded server like Tomcat or Jetty. Spring Boot also uses starter dependencies, which are pre-configured packages that include all the required libraries for specific functionalities such as web development, security, database access, or testing. Internally, it uses annotations such as @EnableAutoConfiguration and several @Conditional annotations to decide which configurations should be loaded. Component scanning is another important process where Spring Boot scans packages to detect classes annotated with @Component, @Service, @Repository, and @Controller and registers them as Spring beans. Configuration settings can be customized using application.properties or application.yml files. Additionally, Spring Boot provides embedded servlet containers, allowing applications to run independently without external server installation. Spring Boot Actuator further enhances the application by providing monitoring and management endpoints. Altogether, Spring Boot automates configuration, manages dependencies, initializes the application context, and provides production-ready features, making application development faster, cleaner, and more efficient.",
-                    "type": "text",
-                    "id": 6,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q6 : Explain the internal working of Spring Boot.",
+                    "a": "Spring Boot starts by executing the main method that invokes SpringApplication.run(). It creates and initializes the Spring Application Context, scans components, loads configuration files, and applies auto-configuration based on available dependencies. Starter dependencies provide required libraries, while embedded servers such as Tomcat are automatically configured. Spring Boot also registers beans, applies dependency injection, and starts web services if required. This automated startup process allows applications to be configured and executed with minimal manual intervention from developers.",
+                    "type": "text",
+                    "id": 6
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Startup Flow",
+                    "list": {
+                        "1": "Main method executes",
+                        "2": "SpringApplication.run() starts",
+                        "3": "Application Context created",
+                        "4": "Beans scanned and registered",
+                        "5": "Auto Configuration applied",
+                        "6": "Embedded server starts"
+                    }
                 }
             ]
         },
@@ -82,12 +161,24 @@
             "id": "7",
             "Que": [
                 {
-                    "q": "Q7 : What are the Spring Boot Starter Dependencies?",
-                    "a": "Spring Boot Starter dependencies are pre-configured dependency packages that simplify project setup and dependency management in Spring Boot applications. Instead of manually adding multiple related libraries one by one, Spring Boot starters provide a single dependency that bundles all the required libraries and configurations for a specific functionality. These starter dependencies reduce boilerplate setup, avoid version conflicts, and make development faster and more efficient. For example, spring-boot-starter-web is used for building web and RESTful applications. It automatically includes dependencies such as Spring MVC, Jackson for JSON processing, validation libraries, and an embedded Tomcat server. Similarly, spring-boot-starter-data-jpa provides dependencies required for database operations using JPA and Hibernate. For security-related features, spring-boot-starter-security includes all the necessary libraries for authentication and authorization. Spring Boot also provides starters for testing, messaging, caching, batch processing, and microservices development. Another advantage of starter dependencies is compatibility management because Spring Boot ensures that all included libraries work properly together with supported versions. Developers only need to include the required starter in the pom.xml or build.gradle file, and Spring Boot automatically handles the rest. This significantly reduces configuration effort and development time. Starter dependencies also improve readability and maintainability of the project because dependencies are organized and standardized. Overall, Spring Boot Starter dependencies simplify project initialization, reduce manual dependency management, improve productivity, and help developers quickly build scalable and production-ready applications.",
-                    "type": "text",
-                    "id": 7,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q7 : What are the Spring Boot Starter Dependencies?",
+                    "a": "Spring Boot Starter Dependencies are predefined dependency packages that bundle commonly used libraries together. Instead of manually adding multiple dependencies, developers can include a single starter dependency to obtain all required components. Examples include spring-boot-starter-web for web applications, spring-boot-starter-data-jpa for database access, and spring-boot-starter-security for security features. Starter dependencies simplify dependency management, ensure compatibility between libraries, and reduce configuration complexity, making application development faster and more reliable.",
+                    "type": "text",
+                    "id": 7
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Popular Starters",
+                    "list": {
+                        "1": "spring-boot-starter-web",
+                        "2": "spring-boot-starter-data-jpa",
+                        "3": "spring-boot-starter-security",
+                        "4": "spring-boot-starter-test",
+                        "5": "spring-boot-starter-actuator"
+                    }
                 }
             ]
         },
@@ -95,12 +186,18 @@
             "id": "8",
             "Que": [
                 {
-                    "q": "Q8 : How does a Spring application get started?",
-                    "a": "A Spring application typically starts by initializing the Spring ApplicationContext, which is responsible for managing beans, dependencies, configurations, and the overall lifecycle of the application. In a Spring Boot application, the starting point is usually the main class that contains the main() method. Inside this method, the application is started using SpringApplication.run(). This method bootstraps the entire Spring application by creating the ApplicationContext, loading configurations, scanning components, and initializing beans. During startup, Spring Boot performs component scanning to detect classes annotated with annotations such as @Component, @Service, @Repository, and @Controller. These classes are registered as beans and managed by the Spring container. Spring Boot also triggers auto-configuration, which automatically configures application settings based on the dependencies available in the project. For example, if web-related dependencies are present, Spring Boot automatically configures a web server like Tomcat and sets up Spring MVC. Configuration files such as application.properties or application.yml are loaded during startup to apply custom application settings. If the application is a web application, the embedded servlet container is also started automatically. Spring Boot additionally sets up logging, exception handling, and other internal services during initialization. Once all beans and configurations are loaded successfully, the application becomes ready to accept requests or perform background tasks. This startup process simplifies application setup and allows developers to focus more on business logic instead of infrastructure configuration. Overall, Spring Boot automates initialization, dependency injection, configuration loading, and server startup, making application startup fast and efficient.",
-                    "type": "text",
-                    "id": 8,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q8 : How does a Spring application get started?",
+                    "a": "A Spring Boot application starts from the main class that contains the main() method. This method calls SpringApplication.run(), which bootstraps the application by creating the Spring Application Context. The framework scans packages for components, loads configurations, performs dependency injection, applies auto-configuration, and initializes required beans. If the application is a web application, an embedded servlet container such as Tomcat is started automatically. Once initialization completes, the application becomes ready to process incoming requests.",
+                    "type": "text",
+                    "id": 8
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Basic Spring Boot startup class.",
+                    "code": "\n@SpringBootApplication\npublic class DemoApplication {\n public static void main(String[] args) {\n SpringApplication.run(DemoApplication.class, args);\n }\n}"
                 }
             ]
         },
@@ -108,12 +205,22 @@
             "id": "9",
             "Que": [
                 {
-                    "q": "Q9 : What does the @SpringBootApplication annotation do internally?",
-                    "a": "The @SpringBootApplication annotation is one of the most important annotations in Spring Boot because it combines multiple core annotations into a single convenient annotation. Internally, it combines @Configuration, @EnableAutoConfiguration, and @ComponentScan. The @Configuration annotation tells Spring that the class contains bean definitions and configuration settings that should be managed by the Spring container. The @EnableAutoConfiguration annotation enables Spring Boot’s powerful auto-configuration mechanism. This feature automatically configures the application based on the dependencies available in the project’s classpath. For example, if Spring MVC dependencies are detected, Spring Boot automatically configures a web application setup with an embedded server like Tomcat. It uses various @Conditional annotations internally to determine which configurations should be applied. The @ComponentScan annotation tells Spring to scan the current package and its sub-packages for Spring components such as @Component, @Service, @Repository, and @Controller so they can be automatically registered as beans in the ApplicationContext. When the application starts, Spring Boot processes these combined annotations to initialize the application context, configure beans, load dependencies, and prepare the application environment. The @SpringBootApplication annotation greatly simplifies configuration because developers no longer need to write separate configuration annotations manually. It reduces boilerplate code and makes the application setup process cleaner and faster. Overall, this annotation acts as the central entry point of a Spring Boot application and enables automatic configuration, component scanning, and bean management in a highly efficient way.",
-                    "type": "text",
-                    "id": 9,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q9 : What does the @SpringBootApplication annotation do internally?",
+                    "a": "The @SpringBootApplication annotation is a convenience annotation that combines three important annotations: @Configuration, @EnableAutoConfiguration, and @ComponentScan. It marks the class as a configuration source, enables automatic bean configuration based on dependencies, and scans packages for Spring-managed components. This single annotation significantly simplifies application setup by replacing multiple configuration annotations. It serves as the primary entry point for Spring Boot applications and enables most of Spring Boot's automatic features.",
+                    "type": "text",
+                    "id": 9
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Includes",
+                    "list": {
+                        "1": "@Configuration",
+                        "2": "@EnableAutoConfiguration",
+                        "3": "@ComponentScan"
+                    }
                 }
             ]
         },
@@ -121,12 +228,24 @@
             "id": "10",
             "Que": [
                 {
-                    "q": "Q10 : What is Spring Initializr?",
-                    "a": "Spring Initializr is a web-based tool that helps developers quickly create and configure Spring Boot projects with minimal effort. It provides a simple and user-friendly interface where developers can choose project settings such as project type, programming language, Spring Boot version, packaging type, Java version, and required dependencies. Once the desired options are selected, Spring Initializr automatically generates a ready-to-use Spring Boot project structure that can be downloaded and imported into development environments like IntelliJ IDEA, Eclipse, or VS Code. One of the biggest advantages of Spring Initializr is that it saves time by automatically configuring the project setup and managing dependencies. Developers do not need to manually create project structures or configure build files from scratch. For example, if someone wants to build a web application with database connectivity and security, they can simply select dependencies such as Spring Web, Spring Data JPA, and Spring Security, and Spring Initializr will generate the project with all required configurations and compatible library versions. It supports build tools like Maven and Gradle and automatically generates configuration files such as pom.xml or build.gradle. Spring Initializr also follows best practices and standard project structures recommended for Spring Boot applications. This makes it especially useful for beginners as well as experienced developers who want to quickly start new projects. Overall, Spring Initializr simplifies project creation, reduces setup time, ensures dependency compatibility, and provides a clean starting point for building scalable and production-ready Spring Boot applications.",
-                    "type": "text",
-                    "id": 10,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q10 : What is Spring Initializr?",
+                    "a": "Spring Initializr is a web-based tool that helps developers quickly create Spring Boot projects with predefined configurations and dependencies. Users can select the project type, build tool, Java version, Spring Boot version, and required dependencies through a graphical interface. Spring Initializr then generates a ready-to-use project structure that can be imported into IDEs such as IntelliJ IDEA, Eclipse, or VS Code. It significantly reduces project setup time and helps developers start building applications immediately.",
+                    "type": "text",
+                    "id": 10
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Capabilities",
+                    "list": {
+                        "1": "Generate Project Structure",
+                        "2": "Select Dependencies",
+                        "3": "Choose Build Tool",
+                        "4": "Download Ready Project",
+                        "5": "Reduce Setup Time"
+                    }
                 }
             ]
         },
@@ -134,12 +253,23 @@
             "id": "11",
             "Que": [
                 {
-                    "q": "Q11 : What is a Spring Bean?",
-                    "a": "A Spring Bean is an object that is created, configured, managed, and maintained by the Spring Framework. Beans are the core building blocks of a Spring application because almost every component in a Spring project is managed as a bean inside the Spring IoC (Inversion of Control) container. Instead of developers manually creating objects using the new keyword, Spring automatically handles object creation, dependency injection, lifecycle management, and configuration. Beans can be defined using annotations such as @Component, @Service, @Repository, and @Controller, or through XML configuration files and Java configuration classes. When the application starts, Spring scans the application packages, identifies these annotations, and registers the corresponding classes as beans inside the ApplicationContext. One of the major advantages of Spring Beans is dependency injection. Spring automatically injects required dependencies into beans using annotations like @Autowired, reducing tight coupling between classes and making the application more modular and maintainable. Spring also manages the complete lifecycle of a bean, including initialization and destruction. Developers can customize bean behavior using scopes such as singleton, prototype, request, and session scope. By default, Spring creates singleton beans, meaning only one instance of the bean exists throughout the application lifecycle. Spring Beans improve code organization, reusability, and testability because objects are centrally managed by the framework. Overall, Spring Beans form the foundation of the Spring Framework by enabling dependency management, loose coupling, lifecycle control, and efficient application architecture.",
-                    "type": "text",
-                    "id": 11,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q11 : What is a Spring Bean?",
+                    "a": "A Spring Bean is an object that is created, managed, and maintained by the Spring IoC container. Instead of developers manually creating objects, Spring handles their lifecycle, dependency injection, configuration, and destruction. Beans are typically defined using annotations such as @Component, @Service, @Repository, and @Controller, or through Java/XML configuration. Spring Beans help achieve loose coupling, better maintainability, and easier testing by allowing dependencies to be injected automatically into application components.",
+                    "type": "text",
+                    "id": 11
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Common Bean Annotations",
+                    "list": {
+                        "1": "@Component",
+                        "2": "@Service",
+                        "3": "@Repository",
+                        "4": "@Controller"
+                    }
                 }
             ]
         },
@@ -147,12 +277,18 @@
             "id": "12",
             "Que": [
                 {
-                    "q": "Q12 : What is Auto-wiring?",
-                    "a": "Auto-wiring in Spring is a feature that automatically injects dependencies into beans without requiring manual configuration. It is part of Spring’s Dependency Injection mechanism, which helps reduce boilerplate code and simplifies application development. Instead of manually creating and connecting objects, Spring automatically finds the required dependencies and injects them into the appropriate beans. Auto-wiring is commonly done using the @Autowired annotation. When Spring encounters this annotation, it searches the ApplicationContext for a matching bean and injects it automatically. Spring can perform auto-wiring by type, by name, or through constructors depending on the configuration and available beans. Constructor-based auto-wiring is generally preferred because it ensures mandatory dependencies are initialized during object creation and improves immutability and testability. Spring can also use setter injection and field injection, although constructor injection is considered a best practice. If multiple beans of the same type exist, Spring may throw an ambiguity error. In such cases, annotations like @Qualifier or @Primary are used to specify which bean should be injected. Auto-wiring significantly improves code maintainability because developers do not need to manually configure dependencies in XML files or Java configuration classes. It also promotes loose coupling between classes, making the application more modular and easier to test. Spring internally manages the dependency resolution process through the IoC container. Overall, auto-wiring simplifies object dependency management, reduces configuration complexity, improves readability, and speeds up development in Spring and Spring Boot applications.",
-                    "type": "text",
-                    "id": 12,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q12 : What is Auto-wiring?",
+                    "a": "Autowiring is a feature in Spring that automatically injects required dependencies into a bean without explicitly creating or passing objects. It reduces boilerplate code and simplifies dependency management. Spring resolves dependencies by type, name, or qualifier and injects the appropriate bean at runtime. The most common way to perform autowiring is through constructor injection, which improves immutability and testability. Autowiring helps build loosely coupled applications and allows developers to focus more on business logic rather than object creation.",
+                    "type": "text",
+                    "id": 12
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Constructor-based autowiring",
+                    "code": "\n@Service\npublic class UserService {\n   private final UserRepository repo;\n\n   public UserService(UserRepository repo){\n      this.repo = repo;\n   }\n}"
                 }
             ]
         },
@@ -160,12 +296,18 @@
             "id": "13",
             "Que": [
                 {
-                    "q": "Q13 : What is ApplicationRunner in Spring Boot?",
-                    "a": "ApplicationRunner in Spring Boot is an interface used to execute custom code immediately after the Spring Boot application has started successfully. It is commonly used for startup tasks such as initializing data, loading configuration files, performing validation checks, or setting up resources required by the application. To use ApplicationRunner, developers create a class that implements the ApplicationRunner interface and override its run() method. Spring Boot automatically detects and executes this method once the application context is fully initialized. One important feature of ApplicationRunner is that it provides access to application arguments through the ApplicationArguments object. This object offers more flexible and structured argument handling compared to simple string arrays. Developers can easily retrieve option names, non-option arguments, and parameter values from command-line inputs. ApplicationRunner beans are managed by the Spring container, so they can also use dependency injection to access services, repositories, or other components. Multiple ApplicationRunner implementations can exist in the same application, and their execution order can be controlled using the @Order annotation or the Ordered interface. ApplicationRunner is especially useful in enterprise applications where certain setup tasks must execute automatically during startup. For example, it can preload database records, establish external service connections, or perform cache initialization before the application begins serving requests. Since the code runs only after the application is fully ready, it ensures all beans and configurations are properly initialized. Overall, ApplicationRunner provides a clean and efficient way to execute startup logic and automate initialization tasks in Spring Boot applications.",
-                    "type": "text",
-                    "id": 13,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q13 : What is ApplicationRunner in Spring Boot?",
+                    "a": "ApplicationRunner is an interface provided by Spring Boot that allows developers to execute code immediately after the application context is loaded and the application has started successfully. It is commonly used for initialization tasks such as loading default data, validating configurations, or running startup logic. The run() method receives ApplicationArguments, making it easier to access command-line arguments in a structured way. ApplicationRunner executes before the application begins processing regular requests.",
+                    "type": "text",
+                    "id": 13
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "ApplicationRunner example",
+                    "code": "\n@Component\npublic class StartupRunner implements ApplicationRunner {\n   public void run(ApplicationArguments args) {\n      System.out.println(\"Application Started\");\n   }\n}"
                 }
             ]
         },
@@ -173,12 +315,18 @@
             "id": "14",
             "Que": [
                 {
-                    "q": "Q14 : What is CommandLineRunner in Spring Boot?",
-                    "a": "CommandLineRunner in Spring Boot is an interface that allows developers to execute custom code immediately after the application starts. It is commonly used for startup operations such as loading initial data, performing configuration checks, running background tasks, or initializing resources. To use CommandLineRunner, a class must implement the CommandLineRunner interface and override the run() method. Spring Boot automatically executes this method after the application context has been fully initialized and all beans are loaded. The run() method in CommandLineRunner receives command-line arguments as a String array, allowing developers to process startup parameters if needed. CommandLineRunner is very similar to ApplicationRunner, but the main difference lies in how arguments are handled. While CommandLineRunner uses a simple String array, ApplicationRunner uses the more advanced ApplicationArguments object, which provides additional methods for structured argument processing. Since CommandLineRunner classes are managed by the Spring container, they can use dependency injection to access services, repositories, or other Spring beans. Multiple CommandLineRunner implementations can also exist within the same application, and their execution order can be controlled using the @Order annotation or the Ordered interface. CommandLineRunner is particularly useful in enterprise applications for tasks such as database initialization, cache setup, file processing, or sending startup notifications. It helps automate important startup activities without requiring manual intervention. Because the logic executes only after the application is fully ready, developers can safely access all configured beans and resources. Overall, CommandLineRunner provides a simple and effective mechanism for running custom startup logic in Spring Boot applications.",
-                    "type": "text",
-                    "id": 14,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q14 : What is CommandLineRunner in Spring Boot?",
+                    "a": "CommandLineRunner is an interface used to execute code after the Spring Boot application starts successfully. It is often used for initialization tasks, data seeding, startup validation, or background setup operations. Unlike ApplicationRunner, it receives command-line arguments as a simple String array. Multiple CommandLineRunner implementations can exist in the same application and their execution order can be controlled using the @Order annotation. It is commonly used when startup logic needs to run automatically during application initialization.",
+                    "type": "text",
+                    "id": 14
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "CommandLineRunner example",
+                    "code": "\n@Component\npublic class StartupRunner implements CommandLineRunner {\n   public void run(String... args) {\n      System.out.println(\"Application Started\");\n   }\n}"
                 }
             ]
         },
@@ -186,12 +334,23 @@
             "id": "15",
             "Que": [
                 {
-                    "q": "Q15 : What is Spring Boot CLI and the most used CLI commands?",
-                    "a": "Spring Boot CLI, or Command Line Interface, is a tool provided by Spring Boot that helps developers quickly create, run, and test Spring applications using simple commands. It reduces the need for extensive configuration and boilerplate code, making development faster and easier. Spring Boot CLI allows developers to write applications using Groovy scripts or standard Java code and execute them directly from the command line without setting up a full project structure manually. Internally, it automatically manages dependencies and configurations, helping developers focus more on application logic rather than setup. One of the most commonly used commands is spring init, which is used to create a new Spring Boot project with selected dependencies and configurations. This command works similarly to Spring Initializr and helps generate a ready-to-use project structure. Another important command is spring run, which is used to run Spring Boot applications or Groovy scripts directly from the command line. The spring test command allows developers to execute application tests quickly. The spring install command is used to install additional libraries or dependencies into the local Spring Boot CLI environment. Developers can also use commands like spring help to view available commands and usage information. Spring Boot CLI is especially useful for rapid prototyping, learning Spring Boot concepts, and quickly testing small applications. Although modern IDEs and build tools are more commonly used in large projects, Spring Boot CLI remains a valuable tool for simplifying development and improving productivity. Overall, it provides a lightweight and efficient way to create and manage Spring Boot applications from the command line.",
-                    "type": "text",
-                    "id": 15,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q15 : What is Spring Boot CLI and the most used CLI commands?",
+                    "a": "Spring Boot CLI is a command-line tool that allows developers to create, run, and test Spring Boot applications quickly without setting up a complete project structure manually. It uses Groovy scripts and automatically resolves dependencies. The CLI is useful for rapid prototyping, learning Spring Boot, and creating simple applications. It reduces configuration effort and provides commands for running applications, checking versions, and managing projects. Although less common in production environments, it is valuable for development and experimentation.",
+                    "type": "text",
+                    "id": 15
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Common CLI Commands",
+                    "list": {
+                        "spring run app.groovy": "Run application",
+                        "spring version": "Display version",
+                        "spring help": "Show available commands",
+                        "spring init": "Generate project structure"
+                    }
                 }
             ]
         },
@@ -199,12 +358,16 @@
             "id": "16",
             "Que": [
                 {
-                    "q": "Q16 : What is Spring Boot dependency management?",
-                    "a": "Spring Boot dependency management is a feature that simplifies the process of handling project dependencies and library versions in a Spring Boot application. In traditional Java projects, developers often need to manually add dependencies and ensure that all library versions are compatible with each other. This can become complex and lead to issues such as version conflicts or missing libraries. Spring Boot solves this problem by providing built-in dependency management through tools like Maven and Gradle. It uses a parent project called spring-boot-starter-parent in Maven or dependency management plugins in Gradle to automatically manage compatible versions of libraries. Spring Boot Starter dependencies further simplify this process by grouping commonly used libraries together for specific functionalities such as web development, security, database access, testing, and messaging. For example, when developers include spring-boot-starter-web, Spring Boot automatically adds all required web-related dependencies with compatible versions. This removes the need to manually specify each library version. Spring Boot internally maintains a dependency management table that ensures all included libraries work properly together. If there are conflicting versions of dependencies, Spring Boot resolves them using predefined compatibility rules. Dependency management also makes project upgrades easier because developers can update the Spring Boot version, and the related dependency versions are updated automatically. This approach reduces configuration complexity, prevents compatibility issues, saves development time, and improves application stability. Overall, Spring Boot dependency management provides a clean, reliable, and efficient way to manage libraries and dependencies in enterprise Java applications.",
-                    "type": "text",
-                    "id": 16,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q16 : What is Spring Boot dependency management?",
+                    "a": "Spring Boot dependency management is a mechanism that automatically manages compatible versions of libraries and frameworks used in a project. Through the Spring Boot parent POM and starter dependencies, developers do not need to specify versions for most commonly used libraries. Spring Boot ensures that all dependencies work together correctly, reducing version conflicts and simplifying project maintenance. This approach saves development time, improves stability, and allows developers to focus on application development instead of dependency compatibility issues.",
+                    "type": "text",
+                    "id": 16
+                },
+                {
+                    "type": "note",
+                    "note": "Spring Boot manages dependency versions through spring-boot-dependencies BOM (Bill of Materials)."
                 }
             ]
         },
@@ -212,12 +375,18 @@
             "id": "17",
             "Que": [
                 {
-                    "q": "Q17 : Is it possible to change the port of the embedded Tomcat server in Spring Boot?",
-                    "a": "Yes, it is possible to change the default port of the embedded Tomcat server in a Spring Boot application. By default, Spring Boot applications run on port 8080, but developers can easily configure a different port based on project requirements or environment constraints. The simplest and most common way to change the port is by using the server.port property in the application.properties or application.yml configuration file. For example, adding server.port=9090 in application.properties changes the application port from 8080 to 9090. In YAML format, it can be configured under the server section. Spring Boot automatically reads these configuration files during application startup and applies the specified port settings to the embedded server. Another way to change the port is through command-line arguments when starting the application, such as java -jar app.jar --server.port=9090. Environment variables can also be used, which is especially useful in cloud deployments and containerized environments like Docker or Kubernetes. Additionally, developers can configure the port programmatically using embedded server customization classes if advanced server configuration is required. Changing the server port is useful when multiple applications are running on the same machine or when certain ports are restricted in specific environments. Spring Boot’s flexible configuration system makes port customization very easy without requiring changes in the application code. Overall, Spring Boot provides multiple convenient methods for configuring and changing the embedded Tomcat server port according to deployment and development requirements.",
-                    "type": "text",
-                    "id": 17,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q17 : Is it possible to change the port of the embedded Tomcat server in Spring Boot?",
+                    "a": "Yes, Spring Boot allows developers to change the default embedded Tomcat server port easily. The server port can be configured through application.properties, application.yml, environment variables, or command-line arguments. This flexibility helps when multiple applications need to run on the same machine or when deployment environments require custom ports. Spring Boot automatically starts the embedded server using the configured port during application startup. Changing the port requires no additional server configuration, making deployment and development more convenient.",
+                    "type": "text",
+                    "id": 17
+                },
+                {
+                    "type": "code",
+                    "lang": "properties",
+                    "simple_text": "Change Tomcat port",
+                    "code": "\nserver.port=9090"
                 }
             ]
         },
@@ -225,12 +394,16 @@
             "id": "18",
             "Que": [
                 {
-                    "q": "Q18 : What happens if a starter dependency includes conflicting versions of libraries with other dependencies in the project?",
-                    "a": "If a Spring Boot starter dependency includes conflicting versions of libraries with other dependencies in the project, Spring Boot’s dependency management mechanism helps resolve the conflict automatically. In Java projects, dependency conflicts happen when multiple libraries require different versions of the same dependency. Such conflicts can lead to runtime issues, unexpected behavior, or application failures if not managed properly. Spring Boot addresses this problem using Maven or Gradle dependency resolution strategies along with its built-in dependency management system. Spring Boot maintains a curated list of compatible library versions through its dependency management configuration. When developers include starter dependencies such as spring-boot-starter-web or spring-boot-starter-data-jpa, Spring Boot automatically selects library versions that are tested and known to work together. If another dependency introduces a conflicting version of the same library, Maven or Gradle resolves the conflict based on predefined rules, usually choosing the nearest dependency or the version managed by Spring Boot’s parent configuration. Developers can inspect dependency trees using commands like mvn dependency:tree or gradle dependencies to identify conflicts. If necessary, they can manually exclude unwanted dependencies or explicitly specify the required version in the build configuration. Spring Boot’s dependency management significantly reduces compatibility issues and simplifies library maintenance because developers do not need to manually handle every dependency version. This improves application stability, reduces runtime errors, and ensures smooth integration between libraries. Overall, Spring Boot provides a reliable and efficient system for resolving dependency conflicts and maintaining compatibility across the application ecosystem.",
-                    "type": "text",
-                    "id": 18,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q18 : What happens if a starter dependency includes conflicting versions of libraries with other dependencies in the project?",
+                    "a": "When conflicting library versions exist, Spring Boot's dependency management mechanism attempts to resolve the conflict by selecting the version defined in its managed dependency set. This ensures compatibility across commonly used libraries. However, if developers explicitly specify another version, Maven or Gradle dependency resolution rules may override Spring Boot's choice. Dependency conflicts can lead to runtime errors, class loading issues, or unexpected behavior. Tools such as Maven Dependency Tree and Gradle Dependency Insight help identify and resolve version conflicts effectively.",
+                    "type": "text",
+                    "id": 18
+                },
+                {
+                    "type": "note",
+                    "note": "Use Maven dependency:tree or Gradle dependencies command to identify version conflicts."
                 }
             ]
         },
@@ -238,12 +411,12 @@
             "id": "19",
             "Que": [
                 {
-                    "q": "Q19 : What is the default port of Tomcat in Spring Boot?",
-                    "a": "The default port of the embedded Tomcat server in a Spring Boot application is 8080. This means that when a Spring Boot web application starts, it automatically listens for incoming HTTP requests on port 8080 unless the port is explicitly changed through configuration. Spring Boot includes an embedded Tomcat server by default when the spring-boot-starter-web dependency is added to the project. This embedded server eliminates the need for developers to install and configure an external web server separately, making application deployment simpler and faster. When the application starts successfully, developers can access it through a browser or API client using a URL such as http://localhost:8080. The choice of port 8080 is common because it avoids conflicts with the standard HTTP port 80, which often requires administrative privileges on many operating systems. However, in real-world projects, developers frequently customize the port number to match deployment requirements, avoid conflicts with other applications, or comply with organizational standards. Spring Boot makes this customization easy through configuration files like application.properties or application.yml by setting the server.port property. Developers can also configure the port using environment variables, command-line arguments, or programmatic configuration. In cloud and containerized environments, dynamic port assignment is also common. Despite these customization options, 8080 remains the default embedded Tomcat port in Spring Boot applications. Overall, the embedded Tomcat server and its default port configuration help simplify web application development and deployment in the Spring Boot ecosystem.",
-                    "type": "text",
-                    "id": 19,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q19 : What is the default port of Tomcat in Spring Boot?",
+                    "a": "The default port used by the embedded Apache Tomcat server in Spring Boot is 8080. When a Spring Boot web application starts, it automatically launches Tomcat and listens for incoming HTTP requests on port 8080 unless another port is configured. This default setting allows developers to run applications immediately without additional server setup. If port 8080 is already occupied, the application will fail to start unless a different port is specified through configuration properties or environment settings.",
+                    "type": "text",
+                    "id": 19
                 }
             ]
         },
@@ -251,12 +424,18 @@
             "id": "20",
             "Que": [
                 {
-                    "q": "Q20 : Can we disable the default web server in a Spring Boot application?",
-                    "a": "Yes, it is possible to disable the default embedded web server in a Spring Boot application. By default, when developers include dependencies like spring-boot-starter-web, Spring Boot automatically configures and starts an embedded web server such as Tomcat, Jetty, or Undertow. However, there are situations where a web server is not needed, such as batch processing applications, messaging systems, scheduled tasks, command-line utilities, or backend services without HTTP endpoints. In such cases, the embedded server can be disabled to reduce resource usage and simplify application behavior. One common way to disable the web server is by setting the property spring.main.web-application-type=none in the application.properties or application.yml file. This tells Spring Boot not to initialize any web-related infrastructure or start an embedded servlet container during application startup. Another approach is to exclude web-related starter dependencies like spring-boot-starter-web from the project if web functionality is not required at all. Developers can also programmatically configure the application type using SpringApplication.setWebApplicationType(WebApplicationType.NONE). Disabling the web server allows the application to run as a standalone non-web application while still benefiting from Spring Boot features such as dependency injection, configuration management, scheduling, and data processing. This approach is commonly used in enterprise systems for background jobs, data migration tools, event-driven applications, and microservices that communicate through messaging platforms instead of HTTP requests. Overall, Spring Boot provides flexible options to disable the default web server and build lightweight non-web applications efficiently.",
-                    "type": "text",
-                    "id": 20,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q20 : Can we disable the default web server in a Spring Boot application?",
+                    "a": "Yes, Spring Boot allows developers to disable the embedded web server when building non-web applications such as batch jobs, command-line tools, or background processing services. This can be achieved by setting the application type to NONE or excluding web-related auto-configurations. Disabling the server reduces resource usage and startup overhead because no servlet container is initialized. It is useful when an application does not expose HTTP endpoints and only performs internal processing tasks.",
+                    "type": "text",
+                    "id": 20
+                },
+                {
+                    "type": "code",
+                    "lang": "properties",
+                    "simple_text": "Disable web server",
+                    "code": "\nspring.main.web-application-type=none"
                 }
             ]
         },
@@ -264,12 +443,18 @@
             "id": "21",
             "Que": [
                 {
-                    "q": "Q21 : How to disable a specific auto-configuration class?",
-                    "a": "We can disable specific auto-configuration classes in Spring Boot by using the exclude attribute of the @EnableAutoConfiguration annotation or by setting the spring.autoconfigure.exclude property in the application.properties or application.yml file. This feature is useful when we want more control over how our application behaves and do not want Spring Boot to automatically configure certain components. For example, if our project includes a database dependency but we do not want Spring Boot to automatically configure a DataSource, we can exclude DataSourceAutoConfiguration. This helps avoid unnecessary configurations and startup errors. By disabling unwanted auto-configurations, we can customize the application according to specific project requirements, improve startup performance, and maintain better control over the application's behavior.",
-                    "type": "text",
-                    "id": 21,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q21 : How to disable a specific auto-configuration class?",
+                    "a": "Spring Boot allows developers to disable specific auto-configuration classes when the default configuration is not required. This can be useful when an application needs custom configurations or when certain auto-configured components cause conflicts. Auto-configuration can be disabled using the exclude attribute of @SpringBootApplication or @EnableAutoConfiguration. By excluding unnecessary configurations, developers gain greater control over application behavior and startup configuration while still benefiting from Spring Boot's automatic setup capabilities.",
+                    "type": "text",
+                    "id": 21
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Exclude an auto-configuration class",
+                    "code": "\n@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)\npublic class Application {\n}"
                 }
             ]
         },
@@ -277,12 +462,18 @@
             "id": "22",
             "Que": [
                 {
-                    "q": "Q22 : Can we create a non-web application in Spring Boot?",
-                    "a": "Absolutely, Spring Boot is not limited to web applications. We can create standalone, non-web applications by disabling the web context. This is done by setting the application type to 'none', which skips the setup of web-specific contexts and configurations. Non-web applications are useful for batch processing, scheduled jobs, messaging systems, command-line tools, and data processing applications. Spring Boot still provides all its powerful features like dependency injection, auto-configuration, and externalized configuration even without a web server. We can also use interfaces like CommandLineRunner or ApplicationRunner to execute custom logic immediately after the application starts. This flexibility allows developers to use Spring Boot for a wide variety of enterprise and backend tasks beyond traditional web development.",
-                    "type": "text",
-                    "id": 22,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q22 : Can we create a non-web application in Spring Boot?",
+                    "a": "Yes, Spring Boot can be used to create non-web applications such as batch processing systems, command-line tools, scheduled jobs, and background services. In such applications, there is no need to start an embedded web server like Tomcat. Spring Boot provides support through CommandLineRunner and ApplicationRunner interfaces for executing startup logic. By configuring the application as a non-web application, resource consumption is reduced while still taking advantage of Spring Boot features such as dependency injection, configuration management, and auto-configuration.",
+                    "type": "text",
+                    "id": 22
+                },
+                {
+                    "type": "code",
+                    "lang": "properties",
+                    "simple_text": "Disable web application mode",
+                    "code": "\nspring.main.web-application-type=none"
                 }
             ]
         },
@@ -290,12 +481,25 @@
             "id": "23",
             "Que": [
                 {
-                    "q": "Q23 : Describe the flow of HTTPS requests through a Spring Boot application.",
-                    "a": "In a Spring Boot application, HTTPS requests first pass through the embedded server’s SSL/TLS security layer, which handles encryption and decryption of data. When a client sends a secure request, the SSL handshake process establishes a secure communication channel between the client and the server. Once the connection is secure, the embedded server such as Tomcat receives the request and forwards it to the DispatcherServlet. The DispatcherServlet then routes the request to the appropriate controller based on URL mappings. The controller processes the request, calls service classes for business logic if required, and generates a response. Finally, the response is sent back through the SSL/TLS layer where it is encrypted before being transmitted to the client. This entire process ensures confidentiality, integrity, and secure communication between the client and the Spring Boot application.",
-                    "type": "text",
-                    "id": 23,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q23 : Describe the flow of HTTPS requests through a Spring Boot application.",
+                    "a": "When an HTTPS request reaches a Spring Boot application, the SSL/TLS handshake is performed first to establish a secure connection between the client and server. After encryption is established, the request is received by the embedded server such as Tomcat. Spring Security filters process authentication and authorization checks before the request reaches the controller. The controller handles the business logic and generates a response. Finally, the response is encrypted and sent back to the client through the secure HTTPS connection.",
+                    "type": "text",
+                    "id": 23
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "HTTPS Request Flow",
+                    "list": {
+                        "1": "SSL/TLS Handshake",
+                        "2": "Request reaches Embedded Server",
+                        "3": "Security Filters execute",
+                        "4": "Controller processes request",
+                        "5": "Response is generated",
+                        "6": "Encrypted response sent back"
+                    }
                 }
             ]
         },
@@ -303,12 +507,18 @@
             "id": "24",
             "Que": [
                 {
-                    "q": "Q24 : Explain @RestController annotation in Spring Boot.",
-                    "a": "The @RestController annotation in Spring Boot is used to create RESTful web services and APIs. It is a combination of two annotations: @Controller and @ResponseBody. The @Controller annotation marks the class as a Spring MVC controller, while @ResponseBody ensures that the return value of methods is written directly to the HTTP response body instead of rendering a view page. This means the data returned from controller methods is automatically converted into formats like JSON or XML using HTTP message converters. The @RestController annotation simplifies API development because developers do not need to add @ResponseBody to every method individually. It is commonly used in modern web applications and microservices to build lightweight, scalable, and client-friendly APIs that can communicate easily with frontend applications or external systems.",
-                    "type": "text",
-                    "id": 24,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q24 : Explain @RestController annotation in Spring Boot.",
+                    "a": "@RestController is a specialized Spring annotation used for building RESTful web services. It combines the functionality of @Controller and @ResponseBody into a single annotation. Methods inside a @RestController automatically return data such as JSON or XML directly in the HTTP response body instead of rendering a view. This makes it ideal for REST APIs where data exchange is required between clients and servers. It simplifies API development and reduces the need for additional response handling configurations.",
+                    "type": "text",
+                    "id": 24
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Basic REST Controller",
+                    "code": "\n@RestController\npublic class UserController {\n   @GetMapping(\"/users\")\n   public String getUsers() {\n      return \"Users List\";\n   }\n}"
                 }
             ]
         },
@@ -316,12 +526,41 @@
             "id": "25",
             "Que": [
                 {
-                    "q": "Q25 : Difference between @Controller and @RestController",
-                    "a": "The main difference between @Controller and @RestController in Spring Boot is the type of response they produce. The @Controller annotation is mainly used in Spring MVC applications where methods return view names, and these views are resolved into HTML pages using technologies like JSP or Thymeleaf. On the other hand, @RestController is specifically designed for REST APIs and web services. It combines @Controller and @ResponseBody, meaning all methods automatically return data directly in the response body, usually in JSON or XML format. With @Controller, developers often need to use @ResponseBody separately for API responses, while @RestController removes this extra step and simplifies API development. In short, @Controller is generally used for web page rendering, whereas @RestController is preferred for building RESTful services and microservice-based applications.",
-                    "type": "text",
-                    "id": 25,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q25 : Difference between @Controller and @RestController",
+                    "a": "@Controller is primarily used for traditional Spring MVC applications where views such as JSP, Thymeleaf, or HTML pages are returned. @RestController is used for REST APIs and automatically returns response data in formats like JSON or XML. While @Controller often requires @ResponseBody to return data directly, @RestController includes this functionality by default. As a result, @RestController is preferred for API development, whereas @Controller is commonly used for server-side rendered web applications.",
+                    "type": "text",
+                    "id": 25
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "@Controller" },
+                        { "label": "@RestController" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Returns Views" },
+                                { "col": "Returns JSON/XML Data" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Needs @ResponseBody for APIs" },
+                                {
+                                    "col": "Includes @ResponseBody Automatically"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Used in MVC Applications" },
+                                { "col": "Used in REST APIs" }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -329,12 +568,39 @@
             "id": "26",
             "Que": [
                 {
-                    "q": "Q26 : What is the difference between RequestMapping and GetMapping?",
-                    "a": "@RequestMapping is a general-purpose annotation in Spring Boot that can handle different types of HTTP requests such as GET, POST, PUT, DELETE, and PATCH. To use it for a specific request type, we need to explicitly mention the HTTP method using the method attribute. On the other hand, @GetMapping is a specialized shortcut annotation introduced for handling only HTTP GET requests. It improves code readability and makes controller methods more concise and easier to understand. Internally, @GetMapping works the same way as @RequestMapping(method = RequestMethod.GET). Developers usually prefer @GetMapping for GET APIs because it clearly indicates the request type directly in the annotation itself. Using specialized mapping annotations like @GetMapping, @PostMapping, @PutMapping, and @DeleteMapping helps keep the code cleaner, more maintainable, and easier to debug in large Spring Boot applications.",
-                    "type": "text",
-                    "id": 26,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q26 : What is the difference between RequestMapping and GetMapping?",
+                    "a": "@RequestMapping is a generic annotation that can map requests for any HTTP method such as GET, POST, PUT, and DELETE. Developers must explicitly specify the request method when needed. @GetMapping is a specialized shortcut annotation introduced for handling only HTTP GET requests. It improves readability and reduces boilerplate code. While both annotations can be used for GET operations, @GetMapping is generally preferred because it clearly communicates the intent of the endpoint and makes controller code easier to understand.",
+                    "type": "text",
+                    "id": 26
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "@RequestMapping" },
+                        { "label": "@GetMapping" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Supports all HTTP methods" },
+                                { "col": "Supports only GET requests" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "More configuration required" },
+                                { "col": "Simpler and concise" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Generic mapping" },
+                                { "col": "GET-specific mapping" }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -342,12 +608,41 @@
             "id": "27",
             "Que": [
                 {
-                    "q": "Q27 : What are the differences between @SpringBootApplication and @EnableAutoConfiguration annotation?",
-                    "a": "The @SpringBootApplication annotation is a convenience annotation that combines three important Spring annotations: @Configuration, @EnableAutoConfiguration, and @ComponentScan. It is mainly used on the main class of a Spring Boot application to enable auto-configuration, bean registration, and component scanning automatically. In contrast, @EnableAutoConfiguration focuses only on enabling Spring Boot’s auto-configuration feature. This feature automatically configures the application based on the dependencies available in the project’s classpath. While @EnableAutoConfiguration handles automatic setup, it does not perform component scanning or define configuration classes by itself. That is why @SpringBootApplication is generally preferred because it provides all essential configurations in a single annotation, reducing boilerplate code and simplifying application setup. It makes Spring Boot applications easier to configure, maintain, and develop efficiently.",
-                    "type": "text",
-                    "id": 27,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q27 : What are the differences between @SpringBootApplication and @EnableAutoConfiguration annotation?",
+                    "a": "@EnableAutoConfiguration enables Spring Boot's automatic configuration mechanism, allowing Spring to configure beans based on project dependencies and classpath settings. @SpringBootApplication is a convenience annotation that combines @EnableAutoConfiguration, @Configuration, and @ComponentScan into a single annotation. It serves as the primary annotation for Spring Boot applications. While @EnableAutoConfiguration focuses only on automatic configuration, @SpringBootApplication provides a complete application setup including configuration definition and component scanning along with auto-configuration support.",
+                    "type": "text",
+                    "id": 27
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "@SpringBootApplication" },
+                        { "label": "@EnableAutoConfiguration" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Includes multiple annotations" },
+                                { "col": "Only enables auto-configuration" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Supports component scanning" },
+                                { "col": "No component scanning" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Used as main application annotation"
+                                },
+                                { "col": "Used internally or separately" }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -355,12 +650,18 @@
             "id": "28",
             "Que": [
                 {
-                    "q": "Q28 : How can you programmatically determine which profiles are currently active in a Spring Boot application?",
-                    "a": "In a Spring Boot application, we can determine the currently active profiles programmatically using the Environment interface provided by Spring. First, we inject the Environment object into our class using the @Autowired annotation. The Environment object contains information about application properties, profiles, and configuration settings. Then, by calling the getActiveProfiles() method, we can retrieve all active profiles as an array of strings. These profiles help us identify which environment-specific configurations are currently being used, such as development, testing, or production. This feature is especially useful when the application needs to perform certain operations based on the active environment. For example, developers may want to enable debugging features only in the development profile or load production-specific services when running in production mode. Programmatically checking active profiles helps make the application flexible and environment-aware.",
-                    "type": "text",
-                    "id": 28,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q28 : How can you programmatically determine which profiles are currently active in a Spring Boot application?",
+                    "a": "Spring Boot provides the Environment interface to access application properties and active profiles programmatically. Developers can inject the Environment bean and call getActiveProfiles() to retrieve the currently active profiles. This is useful when application behavior needs to change dynamically based on the environment, such as development, testing, or production. Active profiles help manage environment-specific configurations while keeping a single codebase. Programmatic access allows custom logic and diagnostics based on profile information during runtime.",
+                    "type": "text",
+                    "id": 28
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Get active profiles",
+                    "code": "\n@Autowired\nprivate Environment environment;\n\nString[] profiles = environment.getActiveProfiles();"
                 }
             ]
         },
@@ -368,12 +669,39 @@
             "id": "29",
             "Que": [
                 {
-                    "q": "Q29 : Mention the differences between WAR and embedded containers.",
-                    "a": "Traditional WAR deployment and embedded container deployment differ mainly in how the application is packaged and executed. In a traditional WAR deployment, the application is packaged as a WAR file and deployed on an external servlet container such as Tomcat, Jetty, or WildFly. This requires the server to be installed and configured separately. On the other hand, Spring Boot supports embedded containers where the web server is included directly inside the application as part of an executable JAR file. This means developers can run the application independently using a simple java -jar command without needing an external server setup. Embedded containers simplify deployment, improve portability, and ensure consistency across different environments. They are especially useful in microservices architectures and cloud-native applications because they reduce server management complexity and make applications easier to deploy, test, and scale.",
-                    "type": "text",
-                    "id": 29,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q29 : Mention the differences between WAR and embedded containers.",
+                    "a": "A WAR file is deployed to an external application server such as Tomcat, JBoss, or WebLogic, where the server is managed separately from the application. Embedded containers, on the other hand, package the server directly inside the Spring Boot application. This allows the application to run independently using a simple JAR file. Embedded containers simplify deployment, reduce configuration complexity, and support microservices architectures. WAR deployments are more common in traditional enterprise environments where centralized application servers are already available.",
+                    "type": "text",
+                    "id": 29
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "WAR Deployment" },
+                        { "label": "Embedded Container" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Requires external server" },
+                                { "col": "Server included in application" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "More deployment steps" },
+                                { "col": "Simple JAR execution" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Traditional architecture" },
+                                { "col": "Microservices-friendly" }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -381,12 +709,23 @@
             "id": "30",
             "Que": [
                 {
-                    "q": "Q30 : What is Spring Boot Actuator?",
-                    "a": "Spring Boot Actuator is a powerful feature that provides production-ready tools for monitoring and managing Spring Boot applications. It offers several built-in endpoints that expose important operational information about the application, such as application health, metrics, environment properties, memory usage, thread details, and application configurations. These endpoints can be accessed through HTTP or JMX, making it easier for developers and system administrators to monitor the application in real time. Common actuator endpoints include /health, /metrics, /info, and /env. Spring Boot Actuator is especially useful in production environments because it helps identify issues, monitor system performance, and track application behavior. It can also integrate with monitoring tools like Prometheus, Grafana, or Splunk for advanced analytics and visualization. Overall, Spring Boot Actuator improves application reliability, maintainability, and operational visibility.",
-                    "type": "text",
-                    "id": 30,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q30 : What is Spring Boot Actuator?",
+                    "a": "Spring Boot Actuator is a production-ready feature that provides monitoring, management, and health-check capabilities for Spring Boot applications. It exposes various endpoints that allow developers and administrators to inspect application health, metrics, beans, environment properties, thread information, and configuration details. Actuator is widely used for application monitoring, troubleshooting, and integration with monitoring tools such as Prometheus and Grafana. It helps improve application observability and enables proactive management of applications running in production environments.",
+                    "type": "text",
+                    "id": 30
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Popular Actuator Endpoints",
+                    "list": {
+                        "/actuator/health": "Application health status",
+                        "/actuator/metrics": "Application metrics",
+                        "/actuator/beans": "List all Spring Beans",
+                        "/actuator/env": "Environment properties"
+                    }
                 }
             ]
         },
@@ -394,12 +733,18 @@
             "id": "31",
             "Que": [
                 {
-                    "q": "Q31 : How to enable Actuator in Spring Boot?",
-                    "a": "To enable Spring Boot Actuator, we simply need to add the spring-boot-starter-actuator dependency to our project’s Maven pom.xml or Gradle build file. Once this dependency is included, Spring Boot automatically configures several production-ready monitoring and management endpoints. After enabling Actuator, we can customize which endpoints should be exposed by configuring properties in application.properties or application.yml files. For example, we can expose endpoints like /health, /metrics, /info, and /env using management.endpoints.web.exposure.include. Spring Boot Actuator is extremely useful for monitoring application health, tracking performance metrics, viewing environment configurations, and troubleshooting production issues. It can also integrate with monitoring tools like Prometheus and Grafana for advanced analytics. By enabling Actuator, developers and administrators gain better visibility into the application’s behavior, helping maintain system reliability, performance, and operational efficiency in both development and production environments.",
-                    "type": "text",
-                    "id": 31,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q31 : How to enable Actuator in Spring Boot?",
+                    "a": "Spring Boot Actuator can be enabled by adding the spring-boot-starter-actuator dependency to the project. Once added, Spring Boot automatically configures management endpoints that provide information about application health, metrics, beans, environment properties, and more. Developers can further customize which endpoints are exposed using configuration properties. Actuator is widely used in production environments for monitoring, troubleshooting, and integrating applications with observability tools. It helps administrators understand application behavior and detect issues before they impact users.",
+                    "type": "text",
+                    "id": 31
+                },
+                {
+                    "type": "code",
+                    "lang": "properties",
+                    "simple_text": "Expose all actuator endpoints",
+                    "code": "\nmanagement.endpoints.web.exposure.include=*"
                 }
             ]
         },
@@ -407,12 +752,18 @@
             "id": "32",
             "Que": [
                 {
-                    "q": "Q32 : How to get the list of all the beans in our Spring Boot application?",
-                    "a": "To get the list of all beans in a Spring Boot application, we can use the ApplicationContext interface, which manages all the beans and configurations inside the Spring container. First, we inject the ApplicationContext into a Spring-managed class using the @Autowired annotation. Then, we call the getBeanDefinitionNames() method, which returns an array containing the names of all beans currently managed by the Spring container. We can loop through this array and print the bean names to the console. This approach is very useful for debugging, understanding the application context, and verifying that specific beans are loaded correctly. It also helps developers inspect auto-configured beans provided by Spring Boot. Since Spring Boot automatically creates many beans internally, listing all beans can provide valuable insight into how the framework configures and manages the application behind the scenes.",
-                    "type": "text",
-                    "id": 32,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q32 : How to get the list of all the beans in our Spring Boot application?",
+                    "a": "Spring Boot provides multiple ways to view all beans registered in the application context. Developers can use the ApplicationContext object and retrieve bean names programmatically. Another common approach is enabling the Actuator beans endpoint, which exposes all configured beans through a REST endpoint. Viewing beans is useful for debugging dependency injection issues, understanding application configuration, and verifying that required components have been loaded successfully. This information can be especially valuable when working with large enterprise applications.",
+                    "type": "text",
+                    "id": 32
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Retrieve bean names from ApplicationContext",
+                    "code": "\n@Autowired\nprivate ApplicationContext context;\n\nString[] beans = context.getBeanDefinitionNames();"
                 }
             ]
         },
@@ -420,12 +771,18 @@
             "id": "33",
             "Que": [
                 {
-                    "q": "Q33 : Can we check the environment properties in our Spring Boot application? Explain how.",
-                    "a": "Yes, we can access and check environment properties in a Spring Boot application using the Environment interface provided by the Spring Framework. The Environment object contains information about application properties, active profiles, system variables, and configuration settings. To use it, we inject the Environment interface into a Spring-managed bean using the @Autowired annotation. Then, by calling the getProperty() method, we can retrieve the value of any property defined in application.properties, application.yml, environment variables, or command-line arguments. For example, we can fetch database URLs, server ports, API keys, or custom application settings. This feature is especially useful when we want to dynamically configure the application based on different environments such as development, testing, or production. It also helps make the application flexible and easier to maintain because configuration values remain externalized rather than hardcoded inside the source code.",
-                    "type": "text",
-                    "id": 33,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q33 : Can we check the environment properties in our Spring Boot application? Explain how.",
+                    "a": "Yes, Spring Boot allows developers to access environment properties through the Environment interface or the Actuator environment endpoint. Environment properties include application settings, system properties, environment variables, and profile-specific configurations. These properties can be read programmatically for dynamic application behavior. Additionally, the Actuator /env endpoint can expose configuration details for monitoring and troubleshooting purposes. Accessing environment properties helps developers verify configuration values and diagnose deployment issues across different environments.",
+                    "type": "text",
+                    "id": 33
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Read a property using Environment",
+                    "code": "\n@Autowired\nprivate Environment env;\n\nString port = env.getProperty(\"server.port\");"
                 }
             ]
         },
@@ -433,12 +790,18 @@
             "id": "34",
             "Que": [
                 {
-                    "q": "Q34 : How to enable debugging log in the Spring Boot application?",
-                    "a": "To enable debugging logs in a Spring Boot application, we can configure the logging level in the application.properties or application.yml file. The simplest way is to add the property logging.level.root=DEBUG, which enables detailed debug-level logs for the entire application. These logs provide additional information about application startup, bean creation, request processing, and internal Spring Boot operations. Debug logging is extremely useful during development and troubleshooting because it helps developers identify errors, understand application flow, and analyze unexpected behavior. We can also enable debug logging for specific packages or classes instead of the entire application by setting properties like logging.level.com.example=DEBUG. Additionally, Spring Boot supports command-line debugging using the --debug flag while starting the application. Proper logging configuration improves debugging efficiency, helps monitor application behavior, and makes it easier to diagnose issues during development and production support.",
-                    "type": "text",
-                    "id": 34,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q34 : How to enable debugging log in the Spring Boot application?",
+                    "a": "Spring Boot provides built-in support for debug logging, which helps developers analyze application startup behavior and troubleshoot configuration issues. When debug mode is enabled, Spring Boot displays detailed information about auto-configuration decisions, bean creation, and application initialization. This feature is particularly useful for diagnosing dependency injection problems and understanding why certain configurations are applied or skipped. Debug logs can be enabled through configuration files, command-line arguments, or application startup parameters without changing application code.",
+                    "type": "text",
+                    "id": 34
+                },
+                {
+                    "type": "code",
+                    "lang": "properties",
+                    "simple_text": "Enable debug mode",
+                    "code": "\ndebug=true"
                 }
             ]
         },
@@ -446,12 +809,23 @@
             "id": "35",
             "Que": [
                 {
-                    "q": "Q35 : Explain the need of dev-tools dependency.",
-                    "a": "The Spring Boot DevTools dependency is designed to improve the developer experience by providing features that speed up application development and testing. One of its most useful features is automatic restart, where the application automatically restarts whenever code changes are detected, saving developers from restarting the server manually. It also supports LiveReload functionality, which refreshes the browser automatically when frontend files such as HTML, CSS, or JavaScript are modified. DevTools additionally provides development-time configurations that disable caching by default, making it easier to see changes instantly during development. Another important benefit is improved debugging support and better error reporting, which helps developers quickly identify and fix issues. Since DevTools is intended only for development, it is automatically disabled in production environments for security and performance reasons. Overall, the DevTools dependency increases productivity, reduces repetitive tasks, and makes the Spring Boot development process faster and more efficient.",
-                    "type": "text",
-                    "id": 35,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q35 : Explain the need of dev-tools dependency.",
+                    "a": "Spring Boot DevTools is a development-time dependency designed to improve developer productivity. It provides features such as automatic application restart, live reload support, improved development caching, and faster feedback during coding. Whenever source code changes are detected, DevTools automatically restarts the application, eliminating the need for manual restarts. This significantly reduces development time and improves the overall development experience. DevTools is intended only for development environments and should not be included in production deployments.",
+                    "type": "text",
+                    "id": 35
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "DevTools Features",
+                    "list": {
+                        "1": "Automatic Restart",
+                        "2": "Live Reload",
+                        "3": "Development Cache Optimization",
+                        "4": "Faster Development Cycle"
+                    }
                 }
             ]
         },
@@ -459,12 +833,23 @@
             "id": "36",
             "Que": [
                 {
-                    "q": "Q36 : How do you test a Spring Boot application?",
-                    "a": "Testing a Spring Boot application involves using different testing annotations and tools depending on what part of the application we want to test. For full integration testing, we use @SpringBootTest, which loads the complete Spring application context and allows us to test how all components work together. If we only want to test the web layer, such as controllers and REST APIs, we use @WebMvcTest, which loads only the web-related components. For testing database interactions and JPA repositories, we use @DataJpaTest, which focuses on the persistence layer. Spring Boot applications commonly use JUnit as the main testing framework to write and execute test cases. Mockito is used to create mock or fake objects so we can isolate specific components during testing. These testing approaches help developers verify functionality, detect bugs early, improve code quality, and ensure the application behaves correctly before deployment. Proper testing also makes applications easier to maintain and update in the future.",
-                    "type": "text",
-                    "id": 36,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q36 : How do you test a Spring Boot application?",
+                    "a": "Testing a Spring Boot application typically involves unit testing, integration testing, and end-to-end testing. Unit tests verify individual classes and methods in isolation, while integration tests validate interactions between components such as controllers, services, and databases. Spring Boot provides testing support through Spring Boot Test, JUnit, Mockito, MockMvc, and Testcontainers. Automated testing ensures application reliability, detects regressions early, and improves code quality. A well-tested application is easier to maintain and more resilient to future changes.",
+                    "type": "text",
+                    "id": 36
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Testing Types",
+                    "list": {
+                        "1": "Unit Testing",
+                        "2": "Integration Testing",
+                        "3": "API Testing",
+                        "4": "End-to-End Testing"
+                    }
                 }
             ]
         },
@@ -472,12 +857,16 @@
             "id": "37",
             "Que": [
                 {
-                    "q": "Q37 : What is the purpose of unit testing in software development?",
-                    "a": "Unit testing is a software testing technique used to verify that individual units or small parts of a program work correctly. A unit can be a method, function, or class that performs a specific task in the application. The main purpose of unit testing is to identify errors and bugs early during development before the software reaches production. By testing small components independently, developers can quickly detect issues and fix them easily. Unit testing also improves code quality, reliability, and maintainability because it ensures that each part behaves as expected. Another major advantage is that it gives developers confidence while modifying or updating code, since existing unit tests can confirm that changes do not break previous functionality. Tools like JUnit and Mockito are commonly used in Java projects for writing unit tests. Overall, unit testing helps create stable, scalable, and bug-free applications while reducing long-term maintenance costs.",
-                    "type": "text",
-                    "id": 37,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q37 : What is the purpose of unit testing in software development?",
+                    "a": "Unit testing focuses on verifying the correctness of individual units of code, such as methods or classes, in isolation from the rest of the application. The primary purpose is to ensure that each component behaves as expected under different conditions. Unit tests help identify defects early, improve code quality, simplify refactoring, and provide confidence when making changes. Because they execute quickly and automatically, unit tests are an essential part of modern software development and continuous integration practices.",
+                    "type": "text",
+                    "id": 37
+                },
+                {
+                    "type": "note",
+                    "note": "Good unit tests should be fast, independent, repeatable, and easy to maintain."
                 }
             ]
         },
@@ -485,12 +874,36 @@
             "id": "38",
             "Que": [
                 {
-                    "q": "Q38 : How do JUnit and Mockito facilitate unit testing in Java projects?",
-                    "a": "JUnit and Mockito are two widely used frameworks that simplify unit testing in Java projects. JUnit is mainly used for writing and executing test cases. It provides annotations such as @Test, @BeforeEach, and @AfterEach, which help organize test methods and setup tasks efficiently. JUnit also includes assertion methods that allow developers to compare expected and actual outputs to verify application behavior. Mockito, on the other hand, is a mocking framework that helps create fake or mock versions of objects and dependencies. This is useful when we want to test a specific class without relying on real database connections, APIs, or external services. By mocking dependencies, developers can isolate the component being tested and focus only on its functionality. Together, JUnit and Mockito make testing faster, more reliable, and easier to maintain. They help developers identify issues early, improve code quality, and ensure that application components work correctly in isolation.",
-                    "type": "text",
-                    "id": 38,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q38 : How do JUnit and Mockito facilitate unit testing in Java projects?",
+                    "a": "JUnit and Mockito are widely used testing frameworks in Java projects. JUnit provides annotations, assertions, and test execution capabilities that help developers write and organize test cases efficiently. Mockito complements JUnit by creating mock objects that simulate dependencies, allowing classes to be tested in isolation. Together, they enable developers to verify business logic without relying on databases, external APIs, or complex infrastructure. This combination leads to faster tests, improved maintainability, and more reliable software development practices.",
+                    "type": "text",
+                    "id": 38
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "JUnit" }, { "label": "Mockito" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Provides test execution" },
+                                { "col": "Provides mock objects" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Supports assertions" },
+                                { "col": "Supports behavior verification" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Organizes test cases" },
+                                { "col": "Mocks dependencies" }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -498,12 +911,39 @@
             "id": "39",
             "Que": [
                 {
-                    "q": "Q39 : Explain the difference between @Mock and @InjectMocks in Mockito.",
-                    "a": "In Mockito, @Mock and @InjectMocks are annotations used together to simplify unit testing by creating and managing mock objects. The @Mock annotation is used to create a fake or dummy version of a class or dependency. These mock objects simulate the behavior of real objects without actually executing their real logic. This is especially useful for isolating the class being tested from external dependencies like databases or APIs. On the other hand, @InjectMocks is used on the main class that we want to test. Mockito automatically injects all the mock objects created with @Mock into this class. This saves developers from manually creating objects and setting dependencies. In simple terms, @Mock creates fake dependencies, while @InjectMocks places those fake dependencies inside the class being tested. Together, these annotations make unit tests cleaner, easier to write, and more focused on testing business logic independently.",
-                    "type": "text",
-                    "id": 39,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q39 : Explain the difference between @Mock and @InjectMocks in Mockito.",
+                    "a": "@Mock is used to create mock objects for dependencies, allowing developers to simulate their behavior during testing. @InjectMocks is used to create the class under test and automatically inject the mocked dependencies into it. Together, these annotations simplify test setup and reduce boilerplate code. While @Mock defines the fake collaborators, @InjectMocks prepares the actual object being tested. This combination is commonly used in service layer testing where dependencies such as repositories or external clients need to be mocked.",
+                    "type": "text",
+                    "id": 39
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "@Mock" },
+                        { "label": "@InjectMocks" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Creates mock objects" },
+                                { "col": "Creates class under test" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Used for dependencies" },
+                                { "col": "Injects mocked dependencies" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "No business logic executed" },
+                                { "col": "Business logic is executed" }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -511,12 +951,18 @@
             "id": "40",
             "Que": [
                 {
-                    "q": "Q40 : What is the role of @SpringBootTest annotation?",
-                    "a": "The @SpringBootTest annotation in Spring Boot is mainly used for integration testing. It loads the complete Spring application context, including all beans, configurations, services, repositories, and controllers, allowing developers to test how the entire application works together. Unlike unit testing, which tests small isolated parts, integration testing checks whether different components interact correctly in a real application environment. This annotation is especially useful for testing features such as database connectivity, REST APIs, service interactions, and application configurations. By loading the full application context, @SpringBootTest creates a testing environment that closely matches the actual production setup. It can also work with embedded web servers to test HTTP requests and responses. Using @SpringBootTest helps developers identify integration issues early, improve application reliability, and ensure that all parts of the Spring Boot application function correctly together before deployment.",
-                    "type": "text",
-                    "id": 40,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q40 : What is the role of @SpringBootTest annotation?",
+                    "a": "@SpringBootTest is a testing annotation that loads the complete Spring application context during test execution. It is commonly used for integration testing because it allows developers to verify how different components work together within the application. Unlike simple unit tests, @SpringBootTest initializes beans, configurations, and auto-configurations exactly as they would run in production. This helps validate application behavior in a realistic environment and ensures that controllers, services, repositories, and other components integrate correctly.",
+                    "type": "text",
+                    "id": 40
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Basic Spring Boot integration test",
+                    "code": "\n@SpringBootTest\nclass ApplicationTests {\n\n   @Test\n   void contextLoads() {\n   }\n}"
                 }
             ]
         },
@@ -524,12 +970,30 @@
             "id": "41",
             "Que": [
                 {
-                    "q": "Q41 : How do you handle exceptions in Spring Boot applications?",
-                    "a": "In Spring Boot, I handle exceptions by creating a centralized exception handling class using @ControllerAdvice or @RestControllerAdvice. This helps manage errors globally across the entire application instead of writing exception handling code in every controller. Inside this class, I use methods annotated with @ExceptionHandler to catch and handle specific exceptions such as NullPointerException, ResourceNotFoundException, or SQLException. When an exception occurs, Spring automatically redirects the request to the matching handler method. In that method, I can return a meaningful error response containing details like timestamp, HTTP status code, error message, and request path. This makes the API more user-friendly and easier to debug. For example, if a requested resource is not found, I can return a 404 NOT FOUND response with a proper message instead of a generic server error. I also use ResponseEntity to customize responses and return appropriate status codes. In addition, logging exceptions using tools like SLF4J or Logback is important for monitoring and debugging production applications. Global exception handling improves maintainability because all error-handling logic stays in one place, making the application cleaner, more secure, and easier to manage.",
-                    "type": "text",
-                    "id": 41,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q41 : How do you handle exceptions in Spring Boot applications?",
+                    "a": "Exception handling in Spring Boot is used to manage application errors gracefully and provide meaningful responses to users. Spring Boot allows handling exceptions using try-catch blocks, @ExceptionHandler methods, @ControllerAdvice, and custom exception classes. Global exception handling ensures consistent error responses across the application. Proper exception handling improves debugging, maintainability, and user experience by preventing stack traces from being exposed to clients and returning appropriate HTTP status codes.",
+                    "type": "text",
+                    "id": 41
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Common Exception Handling Approaches",
+                    "list": {
+                        "1": "@ExceptionHandler",
+                        "2": "@ControllerAdvice",
+                        "3": "Custom Exceptions",
+                        "4": "ResponseEntityExceptionHandler",
+                        "5": "Try-Catch Blocks"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Global Exception Handler",
+                    "code": "\n@ControllerAdvice\npublic class GlobalExceptionHandler {\n\n @ExceptionHandler(Exception.class)\n public ResponseEntity<String> handleException(Exception ex){\n   return ResponseEntity.badRequest().body(ex.getMessage());\n }\n}"
                 }
             ]
         },
@@ -537,12 +1001,24 @@
             "id": "42",
             "Que": [
                 {
-                    "q": "Q42 : Explain the purpose of the pom.xml file in a Maven project.",
-                    "a": "The pom.xml file is one of the most important files in a Maven project because it acts like the central configuration file for the application. POM stands for Project Object Model, and this file tells Maven how the project should be built, managed, and packaged. Without the pom.xml file, Maven cannot understand the project structure or its dependencies. One of the main purposes of pom.xml is dependency management. In Spring Boot projects, we often use external libraries such as Spring Web, Spring Data JPA, MySQL Connector, and Spring Security. Instead of manually downloading these libraries, we simply declare them inside the pom.xml file, and Maven automatically downloads and manages them for us. This saves time and reduces configuration issues. The pom.xml file also defines project details like project name, version, packaging type, Java version, and plugins required for building the application. Maven plugins help automate tasks such as compiling code, running tests, packaging applications, and generating reports. In Spring Boot, the spring-boot-starter-parent is commonly used to simplify dependency and version management. Overall, the pom.xml file acts like a blueprint of the project and helps make Java application development more organized and efficient.",
-                    "type": "text",
-                    "id": 42,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q42 : Explain the purpose of the pom.xml file in a Maven project.",
+                    "a": "The pom.xml file is the core configuration file of a Maven project. It contains project metadata, dependencies, plugins, build configurations, repositories, and project version information. Maven reads this file to download required libraries, compile code, run tests, and package the application. In Spring Boot projects, pom.xml also manages starter dependencies and build plugins. Proper configuration of pom.xml helps maintain consistency, simplifies dependency management, and automates the project build lifecycle.",
+                    "type": "text",
+                    "id": 42
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Information Stored in pom.xml",
+                    "list": {
+                        "1": "Project Details",
+                        "2": "Dependencies",
+                        "3": "Plugins",
+                        "4": "Build Configuration",
+                        "5": "Repositories"
+                    }
                 }
             ]
         },
@@ -550,12 +1026,16 @@
             "id": "43",
             "Que": [
                 {
-                    "q": "Q43 : How auto configuration play an important role in springboot application?",
-                    "a": "Auto-configuration is one of the most powerful features of Spring Boot because it significantly reduces manual configuration and setup work. In traditional Spring applications, developers had to configure many things manually, such as database connections, dispatcher servlets, view resolvers, and security settings. Spring Boot simplifies this process by automatically configuring components based on the dependencies available in the project. For example, if we add the spring-boot-starter-web dependency, Spring Boot automatically configures an embedded Tomcat server, Spring MVC, and JSON support. Similarly, if we include database dependencies like MySQL and Spring Data JPA, Spring Boot automatically creates database connections and configures Hibernate. This saves developers from writing large XML configuration files or extensive Java configuration classes. Internally, Spring Boot uses the @EnableAutoConfiguration annotation along with conditional annotations to decide which configurations should be applied. Auto-configuration improves productivity because developers can focus more on business logic instead of infrastructure setup. It also reduces boilerplate code, minimizes configuration errors, and makes application development faster and easier.",
-                    "type": "text",
-                    "id": 43,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q43 : How auto configuration play an important role in Spring Boot application?",
+                    "a": "Auto-configuration is one of the most important features of Spring Boot. It automatically configures beans and application settings based on the dependencies available on the classpath. Developers do not need to write large amounts of XML or Java configuration manually. For example, adding spring-boot-starter-web automatically configures Tomcat, DispatcherServlet, and related components. Auto-configuration reduces development time, minimizes boilerplate code, and allows developers to focus on business logic rather than infrastructure setup.",
+                    "type": "text",
+                    "id": 43
+                },
+                {
+                    "type": "note",
+                    "note": "Auto-configuration works using @EnableAutoConfiguration and conditional annotations such as @ConditionalOnClass and @ConditionalOnMissingBean."
                 }
             ]
         },
@@ -563,12 +1043,18 @@
             "id": "44",
             "Que": [
                 {
-                    "q": "Q44 : Can we customize a specific auto-configuration in springboot?",
-                    "a": "Yes, in Spring Boot, we can customize specific auto-configurations very easily. Although Spring Boot automatically configures components based on dependencies and default settings, developers still have full control to modify or override those configurations according to application requirements. One common way to customize auto-configuration is through the application.properties or application.yml file. For example, we can change the default server port, database settings, logging levels, or security configurations simply by updating properties. Another way is by creating custom @Configuration classes and defining our own beans. If Spring Boot already creates a bean automatically, we can provide our own bean with the same type, and Spring Boot will use the custom one instead. Spring Boot also provides conditional annotations like @ConditionalOnMissingBean and @ConditionalOnProperty, which help control when certain configurations should be loaded. This flexibility allows developers to adapt the default setup according to the application’s specific needs while still benefiting from Spring Boot’s automatic configuration capabilities.",
-                    "type": "text",
-                    "id": 44,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q44 : Can we customize a specific auto-configuration in Spring Boot?",
+                    "a": "Yes, Spring Boot allows customization of auto-configuration. Developers can override default bean definitions by creating their own beans, changing application properties, or excluding specific auto-configuration classes. Spring Boot gives priority to user-defined configurations over automatically configured beans. This flexibility allows developers to use the convenience of auto-configuration while still customizing application behavior according to business requirements. It helps balance rapid development with complete control over the application's configuration.",
+                    "type": "text",
+                    "id": 44
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Custom Bean Overrides Auto Configuration",
+                    "code": "\n@Bean\npublic DataSource dataSource(){\n   return new HikariDataSource();\n}"
                 }
             ]
         },
@@ -576,12 +1062,18 @@
             "id": "45",
             "Que": [
                 {
-                    "q": "Q45 : How can you disable specific auto-configuration classes in Spring Boot?",
-                    "a": "We can disable specific auto-configuration classes in Spring Boot whenever the default configuration is not needed or conflicts with our custom setup. One common way to disable auto-configuration is by using the exclude attribute of the @SpringBootApplication annotation. For example, if we do not want Spring Boot to configure a database automatically, we can exclude the DataSourceAutoConfiguration class. Another way is by using the spring.autoconfigure.exclude property inside the application.properties or application.yml file. This is useful when we want to manage exclusions externally without changing the source code. Spring Boot internally checks these exclusions before applying auto-configuration classes. Disabling unnecessary configurations can improve startup performance, reduce memory usage, and avoid configuration conflicts. This feature is especially useful in microservices or modular applications where only specific functionalities are required. Overall, disabling auto-configurations gives developers better control over application behavior and ensures that only the required components are loaded.",
-                    "type": "text",
-                    "id": 45,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q45 : How can you disable specific auto-configuration classes in Spring Boot?",
+                    "a": "Specific auto-configuration classes can be disabled when they are not required by the application. Spring Boot provides the exclude attribute of @SpringBootApplication or @EnableAutoConfiguration to prevent certain configurations from loading. This is useful when developers want full control over component configuration or when default behavior conflicts with custom requirements. Disabling unnecessary auto-configurations can also reduce startup time and avoid creating unwanted beans in the application context.",
+                    "type": "text",
+                    "id": 45
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Disable DataSource Auto Configuration",
+                    "code": "\n@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)"
                 }
             ]
         },
@@ -589,12 +1081,23 @@
             "id": "46",
             "Que": [
                 {
-                    "q": "Q46 : What is the purpose of having a spring-boot-starter-parent?",
-                    "a": "The spring-boot-starter-parent in a Spring Boot project acts as a special parent POM that provides default configurations and dependency management for Maven projects. Its main purpose is to simplify project setup and reduce the amount of manual configuration developers need to write. It automatically manages compatible versions of Spring Boot dependencies, plugins, and common libraries, ensuring that all components work properly together without version conflicts. The starter parent also defines default settings such as Java version, encoding, compiler configurations, and plugin versions, which helps maintain consistency across different Spring Boot projects. Another important benefit is that it provides sensible default configurations for Maven plugins like the Maven Compiler Plugin and Surefire Plugin, reducing the need for developers to configure them manually. By using spring-boot-starter-parent, developers can focus more on writing business logic instead of spending time managing dependencies and build configurations. It also makes upgrading Spring Boot versions easier because updating the parent version automatically updates compatible dependencies and plugins. Overall, spring-boot-starter-parent improves productivity, simplifies project management, and ensures stable and consistent application development in Spring Boot projects.",
-                    "type": "text",
-                    "id": 46,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q46 : What is the purpose of having a spring-boot-starter-parent?",
+                    "a": "spring-boot-starter-parent is a special parent POM provided by Spring Boot that simplifies Maven project configuration. It manages compatible versions of common dependencies, plugins, and build settings. Developers do not need to specify versions for most Spring Boot dependencies because they are automatically managed. This reduces dependency conflicts and ensures stability. It also provides sensible defaults for compiler settings, testing frameworks, and packaging options, making project setup faster and more reliable.",
+                    "type": "text",
+                    "id": 46
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Dependency Version Management",
+                        "2": "Plugin Management",
+                        "3": "Reduced Configuration",
+                        "4": "Consistent Builds"
+                    }
                 }
             ]
         },
@@ -602,12 +1105,36 @@
             "id": "47",
             "Que": [
                 {
-                    "q": "Q47 : How do starters simplify the Maven or Gradle configuration?",
-                    "a": "Starters in Spring Boot simplify Maven or Gradle configuration by grouping together all the commonly required dependencies for a specific feature into a single package. Instead of manually adding multiple libraries and worrying about their compatible versions, developers only need to include one starter dependency, such as spring-boot-starter-web for web applications or spring-boot-starter-data-jpa for database operations. These starter packages automatically include all the required dependencies, configurations, and transitive libraries needed for that feature to work correctly. This significantly reduces the complexity of build configuration files and minimizes the chances of version conflicts between libraries. Starters also save development time because developers do not need to search for individual dependencies or configure them manually. Spring Boot ensures that all included libraries are tested and compatible with each other, providing a stable development environment. Another advantage is consistency across projects, as teams can follow a standardized dependency structure. Whether using Maven or Gradle, starters make project setup faster, cleaner, and easier to maintain. Overall, Spring Boot starters improve developer productivity by simplifying dependency management, reducing boilerplate configuration, and allowing developers to focus more on application development rather than build setup.",
-                    "type": "text",
-                    "id": 47,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q47 : How do starters simplify the Maven or Gradle configuration?",
+                    "a": "Spring Boot starters are preconfigured dependency bundles that simplify project setup. Instead of manually adding multiple related libraries, developers can add a single starter dependency that includes all required components. For example, spring-boot-starter-web includes Spring MVC, embedded Tomcat, validation libraries, and JSON support. Starters reduce dependency management complexity, prevent version conflicts, and provide a faster way to start application development while following Spring Boot best practices.",
+                    "type": "text",
+                    "id": 47
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Starter" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "spring-boot-starter-web" },
+                                { "col": "REST and Web Applications" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "spring-boot-starter-data-jpa" },
+                                { "col": "Database Access" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "spring-boot-starter-security" },
+                                { "col": "Application Security" }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -615,12 +1142,18 @@
             "id": "48",
             "Que": [
                 {
-                    "q": "Q48 : How do you create REST APIs?",
-                    "a": "To create REST APIs in Spring Boot, I usually start by creating a controller class and annotating it with @RestController, which tells Spring Boot that the class will handle RESTful web requests and return responses in JSON format. Inside the controller, I define different API endpoints using annotations such as @GetMapping, @PostMapping, @PutMapping, and @DeleteMapping to handle HTTP GET, POST, PUT, and DELETE requests. For handling user input, I use @RequestBody to accept JSON data in the request body and convert it into Java objects automatically. I also use @PathVariable and @RequestParam to handle URL parameters and query parameters. The controller generally communicates with a service layer where the business logic is implemented. The service layer then interacts with the repository layer, which handles database operations using Spring Data JPA. Responses are usually returned using Java objects or ResponseEntity, and Spring Boot automatically converts them into JSON using Jackson. I also implement proper exception handling using @ControllerAdvice to return meaningful error messages and HTTP status codes. Additionally, I secure APIs using Spring Security if authentication or authorization is needed. This layered architecture keeps the application clean, maintainable, and scalable while efficiently supporting CRUD operations and RESTful communication.",
-                    "type": "text",
-                    "id": 48,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q48 : How do you create REST APIs?",
+                    "a": "REST APIs in Spring Boot are created using @RestController, request mapping annotations, service classes, and data repositories. The controller receives HTTP requests and returns responses in JSON or XML format. Common annotations such as @GetMapping, @PostMapping, @PutMapping, and @DeleteMapping are used to implement CRUD operations. Spring Boot automatically handles request processing, serialization, and dependency injection. This makes API development simple, scalable, and suitable for web, mobile, and microservice applications.",
+                    "type": "text",
+                    "id": 48
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Simple REST API",
+                    "code": "\n@RestController\n@RequestMapping(\"/users\")\npublic class UserController {\n\n @GetMapping\n public List<User> getUsers(){\n   return service.getAllUsers();\n }\n}"
                 }
             ]
         },
@@ -628,12 +1161,42 @@
             "id": "49",
             "Que": [
                 {
-                    "q": "Q49 : What is versioning in REST? What are the ways that we can use to implement versioning?",
-                    "a": "Versioning in REST APIs is a technique used to manage changes in an API without breaking existing client applications. As applications evolve over time, APIs may require new features, modifications, or improvements. Without versioning, these changes could affect older clients that still depend on the previous API structure. REST API versioning allows multiple versions of the same API to exist simultaneously, enabling clients to upgrade gradually at their own pace. There are several common ways to implement versioning in REST APIs. One popular method is URI versioning, where the version number is included directly in the URL, such as /api/v1/users or /api/v2/users. Another approach is request parameter versioning, where the version is passed as a query parameter like /api/users?version=1. Header versioning is also commonly used, where a custom HTTP header specifies the API version, such as API-Version: 1. Another advanced method is media type versioning, where the version is included in the Accept header using formats like application/vnd.company.v1+json. Each versioning strategy has its own advantages depending on maintainability, readability, and flexibility requirements. Overall, API versioning is essential for maintaining backward compatibility, supporting smooth client transitions, and ensuring stable API evolution in modern applications.",
-                    "type": "text",
-                    "id": 49,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q49 : What is versioning in REST? What are the ways that we can use to implement versioning?",
+                    "a": "REST API versioning is the practice of maintaining multiple API versions while ensuring backward compatibility. It allows applications to evolve without breaking existing clients. Versioning becomes important when API contracts change over time. Spring Boot supports different versioning approaches such as URI versioning, request parameter versioning, custom header versioning, and content negotiation. Choosing a suitable versioning strategy helps manage API evolution, maintain compatibility, and provide a smooth migration path for consumers.",
+                    "type": "text",
+                    "id": 49
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Method" }, { "label": "Example" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "URI Versioning" },
+                                { "col": "/api/v1/users" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Request Parameter" },
+                                { "col": "?version=1" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Header Versioning" },
+                                { "col": "X-API-VERSION:1" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Content Negotiation" },
+                                { "col": "Accept Header" }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -641,103 +1204,27 @@
             "id": "50",
             "Que": [
                 {
-                    "q": "Q50 : What are the REST API Best practices ?",
-                    "a": "REST API best practices are important for building APIs that are clean, secure, scalable, and easy to maintain. One important practice is using the correct HTTP methods such as GET for fetching data, POST for creating resources, PUT for updating data, and DELETE for removing resources. APIs should use clear and meaningful resource names in URLs, such as /users or /products, instead of using verbs. Another best practice is maintaining stateless communication, where each request contains all the information needed to process it, making the API scalable and reliable. Proper error handling is also essential, using standard HTTP status codes like 200 for success, 404 for not found, and 500 for server errors, along with meaningful error messages. API versioning should be implemented to support future updates without breaking existing clients. Security is another major practice, where APIs should use HTTPS for encrypted communication and implement authentication and authorization mechanisms such as JWT or OAuth2. Additionally, APIs should support pagination, filtering, and sorting when dealing with large datasets to improve performance and user experience. Consistent response formats, proper documentation using tools like Swagger/OpenAPI, and input validation are also considered important REST API best practices. Following these practices helps developers create APIs that are robust, user-friendly, maintainable, and suitable for real-world enterprise applications.",
-                    "type": "text",
-                    "id": 50,
                     "playButton": true,
-                    "pauseButton": false
-                }
-            ]
-        },
-        {
-            "id": "51",
-            "Que": [
+                    "pauseButton": false,
+                    "q": "Q50 : What are the REST API Best Practices?",
+                    "a": "REST API best practices help create scalable, secure, and maintainable services. APIs should use meaningful resource names, proper HTTP methods, standard status codes, and consistent response formats. Security should be implemented using HTTPS, authentication, and authorization mechanisms. Proper validation, pagination, filtering, documentation, and versioning should also be included. Error responses should be meaningful and consistent. Following these practices improves developer experience, application reliability, and long-term maintainability of RESTful services.",
+                    "type": "text",
+                    "id": 50
+                },
                 {
-                    "q": "Q51 : What are the uses of ResponseEntity?",
-                    "a": "ResponseEntity in Spring Boot is used to create complete and customizable HTTP responses in REST APIs. It provides full control over the response sent from the server to the client. Using ResponseEntity, developers can customize the HTTP status code, response headers, and response body according to the application's requirements. This is very useful when building RESTful web services because different situations may require different status codes such as 200 OK, 201 Created, 400 Bad Request, 404 Not Found, or 500 Internal Server Error. ResponseEntity also allows adding custom headers like authorization tokens, content type, cache settings, or location headers. The response body can contain Java objects, strings, error messages, or any custom data, which Spring Boot automatically converts into JSON or XML format. For example, ResponseEntity can be used to return success messages after creating resources or detailed error responses when exceptions occur. It also improves API readability and maintainability by making responses more structured and meaningful. Developers often use ResponseEntity together with exception handling and REST controllers to build professional APIs. Overall, ResponseEntity provides flexibility, better control over API responses, proper HTTP communication, and improved client-server interaction in Spring Boot applications.",
-                    "type": "text",
-                    "id": 51,
-                    "playButton": true,
-                    "pauseButton": false
-                }
-            ]
-        },
-        {
-            "id": "52",
-            "Que": [
-                {
-                    "q": "Q52 : What should the delete API method status code be?",
-                    "a": "The DELETE API method should return appropriate HTTP status codes depending on the outcome of the delete operation. The most commonly used status code is 204 No Content, which indicates that the resource was successfully deleted and no response body is being returned. This is considered a standard and clean response for successful deletion operations. In some cases, developers may use 200 OK when they want to return additional information in the response body, such as a success message or details about the deleted resource. If the resource that the client is trying to delete does not exist, the API should return 404 Not Found to indicate that the requested resource could not be located. In situations where the deletion request is invalid or not allowed, other status codes such as 400 Bad Request or 403 Forbidden may also be used. Proper status codes are important because they help clients understand the result of the API request clearly and follow RESTful standards. Using correct HTTP response codes also improves API reliability, debugging, and communication between frontend and backend systems. Therefore, while 204 No Content is the most preferred response for successful delete operations, the exact status code depends on the application's design and the information that needs to be returned to the client.",
-                    "type": "text",
-                    "id": 52,
-                    "playButton": true,
-                    "pauseButton": false
-                }
-            ]
-        },
-        {
-            "id": "53",
-            "Que": [
-                {
-                    "q": "Q53 : What is Swagger?",
-                    "a": "Swagger is an open-source framework used for designing, documenting, and testing RESTful APIs. It helps developers create interactive and easy-to-understand API documentation, making communication between frontend and backend teams much smoother. In Spring Boot applications, Swagger is commonly integrated using libraries like Springfox Swagger or Springdoc OpenAPI. Swagger automatically generates API documentation by scanning the application's REST controllers, endpoints, request mappings, request parameters, and response models. One of the biggest advantages of Swagger is its interactive user interface called Swagger UI, where developers can view all available API endpoints and directly test them from the browser without using external tools like Postman. Swagger also displays important information such as HTTP methods, request body structures, response formats, status codes, authentication details, and example responses. This makes it easier for developers, testers, and clients to understand how the API works. Additionally, Swagger helps keep API documentation accurate and updated automatically whenever the code changes. It also supports API standardization and improves collaboration between teams. Overall, Swagger simplifies API development, testing, maintenance, and documentation, making it an essential tool in modern Spring Boot and microservices-based applications.",
-                    "type": "text",
-                    "id": 53,
-                    "playButton": true,
-                    "pauseButton": false
-                }
-            ]
-        },
-        {
-            "id": "54",
-            "Que": [
-                {
-                    "q": "Q54 : How does Swagger help in documenting APIs?",
-                    "a": "Swagger helps in documenting APIs by automatically generating interactive and user-friendly API documentation from the source code of a Spring Boot application. It scans REST controllers, request mappings, request parameters, response objects, and annotations to create detailed documentation without requiring developers to write everything manually. Swagger provides a graphical interface called Swagger UI, where all API endpoints are displayed in an organized manner. Developers and testers can easily view information such as HTTP methods, endpoint URLs, request body formats, query parameters, headers, response structures, and status codes. One major advantage of Swagger is that it allows users to test API endpoints directly from the browser by sending requests and viewing responses instantly. This makes API testing and debugging much easier. Swagger also ensures that API documentation stays updated automatically whenever developers modify the code, reducing the chances of outdated documentation. It improves communication between frontend developers, backend developers, QA teams, and clients by providing a clear understanding of how the APIs function. Swagger supports API standardization and makes onboarding easier for new developers. Overall, Swagger simplifies API documentation, testing, collaboration, and maintenance, making API development more efficient and professional.",
-                    "type": "text",
-                    "id": 54,
-                    "playButton": true,
-                    "pauseButton": false
-                }
-            ]
-        },
-        {
-            "id": "55",
-            "Que": [
-                {
-                    "q": "Q55 : What all servers are provided by springboot and which one is default?",
-                    "a": "Spring Boot provides several embedded servers that allow applications to run independently without needing external server installation or configuration. The most commonly supported embedded servers in Spring Boot are Tomcat, Jetty, and Undertow. Among these, Apache Tomcat is the default embedded server used by Spring Boot whenever developers add the spring-boot-starter-web dependency. Tomcat is widely used because it is stable, reliable, easy to configure, and highly compatible with Spring applications. Jetty is another lightweight and efficient server option known for handling high concurrency and scalability. Undertow is a modern, lightweight, and high-performance web server that is often preferred for reactive and microservices-based applications because of its low memory usage and non-blocking architecture. Spring Boot makes it very easy to switch from one embedded server to another simply by excluding the default Tomcat dependency and adding the desired server dependency in the Maven or Gradle configuration. Embedded servers are one of the key reasons Spring Boot applications are easy to deploy because developers can package the entire application along with the server into a single executable JAR file. Overall, Spring Boot supports multiple embedded servers for flexibility, but Tomcat remains the default and most commonly used server.",
-                    "type": "text",
-                    "id": 55,
-                    "playButton": true,
-                    "pauseButton": false
-                }
-            ]
-        },
-        {
-            "id": "56",
-            "Que": [
-                {
-                    "q": "Q56 : How does Spring Boot decide which embedded server to use if multiple options are available in the classpath?",
-                    "a": "Spring Boot decides which embedded server to use by checking the server dependencies available in the application's classpath during startup. By default, when we use the spring-boot-starter-web dependency, Spring Boot automatically includes the embedded Tomcat server. However, if multiple embedded server dependencies such as Tomcat, Jetty, or Undertow are present together, Spring Boot selects the server based on the dependency resolution order in the classpath. Usually, the server dependency that appears first and satisfies the auto-configuration conditions gets selected as the active embedded server. Spring Boot’s auto-configuration mechanism scans the classpath and configures the appropriate server automatically without requiring manual setup. For example, if both Tomcat and Jetty dependencies are available, the server with higher priority or earlier resolution in the dependency configuration is chosen. Developers generally avoid keeping multiple server dependencies together to prevent conflicts and unexpected behavior. If a specific server is needed, developers can explicitly exclude unwanted server dependencies and include only the desired one. This automatic server selection mechanism is part of Spring Boot’s auto-configuration feature, which simplifies application setup and reduces manual configuration. Overall, Spring Boot intelligently manages embedded server selection by analyzing available dependencies and automatically configuring the most appropriate server for the application.",
-                    "type": "text",
-                    "id": 56,
-                    "playButton": true,
-                    "pauseButton": false
-                }
-            ]
-        },
-        {
-            "id": "57",
-            "Que": [
-                {
-                    "q": "Q57 : How can we disable the default server and enable the different one?",
-                    "a": "In Spring Boot, we can disable the default embedded server and enable a different server by modifying the project dependencies in the Maven pom.xml or Gradle build file. By default, Spring Boot uses Apache Tomcat as the embedded server when we include the spring-boot-starter-web dependency. To switch to another server like Jetty or Undertow, we first exclude the default Tomcat dependency from the starter package. After excluding Tomcat, we add the dependency for the desired server, such as spring-boot-starter-jetty or spring-boot-starter-undertow. Once the new dependency is added, Spring Boot’s auto-configuration mechanism automatically detects and configures the new embedded server during application startup. This process does not require major code changes because Spring Boot handles the server configuration internally. Developers may choose different servers depending on performance requirements, scalability needs, memory usage, or application architecture. For example, Jetty is known for lightweight and scalable applications, while Undertow is often preferred for high-performance reactive applications. Switching servers in Spring Boot is simple because the framework separates application logic from server configuration. This flexibility allows developers to easily customize deployment environments according to project requirements while still benefiting from embedded server support and executable JAR packaging provided by Spring Boot.",
-                    "type": "text",
-                    "id": 57,
-                    "playButton": true,
-                    "pauseButton": false
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "REST API Best Practices",
+                    "list": {
+                        "1": "Use Proper HTTP Methods",
+                        "2": "Use Meaningful Resource Names",
+                        "3": "Implement Versioning",
+                        "4": "Return Proper Status Codes",
+                        "5": "Secure APIs with HTTPS",
+                        "6": "Validate Input Data",
+                        "7": "Use Pagination and Filtering",
+                        "8": "Provide Good Documentation"
+                    }
                 }
             ]
         },
@@ -756,26 +1243,41 @@
                     "type": "list",
                     "isListKeyRequired": true,
                     "list": {
-                        "@SpringBootApplication": "This annotation combines @Configuration, @EnableAutoConfiguration, and @ComponentScan into a single annotation. It is mainly used on the main class to bootstrap and start a Spring Boot application.",
-                        "@EnableAutoConfiguration": "This annotation tells Spring Boot to automatically configure the application based on the dependencies available in the classpath.",
-                        "@Configuration": "The @Configuration annotation marks a class as a source of bean definitions for the Spring container.",
-                        "@ComponentScan": "This annotation tells Spring where to scan for components, services, repositories, and controllers automatically.",
-                        "@Bean": "The @Bean annotation is used inside a configuration class to explicitly define and manage beans in the Spring container.",
-                        "@Component": "The @Component annotation marks a class as a Spring-managed component so that it can be automatically detected and registered as a bean.",
-                        "@Repository": "The @Repository annotation marks a class as a data access layer component and provides exception translation for database operations.",
-                        "@Service": "The @Service annotation marks a class as a service layer component that contains business logic.",
-                        "@Controller": "The @Controller annotation is used to define web controllers that handle HTTP requests and return views.",
-                        "@RestController": "The @RestController annotation combines @Controller and @ResponseBody, allowing methods to directly return JSON or XML responses.",
-                        "@RequestMapping": "The @RequestMapping annotation maps HTTP requests to specific handler methods in controller classes.",
-                        "@Autowired": "The @Autowired annotation enables automatic dependency injection by allowing Spring to inject required beans automatically.",
-                        "@PathVariable": "The @PathVariable annotation extracts dynamic values from the URL path and maps them to method parameters.",
-                        "@RequestParam": "The @RequestParam annotation binds query parameters or form parameters from HTTP requests to method parameters.",
-                        "@ResponseBody": "The @ResponseBody annotation tells Spring to return the method result directly as the HTTP response body.",
-                        "@RequestBody": "The @RequestBody annotation converts the HTTP request body into a Java object.",
-                        "@EnableWebMvc": "The @EnableWebMvc annotation enables Spring MVC configuration and sets up components required for web applications.",
-                        "@EnableAsync": "The @EnableAsync annotation enables asynchronous method execution in Spring applications.",
-                        "@Scheduled": "The @Scheduled annotation is used to execute methods automatically at fixed intervals or based on cron expressions.",
-                        "@EnableScheduling": "The @EnableScheduling annotation enables scheduling support for methods annotated with @Scheduled."
+                        "@SpringBootApplication": "Combines @Configuration, @EnableAutoConfiguration, and @ComponentScan. Used to bootstrap and start a Spring Boot application.",
+                        "@EnableAutoConfiguration": "Automatically configures Spring Boot based on dependencies available in the classpath.",
+                        "@Configuration": "Marks a class as a source of bean definitions for the Spring container.",
+                        "@ComponentScan": "Scans and registers Spring-managed components automatically.",
+                        "@Bean": "Explicitly creates and manages a bean inside the Spring container.",
+                        "@Component": "Marks a class as a generic Spring-managed component.",
+                        "@Service": "Marks a class as a service layer component containing business logic.",
+                        "@Repository": "Marks a class as a data access component and provides exception translation.",
+                        "@Controller": "Handles web requests and returns views.",
+                        "@RestController": "Combines @Controller and @ResponseBody to return JSON/XML responses directly.",
+                        "@RequestMapping": "Maps HTTP requests to controller methods.",
+                        "@GetMapping": "Maps HTTP GET requests to a specific method.",
+                        "@PostMapping": "Maps HTTP POST requests to a specific method.",
+                        "@PutMapping": "Maps HTTP PUT requests to a specific method.",
+                        "@DeleteMapping": "Maps HTTP DELETE requests to a specific method.",
+                        "@RequestParam": "Binds request parameters to method arguments.",
+                        "@PathVariable": "Extracts values from URI path variables.",
+                        "@RequestBody": "Converts request body data into a Java object.",
+                        "@ResponseBody": "Returns method output directly as the HTTP response body.",
+                        "@Autowired": "Automatically injects required dependencies.",
+                        "@Qualifier": "Specifies which bean should be injected when multiple beans of the same type exist.",
+                        "@Value": "Injects values from properties files, environment variables, or expressions.",
+                        "@Profile": "Activates beans only for specific environments such as dev, test, or prod.",
+                        "@ConfigurationProperties": "Binds external configuration properties to Java objects.",
+                        "@EnableScheduling": "Enables scheduled task execution.",
+                        "@Scheduled": "Runs methods automatically at fixed intervals or cron schedules.",
+                        "@EnableAsync": "Enables asynchronous method execution.",
+                        "@Async": "Executes methods in a separate thread asynchronously.",
+                        "@Transactional": "Manages database transactions automatically.",
+                        "@ExceptionHandler": "Handles exceptions thrown by controller methods.",
+                        "@ControllerAdvice": "Provides global exception handling across multiple controllers.",
+                        "@CrossOrigin": "Enables Cross-Origin Resource Sharing (CORS) for APIs.",
+                        "@EnableWebMvc": "Enables and customizes Spring MVC configuration.",
+                        "@SpringBootTest": "Loads the complete Spring application context for integration testing.",
+                        "@MockBean": "Creates and injects mock beans for testing purposes."
                     }
                 }
             ]

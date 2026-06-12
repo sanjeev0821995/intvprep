@@ -4,12 +4,18 @@
             "id": "1",
             "Que": [
                 {
-                    "q": "Q1 : What is a version control system (VCS)?",
-                    "a": "A VCS keeps track of the contributions of the developers working as a team on the projects. They maintain the history of code changes done and with project evolution, it gives an upper hand to the developers to introduce new code, fixes bugs, and run tests with confidence that their previously working copy could be restored at any moment in case things go wrong.",
-                    "type": "text",
-                    "id": 1,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q1 : What is Git?",
+                    "a": "Git is a distributed version control system used to track changes in source code during software development. It allows multiple developers to work on the same project simultaneously without overwriting each other's work. Git maintains a complete history of changes, enabling users to review, revert, and manage different versions of code efficiently. It is fast, reliable, and widely used in modern software development workflows.",
+                    "type": "text",
+                    "id": 1
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Check Git version installed on system",
+                    "code": "\ngit --version"
                 }
             ]
         },
@@ -17,12 +23,18 @@
             "id": "2",
             "Que": [
                 {
-                    "q": "Q2 : What does git clone do?",
-                    "a": "The command creates a copy (or clone) of an existing git repository. Generally, it is used to get a copy of the remote repository to the local repository.",
-                    "type": "text",
-                    "id": 2,
                     "playButton": true,
-                    "pauseButton": false
+                    "pauseButton": false,
+                    "q": "Q2 : What is GitHub?",
+                    "a": "GitHub is a cloud-based platform that hosts Git repositories and provides tools for collaboration, version control, and project management. It allows developers to store code remotely, track changes, manage issues, and collaborate through features like pull requests and forks. GitHub enhances Git by adding a user-friendly interface and collaboration features.",
+                    "type": "text",
+                    "id": 2
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Clone a repository from GitHub",
+                    "code": "\ngit clone <repository-url>"
                 }
             ]
         },
@@ -30,10 +42,1065 @@
             "id": "3",
             "Que": [
                 {
-                    "q": "Q3 : What does the command git config do?",
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q3 : What is version control?",
+                    "a": "Version control is a system that records changes made to files over time so that specific versions can be recalled later. It allows developers to track modifications, compare versions, collaborate efficiently, and restore previous states of a project when needed. It is essential in software development for managing code history and teamwork.",
+                    "type": "text",
+                    "id": 3
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Tracking Changes": "Keeps record of every modification made to files.",
+                        "Collaboration": "Enables multiple developers to work on the same project.",
+                        "History Management": "Stores all previous versions of files.",
+                        "Recovery": "Allows restoring older versions when needed."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q4 : Difference between Git and GitHub?",
+                    "a": "Git is a distributed version control system used to manage source code history locally, while GitHub is a cloud-based platform used to host Git repositories and enable collaboration. Git works on your local machine, whereas GitHub provides remote storage and collaboration features like pull requests, issue tracking, and team management.",
+                    "type": "text",
+                    "id": 4
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Aspect" },
+                        { "label": "Git" },
+                        { "label": "GitHub" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Definition" },
+                                {
+                                    "col": "A distributed version control system used locally."
+                                },
+                                {
+                                    "col": "A cloud-based platform for hosting Git repositories."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Usage" },
+                                {
+                                    "col": "Used for tracking code changes and version control."
+                                },
+                                {
+                                    "col": "Used for collaboration, pull requests, and hosting code."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Dependency" },
+                                {
+                                    "col": "Works independently without GitHub."
+                                },
+                                { "col": "Depends on Git for version control." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Environment" },
+                                { "col": "Runs on local machine." },
+                                { "col": "Runs on cloud (web platform)." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q5 : What is a repository in Git?",
+                    "a": "A Git repository is a storage space where all project files and their revision history are stored. It contains all commits, branches, and metadata required to track and manage a project over time. Repositories can be local (on your computer) or remote (on platforms like GitHub).",
+                    "type": "text",
+                    "id": 5
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q6 : What is the difference between local and remote repository?",
+                    "a": "A local repository exists on a developer’s machine, while a remote repository is hosted on a server like GitHub. Local repositories are used for development and testing, whereas remote repositories are used for collaboration and backup. Changes from local repos are pushed to remote repos, and updates from remote are pulled into local repos.",
+                    "type": "text",
+                    "id": 6
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Local Repository": "Stored on your personal computer.",
+                        "Remote Repository": "Stored on platforms like GitHub.",
+                        "Usage": "Local is for development, remote is for collaboration.",
+                        "Sync": "Push and pull operations are used to sync both."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q7 : What is the git init command used for?",
+                    "a": "The git init command is used to initialize a new Git repository in a project directory. It creates a hidden .git folder that starts tracking changes in the project files. This is the first step to enable version control in a project.",
+                    "type": "text",
+                    "id": 7
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Initialize a new Git repository",
+                    "code": "\ngit init"
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q8 : What is the git clone command?",
+                    "a": "The git clone command is used to create a copy of an existing remote repository on your local machine. It downloads all files, commit history, and branches from the remote repository.",
+                    "type": "text",
+                    "id": 8
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Clone a repository",
+                    "code": "\ngit clone <repository-url>"
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q9 : What is staging area in Git?",
+                    "a": "The staging area in Git is an intermediate space where changes are placed before committing. It allows developers to review and prepare changes before saving them permanently in the repository history.",
+                    "type": "text",
+                    "id": 9
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Purpose": "Prepares changes before commit",
+                        "Control": "Lets you choose what to include in a commit",
+                        "Review": "Helps verify changes before saving"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q10 : What does git add do?",
+                    "a": "The git add command adds changes from the working directory to the staging area. It tells Git which modifications should be included in the next commit.",
+                    "type": "text",
+                    "id": 10
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Add file to staging area",
+                    "code": "\ngit add <file-name>"
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q11 : What does git commit do?",
+                    "a": "The git commit command saves staged changes permanently into the Git repository history. Each commit represents a snapshot of the project at a specific point in time.",
+                    "type": "text",
+                    "id": 11
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Commit changes with message",
+                    "code": "\ngit commit -m \"commit message\""
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q12 : What is the purpose of git status?",
+                    "a": "The git status command shows the current state of the working directory and staging area. It helps you see which files are modified, staged, or untracked.",
+                    "type": "text",
+                    "id": 12
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Check repository status",
+                    "code": "\ngit status"
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q13 : What is a branch in Git?",
+                    "a": "A branch in Git is a separate line of development that allows developers to work on features, fixes, or experiments without affecting the main codebase. Branching enables parallel development.",
+                    "type": "text",
+                    "id": 13
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Isolation": "Work independently without affecting main code",
+                        "Parallel Work": "Multiple features can be developed simultaneously",
+                        "Flexibility": "Easy merging after completion"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q14 : What is the default branch in Git?",
+                    "a": "The default branch in Git is usually called main (earlier it was called master). It is the primary branch where the stable version of the codebase is stored.",
+                    "type": "text",
+                    "id": 14
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q15 : What is git log used for?",
+                    "a": "The git log command is used to view the commit history of a repository. It shows details like commit ID, author, date, and commit message.",
+                    "type": "text",
+                    "id": 15
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "View commit history",
+                    "code": "\ngit log"
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q16 : What is the difference between git pull and git fetch?",
+                    "a": "Git fetch downloads changes from a remote repository but does not automatically merge them into your local branch. Git pull, on the other hand, fetches the changes and immediately merges them into your current branch. In simple terms, fetch is safe and non-destructive, while pull directly updates your working branch.",
+                    "type": "text",
+                    "id": 16
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Aspect" },
+                        { "label": "git fetch" },
+                        { "label": "git pull" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Operation" },
+                                {
+                                    "col": "Downloads changes from remote repository only."
+                                },
+                                {
+                                    "col": "Downloads and merges changes into current branch."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Merge" },
+                                { "col": "Does not merge automatically." },
+                                {
+                                    "col": "Automatically merges after fetching."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Safety" },
+                                {
+                                    "col": "Safer because it does not modify working branch."
+                                },
+                                {
+                                    "col": "Less safe as it directly modifies working branch."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Usage" },
+                                {
+                                    "col": "Used to review changes before merging."
+                                },
+                                {
+                                    "col": "Used when you want immediate update with merge."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q17 : What is a merge in Git?",
+                    "a": "A merge in Git is the process of combining changes from one branch into another branch. It integrates the work done in different branches into a single unified history.",
+                    "type": "text",
+                    "id": 17
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Merge a feature branch into main",
+                    "code": "\ngit merge feature-branch"
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q18 : What is a merge conflict?",
+                    "a": "A merge conflict occurs when Git is unable to automatically resolve differences between two branches because the same part of a file has been modified differently in both branches.",
+                    "type": "text",
+                    "id": 18
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Cause": "Same file lines modified in different branches",
+                        "Result": "Git cannot automatically merge changes",
+                        "Solution": "Manual resolution is required"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q19 : How do you resolve merge conflicts?",
+                    "a": "Merge conflicts are resolved by manually editing the conflicting files, choosing the correct changes, removing conflict markers, and then staging and committing the resolved files.",
+                    "type": "text",
+                    "id": 19
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Steps after resolving conflict",
+                    "code": "\ngit add .\ngit commit -m \"Resolved merge conflict\""
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q20 : What is git diff used for?",
+                    "a": "The git diff command is used to show the differences between files, commits, or branches. It helps developers see exactly what has changed before staging or committing.",
+                    "type": "text",
+                    "id": 20
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Check unstaged changes",
+                    "code": "\ngit diff"
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q21 : What is a remote in Git?",
+                    "a": "A remote in Git is a reference to a version of your repository hosted on a server such as GitHub. It allows collaboration by enabling push and pull operations between local and remote repositories.",
+                    "type": "text",
+                    "id": 21
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q22 : How do you connect a local repo to GitHub?",
+                    "a": "A local repository is connected to GitHub by adding a remote origin URL using git remote add origin, and then pushing the local commits to the remote repository.",
+                    "type": "text",
+                    "id": 22
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Connect local repo to GitHub",
+                    "code": "\ngit remote add origin <repo-url>\ngit push -u origin main"
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q23 : What is git remote add origin?",
+                    "a": "The command git remote add origin is used to link a local Git repository to a remote repository. 'origin' is the default name given to the remote repository.",
+                    "type": "text",
+                    "id": 23
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Add remote origin",
+                    "code": "\ngit remote add origin <repository-url>"
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q24 : What is the use of git push?",
+                    "a": "The git push command is used to upload local repository changes to a remote repository like GitHub. It updates the remote branch with your committed changes.",
+                    "type": "text",
+                    "id": 24
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Push changes to remote",
+                    "code": "\ngit push origin main"
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q25 : What is branching strategy?",
+                    "a": "A branching strategy is a workflow that defines how branches are created, used, and merged in a project. It helps teams manage development, features, releases, and bug fixes efficiently.",
+                    "type": "text",
+                    "id": 25
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Feature Branching": "Each feature is developed in a separate branch",
+                        "Git Flow": "Structured branching model for releases",
+                        "Trunk Based": "Developers work directly on main branch with short-lived branches"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q26 : What is git checkout?",
+                    "a": "The git checkout command is used to switch between branches or restore files from a previous commit. It is a versatile but older command that handles multiple Git operations.",
+                    "type": "text",
+                    "id": 26
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Switch branch using checkout",
+                    "code": "\ngit checkout feature-branch"
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q27 : What is git switch?",
+                    "a": "The git switch command is used specifically to switch between branches in Git. It is a modern and clearer alternative to git checkout for branch switching.",
+                    "type": "text",
+                    "id": 27
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Switch branch using switch",
+                    "code": "\ngit switch feature-branch"
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q28 : Difference between checkout and switch?",
+                    "a": "Git checkout is a legacy command used for switching branches and restoring files, while git switch is a newer, more focused command used only for switching branches. switch is safer and more readable.",
+                    "type": "text",
+                    "id": 28
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "checkout": "Used for switching branches and restoring files",
+                        "switch": "Only used for switching branches",
+                        "Readability": "switch is more clear and modern",
+                        "Recommendation": "Prefer switch for branch operations"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q29 : What is a pull request?",
+                    "a": "A pull request is a GitHub feature that allows developers to propose changes from one branch to another. It enables code review, discussion, and approval before merging into the main branch.",
+                    "type": "text",
+                    "id": 29
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q30 : What happens when you create a pull request on GitHub?",
+                    "a": "When you create a pull request, GitHub compares your branch with the target branch, shows the differences, and allows team members to review, comment, and approve changes before merging.",
+                    "type": "text",
+                    "id": 30
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q31 : What is fork in GitHub?",
+                    "a": "A fork in GitHub is a copy of someone else's repository under your own account. It allows you to freely experiment with changes without affecting the original project.",
+                    "type": "text",
+                    "id": 31
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q32 : What is upstream repository?",
+                    "a": "The upstream repository is the original repository from which a fork is created. It is used to sync updates from the original project into your forked repository.",
+                    "type": "text",
+                    "id": 32
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q33 : What is git reset?",
+                    "a": "Git reset is a command used to undo changes by moving the HEAD pointer to a previous commit. It can modify staging and working directory depending on the reset mode.",
+                    "type": "text",
+                    "id": 33
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q34 : Difference between soft, mixed, and hard reset?",
+                    "a": "Git reset has three modes: soft keeps changes in staging area, mixed keeps changes in working directory but unstaged, and hard completely removes all changes.",
+                    "type": "text",
+                    "id": 34
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "soft reset": "Moves HEAD but keeps changes staged",
+                        "mixed reset": "Keeps changes but unstages them",
+                        "hard reset": "Deletes all changes completely"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q35 : What is git revert?",
+                    "a": "Git revert is a command that creates a new commit that undoes the changes of a previous commit. It is safe because it does not delete commit history.",
+                    "type": "text",
+                    "id": 35
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Revert a commit",
+                    "code": "\ngit revert <commit-id>"
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q36 : Difference between git reset and git revert?",
+                    "a": "Git reset moves the HEAD pointer to a previous commit and can modify or delete commit history depending on the mode, making it a destructive operation in shared branches. Git revert creates a new commit that undoes the changes of a previous commit without modifying history, making it safe for collaborative workflows.",
+                    "type": "text",
+                    "id": 36
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Aspect" },
+                        { "label": "git reset" },
+                        { "label": "git revert" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Action" },
+                                { "col": "Moves HEAD to a previous commit." },
+                                {
+                                    "col": "Creates a new commit that undoes changes."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "History Impact" },
+                                {
+                                    "col": "Can rewrite or delete commit history."
+                                },
+                                { "col": "Preserves commit history safely." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Safety" },
+                                { "col": "Dangerous in shared repositories." },
+                                { "col": "Safe for collaborative workflows." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Usage" },
+                                { "col": "Used for local undoing of commits." },
+                                {
+                                    "col": "Used for undoing public/shared commits."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q37 : What is rebasing in Git?",
+                    "a": "Rebasing in Git is the process of moving or reapplying commits from one branch onto another branch. It rewrites commit history to create a linear project history.",
+                    "type": "text",
+                    "id": 37
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Rebase feature branch onto main",
+                    "code": "\ngit rebase main"
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q38 : Difference between merge and rebase?",
+                    "a": "Merge combines branches by creating a merge commit and preserves full history, while rebase moves commits onto another branch and creates a linear history by rewriting commit history.",
+                    "type": "text",
+                    "id": 38
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Aspect" },
+                        { "label": "merge" },
+                        { "label": "rebase" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Commit Structure" },
+                                { "col": "Creates a merge commit." },
+                                { "col": "Rewrites commits onto new base." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "History" },
+                                {
+                                    "col": "Preserves complete commit history (graph structure)."
+                                },
+                                { "col": "Creates linear commit history." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Readability" },
+                                {
+                                    "col": "History can become complex with branches."
+                                },
+                                { "col": "Cleaner and linear history." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Usage" },
+                                { "col": "Best for collaborative workflows." },
+                                {
+                                    "col": "Best for cleaning up local commits before merging."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q39 : When should you use rebase?",
+                    "a": "Rebase should be used when you want to maintain a clean and linear commit history before merging a feature branch. It is commonly used before merging to main to avoid unnecessary merge commits.",
+                    "type": "text",
+                    "id": 39
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Before merge": "To clean up commit history",
+                        "Local branches": "Safe to rebase private branches",
+                        "Avoid": "Do not rebase shared/public branches",
+                        "Goal": "Maintain linear commit history"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q40 : What is git stash?",
+                    "a": "Git stash temporarily saves uncommitted changes so that you can switch branches or work on something else without losing your current progress. Later, you can reapply the stashed changes.",
+                    "type": "text",
+                    "id": 40
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Stash current changes",
+                    "code": "\ngit stash"
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q41 : How does Git store data internally?",
+                    "a": "Git stores data as a collection of snapshots rather than differences. Every commit is a snapshot of the entire project state. Internally, Git uses objects like blobs, trees, and commits stored in a content-addressable storage using SHA-1 hashes.",
+                    "type": "text",
+                    "id": 41
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Blob": "Stores file data",
+                        "Tree": "Stores directory structure",
+                        "Commit": "Stores snapshot reference",
+                        "Storage": "Content-addressable using SHA hash"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q42 : What is a commit hash?",
+                    "a": "A commit hash is a unique identifier generated using SHA-1 algorithm that represents each commit in Git. It ensures integrity and allows Git to track specific commits.",
+                    "type": "text",
+                    "id": 42
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q43 : What is HEAD in Git?",
+                    "a": "HEAD in Git is a pointer that refers to the current branch or commit you are working on. It represents the latest snapshot of your working directory.",
+                    "type": "text",
+                    "id": 43
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q44 : What is detached HEAD state?",
+                    "a": "Detached HEAD state occurs when HEAD points directly to a specific commit instead of a branch. In this state, new commits are not part of any branch unless explicitly saved.",
+                    "type": "text",
+                    "id": 44
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q45 : How do you recover a deleted commit?",
+                    "a": "A deleted commit can be recovered using git reflog, which tracks all changes to HEAD. You can find the commit hash and restore it using checkout or reset.",
+                    "type": "text",
+                    "id": 45
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Recover commit using reflog",
+                    "code": "\ngit reflog\ngit checkout <commit-hash>"
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q46 : What is Git workflow?",
+                    "a": "Git workflow is a structured process that defines how developers use Git for branching, committing, and merging changes in a team. It ensures smooth collaboration and code management.",
+                    "type": "text",
+                    "id": 46
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Feature Branch Workflow": "Each feature developed in separate branch",
+                        "Git Flow": "Structured branching model with develop and main",
+                        "Trunk Based": "Frequent commits to main branch",
+                        "Purpose": "Improve collaboration and consistency"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q47 : What is Git Flow model?",
+                    "a": "Git Flow is a branching model that defines a strict workflow using branches like main, develop, feature, release, and hotfix to manage software development and releases.",
+                    "type": "text",
+                    "id": 47
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "main": "Production-ready code",
+                        "develop": "Integration branch for features",
+                        "feature": "Used for new features",
+                        "hotfix": "Used for urgent production fixes"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q48 : What are Git hooks?",
+                    "a": "Git hooks are scripts that run automatically before or after Git events like commit, push, or merge. They help automate tasks such as linting, testing, and validation.",
+                    "type": "text",
+                    "id": 48
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q49 : How do you undo a commit?",
+                    "a": "A commit can be undone using git revert to safely create a new commit that reverses changes, or git reset to move HEAD backward and modify history (in local branches).",
+                    "type": "text",
+                    "id": 49
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "git revert": "Safely undoes commit with new commit",
+                        "git reset": "Removes commits by moving HEAD",
+                        "Best Practice": "Use revert for shared repositories"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q50 : Best practices for using Git and GitHub in a team?",
+                    "a": "Best practices in Git and GitHub ensure clean collaboration, better code quality, and reduced conflicts. Teams should follow proper branching strategy, meaningful commit messages, regular pulls, and code reviews.",
+                    "type": "text",
+                    "id": 50
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Commit messages": "Write clear and meaningful messages",
+                        "Branching": "Use feature branches for development",
+                        "Pull Requests": "Always review code before merging",
+                        "Sync": "Regularly pull latest changes",
+                        "Avoid": "Do not commit directly to main branch"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "q": "Q51 : What does the command git config do?",
                     "a": "The git config command is a convenient way to set configuration options for defining the behavior of the repository, user information and preferences, git installation-based configurations, and many such things. ",
                     "type": "text",
-                    "id": 3,
+                    "id": 51,
                     "playButton": true,
                     "pauseButton": false
                 },
@@ -45,52 +1112,12 @@
             ]
         },
         {
-            "id": "4",
+            "id": "52",
             "Que": [
                 {
-                    "q": "Q4 : What does git status command do?",
-                    "a": "git status command is used for showing the difference between the working directory and the index which is helpful for understanding git in-depth and also keep track of the tracked and non-tracked changes.",
+                    "q": "Q52 : How will you create a git repository?",
                     "type": "text",
-                    "id": 4,
-                    "playButton": true,
-                    "pauseButton": false
-                },
-                {
-                    "type": "code",
-                    "lang": "javascript",
-                    "code": "\ngit status"
-                }
-            ]
-        },
-        {
-            "id": "5",
-            "Que": [
-                {
-                    "q": "Q5 : What does git add command do?",
-                    "type": "text",
-                    "id": 5,
-                    "playButton": true,
-                    "pauseButton": false
-                },
-                {
-                    "type": "list",
-                    "isListKeyRequired": false,
-                    "list": {
-                        "1": "This command adds files and changes to the index of the existing directory.",
-                        "2 ": "You can add all changes at once using 'git add .' command.",
-                        "3": "You can add files one by one specifically using 'git add <file_name>' command.",
-                        "4": "You can add contents of a particular folder by using 'git add /<folder_name>/' command."
-                    }
-                }
-            ]
-        },
-        {
-            "id": "6",
-            "Que": [
-                {
-                    "q": "Q6 : How will you create a git repository?",
-                    "type": "text",
-                    "id": 6,
+                    "id": 52,
                     "playButton": true,
                     "pauseButton": false
                 },
@@ -106,79 +1133,63 @@
             ]
         },
         {
-            "id": "7",
+            "id": "53",
             "Que": [
                 {
-                    "q": "Q7 : Why we use git stash?",
-                    "a": "Git stash can be used in cases where we need to switch in between branches and at the same time not wanting to lose edits in the current branch. Running the git stash command basically pushes the current working directory state and index to the stack for future use and thereby providing a clean working directory for other tasks.",
+                    "q": "Q53 : What differentiates between the commands git remote and git clone?",
+                    "a": "git clone creates a complete copy of an existing remote repository on your local machine, while git remote is used to manage connections between your local repository and remote repositories.",
                     "type": "text",
-                    "id": 7,
-                    "playButton": true,
-                    "pauseButton": false
-                }
-            ]
-        },
-        {
-            "id": "8",
-            "Que": [
-                {
-                    "q": "Q8 : What differentiates between the commands git remote and git clone?",
-                    "a": "git remote command creates an entry in  git config that specifies a name for a particular URL. Whereas git clone creates a new git repository by copying an existing one located at the URL.",
-                    "type": "text",
-                    "id": 8,
-                    "playButton": true,
-                    "pauseButton": false
-                }
-            ]
-        },
-        {
-            "id": "9",
-            "Que": [
-                {
-                    "q": "Q9 : Differentiate between git pull and git fetch?",
-                    "type": "text",
-                    "id": 9,
+                    "id": 53,
                     "playButton": true,
                     "pauseButton": false
                 },
                 {
                     "type": "table",
                     "header": [
-                        {
-                            "label": "git pull "
-                        },
-                        {
-                            "label": "git fetch"
-                        }
+                        { "label": "Aspect" },
+                        { "label": "git clone" },
+                        { "label": "git remote" }
                     ],
                     "column": [
                         {
                             "row": [
+                                { "col": "Purpose" },
                                 {
-                                    "col": "This command pulls new changes from the currently working branch located in the remote central repository."
+                                    "col": "Creates a full copy of a remote repository."
                                 },
                                 {
-                                    "col": "This command is also used for a similar purpose but it follows a two step process: "
+                                    "col": "Manages connections to remote repositories."
                                 }
                             ]
                         },
                         {
                             "row": [
+                                { "col": "Action" },
                                 {
-                                    "col": "git pull = git fetch + git merge"
+                                    "col": "Downloads repository to local machine."
                                 },
                                 {
-                                    "col": "Pulls all commits and changes from desired branch and stores them in a new branch of the local repository."
+                                    "col": "Adds, views, or removes remote URLs."
                                 }
                             ]
                         },
                         {
                             "row": [
+                                { "col": "Usage" },
                                 {
-                                    "col": ""
+                                    "col": "Used when starting work from an existing repo."
                                 },
                                 {
-                                    "col": "For changes to be reflected in the current / target branch, git fetch should be followed by git merge command."
+                                    "col": "Used after repo is created to link remote."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Scope" },
+                                { "col": "Creates new local repository." },
+                                {
+                                    "col": "Does not create repository, only manages links."
                                 }
                             ]
                         }
@@ -187,12 +1198,12 @@
             ]
         },
         {
-            "id": "10",
+            "id": "54",
             "Que": [
                 {
-                    "q": "Q10 : Can you give differences between 'pull request' and 'branch'?",
+                    "q": "Q54 : Can you give differences between 'pull request' and 'branch'?",
                     "type": "text",
-                    "id": 10,
+                    "id": 54,
                     "playButton": true,
                     "pauseButton": false
                 },
@@ -222,12 +1233,12 @@
             ]
         },
         {
-            "id": "11",
+            "id": "55",
             "Que": [
                 {
-                    "q": "Q11 : What do the git diff and git status commands do?",
+                    "q": "Q55 : What do the git diff and git status commands do?",
                     "type": "text",
-                    "id": 11,
+                    "id": 55,
                     "playButton": true,
                     "pauseButton": false
                 },
@@ -261,70 +1272,25 @@
             ]
         },
         {
-            "id": "12",
+            "id": "56",
             "Que": [
                 {
-                    "q": "Q12 : What is the functionality of “git cherry-pick” command?",
+                    "q": "Q56 : What is the functionality of “git cherry-pick” command?",
                     "a": "This command is used to introduce certain commits from one branch onto another branch within the repository. The most common use case is when we want to forward- or back-port commits from the maintenance branch to the development branch.",
                     "type": "text",
-                    "id": 12,
+                    "id": 56,
                     "playButton": true,
                     "pauseButton": false
                 }
             ]
         },
         {
-            "id": "13",
+            "id": "57",
             "Que": [
                 {
-                    "q": "Q13 : What are the differences between git revert and git reset?",
+                    "q": "Q57 : What's the difference between git merge and git rebase?",
                     "type": "text",
-                    "id": 13,
-                    "playButton": true,
-                    "pauseButton": false
-                },
-                {
-                    "type": "table",
-                    "header": [
-                        {
-                            "label": "git revert "
-                        },
-                        {
-                            "label": "git reset"
-                        }
-                    ],
-                    "column": [
-                        {
-                            "row": [
-                                {
-                                    "col": "This command is used for creating a new commit that undoes the changes of the previous commit."
-                                },
-                                {
-                                    "col": "This command is used for undoing the local changes done in the git repository."
-                                }
-                            ]
-                        },
-                        {
-                            "row": [
-                                {
-                                    "col": "Using this command adds a new history to the project without modifying the existing history"
-                                },
-                                {
-                                    "col": "This command operates on the commit history, git index, and the working directory."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "14",
-            "Que": [
-                {
-                    "q": "Q14 : What's the difference between git merge and git rebase?",
-                    "type": "text",
-                    "id": 14,
+                    "id": 57,
                     "playButton": true,
                     "pauseButton": false
                 },
@@ -358,61 +1324,6 @@
                 {
                     "img": "git_rebase.png",
                     "type": "img"
-                }
-            ]
-        },
-        {
-            "id": "15",
-            "Que": [
-                {
-                    "q": "Q15 : Can you tell the difference between Git and GitHub?",
-                    "type": "text",
-                    "id": 15,
-                    "playButton": true,
-                    "pauseButton": false
-                },
-                {
-                    "type": "table",
-                    "header": [
-                        {
-                            "label": "Git "
-                        },
-                        {
-                            "label": "GitHub"
-                        }
-                    ],
-                    "column": [
-                        {
-                            "row": [
-                                {
-                                    "col": "This is a distributed version control system installed on local machines which allow developers to keep track of commit histories and supports collaborative work."
-                                },
-                                {
-                                    "col": "This is a cloud-based source code repository developed by using git."
-                                }
-                            ]
-                        },
-                        {
-                            "row": [
-                                {
-                                    "col": "This is maintained by “The Linux Foundation”."
-                                },
-                                {
-                                    "col": "This was acquired by “Microsoft”"
-                                }
-                            ]
-                        },
-                        {
-                            "row": [
-                                {
-                                    "col": "SVN, Mercurial, etc are the competitors."
-                                },
-                                {
-                                    "col": "GitLab, Atlassian BitBucket, etc are the competitors."
-                                }
-                            ]
-                        }
-                    ]
                 }
             ]
         }
