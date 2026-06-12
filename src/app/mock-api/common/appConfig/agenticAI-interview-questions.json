@@ -1,713 +1,2243 @@
 {
-  "agenticAI-interview-questions": [
-    {
-      "id": "1",
-      "Que": [
+    "agenticAI-interview-questions": [
         {
-          "q": "Q1 : What is an autonomous AI agent?",
-          "a": "An autonomous AI agent is basically an AI system that can perform tasks on its own without needing constant human instructions for every step. Instead of only giving one response like a normal chatbot, it can understand a goal, plan actions, make decisions, use tools, and adjust itself based on results. These agents usually combine Large Language Models, memory systems, APIs, and reasoning loops together. The biggest advantage of autonomous agents is that they can handle multi-step workflows automatically. They observe the environment, take actions, evaluate outcomes, and continue working until the task is completed. Modern AI agents are widely used in automation, customer support, software development, cybersecurity, and business operations because they reduce manual work and improve productivity.",
-          "example": "Example: An AI travel assistant that searches flights, compares hotels, books tickets, and sends itinerary emails automatically.",
-          "type": "text",
-          "id": 1,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "Que": [
+            "id": "1",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q1 : What is Agentic AI?",
+                    "a": "Agentic AI refers to artificial intelligence systems that can autonomously make decisions, plan actions, use tools, and execute tasks to achieve specific goals. Unlike traditional AI systems that only respond to prompts, Agentic AI can reason through problems, break complex objectives into smaller tasks, and take actions independently. These systems often combine Large Language Models, memory, planning mechanisms, and external tools to perform sophisticated workflows. Agentic AI is increasingly used in automation, customer support, research, software development, and enterprise productivity applications.",
+                    "type": "text",
+                    "id": 1
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Core Components",
+                    "list": {
+                        "1": "Reasoning",
+                        "2": "Planning",
+                        "3": "Memory",
+                        "4": "Tool Usage",
+                        "5": "Decision Making"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Agentic AI focuses on autonomous task execution rather than simple question answering."
+                }
+            ]
+        },
         {
-          "q": "Q2 : What are the key components of an AI agent's core architecture?",
-          "a": "The core architecture of an AI agent is usually built using multiple important layers that work together. The first component is the reasoning engine or Large Language Model, which acts like the brain of the agent and handles decision-making. The second component is memory, which stores conversation history, user preferences, and previous actions. The third component is tools or APIs that allow the agent to interact with external systems like databases, web browsers, file systems, or applications. Another important layer is orchestration, which manages workflows, execution order, and state tracking. Some advanced agents also include planning modules, security layers, and reflection systems for self-correction. Together, these components help the agent work independently and complete complex tasks step-by-step.",
-          "example": "Example: A coding AI agent using GPT for reasoning, vector databases for memory, and GitHub APIs for code operations.",
-          "type": "text",
-          "id": 2,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "Que": [
+            "id": "2",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q2 : How is Agentic AI different from Generative AI?",
+                    "a": "Generative AI primarily focuses on creating content such as text, images, audio, or code based on user prompts. Agentic AI extends these capabilities by adding planning, reasoning, memory, and action execution. While Generative AI produces outputs, Agentic AI can actively work toward goals by making decisions and interacting with external systems. This enables agents to automate workflows, perform research, manage tasks, and coordinate multiple actions without requiring constant user intervention throughout the process.",
+                    "type": "text",
+                    "id": 2
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Generative AI" },
+                        { "label": "Agentic AI" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Generates Content" },
+                                { "col": "Executes Tasks" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Prompt Based" },
+                                { "col": "Goal Oriented" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Limited Actions" },
+                                { "col": "Autonomous Decisions" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q3 : Explain the difference between tool use and tool discovery in Agentic frameworks.",
-          "a": "Tool use means the AI agent already has access to a predefined set of tools or APIs that are available inside the system. The model simply chooses the correct tool from that fixed list whenever needed. Tool discovery is more advanced because the agent dynamically searches for new tools or APIs during runtime instead of relying only on preloaded options. In tool discovery, the AI can identify new capabilities, read documentation, and decide which external service is suitable for solving the task. Tool use is easier to control and more secure, while tool discovery provides higher flexibility and scalability. Modern enterprise systems usually combine both approaches depending on the complexity of the workflow and security requirements.",
-          "example": "Example: A chatbot using a fixed weather API is tool use, while searching an API marketplace for new integrations is tool discovery.",
-          "type": "text",
-          "id": 3,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "Que": [
+            "id": "3",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q3 : What are AI agents?",
+                    "a": "AI agents are software systems that perceive information, process it, make decisions, and perform actions to achieve predefined objectives. They can use Large Language Models, memory systems, APIs, databases, and external tools to complete tasks. AI agents are designed to operate autonomously and adapt to changing conditions. Depending on their complexity, they may perform simple automation tasks or manage sophisticated workflows involving planning, reasoning, collaboration, and continuous learning from interactions and outcomes.",
+                    "type": "text",
+                    "id": 3
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Agent Capabilities",
+                    "list": {
+                        "1": "Perception",
+                        "2": "Reasoning",
+                        "3": "Planning",
+                        "4": "Action Execution",
+                        "5": "Learning"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q4 : What is the concept of a multi-agent system (MAS)?",
-          "a": "A Multi-Agent System, also called MAS, is an architecture where multiple AI agents work together to solve a larger and more complex problem. Instead of using one giant AI model for everything, each agent is assigned a specialized role or responsibility. These agents communicate with each other, share information, and coordinate actions to achieve a final goal. Multi-agent systems improve scalability, modularity, and task efficiency because different agents can focus on different expertise areas simultaneously. They are commonly used in automation platforms, robotics, enterprise workflows, research systems, and cloud infrastructure management. However, designing proper communication and synchronization between agents is very important to avoid conflicts or inconsistent outputs.",
-          "example": "Example: One AI agent handling planning, another managing database queries, and another generating reports in a business workflow.",
-          "type": "text",
-          "id": 4,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "Que": [
+            "id": "4",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q4 : What are the key characteristics of Agentic AI?",
+                    "a": "Agentic AI systems possess several defining characteristics including autonomy, goal orientation, reasoning, planning, memory management, and tool utilization. These systems can independently determine the steps required to accomplish objectives and adjust strategies based on changing conditions. Agentic AI also maintains context across interactions, enabling long-term task execution. The combination of these capabilities allows agents to solve complex problems, coordinate workflows, and make informed decisions without requiring continuous human guidance.",
+                    "type": "text",
+                    "id": 4
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Key Characteristics",
+                    "list": {
+                        "1": "Autonomy",
+                        "2": "Reasoning",
+                        "3": "Planning",
+                        "4": "Memory",
+                        "5": "Adaptability"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Autonomy and goal-driven behavior are central traits of Agentic AI."
+                }
+            ]
+        },
         {
-          "q": "Q5 : What does ReAct mean in agent loop design?",
-          "a": "ReAct stands for Reasoning and Acting. It is a prompt engineering and workflow design technique used in AI agents where the model alternates between thinking and taking actions step-by-step. Instead of directly generating a final answer, the AI first explains its reasoning, decides which action or tool to use, observes the result, and then continues the reasoning process again. This creates a structured loop that improves accuracy and reduces hallucinations because the model continuously checks real-world outputs before proceeding. ReAct is extremely useful for complex workflows involving APIs, web browsing, calculations, or multi-step automation tasks. It also makes debugging easier because developers can see the internal reasoning path of the AI agent.",
-          "example": "Example: An AI assistant thinking about the best API to call before retrieving weather information and then analyzing the returned data.",
-          "type": "text",
-          "id": 5,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
+            "id": "5",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q5 : Why is Agentic AI important?",
+                    "a": "Agentic AI is important because it enables intelligent automation beyond simple task execution. By combining reasoning, planning, and action-taking capabilities, these systems can manage complex workflows that traditionally required human involvement. Organizations use Agentic AI to improve productivity, reduce operational costs, accelerate decision-making, and enhance customer experiences. As AI technologies continue to evolve, Agentic AI is expected to play a major role in transforming industries such as healthcare, finance, education, software development, and business operations.",
+                    "type": "text",
+                    "id": 5
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Business Benefits",
+                    "list": {
+                        "1": "Higher Productivity",
+                        "2": "Reduced Costs",
+                        "3": "Faster Decisions",
+                        "4": "Workflow Automation",
+                        "5": "Improved Efficiency"
+                    }
+                }
+            ]
+        },
 
-    {
-      "id": "6",
-      "Que": [
         {
-          "q": "Q6 : What is short-term memory versus long-term memory for an autonomous agent?",
-          "a": "Short-term memory in an AI agent refers to temporary information that the system keeps during an active conversation or workflow. It usually includes recent prompts, tool outputs, current tasks, and ongoing reasoning steps. This memory exists only within the context window of the model and is limited in size. Long-term memory, on the other hand, stores information permanently in external systems such as vector databases, cloud storage, or knowledge bases. It helps the agent remember previous interactions, user preferences, historical workflows, and important business data even after sessions end. Both memory types are important because short-term memory helps with current task continuity, while long-term memory improves personalization, learning, and better decision-making across multiple interactions.",
-          "example": "Example: A customer support AI remembering your issue during the chat is short-term memory, while remembering your purchase history from previous months is long-term memory.",
-          "type": "text",
-          "id": 6,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "Que": [
+            "id": "6",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q6 : What is autonomy in Agentic AI?",
+                    "a": "Autonomy in Agentic AI refers to the ability of an AI system to operate independently with minimal human intervention. Autonomous agents can analyze goals, create execution plans, make decisions, and perform actions without requiring constant instructions. They continuously evaluate progress and adapt their behavior based on changing conditions. This capability enables AI agents to handle complex workflows efficiently while reducing manual effort. Autonomy is considered one of the most important characteristics that distinguishes Agentic AI from traditional AI systems.",
+                    "type": "text",
+                    "id": 6
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Autonomous Capabilities",
+                    "list": {
+                        "1": "Decision Making",
+                        "2": "Task Execution",
+                        "3": "Planning",
+                        "4": "Adaptation"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Higher autonomy allows agents to complete goals with fewer user instructions."
+                }
+            ]
+        },
         {
-          "q": "Q7 : Explain the role of a tool or plugin in an agent pipeline.",
-          "a": "A tool or plugin in an AI agent pipeline acts like an external capability that allows the model to perform actions beyond simple text generation. Large Language Models by themselves can only predict text, but tools allow them to interact with real systems such as APIs, databases, file systems, browsers, or enterprise applications. Tools help the agent fetch live information, execute tasks, send emails, create reports, or automate workflows. The orchestration layer decides when a tool should be called and passes structured parameters to it. Proper tool integration makes AI agents more practical and useful for real-world applications because they can actually perform operations instead of only giving suggestions.",
-          "example": "Example: An AI assistant using a calendar API to schedule meetings automatically.",
-          "type": "text",
-          "id": 7,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "Que": [
+            "id": "7",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q7 : What is reasoning in Agentic AI?",
+                    "a": "Reasoning is the process through which an AI agent analyzes information, evaluates alternatives, and determines the best course of action. It allows agents to solve problems logically rather than simply generating responses. Reasoning helps agents break complex tasks into smaller steps, identify dependencies, and make informed decisions. Advanced reasoning capabilities improve the quality of outputs and enable AI systems to handle real-world scenarios that require planning, critical thinking, and contextual understanding.",
+                    "type": "text",
+                    "id": 7
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Reasoning Benefits",
+                    "list": {
+                        "1": "Problem Solving",
+                        "2": "Decision Making",
+                        "3": "Task Planning",
+                        "4": "Context Understanding"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q8 : What is an orchestration layer in an agent network?",
-          "a": "An orchestration layer is the central control system that manages how AI agents, tools, workflows, and memory systems interact with each other. It handles task routing, execution flow, state tracking, retries, and communication between different components inside the architecture. Without orchestration, complex agent systems can become disorganized and unstable because multiple processes may run without coordination. The orchestration layer ensures that tasks are executed in the correct order and that outputs from one step are passed properly to the next step. It also manages checkpoints, error handling, logging, and workflow recovery. In enterprise AI systems, orchestration plays a critical role in maintaining reliability, scalability, and operational control.",
-          "example": "Example: LangGraph and CrewAI managing multiple AI agents and tool execution workflows together.",
-          "type": "text",
-          "id": 8,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "Que": [
+            "id": "8",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q8 : What is planning in Agentic AI?",
+                    "a": "Planning is the ability of an AI agent to create a sequence of actions required to achieve a specific goal. Instead of immediately responding to a request, the agent evaluates the objective, identifies necessary steps, and organizes them into an execution strategy. Planning improves efficiency and allows agents to handle complex tasks that involve multiple stages. Effective planning also enables agents to adjust workflows dynamically when conditions change or unexpected challenges arise.",
+                    "type": "text",
+                    "id": 8
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Simple Planning Flow",
+                    "code": "\nGoal -> Analyze -> Plan Steps -> Execute -> Verify Result"
+                },
+                {
+                    "type": "note",
+                    "note": "Planning helps agents manage multi-step tasks more effectively."
+                }
+            ]
+        },
         {
-          "q": "Q9 : What is Human-in-the-Loop (HITL) inside agent workflows?",
-          "a": "Human-in-the-Loop, also called HITL, is a safety mechanism where human approval or intervention is added during important stages of an AI workflow. Instead of allowing the AI agent to perform every action independently, the system pauses execution and asks for human confirmation before performing high-risk or sensitive operations. HITL is extremely important in enterprise systems because AI models can still make mistakes, hallucinate information, or misunderstand instructions. By including human oversight, organizations can reduce risks, improve reliability, and maintain compliance with business policies and regulations. HITL is commonly used in healthcare, finance, legal systems, cybersecurity, and automation platforms where incorrect actions could have serious consequences.",
-          "example": "Example: An AI assistant asking for manager approval before sending bulk customer emails or deleting records.",
-          "type": "text",
-          "id": 9,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "Que": [
+            "id": "9",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q9 : What is memory in Agentic AI?",
+                    "a": "Memory in Agentic AI refers to the capability of storing and retrieving information from previous interactions, tasks, and knowledge sources. Memory enables agents to maintain context over time and make more informed decisions. It can be short-term, used during a single session, or long-term, stored across multiple interactions. Effective memory systems improve personalization, consistency, and task completion by allowing agents to remember user preferences, previous actions, and relevant historical information.",
+                    "type": "text",
+                    "id": 9
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Memory Type" },
+                        { "label": "Purpose" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Short-Term Memory" },
+                                { "col": "Current Session Context" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Long-Term Memory" },
+                                { "col": "Persistent Knowledge Storage" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q10 : How does an agent perceive environmental state?",
-          "a": "An AI agent perceives environmental state by continuously collecting information from its surroundings through prompts, APIs, sensors, databases, tool outputs, or external systems. The agent processes this incoming data and converts it into context that can be used for reasoning and decision-making. Environmental state can include user messages, live system updates, application logs, notifications, files, or real-time data streams. The quality of perception directly affects how accurately the agent performs tasks because decisions are based on the information currently available. Advanced agents also update their internal memory using environmental feedback so they can adapt dynamically to changing conditions instead of following only static instructions.",
-          "example": "Example: A cybersecurity AI agent reading server logs and network alerts before deciding whether to trigger a security response.",
-          "type": "text",
-          "id": 10,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-  
-    {
-      "id": "11",
-      "Que": [
+            "id": "10",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q10 : What are tools in Agentic AI?",
+                    "a": "Tools are external resources or services that AI agents use to perform actions beyond their built-in capabilities. Examples include APIs, databases, search engines, calculators, email services, and software applications. By accessing tools, agents can retrieve real-time information, execute operations, and interact with external systems. Tool usage significantly expands the capabilities of Agentic AI and enables practical applications such as automation, research, scheduling, customer support, and business process management.",
+                    "type": "text",
+                    "id": 10
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Common AI Tools",
+                    "list": {
+                        "1": "APIs",
+                        "2": "Databases",
+                        "3": "Search Engines",
+                        "4": "Calculators",
+                        "5": "Email Services"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Tools allow AI agents to interact with the outside world and perform real actions."
+                }
+            ]
+        },
         {
-          "q": "Q11 : What is task decomposition in AI agents?",
-          "a": "Task decomposition is the process where an AI agent breaks a large and complex problem into smaller manageable subtasks before solving it. Instead of trying to complete everything in one step, the agent creates a structured plan and executes tasks one by one. This improves reasoning, accuracy, and workflow management because smaller tasks are easier to process and verify. Task decomposition is very important in autonomous AI systems because real-world workflows often involve multiple actions, dependencies, and decision points. Advanced AI agents use planning algorithms and reasoning frameworks to dynamically divide tasks depending on the situation. Proper decomposition also helps with debugging, monitoring, and collaboration between multiple agents in larger systems.",
-          "example": "Example: An AI travel assistant dividing a trip request into flight booking, hotel reservation, budget calculation, and itinerary generation tasks.",
-          "type": "text",
-          "id": 11,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "12",
-      "Que": [
+            "id": "11",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q11 : What is goal-oriented behavior in Agentic AI?",
+                    "a": "Goal-oriented behavior refers to an AI agent's ability to focus on achieving a specific objective rather than simply responding to individual instructions. The agent continuously evaluates progress, identifies obstacles, and adjusts its actions to reach the desired outcome. This capability allows agents to work independently on complex tasks and make decisions aligned with predefined goals. Goal-oriented behavior is a fundamental characteristic of Agentic AI because it enables intelligent automation and long-term task execution.",
+                    "type": "text",
+                    "id": 11
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Goal-Oriented Features",
+                    "list": {
+                        "1": "Task Prioritization",
+                        "2": "Progress Tracking",
+                        "3": "Decision Making",
+                        "4": "Adaptive Planning"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Agentic AI focuses on achieving outcomes rather than generating isolated responses."
+                }
+            ]
+        },
         {
-          "q": "Q12 : What is reflection in autonomous AI agents?",
-          "a": "Reflection in autonomous AI agents refers to the ability of the system to review, analyze, and improve its own outputs or decisions before continuing execution. Instead of blindly moving forward, the agent evaluates whether its previous action was correct, efficient, or aligned with the intended goal. Reflection improves reasoning quality and reduces mistakes because the AI can identify errors and adjust its strategy dynamically. This concept is inspired by human self-review processes where people rethink actions before making final decisions. Reflection is especially useful in coding agents, research assistants, and planning systems where accuracy is critical. Many modern AI frameworks include reflection loops to improve reliability and reduce hallucinations.",
-          "example": "Example: A coding AI reviewing generated code for bugs before executing or submitting it.",
-          "type": "text",
-          "id": 12,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "13",
-      "Que": [
+            "id": "12",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q12 : What is task decomposition in Agentic AI?",
+                    "a": "Task decomposition is the process of breaking a large and complex objective into smaller, manageable subtasks. AI agents use this technique to improve efficiency, simplify reasoning, and execute workflows systematically. By dividing tasks into smaller steps, agents can track progress more effectively and reduce the likelihood of errors. Task decomposition is commonly used in research, software development, workflow automation, and project management systems where multiple actions are required to achieve a final objective.",
+                    "type": "text",
+                    "id": 12
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Task Decomposition Example",
+                    "code": "\nCreate Website\n -> Gather Requirements\n -> Design UI\n -> Develop Features\n -> Test Application\n -> Deploy"
+                }
+            ]
+        },
         {
-          "q": "Q13 : What is planning in Agentic AI systems?",
-          "a": "Planning in Agentic AI systems is the process where the AI creates a sequence of actions required to achieve a specific goal. Instead of immediately responding, the agent first analyzes the objective, identifies dependencies, selects tools, and organizes execution steps logically. Planning helps AI agents solve complex workflows more efficiently because tasks are completed in a structured and goal-oriented manner. Advanced planning systems may also adjust dynamically if new information appears or if a previous step fails. Planning is one of the most important capabilities that differentiates autonomous agents from traditional chatbots because it enables long-running and multi-step operations.",
-          "example": "Example: An AI project management assistant planning meetings, assigning tasks, and tracking deadlines automatically.",
-          "type": "text",
-          "id": 13,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "14",
-      "Que": [
+            "id": "13",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q13 : What is a single-agent system?",
+                    "a": "A single-agent system consists of one AI agent responsible for performing all reasoning, planning, decision-making, and execution tasks. The agent independently manages workflows and interacts with necessary tools and resources. Single-agent systems are easier to design and maintain compared to multi-agent architectures. They are commonly used for personal assistants, chatbots, automation workflows, and task management applications where a single intelligent entity can effectively handle the required responsibilities.",
+                    "type": "text",
+                    "id": 13
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Characteristic" },
+                        { "label": "Single-Agent System" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Number of Agents" },
+                                { "col": "One" }
+                            ]
+                        },
+                        {
+                            "row": [{ "col": "Complexity" }, { "col": "Lower" }]
+                        },
+                        {
+                            "row": [
+                                { "col": "Coordination Required" },
+                                { "col": "No" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q14 : What is agent alignment and why is it important?",
-          "a": "Agent alignment means ensuring that an AI agent behaves according to human goals, ethical standards, safety rules, and business requirements. Since autonomous agents can make decisions and perform actions independently, alignment becomes extremely important to prevent harmful behavior, security risks, or unintended operations. Alignment techniques include reinforcement learning, policy constraints, human feedback, safety filters, and rule-based restrictions. Properly aligned agents are more reliable, trustworthy, and suitable for production environments. Without alignment, agents may misuse tools, generate unsafe outputs, or take actions that conflict with organizational objectives. Modern AI companies invest heavily in alignment research because autonomous systems are becoming increasingly powerful.",
-          "example": "Example: Preventing an AI financial assistant from making unauthorized transactions without user approval.",
-          "type": "text",
-          "id": 14,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "15",
-      "Que": [
+            "id": "14",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q14 : What is a multi-agent system?",
+                    "a": "A multi-agent system consists of multiple AI agents working together to achieve shared or individual goals. Each agent may specialize in a specific task such as planning, research, analysis, or execution. These agents communicate, collaborate, and coordinate actions to solve complex problems more efficiently than a single agent. Multi-agent systems are commonly used in enterprise automation, robotics, simulations, and distributed AI environments where teamwork and specialization improve overall performance and scalability.",
+                    "type": "text",
+                    "id": 14
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Specialization",
+                        "2": "Scalability",
+                        "3": "Collaboration",
+                        "4": "Improved Efficiency"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Multi-agent systems divide responsibilities among specialized agents."
+                }
+            ]
+        },
         {
-          "q": "Q15 : What is a reasoning loop in AI agents?",
-          "a": "A reasoning loop is a continuous cycle where an AI agent thinks, acts, observes results, and then thinks again before deciding the next step. This iterative process helps the agent solve complex problems more effectively because decisions are constantly updated using new information and feedback. Reasoning loops are commonly used in autonomous systems, tool-using agents, and multi-step workflows. They improve adaptability because the AI can recover from errors, adjust strategies, and refine outputs dynamically instead of following a rigid fixed process. Reasoning loops are heavily used in frameworks such as ReAct and autonomous agent architectures.",
-          "example": "Example: An AI research assistant searching the web, analyzing results, refining queries, and repeating the process until enough information is collected.",
-          "type": "text",
-          "id": 15,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
- 
-    {
-      "id": "16",
-      "Que": [
+            "id": "15",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q15 : What is agent communication?",
+                    "a": "Agent communication is the process through which multiple AI agents exchange information, coordinate tasks, and share decisions. Effective communication enables agents to collaborate efficiently while working on complex objectives. Communication mechanisms may include messages, events, APIs, shared memory, or structured protocols. In multi-agent systems, communication is critical because it helps agents synchronize activities, avoid conflicts, distribute workloads, and ensure that all participants work toward achieving the desired goals successfully.",
+                    "type": "text",
+                    "id": 15
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Communication Methods",
+                    "list": {
+                        "1": "Messages",
+                        "2": "Events",
+                        "3": "APIs",
+                        "4": "Shared Memory",
+                        "5": "Protocols"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Communication enables cooperation and coordination between multiple AI agents."
+                }
+            ]
+        },
         {
-          "q": "Q16 : What is agent memory retrieval?",
-          "a": "Agent memory retrieval is the process where an AI agent searches and fetches previously stored information from its memory systems whenever required. Instead of relying only on the current conversation, the agent can access historical data, previous workflows, user preferences, or external knowledge sources to improve responses and decision-making. Memory retrieval is extremely important because it helps AI systems maintain continuity, personalization, and contextual understanding across long interactions. Modern AI agents often use vector databases and semantic search techniques to retrieve the most relevant information efficiently. Good memory retrieval systems improve user experience because the agent can remember past actions and avoid repeating unnecessary questions.",
-          "example": "Example: A customer support AI retrieving your previous complaint history before continuing the conversation.",
-          "type": "text",
-          "id": 16,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "17",
-      "Que": [
+            "id": "16",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q16 : What is an AI workflow?",
+                    "a": "An AI workflow is a structured sequence of tasks and actions performed by an AI agent to achieve a specific objective. The workflow typically includes receiving input, planning actions, accessing tools, processing information, making decisions, and generating outputs. AI workflows help organize complex operations into manageable steps and ensure consistent execution. In Agentic AI systems, workflows enable automation of business processes, customer support operations, content generation, and research activities while maintaining efficiency and accuracy.",
+                    "type": "text",
+                    "id": 16
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "AI Workflow Example",
+                    "code": "\nUser Request -> Planning -> Tool Usage -> Processing -> Response"
+                },
+                {
+                    "type": "note",
+                    "note": "Workflows help agents execute tasks in a structured and repeatable manner."
+                }
+            ]
+        },
         {
-          "q": "Q17 : What is event-driven architecture in AI agents?",
-          "a": "Event-driven architecture in AI agents is a system design approach where the agent reacts automatically whenever specific events or triggers occur. Instead of continuously checking for updates manually, the system listens for events such as user actions, notifications, API responses, sensor updates, or workflow completions. Once an event occurs, the appropriate agent or workflow is activated automatically. This architecture improves scalability, responsiveness, and efficiency because processing happens only when needed. Event-driven systems are widely used in automation platforms, cloud applications, IoT systems, and enterprise AI workflows where real-time reactions are important.",
-          "example": "Example: An AI monitoring system automatically sending alerts when unusual server activity is detected.",
-          "type": "text",
-          "id": 17,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "18",
-      "Que": [
+            "id": "17",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q17 : What is context awareness in Agentic AI?",
+                    "a": "Context awareness is the ability of an AI agent to understand and utilize relevant information from current and previous interactions. It enables the agent to generate more accurate responses, make informed decisions, and maintain continuity throughout conversations and workflows. Context awareness includes understanding user preferences, historical actions, task objectives, and environmental conditions. This capability is essential for creating intelligent and personalized experiences, especially in long-running tasks and enterprise automation systems.",
+                    "type": "text",
+                    "id": 17
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Context Sources",
+                    "list": {
+                        "1": "Conversation History",
+                        "2": "User Preferences",
+                        "3": "Task Objectives",
+                        "4": "Previous Actions"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q18 : What is state management in autonomous AI systems?",
-          "a": "State management refers to the process of tracking and maintaining the current status, progress, memory, and workflow context of an AI agent during execution. Since autonomous agents often perform multi-step tasks over long durations, they need to remember what actions have already been completed and what tasks are still pending. Proper state management helps prevent duplicate actions, workflow confusion, and execution failures. It also allows systems to pause, resume, retry, or recover tasks safely if interruptions occur. In enterprise environments, state management is extremely important for maintaining consistency and reliability in large-scale AI workflows.",
-          "example": "Example: An AI recruitment assistant tracking which interview stages a candidate has already completed.",
-          "type": "text",
-          "id": 18,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "19",
-      "Que": [
+            "id": "18",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q18 : What is decision-making in Agentic AI?",
+                    "a": "Decision-making is the process through which an AI agent evaluates available information, compares possible actions, and selects the most appropriate option to achieve a goal. Effective decision-making requires reasoning, planning, and contextual understanding. Agentic AI systems continuously assess outcomes and adjust future actions based on results. This capability allows agents to operate autonomously, handle uncertainty, and respond intelligently to changing situations while maintaining alignment with predefined objectives.",
+                    "type": "text",
+                    "id": 18
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Decision Process",
+                    "list": {
+                        "1": "Analyze Information",
+                        "2": "Evaluate Options",
+                        "3": "Select Action",
+                        "4": "Execute Decision"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Decision-making enables agents to choose the best course of action independently."
+                }
+            ]
+        },
         {
-          "q": "Q19 : What is agent collaboration in multi-agent systems?",
-          "a": "Agent collaboration is the process where multiple AI agents communicate, coordinate, and work together to achieve a shared objective. Instead of relying on a single large agent to handle every task, specialized agents focus on different responsibilities and exchange information when needed. Collaboration improves scalability, efficiency, and modularity because tasks can be distributed based on expertise. Effective collaboration requires communication protocols, orchestration systems, and proper synchronization between agents. Multi-agent collaboration is becoming increasingly important in enterprise automation, research systems, robotics, and large workflow management platforms.",
-          "example": "Example: One AI agent collecting customer data while another analyzes trends and another prepares reports.",
-          "type": "text",
-          "id": 19,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "20",
-      "Que": [
+            "id": "19",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q19 : What is feedback in Agentic AI?",
+                    "a": "Feedback is information received by an AI agent regarding the outcomes of its actions or decisions. It helps the agent evaluate performance, identify mistakes, and improve future behavior. Feedback may come from users, system metrics, external tools, or task results. By incorporating feedback into its decision-making process, an agent can adapt to changing requirements and continuously optimize performance. Feedback mechanisms are essential for learning, reliability, and long-term effectiveness in Agentic AI systems.",
+                    "type": "text",
+                    "id": 19
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Feedback Type" },
+                        { "label": "Source" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "User Feedback" },
+                                { "col": "Human Interaction" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "System Feedback" },
+                                { "col": "Performance Metrics" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q20 : What is agent observability?",
-          "a": "Agent observability refers to the ability to monitor, analyze, debug, and understand the internal behavior and execution flow of AI agents. Since autonomous systems can perform many complex actions independently, developers need visibility into prompts, reasoning steps, tool calls, memory usage, workflow execution, and failures. Observability helps improve reliability, troubleshooting, security, and performance optimization. Modern AI platforms include logging systems, dashboards, tracing tools, and monitoring frameworks to track agent activity in real time. Good observability is extremely important in production environments because it helps teams identify issues quickly and maintain trust in autonomous systems.",
-          "example": "Example: Monitoring which API calls an AI agent executed before generating a business report.",
-          "type": "text",
-          "id": 20,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-
-    {
-      "id": "21",
-      "Que": [
+            "id": "20",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q20 : What is adaptability in Agentic AI?",
+                    "a": "Adaptability is the ability of an AI agent to modify its behavior, strategies, and actions in response to new information or changing conditions. Adaptive agents can handle unexpected situations, learn from outcomes, and optimize workflows without requiring complete reconfiguration. This capability is important in dynamic environments where requirements frequently evolve. Adaptability improves resilience, efficiency, and problem-solving abilities, making Agentic AI systems more effective when operating in real-world scenarios with uncertainty and variability.",
+                    "type": "text",
+                    "id": 20
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Benefits of Adaptability",
+                    "list": {
+                        "1": "Handles Change",
+                        "2": "Improves Efficiency",
+                        "3": "Supports Learning",
+                        "4": "Enhances Reliability"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Adaptability helps agents remain effective even when conditions change unexpectedly."
+                }
+            ]
+        },
         {
-          "q": "Q21 : What is goal-oriented behavior in AI agents?",
-          "a": "Goal-oriented behavior means an AI agent works toward achieving a specific objective instead of simply responding to individual prompts one by one. The agent first understands the final goal, then creates a plan, selects tools, takes actions, and keeps adjusting its decisions until the task is completed. This approach makes AI systems more autonomous and practical for real-world workflows. Goal-oriented agents can also prioritize tasks, handle dependencies, and recover from failures while still focusing on the original objective. This behavior is one of the main reasons why Agentic AI is considered more advanced than traditional chatbot systems because it focuses on outcomes rather than only conversations.",
-          "example": "Example: An AI assistant managing an entire job application process from resume creation to interview scheduling automatically.",
-          "type": "text",
-          "id": 21,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "22",
-      "Que": [
+            "id": "21",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q21 : What is an LLM in Agentic AI?",
+                    "a": "A Large Language Model (LLM) is the core intelligence component used in many Agentic AI systems. It processes natural language, performs reasoning, generates responses, and helps agents understand user requests. LLMs are trained on vast amounts of text data, enabling them to recognize patterns and provide contextual outputs. In Agentic AI, the LLM acts as the decision-making engine that collaborates with memory systems, planning modules, and external tools to execute tasks effectively and achieve defined goals.",
+                    "type": "text",
+                    "id": 21
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "LLM Responsibilities",
+                    "list": {
+                        "1": "Language Understanding",
+                        "2": "Reasoning",
+                        "3": "Response Generation",
+                        "4": "Decision Support"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Most modern AI agents use an LLM as their central reasoning engine."
+                }
+            ]
+        },
         {
-          "q": "Q22 : What is autonomous decision-making in AI systems?",
-          "a": "Autonomous decision-making is the ability of an AI system to evaluate information, analyze possible actions, and choose the best option without continuous human guidance. The system uses reasoning models, memory, rules, and external data to make decisions dynamically depending on the situation. This capability is very important in modern AI agents because many real-world tasks require fast and adaptive responses. However, autonomous decision-making also introduces challenges related to safety, ethics, and reliability because incorrect decisions can impact business operations or users. That is why most enterprise systems include approval workflows, monitoring, and alignment mechanisms along with autonomous capabilities.",
-          "example": "Example: A cybersecurity AI automatically blocking suspicious network traffic after detecting potential threats.",
-          "type": "text",
-          "id": 22,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "23",
-      "Que": [
+            "id": "22",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q22 : What is prompt engineering in Agentic AI?",
+                    "a": "Prompt engineering is the practice of designing effective instructions that guide AI models toward producing desired outputs. In Agentic AI, prompts help define goals, establish behavior rules, provide context, and control reasoning processes. Well-structured prompts improve response quality, reduce ambiguity, and enhance task completion rates. Prompt engineering is important because it influences how agents interpret requests, interact with tools, and execute workflows. It is considered a foundational skill when building reliable AI-powered applications.",
+                    "type": "text",
+                    "id": 22
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Prompt Elements",
+                    "list": {
+                        "1": "Instructions",
+                        "2": "Context",
+                        "3": "Examples",
+                        "4": "Constraints"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q23 : What is a feedback loop in Agentic AI?",
-          "a": "A feedback loop is a mechanism where an AI agent continuously evaluates the results of its actions and uses that information to improve future decisions. Instead of following static instructions blindly, the system learns from outcomes, observations, and user responses. Feedback loops make AI agents more adaptive, accurate, and reliable over time because they can adjust strategies dynamically when something goes wrong. Feedback can come from humans, APIs, monitoring systems, or internal evaluation processes. This concept is extremely important in autonomous workflows because real-world environments constantly change and require flexible decision-making.",
-          "example": "Example: A recommendation system improving future movie suggestions based on user watch history and ratings.",
-          "type": "text",
-          "id": 23,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "24",
-      "Que": [
+            "id": "23",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q23 : What is tool calling in Agentic AI?",
+                    "a": "Tool calling is a capability that allows AI agents to interact with external systems and services while performing tasks. Instead of relying solely on internal knowledge, the agent can invoke APIs, databases, calculators, search engines, or business applications to gather information and perform actions. Tool calling significantly expands an agent's capabilities and enables real-world automation. It is commonly used in customer support, workflow automation, data analysis, scheduling systems, and enterprise AI solutions.",
+                    "type": "text",
+                    "id": 23
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Tool Calling Flow",
+                    "code": "\nUser Request -> Agent -> Tool/API -> Result -> Response"
+                },
+                {
+                    "type": "note",
+                    "note": "Tool calling allows AI agents to perform actions beyond text generation."
+                }
+            ]
+        },
         {
-          "q": "Q24 : What is fail-safe behavior in autonomous agents?",
-          "a": "Fail-safe behavior refers to protective mechanisms designed to stop or safely limit AI agent actions when something unexpected, risky, or incorrect happens. Since autonomous systems can interact with external tools, APIs, and sensitive data, fail-safe controls are extremely important for preventing harmful operations. These systems may include permission checks, rollback mechanisms, emergency stop triggers, human approvals, and execution limits. Fail-safe behavior improves trust and reliability because the AI does not continue performing actions blindly during failures or uncertain situations. Enterprise AI systems especially require strong fail-safe mechanisms to ensure compliance, security, and operational safety.",
-          "example": "Example: An AI finance assistant stopping a transaction workflow if suspicious payment activity is detected.",
-          "type": "text",
-          "id": 24,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "25",
-      "Que": [
+            "id": "24",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q24 : What is short-term memory in Agentic AI?",
+                    "a": "Short-term memory refers to temporary information storage used by an AI agent during a current conversation or workflow. It helps maintain context and ensures that recent interactions remain available for decision-making. Short-term memory is essential for handling multi-step tasks because it allows the agent to remember previous actions and user inputs within a session. Unlike long-term memory, the stored information is typically discarded after the task or conversation is completed.",
+                    "type": "text",
+                    "id": 24
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Short-Term Memory" },
+                        { "label": "Long-Term Memory" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Temporary Storage" },
+                                { "col": "Persistent Storage" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Session Based" },
+                                { "col": "Cross-Session" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q25 : What is dynamic task allocation in multi-agent systems?",
-          "a": "Dynamic task allocation is the process where tasks are automatically distributed among multiple AI agents based on their capabilities, workload, or expertise. Instead of assigning fixed responsibilities permanently, the system evaluates which agent is most suitable for handling a specific task at a given moment. This improves efficiency, scalability, and performance because workloads can be balanced dynamically. Dynamic allocation is especially useful in large enterprise environments where workflows continuously change. It also allows systems to recover more effectively if one agent fails or becomes overloaded.",
-          "example": "Example: A customer support system assigning billing issues to a finance-focused AI agent and technical issues to a troubleshooting agent.",
-          "type": "text",
-          "id": 25,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-  
-    {
-      "id": "26",
-      "Que": [
+            "id": "25",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q25 : What is long-term memory in Agentic AI?",
+                    "a": "Long-term memory is a persistent storage system that enables AI agents to retain information across multiple sessions and interactions. It stores user preferences, historical data, knowledge records, and previous task outcomes for future use. Long-term memory helps agents deliver personalized experiences, improve consistency, and support complex workflows requiring historical context. Technologies such as vector databases and knowledge repositories are commonly used to implement long-term memory in modern Agentic AI architectures.",
+                    "type": "text",
+                    "id": 25
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Stores Information About",
+                    "list": {
+                        "1": "User Preferences",
+                        "2": "Past Interactions",
+                        "3": "Knowledge Records",
+                        "4": "Task History"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Long-term memory enables personalization and continuity across sessions."
+                }
+            ]
+        },
         {
-          "q": "Q26 : What is workflow automation in Agentic AI?",
-          "a": "Workflow automation in Agentic AI means using autonomous AI agents to handle repetitive or multi-step business processes without constant human involvement. Instead of manually performing every task, the AI agent can understand the workflow, execute actions, make decisions, and move the process forward automatically. Workflow automation improves productivity, reduces operational errors, saves time, and allows teams to focus on more important tasks. Modern AI agents can integrate with APIs, databases, emails, cloud systems, and enterprise software to automate complete workflows from start to finish. Businesses are increasingly adopting Agentic AI for automation because it provides flexibility and intelligent decision-making compared to traditional rule-based automation systems.",
-          "example": "Example: An AI HR assistant automatically screening resumes, scheduling interviews, and sending follow-up emails.",
-          "type": "text",
-          "id": 26,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "27",
-      "Que": [
+            "id": "26",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q26 : What is a knowledge base in Agentic AI?",
+                    "a": "A knowledge base is a structured repository of information that AI agents use to retrieve facts, documents, procedures, and business data. It serves as an external source of truth that helps agents provide accurate and context-aware responses. Knowledge bases can contain manuals, FAQs, company policies, product information, and technical documentation. By connecting to a knowledge base, agents can access information beyond their training data, improving reliability, reducing hallucinations, and enabling domain-specific assistance.",
+                    "type": "text",
+                    "id": 26
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Knowledge Base Sources",
+                    "list": {
+                        "1": "Documents",
+                        "2": "FAQs",
+                        "3": "Databases",
+                        "4": "Policies",
+                        "5": "Manuals"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Knowledge bases are commonly integrated with RAG systems."
+                }
+            ]
+        },
         {
-          "q": "Q27 : What is context switching in AI agents?",
-          "a": "Context switching in AI agents refers to the ability of the system to move between different tasks, workflows, or conversations while still maintaining relevant context and state information. Since autonomous agents often handle multiple users or processes simultaneously, they must efficiently manage memory and task separation to avoid confusion or data mixing. Good context switching improves scalability and allows agents to support complex enterprise operations. It also ensures that the agent can pause one task, work on another, and later resume the original workflow correctly. Proper state management and memory architecture are extremely important for reliable context switching.",
-          "example": "Example: A virtual assistant switching between booking meetings, answering emails, and generating reports for different users without losing track of ongoing tasks.",
-          "type": "text",
-          "id": 27,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "28",
-      "Que": [
+            "id": "27",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q27 : What is a vector database?",
+                    "a": "A vector database is a specialized storage system designed to store and search vector embeddings generated by AI models. Instead of using keyword matching, vector databases perform semantic similarity searches to find relevant information. This enables AI agents to retrieve contextually related content quickly and accurately. Vector databases play a critical role in RAG architectures, long-term memory systems, and recommendation engines. Popular vector databases include Pinecone, Chroma, Weaviate, and FAISS.",
+                    "type": "text",
+                    "id": 27
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Popular Vector Databases",
+                    "list": {
+                        "1": "Pinecone",
+                        "2": "Chroma",
+                        "3": "Weaviate",
+                        "4": "FAISS"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q28 : What is agent benchmarking?",
-          "a": "Agent benchmarking is the process of evaluating and comparing the performance of AI agents using predefined tasks, datasets, and performance metrics. Benchmarking helps measure reasoning ability, task completion accuracy, response quality, latency, reliability, and tool usage efficiency. Since autonomous agents can behave differently depending on workflows and environments, benchmarking is important for identifying strengths, weaknesses, and optimization opportunities. Organizations use benchmark results to improve models, select frameworks, and ensure production readiness. Benchmarking also helps compare multiple AI systems fairly under similar conditions.",
-          "example": "Example: Testing multiple coding AI agents on bug-fixing tasks to compare accuracy and execution speed.",
-          "type": "text",
-          "id": 28,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "29",
-      "Que": [
+            "id": "28",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q28 : What are embeddings in Agentic AI?",
+                    "a": "Embeddings are numerical representations of text, images, or other data generated by machine learning models. They capture semantic meaning in a mathematical format that allows AI systems to compare similarities between pieces of information. Embeddings are widely used in vector databases, recommendation systems, search engines, and retrieval mechanisms. In Agentic AI, embeddings help agents retrieve relevant knowledge, maintain memory, and understand contextual relationships between different pieces of information.",
+                    "type": "text",
+                    "id": 28
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Embedding Workflow",
+                    "code": "\nText -> Embedding Model -> Vector Representation -> Storage/Search"
+                },
+                {
+                    "type": "note",
+                    "note": "Embeddings convert information into vectors that machines can compare mathematically."
+                }
+            ]
+        },
         {
-          "q": "Q29 : What is adaptive learning in AI agents?",
-          "a": "Adaptive learning in AI agents refers to the ability of the system to improve its behavior and decision-making based on new experiences, feedback, and changing environments. Instead of following fixed patterns permanently, adaptive agents continuously update strategies according to observations and interactions. This capability makes AI systems more flexible and useful in dynamic real-world environments where conditions frequently change. Adaptive learning may involve reinforcement learning, feedback loops, memory updates, or model retraining. It helps agents become more personalized, efficient, and accurate over time.",
-          "example": "Example: A recommendation AI improving future suggestions after learning from user clicks and viewing habits.",
-          "type": "text",
-          "id": 29,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "30",
-      "Que": [
+            "id": "29",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q29 : What is semantic search?",
+                    "a": "Semantic search is a search technique that focuses on understanding the meaning and context of a query rather than matching exact keywords. It uses embeddings and vector similarity to identify relevant information based on intent and meaning. This approach improves search quality by retrieving conceptually related content even when different words are used. Semantic search is essential in Agentic AI because it enables accurate knowledge retrieval, better memory access, and more intelligent user interactions.",
+                    "type": "text",
+                    "id": 29
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Keyword Search" },
+                        { "label": "Semantic Search" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Matches Words" },
+                                { "col": "Matches Meaning" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Exact Terms" },
+                                { "col": "Context Aware" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q30 : What is self-healing behavior in autonomous systems?",
-          "a": "Self-healing behavior is the ability of an AI system to detect failures, recover automatically, and continue operating without requiring immediate human intervention. Autonomous systems may face issues such as API failures, invalid responses, network errors, or workflow interruptions. Self-healing mechanisms allow the agent to retry operations, switch strategies, restart workflows, or use backup systems automatically. This capability improves reliability, uptime, and resilience in production environments. Self-healing is especially important in enterprise automation, cloud systems, and large-scale AI platforms where uninterrupted operations are critical.",
-          "example": "Example: An AI workflow automatically retrying a failed database connection before continuing report generation.",
-          "type": "text",
-          "id": 30,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-  
-    {
-      "id": "31",
-      "Que": [
+            "id": "30",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q30 : What is Retrieval-Augmented Generation (RAG)?",
+                    "a": "Retrieval-Augmented Generation, or RAG, is an AI architecture that combines information retrieval with language generation. Before generating a response, the AI agent retrieves relevant information from external knowledge sources such as vector databases, documents, or enterprise repositories. The retrieved content is then provided to the language model as context. This approach improves accuracy, reduces hallucinations, and enables access to current information. RAG is widely used in enterprise chatbots, search assistants, and knowledge management systems.",
+                    "type": "text",
+                    "id": 30
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "RAG Benefits",
+                    "list": {
+                        "1": "Higher Accuracy",
+                        "2": "Reduced Hallucinations",
+                        "3": "External Knowledge Access",
+                        "4": "Up-to-Date Information"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "RAG is one of the most important concepts in modern Agentic AI systems."
+                }
+            ]
+        },
         {
-          "q": "Q31 : What is autonomous workflow execution in Agentic AI?",
-          "a": "Autonomous workflow execution means an AI agent can complete an entire process independently without requiring manual instructions at every stage. The agent receives a high-level goal, creates a plan, selects tools, performs actions, verifies results, and continues execution until the task is finished. This capability is very important because modern business workflows often involve multiple systems, approvals, and decision points. Autonomous execution helps reduce repetitive work, increase efficiency, and improve scalability. However, reliable monitoring and safety mechanisms are still required because AI agents can sometimes make incorrect assumptions or unexpected decisions while executing workflows.",
-          "example": "Example: An AI operations assistant automatically generating reports, emailing stakeholders, and updating dashboards every morning.",
-          "type": "text",
-          "id": 31,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "32",
-      "Que": [
+            "id": "31",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q31 : What is an AI agent framework?",
+                    "a": "An AI agent framework is a software platform that provides tools, components, and infrastructure for building intelligent agents. These frameworks simplify the development of agentic systems by offering capabilities such as memory management, tool integration, workflow orchestration, planning, and communication. Developers use frameworks to reduce implementation complexity and accelerate development. Popular agent frameworks support the creation of autonomous systems capable of performing complex tasks, interacting with external services, and coordinating actions across multiple environments efficiently.",
+                    "type": "text",
+                    "id": 31
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Popular Framework Features",
+                    "list": {
+                        "1": "Memory Management",
+                        "2": "Tool Integration",
+                        "3": "Workflow Automation",
+                        "4": "Agent Communication"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Frameworks help developers build AI agents faster and more efficiently."
+                }
+            ]
+        },
         {
-          "q": "Q32 : What is retrieval-based memory in AI agents?",
-          "a": "Retrieval-based memory is a memory system where an AI agent stores information externally and retrieves only the most relevant pieces whenever needed. Instead of loading all previous data into the context window, the agent uses semantic search and vector similarity techniques to fetch useful memories dynamically. This approach is much more scalable and efficient because Large Language Models have limited context windows. Retrieval-based memory improves personalization, long-term continuity, and decision-making quality in autonomous systems. It is commonly used in enterprise chatbots, AI assistants, and multi-session workflows where maintaining historical context is important.",
-          "example": "Example: A virtual assistant retrieving previous meeting notes before helping a user prepare for a follow-up discussion.",
-          "type": "text",
-          "id": 32,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "33",
-      "Que": [
+            "id": "32",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q32 : What is LangChain?",
+                    "a": "LangChain is an open-source framework designed for developing applications powered by Large Language Models. It provides components for prompt management, memory, tool integration, chains, agents, and retrieval systems. LangChain simplifies the process of building intelligent applications that can reason, retrieve information, and interact with external systems. It is widely used in Agentic AI development because it supports complex workflows and enables developers to connect language models with databases, APIs, and knowledge sources.",
+                    "type": "text",
+                    "id": 32
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "LangChain Components",
+                    "list": {
+                        "1": "Chains",
+                        "2": "Agents",
+                        "3": "Memory",
+                        "4": "Prompts",
+                        "5": "Retrievers"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q33 : What is AI agent governance?",
-          "a": "AI agent governance refers to the policies, controls, monitoring systems, and compliance mechanisms used to manage the behavior and operation of autonomous AI agents. Since AI systems can make decisions and interact with sensitive business systems, organizations need governance frameworks to ensure safety, transparency, accountability, and ethical usage. Governance includes access control, logging, auditing, approval workflows, security policies, and regulatory compliance checks. Proper governance helps organizations reduce risks related to privacy violations, harmful actions, and unauthorized operations. As Agentic AI adoption grows, governance is becoming one of the most important aspects of enterprise AI strategy.",
-          "example": "Example: Restricting an AI finance assistant from approving payments above a certain amount without manager approval.",
-          "type": "text",
-          "id": 33,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "34",
-      "Que": [
+            "id": "33",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q33 : What is LangGraph?",
+                    "a": "LangGraph is a framework built on top of LangChain that enables the creation of stateful, multi-step, and multi-agent workflows. It uses graph-based execution models where nodes represent actions and edges define transitions between tasks. LangGraph provides greater control over workflow execution and supports advanced agent orchestration. It is particularly useful for building complex Agentic AI systems that require branching logic, persistence, collaboration, and long-running processes across multiple agents.",
+                    "type": "text",
+                    "id": 33
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "LangGraph Workflow",
+                    "code": "\nStart -> Research Node -> Analysis Node -> Decision Node -> End"
+                },
+                {
+                    "type": "note",
+                    "note": "LangGraph is commonly used for stateful and multi-agent workflows."
+                }
+            ]
+        },
         {
-          "q": "Q34 : What is hierarchical agent architecture?",
-          "a": "Hierarchical agent architecture is a design approach where AI agents are organized in different levels of responsibility and authority. Higher-level agents focus on planning, coordination, and decision-making, while lower-level agents handle specific execution tasks. This structure improves scalability and organization because complex workflows can be divided across multiple specialized agents. Hierarchical systems are especially useful in enterprise automation and robotics because they allow centralized planning with distributed execution. The architecture also makes debugging and management easier since responsibilities are clearly separated between agent layers.",
-          "example": "Example: A master AI agent assigning research, summarization, and reporting tasks to separate specialized sub-agents.",
-          "type": "text",
-          "id": 34,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "35",
-      "Que": [
+            "id": "34",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q34 : What is AutoGen?",
+                    "a": "AutoGen is an open-source framework developed by Microsoft for creating multi-agent AI applications. It enables multiple AI agents to collaborate, communicate, and solve problems together through structured conversations. AutoGen supports agent specialization, tool integration, and human participation when necessary. The framework is widely used for research, workflow automation, software development assistance, and complex problem-solving scenarios. Its collaborative architecture makes it suitable for building advanced Agentic AI systems involving multiple intelligent entities.",
+                    "type": "text",
+                    "id": 34
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "AutoGen Features",
+                    "list": {
+                        "1": "Multi-Agent Collaboration",
+                        "2": "Tool Integration",
+                        "3": "Agent Communication",
+                        "4": "Human-in-the-Loop Support"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q35 : What is AI agent sandboxing?",
-          "a": "AI agent sandboxing is a security technique where autonomous agents are restricted to controlled environments with limited permissions and isolated resources. Since AI agents can execute tools, access systems, and perform automated actions, sandboxing helps prevent harmful operations, unauthorized access, or accidental system damage. The sandbox environment limits what the agent can read, modify, or execute. Sandboxing is especially important in enterprise environments where AI systems interact with sensitive data, infrastructure, or external APIs. It improves safety, compliance, and system reliability while still allowing the agent to perform useful tasks.",
-          "example": "Example: Allowing an AI coding agent to test generated scripts only inside a restricted virtual environment instead of directly on production servers.",
-          "type": "text",
-          "id": 35,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
- 
-    {
-      "id": "36",
-      "Que": [
+            "id": "35",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q35 : What is CrewAI?",
+                    "a": "CrewAI is a framework designed for building collaborative AI agent systems where multiple specialized agents work together as a team. Each agent is assigned a specific role, responsibility, and goal within the workflow. CrewAI focuses on task delegation, collaboration, and coordinated execution. It is commonly used for business automation, research workflows, content generation, and operational tasks. By distributing responsibilities among specialized agents, CrewAI helps improve efficiency, scalability, and overall workflow performance.",
+                    "type": "text",
+                    "id": 35
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Role" },
+                        { "label": "Responsibility" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Research Agent" },
+                                { "col": "Collect Information" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Analysis Agent" },
+                                { "col": "Evaluate Data" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Writer Agent" },
+                                { "col": "Generate Output" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q36 : What is collaborative reasoning in multi-agent AI systems?",
-          "a": "Collaborative reasoning is a process where multiple AI agents work together by sharing information, analyzing ideas, and contributing their own specialized reasoning abilities to solve a larger problem. Instead of relying on one single agent to do everything, each agent focuses on a particular task or expertise area. The agents exchange outputs and feedback continuously until a final solution is achieved. This approach improves accuracy, scalability, and efficiency because complex tasks are divided intelligently. Collaborative reasoning is especially useful in research systems, enterprise automation, software development, and planning workflows where different types of expertise are required at the same time.",
-          "example": "Example: One AI agent analyzing financial data while another predicts market trends and another generates a business report.",
-          "type": "text",
-          "id": 36,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "37",
-      "Que": [
+            "id": "36",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q36 : What is workflow orchestration in Agentic AI?",
+                    "a": "Workflow orchestration is the process of coordinating and managing multiple tasks, agents, tools, and services to achieve a specific objective. In Agentic AI, orchestration ensures that actions are executed in the correct order and that dependencies between tasks are properly handled. It enables complex automation scenarios involving planning, execution, monitoring, and error handling. Workflow orchestration improves efficiency, reliability, and scalability by providing a structured framework for managing intelligent processes across different systems and environments.",
+                    "type": "text",
+                    "id": 36
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Orchestration Responsibilities",
+                    "list": {
+                        "1": "Task Coordination",
+                        "2": "Dependency Management",
+                        "3": "Execution Control",
+                        "4": "Monitoring"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Workflow orchestration ensures smooth execution of complex AI processes."
+                }
+            ]
+        },
         {
-          "q": "Q37 : What is continuous learning in autonomous AI agents?",
-          "a": "Continuous learning refers to the ability of an AI agent to improve over time by learning from new data, interactions, feedback, and experiences after deployment. Instead of remaining fixed after initial training, the system adapts to changing environments and user behavior dynamically. Continuous learning helps AI agents stay relevant, accurate, and efficient even when workflows or business requirements evolve. However, implementing continuous learning safely is challenging because the system must avoid learning incorrect patterns or introducing harmful behavior. Organizations usually combine monitoring, validation, and human oversight with continuous learning systems to maintain quality and reliability.",
-          "example": "Example: A customer support AI improving its responses over time based on customer satisfaction feedback.",
-          "type": "text",
-          "id": 37,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "38",
-      "Que": [
+            "id": "37",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q37 : What is human-in-the-loop (HITL) in Agentic AI?",
+                    "a": "Human-in-the-loop is an approach where human oversight is incorporated into AI workflows to review, approve, or modify decisions before execution. This method helps improve accuracy, reduce risks, and maintain compliance in critical applications. HITL is commonly used in healthcare, finance, legal systems, and enterprise automation where autonomous decisions require validation. By combining AI efficiency with human judgment, organizations can achieve higher reliability while maintaining control over important business processes and outcomes.",
+                    "type": "text",
+                    "id": 37
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "AI Responsibility" },
+                        { "label": "Human Responsibility" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Generate Recommendation" },
+                                { "col": "Approve Decision" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Analyze Data" },
+                                { "col": "Review Results" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q38 : What is agent interoperability?",
-          "a": "Agent interoperability means different AI agents, tools, systems, or platforms can communicate and work together smoothly without compatibility issues. Since enterprise AI ecosystems often involve multiple technologies and frameworks, interoperability is extremely important for building scalable and flexible systems. Interoperable agents can exchange information, share workflows, and coordinate actions efficiently across environments. This capability improves integration between business systems, cloud platforms, APIs, and external services. Standard communication protocols, APIs, and orchestration layers are commonly used to support interoperability in modern AI architectures.",
-          "example": "Example: A CRM AI assistant communicating with a finance AI agent and an email automation system during a customer workflow.",
-          "type": "text",
-          "id": 38,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "39",
-      "Que": [
+            "id": "38",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q38 : What is agent collaboration?",
+                    "a": "Agent collaboration refers to multiple AI agents working together to accomplish a shared objective. Each agent may specialize in a particular function such as planning, research, analysis, or execution. Through communication and coordination, agents exchange information and divide responsibilities efficiently. Collaboration enables complex problem solving that would be difficult for a single agent to manage alone. This approach improves scalability, performance, and flexibility in large-scale Agentic AI systems and enterprise automation environments.",
+                    "type": "text",
+                    "id": 38
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Benefits of Collaboration",
+                    "list": {
+                        "1": "Task Specialization",
+                        "2": "Improved Efficiency",
+                        "3": "Scalability",
+                        "4": "Better Problem Solving"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Collaborative agents can solve larger and more complex problems together."
+                }
+            ]
+        },
         {
-          "q": "Q39 : What is recursive self-improvement in AI systems?",
-          "a": "Recursive self-improvement is the concept where an AI system improves its own capabilities by analyzing and optimizing its behavior repeatedly over time. The system may evaluate outputs, identify inefficiencies, update strategies, improve prompts, or optimize workflows automatically. In advanced theoretical discussions, recursive self-improvement is considered an important concept for highly autonomous AI systems because continuous optimization could significantly increase intelligence and efficiency. However, practical implementations today are usually limited to controlled optimization processes rather than unrestricted self-improvement. Safety and governance are extremely important in such systems because uncontrolled optimization could create unpredictable behavior.",
-          "example": "Example: An AI coding assistant automatically refining its own generated scripts after testing and identifying errors.",
-          "type": "text",
-          "id": 39,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "40",
-      "Que": [
+            "id": "39",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q39 : What is agent delegation?",
+                    "a": "Agent delegation is the process where one AI agent assigns specific tasks or responsibilities to another agent based on expertise or capability. Delegation improves efficiency by ensuring that work is handled by the most suitable agent. It is commonly used in multi-agent systems where specialized agents perform research, analysis, planning, or execution. Effective delegation reduces workload bottlenecks, improves coordination, and helps achieve goals more efficiently through distributed task management.",
+                    "type": "text",
+                    "id": 39
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Delegation Example",
+                    "code": "\nManager Agent -> Research Agent -> Analysis Agent -> Report Agent"
+                },
+                {
+                    "type": "note",
+                    "note": "Delegation allows agents to focus on tasks aligned with their expertise."
+                }
+            ]
+        },
         {
-          "q": "Q40 : What is latency optimization in Agentic AI systems?",
-          "a": "Latency optimization refers to techniques used to reduce the response time and execution delay of AI agents during workflows and interactions. Since autonomous systems may involve multiple reasoning steps, API calls, database retrievals, and tool executions, poor latency can negatively affect user experience and business operations. Optimization strategies include caching, batching requests, parallel execution, lightweight models, efficient orchestration, and optimized inference engines. Low latency is especially important in real-time applications such as customer support, cybersecurity monitoring, and voice assistants where quick responses are critical. Organizations continuously optimize latency to improve scalability and system performance.",
-          "example": "Example: Reducing API response delays in an AI assistant that handles live customer support queries.",
-          "type": "text",
-          "id": 40,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-  
-    {
-      "id": "41",
-      "Que": [
+            "id": "40",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q40 : What is agent observability?",
+                    "a": "Agent observability is the ability to monitor, track, and analyze the internal operations and behavior of AI agents. It provides visibility into decision-making processes, tool usage, memory access, workflow execution, and performance metrics. Observability helps developers identify issues, debug workflows, and improve reliability. In production environments, it is essential for ensuring transparency, compliance, and trust. Strong observability practices enable organizations to understand how AI agents operate and optimize their performance effectively.",
+                    "type": "text",
+                    "id": 40
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Observable Metrics",
+                    "list": {
+                        "1": "Execution Time",
+                        "2": "Tool Usage",
+                        "3": "Error Logs",
+                        "4": "Task Success Rate",
+                        "5": "Memory Access"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Observability is crucial for debugging and managing production AI agents."
+                }
+            ]
+        },
         {
-          "q": "Q41 : What is autonomous planning in Agentic AI?",
-          "a": "Autonomous planning is the ability of an AI agent to create and organize a sequence of actions automatically in order to achieve a goal. Instead of waiting for humans to explain every step, the agent analyzes the objective, identifies dependencies, selects the right tools, and builds a workflow by itself. This makes AI systems much more useful for complex business tasks because they can handle multi-step operations independently. Autonomous planning also helps the system adapt when situations change or when unexpected errors occur during execution. Modern AI agents use reasoning models, memory systems, and workflow orchestration frameworks to improve planning quality and execution reliability.",
-          "example": "Example: An AI assistant automatically planning a product launch workflow including marketing tasks, meeting schedules, and reporting activities.",
-          "type": "text",
-          "id": 41,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "42",
-      "Que": [
+            "id": "41",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q41 : What is agent monitoring?",
+                    "a": "Agent monitoring is the continuous process of tracking an AI agent's activities, performance, and execution status during operation. Monitoring systems collect data about task completion, resource usage, response quality, errors, and workflow progress. This information helps developers and organizations ensure reliability, detect failures early, and optimize performance. Effective monitoring is especially important in production environments where AI agents interact with business-critical systems. It provides visibility into agent behavior and supports maintenance, troubleshooting, and performance improvement efforts.",
+                    "type": "text",
+                    "id": 41
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Monitoring Metrics",
+                    "list": {
+                        "1": "Task Completion Rate",
+                        "2": "Execution Time",
+                        "3": "Error Frequency",
+                        "4": "Resource Usage",
+                        "5": "Response Quality"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Monitoring helps maintain the stability and effectiveness of AI agents."
+                }
+            ]
+        },
         {
-          "q": "Q42 : What is an execution graph in AI agent systems?",
-          "a": "An execution graph is a structured representation of tasks, dependencies, and execution flow inside an AI agent workflow. It helps the system understand which actions should happen first, which tasks can run in parallel, and how outputs move between different stages. Execution graphs are important because autonomous workflows can become very complex when multiple agents, APIs, and tools are involved. Using graphs improves visibility, debugging, scalability, and workflow management. Modern orchestration frameworks often use graph-based architectures to track state changes, retries, and execution progress during long-running tasks.",
-          "example": "Example: A business automation workflow showing how document generation, approval checks, and email delivery are connected step-by-step.",
-          "type": "text",
-          "id": 42,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "43",
-      "Que": [
+            "id": "42",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q42 : What is agent evaluation?",
+                    "a": "Agent evaluation is the process of measuring the performance, accuracy, reliability, and effectiveness of an AI agent. Evaluation methods may include benchmark testing, user feedback, success rate analysis, and task completion metrics. The goal is to determine whether the agent meets expected objectives and business requirements. Regular evaluation helps identify weaknesses, improve workflows, and ensure consistent performance. It is an essential practice for maintaining high-quality Agentic AI systems in both development and production environments.",
+                    "type": "text",
+                    "id": 42
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Metric" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Accuracy" },
+                                { "col": "Measure Correctness" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Success Rate" },
+                                { "col": "Measure Completion" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Latency" },
+                                { "col": "Measure Speed" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q43 : What is prompt orchestration in AI agents?",
-          "a": "Prompt orchestration is the process of managing and organizing multiple prompts systematically inside an AI workflow. Instead of using a single large prompt for everything, the system divides tasks into smaller prompts and coordinates them across different stages or agents. Prompt orchestration improves reasoning quality, modularity, and workflow control because each prompt focuses on a specific responsibility. It also helps reduce hallucinations and makes debugging easier because developers can inspect intermediate outputs separately. In enterprise AI systems, orchestration frameworks handle prompt sequencing, context passing, memory injection, and tool execution automatically.",
-          "example": "Example: A research AI first summarizing articles, then extracting key insights, and finally generating a presentation using multiple orchestrated prompts.",
-          "type": "text",
-          "id": 43,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "44",
-      "Que": [
+            "id": "43",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q43 : What is hallucination in Agentic AI?",
+                    "a": "Hallucination occurs when an AI model generates information that appears believable but is factually incorrect, fabricated, or unsupported by evidence. In Agentic AI systems, hallucinations can lead to inaccurate decisions, misleading outputs, and reduced trust. Techniques such as Retrieval-Augmented Generation, knowledge base integration, validation mechanisms, and human oversight are commonly used to reduce hallucinations. Minimizing hallucinations is important for maintaining reliability, especially in enterprise, healthcare, legal, and financial applications.",
+                    "type": "text",
+                    "id": 43
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Ways to Reduce Hallucinations",
+                    "list": {
+                        "1": "Use RAG",
+                        "2": "Knowledge Bases",
+                        "3": "Fact Validation",
+                        "4": "Human Review"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Hallucinations are one of the biggest challenges in AI system reliability."
+                }
+            ]
+        },
         {
-          "q": "Q44 : What is AI agent delegation?",
-          "a": "AI agent delegation refers to the process where one AI agent assigns specific tasks or responsibilities to another specialized agent. Delegation improves efficiency because each agent can focus on the area where it performs best instead of trying to handle everything alone. In multi-agent systems, delegation is very important for scalability and modularity because complex workflows are distributed intelligently among different agents. The delegating agent usually acts like a coordinator that monitors progress and combines outputs from sub-agents into a final result. Delegation also makes systems easier to maintain because individual agents can be improved independently.",
-          "example": "Example: A master AI assistant assigning data analysis to one agent and report generation to another specialized agent.",
-          "type": "text",
-          "id": 44,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "45",
-      "Que": [
+            "id": "44",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q44 : What is AI agent security?",
+                    "a": "AI agent security refers to the practices and technologies used to protect agents, data, tools, and workflows from unauthorized access, misuse, and cyber threats. Security measures include authentication, authorization, encryption, monitoring, access control, and secure API management. Since AI agents often interact with sensitive information and external systems, robust security is critical for maintaining privacy and preventing attacks. Organizations must implement strong governance and security policies when deploying Agentic AI solutions in production environments.",
+                    "type": "text",
+                    "id": 44
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Security Measures",
+                    "list": {
+                        "1": "Authentication",
+                        "2": "Authorization",
+                        "3": "Encryption",
+                        "4": "Access Control",
+                        "5": "Monitoring"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q45 : What is context retention in conversational AI agents?",
-          "a": "Context retention is the ability of an AI agent to remember and maintain relevant information throughout a conversation or workflow. Instead of forgetting earlier interactions, the system keeps track of important details such as user preferences, goals, previous actions, and ongoing tasks. Good context retention improves user experience because conversations feel more natural and personalized. It also helps autonomous agents perform multi-step workflows accurately without repeatedly asking for the same information. Modern systems combine context windows, memory retrieval, and external storage to improve retention across both short-term and long-term interactions.",
-          "example": "Example: A virtual assistant remembering your preferred meeting timings during future scheduling requests.",
-          "type": "text",
-          "id": 45,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
- 
-    {
-      "id": "46",
-      "Que": [
+            "id": "45",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q45 : What is prompt injection?",
+                    "a": "Prompt injection is a security attack where malicious instructions are inserted into inputs to manipulate an AI model's behavior. Attackers attempt to override system instructions, bypass restrictions, or influence outputs in unintended ways. Prompt injection can affect AI agents that interact with external content, websites, documents, or user-generated data. To mitigate this risk, developers implement input validation, access controls, instruction separation, monitoring, and security testing. Protecting against prompt injection is a critical aspect of Agentic AI security.",
+                    "type": "text",
+                    "id": 45
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Security Principle",
+                    "code": "\nUser Input -> Validation -> Agent Processing -> Secure Response"
+                },
+                {
+                    "type": "note",
+                    "note": "Prompt injection is one of the most important security concerns in modern AI systems."
+                }
+            ]
+        },
         {
-          "q": "Q46 : What is proactive behavior in AI agents?",
-          "a": "Proactive behavior in AI agents means the system can take initiative and perform useful actions before the user explicitly asks for them. Instead of waiting for direct commands all the time, the agent analyzes context, predicts possible needs, and suggests or performs tasks automatically. This makes AI systems feel more intelligent and practical in real-world environments. Proactive agents use memory, user history, environmental signals, and workflow analysis to decide when action is necessary. However, proper controls and permissions are important because excessive automation can sometimes create unwanted behavior. In business systems, proactive agents help improve productivity and reduce repetitive manual work significantly.",
-          "example": "Example: An AI assistant reminding a manager about an upcoming deadline and automatically preparing a meeting summary beforehand.",
-          "type": "text",
-          "id": 46,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "47",
-      "Que": [
+            "id": "46",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q46 : What is AI agent governance?",
+                    "a": "AI agent governance refers to the policies, processes, and controls established to ensure AI agents operate responsibly, securely, and in compliance with organizational requirements. Governance includes defining permissions, monitoring behavior, managing risks, enforcing ethical guidelines, and maintaining accountability. Effective governance helps organizations control how agents access data, make decisions, and interact with systems. As Agentic AI becomes more autonomous, governance frameworks play a critical role in ensuring transparency, reliability, and regulatory compliance.",
+                    "type": "text",
+                    "id": 46
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Governance Areas",
+                    "list": {
+                        "1": "Compliance",
+                        "2": "Risk Management",
+                        "3": "Access Control",
+                        "4": "Monitoring",
+                        "5": "Accountability"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Governance ensures AI agents operate within defined business and ethical boundaries."
+                }
+            ]
+        },
         {
-          "q": "Q47 : What is AI agent reliability?",
-          "a": "AI agent reliability refers to how consistently and accurately an autonomous system performs tasks under different conditions without failures or unexpected behavior. A reliable AI agent should produce stable outputs, handle errors properly, follow instructions correctly, and maintain workflow continuity even during interruptions. Reliability is extremely important in enterprise environments because AI systems may interact with sensitive business processes, customer data, or production systems. Factors such as memory management, observability, testing, alignment, fail-safe mechanisms, and monitoring directly affect reliability. Organizations spend significant effort validating and testing autonomous agents before deploying them in real-world operations.",
-          "example": "Example: A customer support AI consistently generating accurate ticket responses without crashing or giving harmful information.",
-          "type": "text",
-          "id": 47,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "48",
-      "Que": [
+            "id": "47",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q47 : What is AI agent scalability?",
+                    "a": "Scalability is the ability of an AI agent system to handle increasing workloads, users, tasks, or data volumes without significant performance degradation. Scalable systems can efficiently support business growth and larger operational demands. Techniques such as distributed architectures, cloud infrastructure, parallel processing, and multi-agent collaboration help improve scalability. In enterprise environments, scalability is essential because AI agents often need to support thousands of users, large datasets, and multiple simultaneous workflows.",
+                    "type": "text",
+                    "id": 47
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Scalability Benefits",
+                    "list": {
+                        "1": "Handles Growth",
+                        "2": "Improves Performance",
+                        "3": "Supports More Users",
+                        "4": "Enables Large Workloads"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q48 : What is asynchronous execution in AI agent workflows?",
-          "a": "Asynchronous execution means AI agents can perform multiple tasks independently without waiting for one task to fully finish before starting another. This improves efficiency because the system can continue processing other operations while waiting for slow processes such as API responses, database queries, or external tool execution. Asynchronous workflows are extremely useful in large-scale automation systems where many tasks happen simultaneously. They help reduce latency, improve scalability, and optimize resource utilization. Proper state management and orchestration are important in asynchronous systems because tasks may complete at different times and still need coordination.",
-          "example": "Example: An AI assistant sending emails, generating reports, and retrieving database records at the same time instead of sequentially.",
-          "type": "text",
-          "id": 48,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "49",
-      "Que": [
+            "id": "48",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q48 : What is AI agent reliability?",
+                    "a": "AI agent reliability refers to the consistency and dependability of an agent when performing tasks and making decisions. A reliable agent produces accurate outputs, handles failures gracefully, and operates predictably under different conditions. Reliability is improved through testing, monitoring, validation mechanisms, fallback strategies, and quality assurance processes. Organizations prioritize reliability because unreliable agents can create operational risks, reduce trust, and negatively impact business outcomes. Reliable systems are essential for production deployments.",
+                    "type": "text",
+                    "id": 48
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Reliable Agent" },
+                        { "label": "Unreliable Agent" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Consistent Results" },
+                                { "col": "Inconsistent Results" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Handles Errors Well" },
+                                { "col": "Fails Frequently" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Reliability is a key requirement for enterprise AI adoption."
+                }
+            ]
+        },
         {
-          "q": "Q49 : What is trust calibration in human-AI interaction?",
-          "a": "Trust calibration refers to maintaining the correct level of user trust in an AI system based on its actual capabilities and limitations. If users trust the AI too much, they may blindly accept incorrect outputs. If they trust it too little, they may avoid using a helpful system effectively. Proper trust calibration ensures users understand when the AI is reliable and when human verification is still necessary. This is especially important in healthcare, finance, cybersecurity, and enterprise automation where wrong decisions can have serious consequences. Transparency, explainability, observability, and clear communication all help improve healthy trust calibration.",
-          "example": "Example: A medical AI system showing confidence scores and recommending doctor verification for uncertain diagnoses.",
-          "type": "text",
-          "id": 49,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "50",
-      "Que": [
+            "id": "49",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q49 : What is AI agent testing?",
+                    "a": "AI agent testing is the process of validating an agent's functionality, performance, security, reasoning ability, and task execution capabilities. Testing ensures that agents behave as expected under different scenarios and can handle both normal and edge cases. Common testing methods include functional testing, performance testing, security testing, evaluation benchmarks, and user acceptance testing. Thorough testing helps identify defects, reduce risks, improve reliability, and ensure that AI agents meet business requirements before deployment.",
+                    "type": "text",
+                    "id": 49
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Testing Types",
+                    "list": {
+                        "1": "Functional Testing",
+                        "2": "Performance Testing",
+                        "3": "Security Testing",
+                        "4": "Integration Testing",
+                        "5": "User Acceptance Testing"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q50 : Why is Agentic AI considered the next major evolution in Artificial Intelligence?",
-          "a": "Agentic AI is considered the next major evolution in Artificial Intelligence because it moves beyond simple chat-based interactions and enables systems to act autonomously, make decisions, use tools, and complete complex workflows independently. Traditional AI models mainly generate responses, but Agentic AI combines reasoning, memory, planning, tool usage, orchestration, and automation together into intelligent systems capable of real-world execution. This technology has the potential to transform industries by automating business operations, improving productivity, reducing manual effort, and enabling highly personalized digital assistants. Although challenges related to safety, reliability, and governance still exist, Agentic AI is expected to become a core part of future enterprise systems and intelligent automation platforms.",
-          "example": "Example: AI agents managing customer support operations, automating software development tasks, and coordinating enterprise workflows with minimal human supervision.",
-          "type": "text",
-          "id": 50,
-          "playButton": true,
-          "pauseButton": false
+            "id": "50",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q50 : Why is Agentic AI considered the future of automation?",
+                    "a": "Agentic AI is considered the future of automation because it goes beyond simple rule-based processes and enables intelligent decision-making, planning, and autonomous task execution. These systems can adapt to changing conditions, collaborate with other agents, access external tools, and manage complex workflows independently. As organizations seek greater efficiency and productivity, Agentic AI provides a scalable solution for automating knowledge work and business operations. Its ability to combine reasoning, memory, and action makes it a transformative technology for the future.",
+                    "type": "text",
+                    "id": 50
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Future Benefits",
+                    "list": {
+                        "1": "Intelligent Automation",
+                        "2": "Autonomous Decisions",
+                        "3": "Higher Productivity",
+                        "4": "Workflow Optimization",
+                        "5": "Business Scalability"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Agentic AI combines reasoning, planning, memory, and action to automate complex work."
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q51 : What is an autonomous agent?",
+                    "a": "An autonomous agent is an AI system capable of performing tasks, making decisions, and executing actions with minimal human intervention. It can perceive its environment, analyze information, plan steps, and take actions to achieve specific objectives. Autonomous agents continuously monitor outcomes and adjust their behavior when necessary. These agents are commonly used in business automation, customer service, robotics, and intelligent assistants. Their ability to operate independently makes them a key component of modern Agentic AI systems.",
+                    "type": "text",
+                    "id": 51
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Capabilities",
+                    "list": {
+                        "1": "Decision Making",
+                        "2": "Planning",
+                        "3": "Task Execution",
+                        "4": "Adaptation"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Autonomous agents require minimal supervision to complete assigned goals."
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q52 : What is agent memory management?",
+                    "a": "Agent memory management is the process of storing, organizing, retrieving, and updating information used by an AI agent. Effective memory management allows agents to maintain context, remember previous interactions, and access relevant knowledge efficiently. It includes handling both short-term and long-term memory systems. Proper memory management improves personalization, decision-making, and workflow execution. In large-scale Agentic AI systems, memory management is essential for maintaining performance and ensuring accurate information retrieval over time.",
+                    "type": "text",
+                    "id": 52
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Memory Type" },
+                        { "label": "Purpose" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Short-Term" },
+                                { "col": "Session Context" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Long-Term" },
+                                { "col": "Persistent Knowledge" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q53 : What is agent orchestration?",
+                    "a": "Agent orchestration refers to coordinating multiple AI agents, tools, and workflows to achieve a common objective. The orchestration layer manages communication, task assignments, execution order, and resource utilization. It ensures that agents collaborate effectively and perform tasks in a structured manner. Orchestration is important in complex enterprise systems where multiple specialized agents work together. By managing interactions and dependencies, orchestration improves efficiency, scalability, and reliability across Agentic AI workflows.",
+                    "type": "text",
+                    "id": 53
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Orchestration Flow",
+                    "code": "\nCoordinator Agent -> Research Agent -> Analysis Agent -> Execution Agent"
+                },
+                {
+                    "type": "note",
+                    "note": "Orchestration ensures that all agents work together in a coordinated manner."
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q54 : What is task prioritization in Agentic AI?",
+                    "a": "Task prioritization is the process through which an AI agent determines the order in which tasks should be executed based on importance, urgency, dependencies, and business objectives. Effective prioritization helps agents allocate resources efficiently and achieve goals faster. It is especially important when multiple tasks compete for attention simultaneously. By evaluating priorities dynamically, agents can adapt to changing conditions and ensure that critical activities are completed before less important ones.",
+                    "type": "text",
+                    "id": 54
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Priority Factors",
+                    "list": {
+                        "1": "Urgency",
+                        "2": "Importance",
+                        "3": "Dependencies",
+                        "4": "Business Impact"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q55 : What is an AI agent lifecycle?",
+                    "a": "The AI agent lifecycle describes the stages involved in creating, deploying, operating, and maintaining an AI agent. The lifecycle typically includes design, development, training, testing, deployment, monitoring, and continuous improvement. Each stage ensures that the agent performs effectively and remains aligned with business objectives. Lifecycle management helps organizations maintain reliability, security, and performance while adapting agents to changing requirements. Understanding the lifecycle is essential for successfully implementing Agentic AI solutions.",
+                    "type": "text",
+                    "id": 55
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Lifecycle Stages",
+                    "list": {
+                        "1": "Design",
+                        "2": "Development",
+                        "3": "Testing",
+                        "4": "Deployment",
+                        "5": "Monitoring"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Continuous monitoring and improvement are important parts of the agent lifecycle."
+                }
+            ]
+        },
+        {
+            "id": "56",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q56 : What is agent planning architecture?",
+                    "a": "Agent planning architecture is the framework that enables an AI agent to analyze goals, generate execution strategies, and determine the sequence of actions required to achieve desired outcomes. It includes components such as reasoning engines, memory systems, decision modules, and task planners. A well-designed planning architecture allows agents to adapt to changing conditions and handle complex workflows efficiently. This architecture is fundamental in Agentic AI because it enables autonomous decision-making and structured problem-solving across various applications.",
+                    "type": "text",
+                    "id": 56
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Architecture Components",
+                    "list": {
+                        "1": "Reasoning Engine",
+                        "2": "Task Planner",
+                        "3": "Memory System",
+                        "4": "Decision Module"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "57",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q57 : What is agent reflection?",
+                    "a": "Agent reflection is the process through which an AI agent reviews its own actions, decisions, and outcomes to identify improvements. By analyzing previous results, the agent can refine future strategies and avoid repeating mistakes. Reflection enhances learning, problem-solving, and adaptability without requiring complete retraining. It is commonly used in advanced Agentic AI systems to improve reasoning quality and task performance. Reflection helps agents become more effective over time by continuously evaluating their behavior and outcomes.",
+                    "type": "text",
+                    "id": 57
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Reflection Cycle",
+                    "code": "\nAction -> Result -> Evaluation -> Improvement -> Next Action"
+                },
+                {
+                    "type": "note",
+                    "note": "Reflection allows agents to learn from previous experiences and improve future decisions."
+                }
+            ]
+        },
+        {
+            "id": "58",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q58 : What is agent persistence?",
+                    "a": "Agent persistence refers to an AI agent's ability to maintain state, memory, and progress across multiple sessions or extended periods of operation. Persistent agents can resume unfinished tasks, retain historical information, and continue workflows without losing context. This capability is important for long-running business processes, customer support systems, and enterprise automation solutions. Persistence improves efficiency and user experience by ensuring continuity and reducing the need to restart tasks or re-enter information repeatedly.",
+                    "type": "text",
+                    "id": 58
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Persistence Benefits",
+                    "list": {
+                        "1": "Task Continuity",
+                        "2": "Context Retention",
+                        "3": "Improved Efficiency",
+                        "4": "Better User Experience"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "59",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q59 : What is an execution engine in Agentic AI?",
+                    "a": "An execution engine is the component responsible for carrying out plans and actions generated by an AI agent. It interacts with tools, APIs, databases, and external systems to perform tasks and achieve objectives. The execution engine manages workflows, tracks progress, handles failures, and ensures actions are completed successfully. It serves as the operational layer of an Agentic AI system, converting decisions and plans into real-world actions. Reliable execution engines are essential for practical automation applications.",
+                    "type": "text",
+                    "id": 59
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Execution Engine Functions",
+                    "list": {
+                        "1": "Action Execution",
+                        "2": "Tool Integration",
+                        "3": "Workflow Tracking",
+                        "4": "Error Handling"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The execution engine transforms plans into actual operations."
+                }
+            ]
+        },
+        {
+            "id": "60",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q60 : What is agent optimization?",
+                    "a": "Agent optimization is the process of improving the performance, efficiency, accuracy, and reliability of AI agents. Optimization techniques may involve refining prompts, improving memory systems, enhancing workflows, reducing latency, and upgrading reasoning strategies. The goal is to maximize task success while minimizing resource consumption and errors. Continuous optimization is important because business requirements, data sources, and user expectations evolve over time. Well-optimized agents deliver better outcomes and provide greater value in production environments.",
+                    "type": "text",
+                    "id": 60
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Optimization Areas",
+                    "list": {
+                        "1": "Performance",
+                        "2": "Accuracy",
+                        "3": "Latency",
+                        "4": "Resource Usage",
+                        "5": "Reliability"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "61",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q61 : What is agent learning in Agentic AI?",
+                    "a": "Agent learning refers to an AI agent's ability to improve its performance by analyzing past interactions, feedback, and outcomes. Learning helps agents refine decision-making processes, optimize workflows, and adapt to changing environments. Depending on the system design, learning may occur through feedback loops, reinforcement mechanisms, or continuous updates to knowledge sources. Effective learning enables agents to become more accurate and efficient over time. This capability is essential for building intelligent systems that continuously improve their ability to achieve goals.",
+                    "type": "text",
+                    "id": 61
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Learning Sources",
+                    "list": {
+                        "1": "User Feedback",
+                        "2": "Past Actions",
+                        "3": "Task Results",
+                        "4": "Knowledge Updates"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Learning allows AI agents to improve performance without constant manual adjustments."
+                }
+            ]
+        },
+        {
+            "id": "62",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q62 : What is reinforcement learning in Agentic AI?",
+                    "a": "Reinforcement learning is a machine learning approach where an agent learns by interacting with an environment and receiving rewards or penalties for its actions. The goal is to maximize long-term rewards by discovering optimal strategies through trial and error. In Agentic AI, reinforcement learning can improve decision-making, planning, and task execution. It is commonly used in robotics, gaming, recommendation systems, and autonomous systems where agents must learn effective behaviors from experience rather than predefined rules.",
+                    "type": "text",
+                    "id": 62
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Reinforcement Learning Cycle",
+                    "code": "\nAction -> Reward/Penalty -> Learning -> Better Action"
+                }
+            ]
+        },
+        {
+            "id": "63",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q63 : What is an agent environment?",
+                    "a": "An agent environment is the surrounding context or system in which an AI agent operates and performs actions. The environment provides inputs, receives outputs, and responds to agent decisions. It may include users, applications, databases, APIs, physical devices, or digital systems. Understanding the environment is critical because it influences decision-making and task execution. Agent environments can be static or dynamic depending on how frequently conditions change during operation.",
+                    "type": "text",
+                    "id": 63
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Environment Type" },
+                        { "label": "Description" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Static" },
+                                { "col": "Rarely Changes" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Dynamic" },
+                                { "col": "Frequently Changes" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Agents must understand their environment to make effective decisions."
+                }
+            ]
+        },
+        {
+            "id": "64",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q64 : What is an intelligent agent?",
+                    "a": "An intelligent agent is a system capable of perceiving information, reasoning about situations, making decisions, and taking actions to achieve specific goals. Intelligent agents use knowledge, memory, and problem-solving techniques to operate effectively in different environments. They can function independently or as part of a larger multi-agent system. These agents are widely used in virtual assistants, recommendation systems, automation platforms, robotics, and enterprise applications where intelligent decision-making is required.",
+                    "type": "text",
+                    "id": 64
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Characteristics",
+                    "list": {
+                        "1": "Perception",
+                        "2": "Reasoning",
+                        "3": "Decision Making",
+                        "4": "Action Execution",
+                        "5": "Goal Orientation"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "65",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q65 : What is agent collaboration architecture?",
+                    "a": "Agent collaboration architecture is a design pattern that enables multiple AI agents to communicate, coordinate, and work together toward common objectives. The architecture defines how agents exchange information, share responsibilities, resolve conflicts, and synchronize actions. Collaboration architectures improve scalability and efficiency by allowing specialized agents to focus on specific tasks. They are widely used in enterprise automation, research systems, software development assistants, and large-scale Agentic AI platforms that require teamwork among intelligent components.",
+                    "type": "text",
+                    "id": 65
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Architecture Benefits",
+                    "list": {
+                        "1": "Scalability",
+                        "2": "Task Specialization",
+                        "3": "Improved Efficiency",
+                        "4": "Better Coordination"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Collaboration architectures are the foundation of multi-agent systems."
+                }
+            ]
+        },
+        {
+            "id": "66",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q66 : What is agent simulation?",
+                    "a": "Agent simulation is the process of creating a virtual environment where AI agents can test behaviors, decision-making strategies, and workflows before being deployed in real-world systems. Simulations allow developers to evaluate performance, identify weaknesses, and measure outcomes without affecting actual operations. They are widely used in robotics, autonomous vehicles, business process automation, and research applications. By exposing agents to different scenarios repeatedly, simulations help improve reliability, safety, and overall effectiveness while reducing deployment risks.",
+                    "type": "text",
+                    "id": 66
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Simulation Benefits",
+                    "list": {
+                        "1": "Risk-Free Testing",
+                        "2": "Performance Evaluation",
+                        "3": "Scenario Analysis",
+                        "4": "Reliability Improvement"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Simulation allows agents to learn and improve before real-world deployment."
+                }
+            ]
+        },
+        {
+            "id": "67",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q67 : What is agent benchmarking?",
+                    "a": "Agent benchmarking is the practice of measuring and comparing the performance of AI agents using predefined metrics and test scenarios. Benchmarks help evaluate factors such as accuracy, reasoning quality, response time, task completion rates, and reliability. Organizations use benchmarking to identify strengths and weaknesses, compare different agent architectures, and monitor improvements over time. Effective benchmarking provides objective insights that support optimization efforts and help ensure agents meet required performance standards before production deployment.",
+                    "type": "text",
+                    "id": 67
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Metric" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Accuracy" },
+                                { "col": "Measure Correctness" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Latency" },
+                                { "col": "Measure Speed" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Success Rate" },
+                                { "col": "Measure Completion" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "68",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q68 : What is agent transparency?",
+                    "a": "Agent transparency refers to the ability to understand, inspect, and explain how an AI agent reaches decisions and performs actions. Transparent systems provide visibility into reasoning processes, tool usage, memory access, and workflow execution. Transparency helps build trust, supports compliance requirements, and enables effective debugging. It is particularly important in industries such as healthcare, finance, and government where accountability and explainability are critical. Transparent agents allow users and organizations to better understand AI-driven outcomes.",
+                    "type": "text",
+                    "id": 68
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Transparency Benefits",
+                    "list": {
+                        "1": "Trust Building",
+                        "2": "Accountability",
+                        "3": "Compliance Support",
+                        "4": "Easier Debugging"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "69",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q69 : What is explainability in Agentic AI?",
+                    "a": "Explainability is the capability of an AI system to provide understandable reasons for its decisions, recommendations, and actions. Explainable agents help users understand why a specific outcome was produced and what factors influenced the decision. This capability improves trust, supports regulatory requirements, and assists with troubleshooting. Explainability is especially valuable in high-stakes domains where decisions must be justified. Modern Agentic AI systems increasingly incorporate explainability features to improve transparency and responsible AI adoption.",
+                    "type": "text",
+                    "id": 69
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Explainability Flow",
+                    "code": "\nInput -> Reasoning -> Decision -> Explanation"
+                },
+                {
+                    "type": "note",
+                    "note": "Explainability helps users understand the logic behind AI-generated outcomes."
+                }
+            ]
+        },
+        {
+            "id": "70",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q70 : What is responsible AI in Agentic AI systems?",
+                    "a": "Responsible AI refers to the development and deployment of AI systems in a manner that is ethical, fair, transparent, secure, and accountable. In Agentic AI, responsible practices ensure that autonomous agents operate safely and align with organizational values and societal expectations. Key principles include fairness, privacy protection, transparency, security, and human oversight. Organizations implement responsible AI frameworks to reduce risks, prevent misuse, and build trust among users while maximizing the benefits of intelligent automation technologies.",
+                    "type": "text",
+                    "id": 70
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Responsible AI Principles",
+                    "list": {
+                        "1": "Fairness",
+                        "2": "Transparency",
+                        "3": "Privacy",
+                        "4": "Security",
+                        "5": "Accountability"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Responsible AI ensures that Agentic AI systems are trustworthy and ethical."
+                }
+            ]
+        },
+        {
+            "id": "71",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q71 : What is agent alignment?",
+                    "a": "Agent alignment refers to ensuring that an AI agent's goals, actions, and decisions remain consistent with human intentions, organizational objectives, and ethical guidelines. Proper alignment helps prevent unwanted behaviors and ensures that agents operate safely and effectively. Alignment mechanisms may include constraints, policies, monitoring systems, and human oversight. As agents become more autonomous, alignment becomes increasingly important because it helps maintain trust, reduce risks, and ensure that AI systems consistently produce beneficial outcomes.",
+                    "type": "text",
+                    "id": 71
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Alignment Objectives",
+                    "list": {
+                        "1": "Safety",
+                        "2": "Goal Consistency",
+                        "3": "Ethical Behavior",
+                        "4": "Risk Reduction"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Alignment ensures agents act according to intended objectives and values."
+                }
+            ]
+        },
+        {
+            "id": "72",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q72 : What is agent autonomy level?",
+                    "a": "Agent autonomy level describes the degree of independence an AI agent has when making decisions and performing actions. Lower autonomy levels require frequent human involvement, while higher autonomy levels allow agents to operate with minimal supervision. Different applications require different autonomy levels depending on risk, complexity, and regulatory requirements. Understanding autonomy levels helps organizations balance efficiency and control while deploying AI systems in production environments. Proper autonomy management is critical for responsible Agentic AI implementation.",
+                    "type": "text",
+                    "id": 72
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Autonomy Level" },
+                        { "label": "Human Involvement" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Low" },
+                                { "col": "Frequent Oversight" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "High" },
+                                { "col": "Minimal Oversight" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "73",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q73 : What is agent fault tolerance?",
+                    "a": "Agent fault tolerance is the ability of an AI system to continue operating correctly even when errors, failures, or unexpected conditions occur. Fault-tolerant agents use backup mechanisms, retries, fallback workflows, and error-handling strategies to maintain service availability. This capability improves reliability and minimizes disruptions during operation. In enterprise environments, fault tolerance is particularly important because AI agents often interact with critical systems where failures can impact business processes, customer experiences, and operational efficiency.",
+                    "type": "text",
+                    "id": 73
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Fault Tolerance Techniques",
+                    "list": {
+                        "1": "Retries",
+                        "2": "Fallback Actions",
+                        "3": "Error Handling",
+                        "4": "Redundancy"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Fault tolerance helps agents remain operational despite failures."
+                }
+            ]
+        },
+        {
+            "id": "74",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q74 : What is agent decision intelligence?",
+                    "a": "Decision intelligence is the capability of an AI agent to combine data, reasoning, analytics, and contextual information to make informed decisions. It extends traditional decision-making by incorporating predictive insights and business objectives into the process. Decision intelligence helps agents evaluate alternatives, estimate outcomes, and choose optimal actions. This capability is widely used in business operations, finance, healthcare, and customer service applications where high-quality decisions can significantly impact performance and results.",
+                    "type": "text",
+                    "id": 74
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Decision Intelligence Process",
+                    "code": "\nCollect Data -> Analyze -> Predict Outcomes -> Select Best Action"
+                }
+            ]
+        },
+        {
+            "id": "75",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q75 : What is enterprise Agentic AI?",
+                    "a": "Enterprise Agentic AI refers to the use of autonomous AI agents within organizations to automate workflows, improve productivity, and support business operations. These agents can perform tasks such as customer support, document processing, research, reporting, and decision support. Enterprise deployments require strong governance, security, scalability, and monitoring capabilities. By combining intelligence, automation, and integration with business systems, enterprise Agentic AI helps organizations improve efficiency, reduce costs, and accelerate digital transformation initiatives.",
+                    "type": "text",
+                    "id": 75
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Enterprise Use Cases",
+                    "list": {
+                        "1": "Customer Support",
+                        "2": "Workflow Automation",
+                        "3": "Research Assistance",
+                        "4": "Reporting",
+                        "5": "Decision Support"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Enterprise Agentic AI focuses on large-scale business automation and productivity."
+                }
+            ]
+        },
+        {
+            "id": "76",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q76 : What is agent interoperability?",
+                    "a": "Agent interoperability is the ability of AI agents, systems, and tools to communicate and work together seamlessly across different platforms and environments. It ensures that agents can exchange information, share tasks, and collaborate effectively regardless of the technologies being used. Interoperability is important in enterprise environments where multiple applications and services must interact. By supporting standardized communication and integration methods, interoperable agents improve scalability, flexibility, and operational efficiency while reducing system complexity.",
+                    "type": "text",
+                    "id": 76
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Interoperability Benefits",
+                    "list": {
+                        "1": "System Integration",
+                        "2": "Better Collaboration",
+                        "3": "Scalability",
+                        "4": "Flexibility"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Interoperability allows AI agents to work across diverse systems and platforms."
+                }
+            ]
+        },
+        {
+            "id": "77",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q77 : What is agent lifecycle management?",
+                    "a": "Agent lifecycle management involves overseeing the complete journey of an AI agent from design and development to deployment, monitoring, maintenance, and retirement. It ensures that agents remain secure, reliable, and aligned with business objectives throughout their operational life. Lifecycle management includes version control, testing, performance monitoring, updates, and governance activities. Organizations use lifecycle management practices to maintain consistency, reduce risks, and ensure that AI systems continue delivering value as requirements evolve over time.",
+                    "type": "text",
+                    "id": 77
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Lifecycle Stages",
+                    "list": {
+                        "1": "Design",
+                        "2": "Development",
+                        "3": "Deployment",
+                        "4": "Monitoring",
+                        "5": "Maintenance"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "78",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q78 : What is agent risk management?",
+                    "a": "Agent risk management is the process of identifying, assessing, monitoring, and mitigating risks associated with AI agent operations. Risks may include security vulnerabilities, incorrect decisions, compliance violations, data privacy issues, and system failures. Effective risk management combines governance, monitoring, testing, and human oversight to minimize potential negative impacts. As Agentic AI systems become more autonomous, risk management becomes increasingly important for maintaining trust, ensuring safety, and protecting business operations from unexpected outcomes.",
+                    "type": "text",
+                    "id": 78
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Risk Type" },
+                        { "label": "Example" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Security Risk" },
+                                { "col": "Unauthorized Access" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Operational Risk" },
+                                { "col": "Workflow Failure" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Compliance Risk" },
+                                { "col": "Policy Violation" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Risk management is essential for safe and reliable AI deployment."
+                }
+            ]
+        },
+        {
+            "id": "79",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q79 : What is agent performance optimization?",
+                    "a": "Agent performance optimization focuses on improving the speed, accuracy, efficiency, and reliability of AI agents. Optimization techniques include prompt refinement, memory enhancement, workflow tuning, caching, model selection, and infrastructure improvements. The goal is to reduce response times, lower operational costs, and increase task success rates. Continuous optimization ensures that agents remain effective as workloads grow and business requirements change. Well-optimized agents provide better user experiences and deliver greater value in production environments.",
+                    "type": "text",
+                    "id": 79
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Optimization Areas",
+                    "list": {
+                        "1": "Speed",
+                        "2": "Accuracy",
+                        "3": "Efficiency",
+                        "4": "Reliability",
+                        "5": "Cost Reduction"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "80",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q80 : What is the future of Agentic AI?",
+                    "a": "The future of Agentic AI involves increasingly autonomous systems capable of handling complex workflows, collaborating with humans, and coordinating with other agents. Advances in reasoning, memory, planning, and tool integration will enable agents to perform more sophisticated tasks across industries. Organizations are expected to adopt Agentic AI for business automation, decision support, research, and personalized services. As governance, security, and reliability improve, Agentic AI will become a major driver of digital transformation and intelligent automation worldwide.",
+                    "type": "text",
+                    "id": 80
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Future Trends",
+                    "list": {
+                        "1": "Greater Autonomy",
+                        "2": "Multi-Agent Collaboration",
+                        "3": "Enterprise Adoption",
+                        "4": "Advanced Reasoning",
+                        "5": "Intelligent Automation"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Agentic AI is expected to play a significant role in the future of work and automation."
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

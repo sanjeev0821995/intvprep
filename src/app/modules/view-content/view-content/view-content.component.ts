@@ -225,7 +225,7 @@ export class ViewContentComponent implements OnInit {
             return 'javascript';
         } else if (this.path.includes('html')) {
             this.setTitle(
-                `Top 30+ HTML and HTML5 Interview Questions (${this.currentYear}) - Intvprep.`,
+                `Top 40+ HTML and HTML5 Interview Questions (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare from this list of HTML & HTML5 Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
@@ -258,7 +258,7 @@ export class ViewContentComponent implements OnInit {
             return 'nodejs';
         } else if (this.path.includes('git')) {
             this.setTitle(
-                `Top 10+ Commonly Asked GIT Interview Questions (${this.currentYear}) - Intvprep.`,
+                `Top 50+ Commonly Asked GIT Interview Questions (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare from this list of Git Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
@@ -269,7 +269,7 @@ export class ViewContentComponent implements OnInit {
             return 'git';
         } else if (this.path.includes('java-interview-questions')) {
             this.setTitle(
-                `Top 100+ Java Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+                `Top 200+ Java Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare the most asked Java Questions and Answers for freshers and experienced candidates to crack your next Java developer interview.',
@@ -278,9 +278,11 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('java-interview-questions');
 
             return 'java';
-        } else if (this.path.includes('java-microservices')) {
+        } else if (
+            this.path.includes('java-microservices-interview-questions')
+        ) {
             this.setTitle(
-                `Top 100+ Java Microservices Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+                `Top 50+ Java Microservices Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare the most asked Java Microservices Interview Questions and Answers for freshers and experienced candidates to crack your next microservices interview.',
@@ -289,9 +291,11 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('java-microservices-interview-questions');
 
             return 'java';
-        } else if (this.path.includes('java-multithreading')) {
+        } else if (
+            this.path.includes('java-multithreading-interview-questions')
+        ) {
             this.setTitle(
-                `Top 100+ Java Multithreading Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+                `Top 50+ Java Multithreading Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare the most asked Java Multithreading Interview Questions and Answers for freshers and experienced candidates to crack your next Java interview.',
@@ -300,9 +304,9 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('java-multithreading-interview-questions');
 
             return 'java';
-        } else if (this.path.includes('basic-springboot')) {
+        } else if (this.path.includes('basic-springboot-interview-questions')) {
             this.setTitle(
-                `Top 100+ Basic Springboot Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+                `Top 50+ Basic Springboot Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare the most asked Basic Springboot Questions and Answers for freshers and experienced candidates to crack your next developer interview.',
@@ -311,9 +315,9 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('basic-springboot-interview-questions');
 
             return 'springboot';
-        } else if (this.path.includes('springboot')) {
+        } else if (this.path.includes('springboot-interview-questions')) {
             this.setTitle(
-                `Top 100+ Springboot Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+                `Top 80+ Springboot Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare the most asked Springboot Interview Questions and Answers for freshers and experienced candidates to crack your next Springboot developer interview.',
@@ -322,9 +326,11 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('springboot-interview-questions');
 
             return 'springboot';
-        } else if (this.path.includes('springboot-security')) {
+        } else if (
+            this.path.includes('springboot-security-interview-questions')
+        ) {
             this.setTitle(
-                `Top 100+ Springboot Security Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+                `Top 50+ Springboot Security Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare the most asked Springboot Security Interview Questions and Answers for freshers and experienced candidates to crack your next Spring Security interview.',
@@ -333,9 +339,9 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('springboot-security-interview-questions');
 
             return 'springboot';
-        } else if (this.path.includes('springbootJPA')) {
+        } else if (this.path.includes('springbootJPA-interview-questions')) {
             this.setTitle(
-                `Top 100+ Springboot JPA Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+                `Top 50+ Springboot JPA Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare the most asked Springboot JPA Interview Questions and Answers for freshers and experienced candidates to crack your next Springboot JPA interview.',
@@ -344,9 +350,9 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('springbootjpa-interview-questions');
 
             return 'springboot';
-        } else if (this.path.includes('selenium')) {
+        } else if (this.path.includes('selenium-interview-questions')) {
             this.setTitle(
-                `Top 100+ Selenium Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+                `Top 50+ Selenium Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare the most asked Selenium Interview Questions and Answers for freshers and experienced candidates to crack your next automation testing interview.',
@@ -355,9 +361,9 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('selenium-interview-questions');
 
             return 'selenium';
-        } else if (this.path.includes('playwright')) {
+        } else if (this.path.includes('playwright-interview-questions')) {
             this.setTitle(
-                `Top 100+ Playwright Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+                `Top 50+ Playwright Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare the most asked Playwright Interview Questions and Answers for freshers and experienced candidates to crack your next automation testing interview.',
@@ -366,9 +372,9 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('playwright-interview-questions');
 
             return 'playwright';
-        } else if (this.path.includes('python')) {
+        } else if (this.path.includes('python-interview-questions')) {
             this.setTitle(
-                `Top 100+ Python Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+                `Top 150+ Python Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare the most asked Python Questions and Answers for freshers and experienced candidates to crack your next Python developer interview.',
@@ -377,9 +383,9 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('python-interview-questions');
 
             return 'python';
-        } else if (this.path.includes('generativeAI')) {
+        } else if (this.path.includes('generativeAI-interview-questions')) {
             this.setTitle(
-                `Top 100+ Generative AI Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+                `Top 200+ Generative AI Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare the most asked Generative AI Interview Questions and Answers for freshers and experienced candidates to crack your next AI interview.',
@@ -388,9 +394,9 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('generativeAI-interview-questions');
 
             return 'generativeAI';
-        } else if (this.path.includes('agenticAI')) {
+        } else if (this.path.includes('agenticAI-interview-questions')) {
             this.setTitle(
-                `Top 100+ Agentic AI Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+                `Top 70+ Agentic AI Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare the most asked Agentic AI Interview Questions and Answers for freshers and experienced candidates to crack your next AI interview.',
@@ -399,9 +405,9 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('agenticAI-interview-questions');
 
             return 'agenticAI';
-        } else if (this.path.includes('datascience')) {
+        } else if (this.path.includes('datascience-interview-questions')) {
             this.setTitle(
-                `Top 100+ Data Science Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+                `Top 150+ Data Science Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
             );
             this.setMetaTag(
                 'Prepare the most asked Data Science Questions and Answers for freshers and experienced candidates to crack your next data science interview.',

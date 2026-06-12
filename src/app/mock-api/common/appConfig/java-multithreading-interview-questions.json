@@ -1,709 +1,1185 @@
 {
-  "java-multithreading-interview-questions": [
-    {
-      "id": "1",
-      "Que": [
+    "java-multithreading-interview-questions": [
         {
-          "q": "Q1 : What is multithreading in Java?",
-          "a": "Multithreading in Java is a process of executing multiple threads simultaneously within a single program. A thread is a lightweight sub-process that performs an independent task. Multithreading improves application performance, better CPU utilization, and responsiveness by allowing multiple tasks to run concurrently. It is commonly used in applications like gaming, web servers, banking systems, and real-time applications.",
-          "example": "Example: A music app playing songs while downloading files in the background.",
-          "type": "text",
-          "id": 1,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "Que": [
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is multithreading in Java?",
+                    "a": "Multithreading is a feature in Java that allows multiple threads to execute concurrently within a single process. A thread is the smallest unit of execution and shares the same memory space with other threads of the process. Multithreading improves application performance, responsiveness, and resource utilization by allowing multiple tasks to run simultaneously. It is commonly used in applications that perform background processing, file operations, networking, and real-time tasks where executing multiple operations concurrently is beneficial.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q2 : What is process-based multitasking?",
-          "a": "Process-based multitasking means executing multiple independent processes simultaneously. Each process runs separately with its own memory space and resources. This type of multitasking is mainly handled by the operating system and is suitable for system-level execution.",
-          "example": "Example: Listening to music while browsing the internet and downloading files at the same time.",
-          "type": "text",
-          "id": 2,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "Que": [
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : What is process-based multitasking?",
+                    "a": "Process-based multitasking is a technique in which multiple independent processes execute simultaneously within an operating system. Each process has its own memory space, resources, and execution environment, making it isolated from other processes. Communication between processes is generally more complex and resource-intensive. Modern operating systems use process-based multitasking to run applications such as web browsers, media players, and development tools concurrently while ensuring that a failure in one process does not directly affect another process.",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q3 : What is thread-based multitasking?",
-          "a": "Thread-based multitasking means executing multiple threads simultaneously within the same process. Threads share the same memory and resources of the parent process. This type of multitasking is more lightweight and efficient compared to process-based multitasking.",
-          "example": "Example: A word processor checking spelling while the user continues typing.",
-          "type": "text",
-          "id": 3,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "Que": [
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : What is thread-based multitasking?",
+                    "a": "Thread-based multitasking is a mechanism in which multiple threads execute concurrently within the same process. Since threads share the same memory and resources, communication between them is faster and more efficient than communication between separate processes. Thread-based multitasking improves CPU utilization and application responsiveness. Java supports thread-based multitasking through its built-in multithreading API, allowing developers to perform multiple tasks such as background processing, user interaction handling, and data processing simultaneously within a single application.",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
         {
-          "q": "Q4 : What are the ways to create a thread in Java?",
-          "a": "There are two main ways to create a thread in Java. The first method is by extending the Thread class, and the second method is by implementing the Runnable interface. Implementing Runnable is generally preferred because Java supports multiple interface implementation but does not support multiple inheritance with classes.",
-          "example": "Example: class MyThread extends Thread or class MyRunnable implements Runnable.",
-          "type": "text",
-          "id": 4,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "Que": [
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : What are the ways to create a thread in Java?",
+                    "a": "Java provides multiple ways to create threads. The most common approaches are extending the Thread class and implementing the Runnable interface. Java also supports implementing Callable along with Future when a task needs to return a result. Among these approaches, implementing Runnable is generally preferred because it allows a class to extend another class while still supporting multithreading. The choice depends on the application's design requirements and whether the task needs to return a value after execution.",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Extending Thread": "Create a class that extends Thread and override the run() method.",
+                        "Implementing Runnable": "Create a class that implements Runnable and pass it to a Thread object.",
+                        "Implementing Callable": "Used when a task needs to return a result and may throw checked exceptions."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "code": "\nclass MyTask implements Runnable {\n    public void run() {\n        System.out.println(\"Thread Running\");\n    }\n}\nThread t = new Thread(new MyTask());\nt.start();"
+                }
+            ]
+        },
         {
-          "q": "Q5 : What is the difference between start() and run() methods?",
-          "a": "The start() method creates a new thread and internally calls the run() method. The run() method contains the actual task performed by the thread. If run() is called directly, no new thread is created and the method executes like a normal method in the current thread.",
-          "example": "Example: Calling start() executes code in a separate thread, while run() executes in the main thread itself.",
-          "type": "text",
-          "id": 5,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "Que": [
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : What is the difference between start() and run() methods?",
+                    "a": "The start() and run() methods play different roles in Java multithreading. The start() method creates a new thread and allows it to execute independently, while the run() method contains the actual code executed by the thread. Calling run() directly does not create a new thread and behaves like a normal method call. Therefore, developers should use start() whenever concurrent execution is required because it invokes the JVM thread scheduler and initiates a separate execution path.",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "start()" }, { "label": "run()" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Creates a new thread" },
+                                { "col": "Executes as a normal method" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Invokes thread scheduler" },
+                                { "col": "No new thread is created" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Calls run() internally" },
+                                { "col": "Contains task logic" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q6 : What is the importance of the start() method in Java threads?",
-          "a": "The start() method is responsible for creating and starting a new thread. It registers the thread with the Thread Scheduler and performs all necessary low-level operations required for thread execution. Without calling start(), multithreading cannot begin.",
-          "example": "Example: Calling t.start() creates a new execution path for the thread.",
-          "type": "text",
-          "id": 6,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "Que": [
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : What is the importance of the start() method in Java threads?",
+                    "a": "The start() method is essential in Java multithreading because it initiates a new thread of execution. When start() is called, the JVM creates a separate call stack for the thread and schedules it for execution. Internally, start() invokes the run() method, but unlike directly calling run(), it enables concurrent execution. Without start(), multithreading cannot occur. Therefore, it serves as the entry point for creating and executing threads independently from the main application flow.",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Creates a new thread.",
+                        "2": "Invokes the JVM scheduler.",
+                        "3": "Calls run() internally.",
+                        "4": "Enables concurrent execution."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q7 : What is Thread Scheduler in Java?",
-          "a": "Thread Scheduler is a component of the JVM responsible for deciding which thread should execute at a particular time. The scheduling algorithm depends on the JVM implementation and operating system, so thread execution order is not guaranteed.",
-          "example": "Example: Multiple threads waiting for CPU execution are managed by the Thread Scheduler.",
-          "type": "text",
-          "id": 7,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "Que": [
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : What is Thread Scheduler in Java?",
+                    "a": "The Thread Scheduler is a JVM component responsible for determining which thread should execute at a given time. Since multiple threads may be ready for execution simultaneously, the scheduler allocates CPU time among them. The exact scheduling algorithm depends on the operating system and JVM implementation. Thread priorities may influence scheduling decisions, but they do not guarantee execution order. The scheduler plays a crucial role in managing concurrent execution and ensuring efficient utilization of system resources.",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Selects the next thread for execution.",
+                        "2": "Allocates CPU time among threads.",
+                        "3": "May consider thread priorities.",
+                        "4": "Behavior depends on JVM and OS."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q8 : What happens if the run() method is not overridden?",
-          "a": "If the run() method is not overridden, the default run() method from the Thread class executes, which contains an empty implementation. As a result, the thread performs no task and no output is generated.",
-          "example": "Example: Creating a thread without overriding run() results in an empty execution.",
-          "type": "text",
-          "id": 8,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "Que": [
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : What happens if the run() method is not overridden?",
+                    "a": "If the run() method is not overridden, the thread executes the default implementation provided by the Thread class. Since the default implementation contains no task logic, the thread starts and terminates without performing any useful work. No compilation error occurs because the method already exists in the parent class. However, the purpose of creating the thread is effectively lost. Therefore, developers typically override run() or provide a Runnable implementation to define the task that the thread should execute.",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "A thread without a custom run() implementation executes no meaningful task and terminates immediately."
+                }
+            ]
+        },
         {
-          "q": "Q9 : Explain the life cycle of a thread in Java.",
-          "a": "A thread in Java passes through different states during execution. First, the thread is created in the New state. After calling start(), it enters the Runnable state. When the scheduler allocates CPU time, it moves to the Running state. It may enter Waiting or Blocked states during execution. After completing execution, the thread enters the Dead state.",
-          "example": "Example: A thread waiting for sleep() or join() enters the waiting state temporarily.",
-          "type": "text",
-          "id": 9,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "Que": [
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : Explain the life cycle of a thread in Java.",
+                    "a": "A thread in Java passes through several states during its lifetime. It begins in the NEW state when created, moves to RUNNABLE after start() is called, and enters RUNNING when selected by the scheduler. During execution, it may enter WAITING, TIMED_WAITING, or BLOCKED states while waiting for resources or events. Once the run() method completes or an unrecoverable error occurs, the thread enters the TERMINATED state. Understanding these states helps developers manage thread behavior effectively.",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "NEW": "Thread object created.",
+                        "RUNNABLE": "Ready to execute.",
+                        "RUNNING": "Currently executing.",
+                        "WAITING/BLOCKED": "Waiting for resources or signals.",
+                        "TERMINATED": "Execution completed."
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q10 : Why is implementing Runnable considered the best approach for multithreading?",
-          "a": "Implementing Runnable is preferred because it allows the class to extend another class while still supporting multithreading. It promotes better object-oriented design and separates thread logic from business logic. This approach also improves flexibility and code maintainability.",
-          "example": "Example: A class implementing Runnable can still extend another parent class.",
-          "type": "text",
-          "id": 10,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-
-    {
-      "id": "11",
-      "Que": [
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : Why is implementing Runnable considered the best approach for multithreading?",
+                    "a": "Implementing Runnable is generally considered the preferred approach because it separates the task from the thread itself and supports better object-oriented design. Since Java allows only single inheritance, extending Thread prevents a class from extending any other class. By implementing Runnable, a class can still inherit from another parent class while supporting multithreading. This approach also improves code reusability, maintainability, and flexibility, making it the most commonly used technique for creating threads in real-world Java applications.",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Runnable" },
+                        { "label": "Extending Thread" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Supports inheritance of another class"
+                                },
+                                { "col": "Cannot extend another class" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Separates task from thread" },
+                                { "col": "Task and thread are tightly coupled" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Better reusability" },
+                                { "col": "Less flexible" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Implementing Runnable is the most commonly recommended approach in enterprise Java applications."
+                }
+            ]
+        },
         {
-          "q": "Q11 : How do you get and set the name of a thread in Java?",
-          "a": "The Thread class provides getName() and setName() methods to retrieve and modify thread names. Naming threads improves debugging, monitoring, and understanding of multithreaded applications.",
-          "example": "Example: thread.setName(\"MyThread\");",
-          "type": "text",
-          "id": 11,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "12",
-      "Que": [
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : How do you get and set the name of a thread in Java?",
+                    "a": "Every thread in Java has a name that helps identify it during execution and debugging. Thread names make it easier to track thread activity in logs and monitor concurrent operations. Java provides methods to both retrieve and modify thread names. The getName() method returns the current thread name, while setName() changes it. Naming threads properly improves code readability and simplifies troubleshooting in multithreaded applications, especially when multiple threads are running simultaneously and performing different tasks.",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Getting and setting a thread name.",
+                    "code": "\nThread t = new Thread();\nt.setName(\"Worker-1\");\nSystem.out.println(t.getName());"
+                }
+            ]
+        },
         {
-          "q": "Q12 : What are thread priorities in Java?",
-          "a": "Thread priorities indicate the importance of a thread to the Thread Scheduler. Java thread priorities range from 1 to 10, where 1 is the minimum priority and 10 is the maximum priority. Higher-priority threads are more likely to get CPU execution before lower-priority threads, although execution order is not guaranteed.",
-          "example": "Example: Thread.MAX_PRIORITY gives a thread priority value of 10.",
-          "type": "text",
-          "id": 12,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "13",
-      "Que": [
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : What are thread priorities in Java?",
+                    "a": "Thread priority is a mechanism that suggests to the thread scheduler which thread should receive CPU time preference. Java allows priorities ranging from 1 to 10, where a higher value indicates a higher scheduling preference. However, thread priority does not guarantee execution order because it depends on the operating system and JVM implementation. Priorities are useful when certain tasks are more important than others, but developers should not rely solely on them for program logic because scheduling behavior may vary across different environments.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Constant" }, { "label": "Value" }],
+                    "column": [
+                        {
+                            "row": [{ "col": "MIN_PRIORITY" }, { "col": "1" }]
+                        },
+                        {
+                            "row": [{ "col": "NORM_PRIORITY" }, { "col": "5" }]
+                        },
+                        {
+                            "row": [{ "col": "MAX_PRIORITY" }, { "col": "10" }]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q13 : What is the default priority of a thread in Java?",
-          "a": "The default priority of the main thread in Java is 5, which is represented by Thread.NORM_PRIORITY. Child threads inherit the priority of their parent thread unless explicitly changed.",
-          "example": "Example: A child thread created by the main thread automatically gets priority 5.",
-          "type": "text",
-          "id": 13,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "14",
-      "Que": [
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : What is the default priority of a thread in Java?",
+                    "a": "The default priority assigned to every newly created thread in Java is 5, which is represented by the constant Thread.NORM_PRIORITY. When a thread is created, it inherits the priority of its parent thread unless explicitly changed. The scheduler may use this priority as a hint when deciding which thread should run next. Since priorities are only recommendations and not strict rules, developers should avoid depending on them for application correctness. Proper synchronization and thread coordination techniques should be used instead.",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Default thread priority in Java is Thread.NORM_PRIORITY, which has a value of 5."
+                }
+            ]
+        },
         {
-          "q": "Q14 : What is the yield() method in Java?",
-          "a": "The yield() method temporarily pauses the currently executing thread and gives other threads of equal priority a chance to execute. It is a hint to the Thread Scheduler and does not guarantee that the current thread will stop immediately.",
-          "example": "Example: Thread.yield();",
-          "type": "text",
-          "id": 14,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "15",
-      "Que": [
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : What is the yield() method in Java?",
+                    "a": "The yield() method is a static method of the Thread class that temporarily pauses the currently executing thread and gives other threads of the same or higher priority a chance to execute. It acts as a hint to the thread scheduler rather than a guaranteed action. The scheduler may ignore the request and continue executing the same thread. Yield is mainly used in special scheduling scenarios and testing environments, but it is rarely used in modern enterprise applications because its behavior depends on the JVM and operating system.",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Using yield() method.",
+                    "code": "\nThread.yield();"
+                }
+            ]
+        },
         {
-          "q": "Q15 : What is the join() method in Java?",
-          "a": "The join() method allows one thread to wait until another thread completes its execution. It is commonly used when one thread depends on the result or completion of another thread before continuing execution.",
-          "example": "Example: thread.join(); causes the main thread to wait until the child thread finishes.",
-          "type": "text",
-          "id": 15,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "16",
-      "Que": [
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : What is the join() method in Java?",
+                    "a": "The join() method is used when one thread needs to wait for another thread to complete its execution before proceeding. When a thread calls join() on another thread, it becomes blocked until the target thread finishes. This is useful when the result of one thread is required before continuing with further processing. Join helps coordinate thread execution and ensures that dependent tasks are completed in the correct order. It is commonly used in applications that perform parallel processing and result aggregation.",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Waiting for a thread to complete.",
+                    "code": "\nThread t = new Thread();\nt.start();\nt.join();"
+                }
+            ]
+        },
         {
-          "q": "Q16 : What is the sleep() method in Java?",
-          "a": "The sleep() method temporarily pauses the execution of the current thread for a specified amount of time. During sleep, the thread remains in the waiting state and allows other threads to execute.",
-          "example": "Example: Thread.sleep(1000); pauses execution for 1 second.",
-          "type": "text",
-          "id": 16,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "17",
-      "Que": [
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : What is the sleep() method in Java?",
+                    "a": "The sleep() method temporarily pauses the execution of the currently running thread for a specified period of time. It is a static method provided by the Thread class and is commonly used to create delays, simulate processing time, or control execution flow. While a thread is sleeping, it does not consume CPU resources, but it still remains in memory. Once the specified time expires, the thread becomes eligible for execution again. Sleep does not release any locks held by the thread during its pause.",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Pausing a thread for 2 seconds.",
+                    "code": "\nThread.sleep(2000);"
+                }
+            ]
+        },
         {
-          "q": "Q17 : What is synchronization in Java?",
-          "a": "Synchronization is a mechanism used to control access to shared resources in multithreaded applications. It ensures that only one thread can execute a synchronized method or block at a time, preventing data inconsistency and race conditions.",
-          "example": "Example: Synchronizing bank account transactions to avoid incorrect balance updates.",
-          "type": "text",
-          "id": 17,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "18",
-      "Que": [
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : What is synchronization in Java?",
+                    "a": "Synchronization is a mechanism used to control access to shared resources in a multithreaded environment. When multiple threads access the same data simultaneously, inconsistencies and race conditions may occur. Synchronization ensures that only one thread can access a critical section of code at a time, maintaining data integrity and consistency. It is commonly used in banking systems, inventory management applications, and other scenarios where multiple threads update shared data. Synchronization helps make multithreaded applications reliable and thread-safe.",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Prevents race conditions",
+                        "2": "Maintains data consistency",
+                        "3": "Ensures thread safety",
+                        "4": "Controls access to shared resources"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q18 : What is the synchronized keyword in Java?",
-          "a": "The synchronized keyword is used to restrict multiple threads from accessing critical sections of code simultaneously. It can be applied to methods or blocks. Internally, synchronization uses object locks to ensure thread safety.",
-          "example": "Example: synchronized void printTable() { }",
-          "type": "text",
-          "id": 18,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "19",
-      "Que": [
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : What is the synchronized keyword in Java?",
+                    "a": "The synchronized keyword is used to implement synchronization in Java. It can be applied to methods or code blocks to ensure that only one thread executes the protected section at a time. When a thread enters a synchronized section, it acquires a lock on the associated object, preventing other threads from entering synchronized sections that require the same lock. This mechanism helps avoid data corruption and race conditions. Synchronized code is essential when multiple threads interact with shared mutable data.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Using synchronized method.",
+                    "code": "\npublic synchronized void updateData() {\n    count++;\n}"
+                }
+            ]
+        },
         {
-          "q": "Q19 : What are the advantages of synchronization?",
-          "a": "Synchronization prevents data inconsistency, race conditions, and thread interference in multithreaded applications. It ensures that shared resources are accessed safely and consistently.",
-          "example": "Example: Preventing multiple threads from updating the same database record simultaneously.",
-          "type": "text",
-          "id": 19,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "20",
-      "Que": [
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : What are the advantages of synchronization?",
+                    "a": "Synchronization provides several benefits in multithreaded applications by ensuring safe access to shared resources. It prevents race conditions, maintains data consistency, and guarantees thread-safe operations. Synchronization allows developers to coordinate thread execution and protect critical sections of code from concurrent modification. This makes applications more reliable and predictable, especially when multiple threads perform read and write operations on shared objects. It is an essential technique for building robust enterprise applications that handle concurrent requests and complex business operations.",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Prevents race conditions",
+                        "2": "Maintains data consistency",
+                        "3": "Provides thread safety",
+                        "4": "Protects shared resources",
+                        "5": "Improves reliability of concurrent applications"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q20 : What are the disadvantages of synchronization?",
-          "a": "Synchronization increases waiting time for threads because only one thread can access the synchronized section at a time. Excessive synchronization may reduce application performance and create bottlenecks in highly concurrent systems.",
-          "example": "Example: Multiple threads waiting to access the same synchronized method can slow down execution.",
-          "type": "text",
-          "id": 20,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-  {
-      "id": "21",
-      "Que": [
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : What are the disadvantages of synchronization?",
+                    "a": "Although synchronization improves thread safety, it also introduces some drawbacks. Excessive synchronization can reduce application performance because only one thread can access the synchronized section at a time. It may increase waiting time, reduce concurrency, and create bottlenecks under heavy load. Incorrect synchronization can also lead to deadlocks, where two or more threads wait indefinitely for each other to release resources. Therefore, synchronization should be applied carefully and only where necessary to balance safety and performance in multithreaded applications.",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Performance overhead",
+                        "2": "Reduced concurrency",
+                        "3": "Possible deadlocks",
+                        "4": "Increased complexity",
+                        "5": "Longer thread waiting time"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Use synchronization only for critical sections to avoid unnecessary performance degradation."
+                }
+            ]
+        },
         {
-          "q": "Q21 : What is a synchronized method in Java?",
-          "a": "A synchronized method is a method that allows only one thread at a time to execute on a particular object. When a thread enters a synchronized method, it acquires the object's lock, and other threads must wait until the lock is released.",
-          "example": "Example: synchronized void withdraw() { }",
-          "type": "text",
-          "id": 21,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "22",
-      "Que": [
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : What is a synchronized method in Java?",
+                    "a": "A synchronized method is a method that can be accessed by only one thread at a time. When a thread enters a synchronized method, it acquires the lock of the object and prevents other threads from executing any synchronized methods of the same object until the lock is released. This helps protect shared data from concurrent modifications and ensures data consistency. Synchronized methods are commonly used in multithreaded applications where multiple threads need controlled access to shared resources.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Example of a synchronized method.",
+                    "code": "\npublic synchronized void increment() {\n    count++;\n}"
+                }
+            ]
+        },
         {
-          "q": "Q22 : What is a synchronized block in Java?",
-          "a": "A synchronized block is used to synchronize only a specific section of code instead of the entire method. It improves performance because only the critical section is locked while the remaining code can execute normally.",
-          "example": "Example: synchronized(this) { count++; }",
-          "type": "text",
-          "id": 22,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "23",
-      "Que": [
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : What is a synchronized block in Java?",
+                    "a": "A synchronized block is a section of code enclosed within the synchronized keyword. Unlike synchronized methods, it allows developers to synchronize only a specific part of the code rather than the entire method. This improves performance by reducing the amount of code that requires locking. A synchronized block acquires a lock on a specified object before execution and releases it after completion. It is useful when only a small critical section needs protection from concurrent access by multiple threads.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Example of a synchronized block.",
+                    "code": "\nsynchronized(this) {\n    count++;\n}"
+                }
+            ]
+        },
         {
-          "q": "Q23 : What is a lock in Java synchronization?",
-          "a": "A lock is a mechanism used internally by synchronization to control thread access to shared resources. Every object in Java has a unique lock. A thread must acquire the object's lock before entering a synchronized method or block.",
-          "example": "Example: When one thread enters a synchronized method, other threads must wait for the lock to be released.",
-          "type": "text",
-          "id": 23,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "24",
-      "Que": [
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : What is a lock in Java synchronization?",
+                    "a": "A lock is a mechanism used to control access to shared resources in a multithreaded environment. When a thread acquires a lock, other threads must wait until the lock is released before accessing the protected resource. Java provides intrinsic locks through the synchronized keyword and explicit locking mechanisms through classes such as ReentrantLock. Locks help prevent race conditions and ensure thread safety by coordinating thread access to critical sections of code. Proper lock management is essential for building reliable concurrent applications.",
+                    "type": "text",
+                    "id": 23,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Controls access to shared resources",
+                        "2": "Prevents race conditions",
+                        "3": "Ensures thread safety",
+                        "4": "Can be implicit or explicit"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q24 : What is inter-thread communication in Java?",
-          "a": "Inter-thread communication is a mechanism that allows threads to communicate and coordinate with each other during execution. Java provides methods like wait(), notify(), and notifyAll() for inter-thread communication.",
-          "example": "Example: Producer-consumer problem implementation using wait() and notify().",
-          "type": "text",
-          "id": 24,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "25",
-      "Que": [
+            "id": "24",
+            "Que": [
+                {
+                    "q": "Q24 : What is inter-thread communication in Java?",
+                    "a": "Inter-thread communication is a mechanism that allows threads to communicate and coordinate with each other efficiently. Instead of continuously checking a condition through polling, threads can wait for specific events and be notified when those events occur. Java provides methods such as wait(), notify(), and notifyAll() for inter-thread communication. These methods help synchronize thread activities, improve resource utilization, and avoid unnecessary CPU consumption. Inter-thread communication is commonly used in producer-consumer and task scheduling scenarios.",
+                    "type": "text",
+                    "id": 24,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Method" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "wait()" },
+                                { "col": "Pauses a thread" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "notify()" },
+                                { "col": "Wakes one waiting thread" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "notifyAll()" },
+                                { "col": "Wakes all waiting threads" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q25 : What is the wait() method in Java?",
-          "a": "The wait() method causes the current thread to release the object lock and enter the waiting state until another thread calls notify() or notifyAll() on the same object. It is used for thread coordination and synchronization.",
-          "example": "Example: A consumer thread waiting until the producer adds data to a queue.",
-          "type": "text",
-          "id": 25,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "26",
-      "Que": [
+            "id": "25",
+            "Que": [
+                {
+                    "q": "Q25 : What is the wait() method in Java?",
+                    "a": "The wait() method is used to make the current thread release the lock and enter a waiting state until another thread notifies it. It is defined in the Object class and must be called from within a synchronized context. While waiting, the thread does not consume CPU resources and remains inactive until it receives a notification or is interrupted. The wait() method is commonly used in producer-consumer implementations and other scenarios where threads need to coordinate their execution efficiently.",
+                    "type": "text",
+                    "id": 25,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Using wait() inside a synchronized block.",
+                    "code": "\nsynchronized(obj) {\n    obj.wait();\n}"
+                }
+            ]
+        },
         {
-          "q": "Q26 : What is the notify() method in Java?",
-          "a": "The notify() method wakes up one waiting thread on the same object. The thread awakened by notify() becomes eligible for execution, but the actual execution depends on the Thread Scheduler.",
-          "example": "Example: A producer thread notifying a consumer thread after producing data.",
-          "type": "text",
-          "id": 26,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "27",
-      "Que": [
+            "id": "26",
+            "Que": [
+                {
+                    "q": "Q26 : What is the notify() method in Java?",
+                    "a": "The notify() method is used to wake up a single thread that is waiting on an object's monitor. It is defined in the Object class and must be called from a synchronized block or synchronized method. When notify() is invoked, one waiting thread becomes eligible for execution, but it cannot proceed until the lock is released by the current thread. The specific thread selected is determined by the JVM scheduler. Notify is commonly used in thread coordination and producer-consumer implementations.",
+                    "type": "text",
+                    "id": 26,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Using notify() to wake a waiting thread.",
+                    "code": "\nsynchronized(obj) {\n    obj.notify();\n}"
+                }
+            ]
+        },
         {
-          "q": "Q27 : What is the notifyAll() method in Java?",
-          "a": "The notifyAll() method wakes up all threads waiting on the same object. All waiting threads become eligible for execution, but the Thread Scheduler decides which thread gets CPU access first.",
-          "example": "Example: Waking all waiting threads after updating shared data.",
-          "type": "text",
-          "id": 27,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "28",
-      "Que": [
+            "id": "27",
+            "Que": [
+                {
+                    "q": "Q27 : What is the notifyAll() method in Java?",
+                    "a": "The notifyAll() method wakes up all threads that are currently waiting on an object's monitor. Unlike notify(), which wakes only one waiting thread, notifyAll() ensures that every waiting thread becomes eligible for execution. However, each thread must still compete to acquire the lock before proceeding. This method is useful when multiple threads may need to react to a state change. It helps avoid situations where the wrong thread is notified and can improve reliability in complex synchronization scenarios.",
+                    "type": "text",
+                    "id": 27,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Using notifyAll() to wake all waiting threads.",
+                    "code": "\nsynchronized(obj) {\n    obj.notifyAll();\n}"
+                }
+            ]
+        },
         {
-          "q": "Q28 : What is thread safety in Java?",
-          "a": "Thread safety means that shared resources or code sections behave correctly when accessed by multiple threads simultaneously. Synchronization, immutable objects, and concurrent collections are commonly used to achieve thread safety.",
-          "example": "Example: Using synchronized methods to safely update account balances in banking applications.",
-          "type": "text",
-          "id": 28,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "29",
-      "Que": [
+            "id": "28",
+            "Que": [
+                {
+                    "q": "Q28 : What is thread safety in Java?",
+                    "a": "Thread safety refers to the ability of a program or object to function correctly when accessed by multiple threads simultaneously. A thread-safe class protects shared data from inconsistent updates and race conditions. Thread safety can be achieved using synchronization, locks, immutable objects, concurrent collections, or atomic classes. Ensuring thread safety is essential in multithreaded applications because it guarantees predictable behavior and data integrity even when many threads are executing at the same time.",
+                    "type": "text",
+                    "id": 28,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Synchronization",
+                        "2": "Locks",
+                        "3": "Immutable objects",
+                        "4": "Atomic classes",
+                        "5": "Concurrent collections"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q29 : What is a race condition in Java?",
-          "a": "A race condition occurs when multiple threads access and modify shared data simultaneously without proper synchronization, causing inconsistent or unexpected results.",
-          "example": "Example: Two threads updating the same counter variable at the same time.",
-          "type": "text",
-          "id": 29,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "30",
-      "Que": [
+            "id": "29",
+            "Que": [
+                {
+                    "q": "Q29 : What is a race condition in Java?",
+                    "a": "A race condition occurs when multiple threads access and modify shared data simultaneously without proper synchronization. The final result depends on the order and timing of thread execution, making the program behavior unpredictable. Race conditions can lead to incorrect calculations, data corruption, and inconsistent application states. They are one of the most common problems in concurrent programming. Proper synchronization, locking mechanisms, and thread-safe data structures are commonly used to prevent race conditions and ensure reliable program execution.",
+                    "type": "text",
+                    "id": 29,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Race conditions occur because multiple threads try to modify shared resources at the same time without proper synchronization."
+                }
+            ]
+        },
         {
-          "q": "Q30 : What is deadlock in Java?",
-          "a": "Deadlock occurs when two or more threads wait indefinitely for each other to release locks, causing the application to stop progressing. Deadlocks are a major issue in multithreaded programming and should be avoided through proper lock management.",
-          "example": "Example: Thread A waiting for Thread B's lock while Thread B waits for Thread A's lock.",
-          "type": "text",
-          "id": 30,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-
-    {
-      "id": "31",
-      "Que": [
+            "id": "30",
+            "Que": [
+                {
+                    "q": "Q30 : What is deadlock in Java?",
+                    "a": "Deadlock is a situation in which two or more threads are permanently blocked because each thread is waiting for a resource held by another thread. As a result, none of the threads can proceed, causing the application to become stuck. Deadlocks usually occur when multiple locks are acquired in different orders by different threads. They are difficult to detect and debug in large applications. Proper lock ordering, timeout mechanisms, and minimizing nested locks can help prevent deadlocks in Java applications.",
+                    "type": "text",
+                    "id": 30,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Thread" },
+                        { "label": "Waiting For" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Thread A" },
+                                { "col": "Lock held by Thread B" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Thread B" },
+                                { "col": "Lock held by Thread A" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Deadlock can freeze application execution because no involved thread can continue."
+                }
+            ]
+        },
         {
-          "q": "Q31 : What is starvation in Java multithreading?",
-          "a": "Starvation occurs when a thread does not get sufficient CPU time or resources because other higher-priority threads continuously execute. As a result, the starving thread may remain waiting for a very long time.",
-          "example": "Example: A low-priority thread never getting execution because high-priority threads keep running.",
-          "type": "text",
-          "id": 31,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "32",
-      "Que": [
+            "id": "31",
+            "Que": [
+                {
+                    "q": "Q31 : What is starvation in Java multithreading?",
+                    "a": "Starvation is a situation in which a thread is unable to gain regular access to shared resources and therefore cannot make progress. This usually happens when higher-priority threads continuously consume CPU time or when synchronization mechanisms favor certain threads over others. As a result, the starving thread remains waiting indefinitely while other threads continue execution. Starvation can negatively affect application performance and responsiveness. Proper thread scheduling, fair locking mechanisms, and balanced resource allocation are commonly used to reduce the chances of starvation in multithreaded applications.",
+                    "type": "text",
+                    "id": 31,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Starvation does not stop the application but prevents a specific thread from getting enough execution time."
+                }
+            ]
+        },
         {
-          "q": "Q32 : What is daemon thread in Java?",
-          "a": "A daemon thread is a background thread that provides services to user threads. Daemon threads automatically terminate when all user threads finish execution. They are commonly used for tasks like garbage collection and background monitoring.",
-          "example": "Example: JVM Garbage Collector thread.",
-          "type": "text",
-          "id": 32,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "33",
-      "Que": [
+            "id": "32",
+            "Que": [
+                {
+                    "q": "Q32 : What is daemon thread in Java?",
+                    "a": "A daemon thread is a background thread that provides supporting services to user threads in a Java application. These threads typically perform tasks such as garbage collection, monitoring, logging, or cleanup operations. Daemon threads run in the background and automatically terminate when all user threads have finished execution. Since they are not essential to the main application workflow, the JVM does not wait for daemon threads before shutting down. Daemon threads help perform maintenance activities without affecting the lifecycle of the primary application processes.",
+                    "type": "text",
+                    "id": 32,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Runs in the background",
+                        "2": "Provides supporting services",
+                        "3": "Terminates when user threads finish",
+                        "4": "Commonly used for garbage collection"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q33 : How do you create a daemon thread in Java?",
-          "a": "A daemon thread can be created by calling the setDaemon(true) method before starting the thread. Once a thread starts execution, its daemon status cannot be changed.",
-          "example": "Example: thread.setDaemon(true);",
-          "type": "text",
-          "id": 33,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "34",
-      "Que": [
+            "id": "33",
+            "Que": [
+                {
+                    "q": "Q33 : How do you create a daemon thread in Java?",
+                    "a": "A daemon thread is created by calling the setDaemon(true) method on a Thread object before starting the thread. Once marked as a daemon, the thread behaves as a background service thread and does not prevent the JVM from shutting down. It is important to set the daemon status before invoking the start() method, otherwise an IllegalThreadStateException may occur. Daemon threads are commonly used for monitoring tasks, background cleanup operations, and other supporting services that should stop automatically when the application ends.",
+                    "type": "text",
+                    "id": 33,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Creating a daemon thread.",
+                    "code": "\nThread t = new Thread();\nt.setDaemon(true);\nt.start();"
+                }
+            ]
+        },
         {
-          "q": "Q34 : What is the difference between user thread and daemon thread?",
-          "a": "User threads are normal threads that perform application tasks and keep the JVM running until they complete execution. Daemon threads run in the background and automatically terminate when all user threads finish execution.",
-          "example": "Example: Main application threads are user threads, while garbage collection runs as a daemon thread.",
-          "type": "text",
-          "id": 34,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "35",
-      "Que": [
+            "id": "34",
+            "Que": [
+                {
+                    "q": "Q34 : What is the difference between user thread and daemon thread?",
+                    "a": "User threads perform the main tasks of an application and keep the JVM running until they complete execution. Daemon threads, on the other hand, provide background services and automatically terminate when all user threads finish. The JVM waits for user threads before shutting down but does not wait for daemon threads. User threads are responsible for business logic and application functionality, whereas daemon threads handle maintenance tasks such as logging, monitoring, and garbage collection. Understanding this distinction is important when designing concurrent Java applications.",
+                    "type": "text",
+                    "id": 34,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "User Thread" },
+                        { "label": "Daemon Thread" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Performs main tasks" },
+                                { "col": "Performs background tasks" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "JVM waits for completion" },
+                                { "col": "JVM does not wait" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Business logic" },
+                                { "col": "Support services" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q35 : What is thread pooling in Java?",
-          "a": "Thread pooling is a technique where a fixed number of reusable threads are created and managed to execute tasks efficiently. Instead of creating new threads repeatedly, existing threads from the pool are reused, improving performance and reducing resource overhead.",
-          "example": "Example: Web servers using thread pools to handle multiple client requests efficiently.",
-          "type": "text",
-          "id": 35,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "36",
-      "Que": [
+            "id": "35",
+            "Que": [
+                {
+                    "q": "Q35 : What is thread pooling in Java?",
+                    "a": "Thread pooling is a technique where a fixed or dynamic group of reusable threads is maintained to execute multiple tasks. Instead of creating a new thread for every request, tasks are assigned to existing threads in the pool. This reduces thread creation overhead, improves performance, and enhances resource utilization. Thread pools are particularly useful in web servers, enterprise applications, and systems handling large numbers of concurrent requests. Java provides thread pooling support through the Executor Framework, making thread management simpler and more efficient.",
+                    "type": "text",
+                    "id": 35,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Improves performance",
+                        "2": "Reduces thread creation cost",
+                        "3": "Reuses existing threads",
+                        "4": "Provides better resource management"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q36 : What is ExecutorService in Java?",
-          "a": "ExecutorService is a framework provided by Java for managing thread pools and asynchronous task execution. It simplifies multithreading by handling thread creation, scheduling, and lifecycle management automatically.",
-          "example": "Example: ExecutorService executor = Executors.newFixedThreadPool(5);",
-          "type": "text",
-          "id": 36,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "37",
-      "Que": [
+            "id": "36",
+            "Que": [
+                {
+                    "q": "Q36 : What is ExecutorService in Java?",
+                    "a": "ExecutorService is an interface in the Java Executor Framework that simplifies thread management and task execution. It provides methods for submitting tasks, managing thread pools, scheduling execution, and shutting down threads gracefully. Instead of manually creating and controlling threads, developers can use ExecutorService to handle concurrency efficiently. It supports Runnable and Callable tasks and can return Future objects for asynchronous processing. ExecutorService improves scalability, reduces complexity, and is widely used in modern Java applications requiring concurrent task execution.",
+                    "type": "text",
+                    "id": 36,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Creating a fixed thread pool.",
+                    "code": "\nExecutorService executor = Executors.newFixedThreadPool(5);"
+                }
+            ]
+        },
         {
-          "q": "Q37 : What is the difference between Callable and Runnable interfaces?",
-          "a": "Runnable is used for tasks that do not return any result and cannot throw checked exceptions. Callable can return a result and throw checked exceptions. Callable works with Future objects for asynchronous result retrieval.",
-          "example": "Example: Callable<Integer> returning calculation results from a background thread.",
-          "type": "text",
-          "id": 37,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "38",
-      "Que": [
+            "id": "37",
+            "Que": [
+                {
+                    "q": "Q37 : What is the difference between Callable and Runnable interfaces?",
+                    "a": "Runnable and Callable are interfaces used for executing tasks in separate threads. Runnable does not return any result and cannot throw checked exceptions. Callable, introduced in Java 5, can return a value and is allowed to throw checked exceptions. Callable tasks are usually executed through an ExecutorService and return a Future object containing the result. Runnable is suitable for simple background tasks, while Callable is preferred when asynchronous computations need to produce a result or handle exceptions more effectively.",
+                    "type": "text",
+                    "id": 37,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Runnable" },
+                        { "label": "Callable" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "No return value" },
+                                { "col": "Returns a value" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Cannot throw checked exceptions" },
+                                { "col": "Can throw checked exceptions" }
+                            ]
+                        },
+                        {
+                            "row": [{ "col": "run()" }, { "col": "call()" }]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q38 : What is a Future object in Java?",
-          "a": "A Future object represents the result of an asynchronous computation. It allows checking task completion status, waiting for results, and retrieving returned values from Callable tasks.",
-          "example": "Example: Future<Integer> result = executor.submit(task);",
-          "type": "text",
-          "id": 38,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "39",
-      "Que": [
+            "id": "38",
+            "Que": [
+                {
+                    "q": "Q38 : What is a Future object in Java?",
+                    "a": "A Future object represents the result of an asynchronous computation. When a task is submitted to an ExecutorService, a Future can be returned immediately, allowing the task to run in the background. The Future object can later be used to check task status, retrieve results, cancel execution, or determine whether the task has completed. This mechanism enables non-blocking task execution while still providing access to the final outcome. Future is commonly used in concurrent programming and asynchronous processing scenarios.",
+                    "type": "text",
+                    "id": 38,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Getting a result from a Future.",
+                    "code": "\nFuture<Integer> future = executor.submit(task);\nInteger result = future.get();"
+                }
+            ]
+        },
         {
-          "q": "Q39 : What is volatile keyword in Java?",
-          "a": "The volatile keyword ensures that changes made to a variable by one thread are immediately visible to other threads. It prevents thread caching issues and improves visibility in multithreaded environments.",
-          "example": "Example: volatile boolean running = true;",
-          "type": "text",
-          "id": 39,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "40",
-      "Que": [
+            "id": "39",
+            "Que": [
+                {
+                    "q": "Q39 : What is volatile keyword in Java?",
+                    "a": "The volatile keyword is used to ensure that a variable's latest value is always read directly from main memory rather than from a thread's local cache. When a variable is declared volatile, any change made by one thread becomes immediately visible to other threads. Volatile improves visibility but does not provide atomicity or mutual exclusion. It is suitable for simple flags and status indicators shared between threads. For complex operations involving multiple steps, synchronization or atomic classes are generally preferred over volatile variables.",
+                    "type": "text",
+                    "id": 39,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Declaring a volatile variable.",
+                    "code": "\nprivate volatile boolean running = true;"
+                }
+            ]
+        },
         {
-          "q": "Q40 : What is the difference between synchronized and volatile?",
-          "a": "synchronized provides both thread safety and mutual exclusion by allowing only one thread to execute critical sections at a time. volatile only ensures visibility of variable changes across threads but does not provide atomicity or locking.",
-          "example": "Example: synchronized protects shared counters, while volatile is useful for status flags.",
-          "type": "text",
-          "id": 40,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-
-    {
-      "id": "41",
-      "Que": [
+            "id": "40",
+            "Que": [
+                {
+                    "q": "Q40 : What is the difference between synchronized and volatile?",
+                    "a": "Both synchronized and volatile are used in multithreading, but they solve different problems. The volatile keyword ensures visibility of changes across threads but does not provide locking or atomic operations. The synchronized keyword provides both mutual exclusion and visibility by allowing only one thread to access a critical section at a time. Volatile is lightweight and suitable for simple shared variables, whereas synchronized is required when multiple operations must be executed atomically to maintain data consistency and thread safety.",
+                    "type": "text",
+                    "id": 40,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "synchronized" },
+                        { "label": "volatile" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Provides locking" },
+                                { "col": "No locking" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Provides atomicity" },
+                                { "col": "No atomicity" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Provides visibility" },
+                                { "col": "Provides visibility" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Higher overhead" },
+                                { "col": "Lower overhead" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q41 : What is atomicity in Java multithreading?",
-          "a": "Atomicity means an operation is completed entirely or not executed at all without interruption from other threads. Atomic operations help prevent inconsistent data during concurrent execution. Java provides atomic classes in the java.util.concurrent.atomic package for thread-safe operations.",
-          "example": "Example: AtomicInteger used for safely incrementing counters in multiple threads.",
-          "type": "text",
-          "id": 41,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "42",
-      "Que": [
+            "id": "41",
+            "Que": [
+                {
+                    "q": "Q41 : What is atomicity in Java multithreading?",
+                    "a": "Atomicity is the property of an operation that ensures it is executed completely or not executed at all. In multithreaded programming, an atomic operation cannot be interrupted by other threads while it is in progress. This prevents inconsistent data states and race conditions. Java provides atomicity through synchronization, locks, and atomic classes such as AtomicInteger and AtomicLong. Atomic operations are important when multiple threads access shared resources because they guarantee data integrity and ensure predictable behavior even under heavy concurrent execution.",
+                    "type": "text",
+                    "id": 41,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Using AtomicInteger for atomic operations.",
+                    "code": "\nAtomicInteger count = new AtomicInteger();\ncount.incrementAndGet();"
+                }
+            ]
+        },
         {
-          "q": "Q42 : What is ConcurrentModificationException in Java?",
-          "a": "ConcurrentModificationException occurs when a collection is modified while it is being iterated by another thread or within the same iteration process. It commonly happens with collections like ArrayList and HashMap during concurrent updates.",
-          "example": "Example: Removing elements from an ArrayList while iterating using a for-each loop.",
-          "type": "text",
-          "id": 42,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "43",
-      "Que": [
+            "id": "42",
+            "Que": [
+                {
+                    "q": "Q42 : What is ConcurrentModificationException in Java?",
+                    "a": "ConcurrentModificationException is a runtime exception that occurs when a collection is modified while it is being iterated using an iterator. Java collections such as ArrayList and HashMap are fail-fast, meaning they detect structural modifications during iteration and throw this exception. This mechanism helps identify unsafe concurrent modifications and prevents unpredictable behavior. To avoid this exception, developers can use Iterator methods, concurrent collections, or synchronize access to the collection. It is commonly encountered when removing or adding elements inside loops.",
+                    "type": "text",
+                    "id": 42,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Example causing ConcurrentModificationException.",
+                    "code": "\nfor(String s : list) {\n    list.remove(s);\n}"
+                }
+            ]
+        },
         {
-          "q": "Q43 : What are concurrent collections in Java?",
-          "a": "Concurrent collections are thread-safe collection classes provided in the java.util.concurrent package. They allow multiple threads to access and modify collections safely without requiring manual synchronization.",
-          "example": "Example: ConcurrentHashMap and CopyOnWriteArrayList.",
-          "type": "text",
-          "id": 43,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "44",
-      "Que": [
+            "id": "43",
+            "Que": [
+                {
+                    "q": "Q43 : What are concurrent collections in Java?",
+                    "a": "Concurrent collections are thread-safe collection classes provided by the java.util.concurrent package. They are designed to support high-performance concurrent access without requiring explicit synchronization by developers. Unlike traditional collections, concurrent collections allow multiple threads to read and modify data safely. Examples include ConcurrentHashMap, CopyOnWriteArrayList, ConcurrentLinkedQueue, and BlockingQueue. These collections improve scalability, reduce contention, and simplify concurrent programming. They are widely used in enterprise applications, web servers, and systems where multiple threads need efficient access to shared data.",
+                    "type": "text",
+                    "id": 43,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "ConcurrentHashMap",
+                        "2": "CopyOnWriteArrayList",
+                        "3": "ConcurrentLinkedQueue",
+                        "4": "BlockingQueue",
+                        "5": "ConcurrentSkipListMap"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q44 : What is ConcurrentHashMap in Java?",
-          "a": "ConcurrentHashMap is a thread-safe implementation of the Map interface that allows concurrent read and write operations without locking the entire map. It improves performance in multithreaded applications compared to synchronized maps.",
-          "example": "Example: Using ConcurrentHashMap for caching user session data in web applications.",
-          "type": "text",
-          "id": 44,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "45",
-      "Que": [
+            "id": "44",
+            "Que": [
+                {
+                    "q": "Q44 : What is ConcurrentHashMap in Java?",
+                    "a": "ConcurrentHashMap is a thread-safe implementation of the Map interface designed for concurrent access. Unlike Hashtable, it allows multiple threads to read and update the map simultaneously with minimal locking. This improves performance and scalability in multithreaded environments. ConcurrentHashMap divides data internally and uses fine-grained synchronization techniques to reduce contention. It is commonly used in caching systems, session management, and shared data storage. Because of its efficiency and thread safety, it is one of the most widely used concurrent collections in Java.",
+                    "type": "text",
+                    "id": 44,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Creating a ConcurrentHashMap.",
+                    "code": "\nConcurrentHashMap<Integer, String> map = new ConcurrentHashMap<>();"
+                }
+            ]
+        },
         {
-          "q": "Q45 : What is CopyOnWriteArrayList in Java?",
-          "a": "CopyOnWriteArrayList is a thread-safe version of ArrayList where modifications create a new copy of the underlying array. It is useful when read operations are more frequent than write operations.",
-          "example": "Example: Maintaining listener lists in event-driven applications.",
-          "type": "text",
-          "id": 45,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "46",
-      "Que": [
+            "id": "45",
+            "Que": [
+                {
+                    "q": "Q45 : What is CopyOnWriteArrayList in Java?",
+                    "a": "CopyOnWriteArrayList is a thread-safe variant of ArrayList in which every modification operation creates a new copy of the underlying array. This approach allows iteration without synchronization because readers work with a stable snapshot of the data. It is particularly useful in applications where read operations are much more frequent than write operations. Although writes are more expensive due to array copying, reads are highly efficient and safe. CopyOnWriteArrayList is commonly used for event listeners, configuration data, and shared read-mostly collections.",
+                    "type": "text",
+                    "id": 45,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "CopyOnWriteArrayList is best suited for scenarios with frequent reads and infrequent writes."
+                }
+            ]
+        },
         {
-          "q": "Q46 : What is thread starvation deadlock?",
-          "a": "Thread starvation deadlock occurs when threads waiting for resources never get execution opportunities because other threads continuously occupy the required resources or locks.",
-          "example": "Example: Low-priority threads permanently waiting for locks held by high-priority threads.",
-          "type": "text",
-          "id": 46,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "47",
-      "Que": [
+            "id": "46",
+            "Que": [
+                {
+                    "q": "Q46 : What is thread starvation deadlock?",
+                    "a": "Thread starvation deadlock is a situation where threads are unable to make progress because resources are continuously occupied by other threads. Unlike a traditional deadlock where threads wait indefinitely for each other, starvation deadlock occurs when lower-priority threads never receive the resources or execution time they need. This can happen in systems with unfair scheduling policies or improper resource allocation. The affected threads remain blocked for long periods, reducing application performance. Fair locking mechanisms and balanced thread scheduling can help prevent starvation-related issues.",
+                    "type": "text",
+                    "id": 46,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Deadlock" },
+                        { "label": "Starvation" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Threads wait on each other" },
+                                { "col": "Thread never gets resources" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Complete blockage" },
+                                { "col": "Very long waiting time" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q47 : What is thread communication using wait() and notify()?",
-          "a": "Thread communication using wait() and notify() allows threads to coordinate execution. A thread calling wait() pauses execution and releases the lock until another thread calls notify() or notifyAll() to wake it up.",
-          "example": "Example: Producer thread notifying consumer thread when new data becomes available.",
-          "type": "text",
-          "id": 47,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "48",
-      "Que": [
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : What is thread communication using wait() and notify()?",
+                    "a": "Thread communication using wait() and notify() allows threads to coordinate their execution efficiently. A thread calling wait() releases the object's lock and enters a waiting state until another thread calls notify() or notifyAll(). The notify() method wakes one waiting thread, while notifyAll() wakes all waiting threads. These methods are defined in the Object class and must be used within synchronized contexts. This communication mechanism reduces CPU wastage caused by polling and is commonly used in producer-consumer systems and task coordination scenarios.",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Method" }, { "label": "Function" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "wait()" },
+                                { "col": "Makes thread wait" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "notify()" },
+                                { "col": "Wakes one thread" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "notifyAll()" },
+                                { "col": "Wakes all threads" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "q": "Q48 : What are the advantages of multithreading in Java?",
-          "a": "Multithreading improves application performance, better CPU utilization, faster execution, responsiveness, and efficient resource sharing. It allows applications to perform multiple tasks simultaneously and improves user experience in real-time systems.",
-          "example": "Example: A web application handling multiple client requests concurrently.",
-          "type": "text",
-          "id": 48,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "49",
-      "Que": [
+            "id": "48",
+            "Que": [
+                {
+                    "q": "Q48 : What are the advantages of multithreading in Java?",
+                    "a": "Multithreading provides several advantages, including improved application responsiveness, better CPU utilization, and increased throughput. By allowing multiple tasks to execute concurrently, applications can perform background operations without blocking the main thread. Multithreading is particularly useful in web servers, gaming applications, real-time systems, and enterprise software. It enables efficient resource sharing, faster execution of independent tasks, and better handling of multiple users simultaneously. Modern multicore processors benefit greatly from multithreading because different threads can execute in parallel, improving overall application performance.",
+                    "type": "text",
+                    "id": 48,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Better responsiveness",
+                        "2": "Improved CPU utilization",
+                        "3": "Higher throughput",
+                        "4": "Efficient resource sharing",
+                        "5": "Parallel task execution"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q49 : What are the disadvantages of multithreading?",
-          "a": "Multithreading increases application complexity and can lead to issues such as deadlocks, race conditions, synchronization overhead, debugging difficulties, and higher memory usage if not managed properly.",
-          "example": "Example: Incorrect account balance updates due to race conditions in banking systems.",
-          "type": "text",
-          "id": 49,
-          "playButton": true,
-          "pauseButton": false
-        }
-      ]
-    },
-    {
-      "id": "50",
-      "Que": [
+            "id": "49",
+            "Que": [
+                {
+                    "q": "Q49 : What are the disadvantages of multithreading?",
+                    "a": "Although multithreading improves performance, it also introduces complexity. Managing multiple threads can lead to issues such as race conditions, deadlocks, starvation, synchronization overhead, and increased debugging difficulty. Improper thread management may result in inconsistent data and unpredictable behavior. Multithreaded applications are generally harder to design, test, and maintain than single-threaded applications. Excessive thread creation can also consume significant system resources and reduce performance. Therefore, developers must carefully balance the benefits of concurrency with the challenges of thread coordination and synchronization.",
+                    "type": "text",
+                    "id": 49,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Race conditions",
+                        "2": "Deadlocks",
+                        "3": "Starvation",
+                        "4": "Complex debugging",
+                        "5": "Synchronization overhead"
+                    }
+                }
+            ]
+        },
         {
-          "q": "Q50 : Why is multithreading important in modern applications?",
-          "a": "Multithreading is important because modern applications need to perform multiple operations simultaneously while maintaining high performance and responsiveness. It is widely used in gaming, banking, web servers, real-time systems, cloud computing, and enterprise applications to improve scalability and user experience.",
-          "example": "Example: Video streaming platforms processing playback, buffering, and network communication simultaneously.",
-          "type": "text",
-          "id": 50,
-          "playButton": true,
-          "pauseButton": false
+            "id": "50",
+            "Que": [
+                {
+                    "q": "Q50 : Why is multithreading important in modern applications?",
+                    "a": "Multithreading is important because modern applications are expected to be responsive, scalable, and capable of handling multiple tasks simultaneously. It enables efficient utilization of multicore processors by executing multiple threads in parallel. Applications such as web servers, mobile apps, cloud services, and real-time systems rely on multithreading to process user requests, perform background tasks, and manage large workloads efficiently. Without multithreading, applications could become slow and unresponsive. It is a fundamental concept in modern software development for building high-performance and scalable systems.",
+                    "type": "text",
+                    "id": 50,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Multithreading helps modern applications remain responsive while handling multiple operations concurrently."
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
-
- 

@@ -54,10 +54,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 icon: 'heroicons_outline:code',
                 link: '/javascript-coding-interview-questions',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
+                // badge: {
+                //     title: 'New',
+                //     classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                // },
             },
             {
                 id: 'javascript.javascript-quiz',
@@ -257,6 +257,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 link: '/java-interview-questions',
                 icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
             {
                 id: 'java.microservices',
@@ -264,6 +268,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 link: '/java-microservices-interview-questions',
                 icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
             {
                 id: 'java.multithreading',
@@ -271,6 +279,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 link: '/java-multithreading-interview-questions',
                 icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
             {
                 id: 'java.springboot.basic',
@@ -278,6 +290,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 link: '/basic-springboot-interview-questions',
                 icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
             {
                 id: 'java.springboot.advanced',
@@ -285,6 +301,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 link: '/springboot-interview-questions',
                 icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
             {
                 id: 'java.springboot.security',
@@ -292,6 +312,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 link: '/springboot-security-interview-questions',
                 icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
             {
                 id: 'java.springbootJPA',
@@ -299,6 +323,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 link: '/springbootJPA-interview-questions',
                 icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
             {
                 id: 'selenium.basic',
@@ -306,6 +334,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 link: '/selenium-interview-questions',
                 icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
             {
                 id: 'playwright.basic',
@@ -313,6 +345,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 link: '/playwright-interview-questions',
                 icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
             {
                 id: 'python.basic',
@@ -320,6 +356,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 link: '/python-interview-questions',
                 icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
             {
                 id: 'generativeAI.basic',
@@ -327,6 +367,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 link: '/generativeAI-interview-questions',
                 icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
             {
                 id: 'agenticAI.basic',
@@ -334,6 +378,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 link: '/agenticAI-interview-questions',
                 icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
             {
                 id: 'data.science.basic',
@@ -341,6 +389,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 link: '/datascience-interview-questions',
                 icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
         ],
     },
