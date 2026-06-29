@@ -1,0 +1,1610 @@
+{
+    "tailwindCSS-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is Tailwind CSS?",
+                    "a": "Tailwind CSS is a utility-first CSS framework that provides a large collection of pre-built utility classes for styling web applications directly in HTML. Instead of writing custom CSS for every component, developers can combine utility classes such as flex, p-4, text-center, and bg-blue-500 to create modern and responsive user interfaces. Tailwind promotes rapid development, consistency in design, and maintainable code by allowing developers to build custom designs without leaving their markup.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Simple Tailwind CSS example",
+                    "code": "\n<button class=\"bg-blue-500 text-white px-4 py-2 rounded\">\n  Click Me\n</button>"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : Why was Tailwind CSS created?",
+                    "a": "Tailwind CSS was created to solve the problem of constantly writing custom CSS and switching between HTML and CSS files. It follows a utility-first approach where styling is applied using small reusable classes directly in the markup. This helps developers build custom designs faster, maintain consistency across projects, and avoid large and difficult-to-maintain CSS files. Tailwind provides flexibility without forcing predefined component styles.",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Reduce CSS Writing": "Minimizes the need for custom CSS.",
+                        "Faster Development": "Build interfaces quickly using utilities.",
+                        "Consistency": "Encourages a unified design system.",
+                        "Flexibility": "Allows fully custom UI designs.",
+                        "Maintainability": "Prevents large CSS files."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : What are the advantages of Tailwind CSS?",
+                    "a": "Tailwind CSS offers numerous advantages including rapid UI development, reusable utility classes, responsive design support, easy customization, and smaller production CSS files. It eliminates the need for naming CSS classes and reduces context switching between HTML and CSS. Tailwind also integrates well with modern frameworks such as React, Angular, Vue, and Next.js, making it one of the most popular styling solutions in modern web development.",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Rapid Development": "Build UIs quickly.",
+                        "Responsive Utilities": "Built-in responsive classes.",
+                        "Customizable": "Extend themes easily.",
+                        "Smaller CSS": "Unused styles are removed in production.",
+                        "Framework Friendly": "Works well with React, Vue, Angular, and Next.js."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : What are the disadvantages of Tailwind CSS?",
+                    "a": "Although Tailwind CSS is powerful, it has some disadvantages. HTML markup can become lengthy due to multiple utility classes. Beginners may find utility class names difficult to memorize initially. Projects may also appear cluttered if class organization is poor. Additionally, developers coming from traditional CSS backgrounds may need time to adapt to the utility-first approach. However, many of these concerns can be addressed through proper component organization and reusable patterns.",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Advantage"
+                        },
+                        {
+                            "label": "Disadvantage"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Fast development"
+                                },
+                                {
+                                    "col": "Long class lists"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Reusable utilities"
+                                },
+                                {
+                                    "col": "Learning curve"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Custom designs"
+                                },
+                                {
+                                    "col": "Markup can become cluttered"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : How is Tailwind CSS different from Bootstrap?",
+                    "a": "Tailwind CSS and Bootstrap are both popular CSS frameworks, but they follow different approaches. Bootstrap is a component-based framework that provides ready-made UI components such as buttons, cards, and modals. Tailwind CSS is a utility-first framework that provides low-level utility classes for building custom designs. Bootstrap allows faster prototyping, while Tailwind offers greater design flexibility and customization.",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Tailwind CSS"
+                        },
+                        {
+                            "label": "Bootstrap"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Utility-first"
+                                },
+                                {
+                                    "col": "Component-based"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Highly customizable"
+                                },
+                                {
+                                    "col": "Predefined styles"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Build custom UI"
+                                },
+                                {
+                                    "col": "Use ready-made components"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Smaller final CSS"
+                                },
+                                {
+                                    "col": "Larger default CSS"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : How do you install Tailwind CSS?",
+                    "a": "Tailwind CSS can be installed using npm and integrated into frameworks such as React, Next.js, Vue, and Angular. The installation process typically involves installing Tailwind CSS, PostCSS, and Autoprefixer, generating a configuration file, and importing Tailwind directives into a CSS file. Once configured, developers can start using utility classes throughout the application to style components efficiently.",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Install Tailwind CSS",
+                    "code": "\nnpm install -D tailwindcss postcss autoprefixer\nnpx tailwindcss init -p"
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : What is the utility-first approach?",
+                    "a": "The utility-first approach is a design methodology where small, single-purpose utility classes are combined directly in HTML to create layouts and styles. Instead of creating custom CSS classes, developers use existing utilities such as p-4, flex, text-center, and bg-red-500. This approach promotes consistency, reduces CSS maintenance, speeds up development, and allows rapid experimentation while building user interfaces.",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Utility-first styling example",
+                    "code": "\n<div class=\"flex items-center justify-center h-screen bg-gray-100\">\n  <h1 class=\"text-3xl font-bold\">Hello Tailwind</h1>\n</div>"
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : What are utility classes?",
+                    "a": "Utility classes are small CSS classes that perform a single styling function. For example, p-4 adds padding, text-center aligns text, and bg-blue-500 applies a background color. Tailwind CSS is built entirely around utility classes. By combining multiple utilities together, developers can create complex layouts and designs without writing custom CSS, resulting in faster development and easier maintenance.",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Class"
+                        },
+                        {
+                            "label": "Purpose"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "p-4"
+                                },
+                                {
+                                    "col": "Adds padding"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "m-2"
+                                },
+                                {
+                                    "col": "Adds margin"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "text-center"
+                                },
+                                {
+                                    "col": "Centers text"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "bg-blue-500"
+                                },
+                                {
+                                    "col": "Sets background color"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : What is the Tailwind configuration file?",
+                    "a": "The Tailwind configuration file allows developers to customize the default behavior of Tailwind CSS. It is commonly named tailwind.config.js and contains settings for themes, colors, fonts, breakpoints, plugins, and content scanning. By modifying this file, teams can create a consistent design system that matches project requirements while extending Tailwind's default capabilities.",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Theme": "Customize colors, fonts, spacing.",
+                        "Plugins": "Add additional functionality.",
+                        "Breakpoints": "Configure responsive design.",
+                        "Content": "Specify files to scan.",
+                        "Extensions": "Extend default Tailwind utilities."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : What is tailwind.config.js?",
+                    "a": "tailwind.config.js is the main configuration file used to customize Tailwind CSS. It defines which files Tailwind should scan, extends themes with custom colors and fonts, adds plugins, and configures responsive breakpoints. This file acts as the central place for managing the project's design system and Tailwind behavior, allowing teams to maintain consistency across the entire application.",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Basic Tailwind configuration",
+                    "code": "\nmodule.exports = {\n  content: ['./src/**/*.{js,jsx,ts,tsx}'],\n  theme: {\n    extend: {}\n  },\n  plugins: []\n};"
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : How do you customize Tailwind CSS?",
+                    "a": "Tailwind CSS can be customized through the tailwind.config.js file. Developers can extend or override the default theme by adding custom colors, fonts, spacing values, breakpoints, shadows, animations, and more. Customization allows teams to create a consistent design system that matches their brand identity while still benefiting from Tailwind's utility-first approach. The configuration file serves as the central location for managing design tokens across the entire application.",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Colors": "Add custom brand colors.",
+                        "Fonts": "Define custom font families.",
+                        "Spacing": "Create custom margin and padding scales.",
+                        "Breakpoints": "Customize responsive screen sizes.",
+                        "Plugins": "Extend Tailwind functionality."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : What are responsive breakpoints in Tailwind CSS?",
+                    "a": "Responsive breakpoints in Tailwind CSS allow developers to apply different styles based on screen size. Tailwind follows a mobile-first approach, meaning styles are applied to smaller screens by default and enhanced for larger devices using breakpoint prefixes. This makes it easy to build responsive layouts that adapt to phones, tablets, laptops, and desktops without writing media queries manually.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Breakpoint" },
+                        { "label": "Minimum Width" }
+                    ],
+                    "column": [
+                        {
+                            "row": [{ "col": "sm" }, { "col": "640px" }]
+                        },
+                        {
+                            "row": [{ "col": "md" }, { "col": "768px" }]
+                        },
+                        {
+                            "row": [{ "col": "lg" }, { "col": "1024px" }]
+                        },
+                        {
+                            "row": [{ "col": "xl" }, { "col": "1280px" }]
+                        },
+                        {
+                            "row": [{ "col": "2xl" }, { "col": "1536px" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : What is mobile-first design in Tailwind CSS?",
+                    "a": "Mobile-first design is an approach where styles are created for smaller screens first and then enhanced for larger devices. Tailwind CSS follows this methodology by default. Developers write base styles for mobile devices and use responsive prefixes such as md:, lg:, and xl: to apply additional styles for larger screens. This approach improves accessibility, performance, and user experience across different device types.",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Mobile-first responsive design",
+                    "code": "\n<div class=\"text-sm md:text-lg lg:text-2xl\">\n  Responsive Text\n</div>"
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : How do you apply margins in Tailwind CSS?",
+                    "a": "Tailwind CSS provides utility classes for applying margins to elements. The m prefix is used for all sides, while mx and my apply horizontal and vertical margins respectively. Specific sides such as mt, mb, ml, and mr can also be used. Tailwind includes a predefined spacing scale that helps maintain consistent spacing throughout the application without requiring custom CSS.",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Class" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "m-4" },
+                                { "col": "Margin on all sides" }
+                            ]
+                        },
+                        {
+                            "row": [{ "col": "mt-4" }, { "col": "Top margin" }]
+                        },
+                        {
+                            "row": [
+                                { "col": "mb-4" },
+                                { "col": "Bottom margin" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "mx-auto" },
+                                { "col": "Horizontal auto margin" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : How do you apply padding in Tailwind CSS?",
+                    "a": "Padding in Tailwind CSS is applied using utility classes that begin with the p prefix. Developers can apply padding to all sides, specific axes, or individual sides. The spacing values are based on Tailwind's spacing scale, ensuring consistency throughout the application. Using utility classes for padding eliminates the need for custom CSS and speeds up UI development significantly.",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Class" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "p-4" },
+                                { "col": "Padding on all sides" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "px-4" },
+                                { "col": "Horizontal padding" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "py-4" },
+                                { "col": "Vertical padding" }
+                            ]
+                        },
+                        {
+                            "row": [{ "col": "pt-4" }, { "col": "Top padding" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : How do you change text color in Tailwind CSS?",
+                    "a": "Text color in Tailwind CSS is controlled using utility classes that start with text-. Tailwind provides a comprehensive color palette with multiple shades for each color. Developers can quickly apply text colors without writing CSS and can even customize the palette through the configuration file. This approach ensures consistency while making styling efficient and predictable.",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Applying text colors",
+                    "code": "\n<h1 class=\"text-blue-500\">Blue Text</h1>\n<p class=\"text-red-600\">Red Text</p>"
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : How do you change background color in Tailwind CSS?",
+                    "a": "Background colors in Tailwind CSS are applied using classes that start with bg-. Tailwind includes a large collection of predefined colors and shades that can be used directly within HTML. Developers can also define custom brand colors in the configuration file. Background utility classes make it easy to create visually appealing interfaces while maintaining consistency throughout the project.",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Applying background colors",
+                    "code": "\n<div class=\"bg-green-500 text-white p-4\">\n  Success Message\n</div>"
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : How do you set width and height in Tailwind CSS?",
+                    "a": "Tailwind CSS provides utility classes for controlling width and height using predefined scales, percentages, viewport units, and fixed values. Width classes begin with w- while height classes begin with h-. Developers can create responsive layouts quickly without writing custom CSS. These utilities support common sizing requirements and help maintain consistency across the application's design system.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Class" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "w-full" },
+                                { "col": "100% width" }
+                            ]
+                        },
+                        {
+                            "row": [{ "col": "w-1/2" }, { "col": "50% width" }]
+                        },
+                        {
+                            "row": [
+                                { "col": "h-screen" },
+                                { "col": "Full viewport height" }
+                            ]
+                        },
+                        {
+                            "row": [{ "col": "w-64" }, { "col": "Fixed width" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : How do you use Flexbox in Tailwind CSS?",
+                    "a": "Tailwind CSS provides a complete set of Flexbox utility classes that make it easy to create flexible and responsive layouts. Developers can control direction, alignment, justification, wrapping, and spacing using predefined utilities. Flexbox is commonly used for navigation bars, card layouts, centering content, and building modern responsive user interfaces without writing custom CSS rules.",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Using Flexbox utilities",
+                    "code": "\n<div class=\"flex justify-center items-center h-screen\">\n  <h1>Centered Content</h1>\n</div>"
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : How do you use Grid in Tailwind CSS?",
+                    "a": "Tailwind CSS includes powerful Grid utilities that allow developers to create complex layouts with minimal effort. By using classes such as grid, grid-cols-*, gap-*, and col-span-*, developers can define rows, columns, spacing, and positioning directly in HTML. CSS Grid is especially useful for dashboards, galleries, product listings, and other layouts that require precise control over content placement.",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Creating a three-column grid",
+                    "code": "\n<div class=\"grid grid-cols-3 gap-4\">\n  <div>Item 1</div>\n  <div>Item 2</div>\n  <div>Item 3</div>\n</div>"
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : What are state variants in Tailwind CSS?",
+                    "a": "State variants in Tailwind CSS allow developers to apply styles based on different element states such as hover, focus, active, disabled, visited, checked, and more. Instead of writing separate CSS selectors, Tailwind provides variant prefixes that can be combined with utility classes. This approach keeps styling close to the markup, improves readability, and makes interactive UI development faster and more maintainable.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "hover:": "Applies styles on mouse hover.",
+                        "focus:": "Applies styles when element receives focus.",
+                        "active:": "Applies styles while element is active.",
+                        "disabled:": "Styles disabled elements.",
+                        "visited:": "Styles visited links."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : What is the hover: modifier in Tailwind CSS?",
+                    "a": "The hover: modifier is a state variant that applies styles when a user places their mouse cursor over an element. It is commonly used to create interactive effects such as changing colors, scaling elements, adding shadows, or modifying borders. By using the hover: prefix, developers can create engaging user experiences without writing custom CSS pseudo-selectors.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Using the hover modifier",
+                    "code": "\n<button class=\"bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded\">\n  Hover Me\n</button>"
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : What is the focus: modifier in Tailwind CSS?",
+                    "a": "The focus: modifier applies styles when an element receives keyboard or programmatic focus. It is especially important for accessibility because it helps users navigate websites using keyboards or assistive technologies. Common focus styles include changing border colors, adding outlines, and displaying focus rings. Tailwind makes focus styling simple by providing built-in utility variants.",
+                    "type": "text",
+                    "id": 23,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Using the focus modifier",
+                    "code": "\n<input class=\"border p-2 focus:border-blue-500 focus:outline-none\" />"
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "q": "Q24 : What is the active: modifier in Tailwind CSS?",
+                    "a": "The active: modifier applies styles when an element is actively being clicked or pressed by the user. It is commonly used for buttons, links, and interactive components to provide immediate visual feedback. Active state styling improves user experience by indicating that an action is currently being performed on an element.",
+                    "type": "text",
+                    "id": 24,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Using the active modifier",
+                    "code": "\n<button class=\"bg-green-500 active:bg-green-700 text-white px-4 py-2\">\n  Click Me\n</button>"
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "q": "Q25 : What is dark mode in Tailwind CSS?",
+                    "a": "Dark mode is a design feature that allows an application to switch between light and dark color themes. Tailwind CSS provides built-in support for dark mode through the dark: variant. Developers can define alternative styles for backgrounds, text, borders, and other elements when dark mode is enabled. This improves user comfort in low-light environments and provides a modern user experience.",
+                    "type": "text",
+                    "id": 25,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "User Comfort": "Reduces eye strain in dark environments.",
+                        "Modern UI": "Common feature in modern applications.",
+                        "Theme Switching": "Supports light and dark themes.",
+                        "Built-in Support": "Implemented using dark: variants.",
+                        "Customization": "Can style any component differently."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "q": "Q26 : How do you enable dark mode in Tailwind CSS?",
+                    "a": "Dark mode can be enabled in Tailwind CSS through the tailwind.config.js file. Developers can choose between media-based dark mode, which follows the user's operating system preference, or class-based dark mode, where a dark class is manually added to an element such as the html tag. Class-based dark mode provides greater control over theme switching within applications.",
+                    "type": "text",
+                    "id": 26,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Enabling class-based dark mode",
+                    "code": "\nmodule.exports = {\n  darkMode: 'class'\n};"
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "q": "Q27 : What is the container class in Tailwind CSS?",
+                    "a": "The container class is a utility provided by Tailwind CSS that centers content horizontally and applies responsive maximum widths based on screen size. It is commonly used as a wrapper around page content to maintain consistent layouts across different devices. Developers often combine it with padding utilities to create clean and responsive page structures.",
+                    "type": "text",
+                    "id": 27,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Using the container class",
+                    "code": "\n<div class=\"container mx-auto px-4\">\n  Content Here\n</div>"
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "q": "Q28 : What is the spacing scale in Tailwind CSS?",
+                    "a": "The spacing scale is a predefined system of values used for margins, padding, gaps, widths, heights, and other spacing-related properties. Tailwind provides a consistent scale that helps maintain visual harmony throughout an application. Instead of using arbitrary pixel values repeatedly, developers use predefined spacing utilities such as p-4, m-8, and gap-6.",
+                    "type": "text",
+                    "id": 28,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Class"
+                        },
+                        {
+                            "label": "Value"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "p-1"
+                                },
+                                {
+                                    "col": "0.25rem"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "p-2"
+                                },
+                                {
+                                    "col": "0.5rem"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "p-4"
+                                },
+                                {
+                                    "col": "1rem"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "p-8"
+                                },
+                                {
+                                    "col": "2rem"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "q": "Q29 : What are arbitrary values in Tailwind CSS?",
+                    "a": "Arbitrary values allow developers to use custom values directly inside utility classes when the default Tailwind scale does not provide the required value. These values are enclosed within square brackets. Arbitrary values provide flexibility while still maintaining the utility-first workflow. They are useful for custom widths, heights, colors, spacing, and many other CSS properties.",
+                    "type": "text",
+                    "id": 29,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Using arbitrary values",
+                    "code": "\n<div class=\"w-[350px] bg-[#1e293b] text-[18px]\">\n  Custom Values\n</div>"
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "q": "Q30 : What is JIT (Just-In-Time) mode in Tailwind CSS?",
+                    "a": "JIT (Just-In-Time) mode is Tailwind CSS's compilation engine that generates CSS classes only when they are actually used in the project. Instead of building the entire framework upfront, JIT creates styles on demand during development. This results in significantly faster build times, smaller CSS bundles, support for arbitrary values, and an improved developer experience. Modern versions of Tailwind CSS use the JIT engine by default.",
+                    "type": "text",
+                    "id": 30,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Traditional Build"
+                        },
+                        {
+                            "label": "JIT Mode"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Generates all utilities"
+                                },
+                                {
+                                    "col": "Generates only used utilities"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Larger CSS output"
+                                },
+                                {
+                                    "col": "Smaller CSS output"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Slower builds"
+                                },
+                                {
+                                    "col": "Faster builds"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Limited custom values"
+                                },
+                                {
+                                    "col": "Supports arbitrary values"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "q": "Q31 : What are Tailwind CSS plugins?",
+                    "a": "Tailwind CSS plugins are extensions that add new utility classes, components, variants, or functionality to the framework. Plugins help developers avoid writing repetitive code by providing reusable utilities for common tasks such as forms, typography, aspect ratios, and line clamping. Tailwind includes official plugins maintained by the core team, and developers can also create custom plugins to extend the framework according to project requirements.",
+                    "type": "text",
+                    "id": 31,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Forms Plugin": "Provides better default styling for form elements.",
+                        "Typography Plugin": "Adds prose classes for articles and blogs.",
+                        "Aspect Ratio Plugin": "Maintains consistent aspect ratios.",
+                        "Line Clamp Plugin": "Limits text to a specific number of lines.",
+                        "Custom Plugins": "Allow developers to create project-specific utilities."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "q": "Q32 : What is the Typography plugin in Tailwind CSS?",
+                    "a": "The Typography plugin, also known as @tailwindcss/typography, provides a set of prose classes designed for displaying rich text content such as blogs, documentation, and articles. It automatically styles headings, paragraphs, lists, blockquotes, tables, and code blocks with sensible defaults. This eliminates the need to manually style every HTML element and ensures content remains visually appealing and readable.",
+                    "type": "text",
+                    "id": 32,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Using Typography plugin",
+                    "code": "\n<article class=\"prose\">\n  <h1>Blog Title</h1>\n  <p>This content is automatically styled.</p>\n</article>"
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "q": "Q33 : What is the Forms plugin in Tailwind CSS?",
+                    "a": "The Forms plugin improves the default appearance of form elements such as inputs, selects, checkboxes, radio buttons, and textareas. Browsers often apply inconsistent styling to form controls, making them difficult to customize. The Forms plugin provides a clean and consistent foundation, allowing developers to style forms more efficiently while maintaining accessibility and responsiveness.",
+                    "type": "text",
+                    "id": 33,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Provides consistent styling across browsers.",
+                        "2": "Improves form accessibility.",
+                        "3": "Reduces the need for custom CSS.",
+                        "4": "Works seamlessly with Tailwind utility classes."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "q": "Q34 : What is the Aspect Ratio plugin in Tailwind CSS?",
+                    "a": "The Aspect Ratio plugin allows developers to maintain consistent width-to-height ratios for elements such as images, videos, iframes, and cards. This is particularly useful for responsive designs where content dimensions need to remain proportional across different screen sizes. Using utility classes from the plugin eliminates the need for complex CSS calculations and custom aspect ratio hacks.",
+                    "type": "text",
+                    "id": 34,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Using aspect ratio utilities",
+                    "code": "\n<div class=\"aspect-video\">\n  <iframe src=\"video-url\"></iframe>\n</div>"
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "q": "Q35 : What is PurgeCSS in Tailwind CSS?",
+                    "a": "PurgeCSS is a process that removes unused CSS classes from the final production build. Since Tailwind provides thousands of utility classes, the generated CSS file can become large if all utilities are included. Purging ensures that only the classes actually used in the project remain in the final output, significantly reducing file size and improving website performance and loading speed.",
+                    "type": "text",
+                    "id": 35,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Without Purging" },
+                        { "label": "With Purging" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Large CSS file" },
+                                { "col": "Small optimized CSS file" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Slower loading" },
+                                { "col": "Faster loading" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Unused classes included" },
+                                { "col": "Only used classes included" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "q": "Q36 : What is the difference between Tailwind CSS and Bootstrap?",
+                    "a": "Tailwind CSS and Bootstrap are both popular CSS frameworks, but they follow different approaches. Bootstrap provides pre-designed UI components such as buttons, cards, and modals, whereas Tailwind CSS focuses on utility classes that allow developers to build fully customized designs. Tailwind offers greater flexibility and customization, while Bootstrap enables faster development with ready-made components.",
+                    "type": "text",
+                    "id": 36,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Tailwind CSS" },
+                        { "label": "Bootstrap" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Utility-first framework" },
+                                { "col": "Component-based framework" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Highly customizable" },
+                                { "col": "Pre-designed components" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Minimal default styling" },
+                                { "col": "Opinionated design system" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Smaller final CSS with purging" },
+                                { "col": "Larger CSS bundle" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "q": "Q37 : What is the @apply directive in Tailwind CSS?",
+                    "a": "The @apply directive allows developers to combine multiple Tailwind utility classes into a custom CSS class. This helps reduce repetition when the same set of utilities is used frequently throughout an application. While Tailwind encourages utility-first development, @apply can improve maintainability for reusable styles such as buttons, cards, and alerts.",
+                    "type": "text",
+                    "id": 37,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "css",
+                    "simple_text": "Using @apply directive",
+                    "code": "\n.btn {\n  @apply bg-blue-500 text-white px-4 py-2 rounded;\n}"
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "q": "Q38 : What is the @layer directive in Tailwind CSS?",
+                    "a": "The @layer directive is used to organize custom styles into Tailwind's predefined layers such as base, components, and utilities. It ensures that custom styles are merged correctly with Tailwind's generated CSS and maintain the proper order of precedence. This feature helps developers extend Tailwind while preserving consistency and avoiding style conflicts.",
+                    "type": "text",
+                    "id": 38,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Layer" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "base" },
+                                { "col": "Global element styles" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "components" },
+                                { "col": "Reusable UI components" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "utilities" },
+                                { "col": "Custom utility classes" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "q": "Q39 : What is the difference between @apply and @layer?",
+                    "a": "Both @apply and @layer are Tailwind directives, but they serve different purposes. @apply is used to combine existing utility classes into custom CSS classes, while @layer is used to define where custom CSS should be inserted within Tailwind's styling layers. Developers often use them together to create reusable styles that integrate properly with the Tailwind build process.",
+                    "type": "text",
+                    "id": 39,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "@apply" }, { "label": "@layer" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Combines utility classes" },
+                                { "col": "Organizes custom styles" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Creates reusable classes" },
+                                { "col": "Controls CSS insertion order" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Used inside CSS rules" },
+                                { "col": "Used for defining style layers" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "q": "Q40 : What are the advantages of using Tailwind CSS?",
+                    "a": "Tailwind CSS offers several advantages including faster development, improved consistency, better maintainability, smaller production CSS files, and highly customizable designs. Its utility-first approach reduces context switching between HTML and CSS, enabling developers to build interfaces quickly. Tailwind also integrates well with modern frameworks like React, Next.js, Vue, and Angular, making it a popular choice for modern web development.",
+                    "type": "text",
+                    "id": 40,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Rapid Development": "Build interfaces faster using utility classes.",
+                        "Customization": "Easily create unique designs.",
+                        "Responsive Design": "Built-in responsive utilities.",
+                        "Smaller CSS": "Unused classes are removed in production.",
+                        "Framework Support": "Works well with React, Vue, Angular, and Next.js."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "q": "Q41 : What are the disadvantages of Tailwind CSS?",
+                    "a": "Although Tailwind CSS is highly popular and productive, it also has some disadvantages. Beginners may find the large number of utility classes overwhelming. HTML files can become cluttered because styling is applied directly through class names. Developers who prefer separating structure and styling may dislike this approach. Additionally, teams unfamiliar with utility-first CSS may experience a learning curve before becoming productive with Tailwind.",
+                    "type": "text",
+                    "id": 41,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Large Class Lists": "HTML can become crowded with utility classes.",
+                        "Learning Curve": "Beginners need time to learn utility names.",
+                        "Less Separation": "Styles are mixed with markup.",
+                        "Readability Issues": "Complex components may contain many classes.",
+                        "Customization Knowledge": "Requires understanding of configuration files."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "q": "Q42 : What is utility-first CSS?",
+                    "a": "Utility-first CSS is a methodology where small, reusable utility classes are used to build user interfaces directly in HTML instead of writing custom CSS for every component. Each utility class performs a single styling task such as setting margin, padding, color, width, or alignment. Tailwind CSS is one of the most popular utility-first frameworks because it promotes consistency, reduces custom CSS, and accelerates development speed.",
+                    "type": "text",
+                    "id": 42,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Traditional CSS" },
+                        { "label": "Utility-First CSS" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Custom CSS classes" },
+                                { "col": "Reusable utility classes" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "More CSS files" },
+                                { "col": "Minimal custom CSS" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Separate styling" },
+                                { "col": "Styling directly in HTML" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "q": "Q43 : What are arbitrary variants in Tailwind CSS?",
+                    "a": "Arbitrary variants allow developers to create custom selectors and state conditions that are not available as built-in Tailwind variants. They provide additional flexibility when styling complex components or integrating with third-party libraries. Arbitrary variants use square bracket syntax and enable developers to target custom states, parent selectors, nested elements, and advanced CSS scenarios while still working within the Tailwind ecosystem.",
+                    "type": "text",
+                    "id": 43,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Using arbitrary variants",
+                    "code": "\n<div class=\"[&:nth-child(2)]:text-red-500\">\n  Custom Variant Example\n</div>"
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "q": "Q44 : What is the difference between Tailwind CSS and traditional CSS?",
+                    "a": "Tailwind CSS and traditional CSS achieve the same goal of styling web applications, but they follow different approaches. Traditional CSS relies on custom class definitions and separate stylesheet files, whereas Tailwind uses predefined utility classes directly in HTML. Tailwind focuses on speed, consistency, and scalability, while traditional CSS offers greater control over class naming and separation of concerns.",
+                    "type": "text",
+                    "id": 44,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Tailwind CSS" },
+                        { "label": "Traditional CSS" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Utility-first approach" },
+                                { "col": "Custom CSS approach" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Minimal CSS files" },
+                                { "col": "Multiple CSS files" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Rapid development" },
+                                { "col": "More manual styling" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Built-in responsive utilities" },
+                                { "col": "Manual media queries" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "q": "Q45 : What is the difference between Flexbox and Grid in Tailwind CSS?",
+                    "a": "Tailwind CSS provides utilities for both Flexbox and CSS Grid layouts. Flexbox is best suited for one-dimensional layouts where content is arranged in a row or column. Grid is designed for two-dimensional layouts where rows and columns need to be controlled simultaneously. Choosing between Flexbox and Grid depends on the complexity and structure of the layout being created.",
+                    "type": "text",
+                    "id": 45,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Flexbox" }, { "label": "Grid" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "One-dimensional layout" },
+                                { "col": "Two-dimensional layout" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Rows or columns" },
+                                { "col": "Rows and columns together" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Simpler layouts" },
+                                { "col": "Complex layouts" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Navigation bars" },
+                                { "col": "Dashboards and galleries" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "q": "Q46 : What are transition utilities in Tailwind CSS?",
+                    "a": "Transition utilities in Tailwind CSS allow developers to create smooth animations when properties such as colors, shadows, transforms, and opacity change. Instead of writing CSS transition rules manually, utility classes can be used to define duration, timing functions, and transition targets. These utilities improve user experience by making interface interactions feel smoother and more professional.",
+                    "type": "text",
+                    "id": 46,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Using transition utilities",
+                    "code": "\n<button class=\"bg-blue-500 hover:bg-blue-700 transition duration-300\">\n  Hover Me\n</button>"
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : What are animation utilities in Tailwind CSS?",
+                    "a": "Tailwind CSS provides built-in animation utilities that allow developers to add common animations without writing custom keyframes. These animations include spinning loaders, pulsing elements, bouncing objects, and ping effects. Animation utilities improve user engagement and provide visual feedback for actions such as loading states, notifications, and interactive components.",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Utility" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "animate-spin" },
+                                { "col": "Continuous rotation" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "animate-pulse" },
+                                { "col": "Pulsing effect" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "animate-bounce" },
+                                { "col": "Bouncing animation" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "animate-ping" },
+                                { "col": "Expanding ping effect" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "q": "Q48 : What are pseudo-class variants in Tailwind CSS?",
+                    "a": "Pseudo-class variants allow developers to style elements based on specific states or conditions. Examples include hover, focus, active, disabled, checked, first, last, odd, and even. These variants eliminate the need for custom CSS pseudo-selectors and make state-based styling easier to manage directly within HTML. They are widely used in forms, navigation menus, tables, and interactive UI components.",
+                    "type": "text",
+                    "id": 48,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "hover": "Triggered when mouse hovers.",
+                        "focus": "Triggered when element gains focus.",
+                        "active": "Triggered while element is pressed.",
+                        "disabled": "Applied to disabled elements.",
+                        "checked": "Applied to selected checkboxes or radio buttons."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "q": "Q49 : How does Tailwind CSS improve development speed?",
+                    "a": "Tailwind CSS improves development speed by providing ready-to-use utility classes that eliminate the need to write large amounts of custom CSS. Developers can build layouts, style components, and create responsive designs directly in HTML. Features such as responsive utilities, dark mode support, state variants, plugins, and JIT compilation further accelerate development while maintaining consistency across projects.",
+                    "type": "text",
+                    "id": 49,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Fewer CSS Files": "Reduces stylesheet management.",
+                        "Rapid Prototyping": "Build UIs quickly.",
+                        "Responsive Utilities": "No manual media queries.",
+                        "Reusable Design System": "Consistent styling across projects.",
+                        "JIT Compilation": "Faster builds and smaller CSS."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "q": "Q50 : What are the best practices for using Tailwind CSS?",
+                    "a": "When using Tailwind CSS, developers should follow best practices to keep projects maintainable and scalable. This includes organizing components properly, avoiding unnecessary utility duplication, leveraging reusable component patterns, using configuration files for design consistency, and optimizing production builds. Combining Tailwind with modern frontend frameworks and following accessibility guidelines ensures the creation of efficient, professional, and user-friendly applications.",
+                    "type": "text",
+                    "id": 50,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Use Components": "Create reusable UI components.",
+                        "Leverage Config File": "Maintain design consistency.",
+                        "Enable Purging": "Reduce CSS bundle size.",
+                        "Follow Accessibility": "Ensure inclusive user experiences.",
+                        "Avoid Class Duplication": "Keep code clean and maintainable."
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Tailwind CSS works best when combined with component-based architectures such as React, Next.js, Vue, or Angular."
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "q": "Q51 : What is Tailwind CSS IntelliSense?",
+                    "a": "Tailwind CSS IntelliSense is an official Visual Studio Code extension that provides intelligent coding assistance when working with Tailwind CSS. It offers features such as autocomplete for utility classes, syntax highlighting, hover previews, linting, and validation. This extension helps developers write Tailwind classes faster, reduces typing mistakes, and improves productivity by providing real-time suggestions and documentation directly inside the code editor.",
+                    "type": "text",
+                    "id": 51,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Autocomplete": "Suggests Tailwind utility classes while typing.",
+                        "Hover Preview": "Displays CSS properties of utility classes.",
+                        "Linting": "Detects invalid or conflicting classes.",
+                        "Syntax Highlighting": "Improves code readability.",
+                        "Productivity": "Speeds up Tailwind development."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "q": "Q52 : How do you use Tailwind CSS with React?",
+                    "a": "Tailwind CSS can be integrated with React by installing Tailwind and configuring it within the React project. Once configured, utility classes can be applied directly to JSX elements using the className attribute. This approach allows developers to build responsive and customizable user interfaces without writing separate CSS files. Tailwind works especially well with React's component-based architecture, enabling rapid development and consistent styling across components.",
+                    "type": "text",
+                    "id": 52,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "jsx",
+                    "simple_text": "Using Tailwind CSS in a React component",
+                    "code": "\nfunction Button() {\n  return (\n    <button className=\"bg-blue-500 text-white px-4 py-2 rounded\">\n      Click Me\n    </button>\n  );\n}"
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "q": "Q53 : How do you use Tailwind CSS with Next.js?",
+                    "a": "Tailwind CSS integrates seamlessly with Next.js and is officially supported by the framework. After installing Tailwind and configuring the required files, developers can use utility classes directly within React components and pages. Tailwind's JIT engine, responsive utilities, and optimized production builds make it an excellent choice for Next.js applications. It is commonly used for building modern, fast, and responsive web applications.",
+                    "type": "text",
+                    "id": 53,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Easy Setup": "Official documentation provides simple installation steps.",
+                        "Component Styling": "Apply utility classes directly in JSX.",
+                        "Performance": "Unused classes are removed in production builds.",
+                        "Responsive Design": "Built-in breakpoint utilities.",
+                        "SEO Friendly": "Works well with Next.js server-side rendering."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "q": "Q54 : How do you use Tailwind CSS with Angular?",
+                    "a": "Tailwind CSS can be integrated into Angular applications by installing Tailwind and configuring it in the Angular build process. Once configured, utility classes can be used directly within Angular templates. Tailwind helps Angular developers create responsive user interfaces quickly without relying on large custom stylesheets. Its utility-first approach complements Angular's component-based architecture and promotes consistent design patterns across the application.",
+                    "type": "text",
+                    "id": 54,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Using Tailwind CSS in Angular template",
+                    "code": "\n<button class=\"bg-green-500 text-white px-4 py-2 rounded\">\n  Submit\n</button>"
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "Que": [
+                {
+                    "q": "Q55 : How do you use Tailwind CSS with Vue.js?",
+                    "a": "Tailwind CSS works efficiently with Vue.js and can be configured using Vue CLI or Vite-based projects. Once installed, utility classes can be applied directly within Vue templates. Tailwind's utility-first design aligns well with Vue's component-driven development model, allowing developers to create reusable and responsive UI components. The combination of Vue.js and Tailwind CSS is popular for building modern frontend applications with minimal custom CSS.",
+                    "type": "text",
+                    "id": 55,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "html",
+                    "simple_text": "Using Tailwind CSS in Vue component",
+                    "code": "\n<template>\n  <button class=\"bg-purple-500 text-white px-4 py-2 rounded\">\n    Save\n  </button>\n</template>"
+                }
+            ]
+        }
+    ]
+}

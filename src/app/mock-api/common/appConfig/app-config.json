@@ -17,6 +17,110 @@
             "description": "All React Interview Questions from beginner to advanced"
         },
         {
+            "id": "/nextJS-interview-questions",
+            "title": "NextJs Interview Questions",
+            "imgUrl": "nextjs",
+            "buttonName": "Continue",
+            "category": "Next Js",
+            "description": "All Nextjs Interview Questions from beginner to advanced"
+        },
+        {
+            "id": "/tailwind-interview-questions",
+            "title": "Tailwind CSS Interview Questions",
+            "category": "tailwind CSS",
+            "imgUrl": "tailwind-css",
+            "buttonName": "Continue",
+            "description": "All Tailwind CSS Interview Questions from beginner to advanced"
+        },
+        {
+            "id": "/express-interview-questions",
+            "title": "Express Js Interview Questions",
+            "category": "Express js",
+            "imgUrl": "express",
+            "buttonName": "Continue",
+            "description": "All Expressjs Interview Questions from beginner to advanced"
+        },
+        {
+            "id": "/c-Sharp-interview-questions",
+            "title": "C# Interview Questions",
+            "category": "C#",
+            "imgUrl": "csharp",
+            "buttonName": "Continue",
+            "description": "All C# Interview Questions from beginner to advanced"
+        },
+        {
+            "id": "/mongoDB-interview-questions",
+            "title": "MongoDB Interview Questions",
+            "category": "MongoDB",
+            "imgUrl": "mongoDB",
+            "buttonName": "Continue",
+            "description": "All MongoDB Interview Questions from beginner to advanced"
+        },
+        {
+            "id": "/postgreSQL-interview-questions",
+            "title": "PostgreSQL Interview Questions",
+            "category": "PostgreSQL",
+            "imgUrl": "postgreSQL",
+            "buttonName": "Continue",
+            "description": "All PostgreSQL Interview Questions from beginner to advanced"
+        },
+        {
+            "id": "/mySQL-interview-questions",
+            "title": "MySQL Interview Questions",
+            "category": "MySQL",
+            "imgUrl": "mySQL",
+            "buttonName": "Continue",
+            "description": "All MySQL Interview Questions from beginner to advanced"
+        },
+        {
+            "id": "/devops-interview-questions",
+            "title": "Devops Interview Questions",
+            "category": "Devops",
+            "imgUrl": "devops",
+            "buttonName": "Continue",
+            "description": "All Devops Interview Questions from beginner to advanced"
+        },
+        {
+            "id": "/testNG-interview-questions",
+            "title": "TestNG Interview Questions",
+            "category": "TestNG",
+            "imgUrl": "testNG",
+            "buttonName": "Continue",
+            "description": "All TestNG Interview Questions from beginner to advanced"
+        },
+        {
+            "id": "/jenins-interview-questions",
+            "title": "Jenkins Interview Questions",
+            "category": "Jenkins js",
+            "imgUrl": "jenkins",
+            "buttonName": "Continue",
+            "description": "All Jenkins Interview Questions from beginner to advanced"
+        },
+        {
+            "id": "/aws-interview-questions",
+            "title": "AWS Interview Questions",
+            "category": "AWS",
+            "imgUrl": "aws",
+            "buttonName": "Continue",
+            "description": "All AWS Interview Questions from beginner to advanced"
+        },
+        {
+            "id": "/docker-interview-questions",
+            "title": "Docker Interview Questions",
+            "category": "Docker",
+            "imgUrl": "docker",
+            "buttonName": "Continue",
+            "description": "All Docker Interview Questions from beginner to advanced"
+        },
+        {
+            "id": "/typescript-interview-questions",
+            "title": "Typescript Interview Questions",
+            "category": "Typescript",
+            "imgUrl": "typescript",
+            "buttonName": "Continue",
+            "description": "All TypeScript Interview Questions from beginner to advanced"
+        },
+        {
             "id": "/vuejs-interview-questions",
             "title": "Vue.js Interview Questions",
             "imgUrl": "vue",
@@ -31,6 +135,14 @@
             "imgUrl": "nodejs",
             "buttonName": "Continue",
             "description": "All Nodejs Interview Questions from beginner to advanced"
+        },
+        {
+            "id": "/express-interview-questions",
+            "title": "Express Js Interview Questions",
+            "category": "Express js",
+            "imgUrl": "express",
+            "buttonName": "Continue",
+            "description": "All Expressjs Interview Questions from beginner to advanced"
         },
         {
             "id": "/javascript-interview-questions",

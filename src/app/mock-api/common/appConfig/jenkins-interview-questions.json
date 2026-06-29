@@ -1,0 +1,2161 @@
+{
+    "jenkins-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is Jenkins?",
+                    "a": "Jenkins is an open-source automation server used to automate the building, testing, and deployment of software applications. It plays a central role in Continuous Integration (CI) and Continuous Delivery/Deployment (CD) pipelines by automatically executing tasks whenever code changes occur.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : Why is Jenkins used?",
+                    "a": "Jenkins is used to automate repetitive software development tasks such as compiling code, running automated tests, generating reports, packaging applications, and deploying them to different environments. Automation reduces manual effort, improves software quality, and speeds up releases.",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : What are the advantages of Jenkins?",
+                    "a": "Jenkins provides automation, easy integration with development tools, a rich plugin ecosystem, distributed builds, pipeline support, scheduling capabilities, reporting, and seamless integration with CI/CD workflows.",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Open source",
+                        "Large plugin ecosystem",
+                        "Supports CI/CD",
+                        "Pipeline as Code",
+                        "Distributed builds",
+                        "Cross-platform support",
+                        "Easy Git integration",
+                        "Highly extensible"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : What is Continuous Integration (CI)?",
+                    "a": "Continuous Integration (CI) is a software development practice in which developers frequently merge their code into a shared repository. Every code change automatically triggers a build and test process, allowing integration issues to be detected early.",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : What is Continuous Delivery (CD)?",
+                    "a": "Continuous Delivery is the practice of automatically building, testing, and preparing software for deployment. Every successful build is kept in a deployable state, while the final production deployment is usually performed manually.",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : What is Continuous Deployment?",
+                    "a": "Continuous Deployment extends Continuous Delivery by automatically deploying every successfully tested build to production without manual approval. It requires a highly reliable automated testing and deployment pipeline.",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Continuous Delivery" },
+                        { "label": "Continuous Deployment" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Manual production deployment." },
+                                { "col": "Automatic production deployment." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Human approval required." },
+                                { "col": "No manual approval." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : What is the architecture of Jenkins?",
+                    "a": "Jenkins follows a Controller-Agent (formerly Master-Agent) architecture. The Controller manages jobs, schedules builds, stores configurations, and coordinates execution, while Agents perform the actual build and test tasks on different machines.",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : What are the main components of Jenkins?",
+                    "a": "Jenkins consists of several core components that work together to automate software delivery.",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Controller": "Manages jobs and schedules builds.",
+                        "Agent": "Executes build and test tasks.",
+                        "Job": "Represents an automation task.",
+                        "Pipeline": "Defines CI/CD workflow.",
+                        "Plugin": "Extends Jenkins functionality.",
+                        "Workspace": "Stores files used during builds."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : What are Jenkins Plugins?",
+                    "a": "Plugins are extensions that add new features and integrations to Jenkins. They allow Jenkins to work with tools such as Git, Maven, Docker, Kubernetes, SonarQube, Selenium, TestNG, Slack, AWS, and many others without modifying the Jenkins core.",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : Why are Jenkins Plugins important?",
+                    "a": "Jenkins is intentionally lightweight, and most advanced functionality is provided through plugins. Plugins enable integration with version control systems, build tools, testing frameworks, cloud platforms, notification services, and deployment tools, making Jenkins highly flexible and adaptable to different development workflows.",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Understanding CI/CD concepts, Jenkins architecture, plugins, and pipelines is essential for DevOps, Automation Testing, and SDET interviews."
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : What is a Jenkins Job?",
+                    "a": "A Jenkins Job is a configurable task that Jenkins executes. A job can perform activities such as compiling code, running automated tests, generating reports, packaging applications, or deploying software. Jobs are the basic building blocks of Jenkins automation.",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : What are the different types of Jenkins Jobs?",
+                    "a": "Jenkins provides multiple job types to support different automation requirements.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Job Type" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Freestyle Project" },
+                                { "col": "General-purpose automation job." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Pipeline" },
+                                { "col": "CI/CD workflow defined as code." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Multibranch Pipeline" },
+                                {
+                                    "col": "Automatically builds multiple Git branches."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Folder" },
+                                { "col": "Organizes related jobs." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Maven Project" },
+                                { "col": "Builds Maven-based Java projects." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : What is a Freestyle Project in Jenkins?",
+                    "a": "A Freestyle Project is the simplest and most flexible type of Jenkins job. It is configured through the Jenkins UI and is suitable for simple build, test, and deployment tasks. However, for complex CI/CD workflows, Pipeline jobs are generally preferred.",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : What is a Pipeline Job in Jenkins?",
+                    "a": "A Pipeline Job defines the complete CI/CD process as code using a Jenkinsfile. It allows developers to version-control build and deployment workflows, making them reusable, maintainable, and easier to review.",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : What is a Multibranch Pipeline in Jenkins?",
+                    "a": "A Multibranch Pipeline automatically discovers branches in a source code repository and creates separate pipeline jobs for each branch. This is useful when multiple developers work on feature branches, ensuring every branch is built and tested independently.",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : What is a Build in Jenkins?",
+                    "a": "A Build is a single execution of a Jenkins job. During a build, Jenkins performs configured tasks such as fetching source code, compiling the project, executing tests, generating reports, packaging artifacts, and optionally deploying the application.",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : What are Build Triggers in Jenkins?",
+                    "a": "Build Triggers define when a Jenkins job should start automatically. Triggers eliminate the need for manual execution by responding to events such as code commits, scheduled times, or the completion of other jobs.",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Manual Trigger",
+                        "GitHub Webhook",
+                        "Poll SCM",
+                        "Build after another project",
+                        "Scheduled (Cron)",
+                        "Remote Trigger"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : What is Poll SCM in Jenkins?",
+                    "a": "Poll SCM is a build trigger in which Jenkins periodically checks the source code repository for changes. If new commits are detected, Jenkins automatically starts a build. Although simple to configure, webhooks are generally preferred because they are more efficient and respond immediately to repository events.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : What are Webhooks in Jenkins?",
+                    "a": "A Webhook is an event-driven mechanism through which a version control system such as GitHub or GitLab immediately notifies Jenkins whenever code is pushed. Jenkins then triggers the configured job without continuously polling the repository, making builds faster and more resource-efficient.",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : What is the difference between Poll SCM and Webhooks?",
+                    "a": "Both mechanisms trigger Jenkins builds based on source code changes, but they differ in how those changes are detected.",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Poll SCM" }, { "label": "Webhook" }],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Jenkins periodically checks the repository."
+                                },
+                                {
+                                    "col": "Repository immediately notifies Jenkins."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Consumes more server resources." },
+                                { "col": "More efficient and event-driven." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "May delay build execution." },
+                                { "col": "Triggers builds almost instantly." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Simpler when webhooks aren't available."
+                                },
+                                {
+                                    "col": "Preferred for modern CI/CD pipelines."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Questions about Jobs, Build Triggers, Poll SCM, and Webhooks are among the most frequently asked Jenkins interview topics for DevOps Engineers, Automation Testers, and SDETs."
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : What is a Workspace in Jenkins?",
+                    "a": "A Workspace is a dedicated directory on the Jenkins Controller or Agent where a job stores its source code, dependencies, generated files, logs, test reports, and build artifacts during execution. Each job typically has its own workspace to avoid conflicts.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : What are Build Artifacts in Jenkins?",
+                    "a": "Build Artifacts are the output files generated after a successful build. These may include JAR files, WAR files, ZIP packages, Docker images, test reports, screenshots, or any files that need to be stored, downloaded, or deployed.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : What is the difference between Workspace and Build Artifacts?",
+                    "a": "The Workspace is the temporary working directory used during the build process, whereas Build Artifacts are the final output files that are archived after the build completes.",
+                    "type": "text",
+                    "id": 23,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Workspace" },
+                        { "label": "Build Artifacts" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Temporary working directory." },
+                                { "col": "Final generated output." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Contains source code and temporary files."
+                                },
+                                {
+                                    "col": "Contains deployable or downloadable files."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Usually cleaned after builds." },
+                                { "col": "Can be archived and reused." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "q": "Q24 : What is Build History in Jenkins?",
+                    "a": "Build History is a chronological record of all executions of a Jenkins job. It includes information such as build number, execution status, start time, duration, console output, test results, and archived artifacts.",
+                    "type": "text",
+                    "id": 24,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "q": "Q25 : What is Console Output in Jenkins?",
+                    "a": "Console Output is the detailed execution log generated during a Jenkins build. It displays every command executed, compilation messages, test results, plugin output, errors, warnings, and deployment logs, making it the primary source for debugging failed builds.",
+                    "type": "text",
+                    "id": 25,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "q": "Q26 : What is the purpose of the Build Number in Jenkins?",
+                    "a": "Every Jenkins build receives a unique sequential build number. It helps identify, track, compare, and troubleshoot individual build executions. Build numbers are also commonly used in artifact versioning and deployment tracking.",
+                    "type": "text",
+                    "id": 26,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "q": "Q27 : What is a Parameterized Build in Jenkins?",
+                    "a": "A Parameterized Build allows users to provide input values before starting a Jenkins job. These parameters can control the behavior of the build, such as selecting the environment, browser, branch, version, or deployment target.",
+                    "type": "text",
+                    "id": 27,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "q": "Q28 : What types of parameters are supported in Jenkins?",
+                    "a": "Jenkins supports several parameter types that allow users to customize build execution without modifying the job configuration.",
+                    "type": "text",
+                    "id": 28,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "String Parameter": "Accepts text input.",
+                        "Boolean Parameter": "Accepts true or false.",
+                        "Choice Parameter": "Allows selection from predefined options.",
+                        "Password Parameter": "Masks sensitive values.",
+                        "File Parameter": "Allows uploading a file.",
+                        "Run Parameter": "References another Jenkins build."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "q": "Q29 : Why are Parameterized Builds useful?",
+                    "a": "Parameterized Builds improve flexibility by allowing a single Jenkins job to execute in multiple scenarios. Instead of creating separate jobs for different environments or configurations, users can supply parameters at runtime.",
+                    "type": "text",
+                    "id": 29,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Deploy to different environments",
+                        "Select Git branches",
+                        "Choose browsers for Selenium tests",
+                        "Specify application versions",
+                        "Control feature flags",
+                        "Reuse the same pipeline"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "q": "Q30 : What is the difference between a Freestyle Job and a Pipeline Job in Jenkins?",
+                    "a": "A Freestyle Job is configured through the Jenkins web interface and is suitable for simple automation tasks. A Pipeline Job defines the entire CI/CD workflow as code using a Jenkinsfile, making it version-controlled, reusable, and better suited for complex projects.",
+                    "type": "text",
+                    "id": 30,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Freestyle Job" },
+                        { "label": "Pipeline Job" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Configured through UI." },
+                                { "col": "Configured using Jenkinsfile." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Best for simple tasks." },
+                                { "col": "Best for CI/CD workflows." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Harder to version control." },
+                                { "col": "Stored in source control." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Limited flexibility." },
+                                { "col": "Highly flexible and scalable." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Parameterized Builds, Workspaces, Artifacts, and Pipeline vs Freestyle Jobs are frequently asked topics in Jenkins interviews."
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "q": "Q31 : What is a Jenkins Pipeline?",
+                    "a": "A Jenkins Pipeline is a collection of automated steps that define the complete Continuous Integration and Continuous Delivery (CI/CD) workflow. It allows developers to automate tasks such as building the application, running tests, generating reports, packaging artifacts, and deploying software using a Jenkinsfile.",
+                    "type": "text",
+                    "id": 31,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "q": "Q32 : What is a Jenkinsfile?",
+                    "a": "A Jenkinsfile is a text file that contains the Pipeline definition written in Groovy-based Pipeline DSL. It is stored in the project's source code repository, enabling the CI/CD workflow to be version-controlled along with the application code.",
+                    "type": "text",
+                    "id": 32,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "groovy",
+                    "simple_text": "Simple Jenkinsfile",
+                    "code": "\npipeline {\n    agent any\n\n    stages {\n        stage('Build') {\n            steps {\n                echo 'Building Application...'\n            }\n        }\n    }\n}"
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "q": "Q33 : What are the advantages of using a Jenkinsfile?",
+                    "a": "A Jenkinsfile allows the entire CI/CD pipeline to be managed as code. This improves maintainability, enables version control, simplifies collaboration, supports code reviews, and makes pipelines reusable across multiple environments.",
+                    "type": "text",
+                    "id": 33,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Pipeline as Code",
+                        "Version controlled",
+                        "Reusable",
+                        "Easy to maintain",
+                        "Supports collaboration",
+                        "Enables code reviews"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "q": "Q34 : What are the two types of Pipelines in Jenkins?",
+                    "a": "Jenkins supports two types of Pipelines: Declarative Pipeline and Scripted Pipeline. Declarative Pipelines use a structured syntax that is easier to read and maintain, while Scripted Pipelines provide complete programming flexibility using Groovy.",
+                    "type": "text",
+                    "id": 34,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "q": "Q35 : What is a Declarative Pipeline?",
+                    "a": "A Declarative Pipeline is a structured and simplified Pipeline syntax that follows predefined rules. It is the recommended approach for most Jenkins projects because it is easier to understand, validate, and maintain.",
+                    "type": "text",
+                    "id": 35,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "q": "Q36 : What is a Scripted Pipeline?",
+                    "a": "A Scripted Pipeline is a Groovy-based Pipeline that provides full programming capabilities. It offers greater flexibility than Declarative Pipelines but is generally more complex and harder to maintain. It is suitable for advanced automation scenarios requiring custom logic.",
+                    "type": "text",
+                    "id": 36,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "q": "Q37 : What is the difference between Declarative and Scripted Pipelines?",
+                    "a": "Both Pipeline types automate CI/CD workflows, but they differ in syntax, flexibility, and complexity.",
+                    "type": "text",
+                    "id": 37,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Declarative Pipeline" },
+                        { "label": "Scripted Pipeline" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Structured syntax." },
+                                { "col": "Pure Groovy scripting." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Easy to read." },
+                                { "col": "More flexible." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Recommended for most projects." },
+                                { "col": "Used for advanced workflows." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Simpler maintenance." },
+                                { "col": "Higher learning curve." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "q": "Q38 : What are Stages in a Jenkins Pipeline?",
+                    "a": "Stages divide a Pipeline into logical sections, making the workflow easier to understand and monitor. Common stages include Checkout, Build, Test, Package, Deploy, and Cleanup. Jenkins displays the status of each stage separately in the Pipeline view.",
+                    "type": "text",
+                    "id": 38,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "q": "Q39 : What are Steps in a Jenkins Pipeline?",
+                    "a": "Steps are the individual operations executed inside a Pipeline stage. Examples include running shell commands, executing Maven builds, checking out source code, archiving artifacts, publishing reports, and deploying applications.",
+                    "type": "text",
+                    "id": 39,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "groovy",
+                    "simple_text": "Pipeline Step Example",
+                    "code": "\nsteps {\n    sh 'mvn clean test'\n}"
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "q": "Q40 : What is the basic structure of a Declarative Jenkins Pipeline?",
+                    "a": "A Declarative Pipeline typically consists of an agent, one or more stages, and steps within each stage. Optional sections such as environment, parameters, tools, post actions, and options can also be included to customize the Pipeline.",
+                    "type": "text",
+                    "id": 40,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "groovy",
+                    "simple_text": "Declarative Pipeline Structure",
+                    "code": "\npipeline {\n    agent any\n\n    stages {\n        stage('Build') {\n            steps {\n                echo 'Build Started'\n            }\n        }\n\n        stage('Test') {\n            steps {\n                echo 'Running Tests'\n            }\n        }\n    }\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "Jenkins Pipelines, Jenkinsfile, Declarative vs Scripted Pipelines, Stages, and Steps are among the most frequently asked Jenkins interview topics for DevOps Engineers, SDETs, and Automation Testers."
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "q": "Q41 : What is the agent directive in a Jenkins Pipeline?",
+                    "a": "The agent directive specifies where a Pipeline or a stage should execute. It tells Jenkins whether the Pipeline should run on any available agent, a specific labeled agent, inside a Docker container, or without allocating an agent.",
+                    "type": "text",
+                    "id": 41,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "groovy",
+                    "simple_text": "Agent Example",
+                    "code": "\npipeline {\n    agent any\n}"
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "q": "Q42 : What are the different types of agents in Jenkins?",
+                    "a": "Jenkins supports multiple agent configurations depending on where the Pipeline should execute.",
+                    "type": "text",
+                    "id": 42,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Agent Type" },
+                        { "label": "Description" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "any" },
+                                { "col": "Runs on any available agent." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "none" },
+                                { "col": "No global agent is allocated." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "label" },
+                                {
+                                    "col": "Runs on an agent with a specific label."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "docker" },
+                                { "col": "Runs inside a Docker container." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "node" },
+                                { "col": "Runs on a specific Jenkins node." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "q": "Q43 : What is the environment directive in Jenkins Pipeline?",
+                    "a": "The environment directive is used to define environment variables that can be accessed throughout the Pipeline or within a specific stage. It helps avoid hardcoding values such as URLs, API keys, usernames, and configuration settings.",
+                    "type": "text",
+                    "id": 43,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "groovy",
+                    "simple_text": "Environment Example",
+                    "code": "\npipeline {\n    agent any\n\n    environment {\n        APP_ENV = 'QA'\n    }\n}"
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "q": "Q44 : What is the tools directive in Jenkins Pipeline?",
+                    "a": "The tools directive automatically installs and configures build tools such as JDK, Maven, or Gradle before executing the Pipeline. The required tools must already be configured in Jenkins Global Tool Configuration.",
+                    "type": "text",
+                    "id": 44,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "groovy",
+                    "simple_text": "Tools Example",
+                    "code": "\ntools {\n    maven 'Maven-3.9'\n    jdk 'JDK-21'\n}"
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "q": "Q45 : What is the parameters directive in Jenkins Pipeline?",
+                    "a": "The parameters directive defines input parameters that users provide before starting a Pipeline. These parameters make the Pipeline flexible by allowing runtime selection of values such as environment, branch, browser, or application version.",
+                    "type": "text",
+                    "id": 45,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "groovy",
+                    "simple_text": "Parameters Example",
+                    "code": "\nparameters {\n    choice(name: 'ENV', choices: ['DEV', 'QA', 'PROD'])\n}"
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "q": "Q46 : What is the options directive in Jenkins Pipeline?",
+                    "a": "The options directive configures Pipeline execution behavior. It can be used to add timestamps to logs, prevent concurrent builds, set timeouts, discard old builds, or customize other Pipeline execution settings.",
+                    "type": "text",
+                    "id": 46,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : What is the post section in a Jenkins Pipeline?",
+                    "a": "The post section contains actions that execute after the Pipeline or a stage completes. These actions run regardless of the Pipeline result or only under specific conditions such as success, failure, unstable, aborted, or always.",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "q": "Q48 : What are the commonly used post conditions in Jenkins?",
+                    "a": "The post section supports several conditions that determine when post-build actions should execute.",
+                    "type": "text",
+                    "id": 48,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "always": "Runs regardless of the build result.",
+                        "success": "Runs only if the Pipeline succeeds.",
+                        "failure": "Runs only if the Pipeline fails.",
+                        "unstable": "Runs if the Pipeline is unstable.",
+                        "aborted": "Runs if the Pipeline is aborted.",
+                        "changed": "Runs if the build result changes from the previous build."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "q": "Q49 : What is the difference between stages and steps in Jenkins Pipeline?",
+                    "a": "Stages divide the Pipeline into logical phases such as Build, Test, and Deploy, while Steps are the individual commands executed within each stage. A stage may contain one or more steps.",
+                    "type": "text",
+                    "id": 49,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Stage" }, { "label": "Step" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Logical phase of the Pipeline." },
+                                { "col": "Individual executable command." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Can contain multiple steps." },
+                                { "col": "Executed inside a stage." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Improves Pipeline readability." },
+                                { "col": "Performs the actual work." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "q": "Q50 : What is a complete CI/CD Pipeline in Jenkins?",
+                    "a": "A complete Jenkins CI/CD Pipeline automates the software delivery lifecycle. It typically checks out source code from a version control system, builds the application, executes automated tests, performs code quality analysis, archives artifacts, deploys the application to target environments, and sends notifications based on the build result.",
+                    "type": "text",
+                    "id": 50,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Checkout source code",
+                        "Build application",
+                        "Run unit tests",
+                        "Execute automation tests",
+                        "Perform code quality analysis",
+                        "Archive build artifacts",
+                        "Deploy application",
+                        "Send notifications",
+                        "Generate reports",
+                        "Clean workspace"
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Questions about Jenkinsfile directives such as agent, environment, tools, parameters, options, post, stages, and steps are among the most frequently asked in Jenkins interviews for DevOps Engineers, Automation Testers, and SDETs."
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "q": "Q51 : What is SCM in Jenkins?",
+                    "a": "SCM (Source Code Management) is the mechanism through which Jenkins connects to a version control system such as Git, GitHub, GitLab, Bitbucket, or Subversion (SVN). Jenkins retrieves the latest source code from the repository before executing the build pipeline.",
+                    "type": "text",
+                    "id": 51,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "q": "Q52 : How do you integrate Git with Jenkins?",
+                    "a": "Git can be integrated with Jenkins by installing the Git plugin, configuring Git in Global Tool Configuration, creating a Jenkins job or Pipeline, specifying the repository URL, configuring credentials if required, and enabling build triggers such as GitHub Webhooks or Poll SCM.",
+                    "type": "text",
+                    "id": 52,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "q": "Q53 : What credentials can Jenkins store?",
+                    "a": "Jenkins provides a secure Credentials Store for managing authentication details used by jobs and pipelines.",
+                    "type": "text",
+                    "id": 53,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Username and Password": "Authenticate with external services.",
+                        "SSH Private Key": "Access Git repositories or remote servers.",
+                        "Secret Text": "Store API keys or tokens.",
+                        "Secret File": "Store certificates or configuration files.",
+                        "Certificate": "Authenticate using SSL certificates."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "q": "Q54 : Why should credentials never be hardcoded in a Jenkins Pipeline?",
+                    "a": "Hardcoding credentials exposes sensitive information in source control and build logs, creating security risks. Jenkins Credentials Store securely encrypts and manages secrets, allowing Pipelines to access them without revealing their values.",
+                    "type": "text",
+                    "id": 54,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "Que": [
+                {
+                    "q": "Q55 : What is the withCredentials step in Jenkins?",
+                    "a": "The withCredentials step temporarily injects stored Jenkins credentials into a Pipeline as environment variables. The credentials are available only within the scope of the block, reducing the risk of accidental exposure.",
+                    "type": "text",
+                    "id": 55,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "groovy",
+                    "simple_text": "withCredentials Example",
+                    "code": "\nwithCredentials([string(credentialsId: 'github-token', variable: 'TOKEN')]) {\n    sh 'echo Using secure token'\n}"
+                }
+            ]
+        },
+        {
+            "id": "56",
+            "Que": [
+                {
+                    "q": "Q56 : What is Blue Ocean in Jenkins?",
+                    "a": "Blue Ocean is a modern user interface for Jenkins that simplifies the creation, visualization, and management of Pipelines. It provides an intuitive graphical view of Pipeline stages, build progress, and failures, making CI/CD workflows easier to understand.",
+                    "type": "text",
+                    "id": 56,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "57",
+            "Que": [
+                {
+                    "q": "Q57 : What is the difference between Jenkins Classic UI and Blue Ocean?",
+                    "a": "The Classic UI provides complete administrative functionality, while Blue Ocean focuses on improving the Pipeline development and monitoring experience with a cleaner and more visual interface.",
+                    "type": "text",
+                    "id": 57,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Classic UI" },
+                        { "label": "Blue Ocean" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Traditional Jenkins interface." },
+                                { "col": "Modern visual interface." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Best for administration." },
+                                { "col": "Best for Pipeline visualization." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Feature-rich." },
+                                { "col": "Simplified user experience." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "58",
+            "Que": [
+                {
+                    "q": "Q58 : What is a Shared Library in Jenkins?",
+                    "a": "A Shared Library is a reusable collection of Groovy scripts, Pipeline functions, and utilities that can be shared across multiple Jenkins Pipelines. It helps eliminate duplicate code, standardize CI/CD processes, and simplify Pipeline maintenance.",
+                    "type": "text",
+                    "id": 58,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "59",
+            "Que": [
+                {
+                    "q": "Q59 : What are the advantages of using Jenkins Shared Libraries?",
+                    "a": "Shared Libraries improve code reusability, reduce duplication, enforce consistent CI/CD practices, simplify maintenance, and make Pipelines easier to read by moving complex logic into reusable functions.",
+                    "type": "text",
+                    "id": 59,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Code reusability",
+                        "Centralized maintenance",
+                        "Cleaner Jenkinsfiles",
+                        "Standardized pipelines",
+                        "Easy updates",
+                        "Reduced duplication"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "60",
+            "Que": [
+                {
+                    "q": "Q60 : What is the difference between a Jenkins Pipeline and a Shared Library?",
+                    "a": "A Jenkins Pipeline defines the workflow for a specific project, while a Shared Library contains reusable functions and logic that can be used by multiple Pipelines. Together, they promote modularity and maintainability in large CI/CD environments.",
+                    "type": "text",
+                    "id": 60,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Pipeline" },
+                        { "label": "Shared Library" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Defines project workflow." },
+                                { "col": "Contains reusable code." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Specific to a project." },
+                                { "col": "Shared across projects." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Executed by Jenkins." },
+                                { "col": "Invoked from Pipelines." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Git integration, Jenkins Credentials, Blue Ocean, and Shared Libraries are common interview topics for mid-level and senior DevOps Engineer, Automation Tester, and SDET roles."
+                }
+            ]
+        },
+        {
+            "id": "61",
+            "Que": [
+                {
+                    "q": "Q61 : What is a Jenkins Node?",
+                    "a": "A Jenkins Node is any machine capable of executing Jenkins build jobs. A node can be the Jenkins Controller itself or a separate Agent machine. Nodes enable Jenkins to distribute workloads across multiple systems, improving scalability and reducing build time.",
+                    "type": "text",
+                    "id": 61,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "62",
+            "Que": [
+                {
+                    "q": "Q62 : What is the difference between a Controller and an Agent in Jenkins?",
+                    "a": "The Controller manages Jenkins, schedules jobs, stores configurations, and coordinates builds, while Agents perform the actual build, test, and deployment tasks assigned by the Controller.",
+                    "type": "text",
+                    "id": 62,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Controller" }, { "label": "Agent" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Schedules and manages jobs." },
+                                { "col": "Executes assigned jobs." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Stores configuration and plugins." },
+                                { "col": "Provides execution environment." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Coordinates all agents." },
+                                { "col": "Reports results back to Controller." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "63",
+            "Que": [
+                {
+                    "q": "Q63 : Why do we use Jenkins Agents?",
+                    "a": "Jenkins Agents distribute build workloads across multiple machines, allowing multiple jobs to run simultaneously. They improve performance, reduce build times, support different operating systems, and isolate build environments for different projects.",
+                    "type": "text",
+                    "id": 63,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "64",
+            "Que": [
+                {
+                    "q": "Q64 : What are Labels in Jenkins?",
+                    "a": "Labels are identifiers assigned to Jenkins Agents. They allow Pipelines to target specific agents based on capabilities such as operating system, installed tools, hardware, or environment requirements.",
+                    "type": "text",
+                    "id": 64,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "groovy",
+                    "simple_text": "Agent Label Example",
+                    "code": "\npipeline {\n    agent {\n        label 'linux'\n    }\n}"
+                }
+            ]
+        },
+        {
+            "id": "65",
+            "Que": [
+                {
+                    "q": "Q65 : What is a Distributed Build in Jenkins?",
+                    "a": "A Distributed Build is a build execution strategy in which the Jenkins Controller delegates jobs to multiple Agents running on different machines. This enables faster execution, efficient resource utilization, and parallel processing of multiple builds.",
+                    "type": "text",
+                    "id": 65,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "66",
+            "Que": [
+                {
+                    "q": "Q66 : What are the advantages of Distributed Builds?",
+                    "a": "Distributed Builds increase scalability, improve performance, reduce build queues, support multiple operating systems, and allow resource-intensive jobs to run on dedicated hardware.",
+                    "type": "text",
+                    "id": 66,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Parallel execution",
+                        "Reduced build time",
+                        "Better resource utilization",
+                        "Cross-platform testing",
+                        "Scalability",
+                        "High availability"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "67",
+            "Que": [
+                {
+                    "q": "Q67 : How do you connect an Agent to a Jenkins Controller?",
+                    "a": "An Agent can be connected using SSH, Java Web Start (JNLP), inbound or outbound connections, Docker containers, or Kubernetes Pods. The Controller authenticates the Agent and assigns jobs based on labels and availability.",
+                    "type": "text",
+                    "id": 67,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "68",
+            "Que": [
+                {
+                    "q": "Q68 : What is the difference between Static and Dynamic Jenkins Agents?",
+                    "a": "Static Agents are permanently configured machines that remain available to Jenkins, whereas Dynamic Agents are created only when needed, typically using cloud platforms or Kubernetes, and are removed after the job completes.",
+                    "type": "text",
+                    "id": 68,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Static Agent" },
+                        { "label": "Dynamic Agent" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Always available." },
+                                { "col": "Created on demand." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Consumes resources continuously." },
+                                {
+                                    "col": "Uses resources only during execution."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Requires manual maintenance." },
+                                { "col": "Ideal for cloud environments." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "69",
+            "Que": [
+                {
+                    "q": "Q69 : What is the Executor in Jenkins?",
+                    "a": "An Executor is a worker thread on a Jenkins Controller or Agent that runs a build. Each executor can execute one build at a time. Configuring multiple executors allows a node to run multiple jobs concurrently, depending on available system resources.",
+                    "type": "text",
+                    "id": 69,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "70",
+            "Que": [
+                {
+                    "q": "Q70 : What is the relationship between Nodes, Agents, and Executors in Jenkins?",
+                    "a": "A Node is a machine registered with Jenkins. An Agent is the software running on that node that communicates with the Controller. Executors are worker threads on the node that execute build jobs. A single node can have multiple executors, allowing it to process multiple builds simultaneously.",
+                    "type": "text",
+                    "id": 70,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Questions about Controllers, Agents, Nodes, Executors, Labels, and Distributed Builds are among the most frequently asked Jenkins topics in interviews for DevOps Engineers and SDETs."
+                }
+            ]
+        },
+        {
+            "id": "71",
+            "Que": [
+                {
+                    "q": "Q71 : How does Jenkins integrate with Maven?",
+                    "a": "Jenkins integrates with Maven using the Maven Integration Plugin or by executing Maven commands in a Pipeline. Jenkins checks out the source code, resolves dependencies, compiles the project, runs tests, packages the application, and archives the generated artifacts.",
+                    "type": "text",
+                    "id": 71,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "72",
+            "Que": [
+                {
+                    "q": "Q72 : How do you run a Maven project in a Jenkins Pipeline?",
+                    "a": "A Maven project can be executed by configuring Maven in Jenkins Global Tool Configuration and then using the 'sh' (Linux/macOS) or 'bat' (Windows) step to run Maven commands such as 'mvn clean install' inside the Pipeline.",
+                    "type": "text",
+                    "id": 72,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "groovy",
+                    "simple_text": "Maven Pipeline Example",
+                    "code": "\npipeline {\n    agent any\n\n    stages {\n        stage('Build') {\n            steps {\n                sh 'mvn clean install'\n            }\n        }\n    }\n}"
+                }
+            ]
+        },
+        {
+            "id": "73",
+            "Que": [
+                {
+                    "q": "Q73 : How does Jenkins integrate with Gradle?",
+                    "a": "Jenkins integrates with Gradle by installing Gradle in Global Tool Configuration or by using the project's Gradle Wrapper. Pipelines execute Gradle commands such as './gradlew build' or 'gradle test' to build and test applications.",
+                    "type": "text",
+                    "id": 73,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "74",
+            "Que": [
+                {
+                    "q": "Q74 : How does Jenkins integrate with Selenium?",
+                    "a": "Jenkins automates Selenium test execution by triggering Selenium test suites after every build. The Pipeline typically checks out the code, builds the project, executes Selenium tests using Maven or Gradle, generates reports, archives screenshots, and publishes the results.",
+                    "type": "text",
+                    "id": 74,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "75",
+            "Que": [
+                {
+                    "q": "Q75 : How does Jenkins integrate with TestNG?",
+                    "a": "Jenkins runs TestNG test suites as part of the build process. After execution, Jenkins can publish TestNG reports, archive screenshots, display test statistics, and mark builds as successful or failed based on the test results.",
+                    "type": "text",
+                    "id": 75,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "76",
+            "Que": [
+                {
+                    "q": "Q76 : How does Jenkins integrate with Docker?",
+                    "a": "Jenkins can build Docker images, run applications inside containers, execute tests in isolated environments, push images to container registries, and deploy containerized applications. Docker ensures consistent build and execution environments across different machines.",
+                    "type": "text",
+                    "id": 76,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "77",
+            "Que": [
+                {
+                    "q": "Q77 : What are the advantages of using Docker with Jenkins?",
+                    "a": "Running Jenkins Pipelines inside Docker containers provides consistent environments, eliminates dependency conflicts, simplifies environment setup, improves isolation, and makes CI/CD pipelines more portable and reproducible.",
+                    "type": "text",
+                    "id": 77,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Environment consistency",
+                        "Isolation",
+                        "Easy dependency management",
+                        "Portable builds",
+                        "Faster setup",
+                        "Improved scalability"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "78",
+            "Que": [
+                {
+                    "q": "Q78 : How does Jenkins integrate with Kubernetes?",
+                    "a": "Jenkins integrates with Kubernetes by dynamically creating Kubernetes Pods as build agents. Each Pipeline runs inside its own temporary Pod, which is automatically destroyed after the build completes. This improves scalability and optimizes resource utilization.",
+                    "type": "text",
+                    "id": 78,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "79",
+            "Que": [
+                {
+                    "q": "Q79 : How does Jenkins integrate with SonarQube?",
+                    "a": "Jenkins integrates with SonarQube to perform automated static code analysis during the CI/CD process. After the application is built, Jenkins triggers a SonarQube scan to detect code smells, bugs, vulnerabilities, duplicated code, and quality issues before deployment.",
+                    "type": "text",
+                    "id": 79,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "80",
+            "Que": [
+                {
+                    "q": "Q80 : What is a typical CI/CD workflow using Jenkins?",
+                    "a": "A typical Jenkins CI/CD workflow starts when a developer pushes code to a Git repository. A webhook triggers Jenkins, which checks out the code, builds the application, runs unit and automation tests, performs code quality analysis, packages the application, archives artifacts, deploys to the target environment, and sends notifications about the build status.",
+                    "type": "text",
+                    "id": 80,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Developer pushes code",
+                        "Webhook triggers Jenkins",
+                        "Checkout source code",
+                        "Build application",
+                        "Run unit tests",
+                        "Execute Selenium/TestNG tests",
+                        "Run SonarQube analysis",
+                        "Archive artifacts",
+                        "Deploy application",
+                        "Send notifications"
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Integration of Jenkins with Git, Maven, Gradle, Selenium, TestNG, Docker, Kubernetes, and SonarQube is one of the most commonly discussed topics in DevOps, SDET, and Automation Testing interviews."
+                }
+            ]
+        },
+        {
+            "id": "81",
+            "Que": [
+                {
+                    "q": "Q81 : How does Jenkins help in Continuous Integration (CI)?",
+                    "a": "Jenkins automatically builds and tests code whenever developers commit changes to the source code repository. This enables teams to detect integration issues early, reduce manual effort, and ensure that the application remains in a deployable state.",
+                    "type": "text",
+                    "id": 81,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "82",
+            "Que": [
+                {
+                    "q": "Q82 : How does Jenkins improve software quality?",
+                    "a": "Jenkins improves software quality by automating builds, running unit and integration tests, performing static code analysis, enforcing quality gates, generating reports, and identifying issues early in the development lifecycle.",
+                    "type": "text",
+                    "id": 82,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "83",
+            "Que": [
+                {
+                    "q": "Q83 : How do you secure Jenkins?",
+                    "a": "Jenkins can be secured by enabling authentication, using Role-Based Access Control (RBAC), storing secrets in the Credentials Store, enabling HTTPS, regularly updating plugins, restricting agent access, configuring backup strategies, and integrating with enterprise authentication systems such as LDAP or Active Directory.",
+                    "type": "text",
+                    "id": 83,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "84",
+            "Que": [
+                {
+                    "q": "Q84 : What is Role-Based Access Control (RBAC) in Jenkins?",
+                    "a": "Role-Based Access Control (RBAC) is a security mechanism that assigns permissions based on user roles rather than individual users. For example, administrators may have full access, developers can configure jobs, and testers can only view build results.",
+                    "type": "text",
+                    "id": 84,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "85",
+            "Que": [
+                {
+                    "q": "Q85 : Why should Jenkins plugins be updated regularly?",
+                    "a": "Updating plugins ensures compatibility with newer Jenkins versions, fixes security vulnerabilities, improves stability, adds new features, and resolves known bugs. Outdated plugins can introduce security risks and pipeline failures.",
+                    "type": "text",
+                    "id": 85,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "86",
+            "Que": [
+                {
+                    "q": "Q86 : How do you back up Jenkins?",
+                    "a": "Jenkins can be backed up by saving the JENKINS_HOME directory, which contains job configurations, plugins, credentials, build history, and user settings. Regular automated backups help recover Jenkins in case of hardware failures or accidental data loss.",
+                    "type": "text",
+                    "id": 86,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "87",
+            "Que": [
+                {
+                    "q": "Q87 : What is JENKINS_HOME?",
+                    "a": "JENKINS_HOME is the main directory where Jenkins stores all of its data, including job configurations, plugins, credentials, logs, workspaces, build history, and system configuration. It is the most important directory for backup and disaster recovery.",
+                    "type": "text",
+                    "id": 87,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "88",
+            "Que": [
+                {
+                    "q": "Q88 : What are some Jenkins best practices?",
+                    "a": "Following best practices improves security, maintainability, scalability, and build performance in Jenkins environments.",
+                    "type": "text",
+                    "id": 88,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Use Pipelines instead of Freestyle jobs.",
+                        "Store Pipelines in Git using Jenkinsfile.",
+                        "Use Shared Libraries for reusable code.",
+                        "Secure credentials using Jenkins Credentials Store.",
+                        "Keep plugins updated.",
+                        "Use agents for distributed builds.",
+                        "Clean workspaces regularly.",
+                        "Implement automated backups.",
+                        "Monitor Jenkins performance.",
+                        "Use Webhooks instead of Poll SCM."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "89",
+            "Que": [
+                {
+                    "q": "Q89 : What are common reasons for Jenkins build failures?",
+                    "a": "Build failures can occur due to compilation errors, failed tests, incorrect credentials, missing dependencies, network issues, unavailable agents, insufficient disk space, incorrect environment variables, plugin incompatibility, or deployment failures.",
+                    "type": "text",
+                    "id": 89,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "90",
+            "Que": [
+                {
+                    "q": "Q90 : How do you troubleshoot a failed Jenkins build?",
+                    "a": "Troubleshooting typically involves checking the Console Output for error messages, verifying source code changes, validating credentials, confirming tool configurations, reviewing environment variables, checking plugin compatibility, examining agent availability, and analyzing logs to identify the root cause.",
+                    "type": "text",
+                    "id": 90,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Security, backups, troubleshooting, and Jenkins best practices are frequently discussed in interviews for experienced DevOps Engineers, Automation Testers, and SDETs."
+                }
+            ]
+        },
+        {
+            "id": "91",
+            "Que": [
+                {
+                    "q": "Q91 : What is a Jenkins Shared Workspace?",
+                    "a": "A Shared Workspace is a workspace that can be accessed by multiple jobs or agents to exchange files or artifacts during the CI/CD process. Although useful in certain scenarios, artifact repositories such as Nexus or Artifactory are generally preferred for sharing build outputs between pipelines.",
+                    "type": "text",
+                    "id": 91,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "92",
+            "Que": [
+                {
+                    "q": "Q92 : What is the difference between archiveArtifacts and stash/unstash in Jenkins?",
+                    "a": "Both are used to preserve files during a Pipeline, but they serve different purposes.",
+                    "type": "text",
+                    "id": 92,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "archiveArtifacts" },
+                        { "label": "stash / unstash" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Stores files after the build." },
+                                {
+                                    "col": "Transfers files between Pipeline stages."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Artifacts remain available after completion."
+                                },
+                                {
+                                    "col": "Temporary storage during Pipeline execution."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Used for downloads and deployments."
+                                },
+                                {
+                                    "col": "Used for stage-to-stage file sharing."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "93",
+            "Que": [
+                {
+                    "q": "Q93 : What is the difference between Jenkins and GitHub Actions?",
+                    "a": "Both Jenkins and GitHub Actions automate CI/CD workflows, but Jenkins is a standalone automation server, whereas GitHub Actions is a cloud-based CI/CD service integrated directly with GitHub repositories.",
+                    "type": "text",
+                    "id": 93,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Jenkins" },
+                        { "label": "GitHub Actions" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Self-hosted automation server." },
+                                { "col": "Built into GitHub." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Large plugin ecosystem." },
+                                { "col": "Marketplace actions." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Requires infrastructure management."
+                                },
+                                { "col": "Minimal infrastructure management." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Works with multiple SCM systems." },
+                                { "col": "Optimized for GitHub repositories." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "94",
+            "Que": [
+                {
+                    "q": "Q94 : What is the difference between Jenkins and Bamboo?",
+                    "a": "Jenkins and Bamboo are both CI/CD tools. Jenkins is open-source and highly extensible through plugins, while Bamboo is a commercial CI/CD product from Atlassian with built-in integration for Jira and Bitbucket.",
+                    "type": "text",
+                    "id": 94,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "95",
+            "Que": [
+                {
+                    "q": "Q95 : What is the difference between Jenkins and Azure DevOps Pipelines?",
+                    "a": "Jenkins is an open-source automation server that supports many SCM and deployment tools. Azure DevOps Pipelines is a cloud-native CI/CD service tightly integrated with Microsoft's Azure ecosystem while also supporting multi-cloud deployments.",
+                    "type": "text",
+                    "id": 95,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "96",
+            "Que": [
+                {
+                    "q": "Q96 : What is the difference between Jenkins and GitLab CI/CD?",
+                    "a": "Jenkins is a standalone CI/CD platform that integrates with many version control systems, whereas GitLab CI/CD is built into GitLab and uses a '.gitlab-ci.yml' file to define pipelines.",
+                    "type": "text",
+                    "id": 96,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "97",
+            "Que": [
+                {
+                    "q": "Q97 : What monitoring tools can be integrated with Jenkins?",
+                    "a": "Jenkins can integrate with monitoring and observability tools to track build performance, infrastructure health, and application metrics.",
+                    "type": "text",
+                    "id": 97,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Prometheus",
+                        "Grafana",
+                        "ELK Stack",
+                        "Splunk",
+                        "Datadog",
+                        "New Relic",
+                        "CloudWatch"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "98",
+            "Que": [
+                {
+                    "q": "Q98 : What notifications can Jenkins send after a build?",
+                    "a": "Jenkins can automatically notify team members about build results through multiple communication channels using plugins.",
+                    "type": "text",
+                    "id": 98,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Email",
+                        "Slack",
+                        "Microsoft Teams",
+                        "Discord",
+                        "Telegram",
+                        "Webhook",
+                        "SMS (via integrations)"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "99",
+            "Que": [
+                {
+                    "q": "Q99 : What is the Build Pipeline View plugin in Jenkins?",
+                    "a": "The Build Pipeline View plugin provides a visual representation of connected Jenkins jobs and their execution flow. It helps teams monitor build progress, identify failed stages, and understand dependencies between jobs.",
+                    "type": "text",
+                    "id": 99,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "100",
+            "Que": [
+                {
+                    "q": "Q100 : As an Automation Tester or DevOps Engineer, how would you explain your Jenkins workflow in an interview?",
+                    "a": "In my projects, Jenkins is connected to the Git repository using Webhooks. Whenever code is pushed, Jenkins automatically triggers the Pipeline. The Pipeline checks out the latest code, builds the project using Maven or Gradle, executes unit tests and Selenium/TestNG automation suites, performs code quality analysis with SonarQube, archives artifacts, optionally builds a Docker image, deploys the application to the target environment, and finally sends build notifications through Slack or email. This automated workflow reduces manual effort, ensures code quality, and enables faster and more reliable software delivery.",
+                    "type": "text",
+                    "id": 100,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "This is one of the most important real-world interview questions. Instead of memorizing definitions, explain how Jenkins fits into an end-to-end CI/CD pipeline with Git, Maven/Gradle, Selenium, TestNG, SonarQube, Docker, Kubernetes, and deployment. Interviewers frequently ask candidates to describe this workflow."
+                }
+            ]
+        },
+        {
+            "id": "101",
+            "Que": [
+                {
+                    "q": "Q101 : What are the most commonly used Jenkins plugins?",
+                    "a": "Jenkins plugins extend the functionality of Jenkins and enable integration with various development, testing, deployment, and monitoring tools.",
+                    "type": "text",
+                    "id": 101,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Git Plugin": "Integrates Jenkins with Git repositories.",
+                        "Pipeline Plugin": "Enables Pipeline as Code using Jenkinsfile.",
+                        "Blue Ocean": "Provides a modern Pipeline UI.",
+                        "Maven Integration Plugin": "Supports Maven builds.",
+                        "Docker Plugin": "Integrates Jenkins with Docker.",
+                        "Kubernetes Plugin": "Creates dynamic Kubernetes agents.",
+                        "SonarQube Scanner Plugin": "Runs static code analysis.",
+                        "JUnit Plugin": "Publishes unit test reports.",
+                        "HTML Publisher Plugin": "Publishes HTML reports.",
+                        "Email Extension Plugin": "Sends customized email notifications."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "102",
+            "Que": [
+                {
+                    "q": "Q102 : What is the difference between Continuous Integration, Continuous Delivery, and Continuous Deployment?",
+                    "a": "These three practices automate different stages of the software delivery lifecycle.",
+                    "type": "text",
+                    "id": 102,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Continuous Integration (CI)" },
+                        { "label": "Continuous Delivery (CD)" },
+                        { "label": "Continuous Deployment (CD)" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Automatically builds and tests code."
+                                },
+                                {
+                                    "col": "Automatically prepares software for release."
+                                },
+                                {
+                                    "col": "Automatically deploys software to production."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Focuses on code integration." },
+                                {
+                                    "col": "Requires manual approval before production."
+                                },
+                                { "col": "No manual approval required." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Detects integration issues early." },
+                                { "col": "Ensures release readiness." },
+                                { "col": "Enables fully automated releases." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "103",
+            "Que": [
+                {
+                    "q": "Q103 : What are some Jenkins interview tips for experienced candidates?",
+                    "a": "Experienced candidates are expected to explain not only Jenkins concepts but also how Jenkins is used in real-world CI/CD pipelines. Interviewers often focus on practical implementation rather than definitions.",
+                    "type": "text",
+                    "id": 103,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Be able to explain an end-to-end CI/CD workflow.",
+                        "Know how Jenkins integrates with Git, Maven/Gradle, Docker, Kubernetes, and SonarQube.",
+                        "Understand Jenkinsfile syntax and Pipeline stages.",
+                        "Know how credentials are managed securely.",
+                        "Understand Webhooks, Agents, Shared Libraries, and Distributed Builds.",
+                        "Be comfortable troubleshooting failed builds using Console Output.",
+                        "Explain real projects where Jenkins was used.",
+                        "Understand the difference between CI, Continuous Delivery, and Continuous Deployment."
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "If you can confidently explain an end-to-end Jenkins Pipeline along with Git, Maven, Selenium/TestNG, SonarQube, Docker, Kubernetes, and deployment, you'll be well prepared for most SDET, Automation Testing, and DevOps interviews."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,2307 @@
+{
+    "c-sharp-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is C#?",
+                    "a": "C# (pronounced C-Sharp) is a modern, object-oriented, type-safe programming language developed by Microsoft as part of the .NET platform. It is designed for building a wide range of applications including desktop applications, web applications, mobile apps, cloud services, games using Unity, APIs, and enterprise software. C# combines the simplicity of high-level languages with the power and performance needed for large-scale applications, making it one of the most popular programming languages today.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Developer": "Microsoft",
+                        "Platform": ".NET",
+                        "Programming Style": "Object-Oriented and Component-Oriented",
+                        "Applications": "Desktop, Web, Mobile, Cloud, APIs, Games, Enterprise Software",
+                        "File Extension": ".cs"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Basic C# program",
+                    "code": "\nusing System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.WriteLine(\"Hello, World!\");\n    }\n}"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : What are the features of C#?",
+                    "a": "C# provides numerous features that make application development easier, faster, and more secure. It supports object-oriented programming, automatic memory management through garbage collection, type safety, exception handling, asynchronous programming, LINQ, delegates, events, generics, and cross-platform development through .NET. These features help developers write clean, maintainable, scalable, and high-performance applications for different platforms.",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Object-Oriented": "Supports encapsulation, inheritance, polymorphism, and abstraction.",
+                        "Type Safe": "Prevents invalid type conversions at compile time.",
+                        "Garbage Collection": "Automatically manages memory.",
+                        "Cross Platform": "Runs on Windows, Linux, and macOS using .NET.",
+                        "Exception Handling": "Provides structured error handling using try-catch-finally.",
+                        "LINQ": "Allows querying collections using SQL-like syntax.",
+                        "Asynchronous Programming": "Supports async and await for non-blocking operations."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : What are the advantages of C#?",
+                    "a": "C# offers several advantages including high productivity, excellent performance, strong security, and a rich standard library. It simplifies application development through automatic memory management, powerful debugging tools, and seamless integration with the .NET ecosystem. C# is widely used in enterprise software, cloud computing, game development using Unity, web development with ASP.NET Core, and desktop application development.",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Easy to Learn": "Simple syntax similar to Java and C++.",
+                        "Secure": "Strong type checking and managed execution.",
+                        "Productive": "Rich libraries and development tools.",
+                        "Scalable": "Suitable for both small and enterprise applications.",
+                        "Cross Platform": "Develop once and run on multiple operating systems.",
+                        "Large Community": "Extensive documentation and community support."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : What is .NET?",
+                    "a": ".NET is a free, open-source development platform created by Microsoft for building various types of applications such as web applications, desktop software, cloud services, mobile apps, games, and APIs. It provides a runtime environment called the Common Language Runtime (CLR), a rich Base Class Library (BCL), development tools, and multiple programming languages including C#, F#, and Visual Basic. .NET simplifies application development while providing excellent performance, security, and cross-platform support.",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Runtime": "Common Language Runtime (CLR).",
+                        "Languages": "C#, F#, Visual Basic.",
+                        "Libraries": "Provides a large Base Class Library (BCL).",
+                        "Cross Platform": "Supports Windows, Linux, and macOS.",
+                        "Application Types": "Web, Desktop, Mobile, Cloud, APIs, and Games."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : What is the difference between .NET Framework, .NET Core, and .NET?",
+                    "a": "Microsoft has released multiple versions of the .NET platform over time. .NET Framework was the original Windows-only implementation. .NET Core was introduced as a lightweight, open-source, cross-platform version. Starting from .NET 5, Microsoft unified the platform into a single framework simply called .NET, which continues with .NET 6, .NET 7, .NET 8, and newer versions. Modern applications are generally built using the unified .NET platform.",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": ".NET Framework"
+                        },
+                        {
+                            "label": ".NET Core"
+                        },
+                        {
+                            "label": ".NET (5+)"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Windows only"
+                                },
+                                {
+                                    "col": "Cross-platform"
+                                },
+                                {
+                                    "col": "Cross-platform"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Closed source initially"
+                                },
+                                {
+                                    "col": "Open source"
+                                },
+                                {
+                                    "col": "Open source"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Legacy applications"
+                                },
+                                {
+                                    "col": "Modern applications"
+                                },
+                                {
+                                    "col": "Unified modern platform"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "No longer actively developed"
+                                },
+                                {
+                                    "col": "Merged into .NET"
+                                },
+                                {
+                                    "col": "Current Microsoft platform"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "For new projects, Microsoft recommends using the latest version of .NET (such as .NET 8 or later) instead of .NET Framework."
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : What is CLR (Common Language Runtime)?",
+                    "a": "The Common Language Runtime (CLR) is the execution engine of the .NET platform. It is responsible for running C# programs and managing important services such as memory management, garbage collection, exception handling, type safety, security, and Just-In-Time (JIT) compilation. Instead of executing C# code directly, the CLR first converts Intermediate Language (IL) code into native machine code before execution, ensuring better performance and platform independence.",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Memory Management": "Allocates and releases memory automatically.",
+                        "Garbage Collection": "Removes unused objects.",
+                        "Exception Handling": "Manages runtime errors.",
+                        "JIT Compilation": "Converts IL code into machine code.",
+                        "Security": "Provides runtime security checks.",
+                        "Type Safety": "Prevents invalid operations during execution."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : What is CTS (Common Type System)?",
+                    "a": "The Common Type System (CTS) is a part of the .NET framework that defines how data types are declared, used, and managed across all .NET languages. It ensures that objects written in different .NET languages can interact with each other seamlessly. CTS defines value types, reference types, type safety rules, and memory behavior, enabling language interoperability throughout the .NET ecosystem.",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Language Interoperability": "Allows different .NET languages to work together.",
+                        "Type Safety": "Ensures consistent handling of data types.",
+                        "Value Types": "Includes int, bool, char, structs, etc.",
+                        "Reference Types": "Includes classes, arrays, interfaces, delegates."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : What is CLS (Common Language Specification)?",
+                    "a": "The Common Language Specification (CLS) is a set of rules that every .NET language should follow to ensure compatibility with other .NET languages. While CTS defines all available data types, CLS defines a subset of those features that all compliant languages must support. Following CLS guidelines allows libraries written in one .NET language to be easily consumed by applications written in another.",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "CTS"
+                        },
+                        {
+                            "label": "CLS"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Defines all .NET data types."
+                                },
+                                {
+                                    "col": "Defines a subset of CTS rules."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Used by the CLR."
+                                },
+                                {
+                                    "col": "Used for language interoperability."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Includes every supported feature."
+                                },
+                                {
+                                    "col": "Includes only common language features."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : What is MSIL (Microsoft Intermediate Language)?",
+                    "a": "MSIL, also known as Intermediate Language (IL), is a CPU-independent instruction set generated when C# source code is compiled. Instead of directly producing machine code, the C# compiler converts the source code into IL, which is stored inside assemblies. During program execution, the CLR's Just-In-Time (JIT) compiler converts IL into native machine code suitable for the target operating system and processor.",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "C# source code is compiled into IL.",
+                        "2": "IL is stored inside EXE or DLL assemblies.",
+                        "3": "CLR loads the assembly.",
+                        "4": "JIT compiler converts IL into native machine code.",
+                        "5": "Machine code is executed by the CPU."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : What is JIT (Just-In-Time) Compiler?",
+                    "a": "The Just-In-Time (JIT) compiler is a component of the CLR that converts Intermediate Language (IL) code into native machine code at runtime. This allows the same compiled application to run on different platforms while still achieving high performance. Instead of compiling the entire application at once, JIT compiles methods only when they are called, improving startup performance and optimizing execution for the target machine.",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Input": "Intermediate Language (IL).",
+                        "Output": "Native machine code.",
+                        "Execution": "Compiles methods only when needed.",
+                        "Performance": "Optimizes code for the current processor.",
+                        "Runtime": "Works as part of the CLR."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : What is Managed Code?",
+                    "a": "Managed code is code that is executed under the supervision of the Common Language Runtime (CLR). The CLR provides services such as automatic memory management, garbage collection, exception handling, type safety, security verification, and debugging support. C# programs compiled for the .NET platform are managed code because they are converted into Intermediate Language (IL) and executed by the CLR instead of running directly on the operating system. Managed code is generally more secure, reliable, and easier to maintain than unmanaged code.",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Runtime": "Executed by the CLR.",
+                        "Memory Management": "Automatic garbage collection.",
+                        "Security": "Runtime verification and type safety.",
+                        "Error Handling": "Supports structured exception handling.",
+                        "Example": "Most C# applications are managed code."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : What is Unmanaged Code?",
+                    "a": "Unmanaged code is code that executes directly on the operating system without being managed by the Common Language Runtime (CLR). It is responsible for its own memory allocation and deallocation, making it faster in some scenarios but also more prone to memory leaks and security issues. Languages such as C and C++ typically produce unmanaged code. In C#, unmanaged code can be accessed using interoperability services like P/Invoke or COM Interop when interacting with native libraries.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Managed Code"
+                        },
+                        {
+                            "label": "Unmanaged Code"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Runs under CLR."
+                                },
+                                {
+                                    "col": "Runs directly on the OS."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Automatic memory management."
+                                },
+                                {
+                                    "col": "Manual memory management."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Garbage collection available."
+                                },
+                                {
+                                    "col": "No garbage collection."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Safer and more secure."
+                                },
+                                {
+                                    "col": "Higher risk of memory leaks."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Example: C#"
+                                },
+                                {
+                                    "col": "Example: C/C++"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : What is a Namespace in C#?",
+                    "a": "A namespace in C# is a logical container used to organize related classes, interfaces, structures, enumerations, and other types. It helps prevent naming conflicts between classes with the same name and improves code organization in large applications. Developers can create custom namespaces as well as use built-in namespaces provided by .NET, such as System and System.Collections.Generic. Namespaces make projects more modular, readable, and maintainable.",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Creating and using a namespace",
+                    "code": "\nusing System;\n\nnamespace MyApplication\n{\n    class Program\n    {\n        static void Main()\n        {\n            Console.WriteLine(\"Hello from C#\");\n        }\n    }\n}"
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : What is an Assembly in C#?",
+                    "a": "An assembly is the compiled output of a .NET application and serves as the fundamental unit of deployment, versioning, and security. It contains Intermediate Language (IL) code, metadata, manifest information, and embedded resources. Assemblies can be executable files (.exe) or dynamic link libraries (.dll). The CLR loads assemblies during execution and uses the metadata to understand the types and members contained within them.",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Contains": "IL code, metadata, manifest, and resources.",
+                        "Types": "Executable (.exe) and Library (.dll).",
+                        "Purpose": "Deployment, versioning, and security.",
+                        "Loaded By": "Common Language Runtime (CLR).",
+                        "Compilation Output": "Generated after building a C# project."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : What is the difference between EXE and DLL?",
+                    "a": "Both EXE and DLL are .NET assemblies, but they serve different purposes. An EXE (Executable) is a standalone application that can be run directly by the operating system. A DLL (Dynamic Link Library) contains reusable code that cannot execute independently and must be referenced by another application. DLLs promote code reuse, modularity, and easier maintenance by allowing multiple applications to share common functionality.",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "EXE"
+                        },
+                        {
+                            "label": "DLL"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Executable application."
+                                },
+                                {
+                                    "col": "Reusable library."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Can run independently."
+                                },
+                                {
+                                    "col": "Cannot run independently."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Contains an entry point (Main method)."
+                                },
+                                {
+                                    "col": "No entry point."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Used to launch applications."
+                                },
+                                {
+                                    "col": "Used to share functionality."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Produces .exe file."
+                                },
+                                {
+                                    "col": "Produces .dll file."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : What is Object-Oriented Programming (OOP)?",
+                    "a": "Object-Oriented Programming (OOP) is a programming paradigm that organizes software around objects instead of functions or procedures. An object contains both data (properties) and behavior (methods). OOP helps developers create modular, reusable, and maintainable code by using concepts such as encapsulation, inheritance, polymorphism, and abstraction. C# is a fully object-oriented language, making OOP one of its core programming principles.",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Encapsulation": "Combines data and methods into one unit.",
+                        "Inheritance": "Allows one class to inherit from another.",
+                        "Polymorphism": "Supports multiple implementations of the same method.",
+                        "Abstraction": "Hides implementation details from users.",
+                        "Benefits": "Improves code reuse, scalability, and maintainability."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : What are the four pillars of OOP?",
+                    "a": "The four pillars of Object-Oriented Programming are Encapsulation, Inheritance, Polymorphism, and Abstraction. These concepts form the foundation of object-oriented software design. They help developers create secure, reusable, maintainable, and scalable applications by organizing data and behavior into logical units called objects. C# fully supports all four OOP principles through its language features and runtime environment.",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Pillar"
+                        },
+                        {
+                            "label": "Purpose"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Encapsulation"
+                                },
+                                {
+                                    "col": "Protects data by controlling access."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Inheritance"
+                                },
+                                {
+                                    "col": "Reuses existing class functionality."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Polymorphism"
+                                },
+                                {
+                                    "col": "Allows one interface with multiple implementations."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Abstraction"
+                                },
+                                {
+                                    "col": "Hides unnecessary implementation details."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : What is a Class in C#?",
+                    "a": "A class is a blueprint or template used to create objects in C#. It defines the properties, methods, constructors, and behaviors that its objects will have. A class itself does not occupy memory until an object is created from it. Classes promote code organization, encapsulation, and reusability, making them one of the fundamental building blocks of object-oriented programming.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Defining a simple class",
+                    "code": "\nclass Student\n{\n    public string Name;\n\n    public void Display()\n    {\n        Console.WriteLine(Name);\n    }\n}"
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : What is an Object in C#?",
+                    "a": "An object is a runtime instance of a class. When a class is instantiated using the new keyword, memory is allocated and an object is created. Objects have their own state, represented by fields or properties, and behavior, represented by methods. Multiple objects can be created from the same class, each maintaining its own independent data while sharing the same structure and functionality.",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Creating an object",
+                    "code": "\nStudent student = new Student();\nstudent.Name = \"John\";\nstudent.Display();"
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : What is a Constructor in C#?",
+                    "a": "A constructor is a special method in C# that is automatically executed when an object is created. Its primary purpose is to initialize object data and prepare the object for use. A constructor has the same name as its class and does not have a return type. C# supports multiple constructors through constructor overloading, allowing objects to be initialized in different ways.",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Constructor example",
+                    "code": "\nclass Student\n{\n    public Student()\n    {\n        Console.WriteLine(\"Object Created\");\n    }\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "A constructor is called automatically whenever an object is created using the 'new' keyword."
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : What are the types of constructors in C#?",
+                    "a": "C# supports multiple types of constructors to initialize objects in different ways. The most commonly used constructors are the default constructor, parameterized constructor, copy constructor (user-defined), static constructor, and private constructor. Constructors improve flexibility by allowing objects to be initialized with different sets of values while ensuring that every object starts in a valid state. A class can also have multiple constructors through constructor overloading.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Default Constructor": "A constructor with no parameters.",
+                        "Parameterized Constructor": "Accepts parameters to initialize object data.",
+                        "Copy Constructor": "Initializes an object using another object of the same class.",
+                        "Static Constructor": "Initializes static members of a class and executes only once.",
+                        "Private Constructor": "Prevents object creation from outside the class."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Parameterized constructor example",
+                    "code": "\nclass Student\n{\n    public string Name;\n\n    public Student(string name)\n    {\n        Name = name;\n    }\n}"
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : What is a Destructor in C#?",
+                    "a": "A destructor is a special method that is automatically called by the Garbage Collector before an object is removed from memory. It is mainly used to release unmanaged resources such as file handles, database connections, or unmanaged memory. Unlike constructors, destructors cannot be overloaded or called explicitly. Since .NET provides automatic garbage collection, destructors are rarely required in modern C# applications.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Destructor example",
+                    "code": "\nclass Student\n{\n    ~Student()\n    {\n        Console.WriteLine(\"Destructor called\");\n    }\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "Destructors execute automatically when the Garbage Collector destroys the object. Developers cannot predict exactly when they will run."
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : What is Method Overloading in C#?",
+                    "a": "Method overloading is a feature of compile-time polymorphism where multiple methods have the same name but different parameter lists. The methods may differ in the number, type, or order of parameters. The compiler determines which overloaded method to call based on the arguments provided during the method call. Method overloading improves code readability and allows developers to reuse the same method name for related operations.",
+                    "type": "text",
+                    "id": 23,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Method overloading example",
+                    "code": "\nclass Calculator\n{\n    public int Add(int a, int b)\n    {\n        return a + b;\n    }\n\n    public int Add(int a, int b, int c)\n    {\n        return a + b + c;\n    }\n}"
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "q": "Q24 : What is Method Overriding in C#?",
+                    "a": "Method overriding is a runtime polymorphism feature that allows a derived class to provide its own implementation of a method already defined in the base class. The base class method must be declared using the virtual keyword, and the derived class uses the override keyword. Method overriding enables specialized behavior while maintaining a common interface through inheritance.",
+                    "type": "text",
+                    "id": 24,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Method overriding example",
+                    "code": "\nclass Animal\n{\n    public virtual void Sound()\n    {\n        Console.WriteLine(\"Animal Sound\");\n    }\n}\n\nclass Dog : Animal\n{\n    public override void Sound()\n    {\n        Console.WriteLine(\"Bark\");\n    }\n}"
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "q": "Q25 : What is Abstraction in C#?",
+                    "a": "Abstraction is an object-oriented programming principle that hides implementation details while exposing only the essential functionality to the user. It helps reduce complexity and improves maintainability by allowing developers to focus on what an object does instead of how it does it. In C#, abstraction can be achieved using abstract classes and interfaces, making applications more modular and easier to extend.",
+                    "type": "text",
+                    "id": 25,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Purpose": "Hide implementation details.",
+                        "Benefit": "Reduces code complexity.",
+                        "Implementation": "Using abstract classes and interfaces.",
+                        "Example": "A user drives a car without knowing how the engine works."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "q": "Q26 : What is Encapsulation in C#?",
+                    "a": "Encapsulation is the process of combining data and methods into a single unit while restricting direct access to the object's internal data. It protects object integrity by allowing controlled access through properties or methods. In C#, encapsulation is implemented using access modifiers such as private, protected, and public along with properties that provide getter and setter methods.",
+                    "type": "text",
+                    "id": 26,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Encapsulation using properties",
+                    "code": "\nclass Student\n{\n    private string name;\n\n    public string Name\n    {\n        get { return name; }\n        set { name = value; }\n    }\n}"
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "q": "Q27 : What is Inheritance in C#?",
+                    "a": "Inheritance is an object-oriented feature that allows one class to inherit properties and methods from another class. The existing class is known as the base class, while the new class is called the derived class. Inheritance promotes code reuse, reduces duplication, and allows developers to extend existing functionality without modifying the original class.",
+                    "type": "text",
+                    "id": 27,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Inheritance example",
+                    "code": "\nclass Animal\n{\n    public void Eat()\n    {\n        Console.WriteLine(\"Eating...\");\n    }\n}\n\nclass Dog : Animal\n{\n}"
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "q": "Q28 : What is Polymorphism in C#?",
+                    "a": "Polymorphism means 'many forms' and allows the same method or interface to behave differently depending on the object invoking it. It enables developers to write flexible and reusable code. C# supports two types of polymorphism: compile-time polymorphism through method overloading and runtime polymorphism through method overriding. Polymorphism is one of the four fundamental principles of object-oriented programming.",
+                    "type": "text",
+                    "id": 28,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Compile-Time": "Method overloading.",
+                        "Runtime": "Method overriding.",
+                        "Benefit": "Improves flexibility and code reuse.",
+                        "Keyword": "virtual and override for runtime polymorphism."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "q": "Q29 : What is the difference between Abstract Class and Interface?",
+                    "a": "Both abstract classes and interfaces are used to achieve abstraction in C#. However, an abstract class can contain both abstract and implemented methods, constructors, and fields, while an interface defines only a contract that implementing classes must follow. Modern C# interfaces can contain default implementations, but abstract classes remain suitable when sharing common code among related classes.",
+                    "type": "text",
+                    "id": 29,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Abstract Class" },
+                        { "label": "Interface" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Can contain implementation." },
+                                { "col": "Primarily defines a contract." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Supports constructors." },
+                                { "col": "Does not support constructors." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Can have fields." },
+                                { "col": "Cannot have instance fields." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Single inheritance only." },
+                                {
+                                    "col": "Multiple interfaces can be implemented."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Used for closely related classes." },
+                                {
+                                    "col": "Used for unrelated classes sharing behavior."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "q": "Q30 : What is the difference between Method Overloading and Method Overriding?",
+                    "a": "Method overloading and method overriding are both examples of polymorphism, but they differ in how they work. Overloading occurs within the same class and is resolved during compilation, while overriding occurs between a base and derived class and is resolved at runtime. Overloading increases method flexibility, whereas overriding customizes inherited behavior.",
+                    "type": "text",
+                    "id": 30,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Method Overloading"
+                        },
+                        {
+                            "label": "Method Overriding"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Compile-time polymorphism."
+                                },
+                                {
+                                    "col": "Runtime polymorphism."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Same class."
+                                },
+                                {
+                                    "col": "Base and derived classes."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Different parameter lists."
+                                },
+                                {
+                                    "col": "Same method signature."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "No inheritance required."
+                                },
+                                {
+                                    "col": "Requires inheritance."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Resolved by compiler."
+                                },
+                                {
+                                    "col": "Resolved at runtime."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "q": "Q31 : What are Value Types and Reference Types in C#?",
+                    "a": "In C#, every data type is classified as either a value type or a reference type. Value types directly store their data in memory, and each variable has its own copy of the value. Reference types store a reference (memory address) to the actual object, which resides on the managed heap. Changes made through one reference are reflected in all references pointing to the same object. Understanding this distinction is important for memory management, performance, and avoiding unintended side effects in applications.",
+                    "type": "text",
+                    "id": 31,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Value Type"
+                        },
+                        {
+                            "label": "Reference Type"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Stores actual value."
+                                },
+                                {
+                                    "col": "Stores reference to an object."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Usually stored on the stack."
+                                },
+                                {
+                                    "col": "Object stored on the heap."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Each variable has its own copy."
+                                },
+                                {
+                                    "col": "Multiple variables can reference the same object."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Examples: int, double, bool, struct."
+                                },
+                                {
+                                    "col": "Examples: class, array, string, delegate."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "q": "Q32 : What is the difference between Struct and Class?",
+                    "a": "Both struct and class are user-defined data types in C#, but they differ in memory allocation, inheritance, and usage. A struct is a value type and is typically used for small objects that represent a single value. A class is a reference type and is more suitable for complex objects that require inheritance, polymorphism, and dynamic memory allocation. Choosing between them depends on the application's design requirements.",
+                    "type": "text",
+                    "id": 32,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Struct"
+                        },
+                        {
+                            "label": "Class"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Value type."
+                                },
+                                {
+                                    "col": "Reference type."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Stored on stack (typically)."
+                                },
+                                {
+                                    "col": "Stored on heap."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Cannot inherit another struct/class."
+                                },
+                                {
+                                    "col": "Supports inheritance."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Copied by value."
+                                },
+                                {
+                                    "col": "Copied by reference."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Best for lightweight objects."
+                                },
+                                {
+                                    "col": "Best for complex business objects."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "q": "Q33 : What is Boxing and Unboxing in C#?",
+                    "a": "Boxing is the process of converting a value type into a reference type by storing it as an object. Unboxing is the reverse process, where the object is converted back to its original value type. Boxing creates a new object on the heap, while unboxing requires explicit casting. Excessive boxing and unboxing can reduce application performance because of additional memory allocation and type conversion.",
+                    "type": "text",
+                    "id": 33,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Example of Boxing and Unboxing",
+                    "code": "\nint number = 100;\nobject obj = number;      // Boxing\nint value = (int)obj;     // Unboxing"
+                },
+                {
+                    "type": "note",
+                    "note": "Generic collections such as List<int> help avoid unnecessary boxing and unboxing operations."
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "q": "Q34 : What is a Nullable Type in C#?",
+                    "a": "A nullable type allows value types to store null values in addition to their normal range of values. Normally, value types such as int, bool, and double cannot be assigned null. By using the '?' operator or Nullable<T>, developers can represent missing or undefined values. Nullable types are commonly used when working with databases where fields may contain NULL values.",
+                    "type": "text",
+                    "id": 34,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Nullable type example",
+                    "code": "\nint? age = null;\nage = 25;\n\nConsole.WriteLine(age);"
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "q": "Q35 : What is var in C#?",
+                    "a": "The var keyword enables implicit type inference in C#. Instead of explicitly specifying the data type, the compiler determines the type based on the assigned value during compilation. Although the type is inferred, it remains strongly typed and cannot change later. The var keyword improves code readability when the data type is obvious or lengthy, especially while working with LINQ queries and anonymous types.",
+                    "type": "text",
+                    "id": 35,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Using var",
+                    "code": "\nvar name = \"John\";\nvar age = 22;\nvar salary = 55000.50;"
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "q": "Q36 : What is dynamic in C#?",
+                    "a": "The dynamic keyword allows variables to bypass compile-time type checking. Unlike var, whose type is determined during compilation, a dynamic variable is resolved at runtime. This makes dynamic useful when interacting with COM objects, reflection, JSON data, or dynamic languages. However, because type checking occurs at runtime, using dynamic can increase the likelihood of runtime exceptions if incorrect members are accessed.",
+                    "type": "text",
+                    "id": 36,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Using dynamic",
+                    "code": "\ndynamic value = 100;\nvalue = \"Hello\";\nvalue = true;"
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "q": "Q37 : What is the difference between var, dynamic, and object?",
+                    "a": "Although var, dynamic, and object can all store different kinds of values, they behave differently. The var keyword performs compile-time type inference and remains strongly typed. Dynamic postpones type checking until runtime, while object is the base class of all .NET types and requires explicit casting when accessing original values. Understanding these differences helps developers write safer and more efficient code.",
+                    "type": "text",
+                    "id": 37,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "var"
+                        },
+                        {
+                            "label": "dynamic"
+                        },
+                        {
+                            "label": "object"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Compile-time type inference."
+                                },
+                                {
+                                    "col": "Runtime type resolution."
+                                },
+                                {
+                                    "col": "Base class of all types."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Strongly typed."
+                                },
+                                {
+                                    "col": "Not checked until runtime."
+                                },
+                                {
+                                    "col": "Requires casting."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Cannot change type."
+                                },
+                                {
+                                    "col": "Can change type."
+                                },
+                                {
+                                    "col": "Can hold any type."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Best for inferred variables."
+                                },
+                                {
+                                    "col": "Best for dynamic scenarios."
+                                },
+                                {
+                                    "col": "General-purpose storage."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "q": "Q38 : What is String Interpolation in C#?",
+                    "a": "String interpolation is a feature that allows developers to embed variables or expressions directly inside string literals using the '$' symbol. It improves readability and eliminates the need for string concatenation or placeholders. String interpolation is widely used for displaying formatted messages, logging information, and generating dynamic text in modern C# applications.",
+                    "type": "text",
+                    "id": 38,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "String interpolation example",
+                    "code": "\nstring name = \"John\";\nint age = 22;\n\nConsole.WriteLine($\"Name: {name}, Age: {age}\");"
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "q": "Q39 : What is StringBuilder in C#?",
+                    "a": "StringBuilder is a class provided by the System.Text namespace that allows efficient modification of strings without creating multiple string objects. Since strings in C# are immutable, every modification creates a new object in memory. StringBuilder avoids this overhead by maintaining a mutable character buffer, making it ideal for applications that frequently append, insert, remove, or replace text.",
+                    "type": "text",
+                    "id": 39,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Using StringBuilder",
+                    "code": "\nusing System.Text;\n\nStringBuilder sb = new StringBuilder();\nsb.Append(\"Hello \");\nsb.Append(\"World\");\nConsole.WriteLine(sb.ToString());"
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "q": "Q40 : What is the difference between String and StringBuilder?",
+                    "a": "String and StringBuilder are both used to work with text in C#, but they differ in mutability and performance. A String object is immutable, meaning every modification creates a new object in memory. StringBuilder is mutable, allowing modifications without creating new objects repeatedly. Therefore, String is suitable for fixed text, whereas StringBuilder is preferred for frequent string manipulations.",
+                    "type": "text",
+                    "id": 40,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "String"
+                        },
+                        {
+                            "label": "StringBuilder"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Immutable."
+                                },
+                                {
+                                    "col": "Mutable."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Creates new object on modification."
+                                },
+                                {
+                                    "col": "Modifies existing object."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Consumes more memory for repeated changes."
+                                },
+                                {
+                                    "col": "Memory efficient for repeated updates."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Suitable for constant strings."
+                                },
+                                {
+                                    "col": "Suitable for dynamic text generation."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "q": "Q41 : What are Properties in C#?",
+                    "a": "Properties are special members in C# that provide controlled access to the fields of a class. Instead of directly exposing variables, properties use getter and setter accessors to read and modify values. They help implement encapsulation by allowing validation, computation, or access restrictions whenever a value is retrieved or assigned. Properties are widely used in modern C# applications and are considered a best practice over using public fields.",
+                    "type": "text",
+                    "id": 41,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Property example",
+                    "code": "\nclass Student\n{\n    private string name;\n\n    public string Name\n    {\n        get { return name; }\n        set { name = value; }\n    }\n}"
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "q": "Q42 : What are Auto-Implemented Properties in C#?",
+                    "a": "Auto-implemented properties are a simplified way of declaring properties without explicitly creating private backing fields. The compiler automatically creates the hidden storage for the property. They make code cleaner and more readable when no additional validation or processing is required inside the getter or setter. Auto-properties are commonly used in models, DTOs, and Entity Framework classes.",
+                    "type": "text",
+                    "id": 42,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Auto-implemented property",
+                    "code": "\nclass Student\n{\n    public string Name { get; set; }\n    public int Age { get; set; }\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "Use auto-properties when you do not need custom logic inside the getter or setter."
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "q": "Q43 : What are Access Modifiers in C#?",
+                    "a": "Access modifiers define the visibility and accessibility of classes, methods, properties, and variables in C#. They are used to implement encapsulation by controlling where a member can be accessed from. Choosing the appropriate access modifier improves application security, prevents unintended modifications, and makes code easier to maintain by exposing only the required members to other classes.",
+                    "type": "text",
+                    "id": 43,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Access Modifier"
+                        },
+                        {
+                            "label": "Accessibility"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "public"
+                                },
+                                {
+                                    "col": "Accessible from anywhere."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "private"
+                                },
+                                {
+                                    "col": "Accessible only within the same class."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "protected"
+                                },
+                                {
+                                    "col": "Accessible within the class and derived classes."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "internal"
+                                },
+                                {
+                                    "col": "Accessible within the same assembly."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "protected internal"
+                                },
+                                {
+                                    "col": "Accessible from derived classes or same assembly."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "q": "Q44 : What is Exception Handling in C#?",
+                    "a": "Exception handling is a mechanism that allows developers to detect, handle, and recover from runtime errors without abruptly terminating the application. C# provides keywords such as try, catch, finally, and throw to manage exceptions. Proper exception handling improves application reliability, helps log unexpected errors, and allows developers to provide meaningful error messages to users instead of crashing the program.",
+                    "type": "text",
+                    "id": 44,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Exception handling example",
+                    "code": "\ntry\n{\n    int result = 10 / 0;\n}\ncatch (Exception ex)\n{\n    Console.WriteLine(ex.Message);\n}\nfinally\n{\n    Console.WriteLine(\"Execution completed.\");\n}"
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "q": "Q45 : What is the difference between throw and throws in C#?",
+                    "a": "C# provides the throw keyword to explicitly raise an exception. Unlike Java, C# does not have a throws keyword for declaring exceptions in method signatures. Instead, exceptions can propagate automatically up the call stack until they are handled. Developers use throw to create custom exceptions or rethrow existing exceptions while maintaining proper exception flow.",
+                    "type": "text",
+                    "id": 45,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "throw"
+                        },
+                        {
+                            "label": "throws"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Available in C#."
+                                },
+                                {
+                                    "col": "Not available in C#."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Used to explicitly raise an exception."
+                                },
+                                {
+                                    "col": "Used in Java to declare exceptions."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Can throw built-in or custom exceptions."
+                                },
+                                {
+                                    "col": "No equivalent keyword exists in C#."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "This is a common interview question because many developers confuse Java's 'throws' keyword with C#."
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "q": "Q46 : What are Delegates in C#?",
+                    "a": "A delegate is a type-safe function pointer that stores references to methods having the same signature. Delegates allow methods to be passed as parameters, stored in variables, and invoked dynamically. They are the foundation of events, callbacks, and asynchronous programming in .NET. Delegates improve flexibility by allowing applications to execute different methods without changing the calling code.",
+                    "type": "text",
+                    "id": 46,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Delegate example",
+                    "code": "\ndelegate void Greeting();\n\nclass Program\n{\n    static void Hello()\n    {\n        Console.WriteLine(\"Hello World\");\n    }\n\n    static void Main()\n    {\n        Greeting g = Hello;\n        g();\n    }\n}"
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : What are Events in C#?",
+                    "a": "Events are special delegate-based members used to implement communication between objects. They follow the publisher-subscriber model, where one object raises an event and other objects subscribe to receive notifications. Events are commonly used in Windows Forms, WPF, ASP.NET, and other applications to respond to user actions such as button clicks, keyboard input, or system notifications while keeping components loosely coupled.",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Publisher": "Raises the event.",
+                        "Subscriber": "Receives the event notification.",
+                        "Delegate": "Defines the event signature.",
+                        "Usage": "Commonly used for UI interactions and notifications."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "q": "Q48 : What is the difference between Delegate and Event?",
+                    "a": "Delegates and events are closely related because events are built on top of delegates. A delegate can be invoked directly by any code that has access to it, whereas an event can only be raised by the class that declares it. Events provide better encapsulation by preventing external classes from invoking them directly, making them the preferred choice for implementing notifications between objects.",
+                    "type": "text",
+                    "id": 48,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Delegate"
+                        },
+                        {
+                            "label": "Event"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Stores method references."
+                                },
+                                {
+                                    "col": "Uses delegates internally."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Can be invoked by any accessible code."
+                                },
+                                {
+                                    "col": "Can only be raised by the declaring class."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Suitable for callbacks."
+                                },
+                                {
+                                    "col": "Suitable for notifications."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Less restrictive."
+                                },
+                                {
+                                    "col": "Provides better encapsulation."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "q": "Q49 : What are Lambda Expressions in C#?",
+                    "a": "Lambda expressions are anonymous functions that provide a concise syntax for writing inline methods. They are commonly used with delegates, LINQ queries, events, and asynchronous programming. Lambda expressions improve code readability by eliminating the need to create separate methods for simple operations. They are represented using the => operator and are one of the most widely used features in modern C# development.",
+                    "type": "text",
+                    "id": 49,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Lambda expression example",
+                    "code": "\nFunc<int, int> square = x => x * x;\n\nConsole.WriteLine(square(5));"
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "q": "Q50 : What is LINQ in C#?",
+                    "a": "LINQ (Language Integrated Query) is a feature in C# that enables developers to query collections, arrays, XML, databases, and other data sources using a consistent syntax. LINQ improves readability, reduces boilerplate code, and provides compile-time type checking. It supports operations such as filtering, sorting, grouping, joining, and projection, making data manipulation easier and more expressive than traditional loops.",
+                    "type": "text",
+                    "id": 50,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "LINQ example",
+                    "code": "\nint[] numbers = { 1, 2, 3, 4, 5, 6 };\n\nvar evenNumbers = numbers.Where(n => n % 2 == 0);\n\nforeach (var n in evenNumbers)\n{\n    Console.WriteLine(n);\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Filtering": "Where()",
+                        "Sorting": "OrderBy(), OrderByDescending()",
+                        "Projection": "Select()",
+                        "Grouping": "GroupBy()",
+                        "Aggregation": "Count(), Sum(), Average(), Max(), Min()"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "q": "Q51 : What is the difference between IEnumerable and IQueryable in C#?",
+                    "a": "Both IEnumerable and IQueryable are used for working with collections in C#, but they differ in how queries are executed. IEnumerable performs query execution in memory after the data has already been loaded, making it suitable for local collections. IQueryable, on the other hand, builds expression trees and executes queries at the data source, such as a SQL database. This allows filtering, sorting, and projection to be performed by the database itself, improving performance and reducing memory usage when working with large datasets.",
+                    "type": "text",
+                    "id": 51,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "IEnumerable" },
+                        { "label": "IQueryable" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Works with in-memory collections." },
+                                { "col": "Works with remote data sources." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Executes query after loading data." },
+                                { "col": "Executes query at the database." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Uses delegates." },
+                                { "col": "Uses expression trees." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Suitable for Lists and Arrays." },
+                                {
+                                    "col": "Suitable for Entity Framework and LINQ to SQL."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "q": "Q52 : What are Extension Methods in C#?",
+                    "a": "Extension methods allow developers to add new functionality to existing classes without modifying their source code or creating derived classes. They are implemented as static methods inside a static class and use the 'this' keyword before the first parameter. Extension methods are widely used in LINQ and make code cleaner, reusable, and easier to maintain while keeping existing classes unchanged.",
+                    "type": "text",
+                    "id": 52,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Extension method example",
+                    "code": "\npublic static class StringExtension\n{\n    public static int WordCount(this string text)\n    {\n        return text.Split(' ').Length;\n    }\n}\n\nstring name = \"Hello World\";\nConsole.WriteLine(name.WordCount());"
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "q": "Q53 : What are Generics in C#?",
+                    "a": "Generics allow developers to create reusable classes, methods, interfaces, and collections that work with different data types while maintaining compile-time type safety. Instead of writing separate code for each data type, generics use type parameters that are specified when the object or method is used. They eliminate unnecessary type casting, improve performance by avoiding boxing and unboxing, and make applications more maintainable.",
+                    "type": "text",
+                    "id": 53,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Generic class example",
+                    "code": "\nclass Box<T>\n{\n    public T Value { get; set; }\n}\n\nBox<int> number = new Box<int>();\nnumber.Value = 100;"
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "q": "Q54 : What are Collections in C#?",
+                    "a": "Collections are specialized classes used to store, organize, and manipulate groups of objects efficiently. The .NET Framework provides both generic and non-generic collections depending on the application's requirements. Generic collections are preferred because they provide type safety and better performance. Collections simplify searching, sorting, inserting, deleting, and iterating over data while reducing the complexity of application development.",
+                    "type": "text",
+                    "id": 54,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "List<T>": "Dynamic array that allows duplicate elements.",
+                        "Dictionary<TKey, TValue>": "Stores key-value pairs for fast lookups.",
+                        "HashSet<T>": "Stores unique elements only.",
+                        "Queue<T>": "Implements FIFO (First In First Out).",
+                        "Stack<T>": "Implements LIFO (Last In First Out)."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "Que": [
+                {
+                    "q": "Q55 : What is the difference between List and Array in C#?",
+                    "a": "Arrays and Lists are both used to store collections of elements, but they differ in flexibility and functionality. Arrays have a fixed size that cannot be changed after creation, whereas Lists are dynamic and automatically resize as elements are added or removed. Lists also provide many built-in methods for searching, sorting, filtering, and manipulating data, making them more suitable for most modern applications.",
+                    "type": "text",
+                    "id": 55,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Array" }, { "label": "List<T>" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Fixed size." },
+                                { "col": "Dynamic size." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Less flexible." },
+                                { "col": "Highly flexible." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Better for fixed data." },
+                                {
+                                    "col": "Better for frequently changing data."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Limited built-in methods." },
+                                { "col": "Rich collection API." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "56",
+            "Que": [
+                {
+                    "q": "Q56 : What is Async and Await in C#?",
+                    "a": "The async and await keywords simplify asynchronous programming in C#. They allow long-running operations such as file handling, API requests, and database queries to execute without blocking the main thread. The async keyword marks a method as asynchronous, while await pauses execution until the awaited task completes without freezing the application. This improves responsiveness and scalability, especially in desktop, web, and mobile applications.",
+                    "type": "text",
+                    "id": 56,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Async/Await example",
+                    "code": "\npublic async Task GetDataAsync()\n{\n    await Task.Delay(2000);\n    Console.WriteLine(\"Completed\");\n}"
+                }
+            ]
+        },
+        {
+            "id": "57",
+            "Que": [
+                {
+                    "q": "Q57 : What is the Task class in C#?",
+                    "a": "The Task class represents an asynchronous operation that may or may not return a result. It is part of the Task Parallel Library (TPL) and forms the foundation of modern asynchronous programming in .NET. Tasks can execute work in the background, support cancellation, exception handling, and continuation operations. They are commonly used together with async and await for writing scalable and responsive applications.",
+                    "type": "text",
+                    "id": 57,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Task example",
+                    "code": "\nTask task = Task.Run(() =>\n{\n    Console.WriteLine(\"Running asynchronously\");\n});\n\nawait task;"
+                }
+            ]
+        },
+        {
+            "id": "58",
+            "Que": [
+                {
+                    "q": "Q58 : What is Reflection in C#?",
+                    "a": "Reflection is a feature that allows programs to inspect metadata, discover types, examine methods, properties, constructors, and invoke members dynamically at runtime. It is widely used in dependency injection frameworks, serializers, testing frameworks, and plugin-based architectures. Although reflection is very powerful, excessive use can impact performance because metadata must be analyzed during execution.",
+                    "type": "text",
+                    "id": 58,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Reflection example",
+                    "code": "\nType type = typeof(string);\nConsole.WriteLine(type.Name);\n\nforeach(var method in type.GetMethods())\n{\n    Console.WriteLine(method.Name);\n}"
+                }
+            ]
+        },
+        {
+            "id": "59",
+            "Que": [
+                {
+                    "q": "Q59 : What is Dependency Injection in C#?",
+                    "a": "Dependency Injection (DI) is a design pattern that provides required dependencies to a class from an external source instead of creating them inside the class. This reduces tight coupling, improves maintainability, makes unit testing easier, and promotes better software architecture. ASP.NET Core includes a built-in dependency injection container that supports constructor injection, scoped services, singleton services, and transient services.",
+                    "type": "text",
+                    "id": 59,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Singleton": "One instance throughout the application.",
+                        "Scoped": "One instance per HTTP request.",
+                        "Transient": "New instance every time it is requested."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "60",
+            "Que": [
+                {
+                    "q": "Q60 : What are the best practices for writing C# code?",
+                    "a": "Writing clean and maintainable C# code requires following coding standards, using meaningful names, applying SOLID principles, handling exceptions correctly, avoiding duplicate code, and using appropriate design patterns. Developers should also use dependency injection, asynchronous programming where appropriate, generic collections, proper access modifiers, and XML documentation. Following these practices improves code readability, maintainability, scalability, and makes collaboration easier in large development teams.",
+                    "type": "text",
+                    "id": 60,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Meaningful Naming": "Use descriptive names for classes, methods, and variables.",
+                        "Exception Handling": "Handle only expected exceptions and log errors.",
+                        "SOLID Principles": "Write loosely coupled and maintainable code.",
+                        "Dependency Injection": "Reduce coupling between classes.",
+                        "Async Programming": "Use async/await for I/O-bound operations.",
+                        "Code Formatting": "Follow consistent coding conventions and documentation."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "61",
+            "Que": [
+                {
+                    "q": "Q61 : What is the difference between == and Equals() in C#?",
+                    "a": "Both == and Equals() are used to compare objects in C#, but they behave differently depending on the data type. The == operator generally compares references for reference types and values for value types unless it is overloaded. The Equals() method compares object equality and can be overridden by classes to define custom equality logic. Choosing the correct comparison method ensures accurate object comparison and avoids unexpected behavior in applications.",
+                    "type": "text",
+                    "id": 61,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "==" }, { "label": "Equals()" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Operator." },
+                                { "col": "Method." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Usually compares references for objects."
+                                },
+                                { "col": "Can compare object content." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Can be overloaded." },
+                                { "col": "Can be overridden." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Faster in most cases." },
+                                {
+                                    "col": "Provides customizable equality logic."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "62",
+            "Que": [
+                {
+                    "q": "Q62 : What is the difference between String.Equals() and String.Compare()?",
+                    "a": "String.Equals() determines whether two strings are equal, while String.Compare() compares two strings lexicographically and returns an integer indicating their relative ordering. String.Compare() is useful when sorting or ordering strings, whereas String.Equals() is preferred when only equality needs to be checked. Both methods support case-sensitive and case-insensitive comparisons.",
+                    "type": "text",
+                    "id": 62,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "String.Equals()" },
+                        { "label": "String.Compare()" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Checks equality." },
+                                { "col": "Compares ordering." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Returns true or false." },
+                                { "col": "Returns -1, 0 or 1." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Used for equality checks." },
+                                { "col": "Used for sorting and comparisons." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "63",
+            "Que": [
+                {
+                    "q": "Q63 : What is IDisposable in C#?",
+                    "a": "IDisposable is an interface that provides a mechanism for releasing unmanaged resources explicitly. Classes that work with files, database connections, sockets, streams, or unmanaged memory implement IDisposable. The Dispose() method is called to release these resources immediately instead of waiting for the Garbage Collector. Proper implementation of IDisposable helps prevent memory leaks and improves application performance.",
+                    "type": "text",
+                    "id": 63,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Using IDisposable",
+                    "code": "\nusing(FileStream fs = new FileStream(\"demo.txt\", FileMode.Open))\n{\n    // Work with file\n}"
+                }
+            ]
+        },
+        {
+            "id": "64",
+            "Que": [
+                {
+                    "q": "Q64 : What is the using statement in C#?",
+                    "a": "The using statement automatically disposes objects that implement the IDisposable interface after their work is completed. It ensures that resources such as files, streams, database connections, and network sockets are released even if an exception occurs. Using statements simplify resource management and reduce the possibility of memory leaks.",
+                    "type": "text",
+                    "id": 64,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "using statement example",
+                    "code": "\nusing(SqlConnection connection = new SqlConnection(connectionString))\n{\n    connection.Open();\n}"
+                }
+            ]
+        },
+        {
+            "id": "65",
+            "Que": [
+                {
+                    "q": "Q65 : What are Anonymous Types in C#?",
+                    "a": "Anonymous types allow developers to create objects without explicitly defining a class. The compiler automatically generates the type based on the properties assigned during object creation. Anonymous types are commonly used with LINQ queries to return only the required data instead of entire objects. They improve readability and reduce the need for creating temporary classes.",
+                    "type": "text",
+                    "id": 65,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Anonymous type example",
+                    "code": "\nvar student = new\n{\n    Name = \"John\",\n    Age = 22\n};"
+                }
+            ]
+        },
+        {
+            "id": "66",
+            "Que": [
+                {
+                    "q": "Q66 : What are Indexers in C#?",
+                    "a": "Indexers allow instances of a class to be accessed like arrays using the [] operator. They provide a clean and intuitive way to retrieve or update data stored internally within an object. Indexers are commonly used in custom collection classes where developers want objects to behave similarly to arrays or lists.",
+                    "type": "text",
+                    "id": 66,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "csharp",
+                    "simple_text": "Indexer example",
+                    "code": "\nclass StudentCollection\n{\n    private string[] names = new string[5];\n\n    public string this[int index]\n    {\n        get => names[index];\n        set => names[index] = value;\n    }\n}"
+                }
+            ]
+        },
+        {
+            "id": "67",
+            "Que": [
+                {
+                    "q": "Q67 : What is Serialization in C#?",
+                    "a": "Serialization is the process of converting an object's state into a format such as JSON, XML, or binary so that it can be stored or transmitted over a network. Deserialization is the reverse process of reconstructing the object from the serialized data. Serialization is commonly used in web APIs, caching, configuration files, and distributed systems.",
+                    "type": "text",
+                    "id": 67,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "JSON": "Most common format for Web APIs.",
+                        "XML": "Commonly used in legacy systems.",
+                        "Binary": "Compact format for internal applications."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "68",
+            "Que": [
+                {
+                    "q": "Q68 : What is Reflection Emit in C#?",
+                    "a": "Reflection Emit is an advanced feature that allows applications to generate assemblies, types, and methods dynamically at runtime. It is mainly used by frameworks, ORMs, dynamic proxies, and code generation tools. Although powerful, Reflection Emit is complex and should only be used when runtime code generation is required because dynamically generated code is harder to debug and maintain.",
+                    "type": "text",
+                    "id": 68,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "69",
+            "Que": [
+                {
+                    "q": "Q69 : What is Multithreading in C#?",
+                    "a": "Multithreading is the ability of a program to execute multiple threads concurrently within the same process. It enables better CPU utilization and improves application responsiveness by allowing multiple tasks to run simultaneously. C# provides the Thread class, Task Parallel Library (TPL), async/await, and Parallel programming APIs to simplify concurrent programming while reducing the complexity of thread management.",
+                    "type": "text",
+                    "id": 69,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Thread": "Low-level threading API.",
+                        "Task": "Recommended modern asynchronous approach.",
+                        "Parallel": "Runs multiple operations simultaneously.",
+                        "async/await": "Simplifies asynchronous programming."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "70",
+            "Que": [
+                {
+                    "q": "Q70 : What is the difference between Process and Thread?",
+                    "a": "A process is an independent program with its own memory space and system resources, while a thread is the smallest unit of execution within a process. Multiple threads can exist inside a single process and share the same memory. Processes provide better isolation but consume more resources, whereas threads are lightweight and enable efficient concurrent execution.",
+                    "type": "text",
+                    "id": 70,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Process" }, { "label": "Thread" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Independent program." },
+                                { "col": "Unit of execution." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Has separate memory." },
+                                { "col": "Shares process memory." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Heavyweight." },
+                                { "col": "Lightweight." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Slower context switching." },
+                                { "col": "Faster context switching." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,2806 @@
+{
+    "express-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is Express.js?",
+                    "a": "Express.js is a fast, lightweight, and flexible web application framework built on top of Node.js. It simplifies backend development by providing powerful features such as routing, middleware support, request handling, and response management. Instead of working directly with Node.js's low-level HTTP module, developers can use Express.js to create web applications and REST APIs with less code and better organization. It is one of the most popular frameworks in the Node.js ecosystem and is widely used in production-grade applications.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Fast": "Provides high-performance request handling.",
+                        "Lightweight": "Contains only essential features and can be extended using packages.",
+                        "Routing": "Offers a simple mechanism to define application routes.",
+                        "Middleware": "Supports middleware for request processing.",
+                        "API Development": "Widely used for building RESTful APIs."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Installing Express.js",
+                    "code": "\nnpm install express"
+                },
+                {
+                    "type": "note",
+                    "note": "Express.js is a framework that runs on top of Node.js. It does not replace Node.js but simplifies server-side development."
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : Why do we need Express.js when Node.js already provides HTTP modules?",
+                    "a": "Node.js provides a built-in HTTP module that can be used to create web servers, but it requires developers to write a significant amount of boilerplate code for routing, request handling, middleware management, and error handling. Express.js simplifies these tasks by providing a clean and organized API. It helps developers build applications faster, reduces repetitive code, and improves maintainability.",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Node.js HTTP Module"
+                        },
+                        {
+                            "label": "Express.js"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Requires more boilerplate code"
+                                },
+                                {
+                                    "col": "Provides simplified APIs"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Manual routing"
+                                },
+                                {
+                                    "col": "Built-in routing system"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Manual middleware implementation"
+                                },
+                                {
+                                    "col": "Middleware support built-in"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "More complex for large applications"
+                                },
+                                {
+                                    "col": "Easier to scale and maintain"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : What are the features of Express.js?",
+                    "a": "Express.js provides a rich set of features that simplify backend development. It offers routing, middleware support, template engine integration, static file serving, request and response utilities, and error handling capabilities. These features help developers build scalable and maintainable web applications efficiently.",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Routing": "Handles requests based on URL and HTTP methods.",
+                        "Middleware": "Allows execution of custom logic during request processing.",
+                        "Template Engines": "Supports EJS, Pug, Handlebars, and more.",
+                        "Static Files": "Can serve CSS, JavaScript, and image files.",
+                        "Error Handling": "Provides mechanisms to handle application errors."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : How do you install Express.js?",
+                    "a": "Express.js can be installed using the Node Package Manager (npm). Before installation, a Node.js project should be initialized using npm init. Once initialized, Express can be added as a dependency using npm install express. The package will be downloaded and added to the package.json file.",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Initialize project and install Express.js",
+                    "code": "\nnpm init -y\nnpm install express"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : How do you create a basic Express server?",
+                    "a": "A basic Express server is created by importing the Express module, creating an application instance, defining routes, and starting the server using app.listen(). The server listens for incoming requests and sends appropriate responses back to the client.",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Basic Express server",
+                    "code": "\nconst express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n    res.send('Hello Express');\n});\n\napp.listen(3000, () => {\n    console.log('Server running on port 3000');\n});"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : What is the difference between Node.js and Express.js?",
+                    "a": "Node.js is a JavaScript runtime environment that allows JavaScript to run outside the browser. Express.js is a web application framework built on top of Node.js that simplifies backend development. While Node.js provides the core runtime and HTTP functionality, Express.js provides higher-level abstractions for routing, middleware, and request handling.",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Node.js"
+                        },
+                        {
+                            "label": "Express.js"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Runtime Environment"
+                                },
+                                {
+                                    "col": "Web Framework"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Provides HTTP module"
+                                },
+                                {
+                                    "col": "Provides routing and middleware"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Lower-level APIs"
+                                },
+                                {
+                                    "col": "Higher-level abstractions"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Can work without Express"
+                                },
+                                {
+                                    "col": "Requires Node.js"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : What is app.listen() in Express?",
+                    "a": "The app.listen() method is used to start an Express server and make it listen for incoming client requests on a specific port. Internally, it creates an HTTP server and binds it to the specified port number. Once the server starts successfully, a callback function can be executed to confirm that the application is running. Without calling app.listen(), the Express application will not be able to accept requests from clients.",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Starting an Express server",
+                    "code": "\napp.listen(3000, () => {\n    console.log('Server running on port 3000');\n});"
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : What is app.get()?",
+                    "a": "app.get() is an Express method used to define a route that handles HTTP GET requests. GET requests are typically used to retrieve data from a server without modifying any resources. When a client sends a GET request to the specified route, Express executes the associated callback function and sends a response back to the client.",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Handling a GET request",
+                    "code": "\napp.get('/users', (req, res) => {\n    res.send('Fetching all users');\n});"
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : What is app.post()?",
+                    "a": "app.post() is an Express method used to define a route that handles HTTP POST requests. POST requests are generally used to send data from a client to the server for creating new resources such as users, products, or orders. Data is usually sent in the request body and can be accessed using req.body.",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Handling a POST request",
+                    "code": "\napp.post('/users', (req, res) => {\n    res.send('User created successfully');\n});"
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : What is app.put()?",
+                    "a": "app.put() is used to handle HTTP PUT requests in Express.js. PUT requests are commonly used to completely update an existing resource. When using PUT, the client usually sends the entire updated resource data, and the server replaces the existing resource with the new data.",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Handling a PUT request",
+                    "code": "\napp.put('/users/:id', (req, res) => {\n    res.send('User updated successfully');\n});"
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : What is app.patch()?",
+                    "a": "app.patch() is used to handle HTTP PATCH requests. Unlike PUT, which replaces an entire resource, PATCH is used to update only specific fields of a resource. It is more efficient when only a small portion of the resource needs to be modified.",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Handling a PATCH request",
+                    "code": "\napp.patch('/users/:id', (req, res) => {\n    res.send('User partially updated');\n});"
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : What is app.delete()?",
+                    "a": "app.delete() is an Express method used to handle HTTP DELETE requests. DELETE requests are used to remove resources from a server. This method is commonly used in RESTful APIs when deleting records such as users, products, orders, or other data entities.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Handling a DELETE request",
+                    "code": "\napp.delete('/users/:id', (req, res) => {\n    res.send('User deleted successfully');\n});"
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : What is app.all()?",
+                    "a": "app.all() is a special Express method that handles requests for all HTTP methods such as GET, POST, PUT, PATCH, and DELETE on a specific route. It is useful when common logic such as authentication, logging, or validation must be executed regardless of the HTTP method being used.",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Handling all HTTP methods",
+                    "code": "\napp.all('/admin', (req, res) => {\n    res.send('Admin route accessed');\n});"
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : What is app.use()?",
+                    "a": "app.use() is one of the most important methods in Express.js. It is used to register middleware functions that execute during the request-response cycle. Middleware can perform tasks such as logging, authentication, request parsing, error handling, and more. app.use() can be applied globally to all routes or restricted to specific route paths.",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Logging": "Tracks incoming requests.",
+                        "Authentication": "Verifies user identity.",
+                        "Parsing": "Processes JSON and form data.",
+                        "Error Handling": "Handles application errors.",
+                        "Route Specific Logic": "Can be applied to selected routes."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Using middleware with app.use()",
+                    "code": "\napp.use((req, res, next) => {\n    console.log('Request received');\n    next();\n});"
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : What is the request-response cycle in Express?",
+                    "a": "The request-response cycle is the process that occurs when a client sends an HTTP request to an Express server and receives a response. The request first reaches the Express application, passes through any configured middleware, reaches the matching route handler, and finally a response is sent back to the client. Understanding this flow is important because middleware, routing, authentication, validation, and error handling all occur during this cycle.",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Client sends an HTTP request.",
+                        "2": "Express receives the request.",
+                        "3": "Middleware functions are executed.",
+                        "4": "Matching route handler is identified.",
+                        "5": "Business logic is executed.",
+                        "6": "Response is sent back to the client."
+                    }
+                },
+                {
+                    "type": "img",
+                    "img": "express-request-response-cycle.png"
+                },
+                {
+                    "type": "note",
+                    "note": "Middleware executes in the order it is registered. If a middleware does not call next(), the request-response cycle stops at that middleware."
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : What is routing in Express.js?",
+                    "a": "Routing in Express.js refers to the process of defining how an application responds to client requests for specific URLs and HTTP methods. A route consists of a URL path, an HTTP method such as GET or POST, and a callback function that executes when the route is matched. Routing helps organize application logic by directing incoming requests to the appropriate handler. It is one of the core features of Express.js and is used extensively in building web applications and RESTful APIs.",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "URL Mapping": "Associates specific URLs with functions.",
+                        "HTTP Methods": "Supports GET, POST, PUT, PATCH, DELETE and more.",
+                        "Organization": "Helps structure application logic efficiently.",
+                        "API Development": "Essential for creating RESTful services."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : How do you define routes in Express.js?",
+                    "a": "Routes in Express.js are defined using methods such as app.get(), app.post(), app.put(), and app.delete(). These methods take a URL path and a callback function as arguments. When a request matches the specified path and HTTP method, Express executes the corresponding callback function and sends a response back to the client.",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Defining a route in Express.js",
+                    "code": "\napp.get('/users', (req, res) => {\n    res.send('Users Route');\n});"
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : What are route parameters in Express.js?",
+                    "a": "Route parameters are dynamic values embedded directly within the URL path. They allow developers to capture values from the URL and use them inside the route handler. Route parameters are useful when building APIs that need to access specific resources such as users, products, or orders. The values can be accessed through the req.params object.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Using route parameters",
+                    "code": "\napp.get('/users/:id', (req, res) => {\n    res.send(`User ID: ${req.params.id}`);\n});"
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : What are query parameters in Express.js?",
+                    "a": "Query parameters are key-value pairs appended to a URL after a question mark (?). They are commonly used for filtering, sorting, searching, and pagination. Unlike route parameters, query parameters are optional and do not affect route matching. In Express.js, query parameters can be accessed using the req.query object.",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Using query parameters",
+                    "code": "\napp.get('/users', (req, res) => {\n    res.send(req.query.role);\n});"
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : Difference between route parameters and query parameters?",
+                    "a": "Route parameters and query parameters are both used to pass data through URLs, but they serve different purposes. Route parameters identify a specific resource and are part of the URL path, whereas query parameters provide optional data for filtering, searching, sorting, or customization.",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Route Parameters" },
+                        { "label": "Query Parameters" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Part of the URL path" },
+                                { "col": "Appended after ?" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Usually required" },
+                                { "col": "Usually optional" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Accessed via req.params" },
+                                { "col": "Accessed via req.query" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "/users/10" },
+                                { "col": "/users?id=10" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : What is Express Router?",
+                    "a": "Express Router is a mini version of an Express application that provides routing functionality. It allows developers to create modular and reusable route handlers in separate files. Using Express Router helps keep applications organized, especially in large projects where defining all routes in a single file would become difficult to maintain.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Modularity": "Routes can be separated into different files.",
+                        "Reusability": "Router modules can be reused across applications.",
+                        "Maintainability": "Makes code easier to manage.",
+                        "Scalability": "Supports large applications efficiently."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : Why use Express Router instead of defining all routes in app.js?",
+                    "a": "As applications grow, defining all routes in app.js makes the file difficult to manage and maintain. Express Router allows routes to be grouped by functionality and stored in separate modules. This improves code organization, scalability, and readability while reducing complexity in large applications.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "All Routes in app.js" },
+                        { "label": "Using Express Router" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Large and cluttered file" },
+                                { "col": "Modular route files" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Hard to maintain" },
+                                { "col": "Easy to maintain" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Difficult to scale" },
+                                { "col": "Easy to scale" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Less reusable" },
+                                { "col": "Highly reusable" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : How do you create modular routes in Express.js?",
+                    "a": "Modular routes are created by defining routes in separate files using Express Router and then importing those route modules into the main application. This approach keeps code organized and makes it easier to manage large applications.",
+                    "type": "text",
+                    "id": 23,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Creating modular routes",
+                    "code": "\nconst express = require('express');\nconst router = express.Router();\n\nrouter.get('/', (req, res) => {\n    res.send('Users Route');\n});\n\nmodule.exports = router;"
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "q": "Q24 : What is route chaining in Express.js?",
+                    "a": "Route chaining allows multiple HTTP methods to be defined for the same route using the route() method. It improves readability by grouping related route handlers together rather than defining separate routes for each HTTP method.",
+                    "type": "text",
+                    "id": 24,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Route chaining example",
+                    "code": "\napp.route('/users')\n   .get(getUsers)\n   .post(createUser)\n   .put(updateUser);"
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "q": "Q25 : What is nested routing?",
+                    "a": "Nested routing is a technique where routes are organized hierarchically to represent relationships between resources. It is commonly used when one resource belongs to another resource, such as orders belonging to a user or comments belonging to a post.",
+                    "type": "text",
+                    "id": 25,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Nested route example",
+                    "code": "\n/users/:userId/orders/:orderId"
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "q": "Q26 : What is req object in Express.js?",
+                    "a": "The req (request) object represents the HTTP request received from the client. It contains information such as request parameters, query strings, headers, body data, cookies, and more. Developers use the req object to access and process client-supplied information within route handlers.",
+                    "type": "text",
+                    "id": 26,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "req.params": "Access route parameters.",
+                        "req.query": "Access query parameters.",
+                        "req.body": "Access request body data.",
+                        "req.headers": "Access HTTP headers."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "q": "Q27 : What is req.params?",
+                    "a": "req.params is an object in Express.js that contains route parameters extracted from the URL path. It is used when routes contain dynamic values such as IDs or usernames. These values can be accessed directly using property names defined in the route path.",
+                    "type": "text",
+                    "id": 27,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Accessing route parameters",
+                    "code": "\napp.get('/users/:id', (req, res) => {\n    console.log(req.params.id);\n});"
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "q": "Q28 : What is req.query?",
+                    "a": "req.query is an object that contains query string parameters sent in the URL. It is commonly used for filtering, sorting, pagination, and searching operations. Query parameters are optional and do not affect route matching.",
+                    "type": "text",
+                    "id": 28,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Accessing query parameters",
+                    "code": "\napp.get('/users', (req, res) => {\n    console.log(req.query.role);\n});"
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "q": "Q29 : What is req.body?",
+                    "a": "req.body contains data sent by the client in the request body. It is commonly used with POST, PUT, and PATCH requests to send information such as form data, JSON objects, or user input. To access req.body, middleware such as express.json() or express.urlencoded() must be configured.",
+                    "type": "text",
+                    "id": 29,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Accessing request body",
+                    "code": "\napp.post('/users', (req, res) => {\n    console.log(req.body);\n});"
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "q": "Q30 : What is req.headers?",
+                    "a": "req.headers is an object that contains all HTTP headers sent by the client. Headers provide metadata about the request, such as content type, authorization tokens, browser information, and accepted response formats. They are commonly used for authentication, content negotiation, and request validation.",
+                    "type": "text",
+                    "id": 30,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Accessing request headers",
+                    "code": "\napp.get('/', (req, res) => {\n    console.log(req.headers);\n});"
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "q": "Q31 : What is req.cookies?",
+                    "a": "req.cookies is an object provided by the cookie-parser middleware that contains all cookies sent by the client in the HTTP request. Cookies are small pieces of data stored in the user's browser and are commonly used for authentication, session management, user preferences, and tracking information. By accessing req.cookies, developers can retrieve and use cookie values within route handlers.",
+                    "type": "text",
+                    "id": 31,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Accessing cookies from a request",
+                    "code": "\napp.get('/', (req, res) => {\n    console.log(req.cookies);\n});"
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "q": "Q32 : What is req.method?",
+                    "a": "req.method is a property of the request object that returns the HTTP method used by the client to make the request. Common HTTP methods include GET, POST, PUT, PATCH, and DELETE. This property is useful when implementing custom middleware, logging requests, or creating logic that behaves differently based on the request method.",
+                    "type": "text",
+                    "id": 32,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Getting the request method",
+                    "code": "\napp.get('/', (req, res) => {\n    console.log(req.method);\n});"
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "q": "Q33 : What is req.path?",
+                    "a": "req.path returns the path portion of the requested URL. It does not include the query string or protocol information. Developers commonly use req.path for routing decisions, logging, analytics, and debugging purposes. It helps identify which specific endpoint was requested by the client.",
+                    "type": "text",
+                    "id": 33,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Getting the request path",
+                    "code": "\napp.get('/users', (req, res) => {\n    console.log(req.path);\n});"
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "q": "Q34 : What is req.originalUrl?",
+                    "a": "req.originalUrl returns the complete original request URL, including the path and query string. Unlike req.path, it preserves the full URL exactly as it was received from the client. This property is often used for request logging, debugging, analytics, and authentication systems that need to remember the originally requested URL.",
+                    "type": "text",
+                    "id": 34,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Getting the original URL",
+                    "code": "\napp.get('/users', (req, res) => {\n    console.log(req.originalUrl);\n});"
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "q": "Q35 : Difference between req.path and req.originalUrl?",
+                    "a": "Both req.path and req.originalUrl provide information about the requested URL, but they serve different purposes. req.path returns only the pathname of the URL, whereas req.originalUrl returns the complete URL including query parameters. Understanding the difference is useful when building routing logic, debugging requests, or implementing request tracking systems.",
+                    "type": "text",
+                    "id": 35,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "req.path"
+                        },
+                        {
+                            "label": "req.originalUrl"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Returns only the pathname"
+                                },
+                                {
+                                    "col": "Returns the complete original URL"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Does not include query string"
+                                },
+                                {
+                                    "col": "Includes query string"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Useful for routing"
+                                },
+                                {
+                                    "col": "Useful for logging and debugging"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "/users"
+                                },
+                                {
+                                    "col": "/users?page=1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "q": "Q36 : What is res object in Express.js?",
+                    "a": "The res (response) object represents the HTTP response that an Express application sends back to the client. It provides various methods for sending data, setting status codes, redirecting requests, serving files, rendering templates, and managing headers. The response object plays a crucial role in the request-response cycle because it determines what information is returned to the client after processing a request.",
+                    "type": "text",
+                    "id": 36,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "res.send()": "Send text, HTML, objects, or buffers.",
+                        "res.json()": "Send JSON responses.",
+                        "res.status()": "Set HTTP status codes.",
+                        "res.redirect()": "Redirect clients to another URL.",
+                        "res.sendFile()": "Send files to the client."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "q": "Q37 : What is res.send()?",
+                    "a": "res.send() is a response method used to send data back to the client. It can send plain text, HTML, JavaScript objects, arrays, or buffers. Express automatically determines the appropriate Content-Type header based on the data being sent. After sending the response, Express automatically closes the connection.",
+                    "type": "text",
+                    "id": 37,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Sending a text response",
+                    "code": "\nres.send('Hello World');"
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "q": "Q38 : What is res.json()?",
+                    "a": "res.json() is used to send JSON data from the server to the client. It automatically converts JavaScript objects into JSON format and sets the Content-Type header to application/json. This method is commonly used in REST APIs because most frontend applications communicate with backend services using JSON data.",
+                    "type": "text",
+                    "id": 38,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Sending JSON data",
+                    "code": "\nres.json({\n    id: 1,\n    name: 'John'\n});"
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "q": "Q39 : Difference between res.send() and res.json()?",
+                    "a": "Both res.send() and res.json() are used to send responses to the client, but they are designed for different use cases. res.send() is a general-purpose method that can send various data types, whereas res.json() is specifically designed for sending JSON responses in APIs.",
+                    "type": "text",
+                    "id": 39,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "res.send()"
+                        },
+                        {
+                            "label": "res.json()"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Can send any data type"
+                                },
+                                {
+                                    "col": "Sends JSON data"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Can send HTML, text, objects, buffers"
+                                },
+                                {
+                                    "col": "Primarily sends JavaScript objects as JSON"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Generic response method"
+                                },
+                                {
+                                    "col": "API-focused response method"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Content type varies automatically"
+                                },
+                                {
+                                    "col": "Sets Content-Type to application/json"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "q": "Q40 : What is res.status()?",
+                    "a": "res.status() is used to set the HTTP status code of a response before sending it to the client. Status codes communicate the result of the request, such as success, client errors, or server errors. It is commonly chained with methods like res.send() or res.json() to provide meaningful responses.",
+                    "type": "text",
+                    "id": 40,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Setting an HTTP status code",
+                    "code": "\nres.status(404).send('Not Found');"
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "q": "Q41 : What is res.redirect()?",
+                    "a": "res.redirect() is used to redirect a client from one URL to another. When this method is called, Express sends an HTTP redirect response along with the target URL. The browser then automatically navigates to the new location. This method is commonly used after successful login, logout, form submission, authentication checks, or when a resource has been moved to a different route.",
+                    "type": "text",
+                    "id": 41,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Redirecting a user to another route",
+                    "code": "\napp.get('/dashboard', (req, res) => {\n    if (!req.user) {\n        return res.redirect('/login');\n    }\n\n    res.send('Welcome to Dashboard');\n});"
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "q": "Q42 : What is res.render()?",
+                    "a": "res.render() is used to render dynamic views using template engines such as EJS, Pug, Handlebars, or Mustache. It combines a template file with data provided by the server and generates HTML that is sent to the client. This method is commonly used in server-side rendered applications where HTML pages are generated dynamically based on user data or application state.",
+                    "type": "text",
+                    "id": 42,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Dynamic Pages": "Generates HTML dynamically using server data.",
+                        "Template Engine": "Works with EJS, Pug, Handlebars, etc.",
+                        "Data Passing": "Allows variables to be sent to views.",
+                        "SSR": "Useful for Server-Side Rendering applications."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Rendering an EJS template",
+                    "code": "\napp.get('/home', (req, res) => {\n    res.render('home', {\n        name: 'John',\n        age: 25\n    });\n});"
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "q": "Q43 : What is res.download()?",
+                    "a": "res.download() is used to send a file to the client as an attachment, prompting the browser to download it instead of displaying it. This method automatically sets the necessary response headers required for file downloads. It is commonly used for downloading reports, PDFs, invoices, spreadsheets, images, or other documents generated by an application.",
+                    "type": "text",
+                    "id": 43,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Sends a file to the client.",
+                        "2": "Triggers browser download behavior.",
+                        "3": "Automatically sets download headers.",
+                        "4": "Useful for reports, PDFs, and exported files."
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Downloading a PDF file",
+                    "code": "\napp.get('/download-report', (req, res) => {\n    res.download('./files/report.pdf');\n});"
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "q": "Q44 : What is res.sendFile()?",
+                    "a": "res.sendFile() is used to send a file directly to the client. Unlike res.download(), it does not force the browser to download the file. Instead, the browser decides whether to display the file or download it based on its type. This method is commonly used to serve HTML files, images, PDFs, videos, and other static resources.",
+                    "type": "text",
+                    "id": 44,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "res.sendFile()"
+                        },
+                        {
+                            "label": "res.download()"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Displays file if browser supports it"
+                                },
+                                {
+                                    "col": "Forces file download"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Used for serving static files"
+                                },
+                                {
+                                    "col": "Used for downloadable files"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Browser decides behavior"
+                                },
+                                {
+                                    "col": "Server requests download behavior"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Sending an HTML file",
+                    "code": "\napp.get('/', (req, res) => {\n    res.sendFile(__dirname + '/public/index.html');\n});"
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "q": "Q45 : What is res.end()?",
+                    "a": "res.end() is used to terminate the response process without sending additional data. Once this method is called, the server considers the response complete and closes the connection. It is commonly used in low-level response handling scenarios where the developer manually manages the response. In most Express applications, methods like res.send() and res.json() are preferred because they automatically send data and end the response.",
+                    "type": "text",
+                    "id": 45,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Ending a response manually",
+                    "code": "\napp.get('/end', (req, res) => {\n    res.end();\n});"
+                },
+                {
+                    "type": "note",
+                    "note": "res.send() sends data and automatically ends the response, whereas res.end() only terminates the response and does not send any additional content."
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "q": "Q46 : What is Middleware in Express.js?",
+                    "a": "Middleware in Express.js refers to functions that execute during the request-response cycle. These functions have access to the request object (req), response object (res), and the next middleware function in the chain. Middleware can perform tasks such as logging requests, authentication, validation, parsing request data, modifying requests or responses, and handling errors. Middleware is one of the core concepts of Express and allows developers to build modular and reusable application logic.",
+                    "type": "text",
+                    "id": 46,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Logging": "Tracks incoming requests.",
+                        "Authentication": "Verifies user identity.",
+                        "Validation": "Checks request data before processing.",
+                        "Error Handling": "Handles application errors centrally.",
+                        "Request Processing": "Can modify requests and responses."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : How does middleware work in Express.js?",
+                    "a": "Middleware works as a chain of functions executed sequentially whenever a request reaches the Express application. Each middleware can perform operations on the request or response and then pass control to the next middleware using the next() function. The request continues moving through the middleware stack until a response is sent or an error occurs. This mechanism enables separation of concerns and reusable application components.",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Client sends a request.",
+                        "2": "Express receives the request.",
+                        "3": "Middleware 1 executes.",
+                        "4": "Middleware 2 executes.",
+                        "5": "Route handler executes.",
+                        "6": "Response is sent back to the client."
+                    }
+                },
+                {
+                    "type": "img",
+                    "img": "express-middleware-flow.png"
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "q": "Q48 : What is the next() function?",
+                    "a": "The next() function is used to pass control from the current middleware function to the next middleware in the stack. Without calling next(), Express assumes the current middleware has finished processing the request. The next() function is essential for chaining middleware together and ensuring the request continues through the application flow.",
+                    "type": "text",
+                    "id": 48,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Passing control to the next middleware",
+                    "code": "\napp.use((req, res, next) => {\n    console.log('Middleware executed');\n    next();\n});"
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "q": "Q49 : What happens if next() is not called?",
+                    "a": "If next() is not called and no response is sent, the request will remain hanging indefinitely because Express will not know how to proceed. This is a common mistake when developing middleware. Developers must either send a response or call next() to continue the request-response cycle.",
+                    "type": "text",
+                    "id": 49,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Always call next() or send a response. Otherwise, the client may keep waiting until the request times out."
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "q": "Q50 : Types of middleware in Express.js?",
+                    "a": "Express.js supports multiple types of middleware, each serving a specific purpose in the request-response cycle. Choosing the right middleware type helps organize application logic efficiently and improves maintainability.",
+                    "type": "text",
+                    "id": 50,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Application-Level Middleware": "Applied to the entire application.",
+                        "Router-Level Middleware": "Applied only to specific routers.",
+                        "Built-in Middleware": "Provided by Express itself.",
+                        "Third-Party Middleware": "Installed through npm packages.",
+                        "Error Middleware": "Handles application errors."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "q": "Q51 : What is Application-Level Middleware?",
+                    "a": "Application-level middleware is middleware registered directly on the Express application object using app.use() or app.METHOD(). It executes for every matching request in the application. This type of middleware is commonly used for logging, authentication, request parsing, and other global operations.",
+                    "type": "text",
+                    "id": 51,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Application-level middleware example",
+                    "code": "\napp.use((req, res, next) => {\n    console.log('Application middleware');\n    next();\n});"
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "q": "Q52 : What is Router-Level Middleware?",
+                    "a": "Router-level middleware works similarly to application-level middleware but is attached to an Express Router instance. It only executes for routes associated with that router. This approach helps organize large applications by grouping related routes and middleware together.",
+                    "type": "text",
+                    "id": 52,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Router-level middleware example",
+                    "code": "\nconst router = express.Router();\n\nrouter.use((req, res, next) => {\n    console.log('Router middleware');\n    next();\n});"
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "q": "Q53 : Difference between Application-Level and Router-Level Middleware?",
+                    "a": "Both middleware types serve similar purposes, but they differ in scope and usage. Application-level middleware affects the entire application, whereas router-level middleware is limited to specific route groups.",
+                    "type": "text",
+                    "id": 53,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Application-Level Middleware"
+                        },
+                        {
+                            "label": "Router-Level Middleware"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Attached using app.use()"
+                                },
+                                {
+                                    "col": "Attached using router.use()"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Applies globally"
+                                },
+                                {
+                                    "col": "Applies to specific routes"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Suitable for common logic"
+                                },
+                                {
+                                    "col": "Suitable for module-specific logic"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Used across entire application"
+                                },
+                                {
+                                    "col": "Used inside routers"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "q": "Q54 : What is Built-in Middleware in Express.js?",
+                    "a": "Built-in middleware refers to middleware functions that come bundled with Express. These middleware functions help developers perform common tasks without installing additional packages. They simplify request processing and improve development speed.",
+                    "type": "text",
+                    "id": 54,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "express.json()": "Parses JSON request bodies.",
+                        "express.urlencoded()": "Parses URL-encoded data.",
+                        "express.static()": "Serves static files.",
+                        "express.Router()": "Creates modular route handlers."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "Que": [
+                {
+                    "q": "Q55 : What is express.json() middleware?",
+                    "a": "express.json() is built-in middleware used to parse incoming JSON payloads. When a client sends JSON data in the request body, this middleware converts it into a JavaScript object and stores it in req.body. It is widely used in REST APIs where clients exchange data using JSON format.",
+                    "type": "text",
+                    "id": 55,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Using express.json()",
+                    "code": "\napp.use(express.json());"
+                }
+            ]
+        },
+        {
+            "id": "56",
+            "Que": [
+                {
+                    "q": "Q56 : What is express.urlencoded() middleware?",
+                    "a": "express.urlencoded() is middleware used to parse URL-encoded form data submitted through HTML forms. It extracts form fields and makes them available in req.body. This middleware is commonly used when handling traditional web forms and form submissions.",
+                    "type": "text",
+                    "id": 56,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Using express.urlencoded()",
+                    "code": "\napp.use(express.urlencoded({ extended: true }));"
+                }
+            ]
+        },
+        {
+            "id": "57",
+            "Que": [
+                {
+                    "q": "Q57 : What is Third-Party Middleware?",
+                    "a": "Third-party middleware refers to middleware packages developed outside of Express and installed through npm. These middleware packages provide additional functionality such as security, logging, authentication, file uploads, session management, and CORS support. They help developers avoid reinventing common solutions.",
+                    "type": "text",
+                    "id": 57,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "morgan": "HTTP request logging.",
+                        "cors": "Cross-Origin Resource Sharing support.",
+                        "helmet": "Security-related headers.",
+                        "multer": "File uploads.",
+                        "cookie-parser": "Cookie parsing."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "58",
+            "Que": [
+                {
+                    "q": "Q58 : What is Custom Middleware?",
+                    "a": "Custom middleware is middleware created by developers to implement application-specific functionality. It can be used for logging, authorization, request validation, performance monitoring, or any custom business logic. Custom middleware promotes code reuse and keeps route handlers clean.",
+                    "type": "text",
+                    "id": 58,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Creating custom middleware",
+                    "code": "\nconst logger = (req, res, next) => {\n    console.log(`${req.method} ${req.url}`);\n    next();\n};\n\napp.use(logger);"
+                }
+            ]
+        },
+        {
+            "id": "59",
+            "Que": [
+                {
+                    "q": "Q59 : What is Error Handling Middleware?",
+                    "a": "Error handling middleware is a special type of middleware used to catch and process errors that occur during request handling. Unlike normal middleware, it accepts four parameters: err, req, res, and next. Centralized error handling improves application stability and ensures consistent error responses throughout the application.",
+                    "type": "text",
+                    "id": 59,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Error handling middleware",
+                    "code": "\napp.use((err, req, res, next) => {\n    console.error(err.message);\n    res.status(500).json({ error: 'Internal Server Error' });\n});"
+                },
+                {
+                    "type": "note",
+                    "note": "Error middleware must contain four parameters (err, req, res, next). Otherwise Express will treat it as normal middleware."
+                }
+            ]
+        },
+        {
+            "id": "60",
+            "Que": [
+                {
+                    "q": "Q60 : Difference between Normal Middleware and Error Middleware?",
+                    "a": "Normal middleware processes requests during the regular request-response cycle, while error middleware is specifically designed to handle errors. Error middleware executes only when an error is passed using next(error) or when an exception occurs during request processing.",
+                    "type": "text",
+                    "id": 60,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Normal Middleware"
+                        },
+                        {
+                            "label": "Error Middleware"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Handles normal requests"
+                                },
+                                {
+                                    "col": "Handles application errors"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "(req, res, next)"
+                                },
+                                {
+                                    "col": "(err, req, res, next)"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Runs during normal execution"
+                                },
+                                {
+                                    "col": "Runs when an error occurs"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Used for logging, auth, parsing"
+                                },
+                                {
+                                    "col": "Used for centralized error handling"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "61",
+            "Que": [
+                {
+                    "q": "Q61 : What is Routing in Express.js?",
+                    "a": "Routing in Express.js refers to the process of determining how an application responds to a client request for a particular endpoint, URI, or path. Routes are defined using HTTP methods such as GET, POST, PUT, PATCH, and DELETE. When a request matches a route, Express executes the corresponding handler function. Routing is one of the core features of Express because it allows developers to organize application functionality and build RESTful APIs efficiently.",
+                    "type": "text",
+                    "id": 61,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "URL Mapping": "Maps URLs to specific functions.",
+                        "Request Handling": "Processes incoming requests.",
+                        "API Development": "Forms the foundation of REST APIs.",
+                        "Code Organization": "Keeps application structure clean.",
+                        "Resource Access": "Allows access to application resources."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "62",
+            "Que": [
+                {
+                    "q": "Q62 : Why is routing important?",
+                    "a": "Routing is important because it defines how users and applications interact with the server. It enables developers to organize endpoints logically, manage resources efficiently, and create scalable applications. Without routing, a server would not know which code should execute when a request arrives. Proper routing improves maintainability, readability, and API design consistency.",
+                    "type": "text",
+                    "id": 62,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Organization": "Structures application endpoints.",
+                        "Scalability": "Supports large applications.",
+                        "Maintainability": "Makes code easier to manage.",
+                        "Security": "Controls access to resources.",
+                        "User Experience": "Provides predictable URLs."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "63",
+            "Que": [
+                {
+                    "q": "Q63 : What is a Route Handler?",
+                    "a": "A route handler is a callback function associated with a specific route. When a client request matches the route, Express executes the handler function. Route handlers contain the business logic required to process requests, interact with databases, perform validations, and send responses back to the client.",
+                    "type": "text",
+                    "id": 63,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Example of a route handler",
+                    "code": "\napp.get('/users', (req, res) => {\n    res.send('List of users');\n});"
+                }
+            ]
+        },
+        {
+            "id": "64",
+            "Que": [
+                {
+                    "q": "Q64 : How do you define routes in Express?",
+                    "a": "Routes in Express are defined using methods that correspond to HTTP verbs such as app.get(), app.post(), app.put(), app.patch(), and app.delete(). Each route consists of a path and a callback function. When a request matches both the path and HTTP method, Express executes the associated route handler.",
+                    "type": "text",
+                    "id": 64,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Defining routes in Express",
+                    "code": "\napp.get('/products', (req, res) => {\n    res.send('Products');\n});\n\napp.post('/products', (req, res) => {\n    res.send('Product Created');\n});"
+                }
+            ]
+        },
+        {
+            "id": "65",
+            "Que": [
+                {
+                    "q": "Q65 : What are Route Parameters?",
+                    "a": "Route parameters are named URL segments used to capture values from the URL. They allow developers to create dynamic routes where parts of the URL can change. Route parameters are defined using a colon (:) before the parameter name and are commonly used for resource identifiers such as user IDs, product IDs, or order IDs.",
+                    "type": "text",
+                    "id": 65,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Using route parameters",
+                    "code": "\napp.get('/users/:id', (req, res) => {\n    res.send(`User ID: ${req.params.id}`);\n});"
+                }
+            ]
+        },
+        {
+            "id": "66",
+            "Que": [
+                {
+                    "q": "Q66 : What is req.params?",
+                    "a": "req.params is an object that contains route parameter values extracted from the URL. When Express matches a route with parameters, it automatically stores those values in req.params. Developers use this object to access dynamic values such as user IDs, product IDs, and category names from URLs.",
+                    "type": "text",
+                    "id": 66,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Accessing route parameters",
+                    "code": "\napp.get('/users/:id', (req, res) => {\n    console.log(req.params.id);\n    res.send('User Found');\n});"
+                }
+            ]
+        },
+        {
+            "id": "67",
+            "Que": [
+                {
+                    "q": "Q67 : Difference between req.params and req.query?",
+                    "a": "Both req.params and req.query are used to retrieve values from incoming requests, but they originate from different parts of the URL. Route parameters are embedded in the URL path, while query parameters appear after the question mark (?) in the URL.",
+                    "type": "text",
+                    "id": 67,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "req.params"
+                        },
+                        {
+                            "label": "req.query"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Extracted from URL path"
+                                },
+                                {
+                                    "col": "Extracted from query string"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "/users/:id"
+                                },
+                                {
+                                    "col": "/users?id=1"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Usually required"
+                                },
+                                {
+                                    "col": "Usually optional"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Stored in req.params"
+                                },
+                                {
+                                    "col": "Stored in req.query"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "68",
+            "Que": [
+                {
+                    "q": "Q68 : What are Query Parameters?",
+                    "a": "Query parameters are key-value pairs appended to a URL after a question mark (?). They are commonly used for filtering, sorting, searching, pagination, and passing optional data to the server. Express automatically parses query parameters and stores them in the req.query object.",
+                    "type": "text",
+                    "id": 68,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Using query parameters",
+                    "code": "\napp.get('/products', (req, res) => {\n    console.log(req.query.category);\n    res.send('Products');\n});"
+                }
+            ]
+        },
+        {
+            "id": "69",
+            "Que": [
+                {
+                    "q": "Q69 : What is Route Chaining?",
+                    "a": "Route chaining is a technique used to define multiple handlers for the same route path. It improves code organization by grouping related HTTP methods together. Instead of repeatedly defining the same route path, developers can chain methods and manage all operations for a resource in one location.",
+                    "type": "text",
+                    "id": 69,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Example of route chaining",
+                    "code": "\napp.route('/users')\n    .get((req, res) => {\n        res.send('Get Users');\n    })\n    .post((req, res) => {\n        res.send('Create User');\n    });"
+                }
+            ]
+        },
+        {
+            "id": "70",
+            "Que": [
+                {
+                    "q": "Q70 : What is app.route()?",
+                    "a": "app.route() is a method provided by Express that allows developers to create chainable route handlers for a single route path. It reduces code duplication and improves readability by grouping all HTTP operations related to a resource under one route definition.",
+                    "type": "text",
+                    "id": 70,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Using app.route()",
+                    "code": "\napp.route('/users')\n    .get((req, res) => {\n        res.send('Get Users');\n    })\n    .post((req, res) => {\n        res.send('Create User');\n    });"
+                }
+            ]
+        },
+        {
+            "id": "71",
+            "Que": [
+                {
+                    "q": "Q71 : What are Wildcard Routes?",
+                    "a": "Wildcard routes are routes that match multiple URL patterns using special characters such as '*' or route parameters. They are useful when handling dynamic paths, catch-all routes, file paths, or undefined routes. Wildcard routes allow Express applications to process requests that do not match a specific route definition. They should be used carefully because an overly broad wildcard route can unintentionally capture requests meant for other routes.",
+                    "type": "text",
+                    "id": 71,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Example of a wildcard route",
+                    "code": "\napp.get('*', (req, res) => {\n    res.send('Wildcard Route Matched');\n});"
+                },
+                {
+                    "type": "note",
+                    "note": "Wildcard routes should generally be placed at the end of the routing configuration because Express processes routes from top to bottom."
+                }
+            ]
+        },
+        {
+            "id": "72",
+            "Que": [
+                {
+                    "q": "Q72 : What is Route Order in Express?",
+                    "a": "Route order refers to the sequence in which routes are defined within an Express application. Express evaluates routes from top to bottom and executes the first matching route. Because of this behavior, more specific routes should be defined before generic routes. Incorrect route ordering can lead to unexpected behavior where requests are handled by the wrong route handler.",
+                    "type": "text",
+                    "id": 72,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Express checks routes sequentially from top to bottom.",
+                        "2": "The first matching route is executed.",
+                        "3": "Specific routes should be declared before dynamic routes.",
+                        "4": "Wildcard routes should usually be declared last.",
+                        "5": "Proper route ordering prevents unexpected matches."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "73",
+            "Que": [
+                {
+                    "q": "Q73 : What happens when multiple routes match?",
+                    "a": "When multiple routes could potentially match a request, Express executes the first matching route it encounters in the routing stack. Unless the route handler explicitly calls next(), Express will stop processing additional matching routes. This behavior makes route order extremely important because a generic route declared before a specific route may prevent the specific route from ever executing.",
+                    "type": "text",
+                    "id": 73,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Express follows a first-match-wins approach. The first matching route is executed unless next() is called to continue processing."
+                }
+            ]
+        },
+        {
+            "id": "74",
+            "Que": [
+                {
+                    "q": "Q74 : How do you handle 404 routes in Express?",
+                    "a": "A 404 route is used to handle requests for resources that do not exist in the application. In Express, a catch-all middleware is typically placed at the end of the routing configuration. If none of the previously defined routes match the incoming request, this middleware executes and returns a 404 status code along with an appropriate error message. Proper 404 handling improves user experience and API reliability.",
+                    "type": "text",
+                    "id": 74,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Handling 404 routes",
+                    "code": "\napp.use((req, res) => {\n    res.status(404).send('Page Not Found');\n});"
+                }
+            ]
+        },
+        {
+            "id": "75",
+            "Que": [
+                {
+                    "q": "Q75 : What is the difference between Routing and Middleware?",
+                    "a": "Routing and middleware are both important concepts in Express.js, but they serve different purposes. Routing determines which handler should process a specific request based on the URL and HTTP method, whereas middleware performs operations during the request-response cycle before, after, or between route handlers. Middleware is commonly used for logging, authentication, validation, and error handling, while routing focuses on directing requests to the correct business logic.",
+                    "type": "text",
+                    "id": 75,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Routing"
+                        },
+                        {
+                            "label": "Middleware"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Determines which handler processes a request"
+                                },
+                                {
+                                    "col": "Executes during the request-response cycle"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Based on URL and HTTP method"
+                                },
+                                {
+                                    "col": "Based on middleware registration order"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Handles business logic endpoints"
+                                },
+                                {
+                                    "col": "Handles logging, authentication, validation, etc."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Usually sends the final response"
+                                },
+                                {
+                                    "col": "Usually passes control using next()"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "76",
+            "Que": [
+                {
+                    "q": "Q76 : What is Express Router?",
+                    "a": "Express Router is a mini Express application that provides routing capabilities independently from the main application. It allows developers to group related routes into separate files and modules, making large applications easier to manage and maintain. Instead of defining all routes inside app.js or server.js, routers help organize endpoints by features such as users, products, orders, and authentication. Express Router improves code readability, scalability, and modularity in enterprise-level applications.",
+                    "type": "text",
+                    "id": 76,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Modular": "Separates routes into independent files.",
+                        "Maintainable": "Keeps code organized and readable.",
+                        "Reusable": "Can be mounted in multiple locations.",
+                        "Scalable": "Ideal for large applications.",
+                        "Feature Based": "Routes can be grouped by business modules."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "77",
+            "Que": [
+                {
+                    "q": "Q77 : Why should we use Express Router?",
+                    "a": "As applications grow, placing all routes inside a single file becomes difficult to manage. Express Router solves this problem by allowing developers to split routes into multiple modules. This makes the application more maintainable, easier to test, and simpler for teams to collaborate on. Router-based architecture is considered a best practice for building scalable Express applications.",
+                    "type": "text",
+                    "id": 77,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Improves project structure.",
+                        "2": "Reduces code duplication.",
+                        "3": "Simplifies maintenance.",
+                        "4": "Supports team collaboration.",
+                        "5": "Enhances scalability."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "78",
+            "Que": [
+                {
+                    "q": "Q78 : How do you create a Router in Express?",
+                    "a": "A Router object is created using express.Router(). Once created, routes can be attached to it just like the main Express application. The router can then be exported and mounted into the main application using app.use(). This approach helps separate route logic from application startup logic.",
+                    "type": "text",
+                    "id": 78,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Creating a router",
+                    "code": "\nconst express = require('express');\nconst router = express.Router();\n\nrouter.get('/', (req, res) => {\n    res.send('Users Route');\n});\n\nmodule.exports = router;"
+                }
+            ]
+        },
+        {
+            "id": "79",
+            "Que": [
+                {
+                    "q": "Q79 : How do you use Router in the main application?",
+                    "a": "After creating a router module, it must be imported into the main Express application and mounted using app.use(). Once mounted, all routes defined inside the router become accessible through the specified base path. This technique is commonly used to organize routes by domain or feature.",
+                    "type": "text",
+                    "id": 79,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Mounting a router",
+                    "code": "\nconst userRouter = require('./routes/users');\n\napp.use('/users', userRouter);"
+                }
+            ]
+        },
+        {
+            "id": "80",
+            "Que": [
+                {
+                    "q": "Q80 : What is Router Middleware?",
+                    "a": "Router middleware refers to middleware functions that are attached directly to a Router instance instead of the entire application. These middleware functions execute only for requests handled by that router. Router-level middleware is useful when applying authentication, validation, logging, or authorization logic to a specific group of routes.",
+                    "type": "text",
+                    "id": 80,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Router middleware example",
+                    "code": "\nrouter.use((req, res, next) => {\n    console.log('Router Middleware');\n    next();\n});"
+                }
+            ]
+        },
+        {
+            "id": "81",
+            "Que": [
+                {
+                    "q": "Q81 : What is the difference between app.use() and router.use()?",
+                    "a": "Both app.use() and router.use() are used to register middleware, but their scope differs. app.use() applies middleware globally across the entire application, whereas router.use() applies middleware only to routes handled by a specific router. Choosing between them depends on whether the functionality should affect all routes or only a subset of routes.",
+                    "type": "text",
+                    "id": 81,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "app.use()"
+                        },
+                        {
+                            "label": "router.use()"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Applies globally"
+                                },
+                                {
+                                    "col": "Applies to specific router"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Used for application-wide middleware"
+                                },
+                                {
+                                    "col": "Used for module-specific middleware"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Runs for all matching routes"
+                                },
+                                {
+                                    "col": "Runs only for router routes"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Defined on app instance"
+                                },
+                                {
+                                    "col": "Defined on router instance"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "82",
+            "Que": [
+                {
+                    "q": "Q82 : What are Nested Routes?",
+                    "a": "Nested routes are routes that exist under a parent route structure. They are commonly used when resources have relationships with other resources. For example, comments may belong to posts, and orders may belong to users. Nested routes help create logical and RESTful URL structures that improve API readability and maintainability.",
+                    "type": "text",
+                    "id": 82,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Nested route example",
+                    "code": "\nrouter.get('/users/:userId/orders/:orderId', (req, res) => {\n    res.send('Order Details');\n});"
+                }
+            ]
+        },
+        {
+            "id": "83",
+            "Que": [
+                {
+                    "q": "Q83 : What is mergeParams in Express Router?",
+                    "a": "mergeParams is a Router option that allows child routers to access route parameters defined in parent routers. Without mergeParams, nested routers cannot access parent route parameters. This feature is useful when building APIs with nested resources and hierarchical route structures.",
+                    "type": "text",
+                    "id": 83,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Using mergeParams",
+                    "code": "\nconst router = express.Router({ mergeParams: true });"
+                }
+            ]
+        },
+        {
+            "id": "84",
+            "Que": [
+                {
+                    "q": "Q84 : What is router.param()?",
+                    "a": "router.param() is a method that allows developers to define middleware that automatically executes whenever a specified route parameter is present. It is often used to validate IDs, load database records, or perform preprocessing before the main route handler executes.",
+                    "type": "text",
+                    "id": 84,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Using router.param()",
+                    "code": "\nrouter.param('id', (req, res, next, id) => {\n    console.log(id);\n    next();\n});"
+                }
+            ]
+        },
+        {
+            "id": "85",
+            "Que": [
+                {
+                    "q": "Q85 : Why is router.param() useful?",
+                    "a": "router.param() prevents duplicate validation logic by centralizing parameter processing. Instead of validating the same parameter in multiple routes, developers can define the logic once and reuse it automatically. This improves maintainability, consistency, and code quality while reducing repetition.",
+                    "type": "text",
+                    "id": 85,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Validation": "Validate route parameters.",
+                        "Database Lookup": "Fetch records before route execution.",
+                        "Reusability": "Avoid duplicate logic.",
+                        "Consistency": "Apply same checks everywhere.",
+                        "Cleaner Code": "Keeps route handlers concise."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "86",
+            "Que": [
+                {
+                    "q": "Q86 : Can multiple routers be used in a single application?",
+                    "a": "Yes, Express applications can use multiple routers simultaneously. Large applications commonly separate routes into modules such as authentication, users, products, orders, and payments. Each module contains its own router, which is then mounted into the main application. This modular architecture improves scalability and maintainability.",
+                    "type": "text",
+                    "id": 86,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "87",
+            "Que": [
+                {
+                    "q": "Q87 : How do routers improve scalability?",
+                    "a": "Routers improve scalability by dividing application functionality into smaller, independent modules. Developers can work on separate route files without affecting unrelated parts of the application. This modular design becomes increasingly important as projects grow in size and complexity, making maintenance and testing much easier.",
+                    "type": "text",
+                    "id": 87,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "88",
+            "Que": [
+                {
+                    "q": "Q88 : What is a modular routing structure?",
+                    "a": "A modular routing structure is an architectural pattern where routes are organized into separate files based on features or domains. Instead of storing all endpoints in a single file, each module manages its own routes. This improves readability, maintainability, code reuse, and collaboration among development teams.",
+                    "type": "text",
+                    "id": 88,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "89",
+            "Que": [
+                {
+                    "q": "Q89 : What are the best practices for using Express Router?",
+                    "a": "Best practices include keeping routers feature-based, using middleware effectively, validating request data, separating business logic into controllers, avoiding large route files, and maintaining consistent naming conventions. Following these practices helps create scalable, maintainable, and production-ready Express applications.",
+                    "type": "text",
+                    "id": 89,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": {
+                        "1": "Keep routes feature-based.",
+                        "2": "Use controllers for business logic.",
+                        "3": "Validate inputs.",
+                        "4": "Apply middleware wisely.",
+                        "5": "Avoid huge route files."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "90",
+            "Que": [
+                {
+                    "q": "Q90 : What is the difference between Express Application and Express Router?",
+                    "a": "An Express Application represents the entire web application and is created using express(). An Express Router is a smaller, modular routing component created using express.Router(). While the application object manages the complete server, routers are used to organize and manage specific groups of routes within the application.",
+                    "type": "text",
+                    "id": 90,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Express Application"
+                        },
+                        {
+                            "label": "Express Router"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Created using express()"
+                                },
+                                {
+                                    "col": "Created using express.Router()"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Represents the entire application"
+                                },
+                                {
+                                    "col": "Represents a route module"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Handles global configuration"
+                                },
+                                {
+                                    "col": "Handles grouped routes"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Can mount routers"
+                                },
+                                {
+                                    "col": "Cannot replace the application"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "91",
+            "Que": [
+                {
+                    "q": "Q91 : What is the Request Object (req) in Express?",
+                    "a": "The Request Object, commonly represented as req, is an object provided by Express that contains information about the incoming HTTP request sent by the client. It includes details such as request parameters, query strings, headers, body data, cookies, URL information, and HTTP methods. Developers use the req object to access client-provided data and make decisions about how the application should process the request. It is one of the most important objects in the Express request-response lifecycle.",
+                    "type": "text",
+                    "id": 91,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "req.body": "Contains request body data.",
+                        "req.params": "Contains route parameters.",
+                        "req.query": "Contains query string parameters.",
+                        "req.headers": "Contains HTTP headers.",
+                        "req.method": "Contains HTTP request method."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "92",
+            "Que": [
+                {
+                    "q": "Q92 : What is the Response Object (res) in Express?",
+                    "a": "The Response Object, represented as res, is used by Express to send responses back to the client. It provides methods for sending data, JSON responses, files, redirects, status codes, and more. Every route handler uses the response object to communicate the result of request processing. Without sending a response through res, the client would continue waiting indefinitely for the server to complete the request.",
+                    "type": "text",
+                    "id": 92,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "res.send()": "Send text, HTML, objects, or buffers.",
+                        "res.json()": "Send JSON data.",
+                        "res.status()": "Set HTTP status code.",
+                        "res.redirect()": "Redirect users to another URL.",
+                        "res.download()": "Send files for download."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "93",
+            "Que": [
+                {
+                    "q": "Q93 : What is req.body?",
+                    "a": "req.body is a property of the Request Object that contains data sent by the client in the body of an HTTP request. It is commonly used with POST, PUT, and PATCH requests when users submit forms or send JSON data. To access req.body, middleware such as express.json() or express.urlencoded() must be configured. It allows servers to process user input, form submissions, and API payloads efficiently.",
+                    "type": "text",
+                    "id": 93,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Accessing request body data",
+                    "code": "\napp.use(express.json());\n\napp.post('/users', (req, res) => {\n    console.log(req.body);\n    res.send('User Created');\n});"
+                }
+            ]
+        },
+        {
+            "id": "94",
+            "Que": [
+                {
+                    "q": "Q94 : What is req.query?",
+                    "a": "req.query is an object that contains query string parameters from the URL. Query parameters are optional values appended to a URL after a question mark. They are often used for searching, filtering, sorting, and pagination. Express automatically parses query parameters and makes them available through req.query, allowing developers to access client-provided filtering criteria easily.",
+                    "type": "text",
+                    "id": 94,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Using query parameters",
+                    "code": "\napp.get('/products', (req, res) => {\n    console.log(req.query.category);\n    res.send('Products Retrieved');\n});"
+                }
+            ]
+        },
+        {
+            "id": "95",
+            "Que": [
+                {
+                    "q": "Q95 : What is req.params?",
+                    "a": "req.params is an object that stores route parameters extracted from dynamic URL segments. Route parameters are commonly used to identify resources such as users, products, orders, or categories. Express automatically extracts these values and makes them available through req.params. This allows applications to create flexible and dynamic routes without hardcoding specific values.",
+                    "type": "text",
+                    "id": 95,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Accessing route parameters",
+                    "code": "\napp.get('/users/:id', (req, res) => {\n    console.log(req.params.id);\n    res.send('User Found');\n});"
+                }
+            ]
+        },
+        {
+            "id": "96",
+            "Que": [
+                {
+                    "q": "Q96 : What is req.headers?",
+                    "a": "req.headers is an object containing all HTTP headers sent by the client. Headers provide metadata about the request, such as content type, authorization tokens, browser information, accepted formats, and caching directives. Developers frequently access req.headers when implementing authentication, content negotiation, API versioning, and security-related features.",
+                    "type": "text",
+                    "id": 96,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Accessing request headers",
+                    "code": "\napp.get('/profile', (req, res) => {\n    console.log(req.headers.authorization);\n    res.send('Profile Data');\n});"
+                }
+            ]
+        },
+        {
+            "id": "97",
+            "Que": [
+                {
+                    "q": "Q97 : What is req.method?",
+                    "a": "req.method is a property that contains the HTTP method used for the incoming request. Common HTTP methods include GET, POST, PUT, PATCH, DELETE, and OPTIONS. Developers use req.method when implementing conditional logic, request logging, debugging, and middleware that behaves differently depending on the type of request received.",
+                    "type": "text",
+                    "id": 97,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Checking request method",
+                    "code": "\napp.use((req, res, next) => {\n    console.log(req.method);\n    next();\n});"
+                }
+            ]
+        },
+        {
+            "id": "98",
+            "Que": [
+                {
+                    "q": "Q98 : What is req.url?",
+                    "a": "req.url contains the URL path requested by the client. It includes the pathname and query string but does not contain protocol or hostname information. Developers commonly use req.url for request logging, debugging, analytics, monitoring, and implementing custom routing logic. It provides visibility into which endpoint was requested by the client.",
+                    "type": "text",
+                    "id": 98,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Accessing requested URL",
+                    "code": "\napp.use((req, res, next) => {\n    console.log(req.url);\n    next();\n});"
+                }
+            ]
+        },
+        {
+            "id": "99",
+            "Que": [
+                {
+                    "q": "Q99 : What is res.send()?",
+                    "a": "res.send() is a response method used to send data back to the client. It can send strings, HTML content, JSON objects, arrays, or buffers. Express automatically determines the appropriate Content-Type header based on the provided data. It is one of the most commonly used methods for sending responses in Express applications.",
+                    "type": "text",
+                    "id": 99,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Using res.send()",
+                    "code": "\napp.get('/', (req, res) => {\n    res.send('Welcome to Express');\n});"
+                }
+            ]
+        },
+        {
+            "id": "100",
+            "Que": [
+                {
+                    "q": "Q100 : What is res.json()?",
+                    "a": "res.json() is a specialized response method used to send JSON-formatted data to the client. It automatically converts JavaScript objects into JSON and sets the Content-Type header to application/json. This method is widely used in REST APIs because JSON is the standard format for data exchange between clients and servers.",
+                    "type": "text",
+                    "id": 100,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Sending JSON response",
+                    "code": "\napp.get('/user', (req, res) => {\n    res.json({\n        id: 1,\n        name: 'John'\n    });\n});"
+                }
+            ]
+        },
+        {
+            "id": "101",
+            "Que": [
+                {
+                    "q": "Q101 : Difference between res.send() and res.json()?",
+                    "a": "Both res.send() and res.json() are used to send responses to the client, but they serve slightly different purposes. res.send() is a general-purpose method capable of sending strings, HTML, objects, arrays, and buffers, while res.json() is specifically designed for sending JSON responses. In modern API development, res.json() is generally preferred when returning data because it explicitly indicates that the response contains JSON and automatically sets the appropriate Content-Type header.",
+                    "type": "text",
+                    "id": 101,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "res.send()"
+                        },
+                        {
+                            "label": "res.json()"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Can send strings, HTML, objects, arrays, and buffers"
+                                },
+                                {
+                                    "col": "Specifically sends JSON responses"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Automatically determines content type"
+                                },
+                                {
+                                    "col": "Always sets Content-Type to application/json"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Suitable for web pages and general responses"
+                                },
+                                {
+                                    "col": "Suitable for REST APIs"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Can send plain text"
+                                },
+                                {
+                                    "col": "Converts JavaScript objects into JSON"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "102",
+            "Que": [
+                {
+                    "q": "Q102 : What is res.status()?",
+                    "a": "res.status() is a method used to set the HTTP status code of a response before sending it to the client. Status codes indicate the outcome of a request, such as success, client errors, or server errors. Common examples include 200 for successful requests, 201 for resource creation, 400 for bad requests, 404 for not found, and 500 for internal server errors. Using proper status codes helps clients understand the result of their requests and build reliable applications.",
+                    "type": "text",
+                    "id": 102,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Setting a status code before sending a response",
+                    "code": "\napp.get('/users/:id', (req, res) => {\n    res.status(200).json({\n        message: 'User Found'\n    });\n});"
+                }
+            ]
+        },
+        {
+            "id": "103",
+            "Que": [
+                {
+                    "q": "Q103 : What is res.redirect()?",
+                    "a": "res.redirect() is a method used to redirect a client from one URL to another. When this method is executed, Express sends a redirect response to the browser, instructing it to make a new request to the specified URL. Redirects are commonly used after successful login, logout, form submissions, URL restructuring, or when resources have been moved to a different location. Express supports both relative and absolute URLs for redirection.",
+                    "type": "text",
+                    "id": 103,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Redirecting a user to another route",
+                    "code": "\napp.get('/login-success', (req, res) => {\n    res.redirect('/dashboard');\n});"
+                }
+            ]
+        },
+        {
+            "id": "104",
+            "Que": [
+                {
+                    "q": "Q104 : What is res.download()?",
+                    "a": "res.download() is a method used to send a file to the client as an attachment, prompting the browser to download it instead of displaying it. It is commonly used for serving PDFs, reports, spreadsheets, images, and other downloadable resources. Express automatically sets the appropriate headers required for file download. Developers can also specify a custom filename that users will see during the download process.",
+                    "type": "text",
+                    "id": 104,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Sending a file for download",
+                    "code": "\napp.get('/download', (req, res) => {\n    res.download('./files/report.pdf');\n});"
+                }
+            ]
+        },
+        {
+            "id": "105",
+            "Que": [
+                {
+                    "q": "Q105 : What is the difference between Request and Response objects?",
+                    "a": "The Request Object (req) and Response Object (res) are the two most important objects in Express.js. The request object contains information sent by the client, such as URL parameters, query strings, headers, and body data. The response object is used by the server to send data, status codes, files, redirects, and other responses back to the client. Together, they form the foundation of the Express request-response lifecycle.",
+                    "type": "text",
+                    "id": 105,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Request Object (req)"
+                        },
+                        {
+                            "label": "Response Object (res)"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Contains data sent by the client"
+                                },
+                                {
+                                    "col": "Used to send data back to the client"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Includes body, params, query, and headers"
+                                },
+                                {
+                                    "col": "Includes send(), json(), status(), and redirect()"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Represents the incoming request"
+                                },
+                                {
+                                    "col": "Represents the outgoing response"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Provides client request information"
+                                },
+                                {
+                                    "col": "Provides methods for responding to clients"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -31,6 +31,17 @@ export const appRoutes: Route[] = [
             ),
     },
     {
+        path: 'nextJS-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
         path: 'vuejs-interview-questions',
         component: LayoutComponent,
         resolve: {
@@ -120,6 +131,127 @@ export const appRoutes: Route[] = [
             ),
     },
     {
+        path: 'tailwindCSS-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'c-sharp-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'mongoDB-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'postgreSQL-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'mySQL-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'devops-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'testNG-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'jenkins-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'aws-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'docker-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'typescript-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
         path: 'git-interview-questions',
         component: LayoutComponent,
         resolve: {
@@ -132,6 +264,17 @@ export const appRoutes: Route[] = [
     },
     {
         path: 'nodejs-interview-questions',
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        loadChildren: () =>
+            import('app/modules/view-content/view-content.module').then(
+                (m) => m.ViewContentModule,
+            ),
+    },
+    {
+        path: 'express-interview-questions',
         component: LayoutComponent,
         resolve: {
             initialData: InitialDataResolver,

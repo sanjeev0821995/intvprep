@@ -160,12 +160,24 @@ export class ViewContentComponent implements OnInit {
             );
             this.setMetaTag(
                 // eslint-disable-next-line max-len
-                'Prepare from this list of VueJS Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
+                'Prepare from this list of ReactJS Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
                 'https://intvprep.com/logo.PNG',
             );
             this.trackUsers('React-interview-Questions');
 
             return 'react';
+        } else if (this.path.includes('nextJS')) {
+            this.setTitle(
+                `Top 50+ NextJS Interview Questions Form Beginner to Experienced(${this.currentYear}) - Intvprep.`,
+            );
+            this.setMetaTag(
+                // eslint-disable-next-line max-len
+                'Prepare from this list of NextJS Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
+                'https://intvprep.com/logo.PNG',
+            );
+            this.trackUsers('NextJS-interview-Questions');
+
+            return 'nextjs';
         } else if (this.path.includes('vue')) {
             this.setTitle(
                 `Top 50+ VueJS Interview Questions Form Beginner to Experienced(${this.currentYear}) - Intvprep.`,
@@ -245,6 +257,17 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('CSS-interview-Questions');
 
             return 'css';
+        } else if (this.path.includes('tailwindCSS')) {
+            this.setTitle(
+                `Top 50+ Tailwind CSS Interview Questions (${this.currentYear}) - Intvprep.`,
+            );
+            this.setMetaTag(
+                'Find top Tailwind CSS interview questions asked. Explore basic, intermediate, and advanced level questions.',
+                'https://intvprep.com/logo.PNG',
+            );
+            this.trackUsers('tailwindCSS-interview-Questions');
+
+            return 'tailwind-css';
         } else if (this.path.includes('node')) {
             this.setTitle(
                 `Most Asked NodeJs Interview Questions (${this.currentYear}) - Intvprep.`,
@@ -256,6 +279,39 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('nodejs-interview-Questions');
 
             return 'nodejs';
+        } else if (this.path.includes('express')) {
+            this.setTitle(
+                `Top 100+ ExpressJs Interview Questions (${this.currentYear}) - Intvprep.`,
+            );
+            this.setMetaTag(
+                'Prepare from this list of ExpressJs Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
+                'https://intvprep.com/logo.PNG',
+            );
+            this.trackUsers('express-interview-Questions');
+
+            return 'express';
+        } else if (this.path.includes('mongoDB')) {
+            this.setTitle(
+                `Top 100+ MongoDB Interview Questions (${this.currentYear}) - Intvprep.`,
+            );
+            this.setMetaTag(
+                'Prepare from this list of MongoDB Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
+                'https://intvprep.com/logo.PNG',
+            );
+            this.trackUsers('mongoDB-interview-Questions');
+
+            return 'mongoDB';
+        } else if (this.path.includes('postgreSQL')) {
+            this.setTitle(
+                `Top 50+ postgreSQL Interview Questions (${this.currentYear}) - Intvprep.`,
+            );
+            this.setMetaTag(
+                'Prepare from this list of PostgreSQL Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
+                'https://intvprep.com/logo.PNG',
+            );
+            this.trackUsers('postgreSQL-interview-Questions');
+
+            return 'postgreSQL';
         } else if (this.path.includes('git')) {
             this.setTitle(
                 `Top 50+ Commonly Asked GIT Interview Questions (${this.currentYear}) - Intvprep.`,
@@ -267,6 +323,17 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('git-interview-Questions');
 
             return 'git';
+        } else if (this.path.includes('c-sharp')) {
+            this.setTitle(
+                `Top 50+ C# Interview Questions (${this.currentYear}) - Intvprep.`,
+            );
+            this.setMetaTag(
+                'Prepare from this list of C# Interview Questions asked at top companies for freshers and experienced candidates and ace your Interview.',
+                'https://intvprep.com/logo.PNG',
+            );
+            this.trackUsers('c-sharp-interview-Questions');
+
+            return 'csharp';
         } else if (this.path.includes('java-interview-questions')) {
             this.setTitle(
                 `Top 200+ Java Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
@@ -350,6 +417,83 @@ export class ViewContentComponent implements OnInit {
             this.trackUsers('springbootjpa-interview-questions');
 
             return 'springboot';
+        } else if (this.path.includes('mySQL-interview-questions')) {
+            this.setTitle(
+                `Top 150+ MySQL Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+            );
+            this.setMetaTag(
+                'Prepare the most asked MySQL Interview Questions and Answers for freshers and experienced candidates to crack your next automation testing interview.',
+                'https://intvprep.com/logo.PNG',
+            );
+            this.trackUsers('mySQL-interview-questions');
+
+            return 'mySQL';
+        } else if (this.path.includes('testNG-interview-questions')) {
+            this.setTitle(
+                `Top 100+ TestNG Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+            );
+            this.setMetaTag(
+                'Prepare the most asked TestNG Interview Questions and Answers for freshers and experienced candidates to crack your next automation testing interview.',
+                'https://intvprep.com/logo.PNG',
+            );
+            this.trackUsers('testNG-interview-questions');
+
+            return 'java';
+        } else if (this.path.includes('devops-interview-questions')) {
+            this.setTitle(
+                `Top 50+ Devops Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+            );
+            this.setMetaTag(
+                'Prepare the most asked Devops Interview Questions and Answers for freshers and experienced candidates to crack your next automation testing interview.',
+                'https://intvprep.com/logo.PNG',
+            );
+            this.trackUsers('devops-interview-questions');
+
+            return 'devops';
+        } else if (this.path.includes('jenkins-interview-questions')) {
+            this.setTitle(
+                `Top 100+ Jenkins Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+            );
+            this.setMetaTag(
+                'Prepare the most asked Jenkins Interview Questions and Answers for freshers and experienced candidates to crack your next automation testing interview.',
+                'https://intvprep.com/logo.PNG',
+            );
+            this.trackUsers('jenkins-interview-questions');
+
+            return 'jenkins';
+        } else if (this.path.includes('aws-interview-questions')) {
+            this.setTitle(
+                `Top 100+ AWS Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+            );
+            this.setMetaTag(
+                'Prepare the most asked AWS Interview Questions and Answers for freshers and experienced candidates to crack your next automation testing interview.',
+                'https://intvprep.com/logo.PNG',
+            );
+            this.trackUsers('aws-interview-questions');
+
+            return 'aws';
+        } else if (this.path.includes('docker-interview-questions')) {
+            this.setTitle(
+                `Top 100+ Docker Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+            );
+            this.setMetaTag(
+                'Prepare the most asked Docker Interview Questions and Answers for freshers and experienced candidates to crack your next automation testing interview.',
+                'https://intvprep.com/logo.PNG',
+            );
+            this.trackUsers('docker-interview-questions');
+
+            return 'docker';
+        } else if (this.path.includes('typescript-interview-questions')) {
+            this.setTitle(
+                `Top 100+ Typescript Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,
+            );
+            this.setMetaTag(
+                'Prepare the most asked Typescript Interview Questions and Answers for freshers and experienced candidates to crack your next automation testing interview.',
+                'https://intvprep.com/logo.PNG',
+            );
+            this.trackUsers('typescript-interview-questions');
+
+            return 'typeScript';
         } else if (this.path.includes('selenium-interview-questions')) {
             this.setTitle(
                 `Top 50+ Selenium Interview Questions and Answers for Freshers & Experienced (${this.currentYear}) - Intvprep.`,

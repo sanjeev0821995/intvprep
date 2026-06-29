@@ -1,0 +1,2634 @@
+{
+    "postgreSQL-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is PostgreSQL?",
+                    "a": "PostgreSQL is a powerful, open-source Object-Relational Database Management System (ORDBMS) that is known for its reliability, extensibility, and SQL compliance. It supports both relational and non-relational data types, advanced indexing, transactions, concurrency control, JSON storage, and custom functions. PostgreSQL is widely used for enterprise applications because it provides excellent performance, strong data integrity, and advanced features that make it suitable for everything from small applications to large-scale distributed systems.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Open Source": "Free to use and maintained by a global community.",
+                        "ACID Compliant": "Ensures reliable transactions and data consistency.",
+                        "Extensible": "Supports custom data types, operators, and functions.",
+                        "Cross Platform": "Runs on Windows, Linux, and macOS.",
+                        "Enterprise Ready": "Used by organizations requiring high reliability and scalability."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : What are the main features of PostgreSQL?",
+                    "a": "PostgreSQL provides a rich set of features that make it one of the most advanced relational database systems available today. It supports SQL standards, transactions, concurrency control, indexing, stored procedures, triggers, JSON data, replication, partitioning, and powerful query optimization. These capabilities enable developers to build secure, scalable, and high-performance applications across various domains.",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "SQL Compliance": "Supports most SQL standards.",
+                        "MVCC": "Allows multiple users to access data concurrently.",
+                        "Replication": "Supports streaming and logical replication.",
+                        "JSON Support": "Stores and queries JSON and JSONB data.",
+                        "Advanced Indexing": "Supports B-tree, Hash, GIN, GiST, BRIN, and SP-GiST indexes.",
+                        "Extensibility": "Custom functions, operators, and extensions."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : What is the difference between PostgreSQL and MySQL?",
+                    "a": "Both PostgreSQL and MySQL are popular relational database systems, but PostgreSQL focuses on standards compliance, advanced features, extensibility, and complex queries, whereas MySQL is known for simplicity and fast read performance in traditional web applications. PostgreSQL is generally preferred for enterprise applications and analytics, while MySQL is commonly used in content management systems and smaller web applications.",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "PostgreSQL" }, { "label": "MySQL" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Object-Relational Database" },
+                                { "col": "Relational Database" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Advanced SQL Features" },
+                                { "col": "Simpler SQL Features" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Excellent for Complex Queries" },
+                                {
+                                    "col": "Excellent for Read-heavy Applications"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Supports JSONB" },
+                                { "col": "Supports JSON" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Highly Extensible" },
+                                { "col": "Less Extensible" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : What is a Database in PostgreSQL?",
+                    "a": "A database is the highest-level container in PostgreSQL that stores related schemas, tables, views, indexes, functions, and other database objects. Multiple databases can exist within the same PostgreSQL server, and each database is isolated from the others. Applications typically connect to a specific database to perform operations.",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : What is a Schema in PostgreSQL?",
+                    "a": "A schema is a logical container inside a PostgreSQL database that organizes database objects such as tables, views, indexes, functions, and sequences. Schemas help avoid naming conflicts, improve organization, and simplify permission management. Every PostgreSQL database contains a default schema named 'public'.",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Create a schema",
+                    "code": "\nCREATE SCHEMA company;"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : What is a Table in PostgreSQL?",
+                    "a": "A table is a structured collection of rows and columns used to store related information. Each column represents an attribute, while each row represents a single record. PostgreSQL tables enforce data integrity through constraints and support indexing for efficient querying.",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Creating a table",
+                    "code": "\nCREATE TABLE employees (\n    id SERIAL PRIMARY KEY,\n    name VARCHAR(100),\n    salary DECIMAL(10,2)\n);"
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : What are Data Types in PostgreSQL?",
+                    "a": "Data types define the kind of values that can be stored in table columns. PostgreSQL offers a wide variety of built-in data types including numeric, character, boolean, date/time, JSON, arrays, UUID, geometric types, network address types, and user-defined types. Selecting the appropriate data type improves storage efficiency, query performance, and data validation.",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Data Type" },
+                        { "label": "Purpose" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "INTEGER" },
+                                { "col": "Whole numbers" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "VARCHAR" },
+                                { "col": "Variable-length strings" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "BOOLEAN" },
+                                { "col": "True or False values" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "DATE" },
+                                { "col": "Stores dates" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "JSONB" },
+                                { "col": "Stores binary JSON data" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : What are Constraints in PostgreSQL?",
+                    "a": "Constraints are rules applied to table columns to maintain data accuracy and integrity. They ensure that only valid data is inserted into the database and prevent inconsistent or duplicate records. PostgreSQL supports several built-in constraints that help enforce business rules at the database level.",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "PRIMARY KEY": "Uniquely identifies each row.",
+                        "FOREIGN KEY": "Maintains referential integrity.",
+                        "UNIQUE": "Prevents duplicate values.",
+                        "NOT NULL": "Disallows NULL values.",
+                        "CHECK": "Validates data using conditions.",
+                        "DEFAULT": "Provides a default value."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : What are the advantages of PostgreSQL?",
+                    "a": "PostgreSQL offers high reliability, extensibility, standards compliance, excellent concurrency, strong security, and advanced indexing capabilities. It supports modern features like JSONB, Full-Text Search, Partitioning, Replication, and Window Functions, making it suitable for enterprise systems, analytical workloads, financial applications, and cloud-native services.",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : What are the disadvantages of PostgreSQL?",
+                    "a": "Although PostgreSQL is one of the most powerful database systems available, it has a steeper learning curve than simpler databases. Its advanced feature set may require experienced database administrators, and some write-intensive workloads may require careful tuning. However, these limitations are generally outweighed by its reliability and extensive functionality.",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Learning Curve": "More advanced than basic relational databases.",
+                        "Configuration": "Requires tuning for optimal performance.",
+                        "Memory Usage": "Advanced features may consume additional resources.",
+                        "Administration": "Complex deployments require experienced DBAs."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : What are CRUD operations in PostgreSQL?",
+                    "a": "CRUD stands for Create, Read, Update, and Delete, which are the four fundamental operations performed on database records. These operations allow applications to insert new data, retrieve existing data, modify existing records, and remove unwanted records. PostgreSQL performs CRUD operations using standard SQL statements and supports transactions to ensure data consistency during these operations.",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Operation" },
+                        { "label": "SQL Command" },
+                        { "label": "Purpose" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Create" },
+                                { "col": "INSERT" },
+                                { "col": "Adds new records." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Read" },
+                                { "col": "SELECT" },
+                                { "col": "Retrieves records." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Update" },
+                                { "col": "UPDATE" },
+                                { "col": "Modifies existing records." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Delete" },
+                                { "col": "DELETE" },
+                                { "col": "Removes records." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : How do you insert data into a PostgreSQL table?",
+                    "a": "The INSERT statement is used to add one or more records into a PostgreSQL table. Developers can insert complete rows, selected columns, multiple rows in a single statement, or even insert data returned by another query. PostgreSQL also supports returning inserted values using the RETURNING clause, which is useful for retrieving automatically generated IDs.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Insert a new employee",
+                    "code": "\nINSERT INTO employees(name, salary)\nVALUES ('John', 50000);"
+                },
+                {
+                    "type": "note",
+                    "note": "The RETURNING clause can immediately return inserted values without running another SELECT query."
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : How do you retrieve data using the SELECT statement?",
+                    "a": "The SELECT statement retrieves data from one or more tables in PostgreSQL. It supports filtering, sorting, grouping, joining multiple tables, limiting results, and performing calculations. SELECT is one of the most frequently used SQL commands and forms the foundation for data retrieval in relational databases.",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Retrieve all employees",
+                    "code": "\nSELECT *\nFROM employees;"
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : How do you update records in PostgreSQL?",
+                    "a": "The UPDATE statement modifies existing records in a table. Developers can update one or multiple columns and use the WHERE clause to specify which rows should be modified. Without a WHERE clause, every row in the table will be updated, making it one of the most important SQL statements to use carefully.",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Increase an employee's salary",
+                    "code": "\nUPDATE employees\nSET salary = 60000\nWHERE id = 1;"
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : How do you delete records in PostgreSQL?",
+                    "a": "The DELETE statement removes records from a table based on a specified condition. Developers should always use a WHERE clause unless they intentionally want to remove every record. Unlike DROP TABLE, DELETE removes only data while preserving the table structure, indexes, and constraints.",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Delete a specific employee",
+                    "code": "\nDELETE FROM employees\nWHERE id = 1;"
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : What is a Primary Key in PostgreSQL?",
+                    "a": "A Primary Key is a column or combination of columns that uniquely identifies every row in a table. It automatically enforces uniqueness and does not allow NULL values. Primary keys are essential for maintaining entity integrity and are commonly referenced by foreign keys in related tables.",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Unique": "Every row has a unique value.",
+                        "Not Null": "NULL values are not permitted.",
+                        "Indexed": "Automatically creates a unique index.",
+                        "Relationship": "Referenced by foreign keys."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : What is a Foreign Key in PostgreSQL?",
+                    "a": "A Foreign Key is a constraint that creates a relationship between two tables by referencing the Primary Key of another table. It enforces referential integrity by ensuring that referenced values exist in the parent table. Foreign keys help prevent invalid relationships and maintain consistent data across multiple tables.",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Create a foreign key",
+                    "code": "\nCREATE TABLE orders (\n    order_id SERIAL PRIMARY KEY,\n    customer_id INT REFERENCES customers(id)\n);"
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : What is a Composite Key in PostgreSQL?",
+                    "a": "A Composite Key is a Primary Key formed using two or more columns. It is used when a single column cannot uniquely identify a record. Composite keys are commonly found in junction tables that represent many-to-many relationships, where the combination of two foreign keys uniquely identifies each record.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Composite Primary Key",
+                    "code": "\nCREATE TABLE student_course (\n    student_id INT,\n    course_id INT,\n    PRIMARY KEY(student_id, course_id)\n);"
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : What is a Unique Constraint in PostgreSQL?",
+                    "a": "A UNIQUE constraint ensures that duplicate values cannot exist in a specific column or group of columns. Unlike a Primary Key, a table can contain multiple UNIQUE constraints. PostgreSQL allows NULL values in UNIQUE columns unless they are also declared as NOT NULL.",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Primary Key" },
+                        { "label": "Unique Constraint" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Only one per table." },
+                                { "col": "Multiple allowed." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Cannot contain NULL." },
+                                { "col": "Can contain NULL (unless NOT NULL)." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Uniquely identifies rows." },
+                                { "col": "Ensures uniqueness only." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : What is the difference between DELETE, TRUNCATE, and DROP in PostgreSQL?",
+                    "a": "DELETE, TRUNCATE, and DROP are all used to remove data, but they serve different purposes. DELETE removes selected rows and can be rolled back within a transaction. TRUNCATE quickly removes all rows while keeping the table structure. DROP permanently removes the entire table, including its structure, indexes, constraints, and stored data. Understanding these differences is essential to avoid accidental data loss.",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "DELETE" },
+                        { "label": "TRUNCATE" },
+                        { "label": "DROP" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Removes selected rows." },
+                                { "col": "Removes all rows." },
+                                { "col": "Removes the entire table." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Supports WHERE clause." },
+                                { "col": "No WHERE clause." },
+                                { "col": "Deletes structure and data." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Slower for large tables." },
+                                { "col": "Very fast." },
+                                { "col": "Table no longer exists." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Can be rolled back." },
+                                { "col": "Can be rolled back in PostgreSQL." },
+                                {
+                                    "col": "Can be rolled back if executed within a transaction before COMMIT."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : What is an Index in PostgreSQL?",
+                    "a": "An Index is a special database object that improves the speed of data retrieval operations by creating a sorted structure of one or more columns. Instead of scanning every row in a table, PostgreSQL can use an index to quickly locate matching records. Although indexes significantly improve SELECT query performance, they consume additional storage and slightly slow down INSERT, UPDATE, and DELETE operations because the index must also be updated.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Faster Searches": "Reduces query execution time.",
+                        "Additional Storage": "Requires extra disk space.",
+                        "Speeds Up SELECT": "Improves read performance.",
+                        "Slower Writes": "Insert, Update, and Delete become slightly slower.",
+                        "Automatic Usage": "Query planner decides when to use an index."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : What are the different types of indexes in PostgreSQL?",
+                    "a": "PostgreSQL provides multiple index types optimized for different workloads. The default B-Tree index is suitable for most queries, while Hash indexes are optimized for equality comparisons. GIN indexes work efficiently with JSONB, arrays, and full-text search, GiST supports geometric and range data, BRIN is designed for massive datasets, and SP-GiST handles specialized partitioned search structures.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Index Type" },
+                        { "label": "Best Used For" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "B-Tree" },
+                                {
+                                    "col": "Equality, range queries, sorting (default)."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Hash" },
+                                { "col": "Equality comparisons." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "GIN" },
+                                { "col": "JSONB, Arrays, Full-text Search." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "GiST" },
+                                { "col": "Geometric and Range data." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "BRIN" },
+                                { "col": "Very large sequential tables." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "SP-GiST" },
+                                { "col": "Partitioned search structures." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : How do you create an index in PostgreSQL?",
+                    "a": "Indexes are created using the CREATE INDEX statement. Developers can create indexes on one or multiple columns depending on query patterns. Proper indexing significantly improves application performance by reducing the amount of data PostgreSQL needs to scan while executing queries. However, unnecessary indexes should be avoided because they increase storage requirements and slow write operations.",
+                    "type": "text",
+                    "id": 23,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Create an index on the email column",
+                    "code": "\nCREATE INDEX idx_email\nON users(email);"
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "q": "Q24 : What is a JOIN in PostgreSQL?",
+                    "a": "A JOIN combines rows from two or more related tables using a common column. Instead of storing duplicate data, relational databases separate information into multiple tables and use joins to retrieve related records efficiently. PostgreSQL supports several types of joins, each designed for different querying requirements.",
+                    "type": "text",
+                    "id": 24,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Join Type" },
+                        { "label": "Purpose" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "INNER JOIN" },
+                                {
+                                    "col": "Returns matching rows from both tables."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "LEFT JOIN" },
+                                {
+                                    "col": "Returns all rows from the left table."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "RIGHT JOIN" },
+                                {
+                                    "col": "Returns all rows from the right table."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "FULL JOIN" },
+                                { "col": "Returns all rows from both tables." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "CROSS JOIN" },
+                                { "col": "Returns Cartesian product." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "q": "Q25 : What is an INNER JOIN?",
+                    "a": "An INNER JOIN returns only those records that have matching values in both joined tables. It is the most commonly used join type because it retrieves related data while excluding unmatched records. INNER JOIN is widely used in applications where relationships between tables must be enforced during data retrieval.",
+                    "type": "text",
+                    "id": 25,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "INNER JOIN Example",
+                    "code": "\nSELECT e.name, d.department_name\nFROM employees e\nINNER JOIN departments d\nON e.department_id = d.id;"
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "q": "Q26 : What is a LEFT JOIN?",
+                    "a": "A LEFT JOIN returns every row from the left table along with matching rows from the right table. If no matching record exists in the right table, PostgreSQL returns NULL values for the missing columns. LEFT JOIN is commonly used to identify records that do not have related entries in another table.",
+                    "type": "text",
+                    "id": 26,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "LEFT JOIN Example",
+                    "code": "\nSELECT e.name, d.department_name\nFROM employees e\nLEFT JOIN departments d\nON e.department_id = d.id;"
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "q": "Q27 : What is a RIGHT JOIN?",
+                    "a": "A RIGHT JOIN works similarly to a LEFT JOIN, but instead returns all records from the right table and matching records from the left table. If no matching row exists in the left table, PostgreSQL fills the missing values with NULL. RIGHT JOIN is less commonly used because the same result can usually be achieved using LEFT JOIN by reversing table order.",
+                    "type": "text",
+                    "id": 27,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "RIGHT JOIN Example",
+                    "code": "\nSELECT e.name, d.department_name\nFROM employees e\nRIGHT JOIN departments d\nON e.department_id = d.id;"
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "q": "Q28 : What is a FULL OUTER JOIN?",
+                    "a": "A FULL OUTER JOIN combines the results of both LEFT JOIN and RIGHT JOIN. It returns all matching records along with all unmatched rows from both tables. Whenever a matching record does not exist on either side, PostgreSQL fills the missing columns with NULL values. This join is useful when comparing data from multiple tables.",
+                    "type": "text",
+                    "id": 28,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "FULL JOIN Example",
+                    "code": "\nSELECT e.name, d.department_name\nFROM employees e\nFULL OUTER JOIN departments d\nON e.department_id = d.id;"
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "q": "Q29 : What is a CROSS JOIN?",
+                    "a": "A CROSS JOIN returns the Cartesian product of two tables, meaning every row from the first table is combined with every row from the second table. If the first table contains 100 rows and the second contains 50 rows, the result will contain 5,000 rows. CROSS JOIN is mainly used in generating combinations, testing, and reporting scenarios.",
+                    "type": "text",
+                    "id": 29,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "CROSS JOIN Example",
+                    "code": "\nSELECT *\nFROM colors\nCROSS JOIN sizes;"
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "q": "Q30 : What is the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN, and CROSS JOIN?",
+                    "a": "PostgreSQL provides several types of joins to retrieve related data from multiple tables. The choice of join depends on whether matching records, unmatched records, or every possible combination of rows is required. Understanding these joins is one of the most frequently asked PostgreSQL interview topics because joins are used extensively in relational database applications.",
+                    "type": "text",
+                    "id": 30,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Join Type" },
+                        { "label": "Rows Returned" },
+                        { "label": "Common Use Case" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "INNER JOIN" },
+                                { "col": "Only matching rows." },
+                                { "col": "Retrieve related records." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "LEFT JOIN" },
+                                {
+                                    "col": "All left rows + matching right rows."
+                                },
+                                { "col": "Find missing relationships." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "RIGHT JOIN" },
+                                {
+                                    "col": "All right rows + matching left rows."
+                                },
+                                { "col": "Reverse LEFT JOIN." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "FULL OUTER JOIN" },
+                                { "col": "All rows from both tables." },
+                                { "col": "Compare two datasets." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "CROSS JOIN" },
+                                { "col": "Every possible row combination." },
+                                { "col": "Generate combinations." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "q": "Q31 : What is a View in PostgreSQL?",
+                    "a": "A View is a virtual table created from the result of one or more SQL queries. Unlike a regular table, a view does not store data physically (except Materialized Views). Instead, it stores the SQL query and displays the latest data whenever it is accessed. Views simplify complex queries, improve security by restricting access to specific columns or rows, and provide a consistent interface for applications without exposing the underlying database structure.",
+                    "type": "text",
+                    "id": 31,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Creating a View",
+                    "code": "\nCREATE VIEW employee_details AS\nSELECT id, name, salary\nFROM employees;"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Simplifies Queries": "Hides complex SQL logic.",
+                        "Improves Security": "Restricts access to selected columns.",
+                        "Reusable": "Can be queried like a normal table.",
+                        "Always Updated": "Displays current data from underlying tables."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "q": "Q32 : What is a Materialized View in PostgreSQL?",
+                    "a": "A Materialized View is similar to a regular view, but it physically stores the query result instead of executing the query every time. Because the data is stored, queries against a materialized view are much faster. However, the stored data becomes outdated when the underlying tables change, so it must be refreshed manually or on a schedule using the REFRESH MATERIALIZED VIEW command.",
+                    "type": "text",
+                    "id": 32,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "View" },
+                        { "label": "Materialized View" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Does not store data." },
+                                { "col": "Stores query results physically." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Always shows latest data." },
+                                { "col": "Needs manual refresh." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Slower for complex queries." },
+                                { "col": "Much faster for repeated queries." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "q": "Q33 : What are Functions in PostgreSQL?",
+                    "a": "Functions are reusable blocks of SQL or procedural code that perform a specific task and optionally return a value. They help reduce code duplication, improve maintainability, and encapsulate business logic inside the database. PostgreSQL supports functions written in SQL, PL/pgSQL, Python, Perl, and several other programming languages.",
+                    "type": "text",
+                    "id": 33,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Simple SQL Function",
+                    "code": "\nCREATE FUNCTION square(num INT)\nRETURNS INT AS $$\nBEGIN\n    RETURN num * num;\nEND;\n$$ LANGUAGE plpgsql;"
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "q": "Q34 : What are Stored Procedures in PostgreSQL?",
+                    "a": "Stored Procedures are database programs that execute one or more SQL statements. Unlike functions, stored procedures can explicitly manage transactions by committing or rolling back operations. They are useful for implementing complex business logic, automating repetitive tasks, and improving application performance by reducing communication between the application and the database.",
+                    "type": "text",
+                    "id": 34,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Function" },
+                        { "label": "Stored Procedure" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Must return a value." },
+                                { "col": "May or may not return a value." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Cannot manage transactions." },
+                                { "col": "Can COMMIT and ROLLBACK." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Used inside queries." },
+                                { "col": "Executed using CALL." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "q": "Q35 : What are Triggers in PostgreSQL?",
+                    "a": "Triggers are special database objects that automatically execute a specified function whenever a particular database event occurs. These events include INSERT, UPDATE, DELETE, and TRUNCATE operations. Triggers are commonly used for auditing, maintaining logs, validating data, enforcing business rules, and automatically updating related tables without requiring application-level code.",
+                    "type": "text",
+                    "id": 35,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "INSERT Trigger": "Runs after or before inserting data.",
+                        "UPDATE Trigger": "Executes when records are modified.",
+                        "DELETE Trigger": "Runs before or after deleting records.",
+                        "Audit Logs": "Tracks database changes automatically."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "q": "Q36 : What is a Sequence in PostgreSQL?",
+                    "a": "A Sequence is a special database object that generates unique numeric values automatically. It is commonly used to generate primary key values for tables. PostgreSQL's SERIAL and BIGSERIAL data types internally create and use sequences, making it easy to generate incremental IDs without manually managing them.",
+                    "type": "text",
+                    "id": 36,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Creating a Sequence",
+                    "code": "\nCREATE SEQUENCE employee_seq\nSTART 1\nINCREMENT 1;"
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "q": "Q37 : What is a Transaction in PostgreSQL?",
+                    "a": "A Transaction is a sequence of one or more SQL statements executed as a single logical unit of work. Either all operations succeed together or all changes are rolled back if an error occurs. Transactions help maintain database consistency and prevent partial updates that could leave the database in an inconsistent state.",
+                    "type": "text",
+                    "id": 37,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Transaction Example",
+                    "code": "\nBEGIN;\nUPDATE accounts SET balance = balance - 500 WHERE id = 1;\nUPDATE accounts SET balance = balance + 500 WHERE id = 2;\nCOMMIT;"
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "q": "Q38 : What are ACID properties in PostgreSQL?",
+                    "a": "ACID stands for Atomicity, Consistency, Isolation, and Durability. These four properties ensure that database transactions execute safely and reliably, even in cases of hardware failure, software crashes, or concurrent user access. PostgreSQL fully supports ACID transactions, making it suitable for banking systems, e-commerce platforms, and other applications where data accuracy is critical.",
+                    "type": "text",
+                    "id": 38,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Property" }, { "label": "Meaning" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Atomicity" },
+                                {
+                                    "col": "All operations succeed or fail together."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Consistency" },
+                                { "col": "Database remains valid." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Isolation" },
+                                { "col": "Transactions do not interfere." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Durability" },
+                                { "col": "Committed data survives failures." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "q": "Q39 : What is COMMIT and ROLLBACK in PostgreSQL?",
+                    "a": "COMMIT and ROLLBACK are transaction control commands in PostgreSQL. COMMIT permanently saves all changes made during the current transaction, while ROLLBACK cancels every change made since the transaction began. These commands ensure that transactions either complete successfully or leave the database unchanged if an error occurs.",
+                    "type": "text",
+                    "id": 39,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "COMMIT" }, { "label": "ROLLBACK" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Saves changes permanently." },
+                                { "col": "Undoes all changes." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Ends the transaction." },
+                                { "col": "Restores previous database state." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "q": "Q40 : What are Transaction Isolation Levels in PostgreSQL?",
+                    "a": "Transaction Isolation Levels determine how multiple concurrent transactions interact with each other. Higher isolation levels provide stronger consistency but may reduce concurrency and performance. PostgreSQL supports four standard isolation levels that help balance data consistency and system throughput depending on application requirements.",
+                    "type": "text",
+                    "id": 40,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Isolation Level" },
+                        { "label": "Description" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Read Uncommitted" },
+                                {
+                                    "col": "Behaves like Read Committed in PostgreSQL."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Read Committed" },
+                                { "col": "Default isolation level." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Repeatable Read" },
+                                { "col": "Prevents non-repeatable reads." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Serializable" },
+                                {
+                                    "col": "Highest isolation and strongest consistency."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Read Committed is the default isolation level used by PostgreSQL."
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "q": "Q41 : What is Concurrency Control in PostgreSQL?",
+                    "a": "Concurrency Control is the mechanism that allows multiple users or transactions to access the database simultaneously while maintaining data consistency and integrity. PostgreSQL uses Multi-Version Concurrency Control (MVCC) instead of locking every row for read operations. This enables multiple users to perform read and write operations concurrently with minimal blocking, improving both application performance and scalability.",
+                    "type": "text",
+                    "id": 41,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Multiple Users": "Allows many users to access data simultaneously.",
+                        "Data Consistency": "Prevents inconsistent database states.",
+                        "Reduced Blocking": "Readers usually don't block writers.",
+                        "Improved Performance": "Supports high-concurrency applications.",
+                        "MVCC": "Primary concurrency mechanism used by PostgreSQL."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "q": "Q42 : What is MVCC (Multi-Version Concurrency Control)?",
+                    "a": "MVCC (Multi-Version Concurrency Control) is PostgreSQL's concurrency mechanism that allows multiple versions of the same row to exist temporarily. Instead of overwriting existing data immediately, PostgreSQL creates a new version of the modified row while keeping the old version available for other transactions. This allows readers and writers to work simultaneously without blocking each other, resulting in better performance and improved transaction isolation.",
+                    "type": "text",
+                    "id": 42,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Without MVCC" },
+                        { "label": "With MVCC" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Readers wait for writers." },
+                                { "col": "Readers continue without waiting." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "More locking." },
+                                { "col": "Minimal locking." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Lower concurrency." },
+                                { "col": "Higher concurrency." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Reduced performance." },
+                                { "col": "Improved performance." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "MVCC is one of PostgreSQL's biggest advantages over many traditional relational databases."
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "q": "Q43 : What are Locks in PostgreSQL?",
+                    "a": "Locks are mechanisms used by PostgreSQL to control simultaneous access to database objects and maintain data consistency. While MVCC minimizes locking for read operations, PostgreSQL still uses locks during updates, deletes, schema modifications, and other operations that require exclusive access. Different lock types provide varying levels of access depending on the operation being performed.",
+                    "type": "text",
+                    "id": 43,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Lock Type" },
+                        { "label": "Purpose" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Row Lock" },
+                                { "col": "Locks individual rows." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Table Lock" },
+                                { "col": "Locks an entire table." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Share Lock" },
+                                { "col": "Allows multiple readers." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Exclusive Lock" },
+                                {
+                                    "col": "Allows only one modifying transaction."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "q": "Q44 : What is a Deadlock in PostgreSQL?",
+                    "a": "A Deadlock occurs when two or more transactions wait indefinitely for each other to release locks on database resources. Since neither transaction can proceed, PostgreSQL automatically detects the deadlock and terminates one of the transactions, allowing the remaining transaction to continue. Developers can reduce deadlocks by accessing resources in a consistent order and keeping transactions short.",
+                    "type": "text",
+                    "id": 44,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Cause": "Transactions wait on each other's locks.",
+                        "Detection": "Automatically detected by PostgreSQL.",
+                        "Resolution": "One transaction is terminated.",
+                        "Prevention": "Access resources in a consistent order.",
+                        "Best Practice": "Keep transactions as short as possible."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "q": "Q45 : What is Locking vs MVCC in PostgreSQL?",
+                    "a": "Traditional databases rely heavily on locks to prevent concurrent access, often causing users to wait until other transactions complete. PostgreSQL primarily uses MVCC, which creates multiple versions of rows instead of locking them for reads. As a result, readers rarely block writers, and writers rarely block readers, providing significantly better concurrency and overall database performance.",
+                    "type": "text",
+                    "id": 45,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Traditional Locking" },
+                        { "label": "PostgreSQL MVCC" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Readers may block writers." },
+                                {
+                                    "col": "Readers usually don't block writers."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Heavy locking." },
+                                { "col": "Minimal locking." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Lower concurrency." },
+                                { "col": "Higher concurrency." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Potential waiting." },
+                                { "col": "Better transaction throughput." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "MVCC is one of the most frequently asked PostgreSQL interview topics because it explains why PostgreSQL performs exceptionally well under concurrent workloads."
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "q": "Q46 : What is Normalization in PostgreSQL?",
+                    "a": "Normalization is the process of organizing data in a relational database to minimize redundancy and improve data integrity. It divides large tables into smaller, related tables while establishing relationships using keys. Proper normalization reduces duplicate data, prevents update anomalies, and makes the database easier to maintain. However, excessive normalization may require more joins, so developers sometimes balance normalization with performance considerations depending on the application's requirements.",
+                    "type": "text",
+                    "id": 46,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Reduces Redundancy": "Avoids storing duplicate data.",
+                        "Improves Consistency": "Keeps related data synchronized.",
+                        "Maintains Integrity": "Prevents update, insert, and delete anomalies.",
+                        "Better Organization": "Splits data into logical tables.",
+                        "Supports Relationships": "Uses primary and foreign keys effectively."
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Normalization improves data quality, while denormalization is sometimes used later for performance optimization."
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : What are the Normal Forms (1NF, 2NF, 3NF, and BCNF)?",
+                    "a": "Normal Forms are a series of rules that guide the normalization process. Each level removes a specific type of redundancy and dependency from the database design. As the database progresses from First Normal Form (1NF) to Boyce-Codd Normal Form (BCNF), the schema becomes more structured, consistent, and less prone to anomalies. Most real-world applications are designed up to Third Normal Form (3NF), while BCNF is used in more complex scenarios.",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Normal Form" },
+                        { "label": "Purpose" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "1NF" },
+                                {
+                                    "col": "Eliminates repeating groups and ensures atomic values."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "2NF" },
+                                { "col": "Removes partial dependencies." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "3NF" },
+                                { "col": "Removes transitive dependencies." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "BCNF" },
+                                {
+                                    "col": "Ensures every determinant is a candidate key."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Interviewers frequently ask the differences between 2NF and 3NF, so understanding dependency types is important."
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "q": "Q48 : What is a Common Table Expression (CTE) in PostgreSQL?",
+                    "a": "A Common Table Expression (CTE) is a temporary named result set defined using the WITH clause. It exists only for the duration of a single SQL statement and helps simplify complex queries by breaking them into smaller, more readable parts. CTEs improve query readability, support recursive queries, and eliminate the need to repeat the same subquery multiple times within a statement.",
+                    "type": "text",
+                    "id": 48,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Using a Common Table Expression",
+                    "code": "\nWITH high_salary AS (\n    SELECT *\n    FROM employees\n    WHERE salary > 50000\n)\nSELECT *\nFROM high_salary;"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Readable Queries": "Breaks large SQL statements into smaller parts.",
+                        "Reusable": "CTE can be referenced multiple times.",
+                        "Recursive Support": "Useful for hierarchical data.",
+                        "Temporary": "Exists only during query execution."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "q": "Q49 : What are Window Functions in PostgreSQL?",
+                    "a": "Window Functions perform calculations across a set of rows related to the current row without grouping the results into a single output row. Unlike aggregate functions, they preserve every row while calculating rankings, running totals, moving averages, and other analytical metrics. Window functions are widely used in reporting, business intelligence, and data analytics applications because they simplify complex calculations directly within SQL queries.",
+                    "type": "text",
+                    "id": 49,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Window Function" },
+                        { "label": "Purpose" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "ROW_NUMBER()" },
+                                { "col": "Assigns a unique row number." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "RANK()" },
+                                { "col": "Ranks rows with gaps." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "DENSE_RANK()" },
+                                { "col": "Ranks rows without gaps." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "LAG()" },
+                                { "col": "Accesses previous row values." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "LEAD()" },
+                                { "col": "Accesses next row values." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Ranking employees by salary",
+                    "code": "\nSELECT name,\n       salary,\n       RANK() OVER (ORDER BY salary DESC) AS rank\nFROM employees;"
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "q": "Q50 : What are Aggregate Functions in PostgreSQL?",
+                    "a": "Aggregate Functions perform calculations on a group of rows and return a single summarized result. They are commonly used for reporting, analytics, dashboards, and statistical calculations. Aggregate functions are often combined with the GROUP BY clause to calculate totals, averages, counts, minimum values, and maximum values for different categories of data stored in a database.",
+                    "type": "text",
+                    "id": 50,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Function" },
+                        { "label": "Description" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "COUNT()" },
+                                { "col": "Counts the number of rows." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "SUM()" },
+                                { "col": "Calculates the total value." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "AVG()" },
+                                { "col": "Returns the average value." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "MIN()" },
+                                { "col": "Returns the smallest value." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "MAX()" },
+                                { "col": "Returns the largest value." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Calculate average salary by department",
+                    "code": "\nSELECT department,\n       AVG(salary) AS average_salary\nFROM employees\nGROUP BY department;"
+                },
+                {
+                    "type": "note",
+                    "note": "Aggregate Functions are often used together with GROUP BY and HAVING clauses to generate summarized reports."
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "q": "Q51 : What is the GROUP BY clause in PostgreSQL?",
+                    "a": "The GROUP BY clause is used to group rows that have the same values in one or more columns into summary rows. It is commonly used with aggregate functions such as COUNT(), SUM(), AVG(), MIN(), and MAX() to generate reports and statistics. GROUP BY is useful for analyzing data by categories, such as department-wise salaries or product-wise sales, instead of viewing every individual record.",
+                    "type": "text",
+                    "id": 51,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Count employees in each department",
+                    "code": "\nSELECT department,\n       COUNT(*) AS total_employees\nFROM employees\nGROUP BY department;"
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "q": "Q52 : What is the HAVING clause in PostgreSQL?",
+                    "a": "The HAVING clause filters grouped data after the GROUP BY clause has been applied. Unlike the WHERE clause, which filters individual rows before grouping, HAVING filters entire groups based on aggregate calculations. It is commonly used to display only those groups that satisfy conditions involving aggregate functions such as COUNT(), SUM(), or AVG().",
+                    "type": "text",
+                    "id": 52,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "WHERE" }, { "label": "HAVING" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Filters individual rows." },
+                                { "col": "Filters grouped rows." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Runs before GROUP BY." },
+                                { "col": "Runs after GROUP BY." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Cannot use aggregate functions directly."
+                                },
+                                {
+                                    "col": "Commonly used with aggregate functions."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Departments having more than 5 employees",
+                    "code": "\nSELECT department,\n       COUNT(*)\nFROM employees\nGROUP BY department\nHAVING COUNT(*) > 5;"
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "q": "Q53 : What is the ORDER BY clause in PostgreSQL?",
+                    "a": "The ORDER BY clause sorts the result set based on one or more columns. By default, PostgreSQL sorts data in ascending order (ASC), but descending order (DESC) can also be specified. ORDER BY is commonly used when displaying reports, search results, or ranked data where the order of records is important for users or business requirements.",
+                    "type": "text",
+                    "id": 53,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Sort employees by salary",
+                    "code": "\nSELECT *\nFROM employees\nORDER BY salary DESC;"
+                },
+                {
+                    "type": "note",
+                    "note": "Multiple columns can be specified in ORDER BY to perform hierarchical sorting."
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "q": "Q54 : What are LIMIT and OFFSET in PostgreSQL?",
+                    "a": "LIMIT restricts the number of rows returned by a query, while OFFSET skips a specified number of rows before returning results. These clauses are commonly used for pagination in web applications, where data is displayed page by page instead of loading the entire dataset. Using LIMIT and OFFSET improves response time and reduces unnecessary data transfer.",
+                    "type": "text",
+                    "id": 54,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Retrieve second page with 10 records",
+                    "code": "\nSELECT *\nFROM employees\nLIMIT 10 OFFSET 10;"
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "Que": [
+                {
+                    "q": "Q55 : What is the DISTINCT keyword in PostgreSQL?",
+                    "a": "The DISTINCT keyword removes duplicate rows from a query result and returns only unique values. It can be applied to a single column or multiple columns. DISTINCT is useful when generating reports, retrieving unique categories, or eliminating duplicate records from query results without modifying the underlying table data.",
+                    "type": "text",
+                    "id": 55,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Retrieve unique departments",
+                    "code": "\nSELECT DISTINCT department\nFROM employees;"
+                }
+            ]
+        },
+        {
+            "id": "56",
+            "Que": [
+                {
+                    "q": "Q56 : What is the difference between UNION and UNION ALL?",
+                    "a": "UNION combines the results of two or more SELECT queries while automatically removing duplicate rows. UNION ALL also combines multiple result sets but retains duplicate rows, making it faster because PostgreSQL does not spend time checking for duplicates. The choice depends on whether duplicate records should be preserved in the final output.",
+                    "type": "text",
+                    "id": 56,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "UNION" }, { "label": "UNION ALL" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Removes duplicate rows." },
+                                { "col": "Keeps duplicate rows." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Slightly slower." },
+                                { "col": "Faster." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Performs duplicate checking." },
+                                { "col": "No duplicate checking." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "57",
+            "Que": [
+                {
+                    "q": "Q57 : What is the CASE expression in PostgreSQL?",
+                    "a": "The CASE expression provides conditional logic within SQL queries, similar to if-else statements in programming languages. It allows different values to be returned based on specified conditions. CASE is commonly used for categorizing data, generating labels, calculating grades, and creating conditional columns directly within SQL queries.",
+                    "type": "text",
+                    "id": 57,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Categorize salaries",
+                    "code": "\nSELECT name,\nCASE\n    WHEN salary >= 70000 THEN 'High'\n    WHEN salary >= 40000 THEN 'Medium'\n    ELSE 'Low'\nEND AS salary_level\nFROM employees;"
+                }
+            ]
+        },
+        {
+            "id": "58",
+            "Que": [
+                {
+                    "q": "Q58 : What is the COALESCE() function in PostgreSQL?",
+                    "a": "The COALESCE() function returns the first non-NULL value from a list of expressions. It is commonly used to replace NULL values with default values, preventing NULL results in reports and calculations. COALESCE is particularly useful when displaying optional fields such as phone numbers, addresses, or bonus amounts that may contain NULL values.",
+                    "type": "text",
+                    "id": 58,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Replace NULL bonuses",
+                    "code": "\nSELECT name,\nCOALESCE(bonus, 0) AS bonus\nFROM employees;"
+                }
+            ]
+        },
+        {
+            "id": "59",
+            "Que": [
+                {
+                    "q": "Q59 : How does PostgreSQL handle NULL values?",
+                    "a": "NULL represents the absence of a value rather than zero, an empty string, or false. PostgreSQL treats NULL as unknown, so comparisons using '=' or '!=' do not work as expected. Instead, IS NULL and IS NOT NULL should be used. Many SQL functions such as COALESCE(), NULLIF(), and ISNULL alternatives help developers manage NULL values effectively.",
+                    "type": "text",
+                    "id": 59,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Operation" },
+                        { "label": "Correct Syntax" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Check for NULL" },
+                                { "col": "IS NULL" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Check for NOT NULL" },
+                                { "col": "IS NOT NULL" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Replace NULL" },
+                                { "col": "COALESCE()" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "60",
+            "Que": [
+                {
+                    "q": "Q60 : What is the difference between WHERE, GROUP BY, HAVING, and ORDER BY?",
+                    "a": "WHERE, GROUP BY, HAVING, and ORDER BY each perform different roles during SQL query execution. WHERE filters rows before grouping, GROUP BY creates groups, HAVING filters those groups based on aggregate conditions, and ORDER BY sorts the final result set. Understanding the execution order of these clauses is essential for writing correct and optimized SQL queries.",
+                    "type": "text",
+                    "id": 60,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Clause" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "WHERE" },
+                                { "col": "Filters rows before grouping." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "GROUP BY" },
+                                { "col": "Groups similar rows." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "HAVING" },
+                                { "col": "Filters grouped results." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "ORDER BY" },
+                                { "col": "Sorts the final output." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Typical SQL execution order is: FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY → LIMIT."
+                }
+            ]
+        },
+        {
+            "id": "61",
+            "Que": [
+                {
+                    "q": "Q61 : What is a Subquery in PostgreSQL?",
+                    "a": "A subquery is a query nested inside another SQL query. The result of the inner query is used by the outer query to perform filtering, comparison, or calculations. Subqueries can be placed inside SELECT, FROM, WHERE, HAVING, and INSERT statements. They improve query readability and allow developers to solve complex problems without writing multiple separate queries. PostgreSQL supports both single-row and multi-row subqueries depending on the requirement.",
+                    "type": "text",
+                    "id": 61,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Employees earning above average salary",
+                    "code": "\nSELECT name, salary\nFROM employees\nWHERE salary > (\n    SELECT AVG(salary)\n    FROM employees\n);"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Reusable Logic": "Breaks complex queries into smaller parts.",
+                        "Nested Query": "Executes inside another SQL statement.",
+                        "Flexible": "Can be used in SELECT, FROM, WHERE, HAVING, and INSERT.",
+                        "Readable": "Makes complicated SQL easier to understand."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "62",
+            "Que": [
+                {
+                    "q": "Q62 : What is a Correlated Subquery in PostgreSQL?",
+                    "a": "A correlated subquery is a subquery that references columns from the outer query. Unlike a regular subquery, it cannot execute independently because its result depends on each row processed by the outer query. PostgreSQL executes the correlated subquery once for every row returned by the outer query. Although powerful, correlated subqueries may become slower for large datasets and are sometimes replaced with JOINs for better performance.",
+                    "type": "text",
+                    "id": 62,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Employees earning above department average",
+                    "code": "\nSELECT e1.name, e1.salary\nFROM employees e1\nWHERE salary > (\n    SELECT AVG(e2.salary)\n    FROM employees e2\n    WHERE e2.department = e1.department\n);"
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Simple Subquery" },
+                        { "label": "Correlated Subquery" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Executes once." },
+                                { "col": "Executes for every outer row." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Independent." },
+                                { "col": "Depends on outer query." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Generally faster." },
+                                { "col": "May be slower on large datasets." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "63",
+            "Que": [
+                {
+                    "q": "Q63 : What is the EXISTS operator in PostgreSQL?",
+                    "a": "The EXISTS operator checks whether a subquery returns at least one row. If the subquery produces any result, EXISTS evaluates to TRUE; otherwise, it returns FALSE. PostgreSQL stops scanning as soon as the first matching row is found, making EXISTS highly efficient for existence checks. It is commonly used instead of IN when working with large tables because it often provides better performance.",
+                    "type": "text",
+                    "id": 63,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Customers who have placed orders",
+                    "code": "\nSELECT *\nFROM customers c\nWHERE EXISTS (\n    SELECT 1\n    FROM orders o\n    WHERE o.customer_id = c.id\n);"
+                },
+                {
+                    "type": "note",
+                    "note": "EXISTS stops searching after finding the first matching record, making it efficient for large datasets."
+                }
+            ]
+        },
+        {
+            "id": "64",
+            "Que": [
+                {
+                    "q": "Q64 : What is the IN operator in PostgreSQL?",
+                    "a": "The IN operator checks whether a value exists within a list of values or the result of a subquery. It provides a clean and readable alternative to writing multiple OR conditions. IN is commonly used to filter records that match one or more values. PostgreSQL also supports NOT IN to exclude records, although NULL values should be handled carefully when using NOT IN.",
+                    "type": "text",
+                    "id": 64,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Employees in selected departments",
+                    "code": "\nSELECT *\nFROM employees\nWHERE department IN ('HR', 'Sales', 'IT');"
+                }
+            ]
+        },
+        {
+            "id": "65",
+            "Que": [
+                {
+                    "q": "Q65 : What are the ANY and ALL operators in PostgreSQL?",
+                    "a": "ANY and ALL are comparison operators used with subqueries. ANY returns TRUE if the comparison matches at least one value returned by the subquery, while ALL returns TRUE only if the comparison matches every value. These operators simplify complex comparisons involving multiple rows and are commonly used in reporting, analytics, and filtering scenarios.",
+                    "type": "text",
+                    "id": 65,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Operator" },
+                        { "label": "Behavior" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "ANY" },
+                                {
+                                    "col": "Condition must match at least one value."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "ALL" },
+                                { "col": "Condition must match every value." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Salary greater than any manager salary",
+                    "code": "\nSELECT *\nFROM employees\nWHERE salary > ANY (\n    SELECT salary\n    FROM managers\n);"
+                }
+            ]
+        },
+        {
+            "id": "66",
+            "Que": [
+                {
+                    "q": "Q66 : What is a Self Join in PostgreSQL?",
+                    "a": "A Self Join is a join in which a table is joined with itself using aliases. It is useful when rows within the same table are related to one another, such as employees and their managers. Self joins allow developers to compare rows within the same table and are commonly used in hierarchical or organizational data structures.",
+                    "type": "text",
+                    "id": 66,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Employee and manager relationship",
+                    "code": "\nSELECT e.name AS employee,\n       m.name AS manager\nFROM employees e\nLEFT JOIN employees m\nON e.manager_id = m.id;"
+                }
+            ]
+        },
+        {
+            "id": "67",
+            "Que": [
+                {
+                    "q": "Q67 : What is the difference between ROW_NUMBER(), RANK(), and DENSE_RANK()?",
+                    "a": "ROW_NUMBER(), RANK(), and DENSE_RANK() are window functions used for ranking rows. ROW_NUMBER() assigns unique sequential numbers without considering ties. RANK() assigns the same rank to tied rows but skips subsequent ranks. DENSE_RANK() also assigns the same rank to tied rows but does not skip rank numbers. These functions are widely used in leaderboards, reporting, and analytical queries.",
+                    "type": "text",
+                    "id": 67,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Function" },
+                        { "label": "Handles Ties" },
+                        { "label": "Skips Numbers" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "ROW_NUMBER()" },
+                                { "col": "No" },
+                                { "col": "No" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "RANK()" },
+                                { "col": "Yes" },
+                                { "col": "Yes" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "DENSE_RANK()" },
+                                { "col": "Yes" },
+                                { "col": "No" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "68",
+            "Que": [
+                {
+                    "q": "Q68 : What is a Recursive CTE in PostgreSQL?",
+                    "a": "A Recursive Common Table Expression (Recursive CTE) is a special type of CTE that repeatedly references itself until a termination condition is met. It is particularly useful for working with hierarchical or tree-structured data such as employee-manager relationships, organizational charts, category trees, and file systems. Recursive CTEs eliminate the need for procedural loops by performing recursive operations directly within SQL.",
+                    "type": "text",
+                    "id": 68,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Recursive CTE syntax",
+                    "code": "\nWITH RECURSIVE hierarchy AS (\n    SELECT id, manager_id\n    FROM employees\n    WHERE manager_id IS NULL\n\n    UNION ALL\n\n    SELECT e.id, e.manager_id\n    FROM employees e\n    JOIN hierarchy h\n    ON e.manager_id = h.id\n)\nSELECT * FROM hierarchy;"
+                }
+            ]
+        },
+        {
+            "id": "69",
+            "Que": [
+                {
+                    "q": "Q69 : What is Query Optimization in PostgreSQL?",
+                    "a": "Query optimization is the process of improving SQL queries so they execute faster and consume fewer system resources. PostgreSQL's query planner automatically determines efficient execution strategies, but developers can further optimize performance by creating appropriate indexes, avoiding unnecessary SELECT *, minimizing nested subqueries, writing efficient JOINs, and analyzing execution plans. Proper optimization improves application scalability and overall database performance.",
+                    "type": "text",
+                    "id": 69,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Use Indexes": "Improve search performance.",
+                        "Avoid SELECT *": "Retrieve only required columns.",
+                        "Optimize JOINs": "Join indexed columns whenever possible.",
+                        "Analyze Queries": "Use EXPLAIN ANALYZE.",
+                        "Keep Statistics Updated": "Run ANALYZE regularly."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "70",
+            "Que": [
+                {
+                    "q": "Q70 : What are EXPLAIN and EXPLAIN ANALYZE in PostgreSQL?",
+                    "a": "EXPLAIN displays PostgreSQL's execution plan for a query without actually running it, allowing developers to understand how the database intends to retrieve data. EXPLAIN ANALYZE executes the query and reports the actual execution plan, runtime statistics, and resource usage. These tools are essential for identifying slow queries, inefficient joins, sequential scans, and missing indexes during database performance tuning.",
+                    "type": "text",
+                    "id": 70,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "EXPLAIN" },
+                        { "label": "EXPLAIN ANALYZE" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Shows execution plan." },
+                                {
+                                    "col": "Shows execution plan and executes query."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Estimated cost." },
+                                {
+                                    "col": "Actual execution time and statistics."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Safe for production analysis." },
+                                {
+                                    "col": "Runs the query before reporting results."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Analyze query performance",
+                    "code": "\nEXPLAIN ANALYZE\nSELECT *\nFROM employees\nWHERE department = 'IT';"
+                },
+                {
+                    "type": "note",
+                    "note": "EXPLAIN ANALYZE is one of the most frequently asked PostgreSQL interview topics for backend and database developer roles."
+                }
+            ]
+        },
+        {
+            "id": "71",
+            "Que": [
+                {
+                    "q": "Q71 : What is Partitioning in PostgreSQL?",
+                    "a": "Partitioning is a database optimization technique in which a large table is divided into smaller, more manageable pieces called partitions. Although the data is physically stored in multiple partitions, PostgreSQL treats them as a single logical table. Partitioning improves query performance, simplifies maintenance, speeds up data deletion, and reduces index sizes. It is commonly used in applications that store millions of records, such as e-commerce, banking, analytics, and logging systems.",
+                    "type": "text",
+                    "id": 71,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Improves Performance": "Queries scan only relevant partitions.",
+                        "Easy Maintenance": "Old partitions can be dropped quickly.",
+                        "Smaller Indexes": "Each partition maintains its own indexes.",
+                        "Scalability": "Handles very large datasets efficiently.",
+                        "Logical Table": "Appears as one table to applications."
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Partitioning is recommended when tables grow into millions or billions of rows."
+                }
+            ]
+        },
+        {
+            "id": "72",
+            "Que": [
+                {
+                    "q": "Q72 : What are the different types of Partitioning in PostgreSQL?",
+                    "a": "PostgreSQL supports three primary partitioning strategies: Range, List, and Hash partitioning. The choice depends on the nature of the data and query patterns. Range partitioning is commonly used for dates, List partitioning for categories or regions, and Hash partitioning for evenly distributing records when no natural range exists. Selecting the correct partitioning strategy significantly improves query performance and storage efficiency.",
+                    "type": "text",
+                    "id": 72,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Partition Type" },
+                        { "label": "Best Used For" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Range Partitioning" },
+                                { "col": "Dates, timestamps, numeric ranges." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "List Partitioning" },
+                                { "col": "Countries, categories, departments." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Hash Partitioning" },
+                                { "col": "Even data distribution." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Example of Range Partitioning",
+                    "code": "\nCREATE TABLE sales (\n    sale_date DATE,\n    amount NUMERIC\n) PARTITION BY RANGE (sale_date);"
+                }
+            ]
+        },
+        {
+            "id": "73",
+            "Que": [
+                {
+                    "q": "Q73 : What is Sharding in PostgreSQL?",
+                    "a": "Sharding is the process of distributing data across multiple independent database servers called shards. Each shard stores only a portion of the total dataset, allowing the application to scale horizontally. Unlike partitioning, which occurs inside a single database instance, sharding distributes data across multiple servers. Sharding is commonly used in large-scale systems such as social media platforms, e-commerce applications, and cloud-based services handling massive amounts of data.",
+                    "type": "text",
+                    "id": 73,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Partitioning" },
+                        { "label": "Sharding" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Single database server." },
+                                { "col": "Multiple database servers." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Managed by PostgreSQL." },
+                                { "col": "Usually managed by the application." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Improves local performance." },
+                                { "col": "Improves scalability." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "One database instance." },
+                                { "col": "Many database instances." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "74",
+            "Que": [
+                {
+                    "q": "Q74 : What is Replication in PostgreSQL?",
+                    "a": "Replication is the process of maintaining copies of a PostgreSQL database on multiple servers. One server acts as the primary database, while one or more replica servers continuously receive updates. Replication improves availability, disaster recovery, backup strategies, and read scalability by allowing applications to distribute read requests across multiple replicas while writes continue on the primary server.",
+                    "type": "text",
+                    "id": 74,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "High Availability": "Replica can replace failed primary.",
+                        "Load Balancing": "Read traffic can be distributed.",
+                        "Disaster Recovery": "Protects against hardware failures.",
+                        "Backup Support": "Replicas can be used for backups.",
+                        "Scalability": "Supports large-scale applications."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "75",
+            "Que": [
+                {
+                    "q": "Q75 : What are the different types of Replication in PostgreSQL?",
+                    "a": "PostgreSQL mainly supports Physical (Streaming) Replication and Logical Replication. Physical replication copies the entire database at the file level, making it ideal for high availability and disaster recovery. Logical replication transfers individual database objects such as tables and rows, allowing selective synchronization between databases. The choice depends on whether complete database replication or fine-grained data replication is required.",
+                    "type": "text",
+                    "id": 75,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Streaming Replication" },
+                        { "label": "Logical Replication" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Replicates entire database." },
+                                { "col": "Replicates selected tables." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Physical replication." },
+                                { "col": "Logical row-level replication." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Ideal for failover." },
+                                {
+                                    "col": "Ideal for selective synchronization."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Replica is read-only." },
+                                { "col": "Greater flexibility." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Streaming Replication is the most commonly used replication method in production PostgreSQL deployments."
+                }
+            ]
+        },
+        {
+            "id": "76",
+            "Que": [
+                {
+                    "q": "Q76 : What is Write-Ahead Logging (WAL) in PostgreSQL?",
+                    "a": "Write-Ahead Logging (WAL) is a mechanism that ensures data durability and crash recovery in PostgreSQL. Before any changes are written to the actual data files, they are first recorded in WAL files. If the database crashes, PostgreSQL replays these WAL records to restore the database to a consistent state. WAL is also the foundation for streaming replication, point-in-time recovery (PITR), and backup mechanisms.",
+                    "type": "text",
+                    "id": 76,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Crash Recovery": "Recovers committed transactions after failures.",
+                        "Durability": "Ensures committed data is not lost.",
+                        "Replication": "Used for Streaming Replication.",
+                        "Backup": "Supports Point-in-Time Recovery (PITR).",
+                        "Performance": "Sequential log writes are faster than random disk writes."
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "WAL is one of PostgreSQL's core features and is frequently asked in backend and DBA interviews."
+                }
+            ]
+        },
+        {
+            "id": "77",
+            "Que": [
+                {
+                    "q": "Q77 : What is VACUUM in PostgreSQL?",
+                    "a": "VACUUM is a maintenance operation that reclaims storage occupied by dead tuples created during UPDATE and DELETE operations. Due to PostgreSQL's MVCC architecture, old row versions remain in the database until they are cleaned up. VACUUM removes these obsolete rows, updates visibility information, and prevents unnecessary database growth. Running VACUUM regularly helps maintain query performance and efficient disk space utilization.",
+                    "type": "text",
+                    "id": 77,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Without VACUUM" },
+                        { "label": "With VACUUM" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Dead tuples accumulate." },
+                                { "col": "Dead tuples are removed." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Table size increases." },
+                                { "col": "Storage is reclaimed." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Queries may slow down." },
+                                { "col": "Performance remains optimized." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Run VACUUM",
+                    "code": "\nVACUUM employees;"
+                }
+            ]
+        },
+        {
+            "id": "78",
+            "Que": [
+                {
+                    "q": "Q78 : What is AUTOVACUUM in PostgreSQL?",
+                    "a": "AUTOVACUUM is a background process that automatically performs VACUUM and ANALYZE operations whenever PostgreSQL determines they are necessary. It helps prevent transaction ID wraparound, cleans dead tuples, updates optimizer statistics, and reduces manual database maintenance. AUTOVACUUM is enabled by default and is considered essential for maintaining healthy production databases without requiring frequent administrator intervention.",
+                    "type": "text",
+                    "id": 78,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "VACUUM" },
+                        { "label": "AUTOVACUUM" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Started manually." },
+                                { "col": "Runs automatically." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Administrator controlled." },
+                                { "col": "Managed by PostgreSQL." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Executed when needed." },
+                                { "col": "Continuously monitors tables." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Disabling AUTOVACUUM in production is generally discouraged because it can lead to severe performance degradation."
+                }
+            ]
+        },
+        {
+            "id": "79",
+            "Que": [
+                {
+                    "q": "Q79 : What is ANALYZE in PostgreSQL?",
+                    "a": "ANALYZE collects statistical information about the distribution of data stored in database tables. PostgreSQL's query planner uses these statistics to choose the most efficient execution plan for SQL queries. Whenever significant amounts of data are inserted, updated, or deleted, running ANALYZE helps ensure that the optimizer has accurate information, leading to faster and more efficient query execution.",
+                    "type": "text",
+                    "id": 79,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Update optimizer statistics",
+                    "code": "\nANALYZE employees;"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Updates Statistics": "Collects table and column statistics.",
+                        "Improves Query Planning": "Helps PostgreSQL choose better execution plans.",
+                        "Faster Queries": "Leads to better optimizer decisions.",
+                        "Automatic": "Usually executed by AUTOVACUUM."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "80",
+            "Que": [
+                {
+                    "q": "Q80 : What is the PostgreSQL Query Planner?",
+                    "a": "The PostgreSQL Query Planner, also called the Query Optimizer, determines the most efficient way to execute SQL statements. It analyzes available indexes, table statistics, join methods, estimated row counts, and execution costs before selecting an execution plan. The planner may choose sequential scans, index scans, nested loop joins, hash joins, or merge joins depending on the query and available statistics, significantly affecting database performance.",
+                    "type": "text",
+                    "id": 80,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Planner Decision" },
+                        { "label": "Description" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Sequential Scan" },
+                                { "col": "Reads the entire table." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Index Scan" },
+                                { "col": "Uses an index to locate rows." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Nested Loop Join" },
+                                { "col": "Efficient for small datasets." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Hash Join" },
+                                { "col": "Fast for large equality joins." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Merge Join" },
+                                { "col": "Efficient for sorted datasets." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "View query execution plan",
+                    "code": "\nEXPLAIN\nSELECT *\nFROM employees\nWHERE department = 'IT';"
+                },
+                {
+                    "type": "note",
+                    "note": "Understanding the Query Planner is essential for performance tuning and is a common topic in senior PostgreSQL interviews."
+                }
+            ]
+        }
+    ]
+}

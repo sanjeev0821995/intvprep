@@ -7,7 +7,10 @@ import { of } from 'rxjs';
     providedIn: 'root',
 })
 export class AppServiceService {
-    constructor( private http: HttpClient, @Inject(DOCUMENT) private doc, ) {}
+    constructor(
+        private http: HttpClient,
+        @Inject(DOCUMENT) private doc,
+    ) {}
 
     getConfig(name: any): any {
         // eslint-disable-next-line @typescript-eslint/no-shadow
@@ -28,7 +31,7 @@ export class AppServiceService {
     }
 
     destroyLinkForCanonicalURL(): void {
-        const els = this.doc.querySelectorAll('link[rel=\'canonical\']');
+        const els = this.doc.querySelectorAll("link[rel='canonical']");
         for (let i = 0, l = els.length; i < l; i++) {
             const el = els[i];
             el.remove();
