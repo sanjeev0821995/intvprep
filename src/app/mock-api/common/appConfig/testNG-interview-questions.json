@@ -1,0 +1,1994 @@
+{
+    "testNG-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is TestNG?",
+                    "a": "TestNG (Test Next Generation) is an open-source testing framework for Java inspired by JUnit and NUnit. It provides powerful features such as annotations, test grouping, parameterization, parallel execution, dependency management, data-driven testing, listeners, and reporting. TestNG is widely used in Selenium automation frameworks because it offers greater flexibility and functionality than JUnit.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : Why is TestNG used?",
+                    "a": "TestNG is used to organize, execute, and manage automated test cases efficiently. It simplifies test execution by providing annotations, supports running tests in parallel, enables data-driven testing through DataProviders, allows test grouping and dependencies, and generates detailed execution reports.",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : What are the advantages of TestNG?",
+                    "a": "TestNG provides flexible test execution, powerful annotations, parallel testing, dependency management, parameterization, data-driven testing, detailed reporting, custom listeners, retry mechanisms, and easy integration with Selenium, Maven, Gradle, Jenkins, and CI/CD pipelines.",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Easy test configuration",
+                        "Annotation-based execution",
+                        "Parallel execution",
+                        "Grouping of test cases",
+                        "Dependency management",
+                        "Data-driven testing",
+                        "HTML reports",
+                        "Listener support"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : What is the difference between TestNG and JUnit?",
+                    "a": "Both are Java testing frameworks, but TestNG offers more advanced testing features such as parallel execution, groups, dependencies, DataProviders, XML-based suite execution, and built-in reporting, making it more suitable for automation testing frameworks.",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "TestNG" }, { "label": "JUnit" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Supports Groups." },
+                                { "col": "Limited grouping support." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Supports Dependencies." },
+                                { "col": "No built-in dependency feature." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Parallel execution built-in." },
+                                { "col": "Limited parallel support." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Uses testng.xml." },
+                                { "col": "No XML suite file." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : What are TestNG Annotations?",
+                    "a": "Annotations are predefined Java annotations that control the execution flow of test methods. They specify when a method should run during the test lifecycle, such as before tests, after tests, before each method, or after each method.",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : What are the commonly used TestNG annotations?",
+                    "a": "TestNG provides several lifecycle annotations to control test execution before, during, and after tests.",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Annotation" },
+                        { "label": "Purpose" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "@BeforeSuite" },
+                                { "col": "Runs before the entire suite." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "@BeforeTest" },
+                                { "col": "Runs before a <test> tag." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "@BeforeClass" },
+                                {
+                                    "col": "Runs before the first test method in a class."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "@BeforeMethod" },
+                                { "col": "Runs before every test method." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "@Test" },
+                                { "col": "Marks a test method." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "@AfterMethod" },
+                                { "col": "Runs after every test method." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "@AfterClass" },
+                                { "col": "Runs after all methods in a class." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "@AfterTest" },
+                                { "col": "Runs after a <test> tag." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "@AfterSuite" },
+                                { "col": "Runs after the entire suite." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : What is the @Test annotation in TestNG?",
+                    "a": "The @Test annotation marks a Java method as a test case. TestNG recognizes and executes all methods annotated with @Test. Additional attributes such as priority, groups, dependsOnMethods, enabled, invocationCount, and timeOut can be specified to customize execution.",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "@Test Example",
+                    "code": "\n@Test\npublic void loginTest() {\n    System.out.println(\"Login Successful\");\n}"
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : What is the purpose of the testng.xml file?",
+                    "a": "The testng.xml file is the configuration file used to define test suites, test classes, packages, groups, parameters, listeners, and parallel execution settings. It provides centralized control over how TestNG executes tests.",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : What is a Test Suite in TestNG?",
+                    "a": "A Test Suite is a collection of test cases or test classes executed together. Suites are defined in the testng.xml file and help organize related tests for regression, smoke, sanity, or functional testing.",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : What is the execution flow of TestNG annotations?",
+                    "a": "TestNG executes lifecycle annotations in a predefined order before and after test methods. Understanding this execution order is essential for setting up test environments and cleaning resources after execution.",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "@BeforeSuite",
+                        "@BeforeTest",
+                        "@BeforeClass",
+                        "@BeforeMethod",
+                        "@Test",
+                        "@AfterMethod",
+                        "@AfterClass",
+                        "@AfterTest",
+                        "@AfterSuite"
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "This lifecycle is one of the most frequently asked TestNG interview questions."
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : What is the @BeforeSuite annotation in TestNG?",
+                    "a": "The @BeforeSuite annotation is executed once before all the tests in the entire test suite. It is commonly used for one-time setup tasks such as loading configuration files, initializing reports, establishing database connections, or launching shared resources.",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "@BeforeSuite Example",
+                    "code": "\n@BeforeSuite\npublic void setupSuite() {\n    System.out.println(\"Before Suite\");\n}"
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : What is the @AfterSuite annotation in TestNG?",
+                    "a": "The @AfterSuite annotation is executed once after all tests in the suite have finished. It is typically used to generate reports, close database connections, release shared resources, and perform cleanup activities.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : What is the @BeforeTest annotation in TestNG?",
+                    "a": "The @BeforeTest annotation executes before the first test method inside a <test> tag defined in the testng.xml file. It is useful for initializing resources that will be shared by all test classes within that particular test.",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : What is the @AfterTest annotation in TestNG?",
+                    "a": "The @AfterTest annotation executes after all test methods inside a <test> tag have completed. It is commonly used for cleanup operations such as closing browser instances, disconnecting databases, or releasing shared resources.",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : What is the @BeforeClass annotation in TestNG?",
+                    "a": "The @BeforeClass annotation executes once before the first @Test method of a class. It is commonly used to initialize objects, launch a browser, or perform class-level setup operations that need to occur only once.",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "@BeforeClass Example",
+                    "code": "\n@BeforeClass\npublic void launchBrowser() {\n    System.out.println(\"Launch Browser\");\n}"
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : What is the @AfterClass annotation in TestNG?",
+                    "a": "The @AfterClass annotation executes once after all @Test methods in a class have completed. It is typically used to close browser sessions, release class-level resources, and perform final cleanup for that class.",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : What is the @BeforeMethod annotation in TestNG?",
+                    "a": "The @BeforeMethod annotation executes before every @Test method. It is commonly used to reset the test environment, initialize test data, log in to an application, or perform any setup required before each individual test case.",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : What is the @AfterMethod annotation in TestNG?",
+                    "a": "The @AfterMethod annotation executes after every @Test method. It is typically used for cleanup tasks such as logging out, taking screenshots after failures, clearing test data, or resetting the application state.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : What is the difference between @BeforeTest and @BeforeMethod?",
+                    "a": "@BeforeTest executes once before all the test classes inside a <test> tag in testng.xml, whereas @BeforeMethod executes before every individual @Test method. @BeforeTest is used for shared setup, while @BeforeMethod is used for per-test initialization.",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "@BeforeTest" },
+                        { "label": "@BeforeMethod" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Runs once per <test>." },
+                                { "col": "Runs before every test method." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Shared setup." },
+                                { "col": "Individual test setup." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Lower execution frequency." },
+                                { "col": "Higher execution frequency." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : What is the difference between @BeforeClass and @BeforeMethod?",
+                    "a": "@BeforeClass executes only once before the first test method in a class, making it suitable for expensive setup operations such as launching a browser. @BeforeMethod executes before every test method and is ideal for resetting the application state or preparing test data for each test case.",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "@BeforeClass" },
+                        { "label": "@BeforeMethod" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Runs once per class." },
+                                { "col": "Runs before every @Test." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Used for browser launch." },
+                                { "col": "Used for login or test setup." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Less execution overhead." },
+                                { "col": "Runs repeatedly." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "The differences between TestNG lifecycle annotations are among the most frequently asked questions in Selenium and TestNG interviews."
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : What is the priority attribute in the @Test annotation?",
+                    "a": "The priority attribute determines the execution order of test methods in TestNG. Test methods with lower priority values execute before those with higher values. If no priority is specified, TestNG assigns a default priority of 0.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Priority Example",
+                    "code": "\n@Test(priority = 1)\npublic void login() {}\n\n@Test(priority = 2)\npublic void search() {}\n\n@Test(priority = 3)\npublic void logout() {}"
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : What happens if multiple test methods have the same priority?",
+                    "a": "If multiple test methods have the same priority, TestNG executes them in alphabetical order based on their method names. This behavior ensures a deterministic execution order unless dependencies or other configurations affect execution.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : What is the enabled attribute in the @Test annotation?",
+                    "a": "The enabled attribute controls whether a test method should be executed. Setting enabled = false skips the test during execution without deleting or commenting out the code, making it useful for temporarily disabling unstable or incomplete tests.",
+                    "type": "text",
+                    "id": 23,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "enabled Example",
+                    "code": "\n@Test(enabled = false)\npublic void paymentTest() {\n    // This test will not execute.\n}"
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "q": "Q24 : What is the description attribute in the @Test annotation?",
+                    "a": "The description attribute allows developers to provide a human-readable explanation of a test case. The description appears in reports and improves the readability and maintainability of automated test suites.",
+                    "type": "text",
+                    "id": 24,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Description Example",
+                    "code": "\n@Test(description = \"Verify successful user login\")\npublic void loginTest() {}"
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "q": "Q25 : What is the invocationCount attribute in TestNG?",
+                    "a": "The invocationCount attribute specifies how many times a test method should be executed. It is useful for stress testing, repeated execution, or validating that a test behaves consistently across multiple runs.",
+                    "type": "text",
+                    "id": 25,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "invocationCount Example",
+                    "code": "\n@Test(invocationCount = 5)\npublic void repeatTest() {\n    System.out.println(\"Executed\");\n}"
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "q": "Q26 : What is the timeOut attribute in TestNG?",
+                    "a": "The timeOut attribute defines the maximum time allowed for a test method to complete execution. If the test exceeds the specified time limit, TestNG marks it as failed. This helps identify slow or hanging test cases.",
+                    "type": "text",
+                    "id": 26,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "timeOut Example",
+                    "code": "\n@Test(timeOut = 5000)\npublic void loadPage() {\n    // Must finish within 5 seconds\n}"
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "q": "Q27 : What are Test Groups in TestNG?",
+                    "a": "Groups allow multiple test methods to be categorized under logical names such as Smoke, Regression, Sanity, or Integration. Groups make it easy to execute only a selected subset of tests without running the entire test suite.",
+                    "type": "text",
+                    "id": 27,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "q": "Q28 : How do you create groups in TestNG?",
+                    "a": "Groups are created by assigning one or more group names to the groups attribute of the @Test annotation. A single test method can belong to multiple groups, allowing flexible organization and execution.",
+                    "type": "text",
+                    "id": 28,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Groups Example",
+                    "code": "\n@Test(groups = {\"Smoke\", \"Regression\"})\npublic void loginTest() {\n\n}"
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "q": "Q29 : How do you execute specific groups using testng.xml?",
+                    "a": "Specific groups can be included or excluded within the testng.xml file using the <groups> tag. This allows testers to execute only Smoke, Regression, Sanity, or any other selected group without modifying the test code.",
+                    "type": "text",
+                    "id": 29,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "xml",
+                    "simple_text": "Include Group Example",
+                    "code": "\n<groups>\n    <run>\n        <include name=\"Smoke\"/>\n    </run>\n</groups>"
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "q": "Q30 : What are the advantages of using TestNG Groups?",
+                    "a": "Groups provide flexibility in organizing and executing tests. They allow selective execution, simplify regression testing, support continuous integration pipelines, improve test maintenance, and reduce execution time by running only relevant test cases.",
+                    "type": "text",
+                    "id": 30,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Selective test execution",
+                        "Supports Smoke, Sanity, and Regression suites",
+                        "Reduces execution time",
+                        "Improves test organization",
+                        "Useful in CI/CD pipelines",
+                        "Easy maintenance of large automation suites"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "q": "Q31 : What is dependsOnMethods in TestNG?",
+                    "a": "The dependsOnMethods attribute is used to define a dependency between test methods. A dependent test method executes only after the specified method has completed successfully. If the dependent method fails or is skipped, the current test is also skipped.",
+                    "type": "text",
+                    "id": 31,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "dependsOnMethods Example",
+                    "code": "\n@Test\npublic void login() {}\n\n@Test(dependsOnMethods = \"login\")\npublic void placeOrder() {}"
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "q": "Q32 : What is dependsOnGroups in TestNG?",
+                    "a": "The dependsOnGroups attribute allows a test method to depend on one or more test groups. The test executes only after all the tests in the specified group have completed successfully. This is useful for managing dependencies across multiple test classes.",
+                    "type": "text",
+                    "id": 32,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "dependsOnGroups Example",
+                    "code": "\n@Test(groups = \"Login\")\npublic void loginTest() {}\n\n@Test(dependsOnGroups = \"Login\")\npublic void checkoutTest() {}"
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "q": "Q33 : What happens if a dependency fails in TestNG?",
+                    "a": "If a test method or group that another test depends on fails or is skipped, the dependent test is automatically skipped. TestNG does this to avoid executing tests whose prerequisites have not been satisfied.",
+                    "type": "text",
+                    "id": 33,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "q": "Q34 : What is Parameterization in TestNG?",
+                    "a": "Parameterization is the process of passing input values to test methods without hardcoding them. TestNG supports parameterization through the @Parameters annotation with testng.xml and through the @DataProvider annotation for data-driven testing.",
+                    "type": "text",
+                    "id": 34,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "q": "Q35 : What is the @Parameters annotation in TestNG?",
+                    "a": "The @Parameters annotation is used to receive parameter values from the testng.xml file. It allows the same test method to run with different configuration values, such as browser names, URLs, usernames, or passwords.",
+                    "type": "text",
+                    "id": 35,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "@Parameters Example",
+                    "code": "\n@Parameters(\"browser\")\n@Test\npublic void launchBrowser(String browser) {\n    System.out.println(browser);\n}"
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "q": "Q36 : How do you define parameters in testng.xml?",
+                    "a": "Parameters are defined in the testng.xml file using the <parameter> tag. These values are then injected into test methods annotated with @Parameters during execution.",
+                    "type": "text",
+                    "id": 36,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "xml",
+                    "simple_text": "testng.xml Parameter Example",
+                    "code": "\n<parameter name=\"browser\" value=\"chrome\"/>"
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "q": "Q37 : What is the @Optional annotation in TestNG?",
+                    "a": "The @Optional annotation provides a default value for a parameter when the corresponding parameter is not specified in the testng.xml file. This prevents execution failures caused by missing parameters.",
+                    "type": "text",
+                    "id": 37,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "@Optional Example",
+                    "code": "\n@Parameters(\"browser\")\n@Test\npublic void launch(@Optional(\"chrome\") String browser) {\n    System.out.println(browser);\n}"
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "q": "Q38 : What is a DataProvider in TestNG?",
+                    "a": "A DataProvider is a feature that supplies multiple sets of data to a single test method, enabling data-driven testing. Each data set causes the test method to execute once, allowing the same test logic to be reused with different inputs.",
+                    "type": "text",
+                    "id": 38,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "q": "Q39 : How do you create a DataProvider in TestNG?",
+                    "a": "A DataProvider is created using the @DataProvider annotation. The associated method returns a two-dimensional Object array, where each row represents one set of input data that will be passed to the test method.",
+                    "type": "text",
+                    "id": 39,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "DataProvider Example",
+                    "code": "\n@DataProvider(name = \"loginData\")\npublic Object[][] data() {\n    return new Object[][] {\n        {\"admin\", \"1234\"},\n        {\"user\", \"5678\"}\n    };\n}"
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "q": "Q40 : How do you use a DataProvider in a TestNG test?",
+                    "a": "A DataProvider is linked to a test method using the dataProvider attribute of the @Test annotation. TestNG automatically invokes the test once for each row of data returned by the DataProvider method.",
+                    "type": "text",
+                    "id": 40,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Using a DataProvider",
+                    "code": "\n@Test(dataProvider = \"loginData\")\npublic void loginTest(String username, String password) {\n    System.out.println(username + \" \" + password);\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "DataProvider is one of the most frequently asked TestNG interview topics because it is widely used in Selenium automation frameworks."
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "q": "Q41 : What are Assertions in TestNG?",
+                    "a": "Assertions are validation statements used to verify whether the actual result matches the expected result. If an assertion passes, the test continues; if it fails, TestNG marks the test as failed. Assertions are essential for validating application behavior in automated tests.",
+                    "type": "text",
+                    "id": 41,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "q": "Q42 : What are the different types of Assertions in TestNG?",
+                    "a": "TestNG provides two types of assertions: Hard Assertions and Soft Assertions. Hard Assertions stop the execution immediately when they fail, while Soft Assertions continue executing the remaining test steps and report all failures together when assertAll() is called.",
+                    "type": "text",
+                    "id": 42,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Hard Assertion" },
+                        { "label": "Soft Assertion" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Stops execution on failure." },
+                                { "col": "Continues execution after failure." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Uses Assert class." },
+                                { "col": "Uses SoftAssert class." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "No assertAll() required." },
+                                { "col": "Requires assertAll()." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "q": "Q43 : What is a Hard Assertion in TestNG?",
+                    "a": "A Hard Assertion immediately terminates the execution of the current test method when an assertion fails. Any statements following the failed assertion are skipped, and the test is marked as failed.",
+                    "type": "text",
+                    "id": 43,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Hard Assertion Example",
+                    "code": "\nAssert.assertEquals(actualTitle, expectedTitle);"
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "q": "Q44 : What is a Soft Assertion in TestNG?",
+                    "a": "A Soft Assertion allows the test to continue executing even if an assertion fails. All assertion failures are collected and reported together when assertAll() is invoked. This is useful when multiple validations need to be performed in a single test.",
+                    "type": "text",
+                    "id": 44,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Soft Assertion Example",
+                    "code": "\nSoftAssert softAssert = new SoftAssert();\nsoftAssert.assertEquals(actual, expected);\nsoftAssert.assertTrue(isDisplayed);\nsoftAssert.assertAll();"
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "q": "Q45 : Why is assertAll() required with Soft Assertions?",
+                    "a": "The assertAll() method checks all collected assertion results and throws an AssertionError if any assertion has failed. Without calling assertAll(), failed Soft Assertions are ignored, and the test may incorrectly appear as passed.",
+                    "type": "text",
+                    "id": 45,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "q": "Q46 : What are the commonly used assertion methods in TestNG?",
+                    "a": "The Assert class provides several methods for validating expected outcomes during test execution.",
+                    "type": "text",
+                    "id": 46,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "assertEquals()": "Checks whether two values are equal.",
+                        "assertNotEquals()": "Checks whether two values are different.",
+                        "assertTrue()": "Verifies that a condition is true.",
+                        "assertFalse()": "Verifies that a condition is false.",
+                        "assertNull()": "Verifies that an object is null.",
+                        "assertNotNull()": "Verifies that an object is not null.",
+                        "assertSame()": "Checks whether two references point to the same object.",
+                        "assertNotSame()": "Checks whether two references point to different objects.",
+                        "fail()": "Marks the test as failed immediately."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : What is a Listener in TestNG?",
+                    "a": "A Listener is an interface that allows developers to perform custom actions when specific test events occur, such as test start, success, failure, skip, or suite completion. Listeners are commonly used for logging, taking screenshots, generating reports, and sending notifications.",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "q": "Q48 : What are the commonly used TestNG Listener interfaces?",
+                    "a": "TestNG provides several listener interfaces for monitoring different stages of test execution.",
+                    "type": "text",
+                    "id": 48,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Listener" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "ITestListener" },
+                                { "col": "Monitors test execution events." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "ISuiteListener" },
+                                { "col": "Monitors suite execution." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "IInvokedMethodListener" },
+                                { "col": "Monitors method invocation." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "IReporter" },
+                                { "col": "Generates custom reports." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "IExecutionListener" },
+                                {
+                                    "col": "Monitors entire execution lifecycle."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "q": "Q49 : What is ITestListener in TestNG?",
+                    "a": "ITestListener is one of the most commonly used listener interfaces. It provides callback methods such as onTestStart(), onTestSuccess(), onTestFailure(), onTestSkipped(), and onFinish(), allowing developers to execute custom logic whenever these events occur.",
+                    "type": "text",
+                    "id": 49,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "q": "Q50 : How do you register a Listener in TestNG?",
+                    "a": "A Listener can be registered using the @Listeners annotation in a test class or by specifying it inside the testng.xml file. Registering through testng.xml applies the listener to the entire test suite, while @Listeners applies it only to the annotated class.",
+                    "type": "text",
+                    "id": 50,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "@Listeners Example",
+                    "code": "\n@Listeners(MyListener.class)\npublic class LoginTest {\n\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "Assertions, Listeners, and DataProviders are among the most frequently asked TestNG topics in Selenium and SDET interviews."
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "q": "Q51 : What is Reporter in TestNG?",
+                    "a": "Reporter is a built-in TestNG utility used to generate custom log messages during test execution. The messages are displayed in the TestNG HTML reports and console output, making it easier to debug and understand test execution flow.",
+                    "type": "text",
+                    "id": 51,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "Reporter Example",
+                    "code": "\nReporter.log(\"Login test executed successfully\", true);"
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "q": "Q52 : What is RetryAnalyzer in TestNG?",
+                    "a": "RetryAnalyzer is a TestNG feature that automatically retries failed test cases based on custom logic. It is useful for handling flaky tests caused by temporary issues such as network delays, browser synchronization problems, or unstable test environments.",
+                    "type": "text",
+                    "id": 52,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "q": "Q53 : How do you implement RetryAnalyzer in TestNG?",
+                    "a": "To implement RetryAnalyzer, create a class that implements the IRetryAnalyzer interface and override the retry() method. Then, associate the class with a test using the retryAnalyzer attribute of the @Test annotation.",
+                    "type": "text",
+                    "id": 53,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "RetryAnalyzer Example",
+                    "code": "\n@Test(retryAnalyzer = Retry.class)\npublic void loginTest() {\n\n}"
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "q": "Q54 : What is Parallel Execution in TestNG?",
+                    "a": "Parallel Execution allows multiple test methods, classes, or suites to run simultaneously using multiple threads. This significantly reduces execution time, especially for large Selenium automation suites running across different browsers or environments.",
+                    "type": "text",
+                    "id": 54,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "Que": [
+                {
+                    "q": "Q55 : What are the different parallel execution modes in TestNG?",
+                    "a": "TestNG supports multiple levels of parallel execution, allowing teams to optimize execution speed based on the structure of their automation framework.",
+                    "type": "text",
+                    "id": 55,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Mode" }, { "label": "Description" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "methods" },
+                                { "col": "Runs test methods in parallel." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "classes" },
+                                { "col": "Runs test classes in parallel." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "tests" },
+                                { "col": "Runs <test> tags in parallel." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "instances" },
+                                { "col": "Runs object instances in parallel." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "suites" },
+                                { "col": "Runs multiple suites in parallel." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "56",
+            "Que": [
+                {
+                    "q": "Q56 : How do you enable Parallel Execution in TestNG?",
+                    "a": "Parallel execution is enabled by configuring the parallel and thread-count attributes in the testng.xml file. The parallel attribute specifies the execution level, while thread-count defines the number of threads that TestNG can use simultaneously.",
+                    "type": "text",
+                    "id": 56,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "xml",
+                    "simple_text": "Parallel Execution Example",
+                    "code": "\n<suite name=\"Suite\" parallel=\"classes\" thread-count=\"4\">\n</suite>"
+                }
+            ]
+        },
+        {
+            "id": "57",
+            "Que": [
+                {
+                    "q": "Q57 : What are the benefits of Parallel Execution?",
+                    "a": "Parallel execution improves automation efficiency by reducing overall execution time, increasing resource utilization, enabling cross-browser testing, supporting distributed execution, and accelerating Continuous Integration and Continuous Deployment (CI/CD) pipelines.",
+                    "type": "text",
+                    "id": 57,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Faster execution",
+                        "Better CPU utilization",
+                        "Cross-browser testing",
+                        "Supports CI/CD",
+                        "Reduces regression testing time",
+                        "Improves productivity"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "58",
+            "Que": [
+                {
+                    "q": "Q58 : What precautions should be taken while running tests in parallel?",
+                    "a": "When running tests in parallel, avoid sharing mutable objects across threads, use ThreadLocal for WebDriver instances, ensure test data is isolated, avoid static variables when possible, and make test methods independent to prevent synchronization issues and flaky tests.",
+                    "type": "text",
+                    "id": 58,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "59",
+            "Que": [
+                {
+                    "q": "Q59 : What is ThreadLocal in Selenium with TestNG?",
+                    "a": "ThreadLocal is a Java class that provides each thread with its own independent copy of an object. In Selenium automation frameworks, ThreadLocal<WebDriver> ensures that each parallel test thread has its own WebDriver instance, preventing conflicts and improving thread safety.",
+                    "type": "text",
+                    "id": 59,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "ThreadLocal Example",
+                    "code": "\nprivate static ThreadLocal<WebDriver> driver = new ThreadLocal<>();"
+                }
+            ]
+        },
+        {
+            "id": "60",
+            "Que": [
+                {
+                    "q": "Q60 : Why is ThreadLocal important in Parallel Selenium execution?",
+                    "a": "Without ThreadLocal, multiple parallel test threads may share the same WebDriver instance, leading to unpredictable behavior such as browser conflicts, incorrect element interactions, and random test failures. ThreadLocal guarantees that each thread operates on its own isolated WebDriver instance, making parallel execution stable and reliable.",
+                    "type": "text",
+                    "id": 60,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Questions on Parallel Execution, ThreadLocal, and RetryAnalyzer are commonly asked in interviews for Selenium Automation Engineer and SDET roles."
+                }
+            ]
+        },
+        {
+            "id": "61",
+            "Que": [
+                {
+                    "q": "Q61 : What is @Factory in TestNG?",
+                    "a": "The @Factory annotation is used to create multiple instances of a test class dynamically. Each instance can receive different constructor parameters, making it useful for data-driven and object-based test execution without relying on DataProviders.",
+                    "type": "text",
+                    "id": 61,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "@Factory Example",
+                    "code": "\n@Factory\npublic Object[] createInstances() {\n    return new Object[] {\n        new LoginTest(\"admin\"),\n        new LoginTest(\"user\")\n    };\n}"
+                }
+            ]
+        },
+        {
+            "id": "62",
+            "Que": [
+                {
+                    "q": "Q62 : What is the difference between @Factory and @DataProvider?",
+                    "a": "@Factory creates multiple instances of an entire test class, whereas @DataProvider supplies multiple sets of data to a single test method. @Factory is object-oriented, while @DataProvider is method-oriented.",
+                    "type": "text",
+                    "id": 62,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "@Factory" },
+                        { "label": "@DataProvider" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Creates test class instances." },
+                                { "col": "Supplies test data." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Constructor-based." },
+                                { "col": "Method parameter-based." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Works at class level." },
+                                { "col": "Works at method level." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "63",
+            "Que": [
+                {
+                    "q": "Q63 : What is IAnnotationTransformer in TestNG?",
+                    "a": "IAnnotationTransformer is a TestNG listener interface that allows developers to modify TestNG annotations at runtime. It can dynamically change attributes such as priority, enabled status, invocation count, timeout, and retry analyzer without modifying the source code.",
+                    "type": "text",
+                    "id": 63,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "64",
+            "Que": [
+                {
+                    "q": "Q64 : What is IInvokedMethodListener in TestNG?",
+                    "a": "IInvokedMethodListener is a listener interface that provides callbacks before and after every configuration or test method execution. It is commonly used for logging, measuring execution time, and implementing custom framework behavior.",
+                    "type": "text",
+                    "id": 64,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "65",
+            "Que": [
+                {
+                    "q": "Q65 : What is ISuiteListener in TestNG?",
+                    "a": "ISuiteListener is a listener interface that executes custom logic before and after the execution of an entire test suite. It is useful for initializing shared resources, generating reports, or sending notifications once the suite has completed.",
+                    "type": "text",
+                    "id": 65,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "66",
+            "Que": [
+                {
+                    "q": "Q66 : What is IExecutionListener in TestNG?",
+                    "a": "IExecutionListener provides callbacks at the beginning and end of the complete TestNG execution. Unlike ISuiteListener, it executes only once for the entire TestNG run, making it useful for framework-level initialization and cleanup.",
+                    "type": "text",
+                    "id": 66,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "67",
+            "Que": [
+                {
+                    "q": "Q67 : What is IReporter in TestNG?",
+                    "a": "IReporter is a TestNG listener interface used to generate custom reports after test execution. It provides access to execution results, allowing developers to create HTML, PDF, Excel, or custom dashboard reports beyond TestNG's default reports.",
+                    "type": "text",
+                    "id": 67,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "68",
+            "Que": [
+                {
+                    "q": "Q68 : What are TestNG Reports?",
+                    "a": "TestNG automatically generates execution reports after every test run. These reports include details such as passed tests, failed tests, skipped tests, execution time, configuration methods, and stack traces for failures.",
+                    "type": "text",
+                    "id": 68,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "index.html": "Summary report of execution.",
+                        "emailable-report.html": "Shareable HTML report.",
+                        "testng-results.xml": "XML execution results.",
+                        "JUnit XML": "Compatible with CI tools."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "69",
+            "Que": [
+                {
+                    "q": "Q69 : What is testng-failed.xml?",
+                    "a": "The testng-failed.xml file is automatically generated when test failures occur. It contains only the failed and skipped test cases, allowing developers to rerun unsuccessful tests without executing the entire test suite again.",
+                    "type": "text",
+                    "id": 69,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "70",
+            "Que": [
+                {
+                    "q": "Q70 : What are the advantages of TestNG over JUnit in Selenium automation?",
+                    "a": "TestNG offers advanced features that simplify automation framework development, including flexible annotations, dependency management, grouping, parameterization, DataProviders, parallel execution, listeners, retry mechanisms, XML suite configuration, and built-in reporting. These capabilities make TestNG the preferred testing framework for most Selenium automation projects.",
+                    "type": "text",
+                    "id": 70,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Rich annotation support",
+                        "Parallel execution",
+                        "Data-driven testing",
+                        "Dependency management",
+                        "Flexible grouping",
+                        "Retry mechanism",
+                        "Listener support",
+                        "Powerful reporting",
+                        "XML suite management",
+                        "Excellent Selenium integration"
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Topics such as @Factory, Listeners, Parallel Execution, ThreadLocal, and Reporting are commonly discussed in interviews for experienced Selenium Automation Engineers and SDETs."
+                }
+            ]
+        },
+        {
+            "id": "71",
+            "Que": [
+                {
+                    "q": "Q71 : How do you execute failed test cases automatically in TestNG?",
+                    "a": "Failed test cases can be re-executed using the automatically generated testng-failed.xml file or by implementing the IRetryAnalyzer interface. The failed XML reruns only the failed and skipped tests, while RetryAnalyzer retries failed tests immediately during the same execution.",
+                    "type": "text",
+                    "id": 71,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "72",
+            "Que": [
+                {
+                    "q": "Q72 : What is preserve-order in testng.xml?",
+                    "a": "The preserve-order attribute controls whether TestNG should execute test classes in the order they are defined in the testng.xml file. When set to true, TestNG preserves the declared order. When false, the execution order is not guaranteed.",
+                    "type": "text",
+                    "id": 72,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "xml",
+                    "simple_text": "preserve-order Example",
+                    "code": "\n<test name=\"Regression\" preserve-order=\"true\">\n    <classes>\n        <class name=\"tests.LoginTest\"/>\n        <class name=\"tests.PaymentTest\"/>\n    </classes>\n</test>"
+                }
+            ]
+        },
+        {
+            "id": "73",
+            "Que": [
+                {
+                    "q": "Q73 : What is alwaysRun in TestNG?",
+                    "a": "The alwaysRun attribute ensures that a configuration method or dependent test executes even if a previous configuration method or dependency has failed. It is commonly used in cleanup methods to ensure resources such as browsers or database connections are always released.",
+                    "type": "text",
+                    "id": 73,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "alwaysRun Example",
+                    "code": "\n@AfterMethod(alwaysRun = true)\npublic void tearDown() {\n    driver.quit();\n}"
+                }
+            ]
+        },
+        {
+            "id": "74",
+            "Que": [
+                {
+                    "q": "Q74 : What is expectedExceptions in TestNG?",
+                    "a": "The expectedExceptions attribute is used to verify that a test method throws a specific exception. If the expected exception is thrown, the test passes. If no exception or a different exception is thrown, the test fails.",
+                    "type": "text",
+                    "id": 74,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "expectedExceptions Example",
+                    "code": "\n@Test(expectedExceptions = ArithmeticException.class)\npublic void divideByZero() {\n    int result = 10 / 0;\n}"
+                }
+            ]
+        },
+        {
+            "id": "75",
+            "Que": [
+                {
+                    "q": "Q75 : What is expectedExceptionsMessageRegExp in TestNG?",
+                    "a": "The expectedExceptionsMessageRegExp attribute validates both the type of exception and its message using a regular expression. This provides more precise verification of exception handling in test cases.",
+                    "type": "text",
+                    "id": 75,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "76",
+            "Que": [
+                {
+                    "q": "Q76 : What is invocationTimeOut in TestNG?",
+                    "a": "The invocationTimeOut attribute specifies the maximum total execution time for all invocations of a test method when invocationCount is used. If the cumulative execution exceeds the specified limit, TestNG marks the test as failed.",
+                    "type": "text",
+                    "id": 76,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "77",
+            "Que": [
+                {
+                    "q": "Q77 : What is threadPoolSize in TestNG?",
+                    "a": "The threadPoolSize attribute specifies the number of threads that TestNG should use when executing multiple invocations of a test method. It is typically used together with invocationCount to run repeated executions concurrently.",
+                    "type": "text",
+                    "id": 77,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "java",
+                    "simple_text": "threadPoolSize Example",
+                    "code": "\n@Test(invocationCount = 10, threadPoolSize = 3)\npublic void loadTest() {\n    // Executes 10 times using 3 threads\n}"
+                }
+            ]
+        },
+        {
+            "id": "78",
+            "Que": [
+                {
+                    "q": "Q78 : What is singleThreaded in TestNG?",
+                    "a": "The singleThreaded attribute ensures that all test methods within a class are executed sequentially using the same thread, even if parallel execution is enabled for the suite. This is useful when tests share state or resources that are not thread-safe.",
+                    "type": "text",
+                    "id": 78,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "79",
+            "Que": [
+                {
+                    "q": "Q79 : What is the difference between invocationCount and threadPoolSize?",
+                    "a": "The invocationCount attribute determines how many times a test method will be executed, while threadPoolSize specifies how many threads will be used to execute those invocations concurrently. threadPoolSize has no effect unless invocationCount is greater than 1.",
+                    "type": "text",
+                    "id": 79,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "invocationCount" },
+                        { "label": "threadPoolSize" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Controls number of executions." },
+                                { "col": "Controls number of threads." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Runs the test multiple times." },
+                                { "col": "Runs executions concurrently." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "80",
+            "Que": [
+                {
+                    "q": "Q80 : What are the best practices for using TestNG in Selenium frameworks?",
+                    "a": "A well-designed TestNG framework should emphasize maintainability, scalability, and reliability. Tests should be independent, reusable, and capable of running in parallel without conflicts. Features such as DataProviders, Listeners, RetryAnalyzer, ThreadLocal, and XML-based suite management should be used appropriately to build robust automation frameworks.",
+                    "type": "text",
+                    "id": 80,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Keep test cases independent",
+                        "Use Page Object Model (POM)",
+                        "Use DataProviders for test data",
+                        "Implement Listeners for logging and screenshots",
+                        "Use RetryAnalyzer only for flaky tests",
+                        "Use ThreadLocal for parallel WebDriver instances",
+                        "Organize tests using Groups",
+                        "Avoid hardcoded values",
+                        "Generate meaningful reports",
+                        "Integrate with CI/CD tools like Jenkins or GitHub Actions"
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "These 80 questions cover the TestNG concepts most commonly asked in Selenium Automation Tester, QA Engineer, and SDET interviews, ranging from beginner to advanced levels."
+                }
+            ]
+        },
+        {
+            "id": "81",
+            "Que": [
+                {
+                    "q": "Q81 : Can TestNG execute tests in parallel across multiple browsers?",
+                    "a": "Yes. TestNG supports parallel execution across multiple browsers by combining parallel execution in testng.xml with Selenium WebDriver. Each browser instance should have its own WebDriver object, typically managed using ThreadLocal, to avoid thread interference.",
+                    "type": "text",
+                    "id": 81,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "82",
+            "Que": [
+                {
+                    "q": "Q82 : How is TestNG integrated with Selenium?",
+                    "a": "TestNG manages the execution of Selenium test cases by providing annotations, assertions, parameterization, DataProviders, listeners, reporting, and parallel execution. Selenium performs browser automation, while TestNG controls how and when those browser tests execute.",
+                    "type": "text",
+                    "id": 82,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "83",
+            "Que": [
+                {
+                    "q": "Q83 : How do you capture screenshots automatically when a test fails?",
+                    "a": "The most common approach is to implement ITestListener and override the onTestFailure() method. When a test fails, Selenium captures a screenshot and saves it for reporting and debugging purposes.",
+                    "type": "text",
+                    "id": 83,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "84",
+            "Que": [
+                {
+                    "q": "Q84 : Why are Listeners preferred over writing screenshot code in every test?",
+                    "a": "Listeners centralize common functionality such as screenshot capture, logging, and reporting. This avoids code duplication, improves maintainability, and ensures consistent behavior across the automation framework.",
+                    "type": "text",
+                    "id": 84,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "85",
+            "Que": [
+                {
+                    "q": "Q85 : How do you organize a large TestNG automation framework?",
+                    "a": "A large framework is typically organized into separate packages for Page Objects, Test Classes, Utilities, Base Classes, Listeners, DataProviders, Configuration Files, Reports, and Test Data. This modular structure improves maintainability and scalability.",
+                    "type": "text",
+                    "id": 85,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "86",
+            "Que": [
+                {
+                    "q": "Q86 : How does TestNG support CI/CD pipelines?",
+                    "a": "TestNG integrates seamlessly with build tools such as Maven and Gradle, and CI/CD platforms such as Jenkins, GitHub Actions, Azure DevOps, and GitLab CI. Test suites can be executed automatically after every code commit, with reports generated for each pipeline run.",
+                    "type": "text",
+                    "id": 86,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "87",
+            "Que": [
+                {
+                    "q": "Q87 : What challenges can occur during parallel execution?",
+                    "a": "Common challenges include shared WebDriver instances, race conditions, static variables, shared test data, synchronization issues, and non-thread-safe utilities. These problems can lead to flaky tests if ThreadLocal and proper synchronization are not used.",
+                    "type": "text",
+                    "id": 87,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "88",
+            "Que": [
+                {
+                    "q": "Q88 : What is a flaky test?",
+                    "a": "A flaky test is a test that sometimes passes and sometimes fails without any changes to the application under test. Common causes include synchronization issues, unstable environments, dynamic elements, timing problems, network latency, and shared test data.",
+                    "type": "text",
+                    "id": 88,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "89",
+            "Que": [
+                {
+                    "q": "Q89 : How can flaky tests be reduced?",
+                    "a": "Flaky tests can be reduced by using explicit waits instead of Thread.sleep(), maintaining isolated test data, implementing ThreadLocal for WebDriver, avoiding hardcoded waits, making tests independent, improving locator strategies, and stabilizing the test environment.",
+                    "type": "text",
+                    "id": 89,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "90",
+            "Que": [
+                {
+                    "q": "Q90 : Why is TestNG widely used in Selenium automation projects?",
+                    "a": "TestNG provides enterprise-level testing capabilities such as flexible annotations, parallel execution, dependency management, groups, DataProviders, listeners, reporting, retry mechanisms, XML suite configuration, and excellent integration with Selenium and CI/CD tools. These features make it ideal for building scalable automation frameworks.",
+                    "type": "text",
+                    "id": 90,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "91",
+            "Que": [
+                {
+                    "q": "Q91 : How would you design a scalable Selenium TestNG framework?",
+                    "a": "A scalable Selenium TestNG framework should follow design patterns such as Page Object Model (POM), separate test logic from page objects, use a Base Test class for common setup, implement ThreadLocal for parallel execution, externalize configuration and test data, use listeners for reporting and screenshots, integrate with Maven/Gradle, and support CI/CD pipelines. The framework should also be modular, reusable, and easy to maintain.",
+                    "type": "text",
+                    "id": 91,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "92",
+            "Que": [
+                {
+                    "q": "Q92 : What is the role of TestNG in a Page Object Model (POM) framework?",
+                    "a": "In a POM framework, TestNG is responsible for executing test cases, managing the test lifecycle, parameterization, assertions, reporting, grouping, and parallel execution. Page Objects contain only UI interaction logic, while TestNG controls how and when those interactions are executed.",
+                    "type": "text",
+                    "id": 92,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "93",
+            "Que": [
+                {
+                    "q": "Q93 : What is the most common mistake beginners make while using TestNG?",
+                    "a": "Common mistakes include using Thread.sleep() instead of waits, creating test dependencies unnecessarily, forgetting to call assertAll() for Soft Assertions, sharing WebDriver instances across parallel threads, hardcoding test data, and writing dependent test cases that cannot run independently.",
+                    "type": "text",
+                    "id": 93,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "94",
+            "Que": [
+                {
+                    "q": "Q94 : When should you use Hard Assertions and when should you use Soft Assertions?",
+                    "a": "Use Hard Assertions when the remaining steps of a test become meaningless after a validation fails, such as a failed login. Use Soft Assertions when multiple independent validations need to be performed in a single test and all failures should be reported together at the end.",
+                    "type": "text",
+                    "id": 94,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Hard Assertion" },
+                        { "label": "Soft Assertion" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Stops execution immediately." },
+                                { "col": "Continues execution." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Critical validations." },
+                                { "col": "Multiple validations." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "95",
+            "Que": [
+                {
+                    "q": "Q95 : How would you explain TestNG to an interviewer in one minute?",
+                    "a": "TestNG is a Java-based testing framework designed for building and managing automated tests. It provides annotations for controlling the test lifecycle, supports parameterization, DataProviders, grouping, dependency management, assertions, listeners, reporting, and parallel execution. It integrates seamlessly with Selenium, making it one of the most widely used frameworks for UI automation and enterprise testing.",
+                    "type": "text",
+                    "id": 95,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "96",
+            "Que": [
+                {
+                    "q": "Q96 : What are the most frequently asked TestNG interview topics?",
+                    "a": "Interviewers commonly ask about annotations, execution order, priorities, groups, dependencies, parameterization, DataProviders, assertions, listeners, RetryAnalyzer, parallel execution, ThreadLocal, reporting, Page Object Model integration, and framework design.",
+                    "type": "text",
+                    "id": 96,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "97",
+            "Que": [
+                {
+                    "q": "Q97 : What is the difference between @Parameters and @DataProvider?",
+                    "a": "@Parameters receives configuration values from the testng.xml file and is typically used for values such as browser names or URLs. @DataProvider supplies multiple sets of test data directly to test methods, making it suitable for data-driven testing.",
+                    "type": "text",
+                    "id": 97,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "@Parameters" },
+                        { "label": "@DataProvider" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Reads values from testng.xml." },
+                                { "col": "Returns Object[][] data." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Configuration values." },
+                                { "col": "Multiple test datasets." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Less flexible." },
+                                { "col": "Highly flexible." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "98",
+            "Que": [
+                {
+                    "q": "Q98 : What is the difference between TestNG Groups and dependsOnMethods?",
+                    "a": "Groups are used to organize and selectively execute related test cases, whereas dependsOnMethods creates execution dependencies between specific test methods. Groups improve test organization, while dependencies enforce execution order based on prerequisite tests.",
+                    "type": "text",
+                    "id": 98,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "99",
+            "Que": [
+                {
+                    "q": "Q99 : What should every Automation Engineer know about TestNG?",
+                    "a": "Every Automation Engineer should understand annotations, execution flow, assertions, DataProviders, parameterization, groups, dependencies, listeners, RetryAnalyzer, reporting, ThreadLocal, parallel execution, XML configuration, and how TestNG integrates with Selenium, Maven, Jenkins, and CI/CD pipelines.",
+                    "type": "text",
+                    "id": 99,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "100",
+            "Que": [
+                {
+                    "q": "Q100 : What is the roadmap for mastering TestNG?",
+                    "a": "Start by learning TestNG annotations and execution flow, then practice priorities, groups, dependencies, parameterization, DataProviders, assertions, listeners, reporting, RetryAnalyzer, and parallel execution. Next, build Selenium frameworks using Page Object Model (POM), integrate TestNG with Maven, Jenkins, and GitHub Actions, and gain hands-on experience with real-world automation projects. Finally, learn advanced concepts such as ThreadLocal, custom listeners, framework architecture, and CI/CD integration to become proficient in TestNG.",
+                    "type": "text",
+                    "id": 100,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "These 100 questions cover the TestNG concepts most commonly asked in interviews for QA Automation Engineer, Selenium Tester, SDET, and Automation Architect roles, from beginner to advanced levels."
+                }
+            ]
+        },
+        {
+            "id": "101",
+            "Que": [
+                {
+                    "q": "Q101 : What are the limitations of TestNG?",
+                    "a": "Although TestNG is a powerful testing framework, it has some limitations. It is primarily designed for Java-based projects, so it cannot be directly used with applications written in other languages. Large test suites can become difficult to manage if groups, dependencies, and XML files are not organized properly. Parallel execution requires careful handling of shared resources to avoid thread-safety issues. TestNG also focuses on test execution and management, so it must be combined with tools like Selenium for UI automation, REST Assured for API testing, and reporting libraries such as Extent Reports for advanced reporting.",
+                    "type": "text",
+                    "id": 101,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Supports only Java ecosystem.",
+                        "Requires external tools for UI and API automation.",
+                        "Parallel execution needs thread-safe framework design.",
+                        "Large testng.xml files can become difficult to maintain.",
+                        "Default reports are basic compared to third-party reporting tools."
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "This is a common conceptual interview question, especially for candidates with 2–5 years of automation testing experience."
+                }
+            ]
+        }
+    ]
+}

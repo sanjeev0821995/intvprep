@@ -1,0 +1,3863 @@
+{
+    "mySQL-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is MySQL?",
+                    "a": "MySQL is an open-source Relational Database Management System (RDBMS) that stores and manages structured data using tables. It uses Structured Query Language (SQL) to perform operations such as creating databases, inserting records, updating data, deleting records, and retrieving information. MySQL is known for its speed, reliability, ease of use, and cross-platform support. It is widely used in web applications, enterprise systems, content management systems, and backend development.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Open Source": "Free to use under the GPL license.",
+                        "Relational Database": "Stores data in tables with relationships.",
+                        "Uses SQL": "Supports standard SQL for database operations.",
+                        "Cross-Platform": "Runs on Windows, Linux, and macOS.",
+                        "Widely Used": "Popular for web and enterprise applications."
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "MySQL is one of the most widely used databases alongside PostgreSQL, Oracle Database, Microsoft SQL Server, and SQLite."
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : What are the features of MySQL?",
+                    "a": "MySQL provides numerous features that make it suitable for applications of all sizes. It supports multiple storage engines, transactions, indexing, replication, stored procedures, triggers, views, and user-defined functions. MySQL is optimized for performance, supports high availability, and offers strong security features such as authentication, authorization, SSL encryption, and role-based access control.",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "High Performance": "Optimized query execution and indexing.",
+                        "ACID Support": "Available through the InnoDB storage engine.",
+                        "Replication": "Supports master-replica replication.",
+                        "Security": "User authentication and privilege management.",
+                        "Scalability": "Suitable for small to enterprise applications.",
+                        "Cross-Platform": "Works on multiple operating systems."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : What are the advantages of MySQL?",
+                    "a": "MySQL is popular because it is fast, reliable, lightweight, and easy to learn. It has a large community, extensive documentation, and broad support from hosting providers and cloud platforms. MySQL integrates well with programming languages such as Java, Python, PHP, Node.js, and C#, making it an excellent choice for full-stack and backend development.",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Advantage" },
+                        { "label": "Description" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Open Source" },
+                                { "col": "Free Community Edition available." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Fast" },
+                                { "col": "Excellent read performance." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Reliable" },
+                                { "col": "Trusted for production systems." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Easy to Learn" },
+                                {
+                                    "col": "Simple SQL syntax and documentation."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Large Ecosystem" },
+                                {
+                                    "col": "Strong community and tooling support."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : Explain the MySQL Architecture.",
+                    "a": "MySQL follows a client-server architecture. Clients send SQL queries to the MySQL Server, which processes the requests using components such as the SQL parser, optimizer, query executor, and storage engine. The storage engine is responsible for reading and writing data to disk. MySQL supports multiple storage engines like InnoDB and MyISAM, allowing different performance and feature characteristics depending on the application's needs.",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Client": "Sends SQL queries.",
+                        "Parser": "Checks SQL syntax.",
+                        "Optimizer": "Creates an efficient execution plan.",
+                        "Executor": "Runs the query.",
+                        "Storage Engine": "Stores and retrieves data."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : What is the difference between SQL and MySQL?",
+                    "a": "SQL (Structured Query Language) is a standard language used to interact with relational databases. MySQL is a Relational Database Management System (RDBMS) that implements SQL to store and manage data. In simple terms, SQL is the language, while MySQL is the software that understands and executes SQL commands.",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "SQL" }, { "label": "MySQL" }],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Programming language for databases."
+                                },
+                                { "col": "Database Management System." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Defines commands." },
+                                { "col": "Executes SQL commands." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Standard language." },
+                                { "col": "Specific software implementation." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : What is the difference between MySQL and PostgreSQL?",
+                    "a": "MySQL and PostgreSQL are both popular relational database systems, but they have different strengths. MySQL is known for its simplicity, speed, and widespread use in web applications. PostgreSQL offers advanced SQL features, better standards compliance, extensibility, and powerful analytical capabilities. MySQL is often preferred for web applications, while PostgreSQL is commonly chosen for complex enterprise and data-intensive applications.",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "MySQL" }, { "label": "PostgreSQL" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Simple and fast." },
+                                { "col": "Feature-rich and extensible." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Popular for web apps." },
+                                { "col": "Popular for enterprise systems." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Easy to learn." },
+                                { "col": "Supports advanced SQL features." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : What are the different editions of MySQL?",
+                    "a": "MySQL is available in multiple editions to meet different user needs. The Community Edition is free and open source, making it popular among developers. Enterprise Edition includes advanced security, monitoring, backup, and support features for businesses. Additional editions such as Cluster CGE and Embedded Edition are designed for specialized enterprise and embedded system requirements.",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Edition" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Community Edition" },
+                                { "col": "Free and open source." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Enterprise Edition" },
+                                { "col": "Commercial features and support." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Cluster CGE" },
+                                { "col": "High availability and clustering." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Embedded Edition" },
+                                { "col": "Embedded applications." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : What are the different data types in MySQL?",
+                    "a": "MySQL provides various data types to store different kinds of information. These include numeric types for numbers, string types for text, date and time types for temporal values, binary types for raw data, and JSON for semi-structured data. Choosing the appropriate data type improves storage efficiency, query performance, and data validation.",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Category" },
+                        { "label": "Examples" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Numeric" },
+                                { "col": "INT, BIGINT, DECIMAL, FLOAT." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "String" },
+                                { "col": "CHAR, VARCHAR, TEXT." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Date & Time" },
+                                { "col": "DATE, TIME, DATETIME, TIMESTAMP." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Binary" },
+                                { "col": "BLOB, BINARY." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "JSON" },
+                                { "col": "Stores JSON documents." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : What is a Primary Key in MySQL?",
+                    "a": "A Primary Key is a column or a combination of columns that uniquely identifies each row in a table. A primary key cannot contain NULL values, and duplicate values are not allowed. Every table should ideally have a primary key to ensure data integrity, improve indexing, and establish relationships with other tables through foreign keys.",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Creating a Primary Key",
+                    "code": "\nCREATE TABLE employees (\n    id INT PRIMARY KEY,\n    name VARCHAR(100)\n);"
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : What is a Foreign Key in MySQL?",
+                    "a": "A Foreign Key is a column or a group of columns in one table that references the Primary Key of another table. It establishes relationships between tables and enforces referential integrity by ensuring that related records remain consistent. Foreign keys help prevent orphan records and maintain accurate relationships within a relational database.",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Creating a Foreign Key",
+                    "code": "\nCREATE TABLE orders (\n    order_id INT PRIMARY KEY,\n    customer_id INT,\n    FOREIGN KEY (customer_id)\n    REFERENCES customers(id)\n);"
+                },
+                {
+                    "type": "note",
+                    "note": "Foreign keys are supported by storage engines such as InnoDB and are essential for maintaining referential integrity."
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : What is the CREATE DATABASE statement in MySQL?",
+                    "a": "The CREATE DATABASE statement is a Data Definition Language (DDL) command used to create a new database in MySQL. A database acts as a container that stores related tables, views, indexes, stored procedures, and other database objects. Before creating tables or inserting data, a database must first be created and selected using the USE statement.",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Creating a Database",
+                    "code": "\nCREATE DATABASE company_db;\n\nUSE company_db;"
+                },
+                {
+                    "type": "note",
+                    "note": "You can use 'CREATE DATABASE IF NOT EXISTS database_name;' to avoid errors if the database already exists."
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : What is the CREATE TABLE statement in MySQL?",
+                    "a": "The CREATE TABLE statement is used to create a new table inside a database. While creating a table, developers define column names, data types, constraints, default values, and keys. Proper table design is important because it affects data integrity, query performance, and future scalability of the database.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Creating a Table",
+                    "code": "\nCREATE TABLE employees (\n    id INT PRIMARY KEY,\n    name VARCHAR(100),\n    salary DECIMAL(10,2),\n    department VARCHAR(50)\n);"
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : What is the INSERT statement in MySQL?",
+                    "a": "The INSERT statement is a Data Manipulation Language (DML) command used to add new records into a table. Data can be inserted into all columns or only selected columns. MySQL also allows inserting multiple rows in a single query, making bulk data insertion more efficient and reducing the number of database operations.",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Insert Single and Multiple Records",
+                    "code": "\nINSERT INTO employees(id, name, salary, department)\nVALUES (1, 'John', 50000, 'IT');\n\nINSERT INTO employees(id, name, salary, department)\nVALUES\n(2, 'Alice', 60000, 'HR'),\n(3, 'Bob', 55000, 'Finance');"
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : What is the SELECT statement in MySQL?",
+                    "a": "The SELECT statement is used to retrieve data from one or more tables. It is the most frequently used SQL command and supports filtering, sorting, grouping, joining multiple tables, and performing calculations. Developers can retrieve all columns using '*' or specify only the required columns for better performance.",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Retrieve Data",
+                    "code": "\nSELECT *\nFROM employees;\n\nSELECT name, salary\nFROM employees;"
+                },
+                {
+                    "type": "note",
+                    "note": "Avoid using SELECT * in production queries unless all columns are actually required."
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : What is the UPDATE statement in MySQL?",
+                    "a": "The UPDATE statement modifies existing records in a table. Specific rows can be updated using the WHERE clause, while omitting the WHERE clause updates every row in the table. UPDATE is commonly used to modify employee salaries, customer information, product prices, and other stored data.",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Update Employee Salary",
+                    "code": "\nUPDATE employees\nSET salary = 65000\nWHERE id = 2;"
+                },
+                {
+                    "type": "note",
+                    "note": "Always use the WHERE clause unless you intentionally want to update every record in the table."
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : What is the DELETE statement in MySQL?",
+                    "a": "The DELETE statement removes one or more rows from a table. The WHERE clause specifies which rows should be deleted. If the WHERE clause is omitted, every row in the table is removed while the table structure remains intact. DELETE operations can usually be rolled back if executed inside a transaction using the InnoDB storage engine.",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Delete a Record",
+                    "code": "\nDELETE FROM employees\nWHERE id = 3;"
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : What are Constraints in MySQL?",
+                    "a": "Constraints are rules applied to table columns to maintain data accuracy, consistency, and integrity. They prevent invalid data from being inserted or updated in the database. Common constraints include PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, DEFAULT, and CHECK. Using constraints ensures that business rules are enforced directly at the database level.",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Constraint"
+                        },
+                        {
+                            "label": "Purpose"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "PRIMARY KEY"
+                                },
+                                {
+                                    "col": "Uniquely identifies each row."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "FOREIGN KEY"
+                                },
+                                {
+                                    "col": "Maintains relationships between tables."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "NOT NULL"
+                                },
+                                {
+                                    "col": "Prevents NULL values."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "UNIQUE"
+                                },
+                                {
+                                    "col": "Prevents duplicate values."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "DEFAULT"
+                                },
+                                {
+                                    "col": "Assigns a default value."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : What is the NOT NULL constraint in MySQL?",
+                    "a": "The NOT NULL constraint ensures that a column cannot store NULL values. Every row must contain a valid value for columns marked as NOT NULL. This constraint is commonly applied to important fields such as names, email addresses, usernames, and primary keys where missing values are not acceptable.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Using NOT NULL",
+                    "code": "\nCREATE TABLE employees (\n    id INT PRIMARY KEY,\n    name VARCHAR(100) NOT NULL\n);"
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : What is the UNIQUE constraint in MySQL?",
+                    "a": "The UNIQUE constraint ensures that every value in a column or a combination of columns is different from every other value. Unlike a PRIMARY KEY, a table can have multiple UNIQUE constraints. It is commonly used for email addresses, usernames, phone numbers, and other fields that must remain unique throughout the table.",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "PRIMARY KEY"
+                        },
+                        {
+                            "label": "UNIQUE"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Only one per table."
+                                },
+                                {
+                                    "col": "Multiple UNIQUE constraints allowed."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Cannot contain NULL."
+                                },
+                                {
+                                    "col": "Can contain NULL (depending on SQL mode)."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Uniquely identifies rows."
+                                },
+                                {
+                                    "col": "Prevents duplicate values."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : What is the DEFAULT constraint in MySQL?",
+                    "a": "The DEFAULT constraint automatically assigns a predefined value to a column when no value is provided during insertion. It simplifies data entry, ensures consistency, and reduces the need for application-side logic. DEFAULT values are commonly used for status fields, timestamps, boolean flags, and numeric counters.",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Using DEFAULT",
+                    "code": "\nCREATE TABLE employees (\n    id INT PRIMARY KEY,\n    status VARCHAR(20) DEFAULT 'Active'\n);"
+                },
+                {
+                    "type": "note",
+                    "note": "If no value is supplied during INSERT, MySQL automatically uses the DEFAULT value for that column."
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : What is the AUTO_INCREMENT attribute in MySQL?",
+                    "a": "AUTO_INCREMENT is a column attribute that automatically generates a unique numeric value whenever a new row is inserted into a table. It is commonly used with PRIMARY KEY columns to create unique identifiers without requiring manual input. The value starts from 1 by default and increases automatically for each new record. This simplifies data insertion and guarantees uniqueness for primary key values.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Using AUTO_INCREMENT",
+                    "code": "\nCREATE TABLE employees (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(100)\n);"
+                },
+                {
+                    "type": "note",
+                    "note": "Only one AUTO_INCREMENT column is allowed per table, and it is typically defined as a PRIMARY KEY."
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : What is a Composite Key in MySQL?",
+                    "a": "A Composite Key is a primary key that consists of two or more columns. Instead of relying on a single column to uniquely identify a row, MySQL uses the combined values of multiple columns. Composite keys are commonly used in junction tables that represent many-to-many relationships, where no single column is sufficient to uniquely identify each record.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Creating a Composite Key",
+                    "code": "\nCREATE TABLE student_courses (\n    student_id INT,\n    course_id INT,\n    PRIMARY KEY (student_id, course_id)\n);"
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : What is a Candidate Key in MySQL?",
+                    "a": "A Candidate Key is any column or combination of columns that can uniquely identify each row in a table. A table may contain multiple candidate keys, but only one of them is selected as the Primary Key. The remaining candidate keys become Alternate Keys. Candidate keys must contain unique and non-null values to qualify for uniquely identifying records.",
+                    "type": "text",
+                    "id": 23,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Property" },
+                        { "label": "Candidate Key" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Uniqueness" },
+                                { "col": "Must uniquely identify every row." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "NULL Values" },
+                                { "col": "Not allowed." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Quantity" },
+                                { "col": "Multiple candidate keys may exist." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "q": "Q24 : What is an Alternate Key in MySQL?",
+                    "a": "An Alternate Key is a candidate key that was not selected as the Primary Key. Although it is not the primary identifier for the table, it still uniquely identifies records. Alternate keys are usually implemented using the UNIQUE constraint and are commonly applied to columns such as email addresses, usernames, employee IDs, or passport numbers.",
+                    "type": "text",
+                    "id": 24,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Primary Key" },
+                        { "label": "Alternate Key" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Chosen candidate key." },
+                                { "col": "Remaining candidate keys." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Only one allowed." },
+                                { "col": "Multiple allowed." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Main table identifier." },
+                                { "col": "Secondary unique identifier." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "q": "Q25 : What is a Super Key in MySQL?",
+                    "a": "A Super Key is any combination of one or more columns that uniquely identifies each row in a table. It may include additional unnecessary columns beyond what is required for uniqueness. Every Candidate Key is a Super Key, but not every Super Key qualifies as a Candidate Key because Candidate Keys contain only the minimum required columns.",
+                    "type": "text",
+                    "id": 25,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Super Key" },
+                        { "label": "Candidate Key" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "May contain extra columns." },
+                                { "col": "Contains only necessary columns." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Uniquely identifies rows." },
+                                { "col": "Also uniquely identifies rows." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Not always minimal." },
+                                { "col": "Always minimal." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "q": "Q26 : How does a Foreign Key maintain Referential Integrity in MySQL?",
+                    "a": "A Foreign Key enforces referential integrity by ensuring that values stored in a child table always correspond to valid values in the referenced parent table. MySQL prevents inserting invalid references and can automatically update or delete related records using CASCADE, SET NULL, RESTRICT, or NO ACTION rules. This guarantees consistency between related tables.",
+                    "type": "text",
+                    "id": 26,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "CASCADE": "Automatically updates or deletes related rows.",
+                        "RESTRICT": "Prevents deletion if child rows exist.",
+                        "SET NULL": "Sets foreign key values to NULL.",
+                        "NO ACTION": "Rejects invalid operations."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "q": "Q27 : What is a One-to-One Relationship in MySQL?",
+                    "a": "A One-to-One relationship exists when each record in one table is associated with exactly one record in another table. This type of relationship is commonly used to separate optional or sensitive information, such as employee personal details or user profile information, while maintaining normalization and improving database organization.",
+                    "type": "text",
+                    "id": 27,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "One Record": "Matches exactly one related record.",
+                        "Normalization": "Separates optional data.",
+                        "Security": "Sensitive data can be stored separately.",
+                        "Example": "Employee ↔ Passport."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "q": "Q28 : What is a One-to-Many Relationship in MySQL?",
+                    "a": "A One-to-Many relationship exists when one record in a parent table is related to multiple records in a child table, while each child record belongs to only one parent. This is the most common relationship in relational databases and is implemented using a Foreign Key in the child table.",
+                    "type": "text",
+                    "id": 28,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Parent Table" },
+                        { "label": "Child Table" }
+                    ],
+                    "column": [
+                        {
+                            "row": [{ "col": "Customer" }, { "col": "Orders" }]
+                        },
+                        {
+                            "row": [
+                                { "col": "Department" },
+                                { "col": "Employees" }
+                            ]
+                        },
+                        {
+                            "row": [{ "col": "Teacher" }, { "col": "Students" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "q": "Q29 : What is a Many-to-Many Relationship in MySQL?",
+                    "a": "A Many-to-Many relationship exists when multiple records in one table are related to multiple records in another table. This relationship cannot be implemented directly and requires a junction (bridge) table containing foreign keys from both parent tables. Junction tables often use a Composite Primary Key to uniquely identify each relationship.",
+                    "type": "text",
+                    "id": 29,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Many-to-Many Relationship",
+                    "code": "\nStudents\n   |\nStudent_Courses\n   |\nCourses"
+                },
+                {
+                    "type": "note",
+                    "note": "Most many-to-many relationships are implemented using a bridge table containing two foreign keys."
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "q": "Q30 : What is Referential Integrity in MySQL?",
+                    "a": "Referential Integrity is a database rule that ensures relationships between tables remain accurate and consistent. It prevents child records from referencing non-existent parent records and maintains valid relationships during INSERT, UPDATE, and DELETE operations. Referential integrity is enforced using Foreign Key constraints and is essential for maintaining reliable relational databases.",
+                    "type": "text",
+                    "id": 30,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Prevents Invalid References": "Child rows must reference existing parent rows.",
+                        "Maintains Consistency": "Keeps related tables synchronized.",
+                        "Uses Foreign Keys": "Enforced through foreign key constraints.",
+                        "Supports Cascading": "Can automatically update or delete related records."
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Referential Integrity is one of the core principles of relational database design and is frequently asked in SQL and MySQL interviews."
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "q": "Q31 : What is an INNER JOIN in MySQL?",
+                    "a": "An INNER JOIN returns only the rows that have matching values in both joined tables. Records without matching values are excluded from the result set. It is the most commonly used join in SQL and is ideal for retrieving related data stored across multiple tables. INNER JOIN is frequently used in applications involving customers, orders, employees, and departments.",
+                    "type": "text",
+                    "id": 31,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "INNER JOIN Example",
+                    "code": "\nSELECT e.name, d.department_name\nFROM employees e\nINNER JOIN departments d\nON e.department_id = d.department_id;"
+                },
+                {
+                    "type": "note",
+                    "note": "INNER JOIN returns only matching records from both tables."
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "q": "Q32 : What is a LEFT JOIN in MySQL?",
+                    "a": "A LEFT JOIN returns all rows from the left table and the matching rows from the right table. If no matching row exists in the right table, MySQL returns NULL for the right table's columns. LEFT JOIN is commonly used when all records from the primary table must be displayed regardless of whether related records exist.",
+                    "type": "text",
+                    "id": 32,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "LEFT JOIN Example",
+                    "code": "\nSELECT c.customer_name, o.order_id\nFROM customers c\nLEFT JOIN orders o\nON c.customer_id = o.customer_id;"
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "q": "Q33 : What is a RIGHT JOIN in MySQL?",
+                    "a": "A RIGHT JOIN returns all rows from the right table and the matching rows from the left table. If a matching record does not exist in the left table, NULL values are returned for the left table's columns. Although supported, RIGHT JOIN is less commonly used because the same result can usually be achieved by swapping the table order and using a LEFT JOIN.",
+                    "type": "text",
+                    "id": 33,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "RIGHT JOIN Example",
+                    "code": "\nSELECT e.name, d.department_name\nFROM employees e\nRIGHT JOIN departments d\nON e.department_id = d.department_id;"
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "q": "Q34 : What is a CROSS JOIN in MySQL?",
+                    "a": "A CROSS JOIN returns the Cartesian Product of two tables by combining every row from the first table with every row from the second table. If one table contains m rows and the other contains n rows, the result contains m × n rows. CROSS JOIN is useful for generating combinations but should be used carefully because it can produce extremely large result sets.",
+                    "type": "text",
+                    "id": 34,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "CROSS JOIN Example",
+                    "code": "\nSELECT c.color, s.size\nFROM colors c\nCROSS JOIN sizes s;"
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "q": "Q35 : What is a SELF JOIN in MySQL?",
+                    "a": "A SELF JOIN is a join where a table is joined with itself using different aliases. It is useful when rows within the same table have relationships with one another, such as employees and managers, categories and subcategories, or organizational hierarchies. Since SQL treats each alias as a separate table, SELF JOIN enables comparisons within the same dataset.",
+                    "type": "text",
+                    "id": 35,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "SELF JOIN Example",
+                    "code": "\nSELECT e.name AS Employee,\n       m.name AS Manager\nFROM employees e\nLEFT JOIN employees m\nON e.manager_id = m.id;"
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "q": "Q36 : Does MySQL support FULL OUTER JOIN?",
+                    "a": "No. MySQL does not directly support the FULL OUTER JOIN statement. However, the same result can be achieved by combining the results of a LEFT JOIN and a RIGHT JOIN using the UNION operator. This approach returns all matching rows as well as unmatched rows from both tables.",
+                    "type": "text",
+                    "id": 36,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "FULL OUTER JOIN Workaround",
+                    "code": "\nSELECT *\nFROM table1\nLEFT JOIN table2\nON table1.id = table2.id\n\nUNION\n\nSELECT *\nFROM table1\nRIGHT JOIN table2\nON table1.id = table2.id;"
+                },
+                {
+                    "type": "note",
+                    "note": "FULL OUTER JOIN is supported in PostgreSQL but not natively in MySQL."
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "q": "Q37 : What is a NATURAL JOIN in MySQL?",
+                    "a": "A NATURAL JOIN automatically joins two tables based on columns that have the same name and compatible data types. Unlike INNER JOIN, there is no need to specify the join condition explicitly. Although convenient, NATURAL JOIN is generally discouraged in production because schema changes can unintentionally alter query behavior.",
+                    "type": "text",
+                    "id": 37,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "NATURAL JOIN Example",
+                    "code": "\nSELECT *\nFROM employees\nNATURAL JOIN departments;"
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "q": "Q38 : What is the difference between a JOIN and a Subquery?",
+                    "a": "A JOIN combines rows from multiple tables into a single result set, while a subquery is a query nested inside another SQL query. JOINs are generally preferred for retrieving related data because they are often easier to optimize and understand. Subqueries are useful when intermediate calculations or filtering are required before the main query executes.",
+                    "type": "text",
+                    "id": 38,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "JOIN" }, { "label": "Subquery" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Combines multiple tables." },
+                                { "col": "Query inside another query." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Often faster." },
+                                { "col": "May be slower in some cases." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Better for related data." },
+                                { "col": "Better for intermediate filtering." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "q": "Q39 : What is a Cartesian Product in MySQL?",
+                    "a": "A Cartesian Product is the result produced when every row of one table is combined with every row of another table. It occurs intentionally with a CROSS JOIN or accidentally when a JOIN condition is omitted. Since the number of returned rows equals the multiplication of the row counts of both tables, Cartesian Products can become extremely large and negatively impact performance.",
+                    "type": "text",
+                    "id": 39,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Generated By": "CROSS JOIN or missing JOIN condition.",
+                        "Rows Returned": "Rows in Table A × Rows in Table B.",
+                        "Performance": "Can become very expensive.",
+                        "Use Case": "Generating all possible combinations."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "q": "Q40 : How can JOIN performance be optimized in MySQL?",
+                    "a": "JOIN performance can be improved by creating indexes on join columns, selecting only required columns instead of using SELECT *, filtering data early with WHERE clauses, avoiding unnecessary joins, and analyzing execution plans using EXPLAIN. Choosing appropriate data types and ensuring matching column types between joined tables also helps the optimizer generate efficient execution plans.",
+                    "type": "text",
+                    "id": 40,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Create Indexes": "Index columns used in JOIN conditions.",
+                        "Use EXPLAIN": "Analyze the query execution plan.",
+                        "Avoid SELECT *": "Retrieve only necessary columns.",
+                        "Filter Early": "Reduce rows before joining.",
+                        "Match Data Types": "Join columns should have compatible data types."
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Interviewers often ask how to optimize JOINs because poorly written JOIN queries are a common cause of slow database performance."
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "q": "Q41 : What is the WHERE clause in MySQL?",
+                    "a": "The WHERE clause is used to filter rows based on one or more conditions. It allows MySQL to return only the records that satisfy the specified criteria, improving query efficiency and reducing unnecessary data retrieval. WHERE supports comparison, logical, range, pattern matching, and NULL operators, making it one of the most frequently used SQL clauses.",
+                    "type": "text",
+                    "id": 41,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Using the WHERE Clause",
+                    "code": "\nSELECT *\nFROM employees\nWHERE department = 'IT';"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Comparison": "=, !=, >, <, >=, <=",
+                        "Logical": "AND, OR, NOT",
+                        "Range": "BETWEEN",
+                        "Pattern Matching": "LIKE",
+                        "NULL Check": "IS NULL, IS NOT NULL"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "q": "Q42 : What is the GROUP BY clause in MySQL?",
+                    "a": "The GROUP BY clause groups rows that have the same values in one or more columns into summary groups. It is commonly used with aggregate functions such as COUNT(), SUM(), AVG(), MIN(), and MAX() to generate reports and statistical summaries. GROUP BY is widely used in analytics, dashboards, and business reporting.",
+                    "type": "text",
+                    "id": 42,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "GROUP BY Example",
+                    "code": "\nSELECT department,\n       COUNT(*) AS total_employees\nFROM employees\nGROUP BY department;"
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "q": "Q43 : What is the HAVING clause in MySQL?",
+                    "a": "The HAVING clause filters groups created by the GROUP BY clause. Unlike WHERE, which filters rows before grouping, HAVING filters the grouped results after aggregation has been performed. It is primarily used with aggregate functions to display only groups that satisfy specific conditions.",
+                    "type": "text",
+                    "id": 43,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "WHERE" }, { "label": "HAVING" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Filters rows." },
+                                { "col": "Filters groups." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Executed before GROUP BY." },
+                                { "col": "Executed after GROUP BY." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Cannot use aggregate functions." },
+                                { "col": "Can use aggregate functions." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "HAVING Example",
+                    "code": "\nSELECT department,\n       COUNT(*) AS total\nFROM employees\nGROUP BY department\nHAVING COUNT(*) > 5;"
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "q": "Q44 : What is the ORDER BY clause in MySQL?",
+                    "a": "The ORDER BY clause sorts query results in ascending or descending order based on one or more columns. By default, MySQL sorts data in ascending order (ASC). Developers can specify DESC to sort in descending order. ORDER BY is frequently combined with WHERE, GROUP BY, and LIMIT to produce organized query results.",
+                    "type": "text",
+                    "id": 44,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Sorting Results",
+                    "code": "\nSELECT name, salary\nFROM employees\nORDER BY salary DESC;"
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "q": "Q45 : What is the LIMIT clause in MySQL?",
+                    "a": "The LIMIT clause restricts the number of rows returned by a query. It is commonly used for pagination, displaying top results, and improving query performance when only a subset of data is required. LIMIT can also be combined with an offset to skip a specified number of rows before returning results.",
+                    "type": "text",
+                    "id": 45,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "LIMIT Example",
+                    "code": "\nSELECT *\nFROM employees\nLIMIT 5;\n\nSELECT *\nFROM employees\nLIMIT 5 OFFSET 10;"
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "q": "Q46 : What is the DISTINCT keyword in MySQL?",
+                    "a": "The DISTINCT keyword removes duplicate values from the result set and returns only unique records. It can be applied to one or multiple columns and is useful when generating reports or retrieving unique values such as department names, cities, or product categories. DISTINCT helps eliminate redundant data from query results.",
+                    "type": "text",
+                    "id": 46,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "DISTINCT Example",
+                    "code": "\nSELECT DISTINCT department\nFROM employees;"
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : What is the UNION operator in MySQL?",
+                    "a": "The UNION operator combines the results of two or more SELECT queries into a single result set while automatically removing duplicate rows. All SELECT statements involved in a UNION must return the same number of columns with compatible data types. UNION is commonly used when retrieving similar data from multiple tables.",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "UNION Example",
+                    "code": "\nSELECT city FROM customers\nUNION\nSELECT city FROM suppliers;"
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "q": "Q48 : What is the difference between UNION and UNION ALL in MySQL?",
+                    "a": "Both UNION and UNION ALL combine the results of multiple SELECT statements. However, UNION removes duplicate rows before returning the result, whereas UNION ALL returns every row, including duplicates. Because UNION ALL skips duplicate elimination, it generally performs faster than UNION on large datasets.",
+                    "type": "text",
+                    "id": 48,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "UNION" }, { "label": "UNION ALL" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Removes duplicates." },
+                                { "col": "Keeps duplicates." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Slightly slower." },
+                                { "col": "Usually faster." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Performs duplicate checking." },
+                                { "col": "No duplicate checking." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "q": "Q49 : What is the CASE expression in MySQL?",
+                    "a": "The CASE expression provides conditional logic within SQL queries. It evaluates conditions sequentially and returns a value corresponding to the first condition that evaluates to TRUE. CASE is commonly used for categorizing data, creating custom output values, generating reports, and implementing if-else style logic directly within SQL statements.",
+                    "type": "text",
+                    "id": 49,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "CASE Example",
+                    "code": "\nSELECT name,\nCASE\n    WHEN salary >= 70000 THEN 'High'\n    WHEN salary >= 50000 THEN 'Medium'\n    ELSE 'Low'\nEND AS salary_level\nFROM employees;"
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "q": "Q50 : What is the COALESCE() function in MySQL?",
+                    "a": "The COALESCE() function returns the first non-NULL value from a list of expressions. It is commonly used to replace NULL values with default values, ensuring that query results remain meaningful and easier to process. COALESCE() accepts two or more arguments and evaluates them from left to right until a non-NULL value is found.",
+                    "type": "text",
+                    "id": 50,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "COALESCE Example",
+                    "code": "\nSELECT name,\nCOALESCE(phone, 'Not Available') AS contact_number\nFROM employees;"
+                },
+                {
+                    "type": "note",
+                    "note": "COALESCE() is ANSI SQL standard and is preferred over database-specific functions when writing portable SQL."
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "q": "Q51 : What are Aggregate Functions in MySQL?",
+                    "a": "Aggregate functions perform calculations on multiple rows and return a single summarized value. They are commonly used with the GROUP BY clause to generate reports and analyze data. Aggregate functions help calculate totals, averages, counts, minimum values, and maximum values, making them essential for analytics, dashboards, and business intelligence applications.",
+                    "type": "text",
+                    "id": 51,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Function" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "COUNT()" },
+                                { "col": "Counts the number of rows." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "SUM()" },
+                                { "col": "Calculates the total." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "AVG()" },
+                                { "col": "Calculates the average value." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "MIN()" },
+                                { "col": "Returns the smallest value." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "MAX()" },
+                                { "col": "Returns the largest value." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Aggregate Function Example",
+                    "code": "\nSELECT department,\n       AVG(salary) AS average_salary\nFROM employees\nGROUP BY department;"
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "q": "Q52 : What are String Functions in MySQL?",
+                    "a": "String functions are built-in MySQL functions used to manipulate and process text values. They can concatenate strings, convert letter cases, find lengths, extract substrings, remove spaces, and replace text. String functions are widely used in reporting, data cleaning, formatting user input, and generating readable outputs from database records.",
+                    "type": "text",
+                    "id": 52,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Function" },
+                        { "label": "Description" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "CONCAT()" },
+                                { "col": "Joins multiple strings." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "LENGTH()" },
+                                { "col": "Returns string length." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "UPPER()" },
+                                { "col": "Converts text to uppercase." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "LOWER()" },
+                                { "col": "Converts text to lowercase." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "TRIM()" },
+                                {
+                                    "col": "Removes leading and trailing spaces."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "q": "Q53 : What are Date and Time Functions in MySQL?",
+                    "a": "Date and Time functions help developers work with temporal data such as dates, times, timestamps, and intervals. They are commonly used to calculate ages, filter records by date, measure durations, and generate reports. MySQL provides numerous built-in functions for retrieving the current date, formatting dates, and performing date arithmetic.",
+                    "type": "text",
+                    "id": 53,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Function" }, { "label": "Purpose" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "NOW()" },
+                                { "col": "Returns current date and time." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "CURDATE()" },
+                                { "col": "Returns current date." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "DATEDIFF()" },
+                                {
+                                    "col": "Calculates difference between dates."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "DATE_ADD()" },
+                                { "col": "Adds a time interval." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "DATE_FORMAT()" },
+                                { "col": "Formats dates." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "q": "Q54 : What are Numeric Functions in MySQL?",
+                    "a": "Numeric functions perform mathematical calculations on numeric values. They are useful for rounding numbers, calculating powers, generating random values, finding absolute values, and performing various arithmetic operations. These functions are frequently used in financial applications, scientific calculations, analytics, and reporting systems.",
+                    "type": "text",
+                    "id": 54,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Function" },
+                        { "label": "Description" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "ROUND()" },
+                                { "col": "Rounds a number." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "ABS()" },
+                                { "col": "Returns absolute value." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "CEIL()" },
+                                { "col": "Rounds up." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "FLOOR()" },
+                                { "col": "Rounds down." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "RAND()" },
+                                { "col": "Generates a random number." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "Que": [
+                {
+                    "q": "Q55 : What is the IF() function in MySQL?",
+                    "a": "The IF() function evaluates a condition and returns one value if the condition is TRUE and another value if it is FALSE. It works similarly to an if-else statement in programming languages and is commonly used in SELECT queries to create conditional output without requiring multiple SQL statements.",
+                    "type": "text",
+                    "id": 55,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "IF() Example",
+                    "code": "\nSELECT name,\nIF(salary >= 50000, 'Eligible', 'Not Eligible') AS status\nFROM employees;"
+                }
+            ]
+        },
+        {
+            "id": "56",
+            "Que": [
+                {
+                    "q": "Q56 : What is the IFNULL() function in MySQL?",
+                    "a": "The IFNULL() function checks whether an expression is NULL. If it is NULL, the function returns a specified replacement value; otherwise, it returns the original value. IFNULL() is useful for displaying meaningful information instead of NULL values in reports and application interfaces.",
+                    "type": "text",
+                    "id": 56,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "IFNULL() Example",
+                    "code": "\nSELECT name,\nIFNULL(phone, 'No Phone Number') AS contact\nFROM employees;"
+                }
+            ]
+        },
+        {
+            "id": "57",
+            "Que": [
+                {
+                    "q": "Q57 : What is the NULLIF() function in MySQL?",
+                    "a": "The NULLIF() function compares two expressions. If both expressions are equal, it returns NULL; otherwise, it returns the first expression. NULLIF() is often used to prevent divide-by-zero errors, simplify conditional logic, and improve query readability when handling special cases.",
+                    "type": "text",
+                    "id": 57,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "NULLIF() Example",
+                    "code": "\nSELECT 100 / NULLIF(denominator, 0)\nFROM calculations;"
+                },
+                {
+                    "type": "note",
+                    "note": "NULLIF() is commonly used to avoid division-by-zero errors in SQL calculations."
+                }
+            ]
+        },
+        {
+            "id": "58",
+            "Que": [
+                {
+                    "q": "Q58 : What is the CAST() function in MySQL?",
+                    "a": "The CAST() function converts a value from one data type to another. It is commonly used when data needs to be interpreted differently, such as converting strings to numbers, numbers to strings, or dates into different formats. Explicit type conversion improves data consistency and prevents unexpected results during query execution.",
+                    "type": "text",
+                    "id": 58,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "CAST() Example",
+                    "code": "\nSELECT CAST('150' AS UNSIGNED) AS numeric_value;"
+                }
+            ]
+        },
+        {
+            "id": "59",
+            "Que": [
+                {
+                    "q": "Q59 : What is the CONVERT() function in MySQL?",
+                    "a": "The CONVERT() function converts values from one data type or character set to another. While it can perform many of the same conversions as CAST(), CONVERT() also supports character set conversion, making it useful when handling multilingual text or importing data from different encoding formats.",
+                    "type": "text",
+                    "id": 59,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "CONVERT() Example",
+                    "code": "\nSELECT CONVERT('123', UNSIGNED) AS number;"
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "CAST()" }, { "label": "CONVERT()" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "ANSI SQL standard." },
+                                { "col": "MySQL-specific extension." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Data type conversion." },
+                                {
+                                    "col": "Data type and character set conversion."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "60",
+            "Que": [
+                {
+                    "q": "Q60 : What are User-Defined Functions (UDFs) in MySQL?",
+                    "a": "User-Defined Functions (UDFs) are custom functions created by developers to perform specific operations that are not available through MySQL's built-in functions. Once created, they can be called within SQL statements like standard functions. UDFs help reduce repetitive logic, improve code reuse, and simplify complex business calculations within database queries.",
+                    "type": "text",
+                    "id": 60,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Reusable": "Can be called from multiple queries.",
+                        "Custom Logic": "Implements application-specific calculations.",
+                        "Maintainable": "Reduces duplicate SQL code.",
+                        "Flexible": "Extends MySQL's built-in functionality."
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "In interviews, User-Defined Functions are often discussed alongside Stored Procedures. Unlike Stored Procedures, UDFs return a single value and can be used directly inside SQL expressions."
+                }
+            ]
+        },
+        {
+            "id": "61",
+            "Que": [
+                {
+                    "q": "Q61 : What is a Subquery in MySQL?",
+                    "a": "A Subquery is a query written inside another SQL query. The inner query executes first and its result is used by the outer query. Subqueries can be used in SELECT, INSERT, UPDATE, DELETE, and WHERE clauses. They simplify complex queries by breaking them into smaller logical parts and are useful for filtering, comparisons, and calculations.",
+                    "type": "text",
+                    "id": 61,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Subquery Example",
+                    "code": "\nSELECT name\nFROM employees\nWHERE salary > (\n    SELECT AVG(salary)\n    FROM employees\n);"
+                },
+                {
+                    "type": "note",
+                    "note": "The inner query executes first, and its result is passed to the outer query."
+                }
+            ]
+        },
+        {
+            "id": "62",
+            "Que": [
+                {
+                    "q": "Q62 : What is a Correlated Subquery in MySQL?",
+                    "a": "A Correlated Subquery is a subquery that depends on values from the outer query. Unlike a normal subquery, it executes once for every row processed by the outer query. Although correlated subqueries are powerful for row-by-row comparisons, they can be slower than joins because the subquery executes repeatedly.",
+                    "type": "text",
+                    "id": 62,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Correlated Subquery Example",
+                    "code": "\nSELECT e1.name\nFROM employees e1\nWHERE salary > (\n    SELECT AVG(e2.salary)\n    FROM employees e2\n    WHERE e1.department = e2.department\n);"
+                }
+            ]
+        },
+        {
+            "id": "63",
+            "Que": [
+                {
+                    "q": "Q63 : What is the EXISTS operator in MySQL?",
+                    "a": "The EXISTS operator checks whether a subquery returns any rows. If at least one row exists, EXISTS returns TRUE; otherwise, it returns FALSE. Since MySQL stops searching after finding the first matching row, EXISTS is generally more efficient than IN when working with large datasets.",
+                    "type": "text",
+                    "id": 63,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "EXISTS Example",
+                    "code": "\nSELECT customer_name\nFROM customers c\nWHERE EXISTS (\n    SELECT 1\n    FROM orders o\n    WHERE o.customer_id = c.customer_id\n);"
+                }
+            ]
+        },
+        {
+            "id": "64",
+            "Que": [
+                {
+                    "q": "Q64 : What is the IN operator in MySQL?",
+                    "a": "The IN operator checks whether a value matches any value in a specified list or subquery result. It provides a cleaner alternative to multiple OR conditions and improves query readability. IN is commonly used to filter records based on multiple values or results returned from another query.",
+                    "type": "text",
+                    "id": 64,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "IN Operator Example",
+                    "code": "\nSELECT *\nFROM employees\nWHERE department IN ('IT', 'HR', 'Finance');"
+                }
+            ]
+        },
+        {
+            "id": "65",
+            "Que": [
+                {
+                    "q": "Q65 : What is the ANY operator in MySQL?",
+                    "a": "The ANY operator compares a value with each value returned by a subquery and returns TRUE if the comparison is true for at least one value. It is used with comparison operators such as >, <, >=, <=, =, and <>. ANY is useful when comparing a value against multiple results.",
+                    "type": "text",
+                    "id": 65,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "ANY Example",
+                    "code": "\nSELECT *\nFROM employees\nWHERE salary > ANY (\n    SELECT salary\n    FROM employees\n    WHERE department = 'HR'\n);"
+                }
+            ]
+        },
+        {
+            "id": "66",
+            "Que": [
+                {
+                    "q": "Q66 : What is the ALL operator in MySQL?",
+                    "a": "The ALL operator compares a value with every value returned by a subquery. The comparison returns TRUE only if the specified condition is satisfied for all returned values. ALL is commonly used in advanced filtering scenarios where a value must satisfy a condition against an entire result set.",
+                    "type": "text",
+                    "id": 66,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "ALL Example",
+                    "code": "\nSELECT *\nFROM employees\nWHERE salary > ALL (\n    SELECT salary\n   FROM employees\n   WHERE department = 'HR'\n);"
+                }
+            ]
+        },
+        {
+            "id": "67",
+            "Que": [
+                {
+                    "q": "Q67 : What is a Common Table Expression (CTE) in MySQL?",
+                    "a": "A Common Table Expression (CTE) is a temporary named result set created using the WITH clause. It improves query readability by breaking complex queries into smaller logical parts. CTEs can be referenced multiple times within a query and are especially useful when working with recursive queries and hierarchical data.",
+                    "type": "text",
+                    "id": 67,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "CTE Example",
+                    "code": "\nWITH HighSalary AS (\n    SELECT *\n    FROM employees\n    WHERE salary > 60000\n)\nSELECT *\nFROM HighSalary;"
+                },
+                {
+                    "type": "note",
+                    "note": "CTEs were introduced in MySQL 8.0."
+                }
+            ]
+        },
+        {
+            "id": "68",
+            "Que": [
+                {
+                    "q": "Q68 : What are Window Functions in MySQL?",
+                    "a": "Window Functions perform calculations across a set of rows related to the current row without grouping the results. Unlike aggregate functions, they return one output for each row. Window functions are widely used for ranking, running totals, moving averages, and analytical reporting in modern SQL applications.",
+                    "type": "text",
+                    "id": 68,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Window Function" },
+                        { "label": "Purpose" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "ROW_NUMBER()" },
+                                { "col": "Assigns sequential row numbers." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "RANK()" },
+                                { "col": "Ranks rows with gaps." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "DENSE_RANK()" },
+                                { "col": "Ranks rows without gaps." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "LAG()" },
+                                { "col": "Accesses previous row." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "LEAD()" },
+                                { "col": "Accesses next row." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "69",
+            "Que": [
+                {
+                    "q": "Q69 : What is a View in MySQL?",
+                    "a": "A View is a virtual table created from the result of a SQL query. It does not store data itself but retrieves data from one or more underlying tables whenever accessed. Views simplify complex queries, improve security by restricting data access, and promote code reuse by encapsulating frequently used queries.",
+                    "type": "text",
+                    "id": 69,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Creating a View",
+                    "code": "\nCREATE VIEW employee_view AS\nSELECT id, name, salary\nFROM employees;"
+                }
+            ]
+        },
+        {
+            "id": "70",
+            "Que": [
+                {
+                    "q": "Q70 : What is a Stored Procedure in MySQL?",
+                    "a": "A Stored Procedure is a precompiled collection of one or more SQL statements stored inside the database. It can accept parameters, execute complex business logic, and return results. Stored procedures improve performance by reducing network traffic, promoting code reuse, and centralizing business logic within the database server.",
+                    "type": "text",
+                    "id": 70,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Stored Procedure Example",
+                    "code": "\nDELIMITER //\n\nCREATE PROCEDURE GetEmployees()\nBEGIN\n    SELECT * FROM employees;\nEND //\n\nDELIMITER ;\n\nCALL GetEmployees();"
+                },
+                {
+                    "type": "note",
+                    "note": "Stored Procedures can accept IN, OUT, and INOUT parameters and are commonly asked in SQL interviews."
+                }
+            ]
+        },
+        {
+            "id": "71",
+            "Que": [
+                {
+                    "q": "Q71 : What is a Stored Function in MySQL?",
+                    "a": "A Stored Function is a database object that contains SQL statements and always returns a single value. Unlike a Stored Procedure, it can be called directly inside SQL expressions such as SELECT, WHERE, or ORDER BY. Stored Functions are commonly used to encapsulate reusable business logic and perform calculations within queries.",
+                    "type": "text",
+                    "id": 71,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Stored Procedure" },
+                        { "label": "Stored Function" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "May or may not return values." },
+                                { "col": "Always returns one value." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Called using CALL." },
+                                { "col": "Used inside SQL statements." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Can return multiple result sets." },
+                                { "col": "Returns a single scalar value." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "72",
+            "Que": [
+                {
+                    "q": "Q72 : What is a Trigger in MySQL?",
+                    "a": "A Trigger is a special stored program that automatically executes in response to database events such as INSERT, UPDATE, or DELETE. Triggers help enforce business rules, maintain audit logs, validate data, and synchronize related tables without requiring application code to perform these tasks manually.",
+                    "type": "text",
+                    "id": 72,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "BEFORE INSERT": "Executes before inserting data.",
+                        "AFTER INSERT": "Executes after insertion.",
+                        "BEFORE UPDATE": "Runs before updating records.",
+                        "AFTER DELETE": "Runs after deleting records."
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "A trigger executes automatically and cannot be called manually."
+                }
+            ]
+        },
+        {
+            "id": "73",
+            "Que": [
+                {
+                    "q": "Q73 : What are Transactions in MySQL?",
+                    "a": "A Transaction is a sequence of one or more SQL operations treated as a single logical unit of work. Either all operations complete successfully (COMMIT) or all changes are discarded (ROLLBACK). Transactions ensure data consistency, especially in applications such as banking, e-commerce, and reservation systems.",
+                    "type": "text",
+                    "id": 73,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Transaction Example",
+                    "code": "\nSTART TRANSACTION;\n\nUPDATE accounts\nSET balance = balance - 500\nWHERE id = 1;\n\nUPDATE accounts\nSET balance = balance + 500\nWHERE id = 2;\n\nCOMMIT;"
+                }
+            ]
+        },
+        {
+            "id": "74",
+            "Que": [
+                {
+                    "q": "Q74 : What are the ACID Properties in MySQL?",
+                    "a": "ACID is a set of four properties that guarantee reliable database transactions. These properties ensure that transactions are processed completely, maintain consistency, isolate concurrent operations, and permanently save committed changes even in the event of failures.",
+                    "type": "text",
+                    "id": 74,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "Property" }, { "label": "Meaning" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Atomicity" },
+                                { "col": "All operations succeed or none do." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Consistency" },
+                                {
+                                    "col": "Database remains valid before and after transactions."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Isolation" },
+                                {
+                                    "col": "Transactions do not interfere with each other."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Durability" },
+                                {
+                                    "col": "Committed changes are permanently stored."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "75",
+            "Que": [
+                {
+                    "q": "Q75 : What is COMMIT in MySQL?",
+                    "a": "COMMIT permanently saves all changes made during the current transaction. Once a COMMIT statement is executed, the transaction ends successfully and its changes become visible to other database users. Committed changes cannot be undone using ROLLBACK.",
+                    "type": "text",
+                    "id": 75,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "COMMIT Example",
+                    "code": "\nSTART TRANSACTION;\n\nUPDATE employees\nSET salary = salary + 5000\nWHERE id = 1;\n\nCOMMIT;"
+                }
+            ]
+        },
+        {
+            "id": "76",
+            "Que": [
+                {
+                    "q": "Q76 : What is ROLLBACK in MySQL?",
+                    "a": "ROLLBACK cancels all changes made during the current transaction since the last COMMIT or SAVEPOINT. It restores the database to its previous consistent state and is commonly used when an error occurs during transaction processing.",
+                    "type": "text",
+                    "id": 76,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "ROLLBACK Example",
+                    "code": "\nSTART TRANSACTION;\n\nUPDATE employees\nSET salary = salary + 10000\nWHERE id = 5;\n\nROLLBACK;"
+                }
+            ]
+        },
+        {
+            "id": "77",
+            "Que": [
+                {
+                    "q": "Q77 : What is a SAVEPOINT in MySQL?",
+                    "a": "A SAVEPOINT creates a checkpoint within an active transaction. Instead of rolling back the entire transaction, developers can roll back only to a specific savepoint. SAVEPOINT is useful when transactions contain multiple independent operations and only part of the transaction needs to be undone.",
+                    "type": "text",
+                    "id": 77,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "SAVEPOINT Example",
+                    "code": "\nSTART TRANSACTION;\n\nUPDATE accounts SET balance = balance - 100 WHERE id = 1;\n\nSAVEPOINT sp1;\n\nUPDATE accounts SET balance = balance + 100 WHERE id = 2;\n\nROLLBACK TO sp1;\n\nCOMMIT;"
+                }
+            ]
+        },
+        {
+            "id": "78",
+            "Que": [
+                {
+                    "q": "Q78 : What are Isolation Levels in MySQL?",
+                    "a": "Isolation Levels define how transactions interact with one another when executing concurrently. They determine the visibility of uncommitted changes and control problems such as dirty reads, non-repeatable reads, and phantom reads. Choosing the appropriate isolation level balances consistency and performance.",
+                    "type": "text",
+                    "id": 78,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Isolation Level" },
+                        { "label": "Characteristics" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "READ UNCOMMITTED" },
+                                { "col": "Allows dirty reads." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "READ COMMITTED" },
+                                { "col": "Prevents dirty reads." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "REPEATABLE READ" },
+                                {
+                                    "col": "Prevents dirty and non-repeatable reads."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "SERIALIZABLE" },
+                                {
+                                    "col": "Highest isolation, prevents phantom reads."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "79",
+            "Que": [
+                {
+                    "q": "Q79 : What is a Deadlock in MySQL?",
+                    "a": "A Deadlock occurs when two or more transactions wait indefinitely for each other to release resources, preventing any of them from continuing. MySQL automatically detects deadlocks and terminates one transaction so the others can proceed. Proper transaction design and consistent locking order help minimize deadlocks.",
+                    "type": "text",
+                    "id": 79,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Cause": "Transactions waiting for each other's locks.",
+                        "Detection": "Automatically detected by MySQL.",
+                        "Resolution": "One transaction is rolled back.",
+                        "Prevention": "Access resources in a consistent order."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "80",
+            "Que": [
+                {
+                    "q": "Q80 : What is Locking in MySQL?",
+                    "a": "Locking is a mechanism used by MySQL to control concurrent access to data and maintain consistency. Locks prevent multiple transactions from making conflicting changes simultaneously. MySQL uses different locking strategies depending on the storage engine and transaction isolation level.",
+                    "type": "text",
+                    "id": 80,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Lock Type" },
+                        { "label": "Purpose" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Shared Lock (S)" },
+                                {
+                                    "col": "Allows multiple reads but blocks writes."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Exclusive Lock (X)" },
+                                {
+                                    "col": "Allows one transaction to modify data."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Table Lock" },
+                                { "col": "Locks an entire table." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Row Lock" },
+                                {
+                                    "col": "Locks individual rows for better concurrency."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "InnoDB primarily uses row-level locking, which provides better concurrency than table-level locking."
+                }
+            ]
+        },
+        {
+            "id": "81",
+            "Que": [
+                {
+                    "q": "Q81 : What are Indexes in MySQL?",
+                    "a": "Indexes are special data structures that improve the speed of data retrieval operations by allowing MySQL to locate rows without scanning the entire table. They work similarly to the index of a book, enabling faster searches. Although indexes significantly improve SELECT performance, they consume additional storage space and slightly slow down INSERT, UPDATE, and DELETE operations because the indexes must also be updated.",
+                    "type": "text",
+                    "id": 81,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Creating an Index",
+                    "code": "\nCREATE INDEX idx_employee_name\nON employees(name);"
+                },
+                {
+                    "type": "note",
+                    "note": "Indexes speed up reads but increase storage usage and slightly reduce write performance."
+                }
+            ]
+        },
+        {
+            "id": "82",
+            "Que": [
+                {
+                    "q": "Q82 : What are the different types of Indexes in MySQL?",
+                    "a": "MySQL supports multiple types of indexes to optimize different kinds of queries. Choosing the appropriate index depends on the query pattern, data type, and application requirements. Proper indexing improves query performance while minimizing unnecessary storage and maintenance overhead.",
+                    "type": "text",
+                    "id": 82,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Index Type" },
+                        { "label": "Purpose" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "PRIMARY INDEX" },
+                                {
+                                    "col": "Created automatically for the Primary Key."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "UNIQUE INDEX" },
+                                { "col": "Prevents duplicate values." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "COMPOSITE INDEX" },
+                                { "col": "Indexes multiple columns together." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "FULLTEXT INDEX" },
+                                { "col": "Optimized for text searching." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "SPATIAL INDEX" },
+                                { "col": "Used for geographic data." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "83",
+            "Que": [
+                {
+                    "q": "Q83 : What is a Composite Index in MySQL?",
+                    "a": "A Composite Index is an index created on two or more columns. It improves query performance when the indexed columns are frequently used together in WHERE, ORDER BY, or JOIN clauses. The order of columns within the index is important because MySQL follows the Leftmost Prefix Rule when utilizing composite indexes.",
+                    "type": "text",
+                    "id": 83,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Composite Index Example",
+                    "code": "\nCREATE INDEX idx_name_department\nON employees(name, department);"
+                }
+            ]
+        },
+        {
+            "id": "84",
+            "Que": [
+                {
+                    "q": "Q84 : What is the EXPLAIN statement in MySQL?",
+                    "a": "The EXPLAIN statement displays the execution plan that MySQL will use to execute a query. It helps developers understand how tables are accessed, whether indexes are used, the estimated number of rows examined, and possible performance bottlenecks. EXPLAIN is one of the most important tools for SQL query optimization.",
+                    "type": "text",
+                    "id": 84,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Using EXPLAIN",
+                    "code": "\nEXPLAIN\nSELECT *\nFROM employees\nWHERE department = 'IT';"
+                }
+            ]
+        },
+        {
+            "id": "85",
+            "Que": [
+                {
+                    "q": "Q85 : What is Query Optimization in MySQL?",
+                    "a": "Query Optimization is the process of improving SQL queries so they execute faster while consuming fewer system resources. Optimization techniques include creating appropriate indexes, selecting only required columns, avoiding unnecessary subqueries, filtering data early, using efficient joins, and analyzing execution plans with EXPLAIN.",
+                    "type": "text",
+                    "id": 85,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Use Indexes": "Index frequently searched columns.",
+                        "Avoid SELECT *": "Retrieve only necessary columns.",
+                        "Use EXPLAIN": "Analyze execution plans.",
+                        "Filter Early": "Reduce rows before joins.",
+                        "Optimize Joins": "Join indexed columns whenever possible."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "86",
+            "Que": [
+                {
+                    "q": "Q86 : What is Database Normalization?",
+                    "a": "Normalization is the process of organizing data into well-structured tables to eliminate redundancy, reduce data anomalies, and improve data integrity. It involves dividing large tables into smaller related tables while maintaining relationships through primary and foreign keys.",
+                    "type": "text",
+                    "id": 86,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Normal Form" },
+                        { "label": "Purpose" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "1NF" },
+                                { "col": "Remove repeating groups." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "2NF" },
+                                { "col": "Remove partial dependencies." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "3NF" },
+                                { "col": "Remove transitive dependencies." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "BCNF" },
+                                {
+                                    "col": "Handle advanced functional dependencies."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "87",
+            "Que": [
+                {
+                    "q": "Q87 : What is Database Denormalization?",
+                    "a": "Denormalization is the process of intentionally adding redundant data to improve query performance. By reducing the number of joins required, denormalized databases can retrieve data more quickly. Although denormalization increases storage usage and may introduce redundancy, it is commonly used in reporting systems and data warehouses where read performance is prioritized.",
+                    "type": "text",
+                    "id": 87,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "88",
+            "Que": [
+                {
+                    "q": "Q88 : What is the difference between Normalization and Denormalization?",
+                    "a": "Normalization focuses on reducing redundancy and improving data integrity, whereas Denormalization intentionally introduces redundancy to improve read performance. The choice depends on application requirements, with OLTP systems favoring normalization and reporting systems often benefiting from denormalization.",
+                    "type": "text",
+                    "id": 88,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Normalization" },
+                        { "label": "Denormalization" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Removes redundant data." },
+                                { "col": "Adds controlled redundancy." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Requires more joins." },
+                                { "col": "Requires fewer joins." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Better data integrity." },
+                                { "col": "Better read performance." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Common in OLTP systems." },
+                                {
+                                    "col": "Common in OLAP and reporting systems."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "89",
+            "Que": [
+                {
+                    "q": "Q89 : What is a Database Backup in MySQL?",
+                    "a": "A Database Backup is a copy of database data that can be restored in case of hardware failure, accidental deletion, corruption, or disasters. Regular backups are essential for disaster recovery and business continuity. MySQL supports logical backups using mysqldump and physical backups using tools such as MySQL Enterprise Backup.",
+                    "type": "text",
+                    "id": 89,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "mysqldump Example",
+                    "code": "\nmysqldump -u root -p company_db > company_backup.sql"
+                }
+            ]
+        },
+        {
+            "id": "90",
+            "Que": [
+                {
+                    "q": "Q90 : What is Database Restore in MySQL?",
+                    "a": "Database Restore is the process of recovering data from a previously created backup. Restoration is performed after data loss, corruption, accidental deletion, or system failures. A well-tested backup and restore strategy is critical for minimizing downtime and ensuring business continuity.",
+                    "type": "text",
+                    "id": 90,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Restore Database",
+                    "code": "\nmysql -u root -p company_db < company_backup.sql"
+                },
+                {
+                    "type": "note",
+                    "note": "Always verify backup integrity by periodically testing the restore process."
+                }
+            ]
+        },
+        {
+            "id": "91",
+            "Que": [
+                {
+                    "q": "Q91 : What are Storage Engines in MySQL?",
+                    "a": "A Storage Engine is the component of MySQL responsible for storing, retrieving, and managing data. Different storage engines provide different features such as transaction support, locking mechanisms, indexing methods, and crash recovery. Choosing the appropriate storage engine depends on the application's requirements for performance, reliability, and scalability.",
+                    "type": "text",
+                    "id": 91,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Storage Engine" },
+                        { "label": "Key Features" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "InnoDB" },
+                                {
+                                    "col": "Transactions, ACID, row-level locking, foreign keys."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "MyISAM" },
+                                {
+                                    "col": "Fast reads, table-level locking, no transactions."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "MEMORY" },
+                                {
+                                    "col": "Stores data in RAM for high-speed access."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "92",
+            "Que": [
+                {
+                    "q": "Q92 : What is the difference between InnoDB and MyISAM?",
+                    "a": "InnoDB is MySQL's default storage engine and supports transactions, ACID compliance, row-level locking, and foreign keys. MyISAM focuses on read performance but lacks transaction support and foreign key constraints. InnoDB is preferred for modern applications, while MyISAM is mainly used for read-heavy workloads or legacy systems.",
+                    "type": "text",
+                    "id": 92,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [{ "label": "InnoDB" }, { "label": "MyISAM" }],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Supports transactions." },
+                                { "col": "No transaction support." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Row-level locking." },
+                                { "col": "Table-level locking." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Supports foreign keys." },
+                                { "col": "No foreign keys." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Crash recovery available." },
+                                { "col": "Limited crash recovery." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "93",
+            "Que": [
+                {
+                    "q": "Q93 : What is Replication in MySQL?",
+                    "a": "Replication is the process of copying data from one MySQL server (Primary) to one or more MySQL servers (Replicas). It improves availability, scalability, and disaster recovery by allowing read operations to be distributed across multiple servers while write operations typically occur on the primary server.",
+                    "type": "text",
+                    "id": 93,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Primary Server": "Handles write operations.",
+                        "Replica Server": "Receives copied data from the primary.",
+                        "Read Scaling": "Distributes read queries.",
+                        "High Availability": "Provides redundancy during failures."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "94",
+            "Que": [
+                {
+                    "q": "Q94 : What is Sharding in MySQL?",
+                    "a": "Sharding is a database scaling technique in which large datasets are divided across multiple database servers called shards. Each shard stores a portion of the total data, allowing applications to handle larger workloads and improve scalability by distributing storage and query processing.",
+                    "type": "text",
+                    "id": 94,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Sharding provides horizontal scalability but increases application and database management complexity."
+                }
+            ]
+        },
+        {
+            "id": "95",
+            "Que": [
+                {
+                    "q": "Q95 : What is Partitioning in MySQL?",
+                    "a": "Partitioning divides a large table into smaller physical partitions while presenting it as a single logical table to users. It improves query performance, simplifies maintenance, and speeds up operations on large datasets. MySQL supports RANGE, LIST, HASH, and KEY partitioning methods.",
+                    "type": "text",
+                    "id": 95,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Partition Type" },
+                        { "label": "Usage" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "RANGE" },
+                                { "col": "Based on value ranges." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "LIST" },
+                                { "col": "Based on predefined values." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "HASH" },
+                                {
+                                    "col": "Distributes rows using a hash function."
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "KEY" },
+                                {
+                                    "col": "Uses MySQL's internal hashing algorithm."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "96",
+            "Que": [
+                {
+                    "q": "Q96 : What is MySQL Workbench?",
+                    "a": "MySQL Workbench is the official graphical client provided by Oracle for designing databases, writing SQL queries, administering MySQL servers, managing users, monitoring performance, and creating database models. It combines development and administration tools into a single integrated application.",
+                    "type": "text",
+                    "id": 96,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "97",
+            "Que": [
+                {
+                    "q": "Q97 : What is mysqldump in MySQL?",
+                    "a": "mysqldump is a command-line utility used to create logical backups of MySQL databases. It exports database objects such as tables, views, stored procedures, and data into SQL scripts that can later be restored. It is one of the most commonly used backup tools in MySQL administration.",
+                    "type": "text",
+                    "id": 97,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "mysqldump Command",
+                    "code": "\nmysqldump -u root -p company_db > backup.sql"
+                }
+            ]
+        },
+        {
+            "id": "98",
+            "Que": [
+                {
+                    "q": "Q98 : What are Common MySQL Interview Performance Optimization Tips?",
+                    "a": "Performance optimization involves writing efficient queries, creating appropriate indexes, minimizing unnecessary joins, avoiding SELECT *, analyzing execution plans with EXPLAIN, optimizing schema design, and regularly monitoring slow queries. Effective optimization improves response time, scalability, and overall database performance.",
+                    "type": "text",
+                    "id": 98,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Create Proper Indexes": "Improve search performance.",
+                        "Use EXPLAIN": "Analyze execution plans.",
+                        "Avoid SELECT *": "Fetch only required columns.",
+                        "Normalize Carefully": "Reduce redundancy.",
+                        "Monitor Slow Queries": "Identify bottlenecks.",
+                        "Use LIMIT": "Reduce unnecessary result sets."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "99",
+            "Que": [
+                {
+                    "q": "Q99 : What are the most commonly asked MySQL interview topics?",
+                    "a": "Interviewers frequently focus on SQL fundamentals, joins, normalization, indexing, transactions, ACID properties, stored procedures, triggers, views, subqueries, window functions, query optimization, locking, replication, partitioning, and database design. Understanding both theoretical concepts and practical SQL examples is essential for performing well in technical interviews.",
+                    "type": "text",
+                    "id": 99,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Joins",
+                        "Indexes",
+                        "Normalization",
+                        "Transactions",
+                        "ACID",
+                        "Views",
+                        "Stored Procedures",
+                        "Triggers",
+                        "Subqueries",
+                        "CTEs",
+                        "Window Functions",
+                        "Query Optimization",
+                        "Replication",
+                        "Partitioning"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "100",
+            "Que": [
+                {
+                    "q": "Q100 : What should a candidate know to confidently clear MySQL interviews?",
+                    "a": "To confidently clear MySQL interviews, a candidate should have a strong understanding of SQL syntax, CRUD operations, constraints, joins, aggregate functions, normalization, indexing, transactions, ACID properties, subqueries, views, stored procedures, triggers, query optimization, execution plans, locking, replication, partitioning, and storage engines. In addition to theory, candidates should practice writing SQL queries for real-world scenarios such as reporting, pagination, ranking, filtering, and relational database design. Practical experience with query optimization and debugging greatly increases interview success.",
+                    "type": "text",
+                    "id": 100,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Mastering the first 100 MySQL interview questions, along with hands-on SQL practice, provides a strong foundation for most Software Engineer, Full-Stack Developer, Backend Developer, Data Analyst, and Database Developer interviews."
+                }
+            ]
+        },
+        {
+            "id": "101",
+            "Que": [
+                {
+                    "q": "Q101 : What is a Clustered Index?",
+                    "a": "A Clustered Index determines the physical order in which rows are stored in a table. Since the data itself is stored according to the clustered index, a table can have only one clustered index. In MySQL's InnoDB storage engine, the Primary Key is automatically the clustered index. If no primary key exists, InnoDB selects a unique index or creates a hidden clustered index.",
+                    "type": "text",
+                    "id": 101,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "In InnoDB, the Primary Key is the Clustered Index."
+                }
+            ]
+        },
+        {
+            "id": "102",
+            "Que": [
+                {
+                    "q": "Q102 : What is a Secondary Index in MySQL?",
+                    "a": "A Secondary Index is any index other than the clustered index. Instead of storing actual row data, it stores the indexed column along with the clustered index key, which is then used to retrieve the complete row. A table can have multiple secondary indexes.",
+                    "type": "text",
+                    "id": 102,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "103",
+            "Que": [
+                {
+                    "q": "Q103 : What is a Covering Index?",
+                    "a": "A Covering Index is an index that contains all the columns required by a query. Since MySQL can retrieve all requested data directly from the index without accessing the table, query performance improves significantly by reducing disk I/O.",
+                    "type": "text",
+                    "id": 103,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Covering Index Example",
+                    "code": "\nCREATE INDEX idx_name_salary\nON employees(name, salary);"
+                }
+            ]
+        },
+        {
+            "id": "104",
+            "Que": [
+                {
+                    "q": "Q104 : What is the Leftmost Prefix Rule in MySQL?",
+                    "a": "The Leftmost Prefix Rule states that MySQL can efficiently use a composite index only when queries reference the leftmost indexed columns in the same order. If the leftmost column is skipped, the index may not be fully utilized.",
+                    "type": "text",
+                    "id": 104,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Composite Index" },
+                        { "label": "Index Used?" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "(name, department, salary)" },
+                                { "col": "WHERE name = ? ✅" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "(name, department, salary)" },
+                                { "col": "WHERE name AND department ✅" }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "(name, department, salary)" },
+                                { "col": "WHERE department ❌" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "105",
+            "Que": [
+                {
+                    "q": "Q105 : What is Index Selectivity?",
+                    "a": "Index Selectivity measures how unique the indexed values are. A highly selective index has many unique values and is more useful for filtering rows. Columns with low selectivity, such as gender or boolean flags, usually provide little performance benefit when indexed alone.",
+                    "type": "text",
+                    "id": 105,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "106",
+            "Que": [
+                {
+                    "q": "Q106 : What is Cardinality in MySQL?",
+                    "a": "Cardinality refers to the number of distinct values in an indexed column. High-cardinality indexes generally improve query performance because they help MySQL eliminate more rows during searches.",
+                    "type": "text",
+                    "id": 106,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "107",
+            "Que": [
+                {
+                    "q": "Q107 : What is an Execution Plan?",
+                    "a": "An Execution Plan is the sequence of operations MySQL performs to execute a query. It shows which indexes are used, join order, access methods, estimated rows, and query cost. Developers analyze execution plans using the EXPLAIN statement to optimize SQL performance.",
+                    "type": "text",
+                    "id": 107,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "108",
+            "Que": [
+                {
+                    "q": "Q108 : What is Index Condition Pushdown (ICP)?",
+                    "a": "Index Condition Pushdown is a MySQL optimization that allows filtering conditions to be evaluated while scanning the index instead of after retrieving full table rows. This reduces disk I/O and improves query performance, especially for secondary indexes.",
+                    "type": "text",
+                    "id": 108,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "109",
+            "Que": [
+                {
+                    "q": "Q109 : What is Multi-Version Concurrency Control (MVCC)?",
+                    "a": "MVCC is the concurrency mechanism used by InnoDB that allows multiple transactions to access the same data simultaneously without blocking each other. Instead of overwriting rows immediately, MySQL maintains multiple row versions, enabling consistent reads while minimizing lock contention.",
+                    "type": "text",
+                    "id": 109,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "110",
+            "Que": [
+                {
+                    "q": "Q110 : What is a Gap Lock in MySQL?",
+                    "a": "A Gap Lock is an InnoDB locking mechanism that locks the space between index records rather than the records themselves. Gap locks help prevent phantom reads by ensuring that new rows cannot be inserted into the locked range while a transaction is in progress.",
+                    "type": "text",
+                    "id": 110,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Gap Locks are mainly used under the REPEATABLE READ isolation level."
+                }
+            ]
+        },
+        {
+            "id": "111",
+            "Que": [
+                {
+                    "q": "Q111 : What is Next-Key Locking in MySQL?",
+                    "a": "Next-Key Locking is an InnoDB locking mechanism that combines a row lock with a gap lock. It locks both the index record and the gap before it, preventing other transactions from inserting new rows into the locked range. This mechanism helps eliminate phantom reads and ensures transaction consistency under the REPEATABLE READ isolation level.",
+                    "type": "text",
+                    "id": 111,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Next-Key Lock = Row Lock + Gap Lock."
+                }
+            ]
+        },
+        {
+            "id": "112",
+            "Que": [
+                {
+                    "q": "Q112 : What is the InnoDB Buffer Pool?",
+                    "a": "The InnoDB Buffer Pool is the primary memory area where MySQL caches table data, indexes, and frequently accessed pages. Instead of reading data from disk for every query, MySQL first checks the Buffer Pool, significantly improving query performance and reducing disk I/O.",
+                    "type": "text",
+                    "id": 112,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Caches Data": "Frequently accessed table pages.",
+                        "Caches Indexes": "Frequently used index pages.",
+                        "Reduces Disk Reads": "Improves overall performance.",
+                        "Default Engine": "Used by InnoDB."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "113",
+            "Que": [
+                {
+                    "q": "Q113 : What is the Redo Log in MySQL?",
+                    "a": "The Redo Log records every committed change before it is written to disk. If the database crashes, InnoDB uses the Redo Log to recover committed transactions that were not yet flushed to the data files. This mechanism ensures durability, one of the ACID properties.",
+                    "type": "text",
+                    "id": 113,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "114",
+            "Que": [
+                {
+                    "q": "Q114 : What is the Undo Log in MySQL?",
+                    "a": "The Undo Log stores previous versions of modified rows. It allows transactions to roll back changes and enables Multi-Version Concurrency Control (MVCC) by providing consistent snapshots of data to concurrent transactions.",
+                    "type": "text",
+                    "id": 114,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Redo Log" },
+                        { "label": "Undo Log" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Recovers committed data." },
+                                { "col": "Rolls back uncommitted data." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Supports Durability." },
+                                { "col": "Supports Atomicity & MVCC." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "115",
+            "Que": [
+                {
+                    "q": "Q115 : What is the Binary Log (Binlog) in MySQL?",
+                    "a": "The Binary Log (Binlog) records all data-changing SQL statements and row changes. It is primarily used for replication, point-in-time recovery, auditing, and incremental backups. Unlike the Redo Log, the Binary Log exists at the MySQL server level rather than the storage engine level.",
+                    "type": "text",
+                    "id": 115,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "116",
+            "Que": [
+                {
+                    "q": "Q116 : What is the difference between Redo Log and Binary Log?",
+                    "a": "Although both logs record database changes, they serve different purposes. The Redo Log belongs to the InnoDB storage engine and ensures crash recovery, whereas the Binary Log belongs to the MySQL server and supports replication and backups.",
+                    "type": "text",
+                    "id": 116,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Redo Log" },
+                        { "label": "Binary Log" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "InnoDB specific." },
+                                { "col": "MySQL server level." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Crash recovery." },
+                                { "col": "Replication & backup." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Physical log." },
+                                { "col": "Logical log." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "117",
+            "Que": [
+                {
+                    "q": "Q117 : What is the Doublewrite Buffer in InnoDB?",
+                    "a": "The Doublewrite Buffer is a safety mechanism used by InnoDB to protect against partial page writes caused by power failures or system crashes. Data pages are first written to the Doublewrite Buffer and then to their final locations, ensuring corrupted pages can be recovered.",
+                    "type": "text",
+                    "id": 117,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "118",
+            "Que": [
+                {
+                    "q": "Q118 : What is the Change Buffer in InnoDB?",
+                    "a": "The Change Buffer temporarily stores modifications made to secondary indexes that are not currently loaded into memory. Instead of immediately updating the index on disk, InnoDB delays the operation until the page is accessed, reducing disk I/O and improving write performance.",
+                    "type": "text",
+                    "id": 118,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "119",
+            "Que": [
+                {
+                    "q": "Q119 : What is the Adaptive Hash Index (AHI)?",
+                    "a": "The Adaptive Hash Index is an in-memory optimization feature of InnoDB that automatically creates hash indexes for frequently accessed index pages. It speeds up repeated lookups without requiring developers to create hash indexes manually.",
+                    "type": "text",
+                    "id": 119,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "120",
+            "Que": [
+                {
+                    "q": "Q120 : What is the InnoDB Architecture?",
+                    "a": "The InnoDB Architecture consists of memory structures, background threads, and disk components that work together to provide high performance, ACID compliance, crash recovery, and concurrency control. Major components include the Buffer Pool, Redo Log, Undo Log, Change Buffer, Adaptive Hash Index, Doublewrite Buffer, and Background Threads responsible for flushing and recovery.",
+                    "type": "text",
+                    "id": 120,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Buffer Pool",
+                        "Redo Log",
+                        "Undo Log",
+                        "Binary Log",
+                        "Adaptive Hash Index",
+                        "Change Buffer",
+                        "Doublewrite Buffer",
+                        "Background Threads"
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Understanding InnoDB Architecture is a common expectation in senior backend and database interviews."
+                }
+            ]
+        },
+        {
+            "id": "121",
+            "Que": [
+                {
+                    "q": "Q121 : What is the MySQL Query Optimizer?",
+                    "a": "The MySQL Query Optimizer is a component that determines the most efficient way to execute an SQL query. It analyzes multiple execution plans, estimates the cost of each plan, and selects the one with the lowest estimated cost. The optimizer considers factors such as indexes, table statistics, join order, filtering conditions, and available access methods.",
+                    "type": "text",
+                    "id": 121,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "122",
+            "Que": [
+                {
+                    "q": "Q122 : What are Table Scans and Index Scans?",
+                    "a": "A Table Scan occurs when MySQL reads every row in a table to find matching records. An Index Scan uses an index to locate only the required rows, making queries significantly faster. While table scans may be acceptable for very small tables, index scans are preferred for large datasets.",
+                    "type": "text",
+                    "id": 122,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Table Scan" },
+                        { "label": "Index Scan" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Reads every row." },
+                                { "col": "Reads only matching rows." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Slower for large tables." },
+                                { "col": "Much faster when indexes exist." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "123",
+            "Que": [
+                {
+                    "q": "Q123 : What is EXPLAIN ANALYZE in MySQL?",
+                    "a": "EXPLAIN ANALYZE executes a query and displays the actual execution plan along with runtime statistics. Unlike EXPLAIN, which shows only the estimated execution plan, EXPLAIN ANALYZE provides real execution time, row counts, and performance metrics, making it valuable for diagnosing query bottlenecks.",
+                    "type": "text",
+                    "id": 123,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "EXPLAIN ANALYZE Example",
+                    "code": "\nEXPLAIN ANALYZE\nSELECT *\nFROM employees\nWHERE department = 'IT';"
+                }
+            ]
+        },
+        {
+            "id": "124",
+            "Que": [
+                {
+                    "q": "Q124 : What are Metadata Locks (MDL) in MySQL?",
+                    "a": "Metadata Locks protect database objects such as tables, views, and indexes from conflicting Data Definition Language (DDL) and Data Manipulation Language (DML) operations. For example, a table cannot be altered while another transaction is actively reading or writing to it.",
+                    "type": "text",
+                    "id": 124,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "125",
+            "Que": [
+                {
+                    "q": "Q125 : What is Online DDL in MySQL?",
+                    "a": "Online DDL allows schema changes, such as adding indexes or modifying columns, while minimizing downtime. Depending on the operation and MySQL version, users can continue reading or writing data during many DDL operations, making Online DDL valuable for production environments.",
+                    "type": "text",
+                    "id": 125,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "126",
+            "Que": [
+                {
+                    "q": "Q126 : What is the Information Schema in MySQL?",
+                    "a": "Information Schema is a built-in database containing metadata about database objects such as tables, columns, indexes, constraints, views, triggers, and users. Developers and administrators use it to inspect database structures programmatically.",
+                    "type": "text",
+                    "id": 126,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Information Schema Example",
+                    "code": "\nSELECT table_name\nFROM information_schema.tables\nWHERE table_schema = 'company_db';"
+                }
+            ]
+        },
+        {
+            "id": "127",
+            "Que": [
+                {
+                    "q": "Q127 : What is the Performance Schema in MySQL?",
+                    "a": "Performance Schema is a monitoring feature that collects detailed performance statistics about MySQL server operations. It helps identify slow queries, locking issues, wait events, memory usage, and resource bottlenecks without significantly affecting database performance.",
+                    "type": "text",
+                    "id": 127,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "128",
+            "Que": [
+                {
+                    "q": "Q128 : What is the SYS Schema in MySQL?",
+                    "a": "The SYS Schema is a collection of user-friendly views and stored procedures built on top of the Performance Schema and Information Schema. It simplifies database performance analysis by presenting commonly needed diagnostic information in an easy-to-read format.",
+                    "type": "text",
+                    "id": 128,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "129",
+            "Que": [
+                {
+                    "q": "Q129 : What is Connection Pooling?",
+                    "a": "Connection Pooling is a technique where a pool of reusable database connections is maintained by the application instead of creating a new connection for every request. Reusing existing connections reduces connection overhead, improves application performance, and supports higher concurrency.",
+                    "type": "text",
+                    "id": 129,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "130",
+            "Que": [
+                {
+                    "q": "Q130 : What are the best practices for writing efficient MySQL queries?",
+                    "a": "Efficient MySQL queries minimize resource usage while maximizing performance. Best practices include selecting only required columns, creating appropriate indexes, avoiding unnecessary subqueries, filtering data as early as possible, analyzing execution plans, limiting result sets, and writing optimized JOIN conditions.",
+                    "type": "text",
+                    "id": 130,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list": [
+                        "Avoid SELECT *",
+                        "Create appropriate indexes",
+                        "Use EXPLAIN or EXPLAIN ANALYZE",
+                        "Filter data early",
+                        "Optimize JOIN conditions",
+                        "Use LIMIT when appropriate",
+                        "Avoid unnecessary nested subqueries",
+                        "Keep transactions short"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "131",
+            "Que": [
+                {
+                    "q": "Q131 : What is Read Replication in MySQL?",
+                    "a": "Read Replication is a database scaling technique where one primary server handles all write operations, while one or more replica servers handle read operations. This distributes query load, improves application performance, and provides high availability without affecting write consistency.",
+                    "type": "text",
+                    "id": 131,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Applications typically send INSERT, UPDATE, and DELETE operations to the primary server, while SELECT queries are routed to replica servers."
+                }
+            ]
+        },
+        {
+            "id": "132",
+            "Que": [
+                {
+                    "q": "Q132 : What is GTID Replication in MySQL?",
+                    "a": "Global Transaction Identifier (GTID) Replication assigns a unique identifier to every committed transaction. Instead of tracking binary log file names and positions, replica servers synchronize using GTIDs, making replication setup, failover, and recovery much simpler and more reliable.",
+                    "type": "text",
+                    "id": 132,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "133",
+            "Que": [
+                {
+                    "q": "Q133 : What is Group Replication in MySQL?",
+                    "a": "Group Replication is a high-availability feature that allows multiple MySQL servers to work together as a fault-tolerant cluster. It automatically replicates transactions among group members and supports automatic failover if one server becomes unavailable.",
+                    "type": "text",
+                    "id": 133,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "134",
+            "Que": [
+                {
+                    "q": "Q134 : What is Point-in-Time Recovery (PITR)?",
+                    "a": "Point-in-Time Recovery (PITR) is a recovery technique that restores a database to a specific moment by combining a full backup with Binary Log (Binlog) events. It is commonly used to recover data after accidental updates, deletions, or other user errors.",
+                    "type": "text",
+                    "id": 134,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "135",
+            "Que": [
+                {
+                    "q": "Q135 : What is a Slow Query Log in MySQL?",
+                    "a": "The Slow Query Log records SQL queries whose execution time exceeds a configured threshold. It helps developers and database administrators identify inefficient queries, optimize indexes, and improve overall database performance.",
+                    "type": "text",
+                    "id": 135,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "136",
+            "Que": [
+                {
+                    "q": "Q136 : What are Generated Columns in MySQL?",
+                    "a": "Generated Columns are columns whose values are automatically computed from expressions based on other columns in the same table. They can be either Virtual (computed when queried) or Stored (computed and physically stored), making them useful for simplifying calculations and improving query performance.",
+                    "type": "text",
+                    "id": 136,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Virtual Column" },
+                        { "label": "Stored Column" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Calculated at query time." },
+                                { "col": "Calculated during INSERT/UPDATE." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Consumes no storage." },
+                                { "col": "Consumes disk space." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "137",
+            "Que": [
+                {
+                    "q": "Q137 : What is the JSON Data Type in MySQL?",
+                    "a": "The JSON data type allows developers to store semi-structured JSON documents within relational tables. MySQL provides built-in JSON functions for querying, updating, and validating JSON data, making it easier to combine relational and document-based storage within the same database.",
+                    "type": "text",
+                    "id": 137,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "JSON Column Example",
+                    "code": "\nCREATE TABLE users (\n    id INT PRIMARY KEY,\n    profile JSON\n);"
+                }
+            ]
+        },
+        {
+            "id": "138",
+            "Que": [
+                {
+                    "q": "Q138 : What are Invisible Indexes in MySQL?",
+                    "a": "Invisible Indexes are indexes that exist physically but are ignored by the MySQL Query Optimizer. They allow developers to safely test whether an index is still needed without permanently dropping it. If query performance is unaffected, the index can later be removed.",
+                    "type": "text",
+                    "id": 138,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "139",
+            "Que": [
+                {
+                    "q": "Q139 : What are Histograms in MySQL?",
+                    "a": "Histograms are statistical summaries of data distribution used by the Query Optimizer when indexes are unavailable or insufficient. By understanding how data values are distributed, MySQL can generate more efficient execution plans for complex queries.",
+                    "type": "text",
+                    "id": 139,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "140",
+            "Que": [
+                {
+                    "q": "Q140 : What are Resource Groups in MySQL?",
+                    "a": "Resource Groups allow administrators to control CPU resource allocation for different database workloads. By assigning threads to specific resource groups, organizations can prioritize critical workloads, limit background tasks, and improve overall system performance in production environments.",
+                    "type": "text",
+                    "id": 140,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "Resource Groups are primarily used in enterprise environments where workload management and performance isolation are important."
+                }
+            ]
+        },
+        {
+            "id": "141",
+            "Que": [
+                {
+                    "q": "Q141 : A query that was running in milliseconds is now taking several seconds. How would you troubleshoot it?",
+                    "a": "Start by checking the execution plan using EXPLAIN or EXPLAIN ANALYZE to determine whether indexes are being used. Review recent schema changes, updated statistics, slow query logs, and server resource utilization. Check for blocking transactions, lock contention, increased data volume, or changes in query patterns. After identifying the bottleneck, optimize indexes, rewrite inefficient queries, or update table statistics as needed.",
+                    "type": "text",
+                    "id": 141,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "142",
+            "Que": [
+                {
+                    "q": "Q142 : How would you optimize a slow JOIN query?",
+                    "a": "Ensure that the JOIN columns are indexed, retrieve only the required columns instead of using SELECT *, filter rows before joining whenever possible, avoid unnecessary nested subqueries, and analyze the execution plan using EXPLAIN. For frequently executed queries, consider creating covering indexes or rewriting the query for better optimization.",
+                    "type": "text",
+                    "id": 142,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "143",
+            "Que": [
+                {
+                    "q": "Q143 : What causes deadlocks and how can they be prevented?",
+                    "a": "Deadlocks occur when two or more transactions wait indefinitely for each other to release locks. They can be minimized by accessing tables in a consistent order, keeping transactions short, avoiding unnecessary locks, committing transactions promptly, and ensuring appropriate indexes exist to reduce lock duration.",
+                    "type": "text",
+                    "id": 143,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "144",
+            "Que": [
+                {
+                    "q": "Q144 : When should you use an index and when should you avoid one?",
+                    "a": "Indexes should be used on columns frequently involved in WHERE, JOIN, ORDER BY, and GROUP BY clauses. They should generally be avoided on columns with very low cardinality, tables that receive frequent write operations, or columns that are rarely queried because indexes increase storage requirements and write overhead.",
+                    "type": "text",
+                    "id": 144,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "145",
+            "Que": [
+                {
+                    "q": "Q145 : What are the signs that an index is not being used?",
+                    "a": "Common signs include full table scans in EXPLAIN output, high query execution times, excessive disk I/O, and a large number of examined rows. Reasons include missing indexes, functions applied to indexed columns, mismatched data types, poor selectivity, or violation of the Leftmost Prefix Rule for composite indexes.",
+                    "type": "text",
+                    "id": 145,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "146",
+            "Que": [
+                {
+                    "q": "Q146 : How would you design a database for a high-traffic e-commerce application?",
+                    "a": "Use proper normalization while avoiding excessive joins, create indexes for frequently searched columns, use transactions for order processing, implement read replicas for scaling reads, cache frequently accessed data, partition very large tables when necessary, and continuously monitor query performance using tools such as the Slow Query Log and Performance Schema.",
+                    "type": "text",
+                    "id": 146,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "147",
+            "Que": [
+                {
+                    "q": "Q147 : What are the most common causes of poor MySQL performance?",
+                    "a": "Poor performance is commonly caused by missing indexes, inefficient SQL queries, excessive table scans, long-running transactions, lock contention, insufficient memory allocation, poor schema design, outdated statistics, excessive network latency, and hardware limitations such as slow disks or limited CPU resources.",
+                    "type": "text",
+                    "id": 147,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "148",
+            "Que": [
+                {
+                    "q": "Q148 : How do you identify slow queries in MySQL?",
+                    "a": "Enable the Slow Query Log, analyze execution plans using EXPLAIN or EXPLAIN ANALYZE, review the Performance Schema and SYS Schema, monitor CPU and disk utilization, and identify queries that examine significantly more rows than they return.",
+                    "type": "text",
+                    "id": 148,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "149",
+            "Que": [
+                {
+                    "q": "Q149 : What is the difference between vertical scaling and horizontal scaling in MySQL?",
+                    "a": "Vertical scaling increases the resources of a single database server by adding more CPU, RAM, or storage. Horizontal scaling distributes the workload across multiple servers using techniques such as replication and sharding. Vertical scaling is simpler but has hardware limits, whereas horizontal scaling provides better long-term scalability.",
+                    "type": "text",
+                    "id": 149,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        { "label": "Vertical Scaling" },
+                        { "label": "Horizontal Scaling" }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                { "col": "Upgrade one server." },
+                                { "col": "Add more servers." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Limited by hardware." },
+                                { "col": "Scales almost indefinitely." }
+                            ]
+                        },
+                        {
+                            "row": [
+                                { "col": "Simpler to implement." },
+                                { "col": "Requires replication or sharding." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "150",
+            "Que": [
+                {
+                    "q": "Q150 : What are some MySQL security best practices?",
+                    "a": "Use the principle of least privilege for database users, enable SSL/TLS for client-server communication, regularly update MySQL versions, use strong passwords, validate application inputs to prevent SQL injection, encrypt sensitive data, back up databases regularly, and monitor user activity through audit logs whenever possible.",
+                    "type": "text",
+                    "id": 150,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "151",
+            "Que": [
+                {
+                    "q": "Q151 : What is SQL Injection and how can it be prevented?",
+                    "a": "SQL Injection is a security vulnerability where attackers inject malicious SQL statements through application inputs to manipulate the database. It can be prevented by using parameterized queries (prepared statements), validating user input, avoiding dynamic SQL construction, applying the principle of least privilege, and using ORM frameworks where appropriate.",
+                    "type": "text",
+                    "id": 151,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "152",
+            "Que": [
+                {
+                    "q": "Q152 : What are Prepared Statements in MySQL?",
+                    "a": "Prepared Statements separate SQL code from user-supplied data. The SQL statement is compiled once, and parameters are supplied later, improving both security and performance. They help prevent SQL Injection attacks because user input is treated as data rather than executable SQL.",
+                    "type": "text",
+                    "id": 152,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "sql",
+                    "simple_text": "Prepared Statement Example",
+                    "code": "\nPREPARE stmt FROM 'SELECT * FROM employees WHERE id = ?';"
+                }
+            ]
+        },
+        {
+            "id": "153",
+            "Que": [
+                {
+                    "q": "Q153 : What are the most important MySQL concepts for senior backend developer interviews?",
+                    "a": "Senior backend interviews commonly focus on indexing strategies, transactions, ACID properties, MVCC, locking mechanisms, query optimization, execution plans, replication, partitioning, storage engines, database architecture, concurrency control, performance tuning, and production troubleshooting scenarios.",
+                    "type": "text",
+                    "id": 153,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "154",
+            "Que": [
+                {
+                    "q": "Q154 : What mistakes should developers avoid while working with MySQL?",
+                    "a": "Common mistakes include using SELECT *, creating too many indexes, ignoring execution plans, keeping transactions open for long periods, failing to back up databases, not using parameterized queries, storing redundant data unnecessarily, and neglecting database monitoring and optimization.",
+                    "type": "text",
+                    "id": 154,
+                    "playButton": true,
+                    "pauseButton": false
+                }
+            ]
+        },
+        {
+            "id": "155",
+            "Que": [
+                {
+                    "q": "Q155 : What is the ultimate roadmap for mastering MySQL?",
+                    "a": "To master MySQL, begin with relational database fundamentals and SQL syntax, then learn CRUD operations, constraints, joins, aggregate functions, subqueries, views, stored procedures, triggers, transactions, ACID properties, indexing, normalization, query optimization, storage engines, replication, partitioning, and InnoDB internals. Finally, practice solving real-world problems, optimize complex queries using EXPLAIN ANALYZE, understand production architecture, and build projects that involve database design, scaling, and performance tuning. Consistent hands-on practice is the key to becoming proficient in MySQL.",
+                    "type": "text",
+                    "id": 155,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "note",
+                    "note": "These 155 questions cover the concepts most frequently asked in MySQL interviews for Software Engineer, Backend Developer, Full-Stack Developer, and Database Developer roles, ranging from beginner to senior levels."
+                }
+            ]
+        }
+    ]
+}

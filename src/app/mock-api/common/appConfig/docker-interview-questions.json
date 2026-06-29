@@ -1,0 +1,4278 @@
+{
+    "docker-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q1 : What is Docker?",
+                    "a": "Docker is an open-source containerization platform used to build, package, deploy, and run applications in lightweight containers. A container includes the application along with its dependencies, libraries, and configuration, ensuring consistent behavior across different environments. Docker simplifies application deployment, improves resource utilization, and enables faster software delivery.",
+                    "type": "text",
+                    "id": 1
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Features of Docker",
+                    "list": {
+                        "1": "Containerization",
+                        "2": "Lightweight",
+                        "3": "Portable",
+                        "4": "Fast Deployment",
+                        "5": "Platform Independent",
+                        "6": "Scalable"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Check the installed Docker version.",
+                    "code": "\ndocker --version"
+                },
+                {
+                    "type": "note",
+                    "note": "Docker packages an application and all its dependencies into a portable container."
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q2 : Why do we use Docker?",
+                    "a": "Docker is used to ensure applications run consistently across development, testing, and production environments. It eliminates dependency conflicts, speeds up deployments, simplifies scaling, and improves resource utilization. Docker containers start quickly, making them ideal for microservices, cloud-native applications, DevOps pipelines, and continuous integration and deployment workflows.",
+                    "type": "text",
+                    "id": 2
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Consistent Environment",
+                        "2": "Faster Deployment",
+                        "3": "Easy Scaling",
+                        "4": "Resource Efficient",
+                        "5": "Supports CI/CD",
+                        "6": "Portable Applications"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Docker follows the principle of 'Build Once, Run Anywhere'."
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q3 : What problems does Docker solve?",
+                    "a": "Docker solves issues related to environment inconsistency, dependency management, application portability, and deployment complexity. By packaging applications with all required dependencies into containers, Docker ensures identical behavior across different systems. It also reduces infrastructure overhead, simplifies application updates, and accelerates software development and release cycles.",
+                    "type": "text",
+                    "id": 3
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Problems Solved",
+                    "list": {
+                        "1": "Works on My Machine Issue",
+                        "2": "Dependency Conflicts",
+                        "3": "Complex Deployment",
+                        "4": "Environment Differences",
+                        "5": "Slow Scaling"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Docker provides identical execution environments across development, testing, and production."
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q4 : What is Containerization?",
+                    "a": "Containerization is a virtualization technique where an application and its dependencies are packaged into an isolated unit called a container. Containers share the host operating system kernel while remaining isolated from each other. This approach provides faster startup, lower resource consumption, portability, and consistent execution across different computing environments.",
+                    "type": "text",
+                    "id": 4
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Containerization"
+                        },
+                        {
+                            "label": "Traditional Deployment"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Isolated Containers"
+                                },
+                                {
+                                    "col": "Installed Directly on OS"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Portable"
+                                },
+                                {
+                                    "col": "Environment Dependent"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Lightweight"
+                                },
+                                {
+                                    "col": "Higher Resource Usage"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Containerization packages applications together with all required dependencies."
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q5 : What is the difference between a Virtual Machine and Docker?",
+                    "a": "A Virtual Machine virtualizes hardware and runs a complete operating system, making it heavier and slower. Docker uses containerization, where containers share the host operating system kernel, making them lightweight and fast. Docker starts in seconds, consumes fewer resources, and is ideal for modern cloud-native and microservices-based applications.",
+                    "type": "text",
+                    "id": 5
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Virtual Machine"
+                        },
+                        {
+                            "label": "Docker Container"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Virtualizes Hardware"
+                                },
+                                {
+                                    "col": "Virtualizes OS"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Includes Full Guest OS"
+                                },
+                                {
+                                    "col": "Shares Host OS Kernel"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Heavyweight"
+                                },
+                                {
+                                    "col": "Lightweight"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Starts in Minutes"
+                                },
+                                {
+                                    "col": "Starts in Seconds"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Higher Resource Usage"
+                                },
+                                {
+                                    "col": "Lower Resource Usage"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Docker containers share the host OS kernel, whereas Virtual Machines run separate operating systems."
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q6 : What is Docker Architecture?",
+                    "a": "Docker Architecture follows a client-server model consisting of the Docker Client, Docker Daemon, Docker Host, Docker Images, Docker Containers, and Docker Registry. The Docker Client sends commands to the Docker Daemon, which builds, runs, and manages containers. Docker Registries store container images that can be pulled and deployed anywhere.",
+                    "type": "text",
+                    "id": 6
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Docker Architecture Components",
+                    "list": {
+                        "1": "Docker Client",
+                        "2": "Docker Daemon",
+                        "3": "Docker Host",
+                        "4": "Docker Images",
+                        "5": "Docker Containers",
+                        "6": "Docker Registry"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Docker uses a client-server architecture where the client communicates with the Docker Daemon."
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q7 : What are the main components of Docker?",
+                    "a": "Docker consists of several core components that work together to build and run containers. These include the Docker Client, Docker Daemon, Docker Images, Docker Containers, Docker Registry, and Docker Host. Together they provide a complete platform for developing, distributing, and running containerized applications efficiently across different environments.",
+                    "type": "text",
+                    "id": 7
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Core Components",
+                    "list": {
+                        "1": "Docker Client",
+                        "2": "Docker Daemon",
+                        "3": "Docker Image",
+                        "4": "Docker Container",
+                        "5": "Docker Registry",
+                        "6": "Docker Host"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Each Docker component has a specific responsibility in the container lifecycle."
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q8 : What is Docker Engine?",
+                    "a": "Docker Engine is the core runtime responsible for building, running, and managing Docker containers. It includes the Docker Daemon, REST API, and Docker CLI. Docker Engine receives commands from the Docker Client, manages container lifecycle operations, and communicates with Docker Registries to download or upload container images.",
+                    "type": "text",
+                    "id": 8
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Docker Engine Components",
+                    "list": {
+                        "1": "Docker Daemon",
+                        "2": "REST API",
+                        "3": "Docker CLI"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Display Docker Engine information.",
+                    "code": "\ndocker info"
+                },
+                {
+                    "type": "note",
+                    "note": "Docker Engine is the runtime that powers all Docker container operations."
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q9 : What is Docker Desktop?",
+                    "a": "Docker Desktop is an application that provides an easy-to-use environment for developing, testing, and running Docker containers on Windows and macOS. It includes Docker Engine, Docker CLI, Docker Compose, Kubernetes, and a graphical interface, allowing developers to manage containers without manually configuring the Docker environment.",
+                    "type": "text",
+                    "id": 9
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Features of Docker Desktop",
+                    "list": {
+                        "1": "Docker Engine",
+                        "2": "Docker CLI",
+                        "3": "Docker Compose",
+                        "4": "Kubernetes Support",
+                        "5": "GUI Dashboard",
+                        "6": "Easy Installation"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Docker Desktop bundles all essential Docker tools into a single application."
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q10 : What is Docker Daemon?",
+                    "a": "Docker Daemon (dockerd) is the background service responsible for building, running, monitoring, and managing Docker containers, images, networks, and volumes. It listens for Docker API requests from the Docker Client and performs the requested operations. The Docker Daemon is the core service that powers Docker Engine.",
+                    "type": "text",
+                    "id": 10
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Responsibilities",
+                    "list": {
+                        "1": "Manage Containers",
+                        "2": "Build Images",
+                        "3": "Create Networks",
+                        "4": "Manage Volumes",
+                        "5": "Handle Docker API Requests"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "View Docker system information.",
+                    "code": "\ndocker info"
+                },
+                {
+                    "type": "note",
+                    "note": "The Docker Daemon must be running before Docker commands can execute successfully."
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q11 : What is a Docker Image?",
+                    "a": "A Docker Image is a read-only template used to create Docker containers. It contains the application code, runtime, libraries, dependencies, environment variables, and configuration files required to run an application. Images are versioned, reusable, and stored in registries such as Docker Hub or private registries.",
+                    "type": "text",
+                    "id": 11
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Contents of a Docker Image",
+                    "list": {
+                        "1": "Application Code",
+                        "2": "Operating System Libraries",
+                        "3": "Dependencies",
+                        "4": "Configuration Files",
+                        "5": "Environment Variables"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "List all Docker images.",
+                    "code": "\ndocker images"
+                },
+                {
+                    "type": "note",
+                    "note": "A Docker Image is immutable and serves as the blueprint for creating containers."
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q12 : What are Docker Image Layers?",
+                    "a": "Docker Images are built using multiple read-only layers. Each Dockerfile instruction creates a new layer, which is cached and reused whenever possible. Layering improves build speed, reduces storage usage, and allows multiple images to share common layers, making Docker efficient and lightweight.",
+                    "type": "text",
+                    "id": 12
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits of Image Layers",
+                    "list": {
+                        "1": "Layer Caching",
+                        "2": "Faster Builds",
+                        "3": "Reduced Storage",
+                        "4": "Layer Reusability",
+                        "5": "Efficient Image Sharing"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Display image layer history.",
+                    "code": "\ndocker history <image-name>"
+                },
+                {
+                    "type": "note",
+                    "note": "Each Dockerfile instruction typically creates a separate image layer."
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q13 : What is Docker Hub?",
+                    "a": "Docker Hub is the official cloud-based registry provided by Docker for storing, sharing, and distributing Docker images. It contains thousands of public images and also supports private repositories. Developers can pull ready-to-use images or push their own images, making application deployment and collaboration much easier.",
+                    "type": "text",
+                    "id": 13
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Features of Docker Hub",
+                    "list": {
+                        "1": "Public Repositories",
+                        "2": "Private Repositories",
+                        "3": "Image Sharing",
+                        "4": "Version Tags",
+                        "5": "Official Images",
+                        "6": "Team Collaboration"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Login to Docker Hub.",
+                    "code": "\ndocker login"
+                },
+                {
+                    "type": "note",
+                    "note": "Docker Hub is the default registry used when pulling Docker images."
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q14 : How do you pull a Docker Image?",
+                    "a": "A Docker image is downloaded from a registry using the 'docker pull' command. If no tag is specified, Docker downloads the latest version of the image. Pulled images are stored locally and can be used repeatedly to create multiple containers without downloading them again.",
+                    "type": "text",
+                    "id": 14
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Pull the latest Nginx image.",
+                    "code": "\ndocker pull nginx"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Steps",
+                    "list": {
+                        "1": "Connect to Registry",
+                        "2": "Download Image",
+                        "3": "Store Image Locally",
+                        "4": "Use Image to Create Containers"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "If no tag is specified, Docker automatically downloads the 'latest' image."
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q15 : How do you build a Docker Image?",
+                    "a": "A Docker image is built from a Dockerfile using the 'docker build' command. Docker executes each instruction in the Dockerfile sequentially, creating image layers. Once built, the image can be tagged, stored locally, pushed to a registry, and used to create containers consistently across environments.",
+                    "type": "text",
+                    "id": 15
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Build a Docker image.",
+                    "code": "\ndocker build -t my-app:1.0 ."
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Requirements",
+                    "list": {
+                        "1": "Dockerfile",
+                        "2": "Application Code",
+                        "3": "Build Context",
+                        "4": "Docker Engine"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The '.' represents the current directory as the Docker build context."
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q16 : How do you remove a Docker Image?",
+                    "a": "Docker images can be removed using the 'docker rmi' command. Before deleting an image, all containers using that image must be stopped and removed. Removing unused images helps free disk space and keeps the Docker environment clean and organized.",
+                    "type": "text",
+                    "id": 16
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Remove a Docker image.",
+                    "code": "\ndocker rmi nginx"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Commands",
+                    "list": {
+                        "1": "docker images",
+                        "2": "docker rmi <image>",
+                        "3": "docker image prune"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "An image cannot be removed while it is being used by an existing container."
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q17 : How do you list Docker Images?",
+                    "a": "Docker images stored on the local system can be viewed using the 'docker images' command. The output displays information such as repository name, tag, image ID, creation date, and image size. This command helps developers identify available images before creating or managing containers.",
+                    "type": "text",
+                    "id": 17
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "List all Docker images.",
+                    "code": "\ndocker images"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Information Displayed",
+                    "list": {
+                        "1": "Repository",
+                        "2": "Tag",
+                        "3": "Image ID",
+                        "4": "Created",
+                        "5": "Size"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The 'docker images' command displays all images available on the local machine."
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q18 : What is Image Tagging in Docker?",
+                    "a": "Image tagging is the process of assigning a meaningful name and version to a Docker image. Tags help identify different image versions such as development, testing, or production. Proper tagging simplifies image management, version control, and deployment across multiple environments and Docker registries.",
+                    "type": "text",
+                    "id": 18
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Tag an existing Docker image.",
+                    "code": "\ndocker tag my-app:latest my-app:v1.0"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits of Tagging",
+                    "list": {
+                        "1": "Version Control",
+                        "2": "Easy Identification",
+                        "3": "Deployment Management",
+                        "4": "Registry Organization"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "If no tag is specified, Docker automatically assigns the 'latest' tag."
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q19 : What is an Image Digest in Docker?",
+                    "a": "An Image Digest is a unique SHA-256 hash that identifies the exact contents of a Docker image. Unlike tags, which can change, a digest is immutable and guarantees that the same image is always pulled. Digests improve security, consistency, and reproducibility in container deployments.",
+                    "type": "text",
+                    "id": 19
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Unique Identification",
+                        "2": "Immutable Reference",
+                        "3": "Improved Security",
+                        "4": "Consistent Deployments"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Inspect image details including digest.",
+                    "code": "\ndocker inspect nginx"
+                },
+                {
+                    "type": "note",
+                    "note": "A digest uniquely identifies an image even if its tag changes."
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q20 : What are the best practices for Docker Images?",
+                    "a": "Docker image best practices include using official base images, minimizing image size, reducing the number of layers, avoiding unnecessary packages, using specific image tags instead of 'latest', and scanning images for vulnerabilities. Following these practices improves security, performance, maintainability, and deployment reliability.",
+                    "type": "text",
+                    "id": 20
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Best Practices",
+                    "list": {
+                        "1": "Use Official Images",
+                        "2": "Keep Images Small",
+                        "3": "Use Specific Tags",
+                        "4": "Reduce Layers",
+                        "5": "Scan for Vulnerabilities",
+                        "6": "Remove Unused Packages"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Smaller Docker images build faster, transfer quicker, and reduce security risks."
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q21 : What is a Docker Container?",
+                    "a": "A Docker Container is a lightweight, isolated runtime environment created from a Docker image. It contains the application, dependencies, libraries, and configuration needed to run consistently across different environments. Containers share the host operating system kernel while remaining isolated from one another, making them efficient and portable.",
+                    "type": "text",
+                    "id": 21
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Characteristics",
+                    "list": {
+                        "1": "Lightweight",
+                        "2": "Portable",
+                        "3": "Isolated",
+                        "4": "Fast Startup",
+                        "5": "Shares Host OS Kernel"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "List running Docker containers.",
+                    "code": "\ndocker ps"
+                },
+                {
+                    "type": "note",
+                    "note": "A Docker container is a running instance of a Docker image."
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q22 : How do you create a Docker Container?",
+                    "a": "A Docker container is created from an existing Docker image using the 'docker create' command. This command creates the container but does not start it. After creation, the container can be started whenever needed using the Docker start command.",
+                    "type": "text",
+                    "id": 22
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Create a Docker container without starting it.",
+                    "code": "\ndocker create --name my-container nginx"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Steps",
+                    "list": {
+                        "1": "Select Image",
+                        "2": "Create Container",
+                        "3": "Assign Name",
+                        "4": "Start When Required"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The 'docker create' command prepares the container but does not run it."
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q23 : How do you run a Docker Container?",
+                    "a": "A Docker container is started using the 'docker run' command. If the required image is not available locally, Docker automatically downloads it from the configured registry. The command creates and starts the container in a single step, making application deployment quick and simple.",
+                    "type": "text",
+                    "id": 23
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Run an Nginx container.",
+                    "code": "\ndocker run -d --name nginx-container -p 80:80 nginx"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Options",
+                    "list": {
+                        "1": "-d (Detached Mode)",
+                        "2": "--name",
+                        "3": "-p (Port Mapping)",
+                        "4": "-v (Volume)",
+                        "5": "-e (Environment Variable)"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The 'docker run' command creates and starts a container in one operation."
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q24 : How do you start a stopped Docker Container?",
+                    "a": "A stopped Docker container can be restarted using the 'docker start' command. Unlike 'docker run', this command starts an existing container without creating a new one. It preserves the container's configuration, filesystem changes, and metadata from previous executions.",
+                    "type": "text",
+                    "id": 24
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Start an existing container.",
+                    "code": "\ndocker start my-container"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Use Cases",
+                    "list": {
+                        "1": "Restart Existing Container",
+                        "2": "Reuse Previous Configuration",
+                        "3": "Resume Application",
+                        "4": "Avoid Creating New Container"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Use 'docker start' only for containers that already exist."
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q25 : How do you stop a Docker Container?",
+                    "a": "A running Docker container can be stopped using the 'docker stop' command. Docker first sends a SIGTERM signal, allowing the application to shut down gracefully. If the container does not stop within the specified timeout, Docker sends a SIGKILL signal to forcefully terminate the container.",
+                    "type": "text",
+                    "id": 25
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Stop a running container.",
+                    "code": "\ndocker stop my-container"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Stop Process",
+                    "list": {
+                        "1": "Send SIGTERM",
+                        "2": "Wait for Graceful Shutdown",
+                        "3": "Send SIGKILL if Needed"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The 'docker stop' command attempts a graceful shutdown before forcefully terminating the container."
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q26 : How do you restart a Docker Container?",
+                    "a": "A Docker container can be restarted using the 'docker restart' command. Docker first stops the running container and then starts it again using the existing configuration. This command is commonly used after configuration changes or when an application becomes unresponsive.",
+                    "type": "text",
+                    "id": 26
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Restart a Docker container.",
+                    "code": "\ndocker restart my-container"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Quick Recovery",
+                        "2": "Applies Configuration Changes",
+                        "3": "No New Container Required",
+                        "4": "Simple Maintenance"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The 'docker restart' command performs a stop followed by a start operation."
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q27 : How do you pause a Docker Container?",
+                    "a": "The 'docker pause' command temporarily suspends all processes running inside a container without stopping it. The container remains in memory and can later resume execution using the 'docker unpause' command. Pausing is useful when temporarily freeing CPU resources without terminating the application.",
+                    "type": "text",
+                    "id": 27
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Pause and unpause a container.",
+                    "code": "\ndocker pause my-container\ndocker unpause my-container"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Uses",
+                    "list": {
+                        "1": "Temporary Suspension",
+                        "2": "Save CPU Resources",
+                        "3": "Resume Without Restart"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Paused containers remain in memory and continue from the same state after unpausing."
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q28 : How do you remove a Docker Container?",
+                    "a": "A Docker container can be deleted using the 'docker rm' command after it has been stopped. Removing unused containers helps free system resources and keeps the Docker environment organized. To forcefully remove a running container, the '-f' option can be used.",
+                    "type": "text",
+                    "id": 28
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Remove a Docker container.",
+                    "code": "\ndocker rm my-container"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Related Commands",
+                    "list": {
+                        "1": "docker stop",
+                        "2": "docker rm",
+                        "3": "docker rm -f"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "A running container must be stopped before removal unless the '-f' option is used."
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q29 : How do you list Docker Containers?",
+                    "a": "Docker containers can be viewed using the 'docker ps' command. By default, it displays only running containers. To view all containers, including stopped ones, use the '-a' option. The output includes the container ID, image, status, ports, names, and uptime, helping manage container lifecycles efficiently.",
+                    "type": "text",
+                    "id": 29
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "List running and all Docker containers.",
+                    "code": "\ndocker ps\ndocker ps -a"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Information Displayed",
+                    "list": {
+                        "1": "Container ID",
+                        "2": "Image",
+                        "3": "Command",
+                        "4": "Status",
+                        "5": "Ports",
+                        "6": "Container Name"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Use 'docker ps -a' to display both running and stopped containers."
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q30 : What is the Docker Container Lifecycle?",
+                    "a": "The Docker Container Lifecycle represents the different states a container passes through from creation to deletion. A container is first created, then started, paused if necessary, stopped when no longer needed, and finally removed. Understanding the lifecycle helps manage resources and troubleshoot container-related issues effectively.",
+                    "type": "text",
+                    "id": 30
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "State"
+                        },
+                        {
+                            "label": "Description"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Created"
+                                },
+                                {
+                                    "col": "Container Exists but Not Running"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Running"
+                                },
+                                {
+                                    "col": "Container is Active"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Paused"
+                                },
+                                {
+                                    "col": "Processes Temporarily Suspended"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Stopped"
+                                },
+                                {
+                                    "col": "Container is Not Running"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Removed"
+                                },
+                                {
+                                    "col": "Container Deleted"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "A container must be created before it can be started, and removed when it is no longer required."
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q31 : What is a Dockerfile?",
+                    "a": "A Dockerfile is a text file containing a sequence of instructions used to build a Docker image automatically. It defines the base image, application files, dependencies, environment variables, commands, and startup configuration. Docker executes each instruction sequentially, producing a reusable and version-controlled image.",
+                    "type": "text",
+                    "id": 31
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Basic Dockerfile example.",
+                    "code": "\nFROM nginx:latest\nCOPY . /usr/share/nginx/html"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Instructions",
+                    "list": {
+                        "1": "FROM",
+                        "2": "RUN",
+                        "3": "COPY",
+                        "4": "CMD",
+                        "5": "ENTRYPOINT",
+                        "6": "WORKDIR"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "A Dockerfile automates image creation and ensures consistent builds."
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q32 : What is the FROM instruction in a Dockerfile?",
+                    "a": "The FROM instruction specifies the base image from which a Docker image is built. It is usually the first instruction in a Dockerfile and provides the operating system or runtime environment required by the application. Every Dockerfile must begin with a FROM instruction unless using a scratch image.",
+                    "type": "text",
+                    "id": 32
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Use Ubuntu as the base image.",
+                    "code": "\nFROM ubuntu:22.04"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Purpose of FROM",
+                    "list": {
+                        "1": "Defines Base Image",
+                        "2": "Starts Build Process",
+                        "3": "Provides Runtime Environment",
+                        "4": "Supports Image Layering"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Every Docker image starts from a base image specified using the FROM instruction."
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q33 : What is the RUN instruction in a Dockerfile?",
+                    "a": "The RUN instruction executes commands during the image build process and creates a new image layer. It is commonly used to install packages, update the operating system, create directories, or configure the environment. RUN commands execute only while building the image, not when the container starts.",
+                    "type": "text",
+                    "id": 33
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Install Nginx during image build.",
+                    "code": "\nFROM ubuntu:22.04\nRUN apt-get update && apt-get install -y nginx"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Uses",
+                    "list": {
+                        "1": "Install Packages",
+                        "2": "Update OS",
+                        "3": "Create Directories",
+                        "4": "Configure Software"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Every RUN instruction creates a new image layer."
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q34 : What is the CMD instruction in a Dockerfile?",
+                    "a": "The CMD instruction specifies the default command that runs when a Docker container starts. Only one CMD instruction is allowed in a Dockerfile, and it can be overridden when launching the container. It defines the default behavior but does not execute during image creation.",
+                    "type": "text",
+                    "id": 34
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Start Nginx when the container launches.",
+                    "code": "\nFROM nginx:latest\nCMD [\"nginx\", \"-g\", \"daemon off;\"]"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Characteristics",
+                    "list": {
+                        "1": "Runs at Container Startup",
+                        "2": "Only One CMD Allowed",
+                        "3": "Can Be Overridden",
+                        "4": "Defines Default Command"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "CMD provides the default startup command for a container."
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q35 : What is the ENTRYPOINT instruction in a Dockerfile?",
+                    "a": "The ENTRYPOINT instruction defines the main executable that always runs when a container starts. Unlike CMD, it cannot be easily overridden by command-line arguments. ENTRYPOINT is commonly used when a container should always execute a specific application regardless of additional parameters provided during startup.",
+                    "type": "text",
+                    "id": 35
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "CMD"
+                        },
+                        {
+                            "label": "ENTRYPOINT"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Can Be Overridden"
+                                },
+                                {
+                                    "col": "Runs Every Time"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Default Command"
+                                },
+                                {
+                                    "col": "Main Executable"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Set Python as the main executable.",
+                    "code": "\nENTRYPOINT [\"python\"]"
+                },
+                {
+                    "type": "note",
+                    "note": "ENTRYPOINT defines the primary executable of the container."
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q36 : What is the COPY instruction in a Dockerfile?",
+                    "a": "The COPY instruction copies files and directories from the local build context into the Docker image. It is commonly used to copy application source code, configuration files, and static resources. COPY is preferred over ADD for simple file transfers because it has more predictable behavior.",
+                    "type": "text",
+                    "id": 36
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Copy application files into the image.",
+                    "code": "\nCOPY . /app"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Uses",
+                    "list": {
+                        "1": "Copy Source Code",
+                        "2": "Copy Configuration Files",
+                        "3": "Copy Static Assets",
+                        "4": "Prepare Application"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "COPY transfers files only from the local build context into the Docker image."
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q33 : What is the RUN instruction in a Dockerfile?",
+                    "a": "The RUN instruction executes commands during the image build process and creates a new image layer. It is commonly used to install packages, update the operating system, create directories, or configure the environment. RUN commands execute only while building the image, not when the container starts.",
+                    "type": "text",
+                    "id": 33
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Install Nginx during image build.",
+                    "code": "\nFROM ubuntu:22.04\nRUN apt-get update && apt-get install -y nginx"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Uses",
+                    "list": {
+                        "1": "Install Packages",
+                        "2": "Update OS",
+                        "3": "Create Directories",
+                        "4": "Configure Software"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Every RUN instruction creates a new image layer."
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q34 : What is the CMD instruction in a Dockerfile?",
+                    "a": "The CMD instruction specifies the default command that runs when a Docker container starts. Only one CMD instruction is allowed in a Dockerfile, and it can be overridden when launching the container. It defines the default behavior but does not execute during image creation.",
+                    "type": "text",
+                    "id": 34
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Start Nginx when the container launches.",
+                    "code": "\nFROM nginx:latest\nCMD [\"nginx\", \"-g\", \"daemon off;\"]"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Characteristics",
+                    "list": {
+                        "1": "Runs at Container Startup",
+                        "2": "Only One CMD Allowed",
+                        "3": "Can Be Overridden",
+                        "4": "Defines Default Command"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "CMD provides the default startup command for a container."
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q35 : What is the ENTRYPOINT instruction in a Dockerfile?",
+                    "a": "The ENTRYPOINT instruction defines the main executable that always runs when a container starts. Unlike CMD, it cannot be easily overridden by command-line arguments. ENTRYPOINT is commonly used when a container should always execute a specific application regardless of additional parameters provided during startup.",
+                    "type": "text",
+                    "id": 35
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "CMD"
+                        },
+                        {
+                            "label": "ENTRYPOINT"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Can Be Overridden"
+                                },
+                                {
+                                    "col": "Runs Every Time"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Default Command"
+                                },
+                                {
+                                    "col": "Main Executable"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Set Python as the main executable.",
+                    "code": "\nENTRYPOINT [\"python\"]"
+                },
+                {
+                    "type": "note",
+                    "note": "ENTRYPOINT defines the primary executable of the container."
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q36 : What is the COPY instruction in a Dockerfile?",
+                    "a": "The COPY instruction copies files and directories from the local build context into the Docker image. It is commonly used to copy application source code, configuration files, and static resources. COPY is preferred over ADD for simple file transfers because it has more predictable behavior.",
+                    "type": "text",
+                    "id": 36
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Copy application files into the image.",
+                    "code": "\nCOPY . /app"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Uses",
+                    "list": {
+                        "1": "Copy Source Code",
+                        "2": "Copy Configuration Files",
+                        "3": "Copy Static Assets",
+                        "4": "Prepare Application"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "COPY transfers files only from the local build context into the Docker image."
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q37 : What is the ADD instruction in a Dockerfile?",
+                    "a": "The ADD instruction copies files from the local system into a Docker image and also supports extracting compressed archives and downloading files from URLs. Although more powerful than COPY, it should be used only when these additional features are required. Otherwise, COPY is the recommended instruction.",
+                    "type": "text",
+                    "id": 37
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "COPY"
+                        },
+                        {
+                            "label": "ADD"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Copies Local Files"
+                                },
+                                {
+                                    "col": "Copies & Extracts Archives"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Simple & Predictable"
+                                },
+                                {
+                                    "col": "Supports URLs"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Copy a compressed archive into the image.",
+                    "code": "\nADD app.tar.gz /app"
+                },
+                {
+                    "type": "note",
+                    "note": "Use COPY whenever possible and reserve ADD for archive extraction or URL downloads."
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q38 : What is the WORKDIR instruction in a Dockerfile?",
+                    "a": "The WORKDIR instruction sets the default working directory for all subsequent Dockerfile instructions such as RUN, COPY, CMD, and ENTRYPOINT. If the directory does not exist, Docker creates it automatically. Using WORKDIR improves readability and eliminates the need to repeatedly specify full directory paths.",
+                    "type": "text",
+                    "id": 38
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Set the working directory.",
+                    "code": "\nWORKDIR /app"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Improves Readability",
+                        "2": "Creates Directory Automatically",
+                        "3": "Reduces Repeated Paths",
+                        "4": "Used by Later Instructions"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "WORKDIR changes the current directory for all following Dockerfile instructions."
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q39 : What is the ENV instruction in a Dockerfile?",
+                    "a": "The ENV instruction defines environment variables inside a Docker image. These variables are available during image build and container runtime, allowing applications to access configuration values without modifying the source code. ENV is commonly used for application settings, paths, and runtime configuration.",
+                    "type": "text",
+                    "id": 39
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Set an environment variable.",
+                    "code": "\nENV NODE_ENV=production"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Uses",
+                    "list": {
+                        "1": "Application Configuration",
+                        "2": "Database Settings",
+                        "3": "Environment Modes",
+                        "4": "System Paths"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Environment variables defined using ENV are available inside the running container."
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q40 : What is the EXPOSE instruction in a Dockerfile?",
+                    "a": "The EXPOSE instruction documents which network ports a container listens on at runtime. It does not publish the port automatically but serves as metadata for users and orchestration tools. Actual port mapping is performed using the '-p' or '--publish' option when running the container.",
+                    "type": "text",
+                    "id": 40
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Expose port 8080.",
+                    "code": "\nEXPOSE 8080"
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Publish the exposed port.",
+                    "code": "\ndocker run -p 8080:8080 my-app"
+                },
+                {
+                    "type": "note",
+                    "note": "EXPOSE documents a container port, while '-p' publishes it to the host machine."
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q41 : What are Docker Volumes?",
+                    "a": "Docker Volumes are the preferred mechanism for storing persistent data generated by containers. Unlike container storage, volumes exist independently of the container lifecycle, allowing data to remain available even after a container is removed. Volumes improve data management, backup, sharing, and performance across multiple containers.",
+                    "type": "text",
+                    "id": 41
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits of Docker Volumes",
+                    "list": {
+                        "1": "Persistent Storage",
+                        "2": "Data Sharing",
+                        "3": "Easy Backup",
+                        "4": "Better Performance",
+                        "5": "Independent of Containers"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Create a Docker volume.",
+                    "code": "\ndocker volume create my-volume"
+                },
+                {
+                    "type": "note",
+                    "note": "Docker volumes keep data even after the associated container is deleted."
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q42 : What are Bind Mounts in Docker?",
+                    "a": "A Bind Mount maps a directory or file from the host machine directly into a Docker container. Any changes made on the host are immediately reflected inside the container. Bind mounts are commonly used during development to enable live code updates without rebuilding Docker images.",
+                    "type": "text",
+                    "id": 42
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Docker Volume"
+                        },
+                        {
+                            "label": "Bind Mount"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Managed by Docker"
+                                },
+                                {
+                                    "col": "Managed by Host OS"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Portable"
+                                },
+                                {
+                                    "col": "Host Specific"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Best for Production"
+                                },
+                                {
+                                    "col": "Best for Development"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Mount a host directory.",
+                    "code": "\ndocker run -v /home/app:/app nginx"
+                },
+                {
+                    "type": "note",
+                    "note": "Bind mounts provide direct access to files stored on the host machine."
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q43 : What is a tmpfs Mount in Docker?",
+                    "a": "A tmpfs mount stores container data entirely in the host's memory instead of writing it to disk. The data exists only while the container is running and is automatically removed when the container stops. It is useful for temporary files, caches, and sensitive information requiring high-speed access.",
+                    "type": "text",
+                    "id": 43
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Memory-Based Storage",
+                        "2": "Fast Performance",
+                        "3": "No Disk Usage",
+                        "4": "Automatic Cleanup"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Run a container using a tmpfs mount.",
+                    "code": "\ndocker run --tmpfs /temp nginx"
+                },
+                {
+                    "type": "note",
+                    "note": "tmpfs mounts are temporary and all stored data is lost when the container stops."
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q44 : What is a Named Volume in Docker?",
+                    "a": "A Named Volume is a Docker-managed persistent storage volume identified by a user-defined name. Named volumes can be shared across multiple containers and remain available even after containers are deleted. They simplify data management and are recommended for databases and production applications requiring persistent storage.",
+                    "type": "text",
+                    "id": 44
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Create and use a named volume.",
+                    "code": "\ndocker volume create db-data\ndocker run -v db-data:/var/lib/mysql mysql"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Features",
+                    "list": {
+                        "1": "Persistent Storage",
+                        "2": "Reusable",
+                        "3": "Docker Managed",
+                        "4": "Shareable Across Containers"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Named volumes are the recommended storage option for production Docker applications."
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q45 : What is an Anonymous Volume in Docker?",
+                    "a": "An Anonymous Volume is a Docker-managed volume created automatically when a container uses a volume without specifying a name. Docker assigns a random name to the volume. It provides persistent storage but is harder to identify and manage compared to named volumes, making it suitable for temporary data.",
+                    "type": "text",
+                    "id": 45
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Named Volume"
+                        },
+                        {
+                            "label": "Anonymous Volume"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "User-Defined Name"
+                                },
+                                {
+                                    "col": "Random Name"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Easy to Reuse"
+                                },
+                                {
+                                    "col": "Harder to Reuse"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Easy to Manage"
+                                },
+                                {
+                                    "col": "Less Manageable"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Create an anonymous volume.",
+                    "code": "\ndocker run -v /app/data nginx"
+                },
+                {
+                    "type": "note",
+                    "note": "Docker automatically assigns a random name to anonymous volumes."
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q46 : How do you manage Docker Volumes?",
+                    "a": "Docker provides commands to create, inspect, list, and remove volumes. These commands help manage persistent storage used by containers. Proper volume management prevents unnecessary disk usage and ensures application data remains organized and available across multiple container deployments.",
+                    "type": "text",
+                    "id": 46
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Common Docker volume commands.",
+                    "code": "\ndocker volume ls\ndocker volume inspect my-volume\ndocker volume rm my-volume"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Volume Commands",
+                    "list": {
+                        "1": "docker volume create",
+                        "2": "docker volume ls",
+                        "3": "docker volume inspect",
+                        "4": "docker volume rm",
+                        "5": "docker volume prune"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Use 'docker volume prune' to remove all unused Docker volumes."
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q47 : What is Persistent Storage in Docker?",
+                    "a": "Persistent storage allows data to survive container restarts, recreations, and deletions. Docker achieves persistence using volumes or bind mounts instead of storing data inside the container filesystem. Persistent storage is essential for databases, uploaded files, application logs, and other critical information that must not be lost.",
+                    "type": "text",
+                    "id": 47
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Use Cases",
+                    "list": {
+                        "1": "Database Data",
+                        "2": "Application Logs",
+                        "3": "Uploaded Files",
+                        "4": "Configuration Files",
+                        "5": "Backup Data"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Without persistent storage, container data is lost when the container is removed."
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q48 : How do you back up a Docker Volume?",
+                    "a": "Docker volumes can be backed up by mounting the volume into a temporary container and copying its contents to a backup location. Backups protect application data from accidental deletion, hardware failures, or migration issues. Regular volume backups are recommended for production applications and databases.",
+                    "type": "text",
+                    "id": 48
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Back up a Docker volume to a tar file.",
+                    "code": "\ndocker run --rm -v my-volume:/data -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /data"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Backup Benefits",
+                    "list": {
+                        "1": "Disaster Recovery",
+                        "2": "Data Protection",
+                        "3": "Easy Migration",
+                        "4": "Restore Capability"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Regular Docker volume backups help prevent permanent data loss."
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q49 : What is a Docker Network?",
+                    "a": "A Docker Network enables communication between Docker containers and external systems. It provides network isolation, service discovery, and secure communication. Docker automatically creates a default bridge network, and users can create custom networks to allow containers to communicate while keeping unrelated containers isolated.",
+                    "type": "text",
+                    "id": 49
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Docker Network Types",
+                    "list": {
+                        "1": "Bridge",
+                        "2": "Host",
+                        "3": "None",
+                        "4": "Overlay",
+                        "5": "Macvlan"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "List all Docker networks.",
+                    "code": "\ndocker network ls"
+                },
+                {
+                    "type": "note",
+                    "note": "Docker networking enables communication between containers without exposing them unnecessarily."
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q50 : What is the Bridge Network in Docker?",
+                    "a": "The Bridge Network is Docker's default network driver for standalone containers. Containers connected to the same bridge network can communicate with each other using container names or IP addresses. It provides network isolation from the host and other Docker networks, making it suitable for most single-host applications.",
+                    "type": "text",
+                    "id": 50
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Bridge Network"
+                        },
+                        {
+                            "label": "Use Case"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Default Network"
+                                },
+                                {
+                                    "col": "Single Host Communication"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Container Isolation"
+                                },
+                                {
+                                    "col": "Microservices"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Create a custom bridge network.",
+                    "code": "\ndocker network create my-network"
+                },
+                {
+                    "type": "note",
+                    "note": "Bridge is the default network driver used for Docker containers."
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q51 : What is the Host Network in Docker?",
+                    "a": "The Host Network allows a container to share the host machine's network stack instead of creating a separate network namespace. As a result, the container uses the host's IP address directly, providing better network performance by eliminating network address translation (NAT).",
+                    "type": "text",
+                    "id": 51
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Bridge Network"
+                        },
+                        {
+                            "label": "Host Network"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Separate Network Namespace"
+                                },
+                                {
+                                    "col": "Shares Host Network"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Uses NAT"
+                                },
+                                {
+                                    "col": "No NAT"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Better Isolation"
+                                },
+                                {
+                                    "col": "Higher Performance"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Run a container using the host network.",
+                    "code": "\ndocker run --network host nginx"
+                },
+                {
+                    "type": "note",
+                    "note": "Host networking provides maximum performance but less network isolation."
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q52 : What is the None Network in Docker?",
+                    "a": "The None Network disables all networking for a Docker container. Containers running with this network driver cannot communicate with other containers, the host, or external networks. It is mainly used for highly secure workloads or applications that do not require any network connectivity.",
+                    "type": "text",
+                    "id": 52
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Characteristics",
+                    "list": {
+                        "1": "No Network Interface",
+                        "2": "Maximum Isolation",
+                        "3": "No Internet Access",
+                        "4": "No Container Communication"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Run a container without networking.",
+                    "code": "\ndocker run --network none nginx"
+                },
+                {
+                    "type": "note",
+                    "note": "Containers using the None network are completely isolated from all network communication."
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q53 : What is the Overlay Network in Docker?",
+                    "a": "The Overlay Network enables secure communication between Docker containers running on different Docker hosts. It creates a virtual distributed network over existing infrastructure, making it ideal for Docker Swarm and multi-host deployments. Overlay networks simplify communication between services regardless of where containers are running.",
+                    "type": "text",
+                    "id": 53
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Features",
+                    "list": {
+                        "1": "Multi-Host Communication",
+                        "2": "Docker Swarm Support",
+                        "3": "Secure Networking",
+                        "4": "Service Discovery",
+                        "5": "Container Isolation"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Overlay networks are primarily used in Docker Swarm for communication across multiple hosts."
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q54 : What is the Macvlan Network in Docker?",
+                    "a": "The Macvlan network driver assigns a unique MAC address to each Docker container, allowing it to appear as a physical device on the network. Containers communicate directly with the physical network without network address translation (NAT), making Macvlan suitable for legacy applications and network appliances.",
+                    "type": "text",
+                    "id": 54
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Bridge Network"
+                        },
+                        {
+                            "label": "Macvlan Network"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Uses NAT"
+                                },
+                                {
+                                    "col": "Direct Network Access"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Shared Host Interface"
+                                },
+                                {
+                                    "col": "Unique MAC Address"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Common Applications"
+                                },
+                                {
+                                    "col": "Legacy Applications"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Macvlan allows containers to appear as separate devices on the physical network."
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q55 : What is Port Mapping in Docker?",
+                    "a": "Port mapping connects a port on the host machine to a port inside a Docker container, allowing external users to access containerized applications. Docker uses the '-p' option during container startup to publish ports. Without port mapping, services inside the container are not accessible from outside.",
+                    "type": "text",
+                    "id": 55
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Map host port 8080 to container port 80.",
+                    "code": "\ndocker run -d -p 8080:80 nginx"
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Host Port"
+                        },
+                        {
+                            "label": "Container Port"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "8080"
+                                },
+                                {
+                                    "col": "80"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "3000"
+                                },
+                                {
+                                    "col": "3000"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "The syntax '-p hostPort:containerPort' publishes container services to the host."
+                }
+            ]
+        },
+        {
+            "id": "56",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q56 : What are common Docker Network Commands?",
+                    "a": "Docker provides network management commands to create, inspect, connect, disconnect, list, and remove networks. These commands help administrators configure communication between containers, troubleshoot networking issues, and maintain isolated environments for different applications running on the same Docker host.",
+                    "type": "text",
+                    "id": 56
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Common Docker network commands.",
+                    "code": "\ndocker network ls\ndocker network create my-network\ndocker network inspect my-network\ndocker network rm my-network"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Useful Commands",
+                    "list": {
+                        "1": "docker network ls",
+                        "2": "docker network create",
+                        "3": "docker network inspect",
+                        "4": "docker network connect",
+                        "5": "docker network disconnect",
+                        "6": "docker network rm"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Docker network commands simplify the creation and management of container communication."
+                }
+            ]
+        },
+        {
+            "id": "57",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q57 : What is Docker Compose?",
+                    "a": "Docker Compose is a tool used to define and manage multi-container Docker applications using a single YAML configuration file. It allows developers to start, stop, and manage multiple interconnected services with a single command, making development, testing, and deployment much simpler and more organized.",
+                    "type": "text",
+                    "id": 57
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Multi-Container Management",
+                        "2": "Single Configuration File",
+                        "3": "Easy Deployment",
+                        "4": "Simplified Networking",
+                        "5": "Reusable Configuration"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Start all services defined in Docker Compose.",
+                    "code": "\ndocker compose up"
+                },
+                {
+                    "type": "note",
+                    "note": "Docker Compose manages multiple containers as a single application."
+                }
+            ]
+        },
+        {
+            "id": "58",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q58 : What is the docker-compose.yml file?",
+                    "a": "The docker-compose.yml file is a YAML configuration file that defines services, networks, volumes, environment variables, and other settings for a Docker Compose application. It allows developers to configure an entire application stack in one place, making deployments consistent and repeatable across different environments.",
+                    "type": "text",
+                    "id": 58
+                },
+                {
+                    "type": "code",
+                    "lang": "yaml",
+                    "simple_text": "Basic docker-compose.yml example.",
+                    "code": "\nservices:\n  web:\n    image: nginx\n    ports:\n      - \"80:80\""
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Sections",
+                    "list": {
+                        "1": "services",
+                        "2": "volumes",
+                        "3": "networks",
+                        "4": "environment",
+                        "5": "ports"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The docker-compose.yml file acts as the blueprint for a multi-container application."
+                }
+            ]
+        },
+        {
+            "id": "59",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q59 : What are Services in Docker Compose?",
+                    "a": "A service represents a container definition inside a docker-compose.yml file. Each service specifies the image, ports, environment variables, networks, volumes, and other settings required to run a specific application component. Multiple services together form a complete multi-container application.",
+                    "type": "text",
+                    "id": 59
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Service Configuration",
+                    "list": {
+                        "1": "Image",
+                        "2": "Ports",
+                        "3": "Volumes",
+                        "4": "Networks",
+                        "5": "Environment Variables",
+                        "6": "Restart Policy"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Each service usually represents one container within the Docker Compose application."
+                }
+            ]
+        },
+        {
+            "id": "60",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q60 : What are Networks in Docker Compose?",
+                    "a": "Docker Compose networks enable communication between services defined in the same compose file. By default, Compose creates an isolated network where services can communicate using their service names as hostnames. Custom networks can also be defined to improve security, organization, and application architecture.",
+                    "type": "text",
+                    "id": 60
+                },
+                {
+                    "type": "code",
+                    "lang": "yaml",
+                    "simple_text": "Define a custom network.",
+                    "code": "\nnetworks:\n  app-network:"
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Default Network"
+                        },
+                        {
+                            "label": "Custom Network"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Created Automatically"
+                                },
+                                {
+                                    "col": "Created by User"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Basic Communication"
+                                },
+                                {
+                                    "col": "Better Isolation"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Services within the same Docker Compose network communicate using service names."
+                }
+            ]
+        },
+        {
+            "id": "61",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q61 : How are Volumes used in Docker Compose?",
+                    "a": "Docker Compose uses volumes to provide persistent storage for containers. Volumes are defined in the docker-compose.yml file and can be shared across multiple services. They ensure application data remains available even if containers are stopped, recreated, or removed, making them essential for databases and production applications.",
+                    "type": "text",
+                    "id": 61
+                },
+                {
+                    "type": "code",
+                    "lang": "yaml",
+                    "simple_text": "Define and use a volume in Docker Compose.",
+                    "code": "\nservices:\n  db:\n    image: mysql\n    volumes:\n      - db-data:/var/lib/mysql\n\nvolumes:\n  db-data:"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Persistent Data",
+                        "2": "Shared Storage",
+                        "3": "Easy Backup",
+                        "4": "Container Independent"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Volumes preserve application data even when containers are recreated."
+                }
+            ]
+        },
+        {
+            "id": "62",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q62 : How are Environment Variables used in Docker Compose?",
+                    "a": "Environment variables allow configuration values to be passed into containers without modifying application code. Docker Compose supports defining environment variables directly in the compose file or loading them from a .env file, making applications easier to configure across development, testing, and production environments.",
+                    "type": "text",
+                    "id": 62
+                },
+                {
+                    "type": "code",
+                    "lang": "yaml",
+                    "simple_text": "Define environment variables.",
+                    "code": "\nservices:\n  app:\n    image: node\n    environment:\n      NODE_ENV: production\n      PORT: 3000"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Variables",
+                    "list": {
+                        "1": "Database URL",
+                        "2": "API Keys",
+                        "3": "Application Port",
+                        "4": "Environment Mode"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Environment variables help keep configuration separate from application code."
+                }
+            ]
+        },
+        {
+            "id": "63",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q63 : What is depends_on in Docker Compose?",
+                    "a": "The depends_on option defines service dependencies in a Docker Compose application. It ensures that dependent services start before the current service. However, it only controls startup order and does not guarantee that the dependency is fully initialized or ready to accept requests.",
+                    "type": "text",
+                    "id": 63
+                },
+                {
+                    "type": "code",
+                    "lang": "yaml",
+                    "simple_text": "Define service dependencies.",
+                    "code": "\nservices:\n  web:\n    depends_on:\n      - database\n  database:\n    image: mysql"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Purpose",
+                    "list": {
+                        "1": "Control Startup Order",
+                        "2": "Manage Dependencies",
+                        "3": "Organize Services",
+                        "4": "Simplify Multi-Service Apps"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "depends_on controls startup order but does not verify service readiness."
+                }
+            ]
+        },
+        {
+            "id": "64",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q64 : What are common Docker Compose Commands?",
+                    "a": "Docker Compose provides commands to build, start, stop, restart, view logs, and remove multi-container applications. These commands simplify managing all services defined in a docker-compose.yml file, eliminating the need to run multiple Docker commands for each individual container.",
+                    "type": "text",
+                    "id": 64
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Common Docker Compose commands.",
+                    "code": "\ndocker compose up\ndocker compose down\ndocker compose ps\ndocker compose logs\ndocker compose restart"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Frequently Used Commands",
+                    "list": {
+                        "1": "docker compose up",
+                        "2": "docker compose down",
+                        "3": "docker compose ps",
+                        "4": "docker compose logs",
+                        "5": "docker compose restart",
+                        "6": "docker compose build"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Docker Compose manages an entire application stack with simple commands."
+                }
+            ]
+        },
+        {
+            "id": "65",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q65 : What is a Docker Registry?",
+                    "a": "A Docker Registry is a repository used to store, manage, and distribute Docker images. Developers can push images to a registry and pull them whenever needed. Docker Hub is the default public registry, while organizations can also host private registries for secure image storage and sharing.",
+                    "type": "text",
+                    "id": 65
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Registry Features",
+                    "list": {
+                        "1": "Image Storage",
+                        "2": "Image Sharing",
+                        "3": "Version Management",
+                        "4": "Private Repositories",
+                        "5": "Public Repositories"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "A Docker Registry stores Docker images that can be pulled by Docker clients."
+                }
+            ]
+        },
+        {
+            "id": "66",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q66 : What is a Private Docker Registry?",
+                    "a": "A Private Docker Registry is a secure image repository accessible only to authorized users or organizations. It stores proprietary application images and provides better security, access control, and compliance compared to public registries. Examples include Harbor, AWS ECR, Azure Container Registry, and Google Artifact Registry.",
+                    "type": "text",
+                    "id": 66
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Secure Image Storage",
+                        "2": "Access Control",
+                        "3": "Private Images",
+                        "4": "Enterprise Security",
+                        "5": "Compliance"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Private registries protect sensitive application images from public access."
+                }
+            ]
+        },
+        {
+            "id": "67",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q67 : What is the difference between Docker Hub and a Docker Registry?",
+                    "a": "A Docker Registry is any service used to store and distribute Docker images, while Docker Hub is Docker's official public registry. Docker Hub provides free public repositories, private repositories, official images, and community images, whereas private registries are typically used by organizations for internal applications.",
+                    "type": "text",
+                    "id": 67
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Docker Hub"
+                        },
+                        {
+                            "label": "Docker Registry"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Official Public Registry"
+                                },
+                                {
+                                    "col": "Any Image Repository"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Public & Private Images"
+                                },
+                                {
+                                    "col": "Usually Private"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Managed by Docker"
+                                },
+                                {
+                                    "col": "Managed by Any Provider"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Docker Hub is one example of a Docker Registry."
+                }
+            ]
+        },
+        {
+            "id": "68",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q68 : How do you push a Docker Image to a Registry?",
+                    "a": "A Docker image is uploaded to a registry using the 'docker push' command. Before pushing, the image must be tagged with the registry address and repository name. Users must authenticate with the registry using 'docker login' before uploading the image.",
+                    "type": "text",
+                    "id": 68
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Tag and push an image to Docker Hub.",
+                    "code": "\ndocker tag my-app username/my-app:v1\ndocker push username/my-app:v1"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Steps",
+                    "list": {
+                        "1": "Login",
+                        "2": "Tag Image",
+                        "3": "Push Image",
+                        "4": "Verify Upload"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Images must be tagged correctly before they can be pushed to a registry."
+                }
+            ]
+        },
+        {
+            "id": "69",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q69 : How do you pull a Docker Image from a Registry?",
+                    "a": "A Docker image is downloaded from a registry using the 'docker pull' command. Docker retrieves the specified image and stores it locally for creating containers. If no version tag is provided, Docker automatically downloads the 'latest' tag from the configured registry.",
+                    "type": "text",
+                    "id": 69
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Pull an image from Docker Hub.",
+                    "code": "\ndocker pull nginx:latest"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Steps",
+                    "list": {
+                        "1": "Connect to Registry",
+                        "2": "Download Image",
+                        "3": "Store Locally",
+                        "4": "Create Container"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "If the image already exists locally, Docker checks whether a newer version is available."
+                }
+            ]
+        },
+        {
+            "id": "70",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q70 : How do you log in to a Docker Registry?",
+                    "a": "The 'docker login' command authenticates a user with a Docker registry. After successful authentication, Docker stores the credentials securely and allows the user to pull or push private images. Login is required before accessing private repositories or uploading images to a registry.",
+                    "type": "text",
+                    "id": 70
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Login to Docker Hub.",
+                    "code": "\ndocker login"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Information Required",
+                    "list": {
+                        "1": "Username",
+                        "2": "Password or Access Token",
+                        "3": "Registry URL (Optional)"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Docker recommends using access tokens instead of passwords for improved security."
+                }
+            ]
+        },
+        {
+            "id": "71",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q71 : How do you log out of a Docker Registry?",
+                    "a": "The 'docker logout' command removes stored authentication credentials for a Docker registry. After logging out, the user cannot push or pull private images until logging in again. Logging out is recommended when using shared systems or public computers to improve account security.",
+                    "type": "text",
+                    "id": 71
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Logout from Docker Hub.",
+                    "code": "\ndocker logout"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Removes Credentials",
+                        "2": "Improves Security",
+                        "3": "Protects Private Images",
+                        "4": "Recommended on Shared Systems"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Logging out removes locally stored authentication credentials for the registry."
+                }
+            ]
+        },
+        {
+            "id": "72",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q72 : What is the docker run command?",
+                    "a": "The 'docker run' command creates and starts a new container from a Docker image. If the image is not available locally, Docker automatically downloads it from the configured registry. It supports various options for port mapping, volumes, networking, environment variables, and container naming.",
+                    "type": "text",
+                    "id": 72
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Run an Nginx container in detached mode.",
+                    "code": "\ndocker run -d --name web -p 8080:80 nginx"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Options",
+                    "list": {
+                        "1": "--name",
+                        "2": "-d",
+                        "3": "-p",
+                        "4": "-v",
+                        "5": "-e",
+                        "6": "--network"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The 'docker run' command combines image creation and container startup into a single command."
+                }
+            ]
+        },
+        {
+            "id": "73",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q73 : What is the docker exec command?",
+                    "a": "The 'docker exec' command runs a command inside an already running Docker container. It is commonly used to open an interactive shell, execute scripts, inspect files, or troubleshoot applications without stopping the container. It allows administrators to interact directly with the container environment.",
+                    "type": "text",
+                    "id": 73
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Open a Bash shell inside a running container.",
+                    "code": "\ndocker exec -it my-container bash"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Uses",
+                    "list": {
+                        "1": "Open Shell",
+                        "2": "Run Commands",
+                        "3": "Debug Applications",
+                        "4": "Inspect Files",
+                        "5": "Execute Scripts"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The 'docker exec' command works only with running containers."
+                }
+            ]
+        },
+        {
+            "id": "74",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q74 : What is the docker logs command?",
+                    "a": "The 'docker logs' command displays the standard output and error logs generated by a container. It is widely used for monitoring application activity, debugging issues, and verifying application startup. Developers can also stream logs in real time using the follow option.",
+                    "type": "text",
+                    "id": 74
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "View and follow container logs.",
+                    "code": "\ndocker logs my-container\ndocker logs -f my-container"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Uses",
+                    "list": {
+                        "1": "Debug Errors",
+                        "2": "Monitor Applications",
+                        "3": "View Startup Logs",
+                        "4": "Real-Time Log Streaming"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Use the '-f' option to continuously stream logs from a running container."
+                }
+            ]
+        },
+        {
+            "id": "75",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q75 : What is the docker inspect command?",
+                    "a": "The 'docker inspect' command returns detailed JSON information about Docker objects such as containers, images, networks, and volumes. It provides configuration details, IP addresses, mounted volumes, environment variables, and runtime information, making it valuable for troubleshooting and automation tasks.",
+                    "type": "text",
+                    "id": 75
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Inspect a Docker container.",
+                    "code": "\ndocker inspect my-container"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Information Available",
+                    "list": {
+                        "1": "Container ID",
+                        "2": "Network Settings",
+                        "3": "Environment Variables",
+                        "4": "Mounted Volumes",
+                        "5": "Runtime Configuration"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The output of 'docker inspect' is returned in JSON format."
+                }
+            ]
+        },
+        {
+            "id": "76",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q76 : What is the docker stats command?",
+                    "a": "The 'docker stats' command displays real-time resource usage statistics for running containers. It reports CPU usage, memory consumption, network I/O, block I/O, and process count, helping administrators monitor application performance and identify containers consuming excessive system resources.",
+                    "type": "text",
+                    "id": 76
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Monitor container resource usage.",
+                    "code": "\ndocker stats"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Metrics Displayed",
+                    "list": {
+                        "1": "CPU Usage",
+                        "2": "Memory Usage",
+                        "3": "Network I/O",
+                        "4": "Block I/O",
+                        "5": "Running Processes"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The 'docker stats' command continuously updates resource usage in real time."
+                }
+            ]
+        },
+        {
+            "id": "77",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q77 : What is the docker top command?",
+                    "a": "The 'docker top' command displays the running processes inside a Docker container. It is similar to the Linux 'ps' command and helps administrators identify active processes, troubleshoot applications, and verify whether expected services are running correctly within the container.",
+                    "type": "text",
+                    "id": 77
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Display running processes inside a container.",
+                    "code": "\ndocker top my-container"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Uses",
+                    "list": {
+                        "1": "View Processes",
+                        "2": "Debug Applications",
+                        "3": "Monitor Running Services",
+                        "4": "Troubleshoot Containers"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The 'docker top' command displays only currently running processes inside the container."
+                }
+            ]
+        },
+        {
+            "id": "78",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q78 : What is the docker cp command?",
+                    "a": "The 'docker cp' command copies files and directories between a Docker container and the host machine. It can transfer data in both directions without requiring shared volumes, making it useful for backups, log collection, debugging, and copying application files.",
+                    "type": "text",
+                    "id": 78
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Copy files between host and container.",
+                    "code": "\ndocker cp my-container:/app/log.txt ./log.txt\ndocker cp app.js my-container:/app/"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Uses",
+                    "list": {
+                        "1": "Copy Logs",
+                        "2": "Transfer Files",
+                        "3": "Backup Data",
+                        "4": "Debug Applications"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The 'docker cp' command works with both running and stopped containers."
+                }
+            ]
+        },
+        {
+            "id": "79",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q79 : What is the docker ps command?",
+                    "a": "The 'docker ps' command lists Docker containers on the local system. By default, it shows only running containers, while the '-a' option displays both running and stopped containers. It provides useful details such as container ID, image, status, ports, and container name.",
+                    "type": "text",
+                    "id": 79
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "List running and all containers.",
+                    "code": "\ndocker ps\ndocker ps -a"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Information Displayed",
+                    "list": {
+                        "1": "Container ID",
+                        "2": "Image",
+                        "3": "Status",
+                        "4": "Ports",
+                        "5": "Container Name"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Use 'docker ps -a' to display both active and stopped containers."
+                }
+            ]
+        },
+        {
+            "id": "80",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q80 : What is the docker system prune command?",
+                    "a": "The 'docker system prune' command removes unused Docker resources such as stopped containers, dangling images, unused networks, and build cache. It helps recover disk space and maintain a clean Docker environment. Use it carefully because deleted resources cannot be recovered easily.",
+                    "type": "text",
+                    "id": 80
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Remove unused Docker resources.",
+                    "code": "\ndocker system prune\n\ndocker system prune -a"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Removes",
+                    "list": {
+                        "1": "Stopped Containers",
+                        "2": "Unused Networks",
+                        "3": "Dangling Images",
+                        "4": "Build Cache",
+                        "5": "Unused Images (-a)"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Use 'docker system prune -a' to remove all unused images, not just dangling ones."
+                }
+            ]
+        },
+        {
+            "id": "81",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q81 : What is Docker Security?",
+                    "a": "Docker Security refers to the practices and technologies used to protect Docker containers, images, hosts, and registries from vulnerabilities and unauthorized access. It includes image scanning, least privilege access, secure networking, resource isolation, and regular updates to minimize security risks in containerized environments.",
+                    "type": "text",
+                    "id": 81
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Security Best Practices",
+                    "list": {
+                        "1": "Use Trusted Images",
+                        "2": "Run as Non-Root",
+                        "3": "Scan Images",
+                        "4": "Keep Docker Updated",
+                        "5": "Use Least Privilege",
+                        "6": "Limit Resources"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Container security should cover the image, container, host, network, and registry."
+                }
+            ]
+        },
+        {
+            "id": "82",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q82 : What is the difference between Root and Non-Root Containers?",
+                    "a": "By default, Docker containers run as the root user, which has full system privileges. Running containers as a non-root user reduces the risk of privilege escalation and improves security. It follows the principle of least privilege and is considered a Docker security best practice.",
+                    "type": "text",
+                    "id": 82
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Root User"
+                        },
+                        {
+                            "label": "Non-Root User"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Full Privileges"
+                                },
+                                {
+                                    "col": "Limited Privileges"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Higher Security Risk"
+                                },
+                                {
+                                    "col": "More Secure"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Not Recommended"
+                                },
+                                {
+                                    "col": "Recommended"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Running containers as a non-root user significantly improves container security."
+                }
+            ]
+        },
+        {
+            "id": "83",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q83 : What are Docker Secrets?",
+                    "a": "Docker Secrets securely store sensitive information such as passwords, API keys, certificates, and tokens. Instead of embedding secrets inside images or environment variables, Docker provides controlled access only to authorized services, especially in Docker Swarm environments, improving application security and compliance.",
+                    "type": "text",
+                    "id": 83
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Secrets",
+                    "list": {
+                        "1": "Database Passwords",
+                        "2": "API Keys",
+                        "3": "SSL Certificates",
+                        "4": "OAuth Tokens",
+                        "5": "Private Keys"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Docker Secrets are encrypted and securely distributed to authorized services."
+                }
+            ]
+        },
+        {
+            "id": "84",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q84 : Why are Environment Variables used in Docker?",
+                    "a": "Environment variables allow applications to receive configuration values without modifying source code. They are commonly used for database connections, API endpoints, application settings, and feature flags. While convenient, sensitive information should be stored using Docker Secrets instead of plain environment variables whenever possible.",
+                    "type": "text",
+                    "id": 84
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Run a container with an environment variable.",
+                    "code": "\ndocker run -e NODE_ENV=production nginx"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Environment Variables",
+                    "list": {
+                        "1": "Database URL",
+                        "2": "API Endpoint",
+                        "3": "Application Mode",
+                        "4": "Port Number"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Avoid storing passwords or API keys directly in environment variables for production systems."
+                }
+            ]
+        },
+        {
+            "id": "85",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q85 : What is Docker Image Scanning?",
+                    "a": "Docker Image Scanning is the process of analyzing container images for known security vulnerabilities, outdated packages, and configuration issues. It helps identify security risks before deployment, allowing developers to update vulnerable dependencies and improve the overall security of containerized applications.",
+                    "type": "text",
+                    "id": 85
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Detect Vulnerabilities",
+                        "2": "Improve Security",
+                        "3": "Compliance",
+                        "4": "Safer Deployments",
+                        "5": "Dependency Analysis"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Scan a Docker image for vulnerabilities.",
+                    "code": "\ndocker scout quickview nginx"
+                },
+                {
+                    "type": "note",
+                    "note": "Always scan container images before deploying them to production."
+                }
+            ]
+        },
+        {
+            "id": "86",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q86 : What are Resource Limits in Docker?",
+                    "a": "Resource limits control how much CPU and memory a container can consume. Limiting resources prevents one container from affecting others running on the same host. Docker allows administrators to define CPU shares, memory limits, and other resource constraints when starting containers.",
+                    "type": "text",
+                    "id": 86
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Limit CPU and memory usage.",
+                    "code": "\ndocker run --memory=512m --cpus=1 nginx"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Supported Limits",
+                    "list": {
+                        "1": "Memory",
+                        "2": "CPU",
+                        "3": "Swap Memory",
+                        "4": "CPU Shares"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Resource limits improve application stability by preventing excessive resource consumption."
+                }
+            ]
+        },
+        {
+            "id": "87",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q87 : What is a Read-only Filesystem in Docker?",
+                    "a": "A read-only filesystem prevents applications inside a container from modifying the container's filesystem during runtime. This improves security by protecting application files from accidental changes or malicious attacks. Any writable data should instead be stored using Docker volumes or bind mounts.",
+                    "type": "text",
+                    "id": 87
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Run a container with a read-only filesystem.",
+                    "code": "\ndocker run --read-only nginx"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Improved Security",
+                        "2": "Prevent File Modification",
+                        "3": "Protect Application Files",
+                        "4": "Reduce Attack Surface"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Use Docker volumes for writable data when running containers with a read-only filesystem."
+                }
+            ]
+        },
+        {
+            "id": "88",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q88 : What is a Multi-stage Build in Docker?",
+                    "a": "A Multi-stage Build allows multiple FROM instructions within a single Dockerfile. Build dependencies are used only during compilation and excluded from the final image. This significantly reduces image size, improves security, and creates cleaner production-ready container images with only the required runtime files.",
+                    "type": "text",
+                    "id": 88
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Simple multi-stage Dockerfile.",
+                    "code": "\nFROM node:20 AS build\nWORKDIR /app\nCOPY . .\nRUN npm install && npm run build\n\nFROM nginx:latest\nCOPY --from=build /app/dist /usr/share/nginx/html"
+                },
+                {
+                    "type": "note",
+                    "note": "Multi-stage builds reduce image size by excluding unnecessary build tools from the final image."
+                }
+            ]
+        },
+        {
+            "id": "89",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q89 : What is Docker Build Cache?",
+                    "a": "Docker Build Cache stores intermediate image layers created during previous builds. When rebuilding an image, Docker reuses unchanged cached layers instead of executing every instruction again. This significantly reduces build time, improves development productivity, and minimizes unnecessary processing during image creation.",
+                    "type": "text",
+                    "id": 89
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Faster Builds",
+                        "2": "Reuses Layers",
+                        "3": "Saves CPU Resources",
+                        "4": "Improves Development Speed",
+                        "5": "Reduces Build Time"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Build an image without using cache.",
+                    "code": "\ndocker build --no-cache -t my-app ."
+                },
+                {
+                    "type": "note",
+                    "note": "Docker rebuilds only the layers that have changed, reusing all previous cached layers."
+                }
+            ]
+        },
+        {
+            "id": "90",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q90 : What is a Docker Health Check?",
+                    "a": "A Docker Health Check monitors whether an application inside a container is functioning correctly. Docker periodically executes a specified command, and based on its result, marks the container as healthy or unhealthy. Health checks help orchestration tools detect failed applications and perform recovery actions automatically.",
+                    "type": "text",
+                    "id": 90
+                },
+                {
+                    "type": "code",
+                    "lang": "dockerfile",
+                    "simple_text": "Add a health check in a Dockerfile.",
+                    "code": "\nHEALTHCHECK CMD curl --fail http://localhost || exit 1"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Health Status",
+                    "list": {
+                        "1": "Starting",
+                        "2": "Healthy",
+                        "3": "Unhealthy"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Health checks verify that the application is working, not just that the container is running."
+                }
+            ]
+        },
+        {
+            "id": "91",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q91 : What are Restart Policies in Docker?",
+                    "a": "Restart policies determine whether Docker automatically restarts containers after they exit or when the Docker service restarts. They improve application availability by recovering containers from failures without manual intervention. Different policies support various production and development requirements.",
+                    "type": "text",
+                    "id": 91
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Policy"
+                        },
+                        {
+                            "label": "Behavior"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "no"
+                                },
+                                {
+                                    "col": "Never Restart"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "always"
+                                },
+                                {
+                                    "col": "Always Restart"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "unless-stopped"
+                                },
+                                {
+                                    "col": "Restart Until Manually Stopped"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "on-failure"
+                                },
+                                {
+                                    "col": "Restart Only on Failure"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Run a container with a restart policy.",
+                    "code": "\ndocker run --restart=always nginx"
+                },
+                {
+                    "type": "note",
+                    "note": "The 'always' restart policy is commonly used for production containers."
+                }
+            ]
+        },
+        {
+            "id": "92",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q92 : What are Multi-container Applications?",
+                    "a": "A multi-container application consists of multiple containers working together to provide complete functionality. For example, separate containers may run the frontend, backend, database, and cache. Docker Compose is commonly used to define, deploy, and manage these interconnected services as a single application.",
+                    "type": "text",
+                    "id": 92
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Typical Components",
+                    "list": {
+                        "1": "Frontend",
+                        "2": "Backend",
+                        "3": "Database",
+                        "4": "Cache",
+                        "5": "Message Queue"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Docker Compose is the preferred tool for managing multi-container applications on a single host."
+                }
+            ]
+        },
+        {
+            "id": "93",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q93 : What is Docker Swarm?",
+                    "a": "Docker Swarm is Docker's native container orchestration platform used to deploy, manage, and scale containers across multiple Docker hosts. It groups multiple machines into a single cluster, providing high availability, load balancing, service discovery, and automatic scaling while simplifying container management.",
+                    "type": "text",
+                    "id": 93
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Features",
+                    "list": {
+                        "1": "Cluster Management",
+                        "2": "Load Balancing",
+                        "3": "High Availability",
+                        "4": "Service Discovery",
+                        "5": "Automatic Scaling"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Initialize a Docker Swarm cluster.",
+                    "code": "\ndocker swarm init"
+                },
+                {
+                    "type": "note",
+                    "note": "Docker Swarm allows multiple Docker hosts to work together as a single cluster."
+                }
+            ]
+        },
+        {
+            "id": "94",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q94 : What is a Docker Stack?",
+                    "a": "A Docker Stack is a collection of services deployed together on a Docker Swarm cluster using a Compose file. It simplifies the deployment and management of multi-container applications by allowing all services to be managed as a single unit across multiple Docker nodes.",
+                    "type": "text",
+                    "id": 94
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Deploy a Docker Stack.",
+                    "code": "\ndocker stack deploy -c docker-compose.yml my-stack"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Multi-Service Deployment",
+                        "2": "Swarm Integration",
+                        "3": "Easy Scaling",
+                        "4": "Centralized Management"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Docker Stacks work only in Docker Swarm mode."
+                }
+            ]
+        },
+        {
+            "id": "95",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q95 : What are Docker Secrets in Docker Swarm?",
+                    "a": "Docker Secrets securely store and distribute sensitive information such as passwords, API keys, and certificates to services running in Docker Swarm. Secrets are encrypted during transit and at rest, ensuring that only authorized services can access them without exposing sensitive information inside images.",
+                    "type": "text",
+                    "id": 95
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Examples",
+                    "list": {
+                        "1": "Database Passwords",
+                        "2": "API Keys",
+                        "3": "SSL Certificates",
+                        "4": "Private Keys",
+                        "5": "Access Tokens"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Create a Docker Secret.",
+                    "code": "\necho \"mypassword\" | docker secret create db_password -"
+                },
+                {
+                    "type": "note",
+                    "note": "Docker Secrets are available only to services that are explicitly granted access."
+                }
+            ]
+        },
+        {
+            "id": "96",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q96 : What is the difference between Docker and Kubernetes?",
+                    "a": "Docker is a containerization platform used to build and run containers, while Kubernetes is a container orchestration platform used to deploy, scale, monitor, and manage containers across multiple servers. Docker creates containers, whereas Kubernetes manages large numbers of containers in production environments.",
+                    "type": "text",
+                    "id": 96
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Docker"
+                        },
+                        {
+                            "label": "Kubernetes"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Container Platform"
+                                },
+                                {
+                                    "col": "Container Orchestrator"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Creates Containers"
+                                },
+                                {
+                                    "col": "Manages Containers"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Single Host Focus"
+                                },
+                                {
+                                    "col": "Multi-Node Cluster"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Docker builds containers, while Kubernetes orchestrates and manages them at scale."
+                }
+            ]
+        },
+        {
+            "id": "97",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q97 : What is the difference between a Docker Container and a Kubernetes Pod?",
+                    "a": "A Docker Container is the smallest runnable unit created from a Docker image. A Kubernetes Pod is the smallest deployable unit in Kubernetes and can contain one or more containers that share networking and storage. Pods simplify communication and lifecycle management for related containers.",
+                    "type": "text",
+                    "id": 97
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Docker Container"
+                        },
+                        {
+                            "label": "Kubernetes Pod"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Single Container"
+                                },
+                                {
+                                    "col": "One or More Containers"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Runs Independently"
+                                },
+                                {
+                                    "col": "Managed by Kubernetes"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Own Lifecycle"
+                                },
+                                {
+                                    "col": "Shared Lifecycle"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "A Pod usually contains one container, but it can contain multiple tightly coupled containers."
+                }
+            ]
+        },
+        {
+            "id": "98",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q98 : What is the difference between Docker Compose and Kubernetes?",
+                    "a": "Docker Compose is used to manage multi-container applications on a single machine using a YAML file. Kubernetes is a container orchestration platform that manages container deployment, scaling, networking, and recovery across multiple servers. Compose is mainly for development, while Kubernetes is designed for production environments.",
+                    "type": "text",
+                    "id": 98
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Docker Compose"
+                        },
+                        {
+                            "label": "Kubernetes"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Single Host"
+                                },
+                                {
+                                    "col": "Multiple Nodes"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Development"
+                                },
+                                {
+                                    "col": "Production"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Simple Configuration"
+                                },
+                                {
+                                    "col": "Advanced Orchestration"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Docker Compose is simpler, while Kubernetes provides enterprise-level orchestration."
+                }
+            ]
+        },
+        {
+            "id": "99",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q99 : How is Docker used in CI/CD?",
+                    "a": "Docker plays a major role in CI/CD by providing consistent environments for building, testing, and deploying applications. CI/CD pipelines build Docker images, run automated tests inside containers, push images to registries, and deploy them to staging or production environments, ensuring reliable and repeatable software releases.",
+                    "type": "text",
+                    "id": 99
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "CI/CD Workflow",
+                    "list": {
+                        "1": "Build Image",
+                        "2": "Run Tests",
+                        "3": "Push Image",
+                        "4": "Deploy Application",
+                        "5": "Monitor Deployment"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Docker ensures the same application runs consistently across development, testing, and production."
+                }
+            ]
+        },
+        {
+            "id": "100",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q100 : How is Docker used with Jenkins?",
+                    "a": "Jenkins integrates with Docker to automate application builds, testing, and deployments. Jenkins pipelines can build Docker images, execute tests inside containers, push images to Docker registries, and deploy applications automatically. This integration creates reliable, repeatable, and fully automated CI/CD workflows.",
+                    "type": "text",
+                    "id": 100
+                },
+                {
+                    "type": "code",
+                    "lang": "groovy",
+                    "simple_text": "Build a Docker image in a Jenkins Pipeline.",
+                    "code": "\nstage('Build') {\n    steps {\n        sh 'docker build -t my-app .'\n    }\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Jenkins + Docker Workflow",
+                    "list": {
+                        "1": "Checkout Code",
+                        "2": "Build Image",
+                        "3": "Run Tests",
+                        "4": "Push Image",
+                        "5": "Deploy"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Docker and Jenkins together form the foundation of many modern CI/CD pipelines."
+                }
+            ]
+        },
+        {
+            "id": "101",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q101 : What is the difference between Docker and a Virtual Machine?",
+                    "a": "Docker uses containerization and shares the host operating system kernel, making containers lightweight and fast. A Virtual Machine virtualizes hardware and runs a complete guest operating system, requiring more resources. Docker starts in seconds, while Virtual Machines generally take much longer to boot.",
+                    "type": "text",
+                    "id": 101
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Docker"
+                        },
+                        {
+                            "label": "Virtual Machine"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Containerization"
+                                },
+                                {
+                                    "col": "Hardware Virtualization"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Shares Host Kernel"
+                                },
+                                {
+                                    "col": "Runs Guest OS"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Lightweight"
+                                },
+                                {
+                                    "col": "Heavyweight"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Fast Startup"
+                                },
+                                {
+                                    "col": "Slower Startup"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Docker provides better resource utilization than Virtual Machines."
+                }
+            ]
+        },
+        {
+            "id": "102",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q102 : What is the difference between a Docker Image and a Docker Container?",
+                    "a": "A Docker Image is a read-only template containing the application, dependencies, and configuration required to run software. A Docker Container is a running instance of that image with its own writable layer. Multiple containers can be created from the same Docker image without affecting the original image.",
+                    "type": "text",
+                    "id": 102
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Docker Image"
+                        },
+                        {
+                            "label": "Docker Container"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Read-Only Template"
+                                },
+                                {
+                                    "col": "Running Instance"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Immutable"
+                                },
+                                {
+                                    "col": "Mutable"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Used to Create Containers"
+                                },
+                                {
+                                    "col": "Executes the Application"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "An image is the blueprint, while a container is the running application."
+                }
+            ]
+        },
+        {
+            "id": "103",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q103 : What is the difference between CMD and ENTRYPOINT?",
+                    "a": "CMD specifies the default command executed when a container starts and can be overridden easily. ENTRYPOINT defines the main executable that always runs when the container starts. CMD is commonly used to provide default arguments for an ENTRYPOINT instruction.",
+                    "type": "text",
+                    "id": 103
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "CMD"
+                        },
+                        {
+                            "label": "ENTRYPOINT"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Default Command"
+                                },
+                                {
+                                    "col": "Main Executable"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Can Be Overridden"
+                                },
+                                {
+                                    "col": "Normally Not Overridden"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Provides Defaults"
+                                },
+                                {
+                                    "col": "Defines Startup Process"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "ENTRYPOINT defines what runs, while CMD supplies default parameters."
+                }
+            ]
+        },
+        {
+            "id": "104",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q104 : What is the difference between COPY and ADD?",
+                    "a": "COPY transfers files and directories from the local build context into a Docker image. ADD performs the same function but also supports downloading files from URLs and automatically extracting compressed archives. Docker recommends using COPY unless the additional capabilities of ADD are specifically required.",
+                    "type": "text",
+                    "id": 104
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "COPY"
+                        },
+                        {
+                            "label": "ADD"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Copies Local Files"
+                                },
+                                {
+                                    "col": "Copies & Extracts Archives"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "No URL Support"
+                                },
+                                {
+                                    "col": "Supports URLs"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Recommended"
+                                },
+                                {
+                                    "col": "Use Only When Needed"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Use COPY by default and reserve ADD for archive extraction or URL downloads."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,3892 @@
+{
+    "typescript-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q1 : What is TypeScript?",
+                    "a": "TypeScript is an open-source programming language developed by Microsoft that extends JavaScript by adding static typing and modern programming features. It helps developers catch errors during development instead of runtime, resulting in more reliable and maintainable applications. Since TypeScript is a superset of JavaScript, every valid JavaScript program is also valid TypeScript. Before execution, TypeScript code is compiled into JavaScript using the TypeScript Compiler (tsc).",
+                    "type": "text",
+                    "id": 1
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Key Features",
+                    "list": {
+                        "1": "Developed by Microsoft",
+                        "2": "Superset of JavaScript",
+                        "3": "Static Typing",
+                        "4": "Compile-time Error Checking",
+                        "5": "Object-Oriented Features",
+                        "6": "Compiles into JavaScript"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Declaring variables with explicit types.",
+                    "code": "\nlet language: string = \"TypeScript\";\nlet version: number = 5;\n\nconsole.log(language);\nconsole.log(version);"
+                },
+                {
+                    "type": "note",
+                    "note": "TypeScript cannot run directly in browsers or Node.js. It must first be compiled into JavaScript using the TypeScript compiler (tsc)."
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q2 : Why do we use TypeScript?",
+                    "a": "TypeScript is used to build scalable and maintainable applications by adding static typing to JavaScript. It helps developers identify errors during compilation, improves code readability, and provides better IDE support through features like IntelliSense and auto-completion. TypeScript also simplifies refactoring and makes collaboration easier in large projects. Since it compiles to JavaScript, it can be integrated into existing JavaScript applications without major code changes.",
+                    "type": "text",
+                    "id": 2
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Compile-time error detection",
+                        "2": "Better code quality",
+                        "3": "Excellent IDE support",
+                        "4": "Easy code refactoring",
+                        "5": "Suitable for large projects",
+                        "6": "JavaScript compatibility"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "TypeScript detects invalid assignments during compilation.",
+                    "code": "\nlet age: number = 25;\n// age = \"Twenty Five\"; // Compilation Error\n\nage = 30;\nconsole.log(age);"
+                },
+                {
+                    "type": "note",
+                    "note": "TypeScript helps reduce runtime errors by checking types during compilation."
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q3 : What are the features of TypeScript?",
+                    "a": "TypeScript provides powerful features that make JavaScript development easier and safer. It supports static typing, type inference, interfaces, classes, generics, modules, decorators, and modern ECMAScript features. It also offers compile-time error checking and excellent IDE support through IntelliSense, auto-completion, and refactoring tools. These features improve code quality, maintainability, and scalability, making TypeScript a popular choice for enterprise and large-scale applications.",
+                    "type": "text",
+                    "id": 3
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Major Features",
+                    "list": {
+                        "1": "Static Typing",
+                        "2": "Type Inference",
+                        "3": "Interfaces",
+                        "4": "Classes",
+                        "5": "Generics",
+                        "6": "Modules",
+                        "7": "Decorators",
+                        "8": "Compile-time Error Checking",
+                        "9": "Excellent IDE Support",
+                        "10": "ES6+ Feature Support"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "TypeScript supports classes and interfaces.",
+                    "code": "\ninterface Person {\n    name: string;\n}\n\nclass Employee implements Person {\n    constructor(public name: string) {}\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "Most modern frameworks like Angular and NestJS are built using TypeScript because of its advanced features."
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q4 : What is the difference between JavaScript and TypeScript?",
+                    "a": "JavaScript is a dynamically typed scripting language that executes directly in browsers and Node.js. TypeScript is a statically typed superset of JavaScript that requires compilation before execution. TypeScript provides additional features like interfaces, generics, enums, and compile-time type checking, making applications easier to maintain. JavaScript is suitable for small projects, while TypeScript is preferred for medium and large applications due to its better scalability.",
+                    "type": "text",
+                    "id": 4
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "JavaScript"
+                        },
+                        {
+                            "label": "TypeScript"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Dynamically Typed"
+                                },
+                                {
+                                    "col": "Statically Typed"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Runs directly"
+                                },
+                                {
+                                    "col": "Compiled to JavaScript"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "No compile-time checking"
+                                },
+                                {
+                                    "col": "Compile-time error checking"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Less suitable for large projects"
+                                },
+                                {
+                                    "col": "Ideal for enterprise projects"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Limited IDE support"
+                                },
+                                {
+                                    "col": "Excellent IntelliSense support"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Every valid JavaScript program is also a valid TypeScript program."
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q5 : What are the advantages of TypeScript?",
+                    "a": "TypeScript offers several advantages over JavaScript, especially for large applications. It catches errors during compilation through static typing, improves code readability, simplifies refactoring, and provides excellent IDE support. Features like interfaces, generics, and type inference make code more maintainable. Since TypeScript compiles into JavaScript, it works with existing JavaScript libraries and frameworks without affecting runtime performance.",
+                    "type": "text",
+                    "id": 5
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Static Type Checking",
+                        "2": "Better Code Maintainability",
+                        "3": "Excellent IDE Support",
+                        "4": "Easy Refactoring",
+                        "5": "Supports OOP Concepts",
+                        "6": "Scalable for Large Projects",
+                        "7": "JavaScript Compatibility"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "TypeScript improves developer productivity without changing how JavaScript executes."
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q6 : What is a superset of JavaScript?",
+                    "a": "A superset is a language that contains all the features of another language while adding new capabilities. TypeScript is called a superset of JavaScript because every valid JavaScript program is also valid TypeScript. Developers can gradually migrate existing JavaScript projects by simply renaming .js files to .ts and then adding TypeScript features like types, interfaces, and classes whenever needed.",
+                    "type": "text",
+                    "id": 6
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "This JavaScript code is also valid TypeScript.",
+                    "code": "\nfunction greet(name) {\n    return `Hello ${name}`;\n}\n\nconsole.log(greet(\"Isha\"));"
+                },
+                {
+                    "type": "note",
+                    "note": "Every JavaScript file can be renamed to .ts because JavaScript is a subset of TypeScript."
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q7 : How do you install TypeScript?",
+                    "a": "TypeScript is installed using npm, which comes with Node.js. It can be installed globally to use the compiler across all projects or locally within a specific project. After installation, the TypeScript compiler (tsc) is available for compiling TypeScript files into JavaScript. Developers usually verify the installation by checking the compiler version from the command line.",
+                    "type": "text",
+                    "id": 7
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Install and verify TypeScript.",
+                    "code": "\nnpm install -g typescript\n\ntsc --version"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Installation Steps",
+                    "list": {
+                        "1": "Install Node.js",
+                        "2": "Install TypeScript using npm",
+                        "3": "Verify installation",
+                        "4": "Create a .ts file",
+                        "5": "Compile using tsc"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q8 : What is the TypeScript Compiler (tsc)?",
+                    "a": "The TypeScript Compiler, known as tsc, converts TypeScript code into standard JavaScript that browsers and Node.js can execute. During compilation, it performs type checking, validates syntax, reads compiler settings from tsconfig.json, and reports errors before execution. It supports multiple JavaScript target versions, making TypeScript compatible with different environments.",
+                    "type": "text",
+                    "id": 8
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Responsibilities of tsc",
+                    "list": {
+                        "1": "Type Checking",
+                        "2": "Compile TS to JS",
+                        "3": "Read tsconfig.json",
+                        "4": "Report Compilation Errors",
+                        "5": "Generate JavaScript Output"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Compile a TypeScript file.",
+                    "code": "\ntsc app.ts"
+                },
+                {
+                    "type": "note",
+                    "note": "The tsc command can compile a single file or an entire project."
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q9 : What is tsconfig.json in TypeScript?",
+                    "a": "The tsconfig.json file is the configuration file for a TypeScript project. It defines compiler options, source files, output folders, and project settings. Instead of passing compiler options through the command line every time, developers configure them once in this file. It ensures consistency across the project and makes compilation easier, especially in medium and large applications.",
+                    "type": "text",
+                    "id": 9
+                },
+                {
+                    "type": "code",
+                    "lang": "json",
+                    "simple_text": "Basic tsconfig.json file.",
+                    "code": "\n{\n  \"compilerOptions\": {\n    \"target\": \"ES2020\",\n    \"module\": \"CommonJS\",\n    \"strict\": true\n  }\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Compiler Options",
+                    "list": {
+                        "1": "target",
+                        "2": "module",
+                        "3": "strict",
+                        "4": "rootDir",
+                        "5": "outDir",
+                        "6": "sourceMap"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "A TypeScript project usually contains only one tsconfig.json file at its root directory."
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q10 : How does TypeScript compilation work?",
+                    "a": "TypeScript compilation is the process of converting TypeScript code into JavaScript using the TypeScript compiler (tsc). During compilation, the compiler checks types, validates syntax, reports errors, and generates JavaScript output. Browsers cannot execute TypeScript directly, so compilation is required before running an application in a browser or Node.js environment.",
+                    "type": "text",
+                    "id": 10
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Compilation Process",
+                    "list": {
+                        "1": "Write TypeScript (.ts)",
+                        "2": "Run tsc Compiler",
+                        "3": "Check Types",
+                        "4": "Generate JavaScript",
+                        "5": "Execute JavaScript"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "bash",
+                    "simple_text": "Compile a TypeScript file.",
+                    "code": "\ntsc index.ts"
+                },
+                {
+                    "type": "note",
+                    "note": "Compilation removes all TypeScript-specific syntax, leaving only standard JavaScript."
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q11 : What are data types in TypeScript?",
+                    "a": "Data types define the kind of values a variable can store. TypeScript provides primitive types like number, string, boolean, null, undefined, bigint, symbol, and non-primitive types such as arrays, tuples, objects, enums, and interfaces. By specifying data types, TypeScript detects invalid assignments during compilation, making code safer, easier to understand, and less prone to runtime errors.",
+                    "type": "text",
+                    "id": 11
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Primitive Types"
+                        },
+                        {
+                            "label": "Example"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "number"
+                                },
+                                {
+                                    "col": "100"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "string"
+                                },
+                                {
+                                    "col": "\"Hello\""
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "boolean"
+                                },
+                                {
+                                    "col": "true"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "null"
+                                },
+                                {
+                                    "col": "null"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "undefined"
+                                },
+                                {
+                                    "col": "undefined"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "bigint"
+                                },
+                                {
+                                    "col": "100n"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "symbol"
+                                },
+                                {
+                                    "col": "Symbol()"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Using proper data types improves code readability, maintainability, and compile-time safety."
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q12 : What is the number type in TypeScript?",
+                    "a": "The number type represents both integer and floating-point values in TypeScript. Unlike some programming languages, TypeScript uses a single number type for all numeric values. It supports decimal, hexadecimal, binary, and octal literals. The compiler ensures only numeric values can be assigned to variables declared with the number type, preventing invalid assignments during compilation.",
+                    "type": "text",
+                    "id": 12
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Declaring number variables.",
+                    "code": "\nlet age: number = 23;\nlet price: number = 199.99;\nlet binary: number = 0b1010;\n\nconsole.log(age, price, binary);"
+                },
+                {
+                    "type": "note",
+                    "note": "TypeScript does not have separate integer and float types. Both are represented by the number type."
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q13 : What is the string type in TypeScript?",
+                    "a": "The string type is used to store textual data in TypeScript. Strings can be enclosed in single quotes, double quotes, or backticks. Backticks create template literals, allowing variables and expressions to be embedded directly inside strings. TypeScript ensures that only string values are assigned to variables declared with the string type, preventing invalid assignments during compilation.",
+                    "type": "text",
+                    "id": 13
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Ways to Create Strings",
+                    "list": {
+                        "1": "Single Quotes (' ')",
+                        "2": "Double Quotes (\" \")",
+                        "3": "Template Literals (` `)"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using string variables and template literals.",
+                    "code": "\nlet firstName: string = \"Isha\";\nlet role: string = \"QA Engineer\";\n\nconsole.log(`Name: ${firstName}, Role: ${role}`);"
+                },
+                {
+                    "type": "note",
+                    "note": "Template literals support string interpolation using ${expression}."
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q14 : What is the boolean type in TypeScript?",
+                    "a": "The boolean type represents logical values and has only two possible values: true and false. It is commonly used in conditional statements, loops, authentication checks, feature flags, and comparisons. TypeScript ensures that only boolean values are assigned to boolean variables, reducing programming mistakes and improving type safety during compilation.",
+                    "type": "text",
+                    "id": 14
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Uses",
+                    "list": {
+                        "1": "Conditional Statements",
+                        "2": "Authentication",
+                        "3": "Loop Conditions",
+                        "4": "Feature Toggles",
+                        "5": "Validation"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using boolean variables.",
+                    "code": "\nlet isLoggedIn: boolean = true;\n\nif (isLoggedIn) {\n    console.log(\"Welcome User\");\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "Boolean variables can store only true or false values."
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q15 : What is the any type in TypeScript?",
+                    "a": "The any type allows a variable to store values of any data type without type checking. It is useful when working with dynamic data, third-party libraries, or while migrating JavaScript projects to TypeScript. However, using any frequently removes TypeScript's type safety and should be avoided whenever a more specific type can be used.",
+                    "type": "text",
+                    "id": 15
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "A variable of type any can store different types.",
+                    "code": "\nlet value: any = 10;\nvalue = \"Hello\";\nvalue = true;\n\nconsole.log(value);"
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "any"
+                        },
+                        {
+                            "label": "Typed Variable"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Accepts any value"
+                                },
+                                {
+                                    "col": "Accepts only specified type"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "No type checking"
+                                },
+                                {
+                                    "col": "Compile-time checking"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Less safe"
+                                },
+                                {
+                                    "col": "More reliable"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Avoid using 'any' unless absolutely necessary because it disables TypeScript's type checking."
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q16 : What is the unknown type in TypeScript?",
+                    "a": "The unknown type is a safer alternative to the any type. It can store values of any type, but TypeScript does not allow operations on the value until its type is verified. Developers must use type guards, assertions, or conditional checks before accessing its properties or methods, making applications more secure and type-safe.",
+                    "type": "text",
+                    "id": 16
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Type checking before using an unknown value.",
+                    "code": "\nlet data: unknown = \"TypeScript\";\n\nif (typeof data === \"string\") {\n    console.log(data.toUpperCase());\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Why use unknown?",
+                    "list": {
+                        "1": "Safer than any",
+                        "2": "Requires type checking",
+                        "3": "Improves type safety",
+                        "4": "Reduces runtime errors"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Unlike 'any', an 'unknown' value must be narrowed before it can be used."
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q17 : What is the difference between any and unknown in TypeScript?",
+                    "a": "Both any and unknown can store values of any type, but they differ in type safety. The any type allows all operations without type checking, whereas unknown requires the developer to verify the value's type before using it. Because of this restriction, unknown is safer and is recommended whenever the actual type is not known during compilation.",
+                    "type": "text",
+                    "id": 17
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "any"
+                        },
+                        {
+                            "label": "unknown"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "No type checking"
+                                },
+                                {
+                                    "col": "Requires type checking"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Less safe"
+                                },
+                                {
+                                    "col": "Safer"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Direct operations allowed"
+                                },
+                                {
+                                    "col": "Operations allowed after narrowing"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Not recommended"
+                                },
+                                {
+                                    "col": "Recommended"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using unknown safely.",
+                    "code": "\nlet value: unknown = \"Hello\";\n\nif (typeof value === \"string\") {\n    console.log(value.toUpperCase());\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "Use unknown whenever the value type is uncertain because it provides better type safety than any."
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q18 : What is the void type in TypeScript?",
+                    "a": "The void type represents the absence of a return value. It is mainly used as the return type of functions that perform an action but do not return any data. Using void clearly indicates that the function is intended only to execute logic, improving readability and helping developers understand the function's purpose.",
+                    "type": "text",
+                    "id": 18
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Function returning void.",
+                    "code": "\nfunction greet(name: string): void {\n    console.log(`Hello ${name}`);\n}\n\ngreet(\"Isha\");"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Uses",
+                    "list": {
+                        "1": "Logging",
+                        "2": "Printing Output",
+                        "3": "Event Handlers",
+                        "4": "Utility Functions"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "A function with a void return type should not return a meaningful value."
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q19 : What is the never type in TypeScript?",
+                    "a": "The never type represents values that never occur. It is used for functions that never complete normally, such as functions that always throw an exception or run in an infinite loop. Unlike void, which indicates no useful return value, never indicates that execution never reaches the end of the function.",
+                    "type": "text",
+                    "id": 19
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Function returning never.",
+                    "code": "\nfunction throwError(message: string): never {\n    throw new Error(message);\n}"
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "void"
+                        },
+                        {
+                            "label": "never"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Function completes"
+                                },
+                                {
+                                    "col": "Function never completes"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Returns nothing"
+                                },
+                                {
+                                    "col": "Never returns"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Functions that always throw errors or run forever usually return the never type."
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q20 : What are null and undefined in TypeScript?",
+                    "a": "The null and undefined types represent the absence of a value. Undefined means a variable has been declared but not assigned a value, whereas null is an intentional assignment indicating no value. When strict null checking is enabled, TypeScript treats them as separate types, helping developers avoid unexpected runtime errors caused by missing values.",
+                    "type": "text",
+                    "id": 20
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "null"
+                        },
+                        {
+                            "label": "undefined"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Intentional absence of value"
+                                },
+                                {
+                                    "col": "Variable not initialized"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Assigned by developer"
+                                },
+                                {
+                                    "col": "Assigned automatically"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using null and undefined.",
+                    "code": "\nlet city: string | null = null;\nlet country: string | undefined = undefined;\n\nconsole.log(city);\nconsole.log(country);"
+                },
+                {
+                    "type": "note",
+                    "note": "With strictNullChecks enabled, null and undefined must be handled explicitly."
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q21 : What are variables in TypeScript?",
+                    "a": "Variables are named containers used to store data in memory. In TypeScript, variables can be declared using var, let, or const and can also have explicit type annotations. TypeScript checks that only compatible values are assigned to variables, reducing programming errors. Choosing the appropriate declaration keyword and type improves code readability, maintainability, and overall application reliability.",
+                    "type": "text",
+                    "id": 21
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Variable Declaration Keywords",
+                    "list": {
+                        "1": "var",
+                        "2": "let",
+                        "3": "const"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Declaring variables.",
+                    "code": "\nlet name: string = \"Isha\";\nconst age: number = 23;\nvar city: string = \"Delhi\";\n\nconsole.log(name, age, city);"
+                },
+                {
+                    "type": "note",
+                    "note": "Modern TypeScript projects mainly use let and const instead of var."
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q22 : What is the difference between var, let, and const?",
+                    "a": "TypeScript supports var, let, and const for variable declaration. The var keyword is function-scoped and can be redeclared, making it less predictable. The let keyword is block-scoped and allows value reassignment. The const keyword is also block-scoped but does not allow reassignment after initialization. Developers generally prefer let and const because they produce more predictable and maintainable code.",
+                    "type": "text",
+                    "id": 22
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "var"
+                        },
+                        {
+                            "label": "let"
+                        },
+                        {
+                            "label": "const"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Function Scope"
+                                },
+                                {
+                                    "col": "Block Scope"
+                                },
+                                {
+                                    "col": "Block Scope"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Can Redeclare"
+                                },
+                                {
+                                    "col": "Cannot Redeclare"
+                                },
+                                {
+                                    "col": "Cannot Redeclare"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Can Reassign"
+                                },
+                                {
+                                    "col": "Can Reassign"
+                                },
+                                {
+                                    "col": "Cannot Reassign"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Examples of var, let and const.",
+                    "code": "\nvar x = 10;\nlet y = 20;\nconst z = 30;\n\ny = 25;\n// z = 35; // Error"
+                },
+                {
+                    "type": "note",
+                    "note": "Prefer const by default and use let only when the value needs to change."
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q23 : What is Type Inference in TypeScript?",
+                    "a": "Type inference is a feature where TypeScript automatically determines the data type of a variable based on the assigned value. This reduces the need for explicit type annotations while maintaining type safety. The compiler analyzes the initial value and infers the appropriate type, making the code shorter, cleaner, and easier to read without sacrificing compile-time checking.",
+                    "type": "text",
+                    "id": 23
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "TypeScript automatically infers the variable type.",
+                    "code": "\nlet username = \"Isha\";\nlet salary = 50000;\nlet isActive = true;\n\nconsole.log(username, salary, isActive);"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits of Type Inference",
+                    "list": {
+                        "1": "Less code",
+                        "2": "Automatic type detection",
+                        "3": "Better readability",
+                        "4": "Compile-time safety"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q24 : What are explicit and implicit typing in TypeScript?",
+                    "a": "Explicit typing means the developer manually specifies a variable's data type using a type annotation. Implicit typing, also called type inference, allows TypeScript to automatically determine the type from the assigned value. Both approaches provide type safety, but explicit typing offers greater clarity while implicit typing reduces code verbosity and improves readability.",
+                    "type": "text",
+                    "id": 24
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Explicit Typing"
+                        },
+                        {
+                            "label": "Implicit Typing"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Type written manually"
+                                },
+                                {
+                                    "col": "Type inferred automatically"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "More verbose"
+                                },
+                                {
+                                    "col": "Less code"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Better clarity"
+                                },
+                                {
+                                    "col": "Cleaner syntax"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Explicit vs implicit typing.",
+                    "code": "\nlet firstName: string = \"Isha\";\nlet company = \"OpenAI\";"
+                },
+                {
+                    "type": "note",
+                    "note": "Use explicit typing when the variable's purpose is not immediately obvious."
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q25 : What is Type Assertion in TypeScript?",
+                    "a": "Type assertion is a way to tell the TypeScript compiler to treat a value as a specific type when the developer knows more about the value than the compiler. It does not perform type conversion or runtime checking; it only affects compile-time type checking. Type assertions are commonly used with DOM elements, APIs, and third-party libraries.",
+                    "type": "text",
+                    "id": 25
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Ways to Perform Type Assertion",
+                    "list": {
+                        "1": "Using the 'as' keyword",
+                        "2": "Using angle bracket syntax (<>)"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using the 'as' keyword.",
+                    "code": "\nlet value: unknown = \"TypeScript\";\nlet length = (value as string).length;\n\nconsole.log(length);"
+                },
+                {
+                    "type": "note",
+                    "note": "Type assertion only informs the compiler about the type. It does not change the actual value."
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q26 : What are Union Types in TypeScript?",
+                    "a": "Union types allow a variable, parameter, or return value to hold more than one data type. They are created using the pipe (|) operator. Union types improve flexibility while maintaining type safety, making them useful when a value can legitimately belong to multiple types, such as string or number.",
+                    "type": "text",
+                    "id": 26
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using a union type.",
+                    "code": "\nlet id: number | string;\n\nid = 101;\nid = \"EMP101\";\n\nconsole.log(id);"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Accepts multiple data types",
+                        "2": "Provides flexibility",
+                        "3": "Maintains type safety",
+                        "4": "Useful for APIs"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Type guards are often used with union types to determine the actual type before performing operations."
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q27 : What are Literal Types in TypeScript?",
+                    "a": "Literal types allow variables to store only specific predefined values instead of any value belonging to a data type. They improve type safety by restricting assignments to fixed strings, numbers, or booleans. Literal types are commonly used with union types to define allowed options such as user roles, themes, or application states.",
+                    "type": "text",
+                    "id": 27
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Declaring literal types.",
+                    "code": "\nlet status: \"success\" | \"error\" | \"loading\";\n\nstatus = \"success\";\n// status = \"completed\"; // Error"
+                },
+                {
+                    "type": "note",
+                    "note": "Literal types help prevent invalid values by allowing only predefined constants."
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q28 : What are Arrays in TypeScript?",
+                    "a": "An array is a collection of multiple values stored in a single variable. All elements usually belong to the same data type. TypeScript supports type-safe arrays, ensuring that only values of the declared type can be added. Arrays are widely used to store lists of users, products, numbers, or other collections of related data.",
+                    "type": "text",
+                    "id": 28
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Ways to Declare Arrays",
+                    "list": {
+                        "1": "number[]",
+                        "2": "Array<number>"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Declaring arrays.",
+                    "code": "\nlet numbers: number[] = [10, 20, 30];\nlet names: Array<string> = [\"Isha\", \"Rahul\"];\n\nconsole.log(numbers);\nconsole.log(names);"
+                },
+                {
+                    "type": "note",
+                    "note": "Arrays can dynamically grow or shrink during program execution."
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q29 : What are Tuples in TypeScript?",
+                    "a": "A tuple is a special type of array that stores a fixed number of elements where each position has a predefined data type. Unlike arrays, tuples can contain values of different types while maintaining a fixed structure. They are useful for representing related values such as an employee's ID and name or coordinates in a graph.",
+                    "type": "text",
+                    "id": 29
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Declaring a tuple.",
+                    "code": "\nlet employee: [number, string] = [101, \"Isha\"];\n\nconsole.log(employee);"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Characteristics",
+                    "list": {
+                        "1": "Fixed length",
+                        "2": "Different data types",
+                        "3": "Ordered elements",
+                        "4": "Position-based types"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Each element in a tuple has its own predefined type and position."
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q30 : What is the difference between an Array and a Tuple in TypeScript?",
+                    "a": "Arrays and tuples are both ordered collections, but they differ in flexibility and structure. Arrays usually contain elements of the same type and can grow dynamically. Tuples have a fixed length and define the exact type of each element. Arrays are ideal for collections of similar data, whereas tuples are suitable for structured records with different data types.",
+                    "type": "text",
+                    "id": 30
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Array"
+                        },
+                        {
+                            "label": "Tuple"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Usually same data type"
+                                },
+                                {
+                                    "col": "Different data types allowed"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Dynamic size"
+                                },
+                                {
+                                    "col": "Fixed size"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Flexible"
+                                },
+                                {
+                                    "col": "Fixed structure"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Best for collections"
+                                },
+                                {
+                                    "col": "Best for records"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Choose tuples when the order and type of each element are predefined."
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q31 : What are Readonly Arrays in TypeScript?",
+                    "a": "A readonly array is an array whose elements cannot be modified after initialization. TypeScript prevents operations such as push, pop, splice, or direct assignment on readonly arrays. They are useful when data should only be read and not changed, helping developers avoid accidental modifications and making applications more predictable and secure.",
+                    "type": "text",
+                    "id": 31
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Declaring a readonly array.",
+                    "code": "\nconst numbers: readonly number[] = [10, 20, 30];\n\n// numbers.push(40); // Error\nconsole.log(numbers);"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Prevents modification",
+                        "2": "Safer code",
+                        "3": "Protects shared data",
+                        "4": "Improves maintainability"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Readonly arrays allow reading elements but prevent adding, removing, or updating them."
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q32 : What is a Function in TypeScript?",
+                    "a": "A function is a reusable block of code designed to perform a specific task. TypeScript functions can have typed parameters and return values, making the code safer and easier to understand. Functions improve code reusability, reduce duplication, and make applications easier to maintain. They are one of the fundamental building blocks of every TypeScript application.",
+                    "type": "text",
+                    "id": 32
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Declaring a function.",
+                    "code": "\nfunction greet(name: string): string {\n    return `Hello ${name}`;\n}\n\nconsole.log(greet(\"Isha\"));"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Function Components",
+                    "list": {
+                        "1": "Function Name",
+                        "2": "Parameters",
+                        "3": "Return Type",
+                        "4": "Function Body"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q37 : What are Default Parameters in TypeScript?",
+                    "a": "Default parameters allow developers to assign predefined values to function parameters. If the caller does not pass a value, the default value is automatically used. This feature reduces the need for conditional checks inside functions and makes the code cleaner, more readable, and easier to maintain while still allowing custom values when required.",
+                    "type": "text",
+                    "id": 37
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using default parameters.",
+                    "code": "\nfunction welcome(name: string = \"Guest\") {\n    console.log(`Welcome ${name}`);\n}\n\nwelcome();\nwelcome(\"Isha\");"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Reduces conditional logic",
+                        "2": "Provides fallback values",
+                        "3": "Improves readability",
+                        "4": "Makes functions flexible"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Default values are used only when no argument or undefined is passed."
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q38 : What are Rest Parameters in TypeScript?",
+                    "a": "Rest parameters allow a function to accept any number of arguments of the same type. They are declared using three dots (...) before the parameter name. TypeScript stores all additional arguments inside an array, making it useful for calculations, utility functions, and scenarios where the number of arguments is unknown.",
+                    "type": "text",
+                    "id": 38
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using rest parameters.",
+                    "code": "\nfunction sum(...numbers: number[]): number {\n    return numbers.reduce((total, num) => total + num, 0);\n}\n\nconsole.log(sum(10, 20, 30));"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Accepts unlimited arguments",
+                        "2": "Stores values in an array",
+                        "3": "Reduces overloaded functions",
+                        "4": "Easy iteration"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "A function can have only one rest parameter, and it must be the last parameter."
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q39 : What are Function Overloads in TypeScript?",
+                    "a": "Function overloading allows multiple function signatures with different parameter types or counts while sharing a single implementation. TypeScript determines which overload to use based on the function call. This improves flexibility and readability by allowing one function to handle different input combinations while maintaining strong type checking.",
+                    "type": "text",
+                    "id": 39
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Function overloading example.",
+                    "code": "\nfunction display(value: string): void;\nfunction display(value: number): void;\nfunction display(value: string | number): void {\n    console.log(value);\n}\n\ndisplay(\"Hello\");\ndisplay(100);"
+                },
+                {
+                    "type": "note",
+                    "note": "Only one implementation exists, but multiple function signatures can be declared."
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q40 : What is a Return Type in TypeScript?",
+                    "a": "A return type specifies the type of value a function returns after execution. Declaring return types improves code readability and enables TypeScript to verify that the function always returns the expected data type. Although TypeScript can infer return types automatically, explicitly specifying them is considered a best practice for larger applications.",
+                    "type": "text",
+                    "id": 40
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Declaring a return type.",
+                    "code": "\nfunction square(num: number): number {\n    return num * num;\n}\n\nconsole.log(square(5));"
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Return Type"
+                        },
+                        {
+                            "label": "Example"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "number"
+                                },
+                                {
+                                    "col": "Calculation"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "string"
+                                },
+                                {
+                                    "col": "Message"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "boolean"
+                                },
+                                {
+                                    "col": "Validation Result"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "void"
+                                },
+                                {
+                                    "col": "No Return Value"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Explicit return types make functions easier to understand and prevent accidental return type changes."
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q41 : What is an Object in TypeScript?",
+                    "a": "An object is a collection of related properties and methods stored as key-value pairs. In TypeScript, objects can have explicitly defined property types, ensuring that only valid data is assigned. Objects are widely used to represent real-world entities such as employees, customers, or products. Strong typing improves code readability, maintainability, and compile-time error detection.",
+                    "type": "text",
+                    "id": 41
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Declaring an object.",
+                    "code": "\nconst employee: { id: number; name: string } = {\n    id: 101,\n    name: \"Isha\"\n};\n\nconsole.log(employee);"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Object Characteristics",
+                    "list": {
+                        "1": "Stores key-value pairs",
+                        "2": "Can contain methods",
+                        "3": "Supports nested objects",
+                        "4": "Can have explicit types"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Objects are reference types and are commonly used to model real-world data."
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q42 : What is an Interface in TypeScript?",
+                    "a": "An interface defines the structure or contract that an object or class must follow. It specifies property names, types, and method signatures without providing implementation. Interfaces improve code consistency, reusability, and maintainability by ensuring that different objects follow the same structure. They are widely used in enterprise applications and frontend frameworks.",
+                    "type": "text",
+                    "id": 42
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Creating an interface.",
+                    "code": "\ninterface Employee {\n    id: number;\n    name: string;\n}\n\nconst emp: Employee = {\n    id: 101,\n    name: \"Isha\"\n};"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Defines object structure",
+                        "2": "Improves readability",
+                        "3": "Supports code reuse",
+                        "4": "Provides type safety"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Interfaces describe the shape of data but do not generate JavaScript during compilation."
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q43 : What are Optional Properties in Interfaces?",
+                    "a": "Optional properties allow certain interface properties to be omitted while creating an object. They are declared using a question mark (?) after the property name. This feature provides flexibility by allowing developers to create objects with only the required properties while still maintaining type safety during compilation.",
+                    "type": "text",
+                    "id": 43
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using optional properties.",
+                    "code": "\ninterface User {\n    name: string;\n    age?: number;\n}\n\nconst user: User = {\n    name: \"Isha\"\n};"
+                },
+                {
+                    "type": "note",
+                    "note": "Optional properties are useful when some information may not always be available."
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q44 : What are Readonly Properties in Interfaces?",
+                    "a": "Readonly properties prevent object properties from being modified after initialization. They are declared using the readonly keyword inside an interface. Once assigned, these properties cannot be changed, helping protect important data from accidental updates and making objects more predictable throughout the application lifecycle.",
+                    "type": "text",
+                    "id": 44
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using readonly properties.",
+                    "code": "\ninterface Employee {\n    readonly id: number;\n    name: string;\n}\n\nconst emp: Employee = {\n    id: 101,\n    name: \"Isha\"\n};\n\n// emp.id = 102; // Error"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Prevents accidental modification",
+                        "2": "Improves data integrity",
+                        "3": "Makes objects immutable",
+                        "4": "Enhances maintainability"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Readonly only prevents reassignment of the property, not modification of nested object values."
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q45 : What is Interface Extension in TypeScript?",
+                    "a": "Interface extension allows one interface to inherit the properties and methods of another interface using the extends keyword. It promotes code reuse, avoids duplication, and makes interfaces easier to maintain. A child interface automatically includes all members of the parent interface and can also define additional properties or methods.",
+                    "type": "text",
+                    "id": 45
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Extending an interface.",
+                    "code": "\ninterface Person {\n    name: string;\n}\n\ninterface Employee extends Person {\n    id: number;\n}\n\nconst emp: Employee = {\n    id: 101,\n    name: \"Isha\"\n};"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Code Reusability",
+                        "2": "Less Duplication",
+                        "3": "Easy Maintenance",
+                        "4": "Better Organization"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "An interface can extend one or more interfaces."
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q46 : Can an Interface extend multiple Interfaces?",
+                    "a": "Yes. TypeScript allows an interface to extend multiple interfaces by separating them with commas. The new interface inherits all properties and methods from every parent interface. This feature supports multiple inheritance for interfaces and helps developers combine different contracts into a single reusable interface.",
+                    "type": "text",
+                    "id": 46
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Interface extending multiple interfaces.",
+                    "code": "\ninterface Person {\n    name: string;\n}\n\ninterface Contact {\n    phone: string;\n}\n\ninterface Employee extends Person, Contact {\n    id: number;\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "Only interfaces support multiple inheritance directly."
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q47 : What is a Type Alias in TypeScript?",
+                    "a": "A type alias creates a custom name for an existing type using the type keyword. It can represent primitive types, objects, union types, intersection types, tuples, and function types. Type aliases improve readability, simplify complex type definitions, and encourage reusable type declarations throughout an application.",
+                    "type": "text",
+                    "id": 47
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Creating a type alias.",
+                    "code": "\ntype Employee = {\n    id: number;\n    name: string;\n};\n\nconst emp: Employee = {\n    id: 101,\n    name: \"Isha\"\n};"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Type Alias Can Represent",
+                    "list": {
+                        "1": "Primitive Types",
+                        "2": "Objects",
+                        "3": "Union Types",
+                        "4": "Tuples",
+                        "5": "Functions"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q48 : What is the difference between Interface and Type Alias?",
+                    "a": "Both interfaces and type aliases define custom types, but interfaces are mainly used for object structures and support extension and declaration merging. Type aliases are more flexible because they can represent unions, intersections, tuples, primitives, and function types. Interfaces are preferred for object-oriented design, while type aliases are suitable for creating complex type combinations.",
+                    "type": "text",
+                    "id": 48
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Interface"
+                        },
+                        {
+                            "label": "Type Alias"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Uses interface keyword"
+                                },
+                                {
+                                    "col": "Uses type keyword"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Supports declaration merging"
+                                },
+                                {
+                                    "col": "No declaration merging"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Best for objects"
+                                },
+                                {
+                                    "col": "Supports any type"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Can extend interfaces"
+                                },
+                                {
+                                    "col": "Uses intersections (&)"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Both interfaces and type aliases provide strong typing, but each has different use cases."
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q49 : What are Classes in TypeScript?",
+                    "a": "A class is a blueprint for creating objects in TypeScript. It defines properties, methods, and constructors that describe an object's behavior and data. Classes support object-oriented programming concepts such as encapsulation, inheritance, and polymorphism. They help organize code into reusable and maintainable components, making them suitable for building large and scalable applications.",
+                    "type": "text",
+                    "id": 49
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Components of a Class",
+                    "list": {
+                        "1": "Properties",
+                        "2": "Constructor",
+                        "3": "Methods",
+                        "4": "Objects"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Creating a simple class.",
+                    "code": "\nclass Employee {\n    name: string = \"Isha\";\n\n    greet() {\n        console.log(`Hello ${this.name}`);\n    }\n}\n\nconst emp = new Employee();\nemp.greet();"
+                },
+                {
+                    "type": "note",
+                    "note": "Classes are one of the core features used to implement object-oriented programming in TypeScript."
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q50 : What is a Constructor in TypeScript?",
+                    "a": "A constructor is a special method that is automatically executed when an object of a class is created. It initializes object properties and prepares the object for use. A class can have only one constructor. Constructors improve code organization by allowing required values to be assigned during object creation.",
+                    "type": "text",
+                    "id": 50
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using a constructor.",
+                    "code": "\nclass Student {\n    constructor(public name: string, public age: number) {}\n}\n\nconst student = new Student(\"Isha\", 23);\nconsole.log(student);"
+                },
+                {
+                    "type": "note",
+                    "note": "The constructor runs automatically whenever a new object is created using the new keyword."
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q51 : What are Access Modifiers in TypeScript?",
+                    "a": "Access modifiers control the visibility and accessibility of class members. TypeScript provides three access modifiers: public, private, and protected. They help implement encapsulation by controlling which properties and methods can be accessed inside or outside a class. Using access modifiers improves security, maintainability, and code organization.",
+                    "type": "text",
+                    "id": 51
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Modifier"
+                        },
+                        {
+                            "label": "Accessibility"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "public"
+                                },
+                                {
+                                    "col": "Accessible everywhere"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "private"
+                                },
+                                {
+                                    "col": "Accessible only inside the class"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "protected"
+                                },
+                                {
+                                    "col": "Accessible inside the class and subclasses"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "If no access modifier is specified, members are public by default."
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q52 : What is the public access modifier in TypeScript?",
+                    "a": "The public access modifier makes class members accessible from anywhere in the application. It is the default access level in TypeScript, so specifying it explicitly is optional. Public members can be accessed both inside and outside the class through object instances, making them suitable for properties and methods that should be publicly available.",
+                    "type": "text",
+                    "id": 52
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using the public modifier.",
+                    "code": "\nclass Employee {\n    public name: string = \"Isha\";\n}\n\nconst emp = new Employee();\nconsole.log(emp.name);"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Characteristics",
+                    "list": {
+                        "1": "Default modifier",
+                        "2": "Accessible everywhere",
+                        "3": "No access restrictions"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Writing the public keyword is optional because all class members are public by default."
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q53 : What is the private access modifier in TypeScript?",
+                    "a": "The private access modifier restricts access to class members so they can only be accessed within the class where they are declared. Private properties and methods cannot be accessed from outside the class or by child classes. It helps implement encapsulation by hiding internal implementation details and protecting sensitive data from accidental modification.",
+                    "type": "text",
+                    "id": 53
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Characteristics",
+                    "list": {
+                        "1": "Accessible only inside the class",
+                        "2": "Supports encapsulation",
+                        "3": "Cannot be accessed by child classes",
+                        "4": "Protects sensitive data"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using the private access modifier.",
+                    "code": "\nclass Employee {\n    private salary: number = 50000;\n\n    showSalary(): void {\n        console.log(this.salary);\n    }\n}\n\nconst emp = new Employee();\nemp.showSalary();\n// console.log(emp.salary); // Error"
+                },
+                {
+                    "type": "note",
+                    "note": "Private members are accessible only within the class where they are declared."
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q54 : What is the protected access modifier in TypeScript?",
+                    "a": "The protected access modifier allows class members to be accessed inside the class and by its child classes. However, they cannot be accessed directly through an object outside the class hierarchy. It is useful when inherited classes need to reuse parent members while keeping them hidden from external code, improving encapsulation and inheritance.",
+                    "type": "text",
+                    "id": 54
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "private"
+                        },
+                        {
+                            "label": "protected"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Accessible only inside class"
+                                },
+                                {
+                                    "col": "Accessible inside class and subclasses"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Not inherited"
+                                },
+                                {
+                                    "col": "Inherited by child classes"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using the protected access modifier.",
+                    "code": "\nclass Person {\n    protected name: string = \"Isha\";\n}\n\nclass Employee extends Person {\n    display(): void {\n        console.log(this.name);\n    }\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "Protected members cannot be accessed directly through an object instance."
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q55 : What is Encapsulation in TypeScript?",
+                    "a": "Encapsulation is an object-oriented programming principle that combines data and methods into a single unit while restricting direct access to internal data. It is achieved using access modifiers like private and protected. Encapsulation protects sensitive information, hides implementation details, and ensures data is accessed through controlled methods, making applications more secure and maintainable.",
+                    "type": "text",
+                    "id": 55
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Data Hiding",
+                        "2": "Improved Security",
+                        "3": "Better Maintainability",
+                        "4": "Controlled Data Access"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Example of encapsulation.",
+                    "code": "\nclass BankAccount {\n    private balance: number = 1000;\n\n    getBalance(): number {\n        return this.balance;\n    }\n}\n\nconst account = new BankAccount();\nconsole.log(account.getBalance());"
+                },
+                {
+                    "type": "note",
+                    "note": "Encapsulation is implemented mainly using private and protected members."
+                }
+            ]
+        },
+        {
+            "id": "56",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q56 : What is Inheritance in TypeScript?",
+                    "a": "Inheritance is an object-oriented programming feature that allows one class to acquire the properties and methods of another class using the extends keyword. The existing class is called the parent class, while the new class is called the child class. Inheritance promotes code reuse, reduces duplication, and establishes relationships between classes.",
+                    "type": "text",
+                    "id": 56
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Code Reusability",
+                        "2": "Reduced Code Duplication",
+                        "3": "Easy Maintenance",
+                        "4": "Supports Polymorphism"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Inheritance using the extends keyword.",
+                    "code": "\nclass Animal {\n    eat(): void {\n        console.log(\"Eating...\");\n    }\n}\n\nclass Dog extends Animal {}\n\nconst dog = new Dog();\ndog.eat();"
+                },
+                {
+                    "type": "note",
+                    "note": "TypeScript supports single inheritance for classes, but interfaces can extend multiple interfaces."
+                }
+            ]
+        },
+        {
+            "id": "57",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q57 : What is Polymorphism in TypeScript?",
+                    "a": "Polymorphism is an object-oriented programming concept that allows the same method to perform different behaviors based on the object calling it. In TypeScript, it is commonly achieved through method overriding and interfaces. Polymorphism improves flexibility, code reusability, and maintainability by allowing different classes to implement the same method in their own way.",
+                    "type": "text",
+                    "id": 57
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Code Reusability",
+                        "2": "Runtime Flexibility",
+                        "3": "Easy Maintenance",
+                        "4": "Supports Method Overriding"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Example of polymorphism using method overriding.",
+                    "code": "\nclass Animal {\n    sound(): void {\n        console.log(\"Animal Sound\");\n    }\n}\n\nclass Dog extends Animal {\n    sound(): void {\n        console.log(\"Dog Barks\");\n    }\n}\n\nconst dog = new Dog();\ndog.sound();"
+                },
+                {
+                    "type": "note",
+                    "note": "Polymorphism allows the same method name to have different implementations."
+                }
+            ]
+        },
+        {
+            "id": "58",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q58 : What is Method Overriding in TypeScript?",
+                    "a": "Method overriding is the process in which a child class provides its own implementation of a method already defined in the parent class. The overridden method must have the same name and compatible parameters. It enables runtime polymorphism and allows derived classes to customize inherited behavior while maintaining the same method interface.",
+                    "type": "text",
+                    "id": 58
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Method overriding example.",
+                    "code": "\nclass Vehicle {\n    start(): void {\n        console.log(\"Vehicle Started\");\n    }\n}\n\nclass Car extends Vehicle {\n    start(): void {\n        console.log(\"Car Started\");\n    }\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Rules",
+                    "list": {
+                        "1": "Same method name",
+                        "2": "Compatible parameters",
+                        "3": "Same or compatible return type",
+                        "4": "Occurs in child class"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The child class method replaces the parent class implementation."
+                }
+            ]
+        },
+        {
+            "id": "59",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q59 : What is the super keyword in TypeScript?",
+                    "a": "The super keyword refers to the parent class in TypeScript. It is used to call the parent class constructor and access parent class methods or properties from a child class. The super() constructor must be called before using this in a derived class constructor. It promotes code reuse and proper initialization of inherited members.",
+                    "type": "text",
+                    "id": 59
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using the super keyword.",
+                    "code": "\nclass Person {\n    constructor(public name: string) {}\n}\n\nclass Employee extends Person {\n    constructor(name: string) {\n        super(name);\n    }\n}\n\nconst emp = new Employee(\"Isha\");"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Uses of super",
+                    "list": {
+                        "1": "Call parent constructor",
+                        "2": "Access parent methods",
+                        "3": "Reuse parent functionality"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "super() must be the first statement inside a derived class constructor."
+                }
+            ]
+        },
+        {
+            "id": "60",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q60 : What is an Abstract Class in TypeScript?",
+                    "a": "An abstract class is a class that cannot be instantiated directly. It acts as a base class and can contain both implemented methods and abstract methods without implementation. Child classes must implement all abstract methods. Abstract classes provide a common structure for related classes while allowing each subclass to define its own specific behavior.",
+                    "type": "text",
+                    "id": 60
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Abstract Class"
+                        },
+                        {
+                            "label": "Normal Class"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Cannot create objects"
+                                },
+                                {
+                                    "col": "Can create objects"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Can have abstract methods"
+                                },
+                                {
+                                    "col": "Only implemented methods"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Used as a base class"
+                                },
+                                {
+                                    "col": "Can be used directly"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Creating an abstract class.",
+                    "code": "\nabstract class Shape {\n    abstract area(): number;\n}\n\nclass Circle extends Shape {\n    area(): number {\n        return 3.14 * 5 * 5;\n    }\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "Objects cannot be created directly from an abstract class."
+                }
+            ]
+        },
+        {
+            "id": "61",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q61 : What is an Abstract Method in TypeScript?",
+                    "a": "An abstract method is a method declared without an implementation inside an abstract class. It defines only the method signature, and every derived class must provide its own implementation. Abstract methods help enforce a common structure among related classes while allowing each subclass to implement behavior according to its specific requirements.",
+                    "type": "text",
+                    "id": 61
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Abstract method example.",
+                    "code": "\nabstract class Animal {\n    abstract sound(): void;\n}\n\nclass Dog extends Animal {\n    sound(): void {\n        console.log(\"Dog Barks\");\n    }\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Characteristics",
+                    "list": {
+                        "1": "Declared inside abstract class",
+                        "2": "No implementation",
+                        "3": "Must be implemented by child class",
+                        "4": "Supports polymorphism"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "If a child class does not implement all abstract methods, it must also be declared abstract."
+                }
+            ]
+        },
+        {
+            "id": "62",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q62 : What is Method Overloading in TypeScript?",
+                    "a": "Method overloading allows multiple method signatures with different parameter types or counts while sharing a single implementation. TypeScript resolves the appropriate overload during compilation based on the arguments passed. This feature increases flexibility and allows one method to handle multiple input combinations without creating several differently named methods.",
+                    "type": "text",
+                    "id": 62
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Method overloading example.",
+                    "code": "\nclass Calculator {\n    add(a: number, b: number): number;\n    add(a: string, b: string): string;\n    add(a: any, b: any): any {\n        return a + b;\n    }\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Improves flexibility",
+                        "2": "Single implementation",
+                        "3": "Supports different parameter types",
+                        "4": "Better readability"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "TypeScript supports overload signatures with only one implementation."
+                }
+            ]
+        },
+        {
+            "id": "63",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q63 : What are Static Members in TypeScript?",
+                    "a": "Static members belong to the class itself instead of individual objects. They are declared using the static keyword and are accessed using the class name rather than an object. Static properties and methods are commonly used for utility functions, constants, counters, and shared data that should exist only once for the entire class.",
+                    "type": "text",
+                    "id": 63
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using static members.",
+                    "code": "\nclass MathUtil {\n    static PI: number = 3.14;\n\n    static square(num: number): number {\n        return num * num;\n    }\n}\n\nconsole.log(MathUtil.PI);\nconsole.log(MathUtil.square(5));"
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Static Member"
+                        },
+                        {
+                            "label": "Instance Member"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Belongs to class"
+                                },
+                                {
+                                    "col": "Belongs to object"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Accessed using class name"
+                                },
+                                {
+                                    "col": "Accessed using object"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Static members can be accessed without creating an object."
+                }
+            ]
+        },
+        {
+            "id": "64",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q64 : What is the readonly keyword in TypeScript?",
+                    "a": "The readonly keyword makes a property immutable after initialization. Once a readonly property receives a value, it cannot be modified later. Readonly properties improve data integrity and help prevent accidental updates. They can be used in classes, interfaces, and type aliases whenever a value should remain constant after object creation.",
+                    "type": "text",
+                    "id": 64
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using readonly properties.",
+                    "code": "\nclass Employee {\n    readonly id: number;\n\n    constructor(id: number) {\n        this.id = id;\n    }\n}\n\nconst emp = new Employee(101);\n// emp.id = 102; // Error"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Uses",
+                    "list": {
+                        "1": "Immutable properties",
+                        "2": "Prevent accidental updates",
+                        "3": "Improve data integrity",
+                        "4": "Safer object design"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Readonly properties can only be assigned during declaration or inside the constructor."
+                }
+            ]
+        },
+        {
+            "id": "65",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q65 : What are Getters and Setters in TypeScript?",
+                    "a": "Getters and setters are special methods used to read and update private properties in a controlled manner. A getter retrieves the value of a property, while a setter updates it after applying validation or business logic if needed. They improve encapsulation by preventing direct access to internal data and providing controlled interaction with class properties.",
+                    "type": "text",
+                    "id": 65
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using getters and setters.",
+                    "code": "\nclass Employee {\n    private _salary: number = 50000;\n\n    get salary(): number {\n        return this._salary;\n    }\n\n    set salary(value: number) {\n        this._salary = value;\n    }\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Controlled data access",
+                        "2": "Supports validation",
+                        "3": "Improves encapsulation",
+                        "4": "Protects private properties"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Getters are accessed like properties instead of method calls."
+                }
+            ]
+        },
+        {
+            "id": "66",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q66 : What are Enums in TypeScript?",
+                    "a": "Enums are a TypeScript feature used to define a collection of named constant values. They improve code readability by replacing hardcoded numbers or strings with meaningful names. Enums are commonly used for representing statuses, user roles, days of the week, and application states where a variable should contain only predefined values.",
+                    "type": "text",
+                    "id": 66
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Numeric enum example.",
+                    "code": "\nenum Direction {\n    Up,\n    Down,\n    Left,\n    Right\n}\n\nconsole.log(Direction.Up);"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Types of Enums",
+                    "list": {
+                        "1": "Numeric Enum",
+                        "2": "String Enum",
+                        "3": "Heterogeneous Enum",
+                        "4": "Const Enum"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Enums make code more readable by replacing magic numbers and strings."
+                }
+            ]
+        },
+        {
+            "id": "67",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q67 : What is a Numeric Enum in TypeScript?",
+                    "a": "A numeric enum is an enum whose members are assigned numeric values. By default, the first member starts from 0 and the remaining members increase automatically by one. Developers can also assign custom numeric values. Numeric enums are commonly used for representing ordered states and status codes.",
+                    "type": "text",
+                    "id": 67
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Numeric enum example.",
+                    "code": "\nenum Status {\n    Pending,\n    Approved,\n    Rejected\n}\n\nconsole.log(Status.Pending);\nconsole.log(Status.Approved);"
+                },
+                {
+                    "type": "note",
+                    "note": "Numeric enum members automatically increment unless custom values are specified."
+                }
+            ]
+        },
+        {
+            "id": "68",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q68 : What is a String Enum in TypeScript?",
+                    "a": "A string enum is an enum whose members are assigned string values instead of numbers. Unlike numeric enums, each member must be explicitly initialized. String enums are easier to debug because their runtime values are meaningful and readable. They are commonly used for API responses, user roles, and application status values.",
+                    "type": "text",
+                    "id": 68
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "String enum example.",
+                    "code": "\nenum Role {\n    Admin = \"ADMIN\",\n    User = \"USER\",\n    Guest = \"GUEST\"\n}\n\nconsole.log(Role.Admin);"
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Numeric Enum"
+                        },
+                        {
+                            "label": "String Enum"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Stores numbers"
+                                },
+                                {
+                                    "col": "Stores strings"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Auto increments"
+                                },
+                                {
+                                    "col": "Requires explicit values"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Less readable at runtime"
+                                },
+                                {
+                                    "col": "More readable at runtime"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "String enums are generally preferred because they are easier to understand during debugging."
+                }
+            ]
+        },
+        {
+            "id": "69",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q69 : What is a Heterogeneous Enum in TypeScript?",
+                    "a": "A heterogeneous enum is an enum that contains both numeric and string values. Although TypeScript supports this feature, it is rarely recommended because it makes the code less consistent and harder to understand. Developers generally prefer using either numeric enums or string enums exclusively to improve readability and maintainability.",
+                    "type": "text",
+                    "id": 69
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Heterogeneous enum example.",
+                    "code": "\nenum Result {\n    Success = 1,\n    Failed = \"FAILED\"\n}\n\nconsole.log(Result.Success);\nconsole.log(Result.Failed);"
+                },
+                {
+                    "type": "note",
+                    "note": "Avoid heterogeneous enums unless there is a specific requirement to mix numeric and string values."
+                }
+            ]
+        },
+        {
+            "id": "70",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q70 : What is a Const Enum in TypeScript?",
+                    "a": "A const enum is a special type of enum that is completely removed during compilation. Instead of creating an enum object in JavaScript, the compiler directly replaces enum members with their values. This improves performance and reduces the generated JavaScript code size, making const enums useful in performance-sensitive applications.",
+                    "type": "text",
+                    "id": 70
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Const enum example.",
+                    "code": "\nconst enum Direction {\n    Up,\n    Down\n}\n\nlet move = Direction.Up;\nconsole.log(move);"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Better Performance",
+                        "2": "No Runtime Object",
+                        "3": "Smaller JavaScript Output",
+                        "4": "Compile-time Optimization"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Const enums are inlined during compilation and do not exist in the generated JavaScript."
+                }
+            ]
+        },
+        {
+            "id": "71",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q71 : What are Generics in TypeScript?",
+                    "a": "Generics allow developers to create reusable components that work with multiple data types while preserving type safety. Instead of writing separate code for each type, a generic uses a type parameter that is specified when the function, class, or interface is used. Generics improve code reusability, flexibility, and maintainability in large applications.",
+                    "type": "text",
+                    "id": 71
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Generic function example.",
+                    "code": "\nfunction identity<T>(value: T): T {\n    return value;\n}\n\nconsole.log(identity<string>(\"Hello\"));\nconsole.log(identity<number>(100));"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Code Reusability",
+                        "2": "Type Safety",
+                        "3": "Flexibility",
+                        "4": "Less Code Duplication"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The type parameter T is only a convention. Any valid identifier can be used."
+                }
+            ]
+        },
+        {
+            "id": "72",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q72 : Why do we use Generics in TypeScript?",
+                    "a": "Generics are used to write reusable and type-safe code that works with different data types. Without generics, developers often duplicate the same logic for strings, numbers, or other types. Generics eliminate duplication while maintaining compile-time type checking, making applications more flexible, maintainable, and easier to extend as requirements grow.",
+                    "type": "text",
+                    "id": 72
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Without Generics"
+                        },
+                        {
+                            "label": "With Generics"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Duplicate code"
+                                },
+                                {
+                                    "col": "Reusable code"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Less flexible"
+                                },
+                                {
+                                    "col": "Works with multiple types"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Harder to maintain"
+                                },
+                                {
+                                    "col": "Easy to maintain"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Generics provide flexibility without sacrificing type safety."
+                }
+            ]
+        },
+        {
+            "id": "73",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q73 : What are Generic Functions in TypeScript?",
+                    "a": "Generic functions are functions that work with different data types while maintaining type safety. They use type parameters, usually represented by T, to accept and return values without knowing their exact type beforehand. Generic functions eliminate duplicate code and improve flexibility by allowing a single implementation to work with multiple data types.",
+                    "type": "text",
+                    "id": 73
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Generic function example.",
+                    "code": "\nfunction getValue<T>(value: T): T {\n    return value;\n}\n\nconsole.log(getValue<string>(\"TypeScript\"));\nconsole.log(getValue<number>(100));"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Reusable code",
+                        "2": "Type safe",
+                        "3": "Works with multiple data types",
+                        "4": "Reduces code duplication"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Generic functions determine the type either explicitly or automatically through type inference."
+                }
+            ]
+        },
+        {
+            "id": "74",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q74 : What are Generic Classes in TypeScript?",
+                    "a": "Generic classes allow developers to create reusable classes that work with different data types. Instead of defining separate classes for strings, numbers, or other types, a generic class uses a type parameter. This improves flexibility, reduces duplicate code, and ensures compile-time type safety while keeping the class implementation reusable.",
+                    "type": "text",
+                    "id": 74
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Generic class example.",
+                    "code": "\nclass Box<T> {\n    constructor(public value: T) {}\n}\n\nconst box = new Box<string>(\"Hello\");\nconsole.log(box.value);"
+                },
+                {
+                    "type": "note",
+                    "note": "A generic class can work with any data type while preserving type safety."
+                }
+            ]
+        },
+        {
+            "id": "75",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q75 : What are Generic Interfaces in TypeScript?",
+                    "a": "Generic interfaces define reusable contracts that work with multiple data types. They use type parameters to allow implementing classes or objects to specify the actual data type later. Generic interfaces increase flexibility, improve type safety, and reduce repetitive interface definitions when working with similar data structures.",
+                    "type": "text",
+                    "id": 75
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Generic interface example.",
+                    "code": "\ninterface ApiResponse<T> {\n    data: T;\n    success: boolean;\n}\n\nconst response: ApiResponse<string> = {\n    data: \"Success\",\n    success: true\n};"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Uses",
+                    "list": {
+                        "1": "API Responses",
+                        "2": "Reusable Models",
+                        "3": "Collections",
+                        "4": "Custom Data Structures"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "76",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q76 : What are Generic Constraints in TypeScript?",
+                    "a": "Generic constraints restrict the types that can be used with generic functions or classes. They are defined using the extends keyword, ensuring that only types satisfying specific conditions are accepted. Constraints provide flexibility while maintaining type safety, allowing generic code to safely access required properties or methods on the provided type.",
+                    "type": "text",
+                    "id": 76
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Generic constraint example.",
+                    "code": "\ninterface Length {\n    length: number;\n}\n\nfunction printLength<T extends Length>(item: T): void {\n    console.log(item.length);\n}\n\nprintLength(\"TypeScript\");"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Restricts generic types",
+                        "2": "Improves type safety",
+                        "3": "Allows property access",
+                        "4": "Prevents invalid types"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The extends keyword in generics specifies a constraint, not class inheritance."
+                }
+            ]
+        },
+        {
+            "id": "77",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q77 : What are Generic Defaults in TypeScript?",
+                    "a": "Generic default types allow developers to specify a default type for a generic parameter. If no type is provided while using the generic, TypeScript automatically uses the default type. This feature reduces the need to explicitly specify common types, making generic code simpler, cleaner, and easier to use while preserving type safety.",
+                    "type": "text",
+                    "id": 77
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using default generic types.",
+                    "code": "\nclass Container<T = string> {\n    value!: T;\n}\n\nconst obj = new Container();\nobj.value = \"TypeScript\";"
+                },
+                {
+                    "type": "note",
+                    "note": "Default generic types are used only when no type argument is supplied."
+                }
+            ]
+        },
+        {
+            "id": "78",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q78 : What are Union Types in TypeScript?",
+                    "a": "Union types allow a variable, parameter, or return value to store more than one type. They are created using the pipe (|) operator. Union types provide flexibility while maintaining compile-time type safety, making them useful when a value may legitimately belong to different types such as string, number, or boolean.",
+                    "type": "text",
+                    "id": 78
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Union type example.",
+                    "code": "\nlet id: string | number;\n\nid = 101;\nid = \"EMP101\";\n\nconsole.log(id);"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Accept multiple data types",
+                        "2": "Type safe",
+                        "3": "Flexible APIs",
+                        "4": "Reduces duplicate code"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Union types are represented using the | operator."
+                }
+            ]
+        },
+        {
+            "id": "79",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q79 : What are Intersection Types in TypeScript?",
+                    "a": "Intersection types combine multiple types into a single type using the ampersand (&) operator. The resulting type contains all properties and methods from each combined type. Intersection types are useful when an object must satisfy multiple contracts simultaneously, improving code reuse and reducing duplicate type definitions.",
+                    "type": "text",
+                    "id": 79
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Intersection type example.",
+                    "code": "\ninterface Person {\n    name: string;\n}\n\ninterface Employee {\n    id: number;\n}\n\ntype Staff = Person & Employee;\n\nconst staff: Staff = {\n    name: \"Isha\",\n    id: 101\n};"
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Union (|)"
+                        },
+                        {
+                            "label": "Intersection (&)"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "One of multiple types"
+                                },
+                                {
+                                    "col": "Combination of all types"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Flexible values"
+                                },
+                                {
+                                    "col": "Must satisfy all types"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Intersection types merge multiple types into one."
+                }
+            ]
+        },
+        {
+            "id": "80",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q80 : What are Type Guards in TypeScript?",
+                    "a": "Type guards are techniques used to determine the actual type of a variable at runtime. They help TypeScript narrow union or unknown types before accessing their properties or methods. Common type guards include typeof, instanceof, in operator, and user-defined type guards. They improve type safety and prevent runtime errors.",
+                    "type": "text",
+                    "id": 80
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Type Guards",
+                    "list": {
+                        "1": "typeof",
+                        "2": "instanceof",
+                        "3": "in operator",
+                        "4": "User-defined type guards"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using typeof as a type guard.",
+                    "code": "\nfunction print(value: string | number): void {\n    if (typeof value === \"string\") {\n        console.log(value.toUpperCase());\n    } else {\n        console.log(value.toFixed(2));\n    }\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "Type guards narrow the type so that only valid operations can be performed."
+                }
+            ]
+        },
+        {
+            "id": "81",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q81 : What is the typeof Type Guard in TypeScript?",
+                    "a": "The typeof type guard is used to determine the runtime type of primitive values such as string, number, boolean, bigint, symbol, undefined, and function. It helps TypeScript narrow union types so that only valid operations can be performed. This reduces runtime errors and improves type safety when working with variables that can hold multiple primitive types.",
+                    "type": "text",
+                    "id": 81
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using typeof type guard.",
+                    "code": "\nfunction display(value: string | number): void {\n    if (typeof value === \"string\") {\n        console.log(value.toUpperCase());\n    } else {\n        console.log(value.toFixed(2));\n    }\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Supported Types",
+                    "list": {
+                        "1": "string",
+                        "2": "number",
+                        "3": "boolean",
+                        "4": "bigint",
+                        "5": "symbol",
+                        "6": "undefined",
+                        "7": "function"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "The typeof operator is mainly used for checking primitive data types."
+                }
+            ]
+        },
+        {
+            "id": "82",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q82 : What is the instanceof Type Guard in TypeScript?",
+                    "a": "The instanceof type guard checks whether an object is an instance of a particular class. It is commonly used when working with objects created using constructors or classes. By identifying the object's actual class, TypeScript narrows the type and allows access to class-specific properties and methods safely.",
+                    "type": "text",
+                    "id": 82
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using instanceof type guard.",
+                    "code": "\nclass Dog {}\nclass Cat {}\n\nfunction checkAnimal(animal: Dog | Cat) {\n    if (animal instanceof Dog) {\n        console.log(\"Dog Object\");\n    } else {\n        console.log(\"Cat Object\");\n    }\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "instanceof works only with objects created from classes or constructor functions."
+                }
+            ]
+        },
+        {
+            "id": "83",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q83 : What is the in Operator Type Guard in TypeScript?",
+                    "a": "The in operator checks whether a specific property exists in an object. It is commonly used with union types containing different object structures. Based on the property's existence, TypeScript narrows the object's type, allowing safe access to the appropriate properties and methods without causing type errors.",
+                    "type": "text",
+                    "id": 83
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using the in operator.",
+                    "code": "\ninterface Car {\n    drive(): void;\n}\n\ninterface Boat {\n    sail(): void;\n}\n\nfunction move(vehicle: Car | Boat) {\n    if (\"drive\" in vehicle) {\n        vehicle.drive();\n    } else {\n        vehicle.sail();\n    }\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "The in operator checks for property existence, not property values."
+                }
+            ]
+        },
+        {
+            "id": "84",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q84 : What are User-Defined Type Guards in TypeScript?",
+                    "a": "User-defined type guards are custom functions that help TypeScript determine the type of a variable. They return a type predicate using the 'is' keyword, allowing the compiler to narrow types based on custom logic. These guards are useful when built-in type guards like typeof or instanceof are not sufficient for complex applications.",
+                    "type": "text",
+                    "id": 84
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "User-defined type guard example.",
+                    "code": "\ninterface Bird {\n    fly(): void;\n}\n\nfunction isBird(obj: any): obj is Bird {\n    return \"fly\" in obj;\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Custom type checking",
+                        "2": "Supports complex objects",
+                        "3": "Improves type safety",
+                        "4": "Reusable logic"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "User-defined type guards return a type predicate using the 'is' keyword."
+                }
+            ]
+        },
+        {
+            "id": "85",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q85 : What are Modules in TypeScript?",
+                    "a": "Modules are separate files that contain variables, functions, classes, or interfaces which can be shared across different files. They help organize code into smaller, reusable units and prevent naming conflicts. TypeScript supports ES Modules using the export and import keywords, making applications more maintainable and scalable.",
+                    "type": "text",
+                    "id": 85
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Code Reusability",
+                        "2": "Better Organization",
+                        "3": "Avoids Global Scope Pollution",
+                        "4": "Easy Maintenance"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Exporting a function from a module.",
+                    "code": "\nexport function greet(name: string): void {\n    console.log(`Hello ${name}`);\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "Every file containing an export or import statement is treated as a module."
+                }
+            ]
+        },
+        {
+            "id": "86",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q86 : What is the export keyword in TypeScript?",
+                    "a": "The export keyword is used to make variables, functions, classes, interfaces, or types available outside their current module. Other files can then import and use these exported members. Exporting promotes code reuse, modular development, and better project organization by separating functionality into multiple files.",
+                    "type": "text",
+                    "id": 86
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Exporting variables and functions.",
+                    "code": "\nexport const company = \"OpenAI\";\n\nexport function display(): void {\n    console.log(company);\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Can Export",
+                    "list": {
+                        "1": "Variables",
+                        "2": "Functions",
+                        "3": "Classes",
+                        "4": "Interfaces",
+                        "5": "Types"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Only exported members can be imported into other modules."
+                }
+            ]
+        },
+        {
+            "id": "87",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q87 : What is the import keyword in TypeScript?",
+                    "a": "The import keyword is used to access exported members from another module. It enables developers to reuse code instead of rewriting it in multiple files. Import statements improve project structure, simplify maintenance, and make applications easier to scale by separating different functionalities into independent modules.",
+                    "type": "text",
+                    "id": 87
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Importing exported members.",
+                    "code": "\nimport { greet } from \"./utils\";\n\ngreet(\"Isha\");"
+                },
+                {
+                    "type": "note",
+                    "note": "Import statements should match the names of exported members unless aliases are used."
+                }
+            ]
+        },
+        {
+            "id": "88",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q88 : What is the difference between Named Export and Default Export in TypeScript?",
+                    "a": "Named exports allow multiple members to be exported from a module and must be imported using their exact names. A default export allows only one primary export per module and can be imported using any name. Both approaches support modular programming, but their import syntax differs.",
+                    "type": "text",
+                    "id": 88
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Named Export"
+                        },
+                        {
+                            "label": "Default Export"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Multiple exports allowed"
+                                },
+                                {
+                                    "col": "Only one default export"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Imported using exact name"
+                                },
+                                {
+                                    "col": "Imported using any name"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Uses curly braces"
+                                },
+                                {
+                                    "col": "No curly braces required"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Named export and default export example.",
+                    "code": "\nexport const company = \"OpenAI\";\n\nexport default function greet() {\n    console.log(\"Hello\");\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "A module can have multiple named exports but only one default export."
+                }
+            ]
+        },
+        {
+            "id": "89",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q89 : What is Namespace in TypeScript?",
+                    "a": "A namespace is a way to organize related code under a single name to avoid naming conflicts. It groups variables, functions, classes, and interfaces together within one logical scope. Namespaces were commonly used before ES Modules became popular. Today, modules are generally preferred for organizing large TypeScript applications.",
+                    "type": "text",
+                    "id": 89
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Creating a namespace.",
+                    "code": "\nnamespace Company {\n    export function greet(): void {\n        console.log(\"Welcome\");\n    }\n}\n\nCompany.greet();"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Advantages",
+                    "list": {
+                        "1": "Organizes code",
+                        "2": "Avoids naming conflicts",
+                        "3": "Groups related members",
+                        "4": "Improves readability"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "In modern TypeScript projects, ES Modules are preferred over namespaces."
+                }
+            ]
+        },
+        {
+            "id": "90",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q90 : What is Declaration Merging in TypeScript?",
+                    "a": "Declaration merging is a TypeScript feature where multiple declarations with the same name are automatically combined into a single definition. It is mainly supported by interfaces and namespaces. Declaration merging allows developers to extend existing definitions without modifying the original source code, making applications easier to maintain and extend.",
+                    "type": "text",
+                    "id": 90
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Interface declaration merging.",
+                    "code": "\ninterface Employee {\n    id: number;\n}\n\ninterface Employee {\n    name: string;\n}\n\nconst emp: Employee = {\n    id: 1,\n    name: \"Isha\"\n};"
+                },
+                {
+                    "type": "note",
+                    "note": "Declaration merging works with interfaces but not with type aliases."
+                }
+            ]
+        },
+        {
+            "id": "91",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q91 : What are Decorators in TypeScript?",
+                    "a": "Decorators are special functions that add metadata or modify the behavior of classes, methods, properties, or parameters. They are written using the @ symbol and execute when the declaration is evaluated. Decorators are widely used in frameworks like Angular and NestJS for dependency injection, routing, validation, and metadata management.",
+                    "type": "text",
+                    "id": 91
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Decorator Types",
+                    "list": {
+                        "1": "Class Decorator",
+                        "2": "Method Decorator",
+                        "3": "Property Decorator",
+                        "4": "Parameter Decorator",
+                        "5": "Accessor Decorator"
+                    }
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Simple class decorator.",
+                    "code": "\nfunction Logger(target: Function) {\n    console.log(target.name);\n}\n\n@Logger\nclass Employee {}"
+                },
+                {
+                    "type": "note",
+                    "note": "Decorators are an experimental TypeScript feature and must be enabled in tsconfig.json."
+                }
+            ]
+        },
+        {
+            "id": "92",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q92 : What is a Class Decorator in TypeScript?",
+                    "a": "A class decorator is applied to a class declaration and receives the class constructor as its argument. It can add metadata, modify behavior, or extend the class without changing its original implementation. Class decorators are commonly used in frameworks such as Angular and NestJS for dependency injection and configuration.",
+                    "type": "text",
+                    "id": 92
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Class decorator example.",
+                    "code": "\nfunction Component(target: Function) {\n    console.log(`Class: ${target.name}`);\n}\n\n@Component\nclass UserComponent {}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Uses",
+                    "list": {
+                        "1": "Add metadata",
+                        "2": "Modify class behavior",
+                        "3": "Dependency Injection",
+                        "4": "Framework configuration"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "A class decorator executes when the class is declared, not when an object is created."
+                }
+            ]
+        },
+        {
+            "id": "93",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q93 : What is a Method Decorator in TypeScript?",
+                    "a": "A method decorator is applied to a class method and can observe, modify, or replace the method's behavior. It receives the target object, method name, and property descriptor as parameters. Method decorators are commonly used for logging, authorization, validation, caching, and performance monitoring in enterprise applications and frameworks.",
+                    "type": "text",
+                    "id": 93
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Method decorator example.",
+                    "code": "\nfunction Log(target: any, propertyKey: string, descriptor: PropertyDescriptor) {\n    console.log(`Method: ${propertyKey}`);\n}\n\nclass User {\n    @Log\n    login() {}\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Uses",
+                    "list": {
+                        "1": "Logging",
+                        "2": "Authorization",
+                        "3": "Validation",
+                        "4": "Performance Monitoring"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Method decorators execute when the class is defined, not when the method is called."
+                }
+            ]
+        },
+        {
+            "id": "94",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q94 : What is a Property Decorator in TypeScript?",
+                    "a": "A property decorator is applied to a class property and receives the target object and property name as arguments. It is mainly used to attach metadata to properties rather than modify their values. Property decorators are commonly used in frameworks for dependency injection, validation, and object mapping.",
+                    "type": "text",
+                    "id": 94
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Property decorator example.",
+                    "code": "\nfunction ReadOnly(target: any, propertyKey: string) {\n    console.log(propertyKey);\n}\n\nclass Employee {\n    @ReadOnly\n    name!: string;\n}"
+                },
+                {
+                    "type": "note",
+                    "note": "Property decorators cannot directly modify property values."
+                }
+            ]
+        },
+        {
+            "id": "95",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q95 : What is a Parameter Decorator in TypeScript?",
+                    "a": "A parameter decorator is applied to a method parameter and is used to observe or record information about that parameter. It receives the target object, method name, and parameter index. Parameter decorators are commonly used in dependency injection frameworks and metadata-based programming to identify specific parameters.",
+                    "type": "text",
+                    "id": 95
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Parameter decorator example.",
+                    "code": "\nfunction LogParameter(target: any, methodName: string, parameterIndex: number) {\n    console.log(parameterIndex);\n}\n\nclass User {\n    login(@LogParameter username: string) {}\n}"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Uses",
+                    "list": {
+                        "1": "Dependency Injection",
+                        "2": "Metadata Collection",
+                        "3": "Validation",
+                        "4": "Logging"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Parameter decorators cannot change the parameter value directly."
+                }
+            ]
+        },
+        {
+            "id": "96",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q96 : What is an Accessor Decorator in TypeScript?",
+                    "a": "An accessor decorator is applied to getter or setter methods of a class. It receives the target object, accessor name, and property descriptor. Accessor decorators are useful for adding validation, logging, caching, or metadata to property accessors without modifying the original implementation directly.",
+                    "type": "text",
+                    "id": 96
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Accessor decorator example.",
+                    "code": "\nfunction Log(target: any, propertyKey: string, descriptor: PropertyDescriptor) {\n    console.log(propertyKey);\n}\n\nclass Employee {\n    private _salary = 50000;\n\n    @Log\n    get salary() {\n        return this._salary;\n    }\n}"
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Getter"
+                        },
+                        {
+                            "label": "Setter"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Reads a value"
+                                },
+                                {
+                                    "col": "Updates a value"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Returns data"
+                                },
+                                {
+                                    "col": "Receives data"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "An accessor decorator can be applied to either a getter or a setter, but not both for the same property."
+                }
+            ]
+        },
+        {
+            "id": "97",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q97 : What is Type Compatibility in TypeScript?",
+                    "a": "Type compatibility determines whether one type can be assigned to another. TypeScript uses structural typing, meaning compatibility is based on an object's shape rather than its name. If two objects have the required properties with matching types, they are considered compatible. This makes TypeScript flexible while still providing strong type checking.",
+                    "type": "text",
+                    "id": 97
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Type compatibility example.",
+                    "code": "\ninterface Person {\n    name: string;\n}\n\nlet person: Person;\nlet employee = { name: \"Isha\", age: 23 };\n\nperson = employee;"
+                },
+                {
+                    "type": "note",
+                    "note": "TypeScript checks object structure instead of object names."
+                }
+            ]
+        },
+        {
+            "id": "98",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q98 : What is Structural Typing in TypeScript?",
+                    "a": "Structural typing is the type system used by TypeScript, where compatibility depends on an object's properties rather than its declared type or class name. If two objects have the same required structure, they are considered compatible. This approach increases flexibility and simplifies working with objects from different sources.",
+                    "type": "text",
+                    "id": 98
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Structural Typing"
+                        },
+                        {
+                            "label": "Nominal Typing"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Based on object structure"
+                                },
+                                {
+                                    "col": "Based on declared type"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Flexible"
+                                },
+                                {
+                                    "col": "Strict"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Used by TypeScript"
+                                },
+                                {
+                                    "col": "Used by Java, C#"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Structural typing example.",
+                    "code": "\ninterface User {\n    name: string;\n}\n\nconst obj = {\n    name: \"Isha\",\n    age: 23\n};\n\nconst user: User = obj;"
+                },
+                {
+                    "type": "note",
+                    "note": "Objects with extra properties can still be compatible if the required properties exist."
+                }
+            ]
+        },
+        {
+            "id": "99",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q99 : What are Utility Types in TypeScript?",
+                    "a": "Utility types are built-in generic types that help transform existing types into new ones. They simplify common type operations such as making properties optional, required, readonly, or selecting specific properties. Utility types reduce repetitive code and improve maintainability when working with complex object structures in large applications.",
+                    "type": "text",
+                    "id": 99
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list_text": "Common Utility Types",
+                    "list": {
+                        "1": "Partial",
+                        "2": "Required",
+                        "3": "Readonly",
+                        "4": "Pick",
+                        "5": "Omit",
+                        "6": "Record"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Utility types are predefined generic types provided by TypeScript."
+                }
+            ]
+        },
+        {
+            "id": "100",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q100 : What is the Partial Utility Type in TypeScript?",
+                    "a": "The Partial utility type makes all properties of an existing type optional. It is useful when updating objects because only the properties that need to change must be provided. Partial reduces duplicate interface definitions and is commonly used in update operations, forms, and API request payloads.",
+                    "type": "text",
+                    "id": 100
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using the Partial utility type.",
+                    "code": "\ninterface Employee {\n    id: number;\n    name: string;\n}\n\nconst emp: Partial<Employee> = {\n    name: \"Isha\"\n};"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Uses",
+                    "list": {
+                        "1": "Update APIs",
+                        "2": "Forms",
+                        "3": "Patch Requests",
+                        "4": "Optional Objects"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Partial<T> converts every property of T into an optional property."
+                }
+            ]
+        },
+        {
+            "id": "101",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q101 : What is the Required Utility Type in TypeScript?",
+                    "a": "The Required utility type makes all optional properties of a type mandatory. It is useful when an object must contain every property before being processed or saved. Required<T> improves data validation and ensures complete objects are passed to functions or APIs, reducing the risk of missing values during execution.",
+                    "type": "text",
+                    "id": 101
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using the Required utility type.",
+                    "code": "\ninterface Employee {\n    id?: number;\n    name?: string;\n}\n\nconst emp: Required<Employee> = {\n    id: 101,\n    name: \"Isha\"\n};"
+                },
+                {
+                    "type": "note",
+                    "note": "Required<T> converts every optional property into a required property."
+                }
+            ]
+        },
+        {
+            "id": "102",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q102 : What is the Readonly Utility Type in TypeScript?",
+                    "a": "The Readonly utility type makes all properties of a type immutable. Once an object is created, its properties cannot be modified. This utility is useful for protecting configuration objects, constants, and shared data from accidental updates, improving code safety and maintainability throughout an application.",
+                    "type": "text",
+                    "id": 102
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using the Readonly utility type.",
+                    "code": "\ninterface Employee {\n    id: number;\n    name: string;\n}\n\nconst emp: Readonly<Employee> = {\n    id: 101,\n    name: \"Isha\"\n};\n\n// emp.name = \"Rahul\"; // Error"
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": false,
+                    "list_text": "Benefits",
+                    "list": {
+                        "1": "Immutable objects",
+                        "2": "Data protection",
+                        "3": "Safer code",
+                        "4": "Prevents accidental updates"
+                    }
+                },
+                {
+                    "type": "note",
+                    "note": "Readonly<T> makes every property of the specified type read-only."
+                }
+            ]
+        },
+        {
+            "id": "103",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q103 : What is the Pick Utility Type in TypeScript?",
+                    "a": "The Pick utility type creates a new type by selecting specific properties from an existing type. It is useful when only a subset of properties is needed instead of the complete object. Pick<T, Keys> improves code reuse and avoids creating multiple similar interfaces for different use cases.",
+                    "type": "text",
+                    "id": 103
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using the Pick utility type.",
+                    "code": "\ninterface Employee {\n    id: number;\n    name: string;\n    salary: number;\n}\n\ntype EmployeeInfo = Pick<Employee, \"id\" | \"name\">;"
+                },
+                {
+                    "type": "note",
+                    "note": "Pick<T, K> creates a new type containing only the selected properties."
+                }
+            ]
+        },
+        {
+            "id": "104",
+            "Que": [
+                {
+                    "playButton": true,
+                    "pauseButton": false,
+                    "q": "Q104 : What is the Omit Utility Type in TypeScript?",
+                    "a": "The Omit utility type creates a new type by removing one or more properties from an existing type. It is useful when most properties are required except a few. Omit<T, Keys> helps reduce duplicate type definitions and is commonly used in API requests, forms, and data transfer objects.",
+                    "type": "text",
+                    "id": 104
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using the Omit utility type.",
+                    "code": "\ninterface Employee {\n    id: number;\n    name: string;\n    salary: number;\n}\n\ntype EmployeeData = Omit<Employee, \"salary\">;"
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Pick"
+                        },
+                        {
+                            "label": "Omit"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Selects properties"
+                                },
+                                {
+                                    "col": "Removes properties"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Keeps specified fields"
+                                },
+                                {
+                                    "col": "Excludes specified fields"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "note",
+                    "note": "Omit<T, K> is the opposite of Pick<T, K>."
+                }
+            ]
+        }
+    ]
+}

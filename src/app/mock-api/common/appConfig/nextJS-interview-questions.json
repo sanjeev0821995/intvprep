@@ -1,0 +1,1832 @@
+{
+    "nextJS-interview-questions": [
+        {
+            "id": "1",
+            "Que": [
+                {
+                    "q": "Q1 : What is Next.js?",
+                    "a": "Next.js is a React framework developed by Vercel that enables developers to build full-stack web applications with features such as Server-Side Rendering (SSR), Static Site Generation (SSG), routing, API routes, image optimization, and performance enhancements. While React focuses only on building user interfaces, Next.js provides additional tools and conventions required for production-ready applications. It simplifies development by handling routing, rendering strategies, optimization, and deployment, making it one of the most popular frameworks for building modern web applications.",
+                    "type": "text",
+                    "id": 1,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Built on React": "Uses React for creating user interfaces.",
+                        "File-Based Routing": "Routes are automatically created from folder structure.",
+                        "Rendering Options": "Supports SSR, SSG, ISR, and CSR.",
+                        "API Routes": "Allows backend endpoints inside the same project.",
+                        "Performance": "Provides built-in optimizations for speed and SEO."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "Que": [
+                {
+                    "q": "Q2 : Why was Next.js created?",
+                    "a": "Next.js was created to solve common challenges faced by React developers when building production applications. React provides flexibility for building user interfaces but lacks built-in solutions for routing, SEO, server-side rendering, and performance optimization. Next.js addresses these issues by offering a structured framework with features such as automatic routing, server-side rendering, static generation, and API support. This enables developers to focus on building features rather than configuring complex tooling and infrastructure.",
+                    "type": "text",
+                    "id": 2,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "SEO Improvement": "Provides server-rendered pages for better search engine indexing.",
+                        "Performance": "Optimizes loading speed and rendering.",
+                        "Routing": "Eliminates the need for external routing libraries.",
+                        "Full-Stack Capability": "Supports frontend and backend development in one project.",
+                        "Developer Experience": "Reduces configuration and setup effort."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "Que": [
+                {
+                    "q": "Q3 : What are the advantages of Next.js?",
+                    "a": "Next.js offers several advantages over a traditional React application. It provides multiple rendering strategies, built-in routing, API support, image optimization, code splitting, and excellent SEO capabilities. These features help developers build scalable and high-performance applications with minimal configuration. Additionally, Next.js improves developer productivity by providing sensible defaults and a structured project architecture that simplifies development and deployment.",
+                    "type": "text",
+                    "id": 3,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Better SEO": "Server-rendered pages are easier for search engines to index.",
+                        "Fast Performance": "Automatic code splitting and optimizations improve speed.",
+                        "Built-in Routing": "No need for additional routing libraries.",
+                        "Image Optimization": "Optimizes images automatically.",
+                        "API Routes": "Backend APIs can be created within the same project.",
+                        "Easy Deployment": "Works seamlessly with Vercel and other platforms."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "Que": [
+                {
+                    "q": "Q4 : Difference between React and Next.js?",
+                    "a": "React is a JavaScript library used for building user interfaces, whereas Next.js is a framework built on top of React that provides additional features required for production-ready applications. React focuses on the view layer, while Next.js offers routing, rendering strategies, API routes, SEO improvements, and various optimizations. Developers can build applications using React alone, but Next.js simplifies many common development tasks and provides a more complete solution.",
+                    "type": "text",
+                    "id": 4,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "React"
+                        },
+                        {
+                            "label": "Next.js"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "JavaScript library"
+                                },
+                                {
+                                    "col": "React framework"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Requires external routing libraries"
+                                },
+                                {
+                                    "col": "Built-in file-based routing"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Primarily CSR"
+                                },
+                                {
+                                    "col": "Supports SSR, SSG, ISR, and CSR"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "No built-in API support"
+                                },
+                                {
+                                    "col": "Supports API routes"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Requires more setup"
+                                },
+                                {
+                                    "col": "Provides production-ready features"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "Que": [
+                {
+                    "q": "Q5 : What problems does Next.js solve?",
+                    "a": "Next.js solves several challenges commonly encountered in React applications, including poor SEO, slow initial page loads, complex routing configurations, and lack of server-side rendering support. It also provides built-in performance optimizations, API routes, image optimization, and automatic code splitting. By addressing these issues, Next.js helps developers build faster, more scalable, and search-engine-friendly applications without extensive configuration.",
+                    "type": "text",
+                    "id": 5,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "SEO Issues": "Provides server-side rendering and static generation.",
+                        "Routing Complexity": "Uses file-based routing.",
+                        "Performance Problems": "Offers automatic optimization techniques.",
+                        "Backend Integration": "Supports API routes.",
+                        "Large Bundle Sizes": "Uses automatic code splitting."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "Que": [
+                {
+                    "q": "Q6 : What is the architecture of Next.js?",
+                    "a": "Next.js follows a hybrid architecture that combines frontend and backend capabilities within a single project. It supports React components for UI development, server-side rendering for dynamic content, static generation for performance, and API routes for backend logic. The framework uses file-based routing and can run on Node.js servers, serverless environments, or edge networks. This architecture enables developers to build full-stack applications efficiently while maintaining scalability and performance.",
+                    "type": "text",
+                    "id": 6,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Frontend Layer": "Built using React components.",
+                        "Routing Layer": "Handles page navigation automatically.",
+                        "Rendering Layer": "Supports multiple rendering strategies.",
+                        "Backend Layer": "Uses API routes and server actions.",
+                        "Deployment Layer": "Can run on Node.js, serverless, or edge environments."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "Que": [
+                {
+                    "q": "Q7 : What are the main features of Next.js?",
+                    "a": "Next.js includes many powerful features that help developers create modern web applications efficiently. It supports multiple rendering methods, automatic routing, image optimization, API routes, middleware, metadata management, and performance enhancements. These built-in features reduce the need for third-party libraries and allow developers to focus on application functionality instead of infrastructure and configuration tasks.",
+                    "type": "text",
+                    "id": 7,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Server-Side Rendering": "Renders pages on the server.",
+                        "Static Site Generation": "Generates pages during build time.",
+                        "Incremental Static Regeneration": "Updates static pages without full rebuilds.",
+                        "File-Based Routing": "Automatically generates routes.",
+                        "API Routes": "Backend endpoints within the project.",
+                        "Image Optimization": "Optimizes images automatically.",
+                        "Middleware": "Intercepts and processes requests."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "Que": [
+                {
+                    "q": "Q8 : What is Server-Side Rendering (SSR)?",
+                    "a": "Server-Side Rendering (SSR) is a rendering technique where HTML is generated on the server for each incoming request and then sent to the browser. This allows users to receive fully rendered content immediately, improving SEO and initial page load performance. SSR is especially useful for pages with frequently changing data because the server generates fresh content whenever the page is requested.",
+                    "type": "text",
+                    "id": 8,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Server Component fetching data",
+                    "code": "\nexport default async function Page() {\n  const res = await fetch('https://api.example.com/users');\n  const users = await res.json();\n\n  return <div>{users.length}</div>;\n}"
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "Que": [
+                {
+                    "q": "Q9 : What is Static Site Generation (SSG)?",
+                    "a": "Static Site Generation (SSG) is a rendering technique where HTML pages are generated during the build process and served as static files. Since pages are pre-built, they load extremely fast and can be cached globally through CDNs. SSG is ideal for content that changes infrequently, such as blogs, documentation websites, marketing pages, and portfolio sites.",
+                    "type": "text",
+                    "id": 9,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Build-Time Generation": "Pages are created during project build.",
+                        "Fast Loading": "Served as static files.",
+                        "CDN Friendly": "Can be cached globally.",
+                        "SEO Friendly": "HTML is available immediately.",
+                        "Best For": "Blogs, docs, and marketing websites."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "Que": [
+                {
+                    "q": "Q10 : What is Client-Side Rendering (CSR)?",
+                    "a": "Client-Side Rendering (CSR) is a rendering approach where the browser downloads a minimal HTML page and JavaScript bundle, then generates the user interface on the client side. Data fetching and rendering occur in the browser after the page loads. While CSR provides highly interactive experiences, it can negatively impact SEO and initial load performance compared to server-rendered approaches.",
+                    "type": "text",
+                    "id": 10,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Client-side data fetching using useEffect",
+                    "code": "\n'use client';\n\nimport { useEffect, useState } from 'react';\n\nexport default function Users() {\n  const [users, setUsers] = useState([]);\n\n  useEffect(() => {\n    fetch('/api/users')\n      .then(res => res.json())\n      .then(data => setUsers(data));\n  }, []);\n\n  return <div>{users.length}</div>;\n}"
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "Que": [
+                {
+                    "q": "Q11 : Difference between SSR, SSG, and CSR?",
+                    "a": "SSR, SSG, and CSR are three different rendering strategies used in Next.js applications. SSR generates HTML on every request, ensuring fresh data but requiring server processing. SSG generates HTML during build time, providing excellent performance but less flexibility for frequently changing content. CSR renders content in the browser after JavaScript loads, making it suitable for highly interactive applications but potentially impacting SEO and initial page load performance. Choosing the right strategy depends on the application's requirements regarding performance, SEO, and data freshness.",
+                    "type": "text",
+                    "id": 11,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "SSR"
+                        },
+                        {
+                            "label": "SSG"
+                        },
+                        {
+                            "label": "CSR"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Generated on every request"
+                                },
+                                {
+                                    "col": "Generated during build time"
+                                },
+                                {
+                                    "col": "Generated in browser"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Fresh data"
+                                },
+                                {
+                                    "col": "Static data"
+                                },
+                                {
+                                    "col": "Fetched after page loads"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Good SEO"
+                                },
+                                {
+                                    "col": "Excellent SEO"
+                                },
+                                {
+                                    "col": "Limited SEO"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Slower than SSG"
+                                },
+                                {
+                                    "col": "Very fast"
+                                },
+                                {
+                                    "col": "Depends on JS execution"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Best for dynamic content"
+                                },
+                                {
+                                    "col": "Best for static content"
+                                },
+                                {
+                                    "col": "Best for highly interactive apps"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "Que": [
+                {
+                    "q": "Q12 : What is Incremental Static Regeneration (ISR)?",
+                    "a": "Incremental Static Regeneration (ISR) is a Next.js feature that combines the benefits of Static Site Generation and Server-Side Rendering. With ISR, pages are initially generated as static files during build time, but they can be regenerated automatically in the background after a specified interval. This allows applications to serve fast static content while keeping data relatively fresh without rebuilding the entire application. ISR is particularly useful for blogs, e-commerce sites, and content-heavy applications where data changes occasionally.",
+                    "type": "text",
+                    "id": 12,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using revalidation for ISR",
+                    "code": "\nexport const revalidate = 60;\n\nexport default async function Page() {\n  const res = await fetch('https://api.example.com/posts');\n  const posts = await res.json();\n\n  return <div>{posts.length}</div>;\n}"
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "Que": [
+                {
+                    "q": "Q13 : What is hydration in Next.js?",
+                    "a": "Hydration is the process where React attaches event listeners and interactive functionality to HTML that was already rendered on the server. Initially, users receive fully rendered HTML for faster page display. Once JavaScript loads in the browser, React hydrates the page by connecting components to the existing DOM and enabling interactivity. Hydration provides the benefits of fast initial rendering while maintaining the dynamic behavior expected from modern React applications.",
+                    "type": "text",
+                    "id": 13,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Server Rendering": "HTML is generated before reaching the browser.",
+                        "Fast Initial Load": "Users see content immediately.",
+                        "React Activation": "JavaScript attaches event handlers.",
+                        "Interactivity": "Buttons, forms, and events become functional.",
+                        "User Experience": "Combines performance and interactivity."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "Que": [
+                {
+                    "q": "Q14 : What is the App Router in Next.js?",
+                    "a": "The App Router is the modern routing system introduced in Next.js 13 and later versions. It is based on the app directory and supports advanced features such as layouts, nested routing, loading states, error boundaries, server components, and streaming. The App Router provides a more powerful and flexible architecture compared to the older Pages Router, enabling developers to build scalable applications with better performance and improved developer experience.",
+                    "type": "text",
+                    "id": 14,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Uses app Directory": "Routes are created inside the app folder.",
+                        "Supports Layouts": "Shared UI across routes.",
+                        "Server Components": "Built-in support for server rendering.",
+                        "Streaming": "Progressive content loading.",
+                        "Error Handling": "Dedicated error and loading files."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "Que": [
+                {
+                    "q": "Q15 : Difference between App Router and Pages Router?",
+                    "a": "The App Router and Pages Router are two routing systems available in Next.js. The Pages Router uses the pages directory and relies primarily on client components and traditional data fetching methods. The App Router uses the app directory and introduces modern capabilities such as server components, layouts, streaming, and enhanced data fetching. For new projects, the App Router is generally recommended because it provides more flexibility, better performance, and support for the latest Next.js features.",
+                    "type": "text",
+                    "id": 15,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "App Router"
+                        },
+                        {
+                            "label": "Pages Router"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Uses app directory"
+                                },
+                                {
+                                    "col": "Uses pages directory"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Supports Server Components"
+                                },
+                                {
+                                    "col": "Primarily Client Components"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Supports layouts and templates"
+                                },
+                                {
+                                    "col": "No built-in layouts"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Modern data fetching model"
+                                },
+                                {
+                                    "col": "Uses getServerSideProps and getStaticProps"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Recommended for new projects"
+                                },
+                                {
+                                    "col": "Legacy routing approach"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "Que": [
+                {
+                    "q": "Q16 : What is file-based routing?",
+                    "a": "File-based routing is a routing system where routes are automatically generated based on the project's folder and file structure. In Next.js, developers do not need to manually configure routes. Instead, creating a folder or file inside the app or pages directory automatically creates a corresponding URL route. This approach simplifies routing, reduces boilerplate code, and makes application structure easier to understand and maintain.",
+                    "type": "text",
+                    "id": 16,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "File structure creates routes automatically",
+                    "code": "\napp/\n├── page.js        -> /\n├── about/\n│   └── page.js    -> /about\n└── contact/\n    └── page.js    -> /contact"
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "Que": [
+                {
+                    "q": "Q17 : How do you create routes in Next.js?",
+                    "a": "Routes in Next.js are created by adding folders and page.js files inside the app directory. Each folder represents a route segment, and the page.js file defines the UI for that route. When the application runs, Next.js automatically maps the folder structure to URLs. This approach eliminates the need for route configuration files and keeps routing closely aligned with the project's file organization.",
+                    "type": "text",
+                    "id": 17,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Creating an about page route",
+                    "code": "\napp/\n└── about/\n    └── page.js"
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "Que": [
+                {
+                    "q": "Q18 : What is page.js?",
+                    "a": "page.js is a special file in the App Router that defines the user interface for a route. Every route must contain a page.js file to be accessible through a URL. The component exported from page.js becomes the main content displayed when users visit that route. It serves as the entry point for route-specific UI and can contain both static and dynamic content.",
+                    "type": "text",
+                    "id": 18,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Basic page.js file",
+                    "code": "\nexport default function AboutPage() {\n  return <h1>About Us</h1>;\n}"
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "Que": [
+                {
+                    "q": "Q19 : What is layout.js?",
+                    "a": "layout.js is a special file used to create shared layouts across multiple routes. Components defined inside a layout remain persistent while navigating between pages, preventing unnecessary re-renders. Layouts are commonly used for navigation bars, sidebars, headers, footers, and other UI elements that should remain consistent across sections of an application. Nested layouts can also be created for different route groups.",
+                    "type": "text",
+                    "id": 19,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Creating a shared layout",
+                    "code": "\nexport default function Layout({ children }) {\n  return (\n    <div>\n      <nav>Navbar</nav>\n      {children}\n    </div>\n  );\n}"
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "Que": [
+                {
+                    "q": "Q20 : What is template.js?",
+                    "a": "template.js is similar to layout.js but behaves differently during navigation. Unlike layouts, templates create a new component instance whenever a user navigates between routes. This means component state is reset on each navigation. Templates are useful when developers need fresh state, re-executed effects, or route-specific initialization logic every time a page is visited.",
+                    "type": "text",
+                    "id": 20,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "layout.js"
+                        },
+                        {
+                            "label": "template.js"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Persists across navigation"
+                                },
+                                {
+                                    "col": "Recreates on navigation"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Maintains component state"
+                                },
+                                {
+                                    "col": "Resets component state"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Better for shared UI"
+                                },
+                                {
+                                    "col": "Better for fresh rendering"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "Que": [
+                {
+                    "q": "Q21 : What is loading.js?",
+                    "a": "loading.js is a special file in the Next.js App Router used to display a loading UI while route segments, components, or data are being loaded. It works automatically with React Suspense and improves user experience by showing immediate feedback instead of a blank screen. When users navigate to a route that requires data fetching or rendering, Next.js displays the loading UI until the page is ready. This helps create smoother transitions and makes applications feel more responsive.",
+                    "type": "text",
+                    "id": 21,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Creating a loading state",
+                    "code": "\nexport default function Loading() {\n  return <h2>Loading...</h2>;\n}"
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "Que": [
+                {
+                    "q": "Q22 : What is error.js?",
+                    "a": "error.js is a special file in the Next.js App Router used to handle runtime errors within a route segment. It acts as an error boundary and catches unexpected errors that occur while rendering components, fetching data, or executing server-side logic. Instead of crashing the entire application, Next.js displays the UI defined in error.js. This improves reliability and provides users with meaningful feedback when something goes wrong.",
+                    "type": "text",
+                    "id": 22,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Basic error boundary page",
+                    "code": "\n'use client';\n\nexport default function Error({ error, reset }) {\n  return (\n    <div>\n      <h2>Something went wrong!</h2>\n      <button onClick={() => reset()}>\n        Try Again\n      </button>\n    </div>\n  );\n}"
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "Que": [
+                {
+                    "q": "Q23 : What is not-found.js?",
+                    "a": "not-found.js is a special file used to display a custom 404 page when a requested route or resource cannot be found. Instead of showing the browser's default error page, Next.js renders the UI defined inside not-found.js. This allows developers to create user-friendly error pages with navigation links, search options, or helpful information. It improves user experience and helps users recover from invalid URLs more easily.",
+                    "type": "text",
+                    "id": 23,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Custom 404 page",
+                    "code": "\nexport default function NotFound() {\n  return <h1>404 - Page Not Found</h1>;\n}"
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "Que": [
+                {
+                    "q": "Q24 : What are nested routes?",
+                    "a": "Nested routes are routes that exist inside other route segments. In Next.js, nested routes are created by placing folders inside other folders within the app directory. This structure allows developers to organize related pages logically and share layouts across groups of routes. Nested routing makes large applications easier to maintain and enables hierarchical navigation patterns commonly used in dashboards, admin panels, and enterprise applications.",
+                    "type": "text",
+                    "id": 24,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Nested route structure",
+                    "code": "\napp/\n└── dashboard/\n    ├── page.js\n    └── users/\n        └── page.js\n\n/dashboard\n/dashboard/users"
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "Que": [
+                {
+                    "q": "Q25 : What are dynamic routes?",
+                    "a": "Dynamic routes allow URLs to contain variable values that are determined at runtime. They are useful for displaying content such as user profiles, blog posts, product pages, or order details where the route depends on specific identifiers. In Next.js, dynamic routes are created using square brackets around the folder name. The dynamic value becomes available through route parameters and can be used to fetch corresponding data.",
+                    "type": "text",
+                    "id": 25,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Dynamic route example",
+                    "code": "\napp/\n└── users/\n    └── [id]/\n        └── page.js\n\n/users/1\n/users/25\n/users/100"
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "Que": [
+                {
+                    "q": "Q26 : What are catch-all routes?",
+                    "a": "Catch-all routes are dynamic routes that can match multiple URL segments instead of just one. They are useful when the number of route segments is unknown or variable. Common use cases include documentation sites, category hierarchies, and nested content structures. Next.js creates catch-all routes using three dots inside square brackets. The matched segments are returned as an array, allowing developers to process each part of the URL dynamically.",
+                    "type": "text",
+                    "id": 26,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Catch-all route example",
+                    "code": "\napp/\n└── docs/\n    └── [...slug]/\n        └── page.js\n\n/docs/react\n/docs/react/hooks\n/docs/react/hooks/useState"
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "Que": [
+                {
+                    "q": "Q27 : What are optional catch-all routes?",
+                    "a": "Optional catch-all routes are similar to catch-all routes but can also match the parent route when no additional segments are provided. This provides greater flexibility because the same route can handle both the base path and nested paths. They are created using double square brackets around the catch-all segment. Optional catch-all routes are commonly used for documentation systems, category pages, and content hierarchies with optional nesting levels.",
+                    "type": "text",
+                    "id": 27,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "Optional catch-all route example",
+                    "code": "\napp/\n└── docs/\n    └── [[...slug]]/\n        └── page.js\n\n/docs\n/docs/react\n/docs/react/hooks"
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "Que": [
+                {
+                    "q": "Q28 : What is Link component?",
+                    "a": "The Link component is a built-in Next.js component used for client-side navigation between pages. Unlike traditional anchor tags, the Link component enables faster page transitions by prefetching linked pages in the background. This reduces navigation delays and improves user experience. The Link component also preserves application state and avoids full page reloads, making navigation feel smoother and more responsive.",
+                    "type": "text",
+                    "id": 28,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using Link component",
+                    "code": "\nimport Link from 'next/link';\n\nexport default function Home() {\n  return (\n    <Link href='/about'>\n      About Us\n    </Link>\n  );\n}"
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "Que": [
+                {
+                    "q": "Q29 : Difference between Link and anchor tag?",
+                    "a": "Both Link and anchor tags are used for navigation, but they behave differently in Next.js applications. The Link component performs client-side navigation, which avoids full page reloads and improves performance. Traditional anchor tags trigger a complete page refresh and request a new document from the server. For internal navigation within a Next.js application, the Link component is generally preferred because it provides faster transitions and a better user experience.",
+                    "type": "text",
+                    "id": 29,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Link Component"
+                        },
+                        {
+                            "label": "Anchor Tag (<a>)"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Client-side navigation"
+                                },
+                                {
+                                    "col": "Full page reload"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Prefetches routes"
+                                },
+                                {
+                                    "col": "No prefetching"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Better performance"
+                                },
+                                {
+                                    "col": "Slower navigation"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Recommended for internal routes"
+                                },
+                                {
+                                    "col": "Commonly used for external links"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "Que": [
+                {
+                    "q": "Q30 : What is programmatic navigation?",
+                    "a": "Programmatic navigation refers to changing routes through JavaScript code instead of user interaction with links. In Next.js, developers can use the router object to navigate users after specific events such as form submissions, authentication, or API responses. This approach allows applications to control navigation dynamically based on business logic. Programmatic navigation is commonly used in login systems, checkout flows, dashboards, and other interactive workflows.",
+                    "type": "text",
+                    "id": 30,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Programmatic navigation using useRouter",
+                    "code": "\n'use client';\n\nimport { useRouter } from 'next/navigation';\n\nexport default function Login() {\n  const router = useRouter();\n\n  const handleLogin = () => {\n    router.push('/dashboard');\n  };\n\n  return <button onClick={handleLogin}>Login</button>;\n}"
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "Que": [
+                {
+                    "q": "Q31 : What is useRouter in Next.js?",
+                    "a": "useRouter is a hook provided by Next.js that allows developers to access routing functionality programmatically. It can be used to navigate between pages, access route parameters, refresh pages, replace routes, and inspect the current URL. The hook is commonly used in client components where navigation depends on user actions such as form submissions, authentication, or button clicks. It provides a convenient way to control application navigation directly from JavaScript code.",
+                    "type": "text",
+                    "id": 31,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using useRouter hook",
+                    "code": "\n'use client';\n\nimport { useRouter } from 'next/navigation';\n\nexport default function Home() {\n  const router = useRouter();\n\n  return (\n    <button onClick={() => router.push('/about')}>\n      Go To About\n    </button>\n  );\n}"
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "Que": [
+                {
+                    "q": "Q32 : What are Server Components in Next.js?",
+                    "a": "Server Components are React components that run exclusively on the server. They allow developers to fetch data, access backend resources, and perform server-side operations without sending unnecessary JavaScript to the browser. By reducing client-side JavaScript bundles, Server Components improve performance, page load speed, and SEO. In the App Router, components are Server Components by default unless explicitly marked with the 'use client' directive.",
+                    "type": "text",
+                    "id": 32,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Runs on Server": "Executed only on the server environment.",
+                        "Smaller Bundles": "Reduces JavaScript sent to browsers.",
+                        "Direct Data Access": "Can fetch data without API routes.",
+                        "Better Performance": "Improves loading speed and SEO.",
+                        "Default Behavior": "Components in App Router are server components by default."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "Que": [
+                {
+                    "q": "Q33 : What are Client Components in Next.js?",
+                    "a": "Client Components are React components that execute in the browser and support interactivity features such as event handlers, state management, lifecycle hooks, and browser APIs. To create a Client Component, developers must add the 'use client' directive at the top of the file. Client Components are necessary when building interactive user interfaces that require user input, animations, local state, or browser-specific functionality.",
+                    "type": "text",
+                    "id": 33,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Creating a Client Component",
+                    "code": "\n'use client';\n\nimport { useState } from 'react';\n\nexport default function Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <button onClick={() => setCount(count + 1)}>\n      {count}\n    </button>\n  );\n}"
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "Que": [
+                {
+                    "q": "Q34 : Difference between Server Components and Client Components?",
+                    "a": "Server Components execute on the server and are optimized for performance and data fetching, while Client Components execute in the browser and provide interactivity. Server Components reduce bundle size because their code is not sent to the client, whereas Client Components include JavaScript that runs in the browser. Understanding the distinction is important for building efficient Next.js applications that balance performance and user experience.",
+                    "type": "text",
+                    "id": 34,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Server Components"
+                        },
+                        {
+                            "label": "Client Components"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Run on server"
+                                },
+                                {
+                                    "col": "Run in browser"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Can fetch data directly"
+                                },
+                                {
+                                    "col": "Usually fetch through APIs"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "No useState or useEffect"
+                                },
+                                {
+                                    "col": "Supports hooks"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Better performance"
+                                },
+                                {
+                                    "col": "Supports interactivity"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Smaller bundle size"
+                                },
+                                {
+                                    "col": "Larger bundle size"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "Que": [
+                {
+                    "q": "Q35 : What is the 'use client' directive?",
+                    "a": "The 'use client' directive is a special instruction placed at the top of a file to mark a component as a Client Component. It tells Next.js that the component should be rendered and executed in the browser. This directive is required when using React hooks such as useState, useEffect, event handlers, browser APIs, or any functionality that depends on client-side execution.",
+                    "type": "text",
+                    "id": 35,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using use client directive",
+                    "code": "\n'use client';\n\nimport { useState } from 'react';\n\nexport default function Example() {\n  const [value, setValue] = useState('');\n\n  return <input onChange={(e) => setValue(e.target.value)} />;\n}"
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "Que": [
+                {
+                    "q": "Q36 : How do you fetch data in Server Components?",
+                    "a": "Data fetching in Server Components is straightforward because they execute on the server. Developers can directly use the fetch API or database queries without creating separate API endpoints. Since data fetching happens before rendering, users receive fully rendered content, improving SEO and reducing loading delays. This approach simplifies application architecture and reduces unnecessary client-server communication.",
+                    "type": "text",
+                    "id": 36,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Fetching data inside a Server Component",
+                    "code": "\nexport default async function Posts() {\n  const res = await fetch('https://jsonplaceholder.typicode.com/posts');\n  const posts = await res.json();\n\n  return <div>{posts.length} Posts</div>;\n}"
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "Que": [
+                {
+                    "q": "Q37 : What is streaming in Next.js?",
+                    "a": "Streaming is a rendering technique that allows parts of a page to be sent to the browser as soon as they become available instead of waiting for the entire page to finish rendering. This improves perceived performance because users can start interacting with content earlier. Next.js integrates streaming with React Suspense, enabling progressive loading experiences and reducing the waiting time for complex pages.",
+                    "type": "text",
+                    "id": 37,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Faster Perceived Loading": "Users see content earlier.",
+                        "Progressive Rendering": "Page loads in chunks.",
+                        "Works with Suspense": "Integrates with React Suspense.",
+                        "Improved UX": "Reduces waiting time.",
+                        "Efficient Rendering": "Does not block the entire page."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "Que": [
+                {
+                    "q": "Q38 : What is React Suspense in Next.js?",
+                    "a": "React Suspense is a feature that allows components to wait for asynchronous operations such as data fetching before rendering. While the component is loading, a fallback UI can be displayed. Next.js uses Suspense extensively for streaming, loading states, and asynchronous Server Components. It helps developers create smoother user experiences by displaying meaningful placeholders while data is being fetched.",
+                    "type": "text",
+                    "id": 38,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using Suspense",
+                    "code": "\nimport { Suspense } from 'react';\n\n<Suspense fallback={<p>Loading...</p>}>\n  <Posts />\n</Suspense>"
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "Que": [
+                {
+                    "q": "Q39 : What is caching in Next.js?",
+                    "a": "Caching in Next.js is a mechanism that stores previously generated content or fetched data so that future requests can be served faster. Next.js automatically applies caching strategies for server rendering, static generation, and data fetching. Effective caching improves application performance, reduces server load, decreases response times, and provides a better user experience while maintaining data consistency when configured correctly.",
+                    "type": "text",
+                    "id": 39,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Improves Performance": "Serves content faster.",
+                        "Reduces Server Load": "Avoids repeated computations.",
+                        "Supports Data Fetching": "Caches API responses.",
+                        "Works with ISR": "Combines caching and regeneration.",
+                        "Enhances User Experience": "Reduces waiting times."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "Que": [
+                {
+                    "q": "Q40 : What is revalidation in Next.js?",
+                    "a": "Revalidation is the process of updating cached static content after a specified interval. It is a core feature of Incremental Static Regeneration (ISR). Instead of rebuilding the entire application whenever content changes, Next.js regenerates only the affected pages in the background. This allows applications to maintain the performance benefits of static pages while ensuring that users receive reasonably up-to-date content.",
+                    "type": "text",
+                    "id": 40,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using revalidation",
+                    "code": "\nexport const revalidate = 120;\n\nexport default async function Page() {\n  const data = await fetch('https://api.example.com/data');\n\n  return <div>Content</div>;\n}"
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "Que": [
+                {
+                    "q": "Q41 : What are API Routes in Next.js?",
+                    "a": "API Routes allow developers to create backend endpoints directly inside a Next.js application without needing a separate server. They can handle HTTP requests such as GET, POST, PUT, PATCH, and DELETE, making them useful for authentication, database operations, form submissions, and third-party integrations. API Routes help keep frontend and backend logic within the same project, simplifying development and deployment while leveraging the server-side capabilities of Next.js.",
+                    "type": "text",
+                    "id": 41,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Creating a GET API Route",
+                    "code": "\nexport async function GET() {\n  return Response.json({ message: 'Hello World' });\n}"
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "Que": [
+                {
+                    "q": "Q42 : How do you create API Routes in Next.js?",
+                    "a": "In the App Router, API Routes are created inside the app/api directory. Each route contains a route.js or route.ts file where HTTP methods such as GET, POST, PUT, DELETE, and PATCH are exported as functions. When requests are sent to the corresponding endpoint, Next.js automatically executes the appropriate handler. This approach provides a clean and organized way to build backend functionality directly within a Next.js application.",
+                    "type": "text",
+                    "id": 42,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "text",
+                    "simple_text": "API route folder structure",
+                    "code": "\napp/\n└── api/\n    └── users/\n        └── route.ts\n\nEndpoint:\n/api/users"
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "Que": [
+                {
+                    "q": "Q43 : What HTTP methods can be used in Next.js API Routes?",
+                    "a": "Next.js API Routes support all standard HTTP methods including GET, POST, PUT, PATCH, DELETE, HEAD, and OPTIONS. Each method serves a specific purpose. GET retrieves data, POST creates new resources, PUT updates existing resources, PATCH partially updates resources, and DELETE removes resources. Supporting multiple HTTP methods allows developers to build RESTful APIs directly within Next.js applications.",
+                    "type": "text",
+                    "id": 43,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Method"
+                        },
+                        {
+                            "label": "Purpose"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "GET"
+                                },
+                                {
+                                    "col": "Retrieve data"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "POST"
+                                },
+                                {
+                                    "col": "Create new resource"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "PUT"
+                                },
+                                {
+                                    "col": "Update entire resource"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "PATCH"
+                                },
+                                {
+                                    "col": "Partial update"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "DELETE"
+                                },
+                                {
+                                    "col": "Remove resource"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "Que": [
+                {
+                    "q": "Q44 : What are Server Actions in Next.js?",
+                    "a": "Server Actions are functions that execute on the server and can be called directly from forms, buttons, or client components. They eliminate the need for creating separate API endpoints for many operations such as form handling, database updates, and server-side business logic. Server Actions improve developer productivity, reduce boilerplate code, and provide a more streamlined way of performing server-side operations in modern Next.js applications.",
+                    "type": "text",
+                    "id": 44,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Runs on Server": "Code executes securely on the server.",
+                        "No API Route Required": "Can replace simple endpoints.",
+                        "Form Integration": "Works directly with forms.",
+                        "Database Access": "Can interact with databases safely.",
+                        "Less Boilerplate": "Reduces unnecessary code."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "Que": [
+                {
+                    "q": "Q45 : What is the 'use server' directive?",
+                    "a": "The 'use server' directive is used to mark a function or file as a Server Action. It tells Next.js that the code must execute on the server rather than in the browser. This is particularly useful when performing secure operations such as database queries, authentication checks, or interacting with private APIs. By keeping sensitive logic on the server, developers can improve security and prevent exposure of confidential information.",
+                    "type": "text",
+                    "id": 45,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using a Server Action",
+                    "code": "\n'use server';\n\nexport async function createUser(formData: FormData) {\n  const name = formData.get('name');\n  console.log(name);\n}"
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "Que": [
+                {
+                    "q": "Q46 : What is middleware in Next.js?",
+                    "a": "Middleware is code that runs before a request reaches a route or page. It allows developers to intercept requests and perform operations such as authentication, authorization, redirects, URL rewriting, logging, localization, and security checks. Middleware executes at the edge, making it highly efficient and suitable for handling request-level logic before rendering occurs. It helps centralize common application behavior and improves maintainability.",
+                    "type": "text",
+                    "id": 46,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Authentication": "Protect routes from unauthorized users.",
+                        "Redirects": "Send users to different pages.",
+                        "Localization": "Handle language preferences.",
+                        "Logging": "Track incoming requests.",
+                        "Security": "Perform request validation."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "Que": [
+                {
+                    "q": "Q47 : How do you create middleware in Next.js?",
+                    "a": "Middleware is created using a middleware.js or middleware.ts file at the root of a Next.js project. Inside this file, developers define logic that executes before requests are processed. Middleware can inspect requests, modify responses, redirect users, or rewrite URLs. It is especially useful for implementing authentication, access control, localization, and request filtering without modifying individual routes.",
+                    "type": "text",
+                    "id": 47,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Simple middleware example",
+                    "code": "\nimport { NextResponse } from 'next/server';\n\nexport function middleware(request) {\n  console.log('Request Received');\n  return NextResponse.next();\n}"
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "Que": [
+                {
+                    "q": "Q48 : What is image optimization in Next.js?",
+                    "a": "Image optimization is a built-in Next.js feature that automatically improves image delivery and performance. It resizes images, converts them to modern formats, lazy loads them when needed, and serves appropriately sized images based on the user's device. These optimizations reduce bandwidth consumption, improve page speed, and enhance user experience. The Next.js Image component provides an easy way to access these benefits without manual configuration.",
+                    "type": "text",
+                    "id": 48,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Automatic Resizing": "Serves optimal image dimensions.",
+                        "Lazy Loading": "Loads images only when needed.",
+                        "Modern Formats": "Supports efficient image formats.",
+                        "Better Performance": "Improves page speed.",
+                        "Reduced Bandwidth": "Optimizes network usage."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "Que": [
+                {
+                    "q": "Q49 : What is the Image component in Next.js?",
+                    "a": "The Image component is a specialized component provided by Next.js for displaying optimized images. It automatically handles resizing, lazy loading, responsive behavior, and performance enhancements. Compared to a standard HTML img tag, the Image component significantly improves loading speed and Core Web Vitals. It is recommended for most image rendering scenarios in Next.js applications to achieve better performance and user experience.",
+                    "type": "text",
+                    "id": 49,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Using the Image component",
+                    "code": "\nimport Image from 'next/image';\n\n<Image\n  src='/profile.png'\n  alt='Profile'\n  width={300}\n  height={300}\n/>"
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "Que": [
+                {
+                    "q": "Q50 : Difference between Image component and img tag?",
+                    "a": "Both the Image component and the traditional img tag display images, but the Next.js Image component provides built-in optimizations that improve performance and user experience. It automatically handles responsive images, lazy loading, image resizing, and modern formats. The standard img tag offers more direct control but requires developers to manually implement performance optimizations. For most Next.js projects, the Image component is the recommended choice.",
+                    "type": "text",
+                    "id": 50,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Image Component"
+                        },
+                        {
+                            "label": "img Tag"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Automatic optimization"
+                                },
+                                {
+                                    "col": "No optimization"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Lazy loading by default"
+                                },
+                                {
+                                    "col": "Manual lazy loading"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Responsive image support"
+                                },
+                                {
+                                    "col": "Manual implementation"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Improves Core Web Vitals"
+                                },
+                                {
+                                    "col": "No built-in improvements"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Recommended for Next.js"
+                                },
+                                {
+                                    "col": "Basic HTML solution"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "Que": [
+                {
+                    "q": "Q51 : What is metadata in Next.js?",
+                    "a": "Metadata in Next.js refers to information about a web page that helps browsers, search engines, and social media platforms understand the content of the page. Metadata includes elements such as page title, description, keywords, Open Graph tags, Twitter cards, icons, and viewport settings. In the App Router, Next.js provides a built-in Metadata API that allows developers to define SEO-related information declaratively. Proper metadata improves search engine rankings, social sharing previews, accessibility, and overall discoverability of a website.",
+                    "type": "text",
+                    "id": 51,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Title": "Defines the page title shown in browser tabs.",
+                        "Description": "Provides a summary for search engines.",
+                        "Open Graph": "Controls social media previews.",
+                        "Twitter Cards": "Improves Twitter sharing appearance.",
+                        "SEO": "Helps improve search engine visibility."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "Que": [
+                {
+                    "q": "Q52 : How do you define metadata in Next.js?",
+                    "a": "In the App Router, metadata is defined using a special metadata object exported from a page or layout file. Next.js automatically converts this object into appropriate HTML meta tags. Developers can specify titles, descriptions, icons, Open Graph properties, robots directives, and many other SEO-related settings. This centralized approach simplifies SEO management and ensures consistency across pages. Dynamic metadata can also be generated based on fetched data for content-driven applications.",
+                    "type": "text",
+                    "id": 52,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Defining metadata in a page",
+                    "code": "\nexport const metadata = {\n  title: 'Next.js Tutorial',\n  description: 'Learn Next.js from scratch'\n};\n\nexport default function Page() {\n  return <h1>Welcome</h1>;\n}"
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "Que": [
+                {
+                    "q": "Q53 : What is generateMetadata() in Next.js?",
+                    "a": "generateMetadata() is a special asynchronous function used to generate metadata dynamically. Unlike static metadata objects, this function can fetch data from APIs, databases, or other sources before returning metadata values. It is commonly used for blog posts, product pages, user profiles, and other dynamic content where page titles and descriptions depend on route parameters or fetched data. This capability ensures accurate SEO information for dynamically generated pages.",
+                    "type": "text",
+                    "id": 53,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "typescript",
+                    "simple_text": "Generating metadata dynamically",
+                    "code": "\nexport async function generateMetadata({ params }) {\n  return {\n    title: `Post ${params.id}`,\n    description: 'Dynamic post page'\n  };\n}"
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "Que": [
+                {
+                    "q": "Q54 : What is SEO in Next.js?",
+                    "a": "SEO (Search Engine Optimization) is the process of improving a website's visibility in search engine results. Next.js provides several built-in SEO advantages including Server-Side Rendering, Static Site Generation, Metadata API, image optimization, structured routing, and fast page loading. These features help search engine crawlers understand content more effectively while improving user experience. As a result, Next.js applications often achieve better rankings and discoverability compared to traditional client-side rendered applications.",
+                    "type": "text",
+                    "id": 54,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Server Rendering": "Search engines receive complete HTML.",
+                        "Metadata API": "Simplifies SEO configuration.",
+                        "Fast Performance": "Improves ranking factors.",
+                        "Image Optimization": "Enhances page speed.",
+                        "Structured Routing": "Creates SEO-friendly URLs."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "Que": [
+                {
+                    "q": "Q55 : Why is Next.js considered SEO friendly?",
+                    "a": "Next.js is considered SEO friendly because it can render content on the server before sending it to the browser. Search engines can immediately access meaningful HTML content without waiting for JavaScript execution. Features such as Server-Side Rendering, Static Site Generation, Metadata API, optimized images, clean URLs, and fast performance further contribute to improved search engine visibility. These capabilities make Next.js a preferred choice for content-heavy websites, blogs, e-commerce stores, and marketing applications.",
+                    "type": "text",
+                    "id": 55,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Next.js Feature"
+                        },
+                        {
+                            "label": "SEO Benefit"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "SSR"
+                                },
+                                {
+                                    "col": "Search engines see rendered content"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "SSG"
+                                },
+                                {
+                                    "col": "Fast page delivery"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Metadata API"
+                                },
+                                {
+                                    "col": "Better indexing"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Image Optimization"
+                                },
+                                {
+                                    "col": "Improved performance scores"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Clean Routing"
+                                },
+                                {
+                                    "col": "User-friendly URLs"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "56",
+            "Que": [
+                {
+                    "q": "Q56 : What is next.config.js?",
+                    "a": "next.config.js is the primary configuration file used to customize the behavior of a Next.js application. It allows developers to configure image domains, redirects, rewrites, environment variables, webpack settings, experimental features, build optimizations, and many other project-level settings. By centralizing configuration in a single file, Next.js makes it easier to manage application behavior across development and production environments.",
+                    "type": "text",
+                    "id": 56,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Basic next.config.js file",
+                    "code": "\n/** @type {import('next').NextConfig} */\nconst nextConfig = {\n  reactStrictMode: true\n};\n\nmodule.exports = nextConfig;"
+                }
+            ]
+        },
+        {
+            "id": "57",
+            "Que": [
+                {
+                    "q": "Q57 : What are environment variables in Next.js?",
+                    "a": "Environment variables are configuration values stored outside the application code. They are commonly used for API keys, database URLs, authentication secrets, and environment-specific settings. Next.js supports environment variables through .env files and automatically loads them during development and production. Using environment variables improves security, simplifies deployment, and prevents sensitive information from being hardcoded into source code repositories.",
+                    "type": "text",
+                    "id": 57,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "list",
+                    "isListKeyRequired": true,
+                    "list": {
+                        "Security": "Keeps sensitive values out of source code.",
+                        "Flexibility": "Supports different environments.",
+                        "API Keys": "Stores third-party credentials.",
+                        "Database URLs": "Manages connection strings.",
+                        "Deployment": "Simplifies configuration management."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "58",
+            "Que": [
+                {
+                    "q": "Q58 : What is the difference between NEXT_PUBLIC and normal environment variables?",
+                    "a": "Next.js distinguishes between server-only and client-accessible environment variables. Variables prefixed with NEXT_PUBLIC are exposed to browser-side JavaScript and can be accessed by client components. Normal environment variables remain available only on the server and are not included in client bundles. This separation helps protect sensitive information while still allowing safe configuration values to be accessible in frontend code.",
+                    "type": "text",
+                    "id": 58,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "NEXT_PUBLIC Variable"
+                        },
+                        {
+                            "label": "Normal Environment Variable"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Accessible in browser"
+                                },
+                                {
+                                    "col": "Server only"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Included in client bundle"
+                                },
+                                {
+                                    "col": "Not exposed to clients"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Safe for public values"
+                                },
+                                {
+                                    "col": "Used for secrets"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Can be used in client components"
+                                },
+                                {
+                                    "col": "Used in server components"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "59",
+            "Que": [
+                {
+                    "q": "Q59 : What are redirects in Next.js?",
+                    "a": "Redirects automatically send users from one URL to another. They are commonly used when pages are moved, URLs change, authentication is required, or legacy routes need to be preserved. Next.js supports redirects through next.config.js, middleware, and server-side logic. Proper redirect management helps maintain SEO rankings, prevents broken links, and ensures users always reach the correct destination.",
+                    "type": "text",
+                    "id": 59,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "simple_text": "Defining a redirect",
+                    "code": "\nasync redirects() {\n  return [\n    {\n      source: '/old-page',\n      destination: '/new-page',\n      permanent: true\n    }\n  ];\n}"
+                }
+            ]
+        },
+        {
+            "id": "60",
+            "Que": [
+                {
+                    "q": "Q60 : What are rewrites in Next.js?",
+                    "a": "Rewrites allow requests to be mapped to different destinations without changing the URL visible to users. Unlike redirects, rewrites happen internally and the browser continues displaying the original URL. They are useful for proxying API requests, hiding backend services, creating friendly URLs, and integrating external systems. Rewrites provide flexibility while maintaining a seamless user experience and preserving URL structures.",
+                    "type": "text",
+                    "id": 60,
+                    "playButton": true,
+                    "pauseButton": false
+                },
+                {
+                    "type": "table",
+                    "header": [
+                        {
+                            "label": "Redirect"
+                        },
+                        {
+                            "label": "Rewrite"
+                        }
+                    ],
+                    "column": [
+                        {
+                            "row": [
+                                {
+                                    "col": "Changes browser URL"
+                                },
+                                {
+                                    "col": "Keeps original URL"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Visible to users"
+                                },
+                                {
+                                    "col": "Internal routing"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Used for URL changes"
+                                },
+                                {
+                                    "col": "Used for request mapping"
+                                }
+                            ]
+                        },
+                        {
+                            "row": [
+                                {
+                                    "col": "Browser receives new location"
+                                },
+                                {
+                                    "col": "Browser sees same URL"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

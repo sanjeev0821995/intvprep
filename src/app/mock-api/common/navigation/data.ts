@@ -21,6 +21,17 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 // },
             },
             {
+                id: 'agenticAI.basic',
+                title: 'Agentic AI Interview Questions',
+                type: 'basic',
+                link: '/agenticAI-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
                 id: 'angular.basic',
                 title: 'Angular Interview Question',
                 type: 'basic',
@@ -28,18 +39,143 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 link: '/angular-interview-questions',
             },
             {
-                id: 'react.basic',
-                title: 'ReactJS Interview Question',
+                id: 'aws.basic',
+                title: 'AWS Interview Questions',
                 type: 'basic',
+                link: '/aws-interview-questions',
                 icon: 'heroicons_outline:code',
-                link: '/react-interview-questions',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
             {
-                id: 'vue.basic',
-                title: 'VueJS Interview Question',
+                id: 'c#.basic',
+                title: 'C# Interview Questions',
                 type: 'basic',
+                link: '/c-sharp-interview-questions',
                 icon: 'heroicons_outline:code',
-                link: '/vuejs-interview-questions',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'angular.css',
+                title: 'CSS Interview Questions',
+                type: 'basic',
+                link: '/css-interview-questions',
+                icon: 'heroicons_outline:code',
+                // badge: {
+                //     title  : 'New',
+                //     classes: 'px-2 bg-yellow-300 text-black rounded-full'
+                // }
+            },
+            {
+                id: 'data.science.basic',
+                title: 'Data Science Interview Questions',
+                type: 'basic',
+                link: '/datascience-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'devops.basic',
+                title: 'Devops Interview Questions',
+                type: 'basic',
+                link: '/devops-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'docker.basic',
+                title: 'Docker Interview Questions',
+                type: 'basic',
+                link: '/docker-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'express.basics',
+                title: 'ExpressJS Interview Questions',
+                type: 'basic',
+                link: '/express-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'generativeAI.basic',
+                title: 'Generative AI Interview Questions',
+                type: 'basic',
+                link: '/generativeAI-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'angular.git',
+                title: 'Git Interview Questions',
+                type: 'basic',
+                link: '/git-interview-questions',
+                icon: 'heroicons_outline:code',
+            },
+            {
+                id: 'angular.HTML',
+                title: 'HTML Interview Questions',
+                type: 'basic',
+                link: '/html-interview-questions',
+                icon: 'heroicons_outline:code',
+                // badge: {
+                //     title  : 'New',
+                //     classes: 'px-2 bg-yellow-300 text-black rounded-full'
+                // }
+            },
+            {
+                id: 'java.basic',
+                title: 'Java Interview Questions',
+                type: 'basic',
+                link: '/java-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'java.microservices',
+                title: 'Java Micro-services Interview Questions',
+                type: 'basic',
+                link: '/java-microservices-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'java.multithreading',
+                title: 'Java Multi-threading Interview Questions',
+                type: 'basic',
+                link: '/java-multithreading-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
             },
             {
                 id: 'javascript.basic',
@@ -72,6 +208,196 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 icon: 'heroicons_outline:code',
                 link: '/weird-part-of-javascript',
+            },
+            {
+                id: 'jenkins.basic',
+                title: 'Jenkins Interview Questions',
+                type: 'basic',
+                link: '/jenkins-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'mongoDB.basic',
+                title: 'MongoDB Interview Questions',
+                type: 'basic',
+                link: '/mongoDB-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'mySQL.basic',
+                title: 'MySQL Interview Questions',
+                type: 'basic',
+                link: '/mySQL-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'nextJS.basics',
+                title: 'NextJS Interview Questions',
+                type: 'basic',
+                link: '/nextJS-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'node.basics',
+                title: 'NodeJS Interview Questions',
+                type: 'basic',
+                link: '/nodejs-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'playwright.basic',
+                title: 'Playwright Interview Questions',
+                type: 'basic',
+                link: '/playwright-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'postgreSQL.basic',
+                title: 'PostgreSQL Interview Questions',
+                type: 'basic',
+                link: '/postgreSQL-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'python.basic',
+                title: 'Python Interview Questions',
+                type: 'basic',
+                link: '/python-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'react.basic',
+                title: 'ReactJS Interview Question',
+                type: 'basic',
+                icon: 'heroicons_outline:code',
+                link: '/react-interview-questions',
+            },
+            {
+                id: 'selenium.basic',
+                title: 'Selenium Interview Questions',
+                type: 'basic',
+                link: '/selenium-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'java.springboot.basic',
+                title: 'Basic Spring-Boot Interview Questions',
+                type: 'basic',
+                link: '/basic-springboot-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'java.springboot.advanced',
+                title: 'Spring-Boot Interview Questions',
+                type: 'basic',
+                link: '/springboot-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'java.springboot.security',
+                title: 'Spring-Boot Security Interview Questions',
+                type: 'basic',
+                link: '/springboot-security-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'java.springbootJPA',
+                title: 'Spring-Boot JPA Interview Questions',
+                type: 'basic',
+                link: '/springbootJPA-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'tailwind.CSS',
+                title: 'Tailwind CSS Interview Questions',
+                type: 'basic',
+                link: '/tailwindCSS-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'testNG.basic',
+                title: 'TestNG Interview Questions',
+                type: 'basic',
+                link: '/testNG-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'typescript.basic',
+                title: 'Typescript Interview Questions',
+                type: 'basic',
+                link: '/typescript-interview-questions',
+                icon: 'heroicons_outline:code',
+                badge: {
+                    title: 'New',
+                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
+                },
+            },
+            {
+                id: 'vue.basic',
+                title: 'VueJS Interview Question',
+                type: 'basic',
+                icon: 'heroicons_outline:code',
+                link: '/vuejs-interview-questions',
             },
             // {
             //     id: 'apps.Testing',
@@ -177,28 +503,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
             //         },
             //     ],
             // },
-            {
-                id: 'angular.HTML',
-                title: 'NodeJS Interview Questions',
-                type: 'basic',
-                link: '/nodejs-interview-questions',
-                icon: 'heroicons_outline:code',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
-            },
-            {
-                id: 'angular.HTML',
-                title: 'HTML Interview Questions',
-                type: 'basic',
-                link: '/html-interview-questions',
-                icon: 'heroicons_outline:code',
-                // badge: {
-                //     title  : 'New',
-                //     classes: 'px-2 bg-yellow-300 text-black rounded-full'
-                // }
-            },
+
             // {
             //     id      : 'apps.html',
             //     title   : 'Html',
@@ -213,17 +518,6 @@ export const defaultNavigation: FuseNavigationItem[] = [
             //         }
             //     ],
             // },
-            {
-                id: 'angular.css',
-                title: 'CSS Interview Questions',
-                type: 'basic',
-                link: '/css-interview-questions',
-                icon: 'heroicons_outline:code',
-                // badge: {
-                //     title  : 'New',
-                //     classes: 'px-2 bg-yellow-300 text-black rounded-full'
-                // }
-            },
             // {
             //     id      : 'apps.css',
             //     title   : 'CSS',
@@ -244,156 +538,6 @@ export const defaultNavigation: FuseNavigationItem[] = [
             //         // },
             //     ],
             // },
-            {
-                id: 'angular.git',
-                title: 'Git Interview Questions',
-                type: 'basic',
-                link: '/git-interview-questions',
-                icon: 'heroicons_outline:code',
-            },
-            {
-                id: 'java.basic',
-                title: 'Java Interview Questions',
-                type: 'basic',
-                link: '/java-interview-questions',
-                icon: 'heroicons_outline:code',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
-            },
-            {
-                id: 'java.microservices',
-                title: 'Java Micro-services Interview Questions',
-                type: 'basic',
-                link: '/java-microservices-interview-questions',
-                icon: 'heroicons_outline:code',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
-            },
-            {
-                id: 'java.multithreading',
-                title: 'Java Multi-threading Interview Questions',
-                type: 'basic',
-                link: '/java-multithreading-interview-questions',
-                icon: 'heroicons_outline:code',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
-            },
-            {
-                id: 'java.springboot.basic',
-                title: 'Basic Spring-Boot Interview Questions',
-                type: 'basic',
-                link: '/basic-springboot-interview-questions',
-                icon: 'heroicons_outline:code',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
-            },
-            {
-                id: 'java.springboot.advanced',
-                title: 'Spring-Boot Interview Questions',
-                type: 'basic',
-                link: '/springboot-interview-questions',
-                icon: 'heroicons_outline:code',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
-            },
-            {
-                id: 'java.springboot.security',
-                title: 'Spring-Boot Security Interview Questions',
-                type: 'basic',
-                link: '/springboot-security-interview-questions',
-                icon: 'heroicons_outline:code',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
-            },
-            {
-                id: 'java.springbootJPA',
-                title: 'Spring-Boot JPA Interview Questions',
-                type: 'basic',
-                link: '/springbootJPA-interview-questions',
-                icon: 'heroicons_outline:code',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
-            },
-            {
-                id: 'selenium.basic',
-                title: 'Selenium Interview Questions',
-                type: 'basic',
-                link: '/selenium-interview-questions',
-                icon: 'heroicons_outline:code',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
-            },
-            {
-                id: 'playwright.basic',
-                title: 'Playwright Interview Questions',
-                type: 'basic',
-                link: '/playwright-interview-questions',
-                icon: 'heroicons_outline:code',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
-            },
-            {
-                id: 'python.basic',
-                title: 'Python Interview Questions',
-                type: 'basic',
-                link: '/python-interview-questions',
-                icon: 'heroicons_outline:code',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
-            },
-            {
-                id: 'generativeAI.basic',
-                title: 'Generative AI Interview Questions',
-                type: 'basic',
-                link: '/generativeAI-interview-questions',
-                icon: 'heroicons_outline:code',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
-            },
-            {
-                id: 'agenticAI.basic',
-                title: 'Agentic AI Interview Questions',
-                type: 'basic',
-                link: '/agenticAI-interview-questions',
-                icon: 'heroicons_outline:code',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
-            },
-            {
-                id: 'data.science.basic',
-                title: 'Data Science Interview Questions',
-                type: 'basic',
-                link: '/datascience-interview-questions',
-                icon: 'heroicons_outline:code',
-                badge: {
-                    title: 'New',
-                    classes: 'px-2 bg-yellow-300 text-black rounded-full',
-                },
-            },
         ],
     },
 ];
